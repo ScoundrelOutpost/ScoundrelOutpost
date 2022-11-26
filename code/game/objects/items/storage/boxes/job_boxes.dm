@@ -27,6 +27,7 @@
 /obj/item/storage/box/survival/PopulateContents()
 	if(crafted)
 		return
+
 	if(!isnull(mask_type))
 		new mask_type(src)
 
@@ -41,6 +42,8 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
 		new /obj/item/flashlight/flare(src)
 		new /obj/item/radio/off(src)
+
+	new /obj/item/crowbar/red(src)
 
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
@@ -58,10 +61,6 @@
 // Mining survival box
 /obj/item/storage/box/survival/mining
 	mask_type = /obj/item/clothing/mask/gas/explorer/folded
-
-/obj/item/storage/box/survival/mining/PopulateContents()
-	..()
-	new /obj/item/crowbar/red(src)
 
 // Engineer survival box
 /obj/item/storage/box/survival/engineer
@@ -86,7 +85,6 @@
 
 /obj/item/storage/box/survival/syndie/PopulateContents()
 	..()
-	new /obj/item/crowbar/red(src)
 	new /obj/item/screwdriver/red(src)
 	new /obj/item/weldingtool/mini(src)
 
@@ -95,10 +93,6 @@
 	desc = "A box with the bare essentials of ensuring the survival of your team. This one is labelled to contain a double tank."
 	illustration = "extendedtank"
 	internal_type = /obj/item/tank/internals/emergency_oxygen/double
-
-/obj/item/storage/box/survival/centcom/PopulateContents()
-	. = ..()
-	new /obj/item/crowbar(src)
 
 // Security survival box
 /obj/item/storage/box/survival/security

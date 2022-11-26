@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/combat
 	name = "combat gloves"
-	desc = "These tactical gloves are fireproof and electrically insulated."
+	desc = "These tactical gloves are fireproof, electrically insulated, and help you build faster."
 	icon_state = "black"
 	greyscale_colors = "#2f2e31"
 	siemens_coefficient = 0
@@ -11,6 +11,7 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 90, FIRE = 80, ACID = 50)
+	clothing_traits = list(TRAIT_QUICK_BUILD)
 
 /obj/item/clothing/gloves/combat/wizard
 	name = "enchanted gloves"

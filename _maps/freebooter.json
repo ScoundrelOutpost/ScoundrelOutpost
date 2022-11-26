@@ -1,0 +1,17 @@
+{
+	"version": 1,
+	"map_name": "Freebooter Outpost",
+	"map_path": "map_files/Freebooter",
+	"map_file": "Freebooter.dmm",
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_meta",
+		"emergency": "emergency_scoundrel"
+	},
+	"job_changes": {
+		"Cook": {
+			"additional_cqc_areas": ["/area/station/service/bar", "/area/station/commons/lounge"]
+		}
+	}
+}

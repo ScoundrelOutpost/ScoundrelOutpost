@@ -19,8 +19,6 @@ map freebooter
 endmap
 
 map metastation
-	default
-	votable
 endmap
 
 map deltastation

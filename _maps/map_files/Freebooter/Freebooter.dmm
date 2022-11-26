@@ -400,6 +400,9 @@
 /obj/effect/spawner/random/engineering/tracking_beacon,
 /obj/effect/spawner/random/engineering/tracking_beacon,
 /obj/effect/spawner/random/engineering/tracking_beacon,
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 8
+	},
 /turf/open/floor/iron/dark/textured_large,
 /area/station/engineering/lobby)
 "cv" = (
@@ -1058,11 +1061,8 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/engineering/break_room)
 "ge" = (
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
+/obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	dir = 1
 	},
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
@@ -2004,7 +2004,7 @@
 "lm" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/dark/textured_half,
 /area/station/hallway/primary/aft)
 "ln" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2085,10 +2085,7 @@
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "lL" = (
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
+/obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 1
 	},
 /turf/open/floor/iron,
@@ -2660,7 +2657,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/dark/textured_half,
 /area/station/hallway/primary)
 "pe" = (
 /obj/structure/cable,
@@ -3495,7 +3492,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/dark/textured_half,
 /area/station/hallway/primary)
 "tL" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3552,7 +3549,7 @@
 "ua" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/dark/textured_half,
 /area/station/hallway/primary)
 "ub" = (
 /obj/machinery/computer/shuttle/mining,
@@ -3736,10 +3733,9 @@
 /area/station/cargo)
 "vb" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
+/obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 8
 	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "vc" = (
@@ -4538,6 +4534,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/science,
 /obj/effect/mapping_helpers/airlock/access/any/medical/cmo,
+/obj/effect/mapping_helpers/airlock/access/any/science/rd,
 /turf/open/floor/wood/large,
 /area/station/command/teleporter)
 "zU" = (
@@ -6132,6 +6129,7 @@
 /obj/machinery/door/airlock/science,
 /obj/effect/landmark/navigate_destination,
 /obj/effect/mapping_helpers/airlock/access/any/medical/cmo,
+/obj/effect/mapping_helpers/airlock/access/any/science/rd,
 /turf/open/floor/wood/large,
 /area/station/command/teleporter)
 "Ix" = (
@@ -6588,7 +6586,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/dark/textured_half,
 /area/station/hallway/primary)
 "Lj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7323,10 +7321,7 @@
 /area/station/service/kitchen)
 "Pd" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "Pe" = (
@@ -8553,7 +8548,7 @@
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/iron/dark/textured_half,
 /area/station/hallway/primary/aft)
 "Wx" = (
 /obj/effect/spawner/random/engineering/atmospherics_portable,

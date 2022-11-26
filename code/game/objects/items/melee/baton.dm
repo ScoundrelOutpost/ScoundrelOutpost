@@ -635,16 +635,16 @@
 	desc = "An improvised stun baton. Left click to stun, right click to harm."
 	icon_state = "stunprod"
 	inhand_icon_state = "prod"
-	worn_icon_state = null
+	worn_icon_state = "stunprod"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	force = 3
 	throwforce = 5
 	cell_hit_cost = 2000
 	throw_stun_chance = 10
-	slot_flags = ITEM_SLOT_BACK
 	convertible = FALSE
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
 	var/obj/item/assembly/igniter/sparkler
 
 /obj/item/melee/baton/security/cattleprod/Initialize(mapload)

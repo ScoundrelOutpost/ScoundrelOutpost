@@ -13,26 +13,26 @@ Format:
 	votable (is this map votable)
 endmap
 
+map freebooter
+	default
+	votable
+endmap
+
 map metastation
+	default
 	votable
 endmap
 
 map deltastation
-	minplayers 50
-	votable
 endmap
 
 map kilostation
-	votable
 endmap
 
 map icebox
-	votable
 endmap
 
 map tramstation
-	default
-	votable
 endmap
 
 map runtimestation

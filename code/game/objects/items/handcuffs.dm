@@ -36,7 +36,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	throwforce = 0
 	w_class = WEIGHT_CLASS_SMALL
-	throw_speed = 3
+	throw_speed = 2
 	throw_range = 5
 	custom_materials = list(/datum/material/iron=500)
 	breakouttime = 1 MINUTES
@@ -355,9 +355,9 @@
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	flags_1 = CONDUCT_1
 	throwforce = 0
-	w_class = WEIGHT_CLASS_NORMAL
-	slowdown = 7
-	breakouttime = 30 SECONDS
+	w_class = WEIGHT_CLASS_SMALL
+	slowdown = 0.4
+	breakouttime = 10 SECONDS
 
 /**
  * # Bear trap
@@ -367,7 +367,7 @@
 /obj/item/restraints/legcuffs/beartrap
 	name = "bear trap"
 	throw_speed = 1
-	throw_range = 1
+	throw_range = 8
 	icon_state = "beartrap"
 	desc = "A trap used to catch bears and other legged creatures."
 	///If true, the trap is "open" and can trigger.
@@ -496,7 +496,7 @@
 	inhand_icon_state = "bola"
 	lefthand_file = 'icons/mob/inhands/weapons/thrown_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/thrown_righthand.dmi'
-	breakouttime = 3.5 SECONDS//easy to apply, easy to break out of
+	breakouttime = 1.5 SECONDS//easy to apply, easy to break out of
 	gender = NEUTER
 	///Amount of time to knock the target down for once it's hit in deciseconds.
 	var/knockdown = 0
@@ -535,8 +535,8 @@
 	desc = "A strong bola, made with a long steel chain. It looks heavy, enough so that it could trip somebody."
 	icon_state = "bola_r"
 	inhand_icon_state = "bola_r"
-	breakouttime = 7 SECONDS
-	knockdown = 3.5 SECONDS
+	breakouttime = 5 SECONDS
+	knockdown = 1.5 SECONDS
 
 /**
  * A security variant of the bola.
@@ -550,7 +550,7 @@
 	inhand_icon_state = "ebola"
 	hitsound = 'sound/weapons/taserhit.ogg'
 	w_class = WEIGHT_CLASS_SMALL
-	breakouttime = 6 SECONDS
+	breakouttime = 1.5 SECONDS
 	custom_price = PAYCHECK_COMMAND * 0.35
 
 /obj/item/restraints/legcuffs/bola/energy/Initialize(mapload)
@@ -572,7 +572,7 @@
 	desc = "Hey, if you have to be hugged in the legs by anything, it might as well be this little guy."
 	icon_state = "gonbola"
 	inhand_icon_state = "bola_r"
-	breakouttime = 30 SECONDS
+	breakouttime = 3.5 SECONDS
 	slowdown = 0
 	var/datum/status_effect/gonbola_pacify/effectReference
 

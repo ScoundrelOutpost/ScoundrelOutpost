@@ -123,7 +123,7 @@
 	result = /obj/item/restraints/legcuffs/bola
 	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
 				/obj/item/stack/sheet/iron = 6)
-	time = 2 SECONDS//faster than crafting them by hand!
+	time = 0.5 SECONDS//faster than crafting them by hand!
 	category= CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
@@ -598,7 +598,18 @@
 				/obj/item/shard = 1,
 				/obj/item/stack/rods = 1)
 	parts = list(/obj/item/shard = 1)
-	time = 4 SECONDS
+	time = 0.5 SECONDS
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/javelin
+	name = "Javelin"
+	result = /obj/item/javelin
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/shard = 1,
+				/obj/item/stack/rods = 1)
+	parts = list(/obj/item/shard = 1)
+	time = 0.5 SECONDS
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
@@ -619,6 +630,14 @@
 				/obj/item/radio = 1)
 	tool_behaviors = list(TOOL_WIRECUTTER)
 	category = CAT_CLOTHING
+
+/datum/crafting_recipe/quiver_maint
+	name = "Wooden Quiver"
+	result = /obj/item/storage/bag/quiver_maint
+	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
+				/obj/item/stack/sheet/mineral/wood = 10)
+	time = 4 SECONDS
+	category= CAT_CLOTHING
 
 /datum/crafting_recipe/radiogloves/New()
 	..()

@@ -542,4 +542,24 @@
 	for(var/i in 1 to 40)
 		new /obj/item/ammo_casing/caseless/harpoon(src)
 
+
+
+/obj/item/storage/bag/quiver_maint
+	name = "makeshift quiver"
+	desc = "A quiver jury-rigged from some scrap materials. Suited to storing javelins and bolas."
+	icon_state = "quiver"
+	worn_icon_state = "harpoon_quiver"
+
+/obj/item/storage/bag/quiver_maint/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
+	atom_storage.max_slots = 15
+	atom_storage.max_total_storage = 100
+	atom_storage.set_holdable(list(
+		/obj/item/restraints/legcuffs/bola,
+		/obj/item/restraints/legcuffs/bola/tactical,
+		/obj/item/restraints/legcuffs/bola/energy,
+		/obj/item/javelin
+		))
+
 #undef ORE_BAG_BALOON_COOLDOWN

@@ -85,7 +85,7 @@
 	icon_state = "durathread"
 	inhand_icon_state = null
 	can_adjust = FALSE
-	armor = list(MELEE = 10, LASER = 10, FIRE = 40, ACID = 10, BOMB = 5, BIO = 10, FIRE = 0, ACID = 0)
+	armor = list(MELEE = 0, LASER = 0, FIRE = 0, ACID = 0, BOMB = 0, BIO = 10, FIRE = 0, ACID = 0)
 
 /obj/item/clothing/under/misc/bouncer
 	name = "bouncer uniform"
@@ -93,7 +93,7 @@
 	icon_state = "bouncer"
 	inhand_icon_state = null
 	can_adjust = FALSE
-	armor = list(MELEE = 5, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 30, ACID = 30)
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 30, ACID = 0)
 
 /obj/item/clothing/under/misc/coordinator
 	name = "coordinator jumpsuit"

@@ -878,7 +878,7 @@
 	icon_state = "card_grey"
 	worn_icon_state = "card_grey"
 
-	wildcard_slots = WILDCARD_LIMIT_GREY
+	wildcard_slots = WILDCARD_LIMIT_GOLD
 	flags_1 = UNPAINTABLE_1
 
 	/// An overlay icon state for when the card is assigned to a name. Usually manifests itself as a little scribble to the right of the job icon.
@@ -1043,7 +1043,7 @@
 	worn_icon_state = "card_silver"
 	inhand_icon_state = "silver_id"
 	assigned_icon_state = "assigned_silver"
-	wildcard_slots = WILDCARD_LIMIT_SILVER
+	wildcard_slots = WILDCARD_LIMIT_GOLD
 
 /datum/id_trim/maint_reaper
 	access = list(ACCESS_MAINT_TUNNELS)
@@ -1203,7 +1203,7 @@
 	registered_age = null
 	trim = /datum/id_trim/job/prisoner
 
-	wildcard_slots = WILDCARD_LIMIT_PRISONER
+	wildcard_slots = WILDCARD_LIMIT_GOLD
 
 	/// Number of gulag points required to earn freedom.
 	var/goal = 0
@@ -1317,7 +1317,7 @@
 	name = "agent card"
 	desc = "A highly advanced chameleon ID card. Touch this card on another ID card or player to choose which accesses to copy. Has special magnetic properties which force it to the front of wallets."
 	trim = /datum/id_trim/chameleon
-	wildcard_slots = WILDCARD_LIMIT_CHAMELEON
+	wildcard_slots = WILDCARD_LIMIT_GOLD
 
 	/// Have we set a custom name and job assignment, or will we use what we're given when we chameleon change?
 	var/forged = FALSE

@@ -197,6 +197,12 @@
 	description = "A respectable mid-sized shuttle that first saw service shuttling Nanotrasen crew to and from their asteroid belt embedded facilities."
 	credit_cost = CARGO_CRATE_VALUE * 6
 
+/datum/map_template/shuttle/emergency/emergency_scoundrel
+	suffix = "scoundrel"
+	name = "Lifeboat"
+	description = "An unregistered model of hacked-together ship components. Surprisingly competent and comfortable."
+	credit_cost = CARGO_CRATE_VALUE * 2
+
 /datum/map_template/shuttle/emergency/bar
 	suffix = "bar"
 	name = "The Emergency Escape Bar"

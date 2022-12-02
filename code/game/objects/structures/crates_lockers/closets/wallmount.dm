@@ -2,7 +2,7 @@
 	wall_mounted = TRUE
 	anchored = TRUE
 	density = TRUE
-	can_be_unanchored = FALSE
+	anchorable = FALSE
 	icon = 'icons/obj/wallcloset.dmi'
 	icon_state = "generic_wall"
 
@@ -21,7 +21,7 @@
 	wall_mounted = TRUE
 	anchored = TRUE
 	density = TRUE
-	can_be_unanchored = FALSE
+	anchorable = FALSE
 	icon = 'icons/obj/wallcloset.dmi'
 	icon_state = "fire_wall"
 
@@ -29,7 +29,7 @@
 	wall_mounted = TRUE
 	anchored = TRUE
 	density = TRUE
-	can_be_unanchored = FALSE
+	anchorable = FALSE
 	icon = 'icons/obj/wallcloset.dmi'
 	icon_state = "emergency_wall"
 
@@ -38,7 +38,7 @@
 	wall_mounted = TRUE
 	anchored = TRUE
 	density = TRUE
-	can_be_unanchored = FALSE
+	anchorable = FALSE
 	icon = 'icons/obj/wallcloset.dmi'
 	icon_state = "secure_wall"
 
@@ -46,7 +46,7 @@
 	wall_mounted = TRUE
 	anchored = TRUE
 	density = TRUE
-	can_be_unanchored = FALSE
+	anchorable = FALSE
 	icon = 'icons/obj/wallcloset.dmi'
 	icon_state = "freezer_wall"
 
@@ -54,6 +54,33 @@
 	wall_mounted = TRUE
 	anchored = TRUE
 	density = TRUE
-	can_be_unanchored = FALSE
+	anchorable = FALSE
 	icon = 'icons/obj/wallcloset.dmi'
 	icon_state = "freezer_wall"
+
+// pathed from presets
+
+/obj/structure/closet/secure_closet/chemical/wall
+	wall_mounted = TRUE
+	anchored = TRUE
+	density = TRUE
+	anchorable = FALSE
+	icon = 'icons/obj/wallcloset.dmi'
+	icon_state = "chemical_wall"
+	icon_door = "chemical_wall"
+
+/obj/structure/closet/secure_closet/personal/wall
+	wall_mounted = TRUE
+	anchored = TRUE
+	density = TRUE
+	anchorable = FALSE
+	icon = 'icons/obj/wallcloset.dmi'
+	icon_state = "secure_wall"
+
+/obj/structure/closet/secure_closet/medical3/wall
+	wall_mounted = TRUE
+	anchored = TRUE
+	density = TRUE
+	anchorable = FALSE
+	icon = 'icons/obj/wallcloset.dmi'
+	icon_state = "med_secure_wall"

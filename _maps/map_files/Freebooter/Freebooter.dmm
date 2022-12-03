@@ -1479,8 +1479,9 @@
 /turf/open/floor/carpet/neon/simple/orange/nodots,
 /area/station/commons/dorms)
 "hB" = (
-/obj/item/hand_labeler_refill,
+/obj/item/paper_bin,
 /obj/item/hand_labeler,
+/obj/item/hand_labeler_refill,
 /obj/structure/table,
 /turf/open/floor/iron,
 /area/station/cargo)
@@ -1527,10 +1528,8 @@
 	dir = 5
 	},
 /obj/item/storage/box/rxglasses/spyglasskit,
-/obj/item/detective_scanner,
-/obj/structure/closet/secure_closet/wall{
-	pixel_y = 30;
-	req_access = list("detective")
+/obj/structure/closet/secure_closet/detective_scoundrel/wall{
+	pixel_y = 30
 	},
 /turf/open/floor/eighties,
 /area/station/security/detectives_office)
@@ -2056,7 +2055,10 @@
 "kv" = (
 /obj/structure/sign/poster/contraband/random/directional/north,
 /obj/structure/table/wood/poker,
-/obj/item/toy/singlecard,
+/obj/item/toy/singlecard{
+	pixel_y = -16
+	},
+/obj/machinery/recharger,
 /turf/open/floor/wood/large,
 /area/station/service/bar)
 "kw" = (
@@ -3799,7 +3801,6 @@
 /turf/open/floor/iron,
 /area/station/cargo)
 "tf" = (
-/obj/structure/closet/secure_closet/captains,
 /obj/item/ai_module/reset,
 /obj/item/clothing/neck/stethoscope,
 /obj/item/pinpointer/nuke,
@@ -3809,6 +3810,7 @@
 /obj/item/clothing/suit/space/pirate,
 /obj/item/clothing/head/helmet/space/pirate,
 /obj/item/clothing/suit/toggle/jacket,
+/obj/structure/closet/secure_closet/captain_scoundrel,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/captain)
 "tj" = (
@@ -4591,10 +4593,10 @@
 /turf/open/floor/plating,
 /area/station/cargo)
 "wW" = (
-/obj/structure/closet/secure_closet/engineering_chief,
 /obj/item/aicard,
 /obj/item/pinpointer/nuke,
 /obj/item/circuitboard/machine/autolathe,
+/obj/structure/closet/secure_closet/engi_spec,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/heads_quarters/ce)
 "xa" = (
@@ -5130,10 +5132,10 @@
 /turf/open/floor/circuit,
 /area/station/tcommsat/computer)
 "Aa" = (
-/obj/structure/closet/secure_closet/chief_medical,
 /obj/item/circuitboard/machine/quantumpad,
 /obj/item/circuitboard/machine/quantumpad,
 /obj/item/circuitboard/machine/cryo_tube,
+/obj/structure/closet/secure_closet/medsci_spec,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/rd)
 "Ad" = (
@@ -5840,7 +5842,7 @@
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 1;
-	name = "n2 pump"
+	name = "o2 pump"
 	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
@@ -6071,7 +6073,6 @@
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/aisat)
 "Ev" = (
-/obj/structure/closet/secure_closet/quartermaster,
 /obj/item/clothing/neck/stethoscope,
 /obj/item/pinpointer/nuke,
 /obj/item/clothing/head/utility/hardhat/weldhat/dblue,
@@ -6079,6 +6080,7 @@
 /obj/item/circuitboard/computer/communications,
 /obj/item/clothing/suit/armor/reactive/teleport,
 /obj/item/hand_tele,
+/obj/structure/closet/secure_closet/quartermaster_scoundrel,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/qm)
 "Ex" = (
@@ -8350,9 +8352,9 @@
 /turf/open/floor/iron,
 /area/station/cargo)
 "Pz" = (
-/obj/machinery/suit_storage_unit/ce,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
+/obj/machinery/suit_storage_unit/standard_unit,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/heads_quarters/ce)
 "PA" = (
@@ -9092,8 +9094,8 @@
 "Tz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
-/obj/item/paper_bin,
 /obj/structure/railing,
+/obj/machinery/recharger,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/cargo)
 "TA" = (
@@ -9511,6 +9513,9 @@
 "VH" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
+/obj/item/storage/medkit/regular/wall{
+	pixel_x = 30
+	},
 /turf/open/floor/wood/large,
 /area/station/commons/dorms)
 "VI" = (
@@ -9628,7 +9633,7 @@
 "Wm" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 1;
-	name = "o2 pump"
+	name = "n2 pump"
 	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
@@ -9636,6 +9641,7 @@
 "Wn" = (
 /obj/structure/table,
 /obj/item/clothing/gloves/color/yellow,
+/obj/machinery/recharger,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "Wo" = (
@@ -10299,7 +10305,7 @@
 /area/station/service/kitchen)
 "Zq" = (
 /obj/structure/table/wood,
-/obj/item/storage/medkit,
+/obj/machinery/recharger,
 /turf/open/floor/wood/large,
 /area/station/commons/dorms)
 "Zt" = (

@@ -36,7 +36,8 @@
 	jobtype = /datum/job/deckhand
 	backpack_contents = list(
 		/obj/item/knife/combat/survival,
-		/obj/item/wrench
+		/obj/item/wrench,
+		/obj/item/gun/energy/e_gun/mini
 	)
 	id_trim = /datum/id_trim/job/deckhand
 	id = /obj/item/card/id/advanced
@@ -133,7 +134,8 @@
 	jobtype = /datum/job/medsci_spec
 	backpack_contents = list(
 		/obj/item/defibrillator/compact/loaded = 1,
-		/obj/item/clothing/mask/bandana/striped/medical
+		/obj/item/clothing/mask/bandana/striped/medical,
+		/obj/item/gun/energy/e_gun/mini,
 	)
 	id_trim = /datum/id_trim/job/deckhand/medsci_spec
 	id = /obj/item/card/id/advanced
@@ -199,7 +201,8 @@
 	jobtype = /datum/job/engi_spec
 	backpack_contents = list(
 		/obj/item/analyzer/ranged = 1,
-		/obj/item/clothing/mask/bandana/striped/engineering = 1
+		/obj/item/clothing/mask/bandana/striped/engineering = 1,
+		/obj/item/gun/energy/e_gun/mini,
 	)
 	id_trim = /datum/id_trim/job/deckhand/engi_spec
 	id = /obj/item/card/id/advanced
@@ -277,10 +280,8 @@
 	suit = /obj/item/clothing/suit/jacket/fancy
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,
-		/obj/item/station_charter = 1,
 		/obj/item/clothing/mask/bandana/striped/black = 1,
 		/obj/item/gun/energy/e_gun/mini,
-		/obj/item/sensor_device
 		)
 	belt = /obj/item/storage/belt/sabre
 	ears = /obj/item/radio/headset/heads/captain/alt
@@ -342,6 +343,7 @@
 	backpack_contents = list(
 		/obj/item/melee/baton = 1,
 		/obj/item/gun/energy/e_gun/mini,
+		/obj/item/station_charter = 1,
 		/obj/item/clothing/mask/bandana/striped/botany
 	)
 	id_trim = /datum/id_trim/job/deckhand/quartermaster_scoundrel
@@ -483,7 +485,8 @@
 		/obj/item/knife/combat/survival = 1,
 		/obj/item/stack/marker_beacon/ten = 3,
 		/obj/item/mining_voucher,
-		/obj/item/flashlight/seclite
+		/obj/item/flashlight/seclite,
+		/obj/item/gun/energy/e_gun/mini
 	)
 	id_trim = /datum/id_trim/job/deckhand/mining_spec
 	id = /obj/item/card/id/advanced

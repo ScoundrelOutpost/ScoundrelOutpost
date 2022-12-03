@@ -84,3 +84,11 @@
 	anchorable = FALSE
 	icon = 'icons/obj/wallcloset.dmi'
 	icon_state = "med_secure_wall"
+
+/obj/structure/closet/secure_closet/detective_scoundrel/wall
+	wall_mounted = TRUE
+	anchored = TRUE
+	density = TRUE
+	anchorable = FALSE
+	icon = 'icons/obj/wallcloset.dmi'
+	icon_state = "secure_wall"

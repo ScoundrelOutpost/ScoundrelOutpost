@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "wall lockers"
+  - rscadd: "wall medkits"

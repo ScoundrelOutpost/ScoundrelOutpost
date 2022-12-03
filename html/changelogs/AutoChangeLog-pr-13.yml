@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "new shuttle"
+  - rscadd: "new wall closets"
+  - rscadd: "map updates"

@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "new parallax background"
+  - rscdel: "removed several parallax layers for the timebeing"
+  - code_imp: "some parallax tiling dimensions changes (hope this doesnt break anything)"

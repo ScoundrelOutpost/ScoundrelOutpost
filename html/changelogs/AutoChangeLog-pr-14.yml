@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "plasma enviromask"
+  - rscdel: "gloves are no longer required by plasmamen"
+  - imageadd: "sprites for the enviromask"

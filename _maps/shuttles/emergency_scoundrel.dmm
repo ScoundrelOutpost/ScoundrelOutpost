@@ -1,0 +1,1376 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aH" = (
+/obj/machinery/light/red/dim/directional/south,
+/obj/effect/turf_decal/trimline/blue/filled/corner{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"bt" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"bB" = (
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"co" = (
+/obj/structure/table,
+/obj/item/bodybag,
+/obj/item/crowbar/red,
+/obj/item/bodybag,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"dJ" = (
+/obj/machinery/power/shuttle_engine/propulsion{
+	dir = 8
+	},
+/turf/template_noop,
+/area/shuttle/escape)
+"em" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/door/airlock/hatch,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"eD" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"eP" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"ff" = (
+/obj/structure/closet/firecloset/full,
+/obj/item/stack/rods/ten,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"fm" = (
+/obj/machinery/status_display/evac/directional/east,
+/obj/effect/turf_decal/tile/dark_blue/full,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"fv" = (
+/obj/structure/marker_beacon/bronze,
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/escape)
+"gv" = (
+/obj/effect/turf_decal/trimline/blue/filled/warning,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"gF" = (
+/obj/structure/closet/secure_closet/atmospherics,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"he" = (
+/obj/machinery/door/airlock/survival_pod/glass,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"jl" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/escape)
+"jn" = (
+/obj/machinery/status_display/evac/directional/east,
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/shuttle/escape)
+"kG" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/shuttle/escape)
+"nL" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"oK" = (
+/obj/structure/chair/comfy/shuttle,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"pM" = (
+/obj/machinery/space_heater,
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/escape)
+"qb" = (
+/obj/item/mmi,
+/obj/structure/closet/crate/freezer/surplus_limbs,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"rl" = (
+/turf/closed/wall/r_wall/syndicate,
+/area/shuttle/escape)
+"rz" = (
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"sg" = (
+/obj/structure/frame/machine,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"so" = (
+/obj/machinery/stasis,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"st" = (
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/shuttle/escape)
+"ua" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/lattice,
+/obj/structure/marker_beacon/teal,
+/turf/template_noop,
+/area/shuttle/escape)
+"uR" = (
+/mob/living/simple_animal/bot/medbot{
+	name = "\improper emergency medibot";
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/structure/closet/crate/medical,
+/obj/item/storage/medkit/o2{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/medkit/toxin{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/obj/item/stack/sheet/glass/fifty,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"vh" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"vB" = (
+/obj/structure/rack,
+/obj/item/weldingtool/mini,
+/obj/item/weldingtool/mini,
+/obj/item/screwdriver,
+/obj/item/screwdriver,
+/obj/item/wrench,
+/obj/item/wrench,
+/obj/item/stack/cable_coil,
+/obj/item/multitool,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"wc" = (
+/obj/machinery/computer/communications,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"wT" = (
+/obj/structure/lattice,
+/obj/item/food/cheese_sandwich,
+/turf/template_noop,
+/area/shuttle/escape)
+"xu" = (
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"xY" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/blue/filled/corner,
+/obj/structure/sign/departments/medbay/alt/directional/south,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"ya" = (
+/obj/structure/lattice,
+/obj/item/crowbar/power,
+/turf/template_noop,
+/area/shuttle/escape)
+"yd" = (
+/obj/item/stack/rods/ten,
+/obj/structure/closet/crate,
+/obj/item/soap,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"yg" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/lattice,
+/turf/template_noop,
+/area/shuttle/escape)
+"zE" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"zH" = (
+/obj/machinery/recharge_station,
+/obj/item/stock_parts/cell/super,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Ac" = (
+/obj/structure/closet/crate/bin,
+/obj/effect/turf_decal/trimline/blue/filled/corner{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Ag" = (
+/obj/structure/tank_dispenser/oxygen{
+	layer = 2.7;
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Am" = (
+/obj/machinery/light/red/dim/directional/east,
+/obj/machinery/suit_storage_unit/standard_unit,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"AF" = (
+/obj/machinery/light/small/directional/east,
+/obj/item/storage/medkit/regular/wall{
+	pixel_x = 28
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"AU" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Br" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/escape)
+"CA" = (
+/obj/effect/turf_decal/tile/dark_blue/full,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"De" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/shuttle/escape)
+"DP" = (
+/obj/machinery/light/red/dim/directional/north,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Ek" = (
+/obj/machinery/light/red/dim/directional/north,
+/obj/item/storage/medkit/regular/wall{
+	pixel_x = null;
+	pixel_y = 28
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"FT" = (
+/obj/effect/turf_decal/trimline/blue/filled/warning{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Gp" = (
+/obj/structure/table,
+/obj/item/gun/energy/e_gun,
+/obj/machinery/recharger,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"HI" = (
+/obj/machinery/door/airlock/survival_pod/glass,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"If" = (
+/obj/structure/table,
+/obj/item/defibrillator/loaded,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Ij" = (
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"IL" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 30
+	},
+/obj/item/storage/box/smart_metal_foam,
+/obj/item/restraints/legcuffs/bola/energy,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Jl" = (
+/obj/structure/table,
+/obj/machinery/fax,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"NU" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/machinery/light/red/dim/directional/south,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Om" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"QR" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/lattice,
+/obj/structure/marker_beacon/fuchsia,
+/turf/template_noop,
+/area/shuttle/escape)
+"Rf" = (
+/obj/structure/rack,
+/obj/item/tank/jetpack/carbondioxide,
+/obj/structure/cable,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Ri" = (
+/obj/structure/table/optable,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Sl" = (
+/obj/structure/table,
+/obj/structure/fireaxecabinet/directional/west,
+/obj/structure/cable,
+/obj/item/stock_parts/cell/super,
+/obj/machinery/cell_charger,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"SH" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/extinguisher_cabinet/directional/east,
+/obj/structure/chair/office{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/dark_blue/full,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"SR" = (
+/obj/effect/turf_decal/tile/blue/full,
+/turf/open/floor/iron/textured_large,
+/area/shuttle/escape)
+"Tb" = (
+/obj/item/storage/medkit/regular{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/structure/table,
+/obj/item/storage/medkit/fire,
+/obj/machinery/light/red/dim/directional/west,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Tf" = (
+/obj/structure/table,
+/obj/item/storage/fancy/cigarettes/cigpack_robust,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Tj" = (
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/escape)
+"Tl" = (
+/obj/machinery/firealarm/directional/north,
+/obj/machinery/airalarm/directional/east,
+/obj/effect/turf_decal/trimline/blue/filled/corner,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Ut" = (
+/obj/machinery/computer/emergency_shuttle,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"VZ" = (
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/escape)
+"Wh" = (
+/turf/template_noop,
+/area/template_noop)
+"Ys" = (
+/obj/machinery/power/shuttle_engine/propulsion{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"Yy" = (
+/obj/effect/turf_decal/caution/stand_clear,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+"YR" = (
+/obj/docking_port/mobile/emergency{
+	dir = 2;
+	height = 25;
+	width = 35
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/door/airlock/hatch,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/escape)
+
+(1,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(2,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(3,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+QR
+Wh
+Wh
+Wh
+QR
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(4,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+De
+Wh
+Wh
+Wh
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(5,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+QR
+Wh
+yg
+De
+De
+De
+yg
+Wh
+QR
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(6,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+De
+Wh
+De
+dJ
+dJ
+dJ
+De
+Wh
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(7,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+De
+Wh
+rl
+rz
+rz
+rz
+rl
+rl
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(8,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+fv
+rl
+rl
+IL
+Ij
+Gp
+Jl
+rl
+fv
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(9,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Tj
+xu
+Ut
+CA
+CA
+Ij
+CA
+bB
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(10,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+VZ
+bB
+wc
+SH
+fm
+AF
+CA
+bB
+Tj
+Tj
+Tj
+fv
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(11,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+rl
+rl
+st
+st
+st
+st
+he
+st
+st
+Ij
+Ij
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(12,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+rl
+Tf
+Sl
+co
+bB
+vh
+Ij
+gF
+st
+Ys
+Ij
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(13,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+em
+Yy
+Tj
+Ij
+bB
+eD
+Ij
+Ij
+st
+kG
+Ys
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(14,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+st
+DP
+Tj
+Ij
+bB
+zH
+Ij
+Am
+st
+st
+jl
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(15,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+bB
+oK
+Tj
+NU
+st
+st
+HI
+st
+st
+st
+Ij
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(16,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+bB
+oK
+Tj
+Om
+st
+uR
+Ij
+zE
+st
+Tj
+Tj
+fv
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(17,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+st
+ff
+Tj
+Ij
+nL
+Ij
+Ij
+Ag
+bB
+Tj
+Wh
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(18,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+bB
+bt
+Tj
+Tj
+Br
+Tj
+Tj
+pM
+xu
+Tj
+Wh
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(19,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+bB
+eP
+Tj
+Ij
+nL
+Ij
+Ij
+qb
+bB
+Tj
+Wh
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(20,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+bB
+oK
+Tj
+AU
+jn
+Tl
+FT
+Ac
+bB
+Tj
+Wh
+ua
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(21,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+st
+oK
+Tj
+AU
+st
+st
+HI
+st
+st
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(22,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+bB
+oK
+Tj
+xY
+st
+Tb
+Ij
+Ri
+bB
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(23,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+bB
+Ij
+Tj
+gv
+HI
+SR
+SR
+SR
+bB
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(24,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+st
+Ek
+Tj
+gv
+bB
+SR
+SR
+SR
+bB
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(25,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+YR
+Yy
+Tj
+aH
+st
+so
+If
+so
+bB
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(26,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+rl
+vB
+Rf
+Ij
+st
+st
+st
+st
+st
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(27,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+rl
+rl
+st
+st
+st
+sg
+sg
+yd
+st
+Tj
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(28,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+De
+Tj
+Tj
+Tj
+Tj
+Tj
+Tj
+Tj
+Tj
+fv
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(29,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+De
+Wh
+yg
+Wh
+yg
+Wh
+yg
+Wh
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(30,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+De
+De
+De
+De
+De
+De
+De
+De
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(31,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+ua
+Wh
+ya
+Wh
+Wh
+Wh
+De
+Wh
+ua
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(32,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+wT
+Wh
+Wh
+Wh
+De
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(33,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+ua
+Wh
+Wh
+Wh
+ua
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(34,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}
+(35,1,1) = {"
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+"}

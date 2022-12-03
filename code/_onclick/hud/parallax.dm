@@ -87,7 +87,7 @@
 			return TRUE
 
 		if (PARALLAX_LOW)
-			C.parallax_layers_max = 1
+			C.parallax_layers_max = 2
 			C.do_parallax_animations = FALSE
 			return TRUE
 
@@ -301,20 +301,23 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 			if(x == 0 && y == 0)
 				continue
 			var/mutable_appearance/texture_overlay = mutable_appearance(icon, icon_state)
-			texture_overlay.transform = matrix(1, 0, x*480, 0, 1, y*480)
+			texture_overlay.transform = matrix(1, 0, x*608, 0, 1, y*480)
 			new_overlays += texture_overlay
 	cut_overlays()
 	add_overlay(new_overlays)
 
 /atom/movable/screen/parallax_layer/layer_1
 	icon_state = "layer1"
-	speed = 0.6
+	speed = 0
 	layer = 1
+	offset_x = -64
 
 /atom/movable/screen/parallax_layer/layer_2
 	icon_state = "layer2"
-	speed = 1
+	blend_mode = BLEND_OVERLAY
+	speed = 0
 	layer = 2
+	offset_x = 64
 
 /atom/movable/screen/parallax_layer/layer_3
 	icon_state = "layer3"
@@ -334,11 +337,11 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 	src.add_atom_colour(SSparallax.random_parallax_color, ADMIN_COLOUR_PRIORITY)
 
 /atom/movable/screen/parallax_layer/random/asteroids
-	icon_state = "asteroids"
+	icon_state = "layer3"
 	layer = 4
 
 /atom/movable/screen/parallax_layer/planet
-	icon_state = "planet"
+	icon_state = "layer3"
 	blend_mode = BLEND_OVERLAY
 	absolute = TRUE //Status of seperation
 	speed = 3

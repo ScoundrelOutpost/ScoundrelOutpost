@@ -621,3 +621,23 @@
 	user.adjust_bodytemperature(-300)
 	user.apply_status_effect(/datum/status_effect/freon)
 	return FIRELOSS
+
+// wall mounted
+
+/obj/item/storage/medkit/wall
+	icon_state = "medkit_wall"
+	name = "first aid box"
+	desc = "A box for storing first-aid supplies, mounted to the wall."
+	w_class = WEIGHT_CLASS_GIGANTIC
+	anchored = 1
+	can_be_unanchored = 0
+	max_integrity = 50
+
+/obj/item/storage/medkit/regular/wall
+	icon_state = "medkit_wall"
+	name = "first aid box"
+	desc = "A box for storing first-aid supplies, mounted to the wall."
+	w_class = WEIGHT_CLASS_GIGANTIC
+	anchored = 1
+	can_be_unanchored = 0
+	max_integrity = 50

@@ -369,3 +369,21 @@
 	desc = "A special containment helmet designed for CentCom Staff. You know, so any coffee spills don't kill the poor sod."
 	icon_state = "intern_envirohelm"
 	inhand_icon_state = null
+
+// scoundrel content
+
+/obj/item/clothing/mask/gas/plasmamask
+	name = "plasma enviromask"
+	desc = "An airtight balaclava made of sturdy synthetic textiles, made for protecting plasmamen from exposure to oxygen-rich atmospheres."
+	icon = 'icons/obj/clothing/plasmamask.dmi'
+	worn_icon = 'icons/mob/clothing/plasmamask.dmi'
+	icon_state = "plasmamask-basic"
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 100, FIRE = 100, ACID = 75)
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT|MASKINTERNALS|PLASMAMAN_PREVENT_IGNITION
+	clothing_traits = list(TRAIT_NOSELFIGNITION_HEAD_ONLY)
+	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+	w_class = WEIGHT_CLASS_SMALL
+	has_filter = FALSE
+	max_filters = 0
+	has_fov = FALSE

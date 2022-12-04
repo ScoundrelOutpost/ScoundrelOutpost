@@ -23,6 +23,7 @@
 	paycheck_department = ACCOUNT_CAR
 
 	display_order = JOB_DISPLAY_ORDER_DECKHAND
+	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 	family_heirlooms = list(/obj/item/stamp, /obj/item/stamp/denied)
 	mail_goodies = list(
@@ -112,6 +113,7 @@
 	paycheck_department = ACCOUNT_CAR
 
 	display_order = JOB_DISPLAY_ORDER_MEDSCI_SPEC
+	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 
 	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
@@ -178,6 +180,7 @@
 	paycheck_department = ACCOUNT_CAR
 
 	display_order = JOB_DISPLAY_ORDER_ENGI_SPEC
+	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 	
 	family_heirlooms = list(/obj/item/clothing/head/utility/hardhat/white, /obj/item/screwdriver, /obj/item/wrench, /obj/item/weldingtool, /obj/item/crowbar, /obj/item/wirecutters)
@@ -325,6 +328,7 @@
 	paycheck_department = ACCOUNT_CAR
 
 	display_order = JOB_DISPLAY_ORDER_QUARTERMASTER_SCOUNDREL
+	department_for_prefs = /datum/job_department/captain
 	bounty_types = CIV_JOB_RANDOM
 	departments_list = list(
 		/datum/job_department/command,
@@ -357,6 +361,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/clipboard
+	l_pocket = /obj/item/modular_computer/tablet/pda/heads/quartermaster
 
 	chameleon_extras = /obj/item/stamp/qm
 
@@ -461,6 +466,7 @@
 	paycheck_department = ACCOUNT_CAR
 
 	display_order = JOB_DISPLAY_ORDER_MINING_SPEC
+	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 
 	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)

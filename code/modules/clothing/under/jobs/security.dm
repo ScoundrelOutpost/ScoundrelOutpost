@@ -59,7 +59,7 @@
 	icon_state = "constable"
 	inhand_icon_state = null
 	can_adjust = FALSE
-	custom_price = PAYCHECK_COMMAND
+	//custom_price = PAYCHECK_COMMAND
 
 
 /obj/item/clothing/under/rank/security/warden

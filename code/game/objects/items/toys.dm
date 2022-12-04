@@ -208,7 +208,7 @@
 	desc = "Every captain's greatest ally when exploring the vast emptiness of space, now with a color display!"
 	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "captainsaid_off"
-	custom_price = PAYCHECK_COMMAND * 1.25
+	//custom_price = PAYCHECK_COMMAND * 1.25
 
 	/// List of modes it can cycle through
 	var/list/modes = list(
@@ -1376,7 +1376,7 @@ GLOBAL_LIST_EMPTY(intento_players)
 	desc = "Fundamentally useless for all intentsive purposes."
 	icon = 'icons/obj/toys/intents.dmi'
 	icon_state = "blank"
-	custom_price = PAYCHECK_COMMAND * 1.25
+	//custom_price = PAYCHECK_COMMAND * 1.25
 
 	/// Current sequence of intents
 	var/list/current_sequence = list()

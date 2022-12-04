@@ -10,8 +10,8 @@
 	siemens_coefficient = 0
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 0)
 	resistance_flags = NONE
-	custom_price = PAYCHECK_CREW * 10
-	custom_premium_price = PAYCHECK_COMMAND * 6
+	//custom_price = PAYCHECK_CREW * 10
+	//custom_premium_price = PAYCHECK_COMMAND * 6
 	cut_type = /obj/item/clothing/gloves/cut
 
 /obj/item/clothing/gloves/color/yellow/heavy
@@ -122,7 +122,7 @@
 	equip_delay_other = 20
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	custom_price = PAYCHECK_CREW * 1.5
+	//custom_price = PAYCHECK_CREW * 1.5
 	undyeable = TRUE
 	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 
@@ -264,7 +264,7 @@
 	desc = "These look pretty fancy."
 	icon_state = "white"
 	greyscale_colors = "#ffffff"
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 
 /obj/item/clothing/gloves/kim
 	name = "aerostatic gloves"

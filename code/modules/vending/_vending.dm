@@ -154,9 +154,9 @@
 	///Bills we accept?
 	var/obj/item/stack/spacecash/bill
 	///Default price of items if not overridden
-	var/default_price = 25
+	var/default_price = 0
 	///Default price of premium items if not overridden
-	var/extra_price = 50
+	var/extra_price = 0
 	///Whether our age check is currently functional
 	var/age_restrictions = TRUE
 	/**
@@ -1423,7 +1423,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/item/vending_refill/custom
 	machine_name = "Custom Vendor"
 	icon_state = "refill_custom"
-	custom_premium_price = PAYCHECK_CREW
+	//custom_premium_price = PAYCHECK_CREW
 
 /obj/machinery/vending/custom/greed //name and like decided by the spawn
 	icon_state = "greed"

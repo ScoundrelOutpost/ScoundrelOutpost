@@ -31,8 +31,6 @@
 		/obj/item/watertank/pepperspray = 2,
 	)
 	refill_canister = /obj/item/vending_refill/security
-	default_price = PAYCHECK_CREW
-	extra_price = PAYCHECK_COMMAND * 1.5
 	payment_department = ACCOUNT_SEC
 
 /obj/machinery/vending/security/pre_throw(obj/item/I)

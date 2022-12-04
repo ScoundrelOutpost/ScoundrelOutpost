@@ -137,7 +137,7 @@
 	reagent_flags = OPENCONTAINER
 	custom_materials = list(/datum/material/glass = 500)
 	w_class = WEIGHT_CLASS_NORMAL
-	custom_price = PAYCHECK_CREW * 0.6
+	//custom_price = PAYCHECK_CREW * 0.6
 
 /obj/item/reagent_containers/cup/bowl/Initialize(mapload)
 	. = ..()

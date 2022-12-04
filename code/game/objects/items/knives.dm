@@ -94,7 +94,7 @@
 	attack_verb_continuous = list("slices", "dices", "chops", "cubes", "minces", "juliennes", "chiffonades", "batonnets")
 	attack_verb_simple = list("slice", "dice", "chop", "cube", "mince", "julienne", "chiffonade", "batonnet")
 	w_class = WEIGHT_CLASS_NORMAL
-	custom_price = PAYCHECK_CREW * 5
+	//custom_price = PAYCHECK_CREW * 5
 	wound_bonus = 15
 
 /obj/item/knife/hunting

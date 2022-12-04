@@ -24,8 +24,6 @@
 		/obj/item/reagent_containers/cup/bottle/diethylamine = 5,
 	)
 	refill_canister = /obj/item/vending_refill/hydronutrients
-	default_price = PAYCHECK_CREW * 0.8
-	extra_price = PAYCHECK_COMMAND * 0.8
 	payment_department = ACCOUNT_SRV
 
 /obj/item/vending_refill/hydronutrients

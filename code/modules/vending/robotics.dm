@@ -25,7 +25,6 @@
 		/obj/item/crowbar = 5,
 	)
 	refill_canister = /obj/item/vending_refill/robotics
-	default_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_SCI
 
 /obj/item/vending_refill/robotics

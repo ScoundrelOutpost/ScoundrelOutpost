@@ -14,7 +14,7 @@
 	desc = "The cornerstone of every nutritious breakfast."
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/protein = 6, /datum/reagent/consumable/nutriment/vitamin = 1)
 	foodtypes = GRAIN | MEAT
-	custom_price = PAYCHECK_CREW * 0.8
+	//custom_price = PAYCHECK_CREW * 0.8
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/burger/plain/Initialize(mapload)
@@ -332,7 +332,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/protein = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("bun" = 2, "a home run" = 4)
 	foodtypes = GRAIN | GROSS
-	custom_price = PAYCHECK_CREW * 0.8
+	//custom_price = PAYCHECK_CREW * 0.8
 	venue_value = FOOD_PRICE_NORMAL
 
 /obj/item/food/burger/baconburger
@@ -342,7 +342,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/protein = 6, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("bacon" = 4, "bun" = 2)
 	foodtypes = GRAIN | MEAT
-	custom_premium_price = PAYCHECK_CREW * 1.6
+	//custom_premium_price = PAYCHECK_CREW * 1.6
 	venue_value = FOOD_PRICE_NORMAL
 
 /obj/item/food/burger/empoweredburger

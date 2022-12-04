@@ -83,7 +83,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	drop_sound = 'sound/items/handling/matchbox_drop.ogg'
 	pickup_sound = 'sound/items/handling/matchbox_pickup.ogg'
-	custom_price = PAYCHECK_CREW * 0.4
+	//custom_price = PAYCHECK_CREW * 0.4
 	base_icon_state = "matchbox"
 	illustration = null
 
@@ -162,7 +162,7 @@
 /obj/item/storage/box/dishdrive
 	name = "DIY Dish Drive Kit"
 	desc = "Contains everything you need to build your own Dish Drive!"
-	custom_premium_price = PAYCHECK_CREW * 3
+	//custom_premium_price = PAYCHECK_CREW * 3
 
 /obj/item/storage/box/dishdrive/PopulateContents()
 	var/static/items_inside = list(
@@ -190,7 +190,7 @@
 /obj/item/storage/box/tail_pin
 	name = "pin the tail on the corgi supplies"
 	desc = "For ages 10 and up. ...Why is this even on a space station? Aren't you a little old for babby games?" //Intentional typo.
-	custom_price = PAYCHECK_COMMAND * 1.25
+	//custom_price = PAYCHECK_COMMAND * 1.25
 
 /obj/item/storage/box/tail_pin/PopulateContents()
 	for(var/i in 1 to 3)

@@ -10,7 +10,7 @@
 	icon_state = "glassbottle"
 	worn_icon_state = "bottle"
 	fill_icon_thresholds = list(0, 10, 20, 30, 40, 50, 60, 70, 80, 90)
-	custom_price = PAYCHECK_CREW * 1.1
+	//custom_price = PAYCHECK_CREW * 1.1
 	amount_per_transfer_from_this = 10
 	volume = 100
 	force = 15 //Smashing bottles over someone's head hurts.
@@ -29,7 +29,7 @@
 	desc = "This blank bottle is unyieldingly anonymous, offering no clues to its contents."
 	icon_state = "glassbottlesmall"
 	volume = 50
-	custom_price = PAYCHECK_CREW * 0.9
+	//custom_price = PAYCHECK_CREW * 0.9
 
 /obj/item/reagent_containers/cup/glass/bottle/smash(mob/living/target, mob/thrower, ranged = FALSE, break_top)
 	if(bartender_check(target) && ranged)
@@ -203,7 +203,7 @@
 	volume = 30
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
 	drink_type = GRAIN | ALCOHOL
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 
 /obj/item/reagent_containers/cup/glass/bottle/beer/almost_empty
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 1)
@@ -219,8 +219,8 @@
 	volume = 30
 	list_reagents = list(/datum/reagent/consumable/rootbeer = 30)
 	drink_type = SUGAR | JUNKFOOD
-	custom_price = PAYCHECK_CREW * 1.5
-	custom_premium_price = PAYCHECK_CREW * 2
+	//custom_price = PAYCHECK_CREW * 1.5
+	//custom_premium_price = PAYCHECK_CREW * 2
 
 /obj/item/reagent_containers/cup/glass/bottle/ale
 	name = "Magm-Ale"
@@ -229,7 +229,7 @@
 	volume = 30
 	list_reagents = list(/datum/reagent/consumable/ethanol/ale = 30)
 	drink_type = GRAIN | ALCOHOL
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 
 /obj/item/reagent_containers/cup/glass/bottle/gin
 	name = "Griffeater gin"
@@ -296,7 +296,7 @@
 	desc = "A 40 full of malt liquor. Kicks stronger than, well, a rabid bear."
 	icon_state = "maltliquorbottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/maltliquor = 100)
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 
 /obj/item/reagent_containers/cup/glass/bottle/holywater
 	name = "flask of holy water"
@@ -484,7 +484,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/grenadine
 	name = "Jester Grenadine"
 	desc = "Contains 0% real cherries!"
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	icon_state = "grenadine"
 	list_reagents = list(/datum/reagent/consumable/grenadine = 100)
 	drink_type = FRUIT
@@ -493,7 +493,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/applejack
 	name = "Buckin' Bronco's Applejack"
 	desc = "Kicks like a horse, tastes like an apple!"
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	icon_state = "applejack_bottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/applejack = 100)
 	drink_type = FRUIT
@@ -815,7 +815,7 @@
  * Meant to be a subtype for use in Molotovs
  */
 /obj/item/reagent_containers/cup/glass/bottle/juice
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/drinks_righthand.dmi'

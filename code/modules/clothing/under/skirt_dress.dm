@@ -45,7 +45,7 @@
 	icon_state = "plaidskirt"
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_colors = "#CC2102"
 	greyscale_config = /datum/greyscale_config/plaidskirt
 	greyscale_config_worn = /datum/greyscale_config/plaidskirt_worn
@@ -55,7 +55,7 @@
 	name = "turtleneck skirt"
 	desc = "A casual turtleneck skirt."
 	icon_state = "turtleskirt"
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_colors = "#cc0000#5f5f5f"
 	greyscale_config = /datum/greyscale_config/turtleskirt
 	greyscale_config_worn = /datum/greyscale_config/turtleskirt_worn
@@ -65,7 +65,7 @@
 	name = "tango dress"
 	desc = "Filled with Latin fire."
 	icon_state = "tango"
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_colors = "#ff0000#1c1c1c"
 	greyscale_config = /datum/greyscale_config/tango
 	greyscale_config_worn = /datum/greyscale_config/tango_worn
@@ -75,7 +75,7 @@
 	name = "sundress"
 	desc = "Makes you want to frolic in a field of daisies."
 	icon_state = "sundress"
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_colors = "#FFE60F#9194A5#1F243C"
 	greyscale_config = /datum/greyscale_config/sundress
 	greyscale_config_worn = /datum/greyscale_config/sundress_worn

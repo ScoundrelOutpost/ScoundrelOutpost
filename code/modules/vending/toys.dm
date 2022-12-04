@@ -27,8 +27,6 @@
 		/obj/item/dualsaber/toy = 5,
 	)
 	refill_canister = /obj/item/vending_refill/donksoft
-	default_price = PAYCHECK_CREW
-	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_SRV
 
 /obj/item/vending_refill/donksoft

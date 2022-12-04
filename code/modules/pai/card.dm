@@ -1,5 +1,5 @@
 /obj/item/pai_card
-	custom_premium_price = PAYCHECK_COMMAND * 1.25
+	//custom_premium_price = PAYCHECK_COMMAND * 1.25
 	desc = "Downloads personal AI assistants to accompany its owner or others."
 	icon = 'icons/obj/aicards.dmi'
 	icon_state = "pai"

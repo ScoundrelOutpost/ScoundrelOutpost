@@ -72,7 +72,7 @@
 	desc = "A large, yet comfortable piece of armor, protecting you from some threats."
 	icon_state = "blueshift"
 	inhand_icon_state = null
-	custom_premium_price = PAYCHECK_COMMAND
+	//custom_premium_price = PAYCHECK_COMMAND
 
 /obj/item/clothing/suit/armor/vest/cuirass
 	name = "cuirass"

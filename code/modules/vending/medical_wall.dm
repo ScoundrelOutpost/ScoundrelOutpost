@@ -22,8 +22,6 @@
 		/obj/item/storage/box/gum/happiness = 1,
 	)
 	refill_canister = /obj/item/vending_refill/wallmed
-	default_price = PAYCHECK_COMMAND //Double the medical price due to being meant for public consumption, not player specfic
-	extra_price = PAYCHECK_COMMAND * 1.5
 	payment_department = ACCOUNT_MED
 	tiltable = FALSE
 	light_mask = "wallmed-light-mask"

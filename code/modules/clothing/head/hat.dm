@@ -16,7 +16,7 @@
 	desc = "A british looking helmet."
 	icon_state = "constable"
 	inhand_icon_state = null
-	custom_price = PAYCHECK_COMMAND * 1.5
+	//custom_price = PAYCHECK_COMMAND * 1.5
 	worn_y_offset = 4
 
 /obj/item/clothing/head/costume/spacepolice

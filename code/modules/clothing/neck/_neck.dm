@@ -24,7 +24,7 @@
 	icon_state = "tie_greyscale_tied"
 	inhand_icon_state = "" //no inhands
 	w_class = WEIGHT_CLASS_SMALL
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_config = /datum/greyscale_config/ties
 	greyscale_config_worn = /datum/greyscale_config/ties_worn
 	greyscale_colors = "#4d4e4e"
@@ -213,7 +213,7 @@
 	icon_state = "scarf"
 	desc = "A stylish scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks."
 	w_class = WEIGHT_CLASS_TINY
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_colors = "#EEEEEE#EEEEEE"
 	greyscale_config = /datum/greyscale_config/scarf
 	greyscale_config_worn = /datum/greyscale_config/scarf_worn
@@ -267,7 +267,7 @@
 	name = "large scarf"
 	icon_state = "large_scarf"
 	w_class = WEIGHT_CLASS_TINY
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_colors = "#C6C6C6#EEEEEE"
 	greyscale_config = /datum/greyscale_config/large_scarf
 	greyscale_config_worn = /datum/greyscale_config/large_scarf_worn
@@ -295,7 +295,7 @@
 	name = "infinity scarf"
 	icon_state = "infinity_scarf"
 	w_class = WEIGHT_CLASS_TINY
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	greyscale_colors = "#EEEEEE"
 	greyscale_config = /datum/greyscale_config/infinity_scarf
 	greyscale_config_worn = /datum/greyscale_config/infinity_scarf_worn
@@ -361,7 +361,7 @@
 	icon = 'icons/obj/clothing/neck.dmi'
 	icon_state = "beads"
 	color = "#ffffff"
-	custom_price = PAYCHECK_CREW * 0.2
+	//custom_price = PAYCHECK_CREW * 0.2
 	custom_materials = (list(/datum/material/plastic = 500))
 
 /obj/item/clothing/neck/beads/Initialize(mapload)

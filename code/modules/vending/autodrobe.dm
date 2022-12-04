@@ -219,8 +219,6 @@
 		/obj/item/clothing/suit/hooded/wintercoat/cosmic = 1, //ORBSTATION
 	)
 	refill_canister = /obj/item/vending_refill/autodrobe
-	default_price = PAYCHECK_CREW * 0.8 //Default of 40.
-	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_SRV
 	light_mask="theater-light-mask"
 

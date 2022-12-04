@@ -100,7 +100,7 @@
 	desc = "A reliable, blue tinted helmet reminding you that you <i>still</i> owe that engineer a beer."
 	icon_state = "blueshift"
 	inhand_icon_state = "blueshift_helmet"
-	custom_premium_price = PAYCHECK_COMMAND
+	//custom_premium_price = PAYCHECK_COMMAND
 
 
 /obj/item/clothing/head/helmet/toggleable

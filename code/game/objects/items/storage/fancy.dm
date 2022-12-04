@@ -95,7 +95,7 @@
 	spawn_count = 6
 	is_open = TRUE
 	appearance_flags = KEEP_TOGETHER|LONG_GLIDE
-	custom_premium_price = PAYCHECK_COMMAND * 1.75
+	//custom_premium_price = PAYCHECK_COMMAND * 1.75
 	contents_tag = "donut"
 
 /obj/item/storage/fancy/donut_box/Initialize(mapload)
@@ -191,7 +191,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	spawn_type = /obj/item/clothing/mask/cigarette/space_cigarette
 	spawn_count = 6
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	age_restricted = TRUE
 	contents_tag = "cigarette"
 	///for cigarette overlay
@@ -355,7 +355,7 @@
 	contents_tag = "rolling paper"
 	spawn_type = /obj/item/rollingpaper
 	spawn_count = 10
-	custom_price = PAYCHECK_LOWER
+	//custom_price = PAYCHECK_LOWER
 	has_open_closed_states = FALSE
 
 /obj/item/storage/fancy/rollingpapers/Initialize(mapload)

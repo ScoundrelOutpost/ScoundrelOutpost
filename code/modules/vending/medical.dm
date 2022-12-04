@@ -33,8 +33,6 @@
 		/obj/item/storage/organbox = 1,
 	)
 	refill_canister = /obj/item/vending_refill/medical
-	default_price = PAYCHECK_CREW
-	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_MED
 	light_mask = "med-light-mask"
 
@@ -81,8 +79,6 @@
 		/obj/item/reagent_containers/medigel/synthflesh = 2,
 		/obj/item/storage/pill_bottle/psicodine = 2,
 		)
-	default_price = 50
-	extra_price = 100
 	payment_department = ACCOUNT_MED
 	refill_canister = /obj/item/vending_refill/drugs
 

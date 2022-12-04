@@ -256,7 +256,7 @@
 /obj/item/clothing/under/costume/buttondown
 	gender = PLURAL
 	female_sprite_flags = NO_FEMALE_UNIFORM
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	icon = 'icons/obj/clothing/under/shorts_pants_shirts.dmi'
 	worn_icon = 'icons/mob/clothing/under/shorts_pants_shirts.dmi'
 	species_exception = list(/datum/species/golem)

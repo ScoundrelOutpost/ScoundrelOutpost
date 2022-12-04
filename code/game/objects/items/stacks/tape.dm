@@ -116,7 +116,7 @@
 	prefix = "surgical"
 	conferred_embed = list("embed_chance" = 30, "pain_mult" = 0, "jostle_pain_mult" = 0, "ignore_throwspeed_threshold" = TRUE)
 	splint_factor = 0.5
-	custom_price = PAYCHECK_CREW
+	//custom_price = PAYCHECK_CREW
 	merge_type = /obj/item/stack/sticky_tape/surgical
 	greyscale_colors = "#70BAE7#BD6A62"
 	tape_gag = /obj/item/clothing/mask/muzzle/tape/surgical

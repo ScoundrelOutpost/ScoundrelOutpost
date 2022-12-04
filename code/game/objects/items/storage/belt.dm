@@ -38,7 +38,7 @@
 	inhand_icon_state = "utility"
 	worn_icon_state = "utility"
 	content_overlays = TRUE
-	custom_premium_price = PAYCHECK_CREW * 2
+	//custom_premium_price = PAYCHECK_CREW * 2
 	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
 	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
 
@@ -356,7 +356,7 @@
 	inhand_icon_state = "securitywebbing"
 	worn_icon_state = "securitywebbing"
 	content_overlays = FALSE
-	custom_premium_price = PAYCHECK_COMMAND * 3
+	//custom_premium_price = PAYCHECK_COMMAND * 3
 
 /obj/item/storage/belt/security/webbing/Initialize(mapload)
 	. = ..()
@@ -704,7 +704,7 @@
 	inhand_icon_state = null
 	worn_icon_state = "fannypack_leather"
 	dying_key = DYE_REGISTRY_FANNYPACK
-	custom_price = PAYCHECK_CREW * 2
+	//custom_price = PAYCHECK_CREW * 2
 
 /obj/item/storage/belt/fannypack/Initialize(mapload)
 	. = ..()

@@ -9,7 +9,7 @@
 	icon = 'icons/obj/clothing/head/beanie.dmi'
 	worn_icon = 'icons/mob/clothing/head/beanie.dmi'
 	icon_state = "beanie"
-	custom_price = PAYCHECK_CREW * 1.2
+	//custom_price = PAYCHECK_CREW * 1.2
 	greyscale_colors = "#EEEEEE#EEEEEE"
 	greyscale_config = /datum/greyscale_config/beanie
 	greyscale_config_worn = /datum/greyscale_config/beanie_worn

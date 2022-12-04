@@ -2,8 +2,6 @@
 	icon_state = "refill_clothes"
 
 /obj/machinery/vending/wardrobe
-	default_price = PAYCHECK_CREW
-	extra_price = PAYCHECK_COMMAND
 	payment_department = NO_FREEBIES
 	input_display_header = "Returned Clothing"
 	panel_type = "panel19"
@@ -194,7 +192,6 @@
 		/obj/item/organ/internal/tongue/robot = 2,
 		)
 	refill_canister = /obj/item/vending_refill/wardrobe/robo_wardrobe
-	extra_price = PAYCHECK_COMMAND * 1.2
 	payment_department = ACCOUNT_SCI
 /obj/item/vending_refill/wardrobe/robo_wardrobe
 	machine_name = "RoboDrobe"
@@ -314,7 +311,6 @@
 		)
 	refill_canister = /obj/item/vending_refill/wardrobe/bar_wardrobe
 	payment_department = ACCOUNT_SRV
-	extra_price = PAYCHECK_COMMAND
 /obj/item/vending_refill/wardrobe/bar_wardrobe
 	machine_name = "BarDrobe"
 
@@ -374,8 +370,6 @@
 		/obj/item/plunger = 2,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/jani_wardrobe
-	default_price = PAYCHECK_CREW
-	extra_price = PAYCHECK_COMMAND * 0.8
 	payment_department = ACCOUNT_SRV
 	light_color = COLOR_STRONG_MAGENTA
 
@@ -566,7 +560,6 @@
 		/obj/item/clothing/head/flatcap = 1,
 		)
 	refill_canister = /obj/item/vending_refill/wardrobe/det_wardrobe
-	extra_price = PAYCHECK_COMMAND * 1.75
 	payment_department = ACCOUNT_SEC
 
 /obj/item/vending_refill/wardrobe/det_wardrobe

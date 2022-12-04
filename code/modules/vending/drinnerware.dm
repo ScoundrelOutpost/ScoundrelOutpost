@@ -29,8 +29,6 @@
 		/obj/item/knife/butcher = 2,
 	)
 	refill_canister = /obj/item/vending_refill/dinnerware
-	default_price = PAYCHECK_CREW * 0.8
-	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_SRV
 	light_mask = "dinnerware-light-mask"
 

@@ -114,8 +114,8 @@
 	reagent_flags = DRAWABLE
 	flags_1 = null
 	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/toxin/formaldehyde = 3, /datum/reagent/medicine/coagulant = 2)
-	custom_price = PAYCHECK_CREW
-	custom_premium_price = PAYCHECK_COMMAND
+	//custom_price = PAYCHECK_CREW
+	//custom_premium_price = PAYCHECK_COMMAND
 	var/label_examine = TRUE
 	var/label_text
 

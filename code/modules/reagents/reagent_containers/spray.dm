@@ -380,7 +380,7 @@
 	spray_range = 4
 	stream_range = 2
 	volume = 100
-	custom_premium_price = PAYCHECK_COMMAND * 2
+	//custom_premium_price = PAYCHECK_COMMAND * 2
 
 /obj/item/reagent_containers/spray/syndicate/Initialize(mapload)
 	. = ..()

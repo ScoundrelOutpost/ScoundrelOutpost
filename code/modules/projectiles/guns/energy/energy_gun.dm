@@ -163,3 +163,18 @@
 			. += "[icon_state]_fail_1"
 		if(151 to INFINITY)
 			. += "[icon_state]_fail_2"
+
+// Scoundrel content
+
+/obj/item/gun/energy/e_gun/defender
+	name = "defender pistol"
+	desc = "A compact personal defender popular among independents on the frontier. It doesn't hold very much charge, but it's affordable and robust. It has two settings: disable and kill."
+	icon_state = "defender"
+	inhand_icon_state = "gun"
+	ammo_x_offset = 2
+	charge_sections = 5
+	w_class = WEIGHT_CLASS_SMALL
+	cell_type = /obj/item/stock_parts/cell/mini_egun
+	single_shot_type_overlay = FALSE
+	force = 10
+	throwforce = 10

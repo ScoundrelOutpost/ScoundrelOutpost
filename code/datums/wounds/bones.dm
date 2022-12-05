@@ -209,7 +209,7 @@
 	severity = WOUND_SEVERITY_MODERATE
 	viable_zones = list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	interaction_efficiency_penalty = 1.3
-	limp_slowdown = 3
+	limp_slowdown = 1.1
 	limp_chance = 50
 	threshold_minimum = 35
 	threshold_penalty = 15
@@ -322,7 +322,7 @@
 
 	severity = WOUND_SEVERITY_SEVERE
 	interaction_efficiency_penalty = 2
-	limp_slowdown = 6
+	limp_slowdown = 1.1
 	limp_chance = 60
 	threshold_minimum = 60
 	threshold_penalty = 30
@@ -345,7 +345,7 @@
 
 	severity = WOUND_SEVERITY_CRITICAL
 	interaction_efficiency_penalty = 2.5
-	limp_slowdown = 7
+	limp_slowdown = 1.1
 	limp_chance = 70
 	sound_effect = 'sound/effects/wounds/crack2.ogg'
 	threshold_minimum = 115

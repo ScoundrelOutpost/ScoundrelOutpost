@@ -140,20 +140,20 @@
 	gas_type = null //it starts empty
 
 /obj/item/tank/jetpack/void
-	name = "void jetpack (oxygen)"
-	desc = "It works well in a void."
+	name = "void jetpack"
+	desc = "It works well in a void. It has an oxygen label on the tank."
 	icon_state = "jetpack-void"
 	inhand_icon_state = "jetpack-void"
 
 /obj/item/tank/jetpack/oxygen
-	name = "jetpack (oxygen)"
-	desc = "A tank of compressed oxygen for use as propulsion in zero-gravity areas. Use with caution."
+	name = "jetpack"
+	desc = "A tank of compressed gas for use as propulsion in zero-gravity areas. Use with caution. It has an oxygen label on the tank."
 	icon_state = "jetpack"
 	inhand_icon_state = "jetpack"
 
 /obj/item/tank/jetpack/oxygen/harness
-	name = "jet harness (oxygen)"
-	desc = "A lightweight tactical harness, used by those who don't want to be weighed down by traditional jetpacks."
+	name = "jet harness"
+	desc = "A lightweight tactical harness, used by those who don't want to be weighed down by traditional jetpacks. It has an oxygen label on the tank."
 	icon_state = "jetpack-mini"
 	inhand_icon_state = "jetpack-black"
 	volume = 40
@@ -162,7 +162,7 @@
 
 /obj/item/tank/jetpack/oxygen/captain
 	name = "captain's jetpack"
-	desc = "A compact, lightweight jetpack containing a high amount of compressed oxygen."
+	desc = "A compact, lightweight jetpack containing a high amount of compressed gas. It has an oxygen label on the tank."
 	icon_state = "jetpack-captain"
 	inhand_icon_state = "jetpack-captain"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -170,16 +170,16 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF //steal objective items are hard to destroy.
 
 /obj/item/tank/jetpack/oxygen/security
-	name = "security jetpack (oxygen)"
-	desc = "A tank of compressed oxygen for use as propulsion in zero-gravity areas by security forces."
+	name = "red jetpack"
+	desc = "A tank of compressed gas for use as propulsion in zero-gravity areas. Use with caution. It has an oxygen label on the tank."
 	icon_state = "jetpack-sec"
 	inhand_icon_state = "jetpack-sec"
 
 
 
 /obj/item/tank/jetpack/carbondioxide
-	name = "jetpack (carbon dioxide)"
-	desc = "A tank of compressed carbon dioxide for use as propulsion in zero-gravity areas. Painted black to indicate that it should not be used as a source for internals."
+	name = "black jetpack"
+	desc = "A tank of compressed gas for use as propulsion in zero-gravity areas. Use with caution. It has a carbon dioxide label on the tank."
 	icon_state = "jetpack-black"
 	inhand_icon_state = "jetpack-black"
 	distribute_pressure = 0

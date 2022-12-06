@@ -5,12 +5,10 @@
 /obj/machinery/door/airlock/command
 	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
-	normal_integrity = 450
 
 /obj/machinery/door/airlock/security
 	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec
-	normal_integrity = 450
 
 /obj/machinery/door/airlock/engineering
 	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
@@ -28,7 +26,6 @@
 	name = "maintenance access"
 	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_mai
-	normal_integrity = 250
 
 /obj/machinery/door/airlock/maintenance/external
 	name = "external airlock access"
@@ -88,7 +85,6 @@
 /obj/machinery/door/airlock/command/glass
 	opacity = FALSE
 	glass = TRUE
-	normal_integrity = 400
 
 /obj/machinery/door/airlock/engineering/glass
 	opacity = FALSE
@@ -100,7 +96,6 @@
 /obj/machinery/door/airlock/security/glass
 	opacity = FALSE
 	glass = TRUE
-	normal_integrity = 400
 
 /obj/machinery/door/airlock/medical/glass
 	opacity = FALSE
@@ -153,7 +148,6 @@
 /obj/machinery/door/airlock/maintenance/external/glass
 	opacity = FALSE
 	glass = TRUE
-	normal_integrity = 200
 
 //////////////////////////////////
 /*
@@ -182,11 +176,10 @@
 	name = "diamond airlock"
 	icon = 'icons/obj/doors/airlocks/station/diamond.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_diamond
-	normal_integrity = 1000
+	normal_integrity = 800
 	explosion_block = 2
 
 /obj/machinery/door/airlock/diamond/glass
-	normal_integrity = 950
 	opacity = FALSE
 	glass = TRUE
 
@@ -277,10 +270,9 @@
 	assemblytype = /obj/structure/door_assembly/door_assembly_titanium
 	icon = 'icons/obj/doors/airlocks/shuttle/shuttle.dmi'
 	overlays_file = 'icons/obj/doors/airlocks/shuttle/overlays.dmi'
-	normal_integrity = 400
+	normal_integrity = 450
 
 /obj/machinery/door/airlock/titanium/glass
-	normal_integrity = 350
 	opacity = FALSE
 	glass = TRUE
 
@@ -414,7 +406,8 @@
 	overlays_file = 'icons/obj/doors/airlocks/vault/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_vault
 	explosion_block = 2
-	normal_integrity = 400 // reverse engieneerd: 400 * 1.5 (sec lvl 6) = 600 = original
+	normal_integrity = 875 // reverse engieneerd: 400 * 1.5 (sec lvl 6) = 600 = original // i have no idea what this is about
+	damage_deflection = 30
 	security_level = 6
 
 //////////////////////////////////
@@ -447,9 +440,9 @@
 	overlays_file = 'icons/obj/doors/airlocks/highsec/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_highsecurity
 	explosion_block = 2
-	normal_integrity = 500
+	normal_integrity = 600
 	security_level = 1
-	damage_deflection = 30
+	damage_deflection = 25
 
 //////////////////////////////////
 /*
@@ -477,7 +470,7 @@
 	explosion_block = 3
 	hackProof = TRUE
 	aiControlDisabled = AI_WIRE_DISABLED
-	normal_integrity = 700
+	normal_integrity = 550
 	security_level = 1
 
 //////////////////////////////////

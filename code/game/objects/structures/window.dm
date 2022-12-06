@@ -10,7 +10,7 @@
 	max_integrity = 50
 	can_be_unanchored = TRUE
 	resistance_flags = ACID_PROOF
-	armor = list(MELEE = 50, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 80, ACID = 100)
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 80, ACID = 100)
 	can_atmos_pass = ATMOS_PASS_PROC
 	rad_insulation = RAD_VERY_LIGHT_INSULATION
 	pass_flags_self = PASSGLASS
@@ -251,12 +251,12 @@
 	switch(state)
 		if(WINDOW_IN_FRAME)
 			to_chat(user, span_notice("You begin to lever the window out of the frame..."))
-			if(tool.use_tool(src, user, 10 SECONDS, volume = 75, extra_checks = CALLBACK(src, PROC_REF(check_state_and_anchored), state, anchored)))
+			if(tool.use_tool(src, user, decon_speed, volume = 75, extra_checks = CALLBACK(src, PROC_REF(check_state_and_anchored), state, anchored)))
 				state = WINDOW_OUT_OF_FRAME
 				to_chat(user, span_notice("You pry the window out of the frame."))
 		if(WINDOW_OUT_OF_FRAME)
 			to_chat(user, span_notice("You begin to lever the window back into the frame..."))
-			if(tool.use_tool(src, user, 5 SECONDS, volume = 75, extra_checks = CALLBACK(src, PROC_REF(check_state_and_anchored), state, anchored)))
+			if(tool.use_tool(src, user, decon_speed, volume = 75, extra_checks = CALLBACK(src, PROC_REF(check_state_and_anchored), state, anchored)))
 				state = WINDOW_SCREWED_TO_FRAME
 				to_chat(user, span_notice("You pry the window back into the frame."))
 
@@ -440,8 +440,9 @@
 	icon_state = "rwindow"
 	reinf = TRUE
 	heat_resistance = 1600
-	armor = list(MELEE = 80, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 25, BIO = 0, FIRE = 80, ACID = 100)
-	max_integrity = 75
+	decon_speed = 15 // Takes more steps so each step is faster
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 25, BIO = 0, FIRE = 80, ACID = 100)
+	max_integrity = 100
 	explosion_block = 1
 	damage_deflection = 11
 	state = RWINDOW_SECURE
@@ -460,7 +461,7 @@
 				if(tool.tool_start_check(user))
 					user.visible_message(span_notice("[user] holds \the [tool] to the security screws on \the [src]..."),
 						span_notice("You begin heating the security screws on \the [src]..."))
-					if(tool.use_tool(src, user, 15 SECONDS, volume = 100))
+					if(tool.use_tool(src, user, decon_speed, volume = 100))
 						to_chat(user, span_notice("The security screws are glowing white hot and look ready to be removed."))
 						state = RWINDOW_BOLTS_HEATED
 						addtimer(CALLBACK(src, PROC_REF(cool_bolts)), 30 SECONDS)
@@ -471,7 +472,7 @@
 			if(tool.tool_behaviour == TOOL_SCREWDRIVER)
 				user.visible_message(span_notice("[user] digs into the heated security screws and starts removing them..."),
 										span_notice("You dig into the heated screws hard and they start turning..."))
-				if(tool.use_tool(src, user, 50, volume = 50))
+				if(tool.use_tool(src, user, decon_speed, volume = 50))
 					state = RWINDOW_BOLTS_OUT
 					to_chat(user, span_notice("The screws come out, and a gap forms around the edge of the pane."))
 			else if (tool.tool_behaviour)
@@ -481,7 +482,7 @@
 			if(tool.tool_behaviour == TOOL_CROWBAR)
 				user.visible_message(span_notice("[user] wedges \the [tool] into the gap in the frame and starts prying..."),
 										span_notice("You wedge \the [tool] into the gap in the frame and start prying..."))
-				if(tool.use_tool(src, user, 40, volume = 50))
+				if(tool.use_tool(src, user, decon_speed, volume = 50))
 					state = RWINDOW_POPPED
 					to_chat(user, span_notice("The panel pops out of the frame, exposing some thin metal bars that looks like they can be cut."))
 			else if (tool.tool_behaviour)
@@ -491,7 +492,7 @@
 			if(tool.tool_behaviour == TOOL_WIRECUTTER)
 				user.visible_message(span_notice("[user] starts cutting the exposed bars on \the [src]..."),
 										span_notice("You start cutting the exposed bars on \the [src]"))
-				if(tool.use_tool(src, user, 20, volume = 50))
+				if(tool.use_tool(src, user, decon_speed, volume = 50))
 					state = RWINDOW_BARS_CUT
 					to_chat(user, span_notice("The panels falls out of the way exposing the frame bolts."))
 			else if (tool.tool_behaviour)
@@ -501,7 +502,7 @@
 			if(tool.tool_behaviour == TOOL_WRENCH)
 				user.visible_message(span_notice("[user] starts unfastening \the [src] from the frame..."),
 					span_notice("You start unfastening the bolts from the frame..."))
-				if(tool.use_tool(src, user, 40, volume = 50))
+				if(tool.use_tool(src, user, decon_speed, volume = 50))
 					to_chat(user, span_notice("You unscrew the bolts from the frame and the window pops loose."))
 					state = WINDOW_OUT_OF_FRAME
 					set_anchored(FALSE)
@@ -520,7 +521,7 @@
 	if((flags_1 & NODECONSTRUCT_1) || (state != WINDOW_OUT_OF_FRAME))
 		return FALSE
 	to_chat(user, span_notice("You begin to lever the window back into the frame..."))
-	if(tool.use_tool(src, user, 10 SECONDS, volume = 75, extra_checks = CALLBACK(src, PROC_REF(check_state_and_anchored), state, anchored)))
+	if(tool.use_tool(src, user, decon_speed, volume = 75, extra_checks = CALLBACK(src, PROC_REF(check_state_and_anchored), state, anchored)))
 		state = RWINDOW_SECURE
 		to_chat(user, span_notice("You pry the window back into the frame."))
 	return TOOL_ACT_TOOLTYPE_SUCCESS
@@ -563,8 +564,8 @@
 	icon_state = "plasmawindow"
 	reinf = FALSE
 	heat_resistance = 25000
-	armor = list(MELEE = 80, BULLET = 5, LASER = 0, ENERGY = 0, BOMB = 45, BIO = 0, FIRE = 99, ACID = 100)
-	max_integrity = 200
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 45, BIO = 0, FIRE = 99, ACID = 100)
+	max_integrity = 100
 	explosion_block = 1
 	glass_type = /obj/item/stack/sheet/plasmaglass
 	rad_insulation = RAD_MEDIUM_INSULATION
@@ -599,10 +600,11 @@
 	desc = "A window made out of a plasma-silicate alloy and a rod matrix. It looks hopelessly tough to break and is most likely nigh fireproof."
 	icon_state = "plasmarwindow"
 	reinf = TRUE
+	decon_speed = 15 // Takes more steps so each step is faster
 	heat_resistance = 50000
-	armor = list(MELEE = 80, BULLET = 20, LASER = 0, ENERGY = 0, BOMB = 60, BIO = 0, FIRE = 99, ACID = 100)
-	max_integrity = 500
-	damage_deflection = 21
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 60, BIO = 0, FIRE = 99, ACID = 100)
+	max_integrity = 200
+	damage_deflection = 15
 	explosion_block = 2
 	glass_type = /obj/item/stack/sheet/plasmarglass
 	rad_insulation = RAD_HEAVY_INSULATION
@@ -652,7 +654,7 @@
 	icon = 'icons/obj/smooth_structures/plasma_window.dmi'
 	icon_state = "plasma_window-0"
 	base_icon_state = "plasma_window"
-	max_integrity = 400
+	max_integrity = 200
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smoothing_flags = SMOOTH_BITMASK
@@ -668,7 +670,7 @@
 	icon_state = "rplasma_window-0"
 	base_icon_state = "rplasma_window"
 	state = RWINDOW_SECURE
-	max_integrity = 1000
+	max_integrity = 400
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smoothing_flags = SMOOTH_BITMASK
@@ -684,7 +686,7 @@
 	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
 	icon_state = "reinforced_window-0"
 	base_icon_state = "reinforced_window"
-	max_integrity = 150
+	max_integrity = 200
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	state = RWINDOW_SECURE
@@ -712,7 +714,7 @@
 	icon = 'icons/obj/smooth_structures/rice_window.dmi'
 	icon_state = "rice_window-0"
 	base_icon_state = "rice_window"
-	max_integrity = 150
+	max_integrity = 200
 	glass_amount = 2
 
 //there is a sub shuttle window in survival_pod.dm for mining pods
@@ -722,14 +724,14 @@
 	icon = 'icons/obj/smooth_structures/shuttle_window.dmi'
 	icon_state = "shuttle_window-0"
 	base_icon_state = "shuttle_window"
-	max_integrity = 150
+	max_integrity = 250
 	wtype = "shuttle"
 	reinf = TRUE
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	reinf = TRUE
 	heat_resistance = 1600
-	armor = list(MELEE = 90, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 0, FIRE = 80, ACID = 100)
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 0, FIRE = 80, ACID = 100)
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE_SHUTTLE, SMOOTH_GROUP_SHUTTLE_PARTS)
 	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE_SHUTTLE,SMOOTH_GROUP_WALLS)
@@ -764,17 +766,17 @@
 	icon = 'icons/obj/smooth_structures/plastitanium_window.dmi'
 	icon_state = "plastitanium_window-0"
 	base_icon_state = "plastitanium_window"
-	max_integrity = 1200
+	max_integrity = 450
 	wtype = "shuttle"
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	heat_resistance = 1600
-	armor = list(MELEE = 95, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 0, FIRE = 80, ACID = 100)
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 0, FIRE = 80, ACID = 100)
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE_PLASTITANIUM, SMOOTH_GROUP_SHUTTLE_PARTS)
 	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE_PLASTITANIUM,SMOOTH_GROUP_WALLS)
 	explosion_block = 3
-	damage_deflection = 21 //The same as reinforced plasma windows.3
+	damage_deflection = 15 //The same as reinforced plasma windows.3
 	glass_type = /obj/item/stack/sheet/plastitaniumglass
 	glass_amount = 2
 	rad_insulation = RAD_EXTREME_INSULATION
@@ -799,7 +801,7 @@
 	icon_state = "paperframes-0"
 	base_icon_state = "paperframes"
 	opacity = TRUE
-	max_integrity = 15
+	max_integrity = 45
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smoothing_flags = SMOOTH_BITMASK
@@ -891,7 +893,7 @@
 	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE_BRONZE,SMOOTH_GROUP_WALLS)
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
-	max_integrity = 50
+	max_integrity = 100
 	glass_amount = 2
 
 /obj/structure/window/bronze/fulltile/unanchored

@@ -66,7 +66,7 @@
 	new /obj/item/door_remote/captain(src)
 	new /obj/item/storage/photo_album/captain(src)
 	new /obj/item/sensor_device(src)
-
+	new /obj/item/storage/box/bolas(src)
 
 
 /obj/structure/closet/secure_closet/quartermaster_scoundrel
@@ -106,3 +106,4 @@
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/binoculars(src)
+	new /obj/item/storage/box/bolas(src)

@@ -296,3 +296,25 @@
 /obj/item/storage/box/sparklers/PopulateContents()
 	for(var/i in 1 to 7)
 		new/obj/item/sparkler(src)
+
+
+// scoundrel content
+/obj/item/storage/box/bolas
+	name = "bola box"
+	desc = "A box labeled to contain bolas."
+	icon_state = "secbox"
+
+/obj/item/storage/box/bolas/PopulateContents()
+	..()
+	for(var/i in 1 to 7)
+		new /obj/item/restraints/legcuffs/bola(src)
+
+/obj/item/storage/box/energybolas
+	name = "energy bola box"
+	desc = "A box labeled to contain non-reusable hardlight energy bolas."
+	icon_state = "secbox"
+
+/obj/item/storage/box/energybolas/PopulateContents()
+	..()
+	for(var/i in 1 to 7)
+		new /obj/item/restraints/legcuffs/bola/energy(src)

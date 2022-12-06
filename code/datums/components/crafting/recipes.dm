@@ -121,9 +121,9 @@
 /datum/crafting_recipe/bola
 	name = "Bola"
 	result = /obj/item/restraints/legcuffs/bola
-	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
-				/obj/item/stack/sheet/iron = 6)
-	time = 0.5 SECONDS//faster than crafting them by hand!
+	reqs = list(/obj/item/stack/cable_coil = 10,
+				/obj/item/stack/sheet/iron = 2)
+	time = 0.5 SECONDS
 	category= CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 

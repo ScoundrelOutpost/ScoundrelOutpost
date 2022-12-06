@@ -4,7 +4,7 @@
 	icon_state = "galoshes"
 	inhand_icon_state = "galoshes"
 	clothing_flags = NOSLIP
-	slowdown = SHOES_SLOWDOWN+1
+	slowdown = SHOES_SLOWDOWN+0.5
 	strip_delay = 30
 	equip_delay_other = 50
 	resistance_flags = NONE

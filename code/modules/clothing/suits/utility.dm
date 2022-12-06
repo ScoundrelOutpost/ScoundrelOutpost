@@ -27,7 +27,7 @@
 		/obj/item/fireaxe/metal_h2_axe,
 		/obj/item/tank/internals,
 	)
-	slowdown = 1
+	slowdown = 0.5
 	armor = list(MELEE = 15, BULLET = 5, LASER = 20, ENERGY = 20, BOMB = 20, BIO = 50, FIRE = 100, ACID = 50)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
@@ -53,7 +53,7 @@
 	desc = "An old, bulky thermal protection suit."
 	icon_state = "thermal"
 	inhand_icon_state = "ro_suit"
-	slowdown = 1.5
+	slowdown = 0.5
 
 /obj/item/clothing/suit/utility/fire/atmos
 	name = "firesuit"
@@ -90,7 +90,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	clothing_flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	slowdown = 2
+	slowdown = 0.5
 	armor = list(MELEE = 20, BULLET = 0, LASER = 20,ENERGY = 30, BOMB = 100, BIO = 50, FIRE = 80, ACID = 50)
 	flags_inv = HIDEJUMPSUIT
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -151,7 +151,7 @@
 		/obj/item/geiger_counter,
 		/obj/item/tank/internals,
 		)
-	slowdown = 1.5
+	slowdown = 0.5
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 60, FIRE = 30, ACID = 30)
 	strip_delay = 60
 	equip_delay_other = 60

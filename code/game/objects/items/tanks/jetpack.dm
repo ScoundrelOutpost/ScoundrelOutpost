@@ -184,3 +184,49 @@
 	inhand_icon_state = "jetpack-black"
 	distribute_pressure = 0
 	gas_type = /datum/gas/carbon_dioxide
+
+
+
+// scoundrel content - advanced jetpacks
+/obj/item/tank/jetpack/advanced
+	name = "advanced jetpack"
+	desc = "A back-mounted propulsion system based on rapid expulsion of compressed gas. It's equipped with a recharging ion-propulsor for space travel. It has an oxygen label on the tank."
+	icon_state = "jetpack-mini"
+	inhand_icon_state = "jetpack-black"
+	actions_types = list(/datum/action/item_action/set_internals, /datum/action/item_action/toggle_jetpack, /datum/action/item_action/jetpack_stabilization, /datum/action/item_action/jetboost)
+// scoundrel content - jetpack boost
+	var/jumpdistance = 0 //-1 from to see the actual distance, e.g 4 goes over 3 tiles
+	var/jumpspeed = 1.5
+	var/recharging_rate = 60 //default 6 seconds between each dash
+	var/recharging_time = 0 //time until next dash
+
+/obj/item/tank/jetpack/advanced/ui_action_click(mob/user, action)
+	if(istype(action, /datum/action/item_action/toggle_jetpack))
+		cycle(user)
+	else if(istype(action, /datum/action/item_action/jetpack_stabilization))
+		if(on)
+			set_stabilizers(!stabilizers)
+			to_chat(user, span_notice("You turn the jetpack stabilization [stabilizers ? "on" : "off"]."))
+	
+	// scoundrel content - jump boots (shoes/bhop) code
+	else if(istype(action, /datum/action/item_action/jetboost))
+		if(!isliving(user))
+			return
+
+		if(recharging_time > world.time)
+			to_chat(user, span_warning("The jetpack's internal propulsion needs to recharge still!"))
+			return
+
+		var/atom/target = get_edge_target_turf(user, user.dir) //gets the user's direction
+
+		ADD_TRAIT(user, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)  //Throwing itself doesn't protect mobs against lava (because gulag).
+		if (user.throw_at(target, jumpdistance, jumpspeed, spin = FALSE, diagonals_first = TRUE, callback = TRAIT_CALLBACK_REMOVE(user, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)))
+			playsound(src, 'sound/effects/stealthoff.ogg', 50, TRUE, TRUE)
+			user.visible_message(span_warning("[usr] fires a jet of ion particles from their jetpack!"))
+			recharging_time = world.time + recharging_rate
+		else
+			to_chat(user, span_warning("Something prevents you from boosting!"))
+	// scoundrel content ^^^
+
+	else
+		toggle_internals(user)

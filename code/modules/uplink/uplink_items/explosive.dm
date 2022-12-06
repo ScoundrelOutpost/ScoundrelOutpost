@@ -82,9 +82,9 @@
 			in addition to dealing high amounts of damage to nearby personnel."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/grenade/syndieminibomb
-	cost = 6
+	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-
+	limited_stock = 2
 
 /datum/uplink_item/explosives/syndicate_bomb/emp
 	name = "Syndicate EMP Bomb"
@@ -110,7 +110,8 @@
 		The bomb core can be pried out and manually detonated with other explosives."
 	progression_minimum = 40 MINUTES
 	item = /obj/item/sbeacondrop/bomb
-	cost = 11
+	cost = 5
+	limited_stock = 1
 
 /datum/uplink_item/explosives/syndicate_bomb/New()
 	. = ..()

@@ -7,11 +7,12 @@
 	righthand_file = 'icons/mob/inhands/equipment/jetpacks_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	distribute_pressure = ONE_ATMOSPHERE * O2STANDARD
+	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
 	actions_types = list(/datum/action/item_action/set_internals, /datum/action/item_action/toggle_jetpack, /datum/action/item_action/jetpack_stabilization)
 	var/gas_type = /datum/gas/oxygen
 	var/on = FALSE
 	var/stabilizers = FALSE
-	var/full_speed = TRUE // If the jetpack will have a speedboost in space/nograv or not
+	var/full_speed = FALSE // If the jetpack will have a speedboost in space/nograv or not
 	var/datum/callback/get_mover
 	var/datum/callback/check_on_move
 
@@ -134,21 +135,9 @@
 	desc = "A jetpack made from two air tanks, a fire extinguisher and some atmospherics equipment. It doesn't look like it can hold much."
 	icon_state = "jetpack-improvised"
 	inhand_icon_state = "jetpack-improvised"
-	worn_icon = null
 	worn_icon_state = "jetpack-improvised"
-	volume = 20 //normal jetpacks have 70 volume
+	volume = 35 //normal jetpacks have 70 volume
 	gas_type = null //it starts empty
-	full_speed = FALSE //moves at modsuit jetpack speeds
-
-/obj/item/tank/jetpack/improvised/allow_thrust(num)
-	var/mob/user = get_user()
-	if(!user)
-		return FALSE
-	if(rand(0,250) == 0)
-		to_chat(user, span_notice("You feel your jetpack's engines cut out."))
-		turn_off(user)
-		return
-	return ..()
 
 /obj/item/tank/jetpack/void
 	name = "void jetpack (oxygen)"
@@ -179,7 +168,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	volume = 90
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF //steal objective items are hard to destroy.
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
 
 /obj/item/tank/jetpack/oxygen/security
 	name = "security jetpack (oxygen)"

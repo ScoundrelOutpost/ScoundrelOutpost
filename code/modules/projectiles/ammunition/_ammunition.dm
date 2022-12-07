@@ -72,7 +72,7 @@
 	var/list/readout = list()
 	// No dividing by 0
 	if(initial(exam_proj.damage) > 0)
-		readout += "Most monkeys our legal team subjected to these [span_warning(caliber)] rounds succumbed to their wounds after [span_warning("[HITS_TO_CRIT(initial(exam_proj.damage) * pellets)] shot\s")] at point-blank, taking [span_warning("[pellets] shot\s")] per round"
+		readout += "[span_warning("[FORCE_DESCRIPTIVE(initial(exam_proj.damage) * (pellets))] [initial(exam_proj.damage_type)] force")] with [span_warning("[(caliber)]")] ammunition, taking about [span_warning("[HITS_TO_CRIT(initial(exam_proj.damage) * (pellets))] [initial(exam_proj.armor_flag)]")] shots to [initial(exam_proj.damage_type) == STAMINA ? "down" : "critically injure"] someone, with an armor penetration of [span_warning("[initial(exam_proj.armour_penetration)]")]."
 	if(initial(exam_proj.stamina) > 0)
 		readout += "[!readout.len ? "Most monkeys" : "More fortunate monkeys"] collapsed from exhaustion after [span_warning("[HITS_TO_CRIT(initial(exam_proj.stamina) * pellets)] impact\s")] of these [span_warning("[caliber]")] rounds"
 	if(!readout.len) // Everything else failed, give generic text

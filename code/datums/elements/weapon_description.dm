@@ -1,4 +1,5 @@
 #define HITS_TO_CRIT(damage) round(100 / damage, 0.1)
+#define FORCE_DESCRIPTIVE(damage) round(damage) //hijacking this define for flat damage readouts
 /**
  *
  * The purpose of this element is to widely provide the ability to examine an object and determine its stats, with the ability to add
@@ -44,7 +45,7 @@
 	SIGNAL_HANDLER
 
 	if(item.force >= 5 || item.throwforce >= 5 || item.override_notes || item.offensive_notes || attached_proc) /// Only show this tag for items that could feasibly be weapons, shields, or those that have special notes
-		examine_texts += span_notice("It appears to have an ever-updating bluespace <a href='?src=[REF(item)];examine=1'>warning label.</a>")
+		examine_texts += span_notice("This looks like it could be used as a weapon. <a href='?src=[REF(item)];examine=1'>Take a closer look.</a>")
 
 /**
  *
@@ -77,22 +78,22 @@
 	var/list/readout = list("") // Readout is used to store the text block output to the user so it all can be sent in one message
 
 	// Meaningless flavor text. The number of crimes is constantly changing because of the complex Nanotrasen legal system and the esoteric nature of time itself!
-	readout += "[span_warning("WARNING:")] This item has been marked as dangerous by the NT legal team because of its use in [span_warning("[rand(2,99)] [crimes[rand(1, crimes.len)]]")] in the past hour.\n"
+	readout += "Upon closer inspection, you think you've got a good idea of what this thing can do.\n"
 
 	// Doesn't show the base notes for items that have the override notes variable set to true
 	if(!source.override_notes)
 		// Make sure not to divide by 0 on accident
 		if(source.force > 0)
-			readout += "Our extensive research has shown that it takes a mere [span_warning("[HITS_TO_CRIT(source.force)] hit\s")] to beat down [victims[rand(1, victims.len)]] with no armor."
+			readout += "It looks like it'll do [span_warning("[FORCE_DESCRIPTIVE(source.force)] [source.damtype] force")] when swung and take [span_warning("[HITS_TO_CRIT(source.force)]")] hits to beat someone down."
 		else
-			readout += "Our extensive research found that you couldn't beat anyone to death with this if you tried."
+			readout += "Swinging this, you couldn't hurt someone with this if you tried."
 
 		if(source.throwforce > 0)
-			readout += "If you decide to throw this object instead, one will take [span_warning("[HITS_TO_CRIT(source.throwforce)] hit\s")] before collapsing."
+			readout += "It seems like it would do [span_warning("[FORCE_DESCRIPTIVE(source.throwforce)] [source.damtype] force")] when thrown and take [span_warning("[HITS_TO_CRIT(source.throwforce)]")] hits to knock someone someone over."
 		else
-			readout += "If you decide to throw this object instead, then you will have trouble damaging anything."
+			readout += "Throwing this, you probably couldn't do any damage at all."
 		if(source.armour_penetration > 0 || source.block_chance > 0)
-			readout += "This item has proven itself [span_warning("[weapon_tag_convert(source.armour_penetration)]")] of piercing armor and [span_warning("[weapon_tag_convert(source.block_chance)]")] of blocking attacks."
+			readout += "It looks like it could pierce [span_warning("[source.armour_penetration]%")] of armor and block [span_warning("[source.block_chance]%")] of attacks."
 	// Custom manual notes
 	if(source.offensive_notes)
 		readout += source.offensive_notes

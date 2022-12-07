@@ -51,8 +51,8 @@
 	var/list/readout = list()
 
 	if(caliber && max_ammo) // Text references a 'magazine' as only magazines generally have the caliber variable initialized
-		readout += "Up to [span_warning("[max_ammo] [caliber] rounds")] can be found within this magazine. \
-		\nAccidentally discharging any of these projectiles may void your insurance contract."
+		readout += "Up to [span_warning("[max_ammo] [caliber] rounds")] can be found within this magazine."
+		readout += "As a loaded projectile weapon, you get the impression this could do..."
 
 	var/obj/item/ammo_casing/mag_ammo = get_round(TRUE)
 

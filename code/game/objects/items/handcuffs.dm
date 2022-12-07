@@ -367,7 +367,7 @@
 /obj/item/restraints/legcuffs/beartrap
 	name = "bear trap"
 	throw_speed = 1
-	throw_range = 8
+	throw_range = 3
 	icon_state = "beartrap"
 	desc = "A trap used to catch bears and other legged creatures."
 	///If true, the trap is "open" and can trigger.
@@ -491,12 +491,15 @@
 
 /obj/item/restraints/legcuffs/bola
 	name = "bola"
-	desc = "A restraining device designed to be thrown at the target. Upon connecting with said target, it will wrap around their legs, making it difficult for them to move quickly."
+	desc = "A restraining device designed to be thrown at the target. Upon connecting with said target, it will wrap around their legs, making it difficult for them to move quickly. Barraging something with enough of these has been known to tire targets out."
 	icon_state = "bola"
 	inhand_icon_state = "bola"
 	lefthand_file = 'icons/mob/inhands/weapons/thrown_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/thrown_righthand.dmi'
 	breakouttime = 1.5 SECONDS//easy to apply, easy to break out of
+	throwforce = 21
+	armour_penetration = 100 //tangling up an armored target is effective
+	damtype = STAMINA
 	gender = NEUTER
 	///Amount of time to knock the target down for once it's hit in deciseconds.
 	var/knockdown = 0
@@ -536,7 +539,7 @@
 	icon_state = "bola_r"
 	inhand_icon_state = "bola_r"
 	breakouttime = 5 SECONDS
-	knockdown = 1.5 SECONDS
+	knockdown = 0.1 SECONDS
 
 /**
  * A security variant of the bola.

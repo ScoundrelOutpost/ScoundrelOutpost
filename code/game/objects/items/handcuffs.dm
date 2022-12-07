@@ -491,23 +491,28 @@
 
 /obj/item/restraints/legcuffs/bola
 	name = "bola"
-	desc = "A restraining device designed to be thrown at the target. Upon connecting with said target, it will wrap around their legs, making it difficult for them to move quickly. Barraging something with enough of these has been known to tire targets out."
+	desc = "An ancient restraining weapon designed to wrap around the target's legs when thrown. Barraging something with enough of these has been known to tire targets out. it can also be swung like a flail, to less effect."
 	icon_state = "bola"
 	inhand_icon_state = "bola"
 	lefthand_file = 'icons/mob/inhands/weapons/thrown_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/thrown_righthand.dmi'
 	breakouttime = 1.5 SECONDS//easy to apply, easy to break out of
+	force = 12
 	throwforce = 21
 	armour_penetration = 100 //tangling up an armored target is effective
 	damtype = STAMINA
 	gender = NEUTER
+	attack_verb_continuous = list("flogs", "whips", "lashes", "disciplines")
+	attack_verb_simple = list("flog", "whip", "lash", "discipline")
+	hitsound = 'sound/weapons/whipgrab.ogg'
+	mob_throw_hit_sound = 'sound/weapons/whipgrab.ogg'
 	///Amount of time to knock the target down for once it's hit in deciseconds.
 	var/knockdown = 0
 
 /obj/item/restraints/legcuffs/bola/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, gentle = FALSE, quickstart = TRUE)
 	if(!..())
 		return
-	playsound(src.loc,'sound/weapons/bolathrow.ogg', 75, TRUE)
+	playsound(src.loc,'sound/weapons/bolathrow.ogg', 50, TRUE)
 
 /obj/item/restraints/legcuffs/bola/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(..() || !iscarbon(hit_atom))//if it gets caught or the target can't be cuffed,
@@ -526,7 +531,7 @@
 		C.equip_to_slot(src, ITEM_SLOT_LEGCUFFED)
 		SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 		C.Knockdown(knockdown)
-		playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+//		playsound(src, 'sound/effects/snap.ogg', 50, TRUE) // if you want it to make a specific sound when it attaches successfully
 
 /**
  * A traitor variant of the bola.

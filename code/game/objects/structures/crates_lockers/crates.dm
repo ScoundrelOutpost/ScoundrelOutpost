@@ -14,12 +14,12 @@
 	close_sound = 'sound/machines/crate_close.ogg'
 	open_sound_volume = 35
 	close_sound_volume = 50
-	drag_slowdown = 0
 	door_anim_time = 0 // no animation
 	pass_flags_self = PASSSTRUCTURE | LETPASSTHROW
 	var/crate_climb_time = 20
 	var/obj/item/paper/fluff/jobs/cargo/manifest/manifest
 
+/* scoundrel content - enable this if you want crate-specific climbing stats
 /obj/structure/closet/crate/Initialize(mapload)
 	. = ..()
 	if(icon_state == "[initial(icon_state)]open")
@@ -28,6 +28,14 @@
 	else
 		AddElement(/datum/element/climbable, climb_time = crate_climb_time, climb_stun = 0)
 	update_appearance()
+*/
+
+// remove this if you want crate-specific climbing stats
+/obj/structure/closet/crate/Initialize(mapload)
+	. = ..()
+		AddElement(/datum/element/climbable)
+	update_appearance()
+//
 
 /obj/structure/closet/crate/Destroy()
 	QDEL_NULL(manifest)
@@ -65,6 +73,7 @@
 	if(manifest)
 		tear_manifest(user)
 
+/* scoundrel content - Enable this if you want crate-specific climbing stats
 /obj/structure/closet/crate/after_open(mob/living/user, force)
 	. = ..()
 	RemoveElement(/datum/element/climbable, climb_time = crate_climb_time, climb_stun = 0)
@@ -74,7 +83,7 @@
 	. = ..()
 	RemoveElement(/datum/element/climbable, climb_time = crate_climb_time * 0.5, climb_stun = 0)
 	AddElement(/datum/element/climbable, climb_time = crate_climb_time, climb_stun = 0)
-
+*/
 
 /obj/structure/closet/crate/open(mob/living/user, force = FALSE)
 	. = ..()

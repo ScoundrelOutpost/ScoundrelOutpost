@@ -368,7 +368,7 @@
 	SHOULD_CALL_PARENT(TRUE)
 	//DO NOT update health here, it'll be done in the carbon's life.
 	if(stamina_dam > DAMAGE_PRECISION && owner.stam_regen_start_time <= world.time)
-		heal_damage(0, 0, INFINITY, null, FALSE)
+		heal_damage(0, 0, 5, null, FALSE)
 		. |= BODYPART_LIFE_UPDATE_HEALTH
 
 //Applies brute and burn damage to the organ. Returns 1 if the damage-icon states changed at all.

@@ -497,7 +497,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/thrown_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/thrown_righthand.dmi'
 	breakouttime = 1.5 SECONDS//easy to apply, easy to break out of
-	force = 12
+	force = 8
 	throwforce = 21
 	armour_penetration = 100 //tangling up an armored target is effective
 	damtype = STAMINA

@@ -1182,7 +1182,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		if(WEIGHT_CLASS_GIGANTIC)
 			. = "gigantic"
 		else
-			. = ""
+			. = "[span_warning("ERROR: UNDEFINED WEIGHT CLASS -- Report this to a coder")]"
 
 /// Removes all non-alphanumerics from the text, keep in mind this can lead to id conflicts
 /proc/sanitize_css_class_name(name)

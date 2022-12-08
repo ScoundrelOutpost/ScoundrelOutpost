@@ -23,6 +23,13 @@
 	resistance_flags = NONE
 	max_integrity = 300
 
+	attack_verb_continuous = list("smacks", "beats", "clubs")
+	attack_verb_simple = list("smack", "beat", "club")
+	force = 12
+	throwforce = 12
+	damtype = STAMINA
+	hitsound = 'sound/items/pillow_hit.ogg'
+
 /obj/item/storage/backpack/Initialize(mapload)
 	. = ..()
 	create_storage(max_slots = 21, max_total_storage = 21)
@@ -344,14 +351,15 @@
 
 /obj/item/storage/backpack/duffelbag
 	name = "duffel bag"
-	desc = "A large duffel bag for holding extra things."
+	desc = "A large duffel bag for holding extra things. You could stash some bulky items in this."
 	icon_state = "duffel"
 	inhand_icon_state = "duffel"
-	slowdown = 1
+	slowdown = 0.5
 
 /obj/item/storage/backpack/duffelbag/Initialize(mapload)
 	. = ..()
 	atom_storage.max_total_storage = 30
+	atom_storage.max_specific_storage = WEIGHT_CLASS_BULKY
 
 /obj/item/storage/backpack/duffelbag/cursed
 	name = "living duffel bag"

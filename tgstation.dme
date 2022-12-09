@@ -3586,6 +3586,7 @@
 #include "code\modules\mob\living\basic\vermin\mouse.dm"
 #include "code\modules\mob\living\brain\brain.dm"
 #include "code\modules\mob\living\brain\brain_item.dm"
+#include "scoundrel\code\modules\mob\living\brain\brain_item_scoundrel.dm"
 #include "code\modules\mob\living\brain\brain_say.dm"
 #include "code\modules\mob\living\brain\death.dm"
 #include "code\modules\mob\living\brain\emote.dm"

@@ -6,23 +6,16 @@
 	mutantstomach = /obj/item/organ/internal/stomach/ethereal
 	mutanttongue = /obj/item/organ/internal/tongue/ethereal
 	mutantheart = /obj/item/organ/internal/heart/ethereal
-	exotic_blood = /datum/reagent/consumable/liquidelectricity //Liquid Electricity. fuck you think of something better gamer
+	exotic_blood = /datum/reagent/liquid_dark_matter
 	siemens_coeff = 0.5 //They thrive on energy
-	brutemod = 1.25 //They're weak to punches
-	payday_modifier = 0.75
-	species_traits = list(DYNCOLORS, AGENDER, NO_UNDERWEAR, HAIR, FACEHAIR, HAS_FLESH, HAS_BONE) // i mean i guess they have blood so they can have wounds too
+	species_traits = list(EYECOLOR, DYNCOLORS, HAIR, FACEHAIR, HAS_FLESH, HAS_BONE) // i mean i guess they have blood so they can have wounds too
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_cookie = /obj/item/food/energybar
 	species_language_holder = /datum/language_holder/ethereal
-	sexes = FALSE //no fetish content allowed
 	toxic_food = NONE
-	// Body temperature for ethereals is much higher then humans as they like hotter environments
-	bodytemp_normal = (BODYTEMP_NORMAL + 50)
-	bodytemp_heat_damage_limit = FIRE_MINIMUM_TEMPERATURE_TO_SPREAD // about 150C
-	// Cold temperatures hurt faster as it is harder to move with out the heat energy
-	bodytemp_cold_damage_limit = (T20C - 10) // about 10c
+
 	hair_color = "fixedmutcolor"
-	hair_alpha = 140
+	hair_alpha = 180
 
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/ethereal,
@@ -109,7 +102,7 @@
 		if(!emageffect)
 			current_color = rgb(r2 + ((r1-r2)*healthpercent), g2 + ((g1-g2)*healthpercent), b2 + ((b1-b2)*healthpercent))
 		ethereal_light.set_light_range_power_color(1 + (2 * healthpercent), 1 + (1 * healthpercent), current_color)
-		ethereal_light.set_light_on(TRUE)
+		ethereal_light.set_light_on(FALSE)
 		fixed_mut_color = current_color
 	else
 		ethereal_light.set_light_on(FALSE)
@@ -173,21 +166,28 @@
 
 /datum/species/ethereal/get_scream_sound(mob/living/carbon/human/ethereal)
 	return pick(
-		'sound/voice/ethereal/ethereal_scream_1.ogg',
-		'sound/voice/ethereal/ethereal_scream_2.ogg',
-		'sound/voice/ethereal/ethereal_scream_3.ogg',
+		'sound/effects/curse4.ogg',
+		'sound/effects/curse5.ogg',
+		'sound/effects/curse6.ogg',
 	)
 
 /datum/species/ethereal/get_species_description()
-	return "Coming from the planet of Sprout, the theocratic ethereals are \
-		separated socially by caste, and espouse a dogma of aiding the weak and \
-		downtrodden."
+	return "Ethereals are born from longterm darkmatter exposure, \
+		resulting in a bizarre, nitrogen-based physiology that \
+		does not appeal to conventional physics. Known mostly for their \
+		electrical affinity."
 
 /datum/species/ethereal/get_species_lore()
 	return list(
-		"Ethereals are a species native to the planet Sprout. \
-		When they were originally discovered, they were at a medieval level of technological progression, \
-		but due to their natural acclimation with electricity, they felt easy among the large NanoTrasen installations.",
+		"Caused by a Human-Darkmatter reaction, Ethereals consist of 87% nitrogen in a previously unobserved quasi-solid \
+		state of matter - and several poorly understood, highly conductive molecular compounds.",
+
+		"Initially discovered in a science and reconnaissance mission into Boötes; longterm darkmatter exposure \
+		is observed to have a metamorphic effect on the human body due to principles under much debate and consternation.",
+		
+		"Despite this, the call to commissioned work in darkmatter voids have lead to a substantial increase \
+		in Ethereal populations among starfarers. Due to a confluence of sociopolitical complications, they're seldom \
+		seen in domestic-planetary environments.",
 	)
 
 /datum/species/ethereal/create_pref_unique_perks()
@@ -199,12 +199,6 @@
 			SPECIES_PERK_ICON = "bolt",
 			SPECIES_PERK_NAME = "Shockingly Tasty",
 			SPECIES_PERK_DESC = "Ethereals can feed on electricity from APCs, and do not otherwise need to eat.",
-		),
-		list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "lightbulb",
-			SPECIES_PERK_NAME = "Disco Ball",
-			SPECIES_PERK_DESC = "Ethereals passively generate their own light.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,

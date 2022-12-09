@@ -726,11 +726,9 @@
 
 /obj/item/melee/tonfa
 	name = "shock tonfa"
-	desc = "A short baton that is held along the length of the arm by a perpendicular handle. This design allows a user to make quick strikes from a defensive stance. \
-			This version of the tonfa has been fitted with a stun baton's charge coil along the striking side of the tonfa, allowing the user to deliver precise \
-			nonlethal shocks to a target. This shock utilizes minimal amounts of power, ensuring that it is always operational, but lacking the same potency of traditional \
-			stun batons. Seen often in the hands of spacers on the fringes of controlled space. The shock tonfa provides a means to protect oneself from aggressors \
-			without risk of lethal damage, while still being functional as a lethal tool if necessary."
+	desc = "A defense-oriented martial weapon of ancient design. \
+			Since the advent of personal shields, the weapon has seen a dramatic resurgence among spacers on the fringes of controlled space. \
+			This one's equipped with a low-yield charge coil for more painful, non-lethal strikes as well as ease of use."
 	icon = 'icons/obj/weapons/transforming_tonfa.dmi'
 	icon_state = "tonfa"
 	inhand_icon_state = "tonfa"
@@ -739,14 +737,17 @@
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 12 //8ish hit crit
+	throwforce = 12
 	w_class = WEIGHT_CLASS_NORMAL
 	armour_penetration = 20
 	hitsound = SFX_SWING_HIT
 	///Determines our active effects
 	var/active_force = 20 //5 hit stamina crit
 	var/active_damage_type = STAMINA
-	var/on_stun_sound = 'sound/effects/woodhit.ogg'
+	var/on_stun_sound = 'sound/scoundrel/tonfahit.ogg'
 	var/tonfa_active = FALSE
+	var/active_throwforce = 20
+	var/active_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/melee/tonfa/Initialize(mapload)
 	. = ..()
@@ -756,7 +757,9 @@
 	AddComponent(/datum/component/transforming, \
 		force_on = active_force, \
 		damage_type_on = active_damage_type, \
+		throwforce_on = active_throwforce, \
 		hitsound_on = on_stun_sound, \
+		w_class_on = active_w_class, \
 		attack_verb_continuous_on = list("attacks", "whacks", "jabs", "zaps", "strikes", "shocks"), \
 		attack_verb_simple_on = list("attack", "whack", "jab", "zap", "strike", "shock"))
 	RegisterSignal(src, COMSIG_TRANSFORMING_ON_TRANSFORM, PROC_REF(on_transform))

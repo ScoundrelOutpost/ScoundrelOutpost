@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - bugfix: "fixed some tonfa stuff"
+  - soundadd: "tonfa sound"

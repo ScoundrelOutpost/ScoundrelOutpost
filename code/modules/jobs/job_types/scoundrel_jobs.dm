@@ -282,7 +282,7 @@
 	uniform = /obj/item/clothing/under/color/grey
 	suit = /obj/item/clothing/suit/jacket/fancy
 	backpack_contents = list(
-		/obj/item/melee/baton/telescopic = 1,
+		/obj/item/melee/tonfa = 1,
 		/obj/item/clothing/mask/bandana/striped/black = 1,
 		/obj/item/gun/energy/e_gun/defender,
 		)
@@ -292,6 +292,7 @@
 	gloves = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/jackboots
 	l_pocket = /obj/item/modular_computer/tablet/pda/heads/captain
+	r_pocket = /obj/item/storage/pouch/cuffs/preloaded
 
 	box = /obj/item/storage/box/survival/engineer
 
@@ -345,7 +346,7 @@
 	name = "Quartermaster"
 	jobtype = /datum/job/quartermaster_scoundrel
 	backpack_contents = list(
-		/obj/item/melee/baton = 1,
+		/obj/item/melee/tonfa = 1,
 		/obj/item/gun/energy/e_gun/defender,
 		/obj/item/station_charter = 1,
 		/obj/item/clothing/mask/bandana/striped/botany
@@ -362,6 +363,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/clipboard
 	l_pocket = /obj/item/modular_computer/tablet/pda/heads/quartermaster
+	r_pocket = /obj/item/restraints/handcuffs/cable/zipties
 
 	chameleon_extras = /obj/item/stamp/qm
 
@@ -424,7 +426,7 @@
 	uniform = /obj/item/clothing/under/color/black
 	suit = /obj/item/clothing/suit/jacket/det_suit/dark
 	backpack_contents = list(
-		/obj/item/melee/baton = 1,
+		/obj/item/melee/tonfa = 1,
 		/obj/item/detective_scanner = 1,
 		/obj/item/camera = 1,
 		/obj/item/gun/energy/disabler = 1,
@@ -438,7 +440,8 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/jackboots
 	l_pocket = /obj/item/modular_computer/tablet/pda/detective
-
+	r_pocket = /obj/item/storage/pouch/cuffs/preloaded
+	
 	implants = list(/obj/item/implant/mindshield)
 
 // End job

@@ -185,7 +185,7 @@
 		"Initially discovered in a science and reconnaissance mission into Boötes; longterm darkmatter exposure \
 		is observed to have a metamorphic effect on the human body due to principles under much debate and consternation.",
 		
-		"Despite this, the call to commissioned work in darkmatter voids have lead to a substantial increase \
+		"Despite this, the call to commissioned work in darkmatter voids has lead to a substantial increase \
 		in Ethereal populations among starfarers. Due to a confluence of sociopolitical complications, they're seldom \
 		seen in domestic-planetary environments.",
 	)

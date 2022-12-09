@@ -723,3 +723,48 @@
 	if(!. || target.move_resist >= MOVE_FORCE_OVERPOWERING)
 		return
 	do_teleport(target, get_turf(target), 15, channel = TELEPORT_CHANNEL_BLUESPACE)
+
+/obj/item/melee/tonfa
+	name = "shock tonfa"
+	desc = "A short baton that is held along the length of the arm by a perpendicular handle. This design allows a user to make quick strikes from a defensive stance. \
+			This version of the tonfa has been fitted with a stun baton's charge coil along the striking side of the tonfa, allowing the user to deliver precise \
+			nonlethal shocks to a target. This shock utilizes minimal amounts of power, ensuring that it is always operational, but lacking the same potency of traditional \
+			stun batons. Seen often in the hands of spacers on the fringes of controlled space. The shock tonfa provides a means to protect oneself from aggressors \
+			without risk of lethal damage, while still being functional as a lethal tool if necessary."
+	icon = 'icons/obj/weapons/transforming_tonfa.dmi'
+	icon_state = "tonfa"
+	inhand_icon_state = "tonfa"
+	worn_icon_state = "baton"
+	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	slot_flags = ITEM_SLOT_BELT
+	force = 12 //8ish hit crit
+	w_class = WEIGHT_CLASS_NORMAL
+	armour_penetration = 20
+	///Determines our active effects
+	var/active_force = 20 //5 hit stamina crit
+	var/active_damage_type = STAMINA
+	var/on_stun_sound = 'sound/effects/woodhit.ogg'
+	var/tonfa_active = FALSE
+
+/obj/item/melee/tonfa/Initialize(mapload)
+	. = ..()
+	make_transformable()
+
+/obj/item/melee/tonfa/proc/make_transformable()
+	AddComponent(/datum/component/transforming, \
+		force_on = active_force, \
+		damage_type_on = active_damage_type, \
+		hitsound_on = on_stun_sound, \
+		attack_verb_continuous_on = list("attacks", "whacks", "jabs", "zaps", "strikes", "shocks"), \
+		attack_verb_simple_on = list("attack", "whack", "jab", "zap", "strike", "shock"))
+	RegisterSignal(src, COMSIG_TRANSFORMING_ON_TRANSFORM, PROC_REF(on_transform))
+
+/obj/item/melee/tonfa/proc/on_transform(obj/item/source, mob/user, active)
+	SIGNAL_HANDLER
+
+	tonfa_active = active
+	if(user)
+		balloon_alert(user, "[name] [active ? "enabled":"disabled"]")
+	playsound(user ? user : src, SFX_SPARKS, 35, TRUE)
+	return COMPONENT_NO_DEFAULT_MESSAGE

@@ -36,6 +36,8 @@
 	var/clumsy_check
 	/// If we get sharpened with a whetstone, save the bonus here for later use if we un/redeploy
 	var/sharpened_bonus = 0
+	/// Damage type of the weapon when active
+	var/damage_type_on
 	/// Cooldown in between transforms
 	COOLDOWN_DECLARE(transform_cooldown)
 
@@ -51,6 +53,7 @@
 		clumsy_check = TRUE,
 		list/attack_verb_continuous_on,
 		list/attack_verb_simple_on,
+		damage_type_on,
 		)
 
 	if(!isitem(parent))
@@ -66,7 +69,7 @@
 	src.hitsound_on = hitsound_on
 	src.w_class_on = w_class_on
 	src.clumsy_check = clumsy_check
-
+	src.damage_type_on = damage_type_on
 	if(attack_verb_continuous_on)
 		src.attack_verb_continuous_on = attack_verb_continuous_on
 		attack_verb_continuous_off = item_parent.attack_verb_continuous
@@ -172,6 +175,8 @@
 		source.throwforce = throwforce_on + (source.sharpness ? sharpened_bonus : 0)
 	if(throw_speed_on)
 		source.throw_speed = throw_speed_on
+	if(damage_type_on)
+		source.damtype = damage_type_on
 
 	if(LAZYLEN(attack_verb_continuous_on))
 		source.attack_verb_continuous = attack_verb_continuous_on
@@ -201,6 +206,8 @@
 		source.throwforce = initial(source.throwforce) + (source.sharpness ? sharpened_bonus : 0)
 	if(throw_speed_on)
 		source.throw_speed = initial(source.throw_speed)
+	if(damage_type_on)
+		source.damtype = initial(source.damtype)
 
 	if(LAZYLEN(attack_verb_continuous_on))
 		source.attack_verb_continuous = attack_verb_continuous_off

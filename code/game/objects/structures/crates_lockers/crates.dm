@@ -33,7 +33,7 @@
 // remove this if you want crate-specific climbing stats
 /obj/structure/closet/crate/Initialize(mapload)
 	. = ..()
-		AddElement(/datum/element/climbable)
+	AddElement(/datum/element/climbable)
 	update_appearance()
 //
 

@@ -741,6 +741,7 @@
 	force = 12 //8ish hit crit
 	w_class = WEIGHT_CLASS_NORMAL
 	armour_penetration = 20
+	hitsound = SFX_SWING_HIT
 	///Determines our active effects
 	var/active_force = 20 //5 hit stamina crit
 	var/active_damage_type = STAMINA

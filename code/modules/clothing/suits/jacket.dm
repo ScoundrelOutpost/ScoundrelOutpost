@@ -112,3 +112,12 @@
 	icon_state = "letterman_n"
 	inhand_icon_state = null
 	species_exception = list(/datum/species/golem)
+
+//scoundrel content
+/obj/item/clothing/suit/jacket/spacer
+	name = "spacer jacket"
+	desc = "A durable jacket made of space-grade polymer-nanoweave. The protection from radiation burns makes jackets like these common choice for EVA specialists."
+	icon_state = "bomberjacket"
+	inhand_icon_state = "brownjsuit"
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 0)
+	clothing_traits = list(TRAIT_RADIATION_PROTECTED_CLOTHING)

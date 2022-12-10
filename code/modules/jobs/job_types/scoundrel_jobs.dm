@@ -43,6 +43,7 @@
 	id_trim = /datum/id_trim/job/deckhand
 	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/color/grey
+	suit = /obj/item/clothing/suit/jacket/spacer
 	gloves = /obj/item/clothing/gloves/fingerless
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
@@ -500,7 +501,7 @@
 	id_trim = /datum/id_trim/job/deckhand/mining_spec
 	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
-	suit = /obj/item/clothing/suit/toggle/jacket
+	suit = /obj/item/clothing/suit/jacket/spacer
 	belt = /obj/item/modular_computer/tablet/pda/shaftminer
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/meson

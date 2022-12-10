@@ -96,6 +96,7 @@
 #define ROLE_BATTLECRUISER_CREW "Battlecruiser Crew"
 #define ROLE_BATTLECRUISER_CAPTAIN "Battlecruiser Captain"
 #define ROLE_VENUSHUMANTRAP "Venus Human Trap"
+#define ROLE_PRINTED_ANDROID "Posiform Chassis"
 
 // Orb roles
 #define ROLE_CHANGELING_INFILTRATOR "Changeling Infiltrator"

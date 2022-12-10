@@ -2,9 +2,9 @@
 	name = "Spawn Space Ninja"
 	typepath = /datum/round_event/ghost_role/space_ninja
 	max_occurrences = 1
-	weight = 10
+	weight = 20
 	earliest_start = 20 MINUTES
-	min_players = 20
+	min_players = 4
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_INVASION
 	description = "A space ninja infiltrates the station."

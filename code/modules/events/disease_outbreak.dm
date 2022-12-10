@@ -2,7 +2,7 @@
 	name = "Disease Outbreak: Classic"
 	typepath = /datum/round_event/disease_outbreak
 	max_occurrences = 1
-	min_players = 10
+	min_players = 2
 	weight = 5
 	category = EVENT_CATEGORY_HEALTH
 	description = "A 'classic' virus will infect some members of the crew." //These are the ones with PERSONALITY

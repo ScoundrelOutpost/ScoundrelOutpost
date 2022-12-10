@@ -2,9 +2,9 @@
 	name = "Stray Meteor"
 	typepath = /datum/round_event/stray_meteor
 	weight = 15 //Number subject to change based on how often meteors actually collide with the station
-	min_players = 15
+	min_players = 2
 	max_occurrences = 3
-	earliest_start = 20 MINUTES
+	earliest_start = 5 MINUTES
 	category = EVENT_CATEGORY_SPACE
 	description = "Throw a random meteor somewhere near the station."
 	///The selected meteor type if chosen through admin setup.

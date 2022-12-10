@@ -158,7 +158,7 @@
 	name = "Scrubber Clog: Critical"
 	typepath = /datum/round_event/scrubber_clog/critical
 	weight = 8
-	min_players = 15
+	min_players = 5
 	max_occurrences = 1
 	earliest_start = 25 MINUTES
 	description = "Really dangerous mobs climb out of a scrubber."
@@ -184,7 +184,7 @@
 /datum/round_event_control/scrubber_clog/strange
 	name = "Scrubber Clog: Strange"
 	typepath = /datum/round_event/scrubber_clog/strange
-	weight = 5
+	weight = 10
 	max_occurrences = 1
 	description = "Strange mobs climb out of a scrubber, harmfulness varies."
 

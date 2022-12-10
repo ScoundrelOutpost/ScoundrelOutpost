@@ -2,6 +2,7 @@
 	name = "Anomaly: Bluespace"
 	typepath = /datum/round_event/anomaly/anomaly_bluespace
 
+	min_players = 5
 	max_occurrences = 1
 	weight = 15
 	description = "This anomaly randomly teleports all items and mobs in a large area."

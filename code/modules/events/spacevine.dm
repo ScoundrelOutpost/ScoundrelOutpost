@@ -50,7 +50,7 @@
 	name = "Space Vines"
 	typepath = /datum/round_event/spacevine
 	max_occurrences = 1
-	min_players = 10
+	min_players = 4
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Kudzu begins to overtake the station. Might spawn man-traps."
 

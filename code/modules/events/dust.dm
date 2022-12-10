@@ -19,11 +19,9 @@
 /datum/round_event_control/space_dust/major_dust
 	name = "Major Space Dust"
 	typepath = /datum/round_event/space_dust/major_dust
-	weight = 8
+	weight = 20
 	description = "The station is pelted by sand."
-	min_players = 15
 	max_occurrences = 3
-	earliest_start = 25 MINUTES
 	category = EVENT_CATEGORY_SPACE
 
 /datum/round_event/space_dust/major_dust

@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/camera_failure
 	weight = 100
 	max_occurrences = 20
-	alert_observers = FALSE
+	alert_observers = TRUE
 	category = EVENT_CATEGORY_ENGINEERING
 	description = "Turns off a random amount of cameras."
 
@@ -11,7 +11,7 @@
 	fakeable = FALSE
 
 /datum/round_event/camera_failure/start()
-	var/iterations = 1
+	var/iterations = 10
 	var/list/cameras = GLOB.cameranet.cameras.Copy()
 	while(prob(round(100/iterations)))
 		var/obj/machinery/camera/C = pick_n_take(cameras)

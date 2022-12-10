@@ -15,7 +15,7 @@
 	name = "Anomaly: Gravitational (High Intensity)"
 	typepath = /datum/round_event/anomaly/anomaly_grav/high
 	weight = 15
-	max_occurrences = 1
+	max_occurrences = 0
 	earliest_start = 20 MINUTES
 	description = "This anomaly has an intense gravitational field, and can disable the gravity generator."
 

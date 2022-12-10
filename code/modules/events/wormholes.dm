@@ -16,8 +16,8 @@ GLOBAL_LIST_EMPTY(all_wormholes) // So we can pick wormholes to teleport to
 
 	var/list/pick_turfs = list()
 	var/list/wormholes = list()
-	var/shift_frequency = 3
-	var/number_of_wormholes = 400
+	var/shift_frequency = 2
+	var/number_of_wormholes = 80
 
 /datum/round_event/wormholes/setup()
 	announce_when = rand(0, 20)

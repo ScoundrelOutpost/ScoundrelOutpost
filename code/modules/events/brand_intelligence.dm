@@ -5,7 +5,7 @@
 	category = EVENT_CATEGORY_AI
 	description = "Vending machines will attack people until the Patient Zero is disabled."
 	min_players = 15
-	max_occurrences = 1
+	max_occurrences = 0
 	///Var used to determine vendor subtype if used for admin setup
 	var/chosen_vendor
 

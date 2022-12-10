@@ -2,8 +2,8 @@
 	name = "Anomaly: Dimensional"
 	typepath = /datum/round_event/anomaly/anomaly_dimensional
 
-	min_players = 10
-	max_occurrences = 5
+	min_players = 5
+	max_occurrences = 1
 	weight = 20
 	description = "This anomaly replaces the materials of the surrounding area."
 

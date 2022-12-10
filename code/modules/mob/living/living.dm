@@ -2154,9 +2154,9 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 				ADD_TRAIT(src, TRAIT_IMMOBILIZED, LACKING_LOCOMOTION_APPENDAGES_TRAIT)
 
 	if(usable_legs < default_num_legs)
-		var/limbless_slowdown = (default_num_legs - usable_legs) * 3
+		var/limbless_slowdown = (default_num_legs - usable_legs) * 1
 		if(!usable_legs && usable_hands < default_num_hands)
-			limbless_slowdown += (default_num_hands - usable_hands) * 3
+			limbless_slowdown += (default_num_hands - usable_hands) * 1
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/limbless, multiplicative_slowdown = limbless_slowdown)
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/limbless)

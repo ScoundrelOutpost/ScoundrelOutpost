@@ -64,7 +64,7 @@
 	///Multiplier of the limb's damage that gets applied to the mob
 	var/body_damage_coeff = 1
 	///Multiplier of the limb's stamina damage that gets applied to the mob. Why is this 0.75 by default? Good question!
-	var/stam_damage_coeff = 0.75
+	var/stam_damage_coeff = 1
 	var/brutestate = 0
 	var/burnstate = 0
 	///The current amount of brute damage the limb has

@@ -80,7 +80,7 @@
 	max_damage = 50
 	max_stamina_damage = 50
 	aux_layer = HANDS_PART_LAYER
-	body_damage_coeff = 0.75
+	body_damage_coeff = 1
 	can_be_disabled = TRUE
 	unarmed_attack_verb = "punch" /// The classic punch, wonderfully classic and completely random
 	unarmed_damage_low = 1
@@ -298,7 +298,7 @@
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
-	body_damage_coeff = 0.75
+	body_damage_coeff = 1
 	max_stamina_damage = 50
 	can_be_disabled = TRUE
 	unarmed_attack_effect = ATTACK_EFFECT_KICK

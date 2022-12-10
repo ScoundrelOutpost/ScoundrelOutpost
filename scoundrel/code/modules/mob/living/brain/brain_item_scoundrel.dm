@@ -109,7 +109,6 @@
 	brainmob.mind.set_assigned_role(SSjob.GetJobType(posibrain_job_path))
 	brainmob.set_stat(CONSCIOUS)
 
-//	visible_message(new_mob_message)
 	check_success()
 	ckeys_entered |= brainmob.ckey
 	return TRUE

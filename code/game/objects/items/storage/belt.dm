@@ -71,16 +71,14 @@
 		/obj/item/wrench,
 		/obj/item/storage/pouch,
 		// janitorial supplies
-		/obj/item/assembly/mousetrap,
 		/obj/item/grenade/chem_grenade,
 		/obj/item/holosign_creator,
-		/obj/item/key/janitor,
+		/obj/item/key,
 		/obj/item/lightreplacer,
 		/obj/item/melee/flyswatter,
 		/obj/item/paint,
 		/obj/item/plunger,
 		/obj/item/pushbroom,
-		/obj/item/reagent_containers/spray,
 		// botany supplies
 		/obj/item/cultivator,
 		/obj/item/geneshears,
@@ -92,6 +90,15 @@
 		/obj/item/shovel/spade,
 		// weapons
 		/obj/item/knife,
+		// medical supplies
+		/obj/item/bikehorn,
+		/obj/item/clothing/neck/stethoscope,
+		/obj/item/construction/plumbing,
+		/obj/item/healthanalyzer,
+		// mining supplies
+		/obj/item/mining_scanner,
+		/obj/item/wormhole_jaunter,
+		/obj/item/survivalcapsule,
 		))
 
 /obj/item/storage/belt/utility/chief

@@ -53,6 +53,7 @@
 		/obj/item/reagent_containers/syringe,
 		/obj/item/pestle,
 		/obj/item/reagent_containers/dropper,
+		/obj/item/clothing/mask/surgical,
 		))
 
 /obj/item/storage/pouch/chemistry/preloaded
@@ -140,3 +141,23 @@
 
 /obj/item/storage/pouch/black
 	icon_state = "black"
+
+
+// BELTS // BELTS // BELTS
+/obj/item/storage/belt/utility/small
+	name = "belt"
+	desc = "A trendy space-grade belt with an inbuilt digital clock. You can't really see it while you're wearing it though. It doesn't seem like it could hold anything sizeable."
+	icon = 'icons/obj/abductor.dmi'
+	icon_state = "belt"
+	inhand_icon_state = "security"
+	worn_icon_state = "security"
+	content_overlays = TRUE
+
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/storage/belt/utility/small/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+
+/obj/item/storage/belt/utility/small/PopulateContents()
+		new /obj/item/storage/pouch/black(src)

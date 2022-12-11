@@ -42,13 +42,14 @@
 	)
 	id_trim = /datum/id_trim/job/deckhand
 	id = /obj/item/card/id/advanced
+	belt = /obj/item/storage/belt/utility/small
 	uniform = /obj/item/clothing/under/color/grey
 	suit = /obj/item/clothing/suit/jacket/spacer
 	gloves = /obj/item/clothing/gloves/fingerless
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
-	r_pocket = /obj/item/storage/pouch
+//	r_pocket = 
 
 // End job
 // Start job
@@ -84,6 +85,7 @@
 	)
 	id_trim = /datum/id_trim/job/deckhand/greenhand
 	id = /obj/item/card/id/advanced
+	belt = /obj/item/storage/belt/utility/small
 	suit = /obj/item/clothing/suit/hazardvest
 	uniform = /obj/item/clothing/under/color/darkgreen
 	gloves = /obj/item/clothing/gloves/fingerless
@@ -91,7 +93,7 @@
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	l_hand = /obj/item/clipboard
 	
-	r_pocket = /obj/item/storage/pouch
+//	r_pocket = 
 
 // End job
 // Start job
@@ -148,7 +150,7 @@
 	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/rank/rnd/research_director/turtleneck
 	suit = /obj/item/clothing/suit/jacket/research_director
-//	belt = 
+	belt = /obj/item/storage/belt/utility/small
 	neck = /obj/item/clothing/neck/stethoscope
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/hud/health
@@ -227,7 +229,7 @@
 	accessory = /obj/item/clothing/accessory/armband/engine
 	box = /obj/item/storage/box/survival/engineer
 	l_pocket = /obj/item/modular_computer/tablet/pda/heads/ce
-	r_pocket = /obj/item/storage/pouch
+//	r_pocket = 
 
 // End job
 // Start job
@@ -301,7 +303,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 
 	l_pocket = /obj/item/modular_computer/tablet/pda/heads/captain
-	r_pocket = /obj/item/storage/pouch/black
+//	r_pocket = 
 
 	box = /obj/item/storage/box/survival/engineer
 
@@ -366,7 +368,7 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	gloves = /obj/item/clothing/gloves/color/black
 	accessory = /obj/item/clothing/accessory/armband/hydro
-	belt = /obj/item/storage/belt/utility/full
+	belt = /obj/item/storage/belt/utility/small
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	shoes = /obj/item/clothing/shoes/laceup
@@ -440,7 +442,7 @@
 		/obj/item/gun/energy/disabler = 1,
 		/obj/item/pinpointer/crew = 1
 		)
-//	belt = /obj/item/storage/belt/holster/detective/full needs something better. energy revolver?
+	belt = /obj/item/storage/belt/utility/small
 	head = /obj/item/clothing/head/helmet/toggleable/riot
 	mask = /obj/item/clothing/mask/russian_balaclava
 	ears = /obj/item/radio/headset/heads/captain/alt
@@ -510,7 +512,7 @@
 	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
 	suit = /obj/item/clothing/suit/jacket/spacer
-	belt = /obj/item/modular_computer/tablet/pda/shaftminer
+	belt = /obj/item/storage/belt/utility/small
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/meson
 	gloves = /obj/item/clothing/gloves/color/black

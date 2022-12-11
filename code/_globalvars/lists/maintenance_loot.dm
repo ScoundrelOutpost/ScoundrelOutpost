@@ -101,6 +101,8 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 		/obj/item/storage/backpack = 1,
 		/obj/item/storage/belt/fannypack = 1,
 		/obj/item/storage/wallet/random = 1,
+		/obj/item/storage/pouch = 1,
+		/obj/item/storage/belt/utility/small = 1,
 		) = 1,
 
 	list(//construction and crafting
@@ -134,6 +136,7 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 		/obj/item/stock_parts/cell/lead = 1,
 		/obj/item/storage/box/matches = 1,
 		/obj/item/storage/fancy/cigarettes/dromedaryco = 1,
+		/obj/item/storage/pouch/chemistry/preloaded = 1,
 		) = 1,
 
 	list(//food

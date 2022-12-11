@@ -407,8 +407,8 @@
 /obj/item/gun/ballistic/clear_suppressor()
 	if(!can_unsuppress)
 		return
-	if(isitem(suppressed))
-/*		var/obj/item/I = suppressed
+/*	if(isitem(suppressed))
+		var/obj/item/I = suppressed
 		w_class -= I.w_class*/
 	return ..()
 

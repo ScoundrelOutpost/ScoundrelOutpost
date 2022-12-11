@@ -212,6 +212,12 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 		new/datum/stack_recipe("deputy hat", /obj/item/clothing/head/cowboy/red, 2), \
 		new/datum/stack_recipe("drifter hat", /obj/item/clothing/head/cowboy/grey, 2), \
 	)),
+	new/datum/stack_recipe_list("pouches", list( \
+		new/datum/stack_recipe("pouch", /obj/item/storage/pouch, 2), \
+		new/datum/stack_recipe("cuff pouch", /obj/item/storage/pouch/cuffs, 2), \
+		new/datum/stack_recipe("chemistry pouch", /obj/item/storage/pouch/chemistry, 2), \
+		new/datum/stack_recipe("medical pouch", /obj/item/storage/pouch/chemistry/medical, 2), \
+	)),
 ))
 
 /obj/item/stack/sheet/leather/get_main_recipes()

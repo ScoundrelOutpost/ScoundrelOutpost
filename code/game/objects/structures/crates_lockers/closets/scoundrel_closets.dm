@@ -67,7 +67,7 @@
 	new /obj/item/storage/photo_album/captain(src)
 	new /obj/item/sensor_device(src)
 	new /obj/item/storage/box/bolas(src)
-
+	new /obj/item/storage/pouch/cuffs/preloaded(src)
 
 /obj/structure/closet/secure_closet/quartermaster_scoundrel
 	name = "\proper quartermaster's locker"
@@ -107,3 +107,4 @@
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/binoculars(src)
 	new /obj/item/storage/box/bolas(src)
+	new /obj/item/storage/pouch/cuffs/preloaded(src)

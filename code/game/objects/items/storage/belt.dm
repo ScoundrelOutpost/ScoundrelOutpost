@@ -33,7 +33,7 @@
 
 /obj/item/storage/belt/utility
 	name = "toolbelt" //Carn: utility belt is nicer, but it bamboozles the text parsing.
-	desc = "Holds tools."
+	desc = "Holds utilities."
 	icon_state = "utility"
 	inhand_icon_state = "utility"
 	worn_icon_state = "utility"
@@ -58,14 +58,10 @@
 		/obj/item/flashlight,
 		/obj/item/forcefield_projector,
 		/obj/item/geiger_counter,
-		/obj/item/holosign_creator/atmos,
-		/obj/item/holosign_creator/engineering,
 		/obj/item/inducer,
-		/obj/item/lightreplacer,
 		/obj/item/multitool,
 		/obj/item/pipe_dispenser,
 		/obj/item/pipe_painter,
-		/obj/item/plunger,
 		/obj/item/radio,
 		/obj/item/screwdriver,
 		/obj/item/stack/cable_coil,
@@ -73,6 +69,29 @@
 		/obj/item/weldingtool,
 		/obj/item/wirecutters,
 		/obj/item/wrench,
+		/obj/item/storage/pouch,
+		// janitorial supplies
+		/obj/item/assembly/mousetrap,
+		/obj/item/grenade/chem_grenade,
+		/obj/item/holosign_creator,
+		/obj/item/key/janitor,
+		/obj/item/lightreplacer,
+		/obj/item/melee/flyswatter,
+		/obj/item/paint,
+		/obj/item/plunger,
+		/obj/item/pushbroom,
+		/obj/item/reagent_containers/spray,
+		// botany supplies
+		/obj/item/cultivator,
+		/obj/item/geneshears,
+		/obj/item/graft,
+		/obj/item/gun/energy/floragun,
+		/obj/item/hatchet,
+		/obj/item/plant_analyzer,
+		/obj/item/secateurs,
+		/obj/item/shovel/spade,
+		// weapons
+		/obj/item/knife,
 		))
 
 /obj/item/storage/belt/utility/chief
@@ -261,6 +280,7 @@
 		/obj/item/surgicaldrill,
 		/obj/item/tank/internals/emergency_oxygen,
 		/obj/item/wrench/medical,
+		/obj/item/storage/pouch,
 		))
 
 /obj/item/storage/belt/medical/paramedic
@@ -414,6 +434,7 @@
 		/obj/item/wirecutters,
 		/obj/item/wrench,
 		/obj/item/wormhole_jaunter,
+		/obj/item/storage/pouch,
 		))
 
 
@@ -689,8 +710,8 @@
 
 /obj/item/storage/belt/bandolier/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 18
-	atom_storage.max_total_storage = 18
+	atom_storage.max_slots = 30
+	atom_storage.max_total_storage = 30
 	atom_storage.numerical_stacking = TRUE
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_casing/a762,

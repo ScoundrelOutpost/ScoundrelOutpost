@@ -131,3 +131,20 @@
 	var/datum/round_event_control/event = locate(/datum/round_event_control/grid_check) in SSevents.control
 	event.runEvent()
 	return source //For log icon
+
+// scoundrel content
+/datum/uplink_item/stealthy_tools/traitor_pouch
+	name = "Sinister Pouch"
+	desc = "A specially designed pouch that can hold a little more than usual. \
+			Overtly branded; the fashion of it is non-negotiable, which can implicate agents who aren't careful with it."
+	item = /obj/item/storage/pouch/traitor
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	cost = 1
+
+/datum/uplink_item/stealthy_tools/corporate_pouch
+	name = "Corporate Pouch"
+	desc = "A specially designed pouch that can hold a little more than usual. \
+			Overtly branded; the fashion of it is non-negotiable, which can implicate agents who aren't careful with it."
+	item = /obj/item/storage/pouch/traitor/nanotrasen
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	cost = 1

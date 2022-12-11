@@ -214,9 +214,6 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 	)),
 	new/datum/stack_recipe_list("pouches", list( \
 		new/datum/stack_recipe("pouch", /obj/item/storage/pouch, 2), \
-		new/datum/stack_recipe("cuff pouch", /obj/item/storage/pouch/cuffs, 2), \
-		new/datum/stack_recipe("chemistry pouch", /obj/item/storage/pouch/chemistry, 2), \
-		new/datum/stack_recipe("medical pouch", /obj/item/storage/pouch/chemistry/medical, 2), \
 	)),
 ))
 

@@ -33,7 +33,7 @@
 
 /obj/item/storage/belt/utility
 	name = "toolbelt" //Carn: utility belt is nicer, but it bamboozles the text parsing.
-	desc = "Holds utilities."
+	desc = "Holds utilities. It seems sturdy enough to hold some pretty hefty tools."
 	icon_state = "utility"
 	inhand_icon_state = "utility"
 	worn_icon_state = "utility"

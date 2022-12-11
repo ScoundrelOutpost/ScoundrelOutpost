@@ -22,11 +22,10 @@
 // Low progression cost
 
 /datum/uplink_item/ammo/pistol
-	name = "9mm Handgun Magazine"
-	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol."
-	progression_minimum = 10 MINUTES
-	item = /obj/item/ammo_box/magazine/m9mm
-	cost = 1
+	name = "9mm Handgun Ammo-Pouch"
+	desc = "A pouch with three 8-round 9mm magazines, compatible with the Makarov pistol."
+	item = /obj/item/storage/pouch/tactical/ammo_9mm
+	cost = 2
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	illegal_tech = FALSE
 
@@ -51,12 +50,11 @@
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/ammo/pistolfire
-	name = "9mm Incendiary Magazine"
-	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+	name = "9mm Incendiary Ammo-Pouch"
+	desc = "A pouch with three 8-round 9mm magazines, compatible with the Makarov pistol. \
 			Loaded with incendiary rounds which inflict little damage, but ignite the target."
-	progression_minimum = 30 MINUTES
-	item = /obj/item/ammo_box/magazine/m9mm/fire
-	cost = 2
+	item = /obj/item/storage/pouch/tactical/ammo_9mm_fire
+	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/ammo/revolver

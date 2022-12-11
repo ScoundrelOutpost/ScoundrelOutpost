@@ -6,7 +6,10 @@
 	desc = "A pouch for holding small things. It has a hook for resting on a belt."
 	icon = 'icons/obj/storage/pouch.dmi'
 	icon_state = "pouch"
+	worn_icon = 'icons/mob/clothing/belt.dmi'
+	worn_icon_state = "empty"
 	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = ITEM_SLOT_BELT
 
 /obj/item/storage/pouch/Initialize(mapload)
 	. = ..()
@@ -19,7 +22,7 @@
 /obj/item/storage/pouch/cuffs
 	name = "tactical cuff pouch"
 	desc = "A tactical pouch ergonomically designed for storing cuffs and not much else."
-	icon_state = "tactical"
+	icon_state = "cuffs"
 
 /obj/item/storage/pouch/cuffs/Initialize(mapload)
 	. = ..()
@@ -75,7 +78,7 @@
 /obj/item/storage/pouch/forensic
 	name = "forensic pouch"
 	desc = "A pouch ergonomically designed for storing forensic analysis and investigation tools."
-	icon_state = "black"
+	icon_state = "forensic"
 
 /obj/item/storage/pouch/forensic/Initialize(mapload)
 	. = ..()
@@ -101,6 +104,60 @@
 	new /obj/item/camera(src)
 	new /obj/item/evidencebag(src)
 	new /obj/item/taperecorder(src)
+
+//engineering
+/obj/item/storage/pouch/engineer
+	name = "cable pouch"
+	desc = "A pouch for storing extra cables."
+	icon_state = "engineer"
+
+/obj/item/storage/pouch/engineer/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+	atom_storage.max_slots = 3
+	atom_storage.max_total_storage = 20
+	atom_storage.set_holdable(list(
+		/obj/item/stack/cable_coil,
+		))
+
+/obj/item/storage/pouch/engineer/preloaded
+
+/obj/item/storage/pouch/engineer/preloaded/PopulateContents()
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/stack/cable_coil(src)
+
+/obj/item/storage/pouch/engineer/drone
+	desc = "A techy-looking pouch for storing extra cables."
+	icon_state = "drone"
+
+/obj/item/storage/pouch/engineer/preloaded/drone
+	desc = "A techy-looking pouch for storing extra cables."
+	icon_state = "drone"
+
+//internals
+/obj/item/storage/pouch/internals
+	name = "internals pouch"
+	desc = "A pouch with protective lining for sensitive emergency equipment. The shape doesn't leave room for much else."
+	icon_state = "o2"
+
+/obj/item/storage/pouch/internals/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+	atom_storage.max_slots = 3
+	atom_storage.max_total_storage = 20
+	atom_storage.set_holdable(list(
+		/obj/item/clothing/mask/breath,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/reagent_containers/hypospray/medipen,
+		))
+
+/obj/item/storage/pouch/internals/preloaded
+
+/obj/item/storage/pouch/internals/preloaded/PopulateContents()
+	new /obj/item/clothing/mask/breath(src)
+	new /obj/item/tank/internals/emergency_oxygen(src)
+	new /obj/item/reagent_containers/hypospray/medipen(src)
 
 //holding
 /obj/item/storage/pouch/holding
@@ -136,21 +193,34 @@
 	icon_state = "sinister red"
 
 // generic - keep this list at the bottom please
-/obj/item/storage/pouch/orange
-	icon_state = "orange"
+/obj/item/storage/pouch/grey
+	icon_state = "grey"
 
 /obj/item/storage/pouch/black
 	icon_state = "black"
 
+/obj/item/storage/pouch/tactical
+	icon_state = "tactical"
+
+// generic loaded
+/obj/item/storage/pouch/tactical/ammo_9mm/PopulateContents() // god have mercy on me for wasting 1kb
+	new /obj/item/ammo_box/magazine/m9mm(src)
+	new /obj/item/ammo_box/magazine/m9mm(src)
+	new /obj/item/ammo_box/magazine/m9mm(src)
+
+/obj/item/storage/pouch/tactical/ammo_9mm_fire/PopulateContents()
+	new /obj/item/ammo_box/magazine/m9mm/fire(src)
+	new /obj/item/ammo_box/magazine/m9mm/fire(src)
+	new /obj/item/ammo_box/magazine/m9mm/fire(src)
 
 // BELTS // BELTS // BELTS
 /obj/item/storage/belt/utility/small
 	name = "belt"
-	desc = "A trendy space-grade belt with an inbuilt digital clock. You can't really see it while you're wearing it though. It doesn't seem like it could hold anything sizeable."
+	desc = "A trendy space-grade belt with an inbuilt digital clock. You can't really see it while you're wearing it, though."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "belt"
 	inhand_icon_state = "security"
-	worn_icon_state = "security"
+	worn_icon_state = "spacer"
 	content_overlays = TRUE
 
 	w_class = WEIGHT_CLASS_NORMAL
@@ -160,4 +230,4 @@
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/belt/utility/small/PopulateContents()
-		new /obj/item/storage/pouch/black(src)
+		new /obj/item/storage/pouch/grey(src)

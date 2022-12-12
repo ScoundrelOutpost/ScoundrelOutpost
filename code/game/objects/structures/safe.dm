@@ -245,3 +245,9 @@ FLOOR SAFES
 
 #undef SOUND_CHANCE
 #undef BROKEN_THRESHOLD
+
+// scoundrel content
+/obj/structure/safe/overfloor
+	name = "floor safe"
+	icon_state = "floorsafe"
+	density = FALSE

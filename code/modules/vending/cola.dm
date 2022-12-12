@@ -30,9 +30,9 @@
 		/obj/item/reagent_containers/cup/glass/bottle/rootbeer = 1,
 	)
 	refill_canister = /obj/item/vending_refill/cola
-	default_price = 25
-	extra_price = 75
-	payment_department = ACCOUNT_SRV
+	default_price = 20
+	extra_price = 40
+	payment_department = NO_FREEBIES
 
 
 /obj/item/vending_refill/cola

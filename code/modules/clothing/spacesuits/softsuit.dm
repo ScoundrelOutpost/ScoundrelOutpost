@@ -85,3 +85,26 @@
 		torn = TRUE
 		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE)
 		playsound(loc, 'sound/effects/refill.ogg', 50, TRUE)
+
+// scoundrel content
+/obj/item/clothing/suit/space/prison
+	name = "prisoner space suit"
+	desc = "A bulky, air-tight suit meant to transport prisoners through a vacuum, usually employed in emergency situations. It has inbuilt hand-restraints, preventing manipulation."
+
+	icon_state = "syndicate-orange"
+	inhand_icon_state = "syndicate-orange"
+
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
+	equip_delay_self = 50
+	strip_delay = 50
+	breakouttime = 1 MINUTES
+
+/obj/item/clothing/head/helmet/space/prison
+	name = "prisoner space helmet"
+	desc = "A bulky, air-tight helmet meant to transport prisoners through a vacuum. The interior is scarcely padded and feels like cheap plastic."
+
+	icon_state = "syndicate-helm-orange"
+	inhand_icon_state = "syndicate-helm-orange"
+
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
+	strip_delay = 30

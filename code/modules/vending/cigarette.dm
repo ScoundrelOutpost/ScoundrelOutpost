@@ -29,9 +29,9 @@
 	)
 
 	refill_canister = /obj/item/vending_refill/cigarette
-	default_price = 50
-	extra_price = 125
-	payment_department = ACCOUNT_SRV
+	default_price = 20
+	extra_price = 40
+	payment_department = NO_FREEBIES
 	light_mask = "cigs-light-mask"
 
 /obj/machinery/vending/cigarette/syndicate

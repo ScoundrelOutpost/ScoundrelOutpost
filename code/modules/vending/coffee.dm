@@ -14,9 +14,9 @@
 		/obj/item/reagent_containers/cup/glass/ice = 12,
 	)
 	refill_canister = /obj/item/vending_refill/coffee
-	default_price = PAYCHECK_LOWER
-	extra_price = PAYCHECK_CREW
-	payment_department = ACCOUNT_SRV
+	default_price = 20
+	extra_price = 40
+	payment_department = NO_FREEBIES
 	light_mask = "coffee-light-mask"
 	light_color = COLOR_DARK_MODERATE_ORANGE
 

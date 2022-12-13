@@ -116,6 +116,12 @@
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "wrench",
+			SPECIES_PERK_NAME = "Low-Quality Components",
+			SPECIES_PERK_DESC = "This particular chassis has some low-quality components that don't work as well as standard organs.",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "hard-hat",
 			SPECIES_PERK_NAME = "Slow Servos",
 			SPECIES_PERK_DESC = "Cyberforms tend to be a little slower getting around than most humanoids.",

@@ -8017,6 +8017,7 @@
 /obj/item/vending_refill/medical,
 /obj/item/vending_refill/hydroseeds,
 /obj/item/vending_refill/hydronutrients,
+/obj/item/vending_refill/bodymods,
 /turf/open/misc/asteroid/airless,
 /area/station/service/chapel/asteroid)
 "Mk" = (
@@ -9021,6 +9022,10 @@
 	},
 /turf/open/floor/catwalk_floor,
 /area/centcom/asteroid)
+"Rb" = (
+/obj/machinery/vending/bodymods,
+/turf/open/floor/iron/dark/textured_large,
+/area/station/hallway/primary/fore)
 "Rf" = (
 /obj/item/tank/internals/oxygen,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -36245,7 +36250,7 @@ dN
 dN
 dN
 qD
-DO
+Rb
 DO
 kt
 cS

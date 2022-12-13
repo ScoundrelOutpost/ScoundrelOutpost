@@ -59,11 +59,9 @@
 /datum/species/scoundrel_android/random_name(gender,unique,lastname)
 	
 	var/new_name
-	var/new_last_name
 	var/randname
 	new_name = pick(GLOB.posibrain_names)
-	new_last_name = pick(GLOB.posibrain_names)
-	randname = "[new_name]-[new_last_name]"
+	randname = "[new_name]-[rand(100, 999)]"
 
 	return randname
 

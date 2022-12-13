@@ -13,6 +13,9 @@
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron=600, /datum/material/glass=200)
+
+	custom_price = 50
+
 	///The implant in our implanter
 	var/obj/item/implant/imp = null
 	///Type of implant this will spawn as imp upon being spawned

@@ -1260,6 +1260,19 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design/printed_android
+	name = "Cyberform Shell"
+	desc = "A complete humanoid-robotic shell. Can create a whole new crewmember."
+	id = "print_android"
+	build_type = MECHFAB
+	materials = list(/datum/material/iron = 80000, /datum/material/glass = 40000, /datum/material/gold = 10000, /datum/material/silver = 4000,)
+	construction_time = 650
+	build_path = /obj/effect/mob_spawn/ghost_role/human/printed_android
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG + RND_SUBCATEGORY_MECHFAB_CYBORG_CONTROL_INTERFACES
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
 //Misc
 /datum/design/mecha_tracking
 	name = "Exosuit Tracking Beacon"

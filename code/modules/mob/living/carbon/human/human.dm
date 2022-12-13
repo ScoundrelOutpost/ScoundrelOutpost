@@ -1153,3 +1153,7 @@
 
 /mob/living/carbon/human/species/zombie/infectious
 	race = /datum/species/zombie/infectious
+
+// scoundrel content
+/mob/living/carbon/human/species/scoundrel_android
+	race = /datum/species/scoundrel_android

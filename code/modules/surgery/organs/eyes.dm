@@ -565,3 +565,9 @@
 	adapt_light.forceMove(src)
 	REMOVE_TRAIT(unadapted, TRAIT_UNNATURAL_RED_GLOWY_EYES, ORGAN_TRAIT)
 	return ..()
+
+
+// scoundrel content
+/obj/item/organ/internal/eyes/robotic/basic/nocolor // used by scoundrel_android
+	eye_color_left = ""
+	eye_color_right = ""

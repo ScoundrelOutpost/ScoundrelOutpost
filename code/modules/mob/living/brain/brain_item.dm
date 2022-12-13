@@ -484,3 +484,12 @@
 		var/obj/item/bodypart/found_bodypart = owner.get_bodypart((active_hand.held_index % 2) ? BODY_ZONE_L_LEG : BODY_ZONE_R_LEG)
 		return found_bodypart || active_hand
 	return active_hand
+
+
+// scoundrel content
+/obj/item/organ/internal/brain/scoundrel_android
+	name = "cybernetic brain"
+	desc = "A highly sophisticated mass of inconceivable technology. It's probably dreaming right now."
+	icon = 'icons/obj/assemblies/assemblies.dmi'
+	icon_state = "posibrain"
+	decay_factor = 0

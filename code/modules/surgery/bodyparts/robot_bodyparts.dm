@@ -23,11 +23,11 @@
 	is_dimorphic = FALSE
 	should_draw_greyscale = FALSE
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
-	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
+//	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
 	dmg_overlay_type = "robotic"
 
-	brute_reduction = 5
-	burn_reduction = 4
+//	brute_reduction = 5
+//	burn_reduction = 4
 
 	light_brute_msg = ROBOTIC_LIGHT_BRUTE_MSG
 	medium_brute_msg = ROBOTIC_MEDIUM_BRUTE_MSG
@@ -50,11 +50,11 @@
 	is_dimorphic = FALSE
 	should_draw_greyscale = FALSE
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
-	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
+//	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
 	dmg_overlay_type = "robotic"
 
-	brute_reduction = 5
-	burn_reduction = 4
+//	brute_reduction = 5
+//	burn_reduction = 4
 
 	light_brute_msg = ROBOTIC_LIGHT_BRUTE_MSG
 	medium_brute_msg = ROBOTIC_MEDIUM_BRUTE_MSG
@@ -77,11 +77,11 @@
 	is_dimorphic = FALSE
 	should_draw_greyscale = FALSE
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
-	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
+//	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
 	dmg_overlay_type = "robotic"
 
-	brute_reduction = 5
-	burn_reduction = 4
+//	brute_reduction = 5
+//	burn_reduction = 4
 
 	light_brute_msg = ROBOTIC_LIGHT_BRUTE_MSG
 	medium_brute_msg = ROBOTIC_MEDIUM_BRUTE_MSG
@@ -104,11 +104,11 @@
 	is_dimorphic = FALSE
 	should_draw_greyscale = FALSE
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
-	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
+//	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
 	dmg_overlay_type = "robotic"
 
-	brute_reduction = 5
-	burn_reduction = 4
+//	brute_reduction = 5
+//	burn_reduction = 4
 
 	light_brute_msg = ROBOTIC_LIGHT_BRUTE_MSG
 	medium_brute_msg = ROBOTIC_MEDIUM_BRUTE_MSG
@@ -130,11 +130,11 @@
 	is_dimorphic = FALSE
 	should_draw_greyscale = FALSE
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
-	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
+//	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
 	dmg_overlay_type = "robotic"
 
-	brute_reduction = 5
-	burn_reduction = 4
+//	brute_reduction = 5
+//	burn_reduction = 4
 
 	light_brute_msg = ROBOTIC_LIGHT_BRUTE_MSG
 	medium_brute_msg = ROBOTIC_MEDIUM_BRUTE_MSG
@@ -240,11 +240,11 @@
 	is_dimorphic = FALSE
 	should_draw_greyscale = FALSE
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC
-	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
+//	change_exempt_flags = BP_BLOCK_CHANGE_SPECIES
 	dmg_overlay_type = "robotic"
 
-	brute_reduction = 5
-	burn_reduction = 4
+//	brute_reduction = 5
+//	burn_reduction = 4
 
 	light_brute_msg = ROBOTIC_LIGHT_BRUTE_MSG
 	medium_brute_msg = ROBOTIC_MEDIUM_BRUTE_MSG

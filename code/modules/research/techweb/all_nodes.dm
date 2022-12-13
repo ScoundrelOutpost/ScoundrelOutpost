@@ -873,7 +873,7 @@
 	description = "Machines using actual neural networks to simulate human lives."
 	prereq_ids = list("neural_programming", "robotics")
 	design_ids = list(
-		"mmi_posi",
+		"mmi_posi","print_android"
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 

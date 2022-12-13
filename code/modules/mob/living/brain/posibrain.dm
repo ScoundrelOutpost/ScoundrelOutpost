@@ -2,7 +2,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 
 /obj/item/mmi/posibrain
 	name = "positronic brain"
-	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves"
+	desc = "A cube of shining metal, four inches to a side and covered in shallow grooves."
 	icon = 'icons/obj/assemblies/assemblies.dmi'
 	icon_state = "posibrain"
 	base_icon_state = "posibrain"

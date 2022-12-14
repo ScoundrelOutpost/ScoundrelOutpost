@@ -17,7 +17,7 @@
 	config_tag = "DECKHAND"
 
 	outfit = /datum/outfit/job/deckhand
-	plasmaman_outfit = /datum/outfit/plasmaman
+	plasmaman_outfit = /datum/outfit/plasmaman/gloves
 
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_CAR
@@ -69,7 +69,7 @@
 	config_tag = "GREENHAND"
 
 	outfit = /datum/outfit/job/greenhand
-	plasmaman_outfit = /datum/outfit/plasmaman
+	plasmaman_outfit = /datum/outfit/plasmaman/gloves
 
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_CAR

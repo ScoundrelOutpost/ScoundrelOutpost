@@ -3,15 +3,15 @@
 	plural_form = "Plasmamen"
 	id = SPECIES_PLASMAMAN
 	say_mod = "rattles"
-	sexes = 0
+//	sexes = 0
 	meat = /obj/item/stack/sheet/mineral/plasma
-	species_traits = list(NOBLOOD, NOTRANSSTING, HAS_BONE, NOAPPENDIX)
+	species_traits = list(NOBLOOD, EYECOLOR, NOTRANSSTING, HAS_BONE, NOAPPENDIX)
 	// plasmemes get hard to wound since they only need a severe bone wound to dismember, but unlike skellies, they can't pop their bones back into place
 	inherent_traits = list(
 		TRAIT_GENELESS,
-		TRAIT_HARDLY_WOUNDED,
-		TRAIT_RADIMMUNE,
-		TRAIT_RESISTCOLD,
+//		TRAIT_HARDLY_WOUNDED,
+//		TRAIT_RADIMMUNE,
+//		TRAIT_RESISTCOLD,
 	)
 
 	inherent_biotypes = MOB_HUMANOID|MOB_MINERAL
@@ -19,10 +19,10 @@
 	mutanttongue = /obj/item/organ/internal/tongue/bone/plasmaman
 	mutantliver = /obj/item/organ/internal/liver/plasmaman
 	mutantstomach = /obj/item/organ/internal/stomach/bone/plasmaman
-	burnmod = 1.5
+//	burnmod = 1.5
 	heatmod = 1.5
-	brutemod = 1.5
-	payday_modifier = 1.0
+//	brutemod = 1.5
+//	payday_modifier = 1.0
 	breathid = "plas"
 	disliked_food = FRUIT | CLOTH
 	liked_food = VEGETABLES
@@ -41,13 +41,13 @@
 	)
 
 	// Body temperature for Plasmen is much lower human as they can handle colder environments
-	bodytemp_normal = (BODYTEMP_NORMAL - 40)
+//	bodytemp_normal = (BODYTEMP_NORMAL - 40)
 	// The minimum amount they stabilize per tick is reduced making hot areas harder to deal with
 	bodytemp_autorecovery_min = 2
 	// They are hurt at hot temps faster as it is harder to hold their form
 	bodytemp_heat_damage_limit = (BODYTEMP_HEAT_DAMAGE_LIMIT - 20) // about 40C
 	// This effects how fast body temp stabilizes, also if cold resit is lost on the mob
-	bodytemp_cold_damage_limit = (BODYTEMP_COLD_DAMAGE_LIMIT - 50) // about -50c
+//	bodytemp_cold_damage_limit = (BODYTEMP_COLD_DAMAGE_LIMIT - 50) // about -50c
 
 	ass_image = 'icons/ass/assplasma.png'
 
@@ -199,27 +199,15 @@
 	to_add += list(
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "user-shield",
-			SPECIES_PERK_NAME = "Protected",
-			SPECIES_PERK_DESC = "Plasmamen are immune to radiation, poisons, and most diseases.",
-		),
-		list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "bone",
-			SPECIES_PERK_NAME = "Wound Resistance",
-			SPECIES_PERK_DESC = "Plasmamen have higher tolerance for damage that would wound others.",
-		),
-		list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "wind",
 			SPECIES_PERK_NAME = "Plasma Healing",
-			SPECIES_PERK_DESC = "Plasmamen can heal wounds by consuming plasma.",
+			SPECIES_PERK_DESC = "Plasmamen can heal wounds by consuming liquid plasma.",
 		),
 		list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "hard-hat",
-			SPECIES_PERK_NAME = "Protective Helmet",
-			SPECIES_PERK_DESC = "Plasmamen's helmets provide them shielding from the flashes of welding, as well as an inbuilt flashlight.",
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "bone",
+			SPECIES_PERK_NAME = "Fragile Bones",
+			SPECIES_PERK_DESC = "Plasmaman limbs can be dismembered with sufficient application of blunt force.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
@@ -244,3 +232,10 @@
 	)
 
 	return to_add
+
+// scoundrel content
+/datum/species/plasmaman/get_scream_sound(mob/living/carbon/human/plasmaman)
+	return pick(
+		'sound/scoundrel/rattle1.ogg',
+		'sound/scoundrel/rattle2.ogg',
+	)

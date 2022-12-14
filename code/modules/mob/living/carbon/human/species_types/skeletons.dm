@@ -93,3 +93,10 @@
 		they're Flanderized into pun rolling JOKES, and it's really starting to get to them. \
 		You could say they're deeply RATTLED. Hah."
 	)
+
+// scoundrel content
+/datum/species/skeleton/get_scream_sound(mob/living/carbon/human/skeleton)
+	return pick(
+		'sound/scoundrel/rattle1.ogg',
+		'sound/scoundrel/rattle2.ogg',
+	)

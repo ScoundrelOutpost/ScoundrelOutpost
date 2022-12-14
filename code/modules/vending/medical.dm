@@ -26,12 +26,12 @@
 	)
 	premium = list(
 		/obj/item/reagent_containers/hypospray/medipen = 3,
-		/obj/item/storage/belt/medical = 3,
+		/obj/item/storage/organbox = 1,
 		/obj/item/sensor_device = 2,
 		/obj/item/pinpointer/crew = 2,
 		/obj/item/storage/medkit/advanced = 2,
 		/obj/item/shears = 1,
-		/obj/item/storage/organbox = 1,
+		/obj/item/tank/internals/plasmaman/belt/full = 2,
 	)
 	refill_canister = /obj/item/vending_refill/medical
 	payment_department = ACCOUNT_MED

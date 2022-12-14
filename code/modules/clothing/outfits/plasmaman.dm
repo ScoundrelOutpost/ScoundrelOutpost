@@ -269,3 +269,12 @@
 	gloves = /obj/item/clothing/gloves/color/plasmaman/clown
 	head = /obj/item/clothing/head/helmet/space/plasmaman/clown
 	mask = /obj/item/clothing/mask/gas/clown_hat/plasmaman
+
+// scoundrel content
+/datum/outfit/plasmaman/gloves // this is for jobs that don't start with hand-concealing gloves of their own
+	name = "Assistant Plasmaman With Gloves"
+
+	uniform = /obj/item/clothing/under/plasmaman
+	mask = /obj/item/clothing/mask/gas/plasmamask
+	r_hand = /obj/item/tank/internals/plasmaman/belt/full
+	gloves = /obj/item/clothing/gloves/color/plasmaman/black

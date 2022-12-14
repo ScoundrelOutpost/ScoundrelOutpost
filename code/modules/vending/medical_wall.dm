@@ -15,6 +15,7 @@
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
 		/obj/item/healthanalyzer/wound = 2,
 		/obj/item/stack/medical/bone_gel/four = 2,
+		/obj/item/tank/internals/plasmaman/belt/full = 1,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/pill/tox = 2,

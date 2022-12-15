@@ -25,8 +25,17 @@
 			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
 			sightings, however."
 	item = /obj/item/storage/box/syndie_kit/space
-	cost = 4
+	cost = 3
 
+/datum/uplink_item/suits/syndicate_hardsuit
+	name = "Syndicate Hardsuit & Jetpack"
+	desc = "A sleek, compact combat EVA suit with heightened mobility. Frequently employed by high-profile nuclear strike teams. \
+			Folds into an easily stored shape for quick hit-and-run covert-ops. As a bonus, it comes with an advanced compact jetpack. \
+			Tends to be associated with extreme danger; expect a preemptive response."
+	item = /obj/item/storage/toolbox/syndicatehardsuit
+	cost = 6
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	
 // Low progression cost
 
 /datum/uplink_item/suits/modsuit

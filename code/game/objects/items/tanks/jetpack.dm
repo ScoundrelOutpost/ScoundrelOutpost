@@ -230,3 +230,8 @@
 
 	else
 		toggle_internals(user)
+
+/obj/item/tank/jetpack/advanced/compact/syndicate
+	name = "covert jetpack"
+	desc = "An advanced jetpack with folding thrusters for compact storage. It has an oxygen label on the tank, and a sinister look about it."
+	w_class = WEIGHT_CLASS_NORMAL

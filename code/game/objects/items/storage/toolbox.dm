@@ -302,3 +302,16 @@
 /obj/item/storage/toolbox/haunted
 	name = "old toolbox"
 	custom_materials = list(/datum/material/hauntium = 500)
+
+// scoundrel content
+/obj/item/storage/toolbox/syndicatehardsuit
+	name = "suspicious looking toolbox"
+	icon_state = "syndicate"
+	inhand_icon_state = "toolbox_syndi"
+	force = 15
+	throwforce = 18
+	material_flags = NONE
+
+/obj/item/storage/toolbox/syndicatehardsuit/PopulateContents()
+	new /obj/item/clothing/suit/hooded/hardsuit/syndicate(src)
+	new /obj/item/tank/jetpack/advanced/compact/syndicate(src)

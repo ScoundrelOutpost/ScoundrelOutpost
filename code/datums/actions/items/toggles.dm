@@ -110,3 +110,7 @@
 	item_target.layer = old_layer
 	item_target.plane = old_plane
 	current_button.appearance_cache = item_target.appearance
+
+// scoundrel content
+/datum/action/item_action/toggle_helmet
+	name = "Toggle Helmet"

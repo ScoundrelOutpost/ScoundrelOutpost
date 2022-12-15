@@ -165,16 +165,28 @@
 			. += "[icon_state]_fail_2"
 
 // Scoundrel content
-
 /obj/item/gun/energy/e_gun/defender
 	name = "defender pistol"
-	desc = "A compact personal defender popular among independents on the frontier. It doesn't hold very much charge, but it's affordable and robust. It has two settings: disable and kill."
+	desc = "A personal defender popular among independents on the frontier. Widely considered affordable and robust. It has two settings: disable and kill."
 	icon_state = "defender"
+	inhand_icon_state = "gun"
+	ammo_x_offset = 2
+	charge_sections = 6
+	w_class = WEIGHT_CLASS_NORMAL
+	cell_type = /obj/item/stock_parts/cell/mini_egun
+	single_shot_type_overlay = FALSE
+	force = 10
+	throwforce = 18
+
+/obj/item/gun/energy/e_gun/defender/mini
+	name = "mini-defender pistol"
+	desc = "The smaller sibling to the defender pistol; affordable, compact and still packs a punch. It has two settings: disable and kill."
+	icon_state = "defender-mini"
 	inhand_icon_state = "gun"
 	ammo_x_offset = 2
 	charge_sections = 5
 	w_class = WEIGHT_CLASS_SMALL
 	cell_type = /obj/item/stock_parts/cell/mini_egun
 	single_shot_type_overlay = FALSE
-	force = 10
-	throwforce = 10
+	force = 8
+	throwforce = 8

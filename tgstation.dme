@@ -1874,7 +1874,7 @@
 #include "code\game\objects\items\storage\garment.dm"
 #include "code\game\objects\items\storage\holsters.dm"
 #include "code\game\objects\items\storage\lockbox.dm"
-#include "code\game\objects\items\storage\medkit.dm"
+#include "scoundrel\code\game\objects\items\storage\medkit.dm"
 #include "code\game\objects\items\storage\secure.dm"
 #include "code\game\objects\items\storage\sixpack.dm"
 #include "code\game\objects\items\storage\storage.dm"

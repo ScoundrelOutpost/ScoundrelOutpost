@@ -160,7 +160,7 @@
 	l_hand = /obj/item/storage/medkit/surgery
 	mask = /obj/item/clothing/mask/surgical
 //	l_pocket = 
-	r_pocket = /obj/item/storage/pouch/chemistry/preloaded/medical
+	r_pocket = /obj/item/storage/pouch/medical/preloaded/advanced
 
 	chameleon_extras = /obj/item/stamp/cmo
 

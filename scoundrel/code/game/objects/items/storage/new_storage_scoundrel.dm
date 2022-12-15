@@ -67,12 +67,22 @@
 	new /obj/item/reagent_containers/dropper(src)
 	new /obj/item/reagent_containers/syringe(src)
 
-/obj/item/storage/pouch/chemistry/medical
+//medical
+/obj/item/storage/pouch/medical
 	name = "medical pouch"
 	icon_state = "medical"
-/obj/item/storage/pouch/chemistry/preloaded/medical
-	name = "medical pouch"
-	icon_state = "medical"
+
+/obj/item/storage/pouch/medical/preloaded
+
+/obj/item/storage/pouch/medical/preloaded/PopulateContents()
+	new /obj/item/stack/medical/suture(src)
+	new /obj/item/stack/medical/mesh(src)
+	new /obj/item/reagent_containers/hypospray/medipen(src)
+
+/obj/item/storage/pouch/medical/preloaded/advanced/PopulateContents()
+	new /obj/item/reagent_containers/pill/patch/synthflesh(src)
+	new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
+	new /obj/item/reagent_containers/hypospray/medipen/atropine(src)
 
 //forensic
 /obj/item/storage/pouch/forensic

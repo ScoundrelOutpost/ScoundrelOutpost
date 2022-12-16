@@ -338,6 +338,7 @@
 	new /obj/item/storage/pouch/engineer/preloaded(src)
 
 /obj/item/storage/toolbox/mini/syndicate
+	desc = "Caution. Slightly suspicious."
 	icon_state = "sus"
 	inhand_icon_state = "toolbox_syndi"
 	force = 12

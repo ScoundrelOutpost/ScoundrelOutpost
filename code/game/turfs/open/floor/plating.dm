@@ -10,7 +10,7 @@
 	overfloor_placed = FALSE
 	underfloor_accessibility = UNDERFLOOR_INTERACTABLE
 	baseturfs = /turf/baseturf_bottom
-	footstep = FOOTSTEP_PLATING
+	footstep = FOOTSTEP_CATWALK
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY

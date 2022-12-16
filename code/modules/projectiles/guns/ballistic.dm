@@ -136,7 +136,7 @@
 /obj/item/gun/ballistic/add_weapon_description()
 	AddElement(/datum/element/weapon_description, attached_proc = PROC_REF(add_notes_ballistic))
 
-/obj/item/gun/ballistic/fire_sounds()
+/*/obj/item/gun/ballistic/fire_sounds()
 	var/frequency_to_use = sin((90/magazine?.max_ammo) * get_ammo())
 	var/click_frequency_to_use = 1 - frequency_to_use * 0.75
 	var/play_click = round(sqrt(magazine?.max_ammo * 2)) > get_ammo()
@@ -147,7 +147,7 @@
 	else
 		playsound(src, fire_sound, fire_sound_volume, vary_fire_sound)
 		if(play_click)
-			playsound(src, 'sound/weapons/gun/general/ballistic_click.ogg', fire_sound_volume, vary_fire_sound, frequency = click_frequency_to_use)
+			playsound(src, 'sound/weapons/gun/general/ballistic_click.ogg', fire_sound_volume, vary_fire_sound, frequency = click_frequency_to_use)*/ // ???
 
 
 /**

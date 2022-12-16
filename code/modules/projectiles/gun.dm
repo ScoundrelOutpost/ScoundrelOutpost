@@ -20,12 +20,13 @@
 	item_flags = NEEDS_PERMIT
 	attack_verb_continuous = list("strikes", "hits", "bashes")
 	attack_verb_simple = list("strike", "hit", "bash")
+	pickup_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
 
 	var/gun_flags = NONE
 	var/fire_sound = 'sound/weapons/gun/pistol/shot.ogg'
-	var/vary_fire_sound = TRUE
+	var/vary_fire_sound = FALSE // turn this on when the gun pitching is fixed
 	var/fire_sound_volume = 50
-	var/dry_fire_sound = 'sound/weapons/gun/general/dry_fire.ogg'
+	var/dry_fire_sound = 'sound/scoundrel/weapons/dryfire.ogg'
 	var/suppressed = null //whether or not a message is displayed when fired
 	var/can_suppress = FALSE
 	var/suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'

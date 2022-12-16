@@ -1,16 +1,12 @@
 GLOBAL_LIST_INIT(generic_ambience,list(
-	'sound/ambience/ambigen1.ogg',
+	'sound/ambience/ambitech.ogg',
 	'sound/ambience/ambigen3.ogg',
 	'sound/ambience/ambigen4.ogg',
 	'sound/ambience/ambigen5.ogg',
 	'sound/ambience/ambigen6.ogg',
-	'sound/ambience/ambigen7.ogg',
-	'sound/ambience/ambigen8.ogg',
+	'sound/scoundrel/ambience/shudder.ogg',
 	'sound/ambience/ambigen9.ogg',
 	'sound/ambience/ambigen10.ogg',
-	'sound/ambience/ambigen11.ogg',
-	'sound/ambience/ambigen12.ogg',
-	'sound/ambience/ambigen14.ogg',
 	'sound/ambience/ambigen15.ogg',
 ))
 
@@ -95,10 +91,10 @@ GLOBAL_LIST_INIT(spooky_ambience,list(
 
 GLOBAL_LIST_INIT(space_ambience,list(
 	'sound/ambience/ambiatmos.ogg',
-	'sound/ambience/ambispace.ogg',
-	'sound/ambience/ambispace2.ogg',
+	'sound/ambience/ambireebe2.ogg',
+	'sound/ambience/ambiviro2.ogg',
 	'sound/ambience/ambispace3.ogg',
-	'sound/ambience/title2.ogg',
+	'sound/ambience/ambimystery.ogg',
 ))
 
 GLOBAL_LIST_INIT(maint_ambience,list(

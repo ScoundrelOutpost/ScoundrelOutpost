@@ -10,8 +10,8 @@
 	actions_types = list()
 	bolt_type = BOLT_TYPE_LOCKING
 	fire_sound = 'sound/weapons/gun/pistol/shot.ogg'
-	dry_fire_sound = 'sound/weapons/gun/pistol/dry_fire.ogg'
-	suppressed_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
+	dry_fire_sound = 'sound/scoundrel/weapons/dryfire.ogg'
+	suppressed_sound = 'sound/scoundrel/weapons/suppressed_shot.ogg'
 	load_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'
 	load_empty_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'
 	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg'

@@ -50,6 +50,8 @@
 #define AMBIENCE_AWAY "away"
 #define AMBIENCE_REEBE "reebe" //unused
 #define AMBIENCE_CREEPY "creepy" //not to be confused with spooky
+#define AMBIENCE_OUTPOST "outpost" // scoundrel
+#define AMBIENCE_SPACE_2 "scoundrel space" // scoundrel
 
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1

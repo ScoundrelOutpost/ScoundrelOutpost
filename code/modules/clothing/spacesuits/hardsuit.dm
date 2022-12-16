@@ -5,7 +5,7 @@
 	icon = 'icons/scoundrel/obj/hardsuit_obj.dmi'
 	worn_icon = 'icons/scoundrel/mob/hardsuit.dmi'
 	equip_sound = 'sound/mecha/mechmove03.ogg'
-	drop_sound = 'sound/mecha/mechmove03.ogg'
+	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
 
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -25,7 +25,7 @@
 	icon = 'icons/scoundrel/obj/hardsuit_helmet_obj.dmi'
 	worn_icon = 'icons/scoundrel/mob/hardsuit_helmet.dmi'
 	equip_sound = 'sound/mecha/mechmove03.ogg'
-	drop_sound = 'sound/mecha/mechmove03.ogg'
+	pickup_sound = 'sound/mecha/mechmove03.ogg'
 
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT

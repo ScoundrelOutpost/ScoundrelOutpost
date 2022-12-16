@@ -19,7 +19,7 @@
 	projectile_type = /obj/projectile/beam/disabler
 	select_name = "disable"
 	e_cost = 50
-	fire_sound = 'sound/scoundrel/energyshot.ogg'
+	fire_sound = 'sound/scoundrel/weapons/staminabeam.ogg'
 	harmful = FALSE
 
 /obj/item/ammo_casing/energy/disabler/hos

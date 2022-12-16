@@ -2,6 +2,7 @@
 	projectile_type = /obj/projectile/beam/laser
 	e_cost = 83
 	select_name = "kill"
+	fire_sound = 'sound/scoundrel/weapons/blaster.ogg'
 
 /obj/item/ammo_casing/energy/laser/hellfire
 	projectile_type = /obj/projectile/beam/laser/hellfire

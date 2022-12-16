@@ -37,8 +37,8 @@
 	jobtype = /datum/job/deckhand
 	backpack_contents = list(
 		/obj/item/knife/combat/survival,
-		/obj/item/wrench,
-		/obj/item/gun/energy/e_gun/defender
+		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/storage/toolbox/mini/mechanical/loaded,
 	)
 	id_trim = /datum/id_trim/job/deckhand
 	id = /obj/item/card/id/advanced
@@ -81,7 +81,7 @@
 	jobtype = /datum/job/deckhand/greenhand
 	backpack_contents = list(
 		/obj/item/knife/combat/survival,
-		/obj/item/wrench
+		/obj/item/storage/toolbox/mini/mechanical/loaded,
 	)
 	id_trim = /datum/id_trim/job/deckhand/greenhand
 	id = /obj/item/card/id/advanced
@@ -215,13 +215,14 @@
 		/obj/item/analyzer/ranged = 1,
 		/obj/item/clothing/mask/bandana/striped/engineering = 1,
 		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/storage/toolbox/mini/engineer/loaded,
 	)
 	id_trim = /datum/id_trim/job/deckhand/engi_spec
 	id = /obj/item/card/id/advanced
 	head = /obj/item/clothing/head/utility/hardhat/weldhat/white
 	uniform = /obj/item/clothing/under/color/grey
 	suit = /obj/item/clothing/suit/hazardvest
-	belt = /obj/item/storage/belt/utility/full/engi
+	belt = /obj/item/storage/belt/utility/small
 	ears = /obj/item/radio/headset
 	glasses = /obj/item/clothing/glasses/meson/engine
 	gloves = /obj/item/clothing/gloves/color/chief_engineer

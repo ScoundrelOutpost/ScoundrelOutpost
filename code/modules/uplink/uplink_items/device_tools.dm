@@ -155,9 +155,9 @@
 
 /datum/uplink_item/device_tools/toolbox
 	name = "Full Syndicate Toolbox"
-	desc = "The Syndicate toolbox is a suspicious black and red. It comes loaded with a full tool set including a \
-			multitool and combat gloves that are resistant to shocks and heat."
-	item = /obj/item/storage/toolbox/syndicate
+	desc = "A supicious-looking compact toolbox. It comes loaded with a full toolset, including a \
+			multitool & insulated heatproof combat gloves."
+	item = /obj/item/storage/toolbox/mini/syndicate/loaded
 	cost = 1
 	illegal_tech = FALSE
 

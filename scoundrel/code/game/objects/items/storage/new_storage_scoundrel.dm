@@ -241,3 +241,133 @@
 
 /obj/item/storage/belt/utility/small/PopulateContents()
 		new /obj/item/storage/pouch/grey(src)
+
+// TOOLBOX // TOOLBOX // TOOLBOX
+
+// uplink toolboxes
+/obj/item/storage/toolbox/syndicatehardsuit
+	name = "suspicious arms case"
+	desc = "A hefty arms case that could probably do some serious damage. It has a red serpent silhouette painted on it."
+	icon = 'scoundrel/icons/obj/storage/weaponcase.dmi'
+	icon_state = "syndicate"
+	inhand_icon_state = "weaponcase_syndicate"
+	lefthand_file = 'scoundrel/icons/mob/inhands/scoundrel_lefthand.dmi'
+	righthand_file = 'scoundrel/icons/mob/inhands/scoundrel_righthand.dmi'
+	force = 15
+	throwforce = 18
+	material_flags = NONE
+
+/obj/item/storage/toolbox/syndicatehardsuit/PopulateContents()
+	new /obj/item/clothing/suit/hooded/hardsuit/syndicate(src)
+	new /obj/item/tank/jetpack/advanced/compact/syndicate(src)
+
+// mini toolboxes
+
+/obj/item/storage/toolbox/mini
+	name = "mini toolbox"
+	desc = "Caution. Slightly robust."
+	icon = 'scoundrel/icons/obj/storage/mini-toolbox.dmi'
+	icon_state = "blue"
+	force = 8
+	throwforce = 8
+	w_class = WEIGHT_CLASS_NORMAL
+	has_latches = FALSE
+	material_flags = NONE
+	inhand_icon_state = "toolbox_blue"
+	
+/obj/item/storage/toolbox/mini/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+
+/obj/item/storage/toolbox/mini/mechanical/loaded/PopulateContents()
+	new /obj/item/screwdriver(src)
+	new /obj/item/wrench(src)
+	new /obj/item/weldingtool(src)
+	new /obj/item/crowbar(src)
+	new /obj/item/analyzer(src)
+	new /obj/item/wirecutters(src)
+
+/obj/item/storage/toolbox/mini/emergency
+	icon_state = "red"
+	inhand_icon_state = "toolbox_red"
+
+/obj/item/storage/toolbox/mini/emergency/loaded/PopulateContents()
+	new /obj/item/crowbar/red(src)
+	new /obj/item/weldingtool/mini(src)
+	new /obj/item/extinguisher/mini(src)
+	switch(rand(1,3))
+		if(1)
+			new /obj/item/flashlight(src)
+		if(2)
+			new /obj/item/flashlight/glowstick(src)
+		if(3)
+			new /obj/item/flashlight/flare(src)
+	new /obj/item/radio/off(src)
+
+/obj/item/storage/toolbox/mini/electrical
+	icon_state = "yellow"
+	inhand_icon_state = "toolbox_yellow"
+
+/obj/item/storage/toolbox/mini/electrical/loaded/PopulateContents()
+	var/pickedcolor = pick(GLOB.cable_colors)
+	new /obj/item/screwdriver(src)
+	new /obj/item/wirecutters(src)
+	new /obj/item/t_scanner(src)
+	new /obj/item/crowbar(src)
+	var/obj/item/stack/cable_coil/new_cable_one = new(src, MAXCOIL)
+	new_cable_one.set_cable_color(pickedcolor)
+	var/obj/item/stack/cable_coil/new_cable_two = new(src, MAXCOIL)
+	new_cable_two.set_cable_color(pickedcolor)
+	if(prob(5))
+		new /obj/item/clothing/gloves/color/yellow(src)
+	else
+		var/obj/item/stack/cable_coil/new_cable_three = new(src, MAXCOIL)
+		new_cable_three.set_cable_color(pickedcolor)
+
+/obj/item/storage/toolbox/mini/engineer
+	icon_state = "yellow"
+	inhand_icon_state = "toolbox_yellow"
+
+/obj/item/storage/toolbox/mini/engineer/loaded/PopulateContents()
+	new /obj/item/screwdriver(src)
+	new /obj/item/wrench(src)
+	new /obj/item/weldingtool(src)
+	new /obj/item/crowbar(src)
+	new /obj/item/wirecutters(src)
+	new /obj/item/multitool(src)
+	new /obj/item/storage/pouch/engineer/preloaded(src)
+
+/obj/item/storage/toolbox/mini/syndicate
+	icon_state = "sus"
+	inhand_icon_state = "toolbox_syndi"
+	force = 12
+	throwforce = 15
+
+/obj/item/storage/toolbox/mini/syndicate/loaded/PopulateContents()
+	new /obj/item/screwdriver/nuke(src)
+	new /obj/item/wrench(src)
+	new /obj/item/weldingtool/largetank(src)
+	new /obj/item/crowbar/red(src)
+	new /obj/item/wirecutters(src, "red")
+	new /obj/item/multitool(src)
+	new /obj/item/clothing/gloves/combat(src)
+
+// spawners - move this to a spawners file
+/obj/effect/spawner/random/mini_toolbox
+	name = "empty mini toolbox spawner"
+	icon = 'scoundrel/icons/obj/storage/mini-toolbox.dmi'
+	icon_state = "loot"
+	loot = list(
+		/obj/item/storage/toolbox/mini/mechanical = 1,
+		/obj/item/storage/toolbox/mini/emergency = 1,
+		/obj/item/storage/toolbox/mini/electrical = 1,
+	)
+/obj/effect/spawner/random/mini_toolbox_loaded
+	name = "mini toolbox spawner"
+	icon = 'scoundrel/icons/obj/storage/mini-toolbox.dmi'
+	icon_state = "loot"
+	loot = list(
+		/obj/item/storage/toolbox/mini/mechanical/loaded = 1,
+		/obj/item/storage/toolbox/mini/emergency/loaded = 1,
+		/obj/item/storage/toolbox/mini/electrical/loaded = 1,
+	)

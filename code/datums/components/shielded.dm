@@ -23,6 +23,18 @@
 	var/shield_inhand = FALSE
 	/// Should the shield lose charges equal to the damage dealt by a hit?
 	var/lose_multiple_charges = FALSE
+	/// Attack types that cannot be blocked.
+	var/static/list/cannot_block_types = list()
+	/// What type of damage our shield is weakagainst. If null, there are no weaknesses.
+	var/shield_weakness
+	/// The multiplier for how many charges are lost from incoming damage if that damage matches our shield weakness type
+	var/shield_weakness_multiplier = 1
+	/// What type of damage our shield is strong against. If null, there are no strengths.
+	var/shield_resistance
+	/// The multiplier for how many charges are lost from incoming damage if that damage matches our shield resistant type.
+	var/shield_resistance_divider = 1
+	/// Shield uses no overlay while active
+	var/no_overlay = FALSE
 	/// The item we use for recharging
 	var/recharge_path
 	/// The cooldown tracking when we were last hit
@@ -32,7 +44,7 @@
 	/// A callback for the sparks/message that play when a charge is used, see [/datum/component/shielded/proc/default_run_hit_callback]
 	var/datum/callback/on_hit_effects
 
-/datum/component/shielded/Initialize(max_charges = 3, recharge_start_delay = 20 SECONDS, charge_increment_delay = 1 SECONDS, charge_recovery = 1, lose_multiple_charges = FALSE, recharge_path = null, starting_charges = null, shield_icon_file = 'icons/effects/effects.dmi', shield_icon = "shield-old", shield_inhand = FALSE, run_hit_callback)
+/datum/component/shielded/Initialize(max_charges = 3, recharge_start_delay = 20 SECONDS, charge_increment_delay = 1 SECONDS, charge_recovery = 1, lose_multiple_charges = FALSE, cannot_block_types, shield_weakness, shield_weakness_multiplier = 1, shield_resistance, shield_resistance_divider = 1, no_overlay = FALSE, recharge_path = null, starting_charges = null, shield_icon_file = 'icons/effects/effects.dmi', shield_icon = "shield-old", shield_inhand = FALSE, run_hit_callback)
 	if(!isitem(parent) || max_charges <= 0)
 		return COMPONENT_INCOMPATIBLE
 
@@ -41,6 +53,12 @@
 	src.charge_increment_delay = charge_increment_delay
 	src.charge_recovery = charge_recovery
 	src.lose_multiple_charges = lose_multiple_charges
+	src.cannot_block_types = cannot_block_types
+	src.shield_weakness = shield_weakness
+	src.shield_weakness_multiplier = shield_weakness_multiplier
+	src.shield_resistance = shield_resistance
+	src.shield_resistance_divider = shield_resistance_divider
+	src.no_overlay = no_overlay
 	src.recharge_path = recharge_path
 	src.shield_icon_file = shield_icon_file
 	src.shield_icon = shield_icon
@@ -132,7 +150,8 @@
 /datum/component/shielded/proc/on_update_overlays(atom/parent_atom, list/overlays)
 	SIGNAL_HANDLER
 
-	overlays += mutable_appearance(shield_icon_file, (current_charges > 0 ? shield_icon : "broken"), MOB_SHIELD_LAYER)
+	if(!no_overlay)
+		overlays += mutable_appearance(shield_icon_file, (current_charges > 0 ? shield_icon : "broken"), MOB_SHIELD_LAYER)
 
 /**
  * This proc fires when we're hit, and is responsible for checking if we're charged, then deducting one + returning that we're blocking if so.
@@ -145,12 +164,20 @@
 
 	if(current_charges <= 0)
 		return
+	if(attack_type in cannot_block_types)
+		return
 	. = COMPONENT_HIT_REACTION_BLOCK
 
 	var/charge_loss = 1 // how many charges do we lose
 
 	if(lose_multiple_charges) // if the shield has health like damage we'll lose charges equal to the damage of the hit
-		charge_loss = damage
+		var/incoming_damage = damage
+		if(shield_weakness && attack_type == shield_weakness)
+			incoming_damage = clamp((damage*shield_weakness_multiplier), damage, INFINITY)
+		if(shield_resistance && attack_type == shield_resistance)
+			incoming_damage = clamp((damage/shield_resistance_divider), 1, damage)
+		charge_loss = incoming_damage
+
 
 	adjust_charge(-charge_loss)
 

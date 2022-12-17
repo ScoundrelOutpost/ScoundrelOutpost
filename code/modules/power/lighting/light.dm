@@ -21,11 +21,11 @@
 	///Amount of power used
 	var/static_power_used = 0
 	///Luminosity when on, also used in power calculation
-	var/brightness = 8
+	var/brightness = 6
 	///Basically the alpha of the emitted light source
 	var/bulb_power = 1
 	///Default colour of the light.
-	var/bulb_colour = "#f3fffa"
+	var/bulb_colour = "#FFFADD"
 	///LIGHT_OK, _EMPTY, _BURNED or _BROKEN
 	var/status = LIGHT_OK
 	///Should we flicker?
@@ -45,11 +45,11 @@
 	///Set to FALSE to never let this light get switched to night mode.
 	var/nightshift_allowed = TRUE
 	///Brightness of the nightshift light
-	var/nightshift_brightness = 8
+	var/nightshift_brightness = 6
 	///Alpha of the nightshift light
 	var/nightshift_light_power = 0.45
 	///Basecolor of the nightshift light
-	var/nightshift_light_color = "#FFDDCC"
+	var/nightshift_light_color = "#A3AAFF"
 	///If true, the light is in low power mode
 	var/low_power_mode = FALSE
 	///If true, this light cannot ever be in low power mode
@@ -61,7 +61,7 @@
 	///Colour of the light when major emergency mode is on
 	var/bulb_emergency_colour = "#ff4e4e"
 	///Multiplier for this light's base brightness in low power power mode
-	var/bulb_low_power_brightness_mul = 0.25
+	var/bulb_low_power_brightness_mul = 0.6
 	///Determines the colour of the light while it's in low power mode
 	var/bulb_low_power_colour = "#FF3232"
 	///The multiplier for determining the light's power in low power mode
@@ -69,7 +69,7 @@
 	///The minimum value for the light's power in low power mode
 	var/bulb_low_power_pow_min = 0.5
 	///Power usage - W per unit of luminosity
-	var/power_consumption_rate = 20
+	var/power_consumption_rate = 12
 
 /obj/machinery/light/Move()
 	if(status != LIGHT_BROKEN)

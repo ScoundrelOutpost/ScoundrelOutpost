@@ -331,3 +331,10 @@
 	suffix = "spinwardsmoothies.dmm"
 	name = "Spinward Smoothies"
 	description = "A branch of the beloved Spinward Smoothies chain of smoothie bars."
+
+// scoundrel content
+/datum/map_template/ruin/space/scoundrel_waypost
+	id = "scoundrelwaypost"
+	suffix = "scoundrel_waypost.dmm"
+	name = "Waypost"
+	description = "A supply waypost hosted by an independent goods trader."

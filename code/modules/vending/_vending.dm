@@ -128,7 +128,7 @@
 	///Small ad messages in the vending screen - random chance of popping up whenever you open it
 	var/list/small_ads = list()
 	///Message sent post vend (Thank you for shopping!)
-	var/vend_reply
+	var/vend_reply = "Thank you for shopping with us!"
 	///Last world tick we sent a vent reply
 	var/last_reply = 0
 	///Last world tick we sent a slogan message out
@@ -1095,7 +1095,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			SSeconomy.track_purchase(account, price_to_use, name)
 			log_econ("[price_to_use] credits were inserted into [src] by [account.account_holder] to buy [R].")
 	if(last_shopper != REF(usr) || purchase_message_cooldown < world.time)
-		say("Thank you for shopping with [src]!")
+		say("[vend_reply]")
 		purchase_message_cooldown = world.time + 5 SECONDS
 		//This is not the best practice, but it's safe enough here since the chances of two people using a machine with the same ref in 5 seconds is fuck low
 		last_shopper = REF(usr)

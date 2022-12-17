@@ -1,0 +1,3403 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/machinery/light/blue/directional/south,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"ad" = (
+/obj/structure/chair/office,
+/obj/effect/forcefield/mime/advanced{
+	initial_duration = 0;
+	name = "invisible wall";
+	desc = "Good luck getting around this."
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/waypost/has_grav)
+"ba" = (
+/turf/template_noop,
+/area/template_noop)
+"bh" = (
+/obj/machinery/power/tracker,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav/starlight)
+"bJ" = (
+/obj/structure/railing{
+	dir = 8;
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"cy" = (
+/obj/machinery/door/airlock/grunge,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"cL" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/obj/machinery/door/airlock/grunge,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"cU" = (
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"dm" = (
+/obj/structure/railing{
+	dir = 10;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"dr" = (
+/turf/open/floor/catwalk_floor/iron{
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/space/waypost/has_grav/starlight)
+"eh" = (
+/obj/structure/billboard/roadsign/twomillion,
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"ek" = (
+/obj/structure/railing{
+	dir = 5;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"eu" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"eK" = (
+/obj/machinery/atmospherics/components/unary/passive_vent/layer4{
+	dir = 8
+	},
+/turf/open/floor/catwalk_floor{
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/space/waypost/has_grav/starlight)
+"fL" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"fW" = (
+/obj/structure/railing{
+	dir = 1;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"gE" = (
+/obj/structure/tank_holder/oxygen/red,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"gT" = (
+/obj/item/storage/toolbox/mini/electrical/loaded,
+/obj/item/stack/cable_coil/cut,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"gW" = (
+/obj/structure/safe,
+/obj/item/disk/tech_disk/spaceloot,
+/obj/structure/sign/poster/contraband/random/directional/north,
+/obj/item/grenade/frag,
+/obj/item/stack/spacecash/c1000,
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/waypost/has_grav)
+"hB" = (
+/turf/open/floor/catwalk_floor/iron_dark{
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/space/waypost/has_grav/starlight)
+"hJ" = (
+/turf/closed/mineral/random,
+/area/centcom/asteroid)
+"hP" = (
+/obj/machinery/airalarm/directional/east,
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/mop/advanced,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"hV" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	pixel_y = 16
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"iZ" = (
+/obj/structure/sign/warning/vacuum/directional/south,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"jb" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"je" = (
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"jX" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"jZ" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"kg" = (
+/obj/machinery/power/solar_control,
+/obj/item/stack/cable_coil/cut,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"kS" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/machinery/light/red/dim/directional/south,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"lc" = (
+/obj/structure/railing{
+	dir = 10;
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"lo" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"mH" = (
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"mI" = (
+/obj/machinery/atmospherics/components/tank/air{
+	piping_layer = 2
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"mM" = (
+/obj/item/stack/cable_coil/cut,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"nj" = (
+/obj/structure/railing{
+	dir = 8;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"nv" = (
+/obj/structure/railing{
+	dir = 6;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"nE" = (
+/obj/structure/railing/corner{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"nL" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"oq" = (
+/obj/machinery/door/airlock/grunge,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"oF" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/entertainment/cigarette_pack,
+/obj/structure/sign/poster/contraband/random/directional/south,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"pj" = (
+/obj/item/storage/medkit/regular/wall{
+	pixel_x = -28
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"pl" = (
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark{
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/space/waypost/has_grav/starlight)
+"pn" = (
+/obj/machinery/power/smes/magical{
+	dir = 4;
+	name = " power storage unit"
+	},
+/obj/item/stack/cable_coil/cut,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"pR" = (
+/obj/machinery/power/solar,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav/starlight)
+"qe" = (
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark{
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/space/waypost/has_grav)
+"qz" = (
+/obj/item/kirbyplants/photosynthetic,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"qG" = (
+/obj/machinery/computer/camera_advanced{
+	dir = 8
+	},
+/obj/effect/forcefield/mime/advanced{
+	initial_duration = 0;
+	name = "invisible wall";
+	desc = "Good luck getting around this."
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/waypost/has_grav)
+"qL" = (
+/obj/structure/table/reinforced/rglass,
+/obj/item/flashlight/lamp{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/paper/fluff/waypost/jinx{
+	pixel_x = -6
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"ra" = (
+/turf/closed/indestructible/reinforced,
+/area/ruin/space/waypost/has_grav)
+"rG" = (
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"sT" = (
+/obj/machinery/door/airlock/grunge,
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"ui" = (
+/obj/structure/railing{
+	dir = 4;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"ut" = (
+/obj/effect/spawner/random/decoration/paint,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"uG" = (
+/obj/structure/railing{
+	dir = 4;
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"vb" = (
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"vh" = (
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/waypost/has_grav)
+"vx" = (
+/obj/item/folder,
+/obj/machinery/light/yellow/directional/north,
+/obj/structure/sign/poster/contraband/random/directional/north,
+/obj/structure/filingcabinet,
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/waypost/has_grav)
+"vT" = (
+/obj/structure/railing{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"we" = (
+/turf/open/floor/catwalk_floor{
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/space/waypost/has_grav/starlight)
+"xy" = (
+/obj/structure/railing/corner{
+	dir = 1;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"xI" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"yi" = (
+/obj/item/storage/box/energybolas,
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 30;
+	req_access = list("cantopen")
+	},
+/obj/machinery/light/red/dim/directional/west,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"zy" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/obj/machinery/door/airlock/grunge,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Ak" = (
+/obj/structure/railing{
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"An" = (
+/obj/structure/cable,
+/obj/item/chair,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Av" = (
+/obj/structure/cable,
+/obj/structure/marker_beacon/teal,
+/turf/open/floor/catwalk_floor/iron_dark{
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/ruin/space/waypost/has_grav)
+"AA" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Ba" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Be" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"By" = (
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Ck" = (
+/obj/structure/cable,
+/obj/machinery/power/rtg{
+	power_gen = 2000
+	},
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav/starlight)
+"CH" = (
+/turf/closed/indestructible/iron,
+/area/ruin/space/waypost/has_grav)
+"Dc" = (
+/obj/structure/lattice/catwalk{
+	color = #5F5F5F
+	},
+/obj/structure/railing{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"Dk" = (
+/obj/machinery/door/airlock/grunge,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Du" = (
+/obj/structure/closet/emcloset/anchored,
+/obj/effect/spawner/random/decoration/glowstick,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Eq" = (
+/obj/structure/railing/corner{
+	dir = 8;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"EK" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/item/storage/belt/utility,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"EX" = (
+/turf/open/floor/iron/stairs,
+/area/ruin/space/waypost/has_grav)
+"EZ" = (
+/obj/item/weldingtool/largetank,
+/obj/item/clothing/glasses/welding,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"Fu" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/engineering/flashlight,
+/obj/item/crowbar,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"FH" = (
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"GB" = (
+/obj/effect/mob_spawn/ghost_role/human/printed_android,
+/obj/item/stack/spacecash/c1000,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"GG" = (
+/obj/structure/sink/directional/south,
+/obj/structure/sign/poster/contraband/random/directional/east,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"GW" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 30;
+	req_access = list("cantopen")
+	},
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/item/gun/energy/e_gun/defender,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Hr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/turf/closed/indestructible/reinforced,
+/area/ruin/space/waypost/has_grav)
+"HG" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"HN" = (
+/obj/machinery/door/poddoor,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"IX" = (
+/obj/effect/spawner/random/trash/janitor_supplies,
+/obj/structure/rack,
+/obj/item/storage/toolbox/mini/emergency/loaded,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Jl" = (
+/obj/structure/railing{
+	dir = 9;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"Jr" = (
+/obj/machinery/door/airlock/grunge,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/locked,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Jw" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/airlock/external,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"JK" = (
+/obj/docking_port/mobile/pod{
+	dir = 4
+	},
+/turf/template_noop,
+/area/template_noop)
+"JY" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/effect/spawner/random/vending/snackvend,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Kn" = (
+/obj/structure/cable,
+/obj/machinery/light/red/dim/directional/south,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Ly" = (
+/obj/structure/railing/corner{
+	dir = 4;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"LL" = (
+/obj/structure/railing{
+	dir = 4;
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"LO" = (
+/obj/machinery/vending/wallmed/directional/east,
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Mc" = (
+/obj/machinery/power/solar,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav/starlight)
+"Mi" = (
+/obj/machinery/autolathe/hacked,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Mk" = (
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"Mw" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/machinery/door/airlock/grunge,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"MJ" = (
+/obj/item/clothing/gloves/color/chief_engineer,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"NA" = (
+/obj/item/tank/jetpack/advanced,
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/iron/fifty,
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"NO" = (
+/obj/structure/table/reinforced,
+/obj/item/paper,
+/obj/structure/railing{
+	dir = 5
+	},
+/obj/item/pen/screwdriver,
+/turf/open/floor/iron/half,
+/area/ruin/space/waypost/has_grav)
+"Oo" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/airlock/external,
+/obj/structure/fans/tiny,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"OK" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Pq" = (
+/turf/closed/wall/mineral/iron,
+/area/ruin/space/waypost/has_grav)
+"PW" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
+/obj/machinery/door/airlock/grunge,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Qd" = (
+/obj/effect/spawner/random/engineering/tank,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Qr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"QD" = (
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Sb" = (
+/obj/machinery/light/orange/directional/north,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Tl" = (
+/obj/structure/table/reinforced,
+/obj/item/gps/spaceruin{
+	gpstag = "Inviting Signal"
+	},
+/obj/structure/railing{
+	dir = 9
+	},
+/turf/open/floor/iron/half,
+/area/ruin/space/waypost/has_grav)
+"TA" = (
+/obj/structure/bed/double,
+/obj/item/bedsheet/brown/double,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Ug" = (
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"Ux" = (
+/obj/machinery/vending/npc/waypost,
+/obj/effect/forcefield/mime/advanced{
+	initial_duration = 0;
+	name = "invisible wall";
+	desc = "Good luck getting around this."
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/ruin/space/waypost/has_grav)
+"Vm" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 30;
+	req_access = list("cantopen")
+	},
+/obj/item/storage/backpack/satchel/leather/withwallet,
+/obj/item/clothing/under/misc/durathread,
+/obj/item/clothing/glasses/science/night,
+/obj/item/clothing/head/helmet/durathread,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Wd" = (
+/obj/machinery/light/blue/directional/east,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"WF" = (
+/obj/item/stack/sheet/cardboard/fifty,
+/obj/structure/closet/crate/cardboard,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"WQ" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"WR" = (
+/obj/item/stack/sheet/glass,
+/obj/item/stack/sheet/iron,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Xk" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"Xy" = (
+/obj/item/stack/cable_coil/cut,
+/obj/item/paper/crumpled/fluff/waypost/smartwires,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"XI" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external,
+/obj/structure/fans/tiny,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/waypost/has_grav)
+"XO" = (
+/turf/closed/wall,
+/area/ruin/space/waypost/has_grav)
+"Yc" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Yh" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/iron/half,
+/area/ruin/space/waypost/has_grav)
+"Yy" = (
+/obj/structure/rack,
+/obj/item/storage/toolbox/drone,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"YI" = (
+/obj/machinery/door/poddoor,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/space/waypost/has_grav)
+"YM" = (
+/obj/item/clothing/head/helmet/durathread,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"YV" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/backpack/satchel/leather/withwallet,
+/obj/machinery/light/blue/directional/south,
+/obj/structure/sign/poster/contraband/random/directional/south,
+/turf/open/floor/iron/dark,
+/area/ruin/space/waypost/has_grav)
+"Zw" = (
+/obj/structure/railing{
+	dir = 6;
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/obj/structure/lattice{
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+"Zx" = (
+/obj/structure/lattice/catwalk{
+	color = #5F5F5F
+	},
+/obj/structure/railing{
+	dir = 6;
+	color = #5F5F5F
+	},
+/turf/template_noop,
+/area/ruin/space/waypost/has_grav/starlight)
+
+(1,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(2,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(3,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(4,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(5,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(6,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(7,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(8,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(9,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(10,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(11,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+nE
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+Ly
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(12,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+hJ
+hJ
+hJ
+hJ
+hJ
+hJ
+ba
+vT
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(13,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+Jl
+nj
+bJ
+nj
+dm
+dr
+Jl
+nj
+bJ
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+dm
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(14,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+fW
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+ek
+ui
+ui
+Ly
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(15,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+fW
+ba
+Ug
+ba
+Pq
+XI
+Pq
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+dr
+dr
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(16,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+fW
+ba
+Ug
+ba
+Pq
+rG
+Pq
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+Eq
+bJ
+nj
+dm
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(17,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+XO
+XO
+XO
+Ug
+hB
+Ug
+Pq
+rG
+Pq
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(18,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ra
+ra
+ra
+ra
+yi
+ra
+Mc
+Mc
+Mc
+Pq
+Jw
+Pq
+pl
+pl
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(19,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ra
+ra
+ra
+ra
+mI
+Ba
+ra
+GW
+ra
+ra
+ra
+ra
+Pq
+iZ
+Pq
+Pq
+pl
+ba
+ba
+ba
+pR
+pR
+pR
+pR
+pR
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(20,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ra
+EZ
+GB
+XO
+Du
+OK
+PW
+OK
+OK
+OK
+OK
+Jr
+OK
+vb
+YV
+Pq
+pl
+ba
+ba
+ba
+ba
+Ug
+pl
+Ug
+ba
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(21,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+XO
+XO
+XO
+XO
+XO
+ra
+kS
+Pq
+mH
+Pq
+GG
+hP
+ra
+JY
+OK
+oF
+Pq
+pl
+pl
+pl
+pl
+pl
+pR
+Ck
+pR
+pl
+pl
+uG
+ui
+nv
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(22,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+XO
+Qd
+Qd
+Yy
+lo
+Pq
+OK
+Pq
+ra
+ra
+ra
+ra
+ra
+Pq
+Mw
+XO
+XO
+XO
+Av
+Ug
+Ug
+XO
+XO
+XO
+XO
+XO
+pl
+dr
+dr
+dr
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(23,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+XO
+ut
+QD
+QD
+MJ
+Pq
+OK
+Pq
+ra
+gW
+vh
+ad
+Tl
+pj
+jX
+WR
+Mi
+HG
+qe
+Ug
+Ug
+HN
+mM
+gT
+pn
+XO
+pl
+bJ
+bJ
+lc
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(24,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+XO
+fL
+By
+EK
+jX
+oq
+OK
+Pq
+ra
+vx
+vh
+Ux
+Yh
+hV
+Be
+jb
+An
+FH
+Av
+Ug
+Ug
+HN
+Xy
+Mk
+jZ
+sT
+pl
+bh
+Ug
+Ak
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(25,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+XO
+Sb
+YM
+QD
+WF
+Pq
+vb
+CH
+EX
+vh
+vh
+qG
+NO
+LO
+Yc
+QD
+qz
+HG
+qe
+Ug
+Ug
+HN
+kg
+nL
+Wd
+XO
+pl
+uG
+LL
+Zw
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(26,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+XO
+je
+je
+je
+NA
+Pq
+vb
+Pq
+ra
+ra
+ra
+ra
+ra
+Pq
+cL
+XO
+XO
+XO
+Av
+Ug
+Ug
+XO
+XO
+YI
+XO
+XO
+pl
+dr
+dr
+dr
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(27,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+nE
+XO
+HN
+HN
+HN
+XO
+ra
+Kn
+Pq
+xI
+Pq
+QD
+AA
+ra
+Fu
+WQ
+gE
+Pq
+pl
+pl
+pl
+pl
+pl
+pR
+Ck
+pR
+pl
+pl
+bJ
+nj
+dm
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(28,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+ba
+JK
+ba
+ra
+eu
+WQ
+zy
+WQ
+WQ
+WQ
+WQ
+Dk
+WQ
+WQ
+ac
+Pq
+pl
+ba
+ba
+ba
+ba
+Ug
+pl
+Ug
+ba
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(29,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+ba
+ba
+ba
+ra
+IX
+Qr
+ra
+ra
+cy
+ra
+ra
+ra
+Pq
+iZ
+Pq
+Pq
+pl
+ba
+ba
+ba
+pR
+pR
+pR
+pR
+pR
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(30,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+ba
+ba
+ba
+ra
+ra
+Hr
+ra
+Vm
+QD
+XO
+Mc
+Mc
+Pq
+Xk
+Pq
+pl
+pl
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(31,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+ba
+ba
+ba
+dr
+fW
+eK
+XO
+TA
+qL
+XO
+hB
+Ug
+Pq
+rG
+Pq
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+Ug
+ba
+vT
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(32,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+ba
+ba
+ba
+dr
+fW
+ba
+XO
+XO
+XO
+XO
+ba
+cU
+Pq
+rG
+Pq
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+nE
+uG
+ui
+nv
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(33,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+we
+dr
+dr
+dr
+we
+fW
+ba
+ba
+Ug
+ba
+ba
+ba
+eh
+Pq
+Oo
+Pq
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+dr
+dr
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(34,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+Eq
+nj
+nj
+dm
+dr
+Jl
+xy
+ba
+ba
+Ug
+ba
+ba
+ba
+cU
+Dc
+dr
+fW
+ba
+Ug
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+Jl
+nj
+nj
+xy
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(35,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+dr
+ek
+ui
+ui
+ui
+uG
+ui
+ui
+ui
+ui
+Zx
+dr
+ek
+ui
+uG
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+nv
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(36,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+vT
+we
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+we
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+fW
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(37,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+Eq
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+nj
+xy
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(38,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(39,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(40,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(41,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(42,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(43,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(44,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(45,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(46,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(47,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(48,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(49,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}
+(50,1,1) = {"
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+ba
+"}

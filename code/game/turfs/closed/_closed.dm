@@ -295,8 +295,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	base_icon_state = "iron_wall"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_IRON_WALLS)
-	canSmoothWith = list(SMOOTH_GROUP_IRON_WALLS)
-	opacity = FALSE
+	canSmoothWith = list(SMOOTH_GROUP_WALLS)
+//	opacity = FALSE ?? who did this
 
 /turf/closed/indestructible/riveted/boss
 	name = "necropolis wall"

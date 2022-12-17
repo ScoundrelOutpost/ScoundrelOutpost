@@ -71,3 +71,83 @@
 /obj/item/vending_refill/umatter
 	machine_name = "U-Matter"
 	icon_state = "refill_parts"
+
+// npcs
+
+/obj/machinery/vending/npc
+	name = "NPC Vendor"
+	desc = "You probably shouldn't be seeing this!"
+//	default_price = 300
+//	extra_price = 600
+	icon = 'scoundrel/icons/obj/traders/traders.dmi'
+	icon_state = "apprentice"
+	icon_deny = null
+	light_mask = null
+	panel_type = null
+	payment_department = NO_FREEBIES
+	damage_deflection = 1000
+	can_be_unanchored = FALSE
+	onstation_override = TRUE // i applied it globally lmao
+
+	verb_ask = "says"
+	verb_exclaim = "says"
+	verb_say = "says"
+
+	// anti exploitation vars
+	tiltable = FALSE
+	integrity_failure = 0
+	shoot_inventory_chance = 0
+
+	products = list(
+		/obj/item/bikehorn = 1,
+	)
+	contraband = list(
+		/obj/item/bikehorn = 1,
+	)
+	premium = list(
+		/obj/item/bikehorn = 1,
+	)
+
+/obj/machinery/vending/npc/waypost
+	name = "Sen Ilid"
+	desc = "They look like they might sell a thing or two."
+	icon_state = "spacer-jacket"
+
+	default_price = 300
+	extra_price = 800
+
+	vend_reply = "Burn bright, spacer."
+
+	products = list(
+		//tools
+		/obj/item/knife/combat/survival = 2,
+		/obj/item/storage/belt/utility/full = 2,
+		/obj/item/storage/backpack/satchel/flat/with_tools = 1,
+		//exotic
+		/obj/item/organ/internal/eyes/robotic/shield = 1,
+		/obj/item/forcefield_projector = 1,
+		/obj/item/seeds/random = 10,
+		/obj/item/seeds/tomato/blue/bluespace = 1,
+		/obj/item/ammo_box/magazine/m9mm/fire = 1,
+		/obj/item/implanter/radio = 1,
+		//fluff
+		/obj/item/toy/plush/beeplushie = 1,
+	)
+	contraband = list(
+		/obj/item/seeds/kudzu = 1,
+		/obj/item/toy/plush/carpplushie/dehy_carp = 1,
+		/obj/item/camera_bug = 1,
+	)
+	premium = list(
+		//tools
+		/obj/item/retractor/advanced = 1,
+		/obj/item/crowbar/power = 1,
+		/obj/item/construction/rcd/loaded/upgraded = 1,
+		/obj/item/melee/tonfa = 1,
+		//exotic
+		/obj/item/organ/internal/cyberimp/arm/toolset = 1,
+		/obj/item/organ/internal/cyberimp/brain/anti_drop = 1,
+		/obj/item/reagent_containers/cup/bottle/potion/flight = 1,
+		//fluff
+		/obj/item/storage/backpack/duffelbag/clown/syndie = 1,
+	)

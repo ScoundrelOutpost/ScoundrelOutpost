@@ -125,5 +125,5 @@
 
 		to_chat(target, "[span_minorannounce("<font color = red>[title]</font color><BR>[message]")]<BR>")
 		if(target.client?.prefs.read_preference(/datum/preference/toggle/sound_announcements))
-			var/sound_to_play = sound_override || (alert ? 'sound/misc/notice1.ogg' : 'sound/misc/notice2.ogg')
+			var/sound_to_play = sound_override || (alert ? 'sound/scoundrel/alert/alarm3.ogg' : 'sound/misc/compiler-stage1.ogg')
 			SEND_SOUND(target, sound(sound_to_play))

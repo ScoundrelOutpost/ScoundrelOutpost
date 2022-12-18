@@ -157,22 +157,22 @@
 /datum/config_entry/flag/arrivals_shuttle_require_safe_latejoin //Require the arrivals shuttle to be operational in order for latejoiners to join
 
 /datum/config_entry/string/alert_green
-	default = "All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced."
+	default = "At ease! There are no observable threats to the station. Everyone should take a breather."
 
 /datum/config_entry/string/alert_blue_upto
-	default = "The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted."
+	default = "At attention! Potentially hostile activity has been observed in the sector. All crewmembers should exercise caution and maintain awareness."
 
 /datum/config_entry/string/alert_blue_downto
-	default = "The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed."
+	default = "At attention! The immediate threat has passed, but there may still be other hostiles in the area."
 
 /datum/config_entry/string/alert_red_upto
-	default = "There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised."
+	default = "All hands on deck! Hostile activity has been detected onboard the station, all crewmembers are expected to fend off the threat!"
 
 /datum/config_entry/string/alert_red_downto
-	default = "The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised."
+	default = "ALL HANDS! The station's still intact! There may still be hostile activity -- keep safe and stay armed!"
 
 /datum/config_entry/string/alert_delta
-	default = "Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill."
+	default = "ALL HANDS! The destruction of the station is imminent, BURN BRIGHT or EVACUATE IMMEDIATELY!"
 
 /datum/config_entry/flag/revival_pod_plants
 

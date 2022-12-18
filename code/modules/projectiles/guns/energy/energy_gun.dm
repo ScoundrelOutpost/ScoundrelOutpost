@@ -177,6 +177,7 @@
 	single_shot_type_overlay = FALSE
 	force = 10
 	throwforce = 18
+	dual_wield_spread = 24
 
 /obj/item/gun/energy/e_gun/defender/mini
 	name = "mini-defender pistol"

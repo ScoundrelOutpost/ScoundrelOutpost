@@ -171,7 +171,7 @@
 	icon_state = "defender"
 	inhand_icon_state = "gun"
 	ammo_x_offset = 2
-	charge_sections = 6
+	charge_sections = 3
 	w_class = WEIGHT_CLASS_NORMAL
 	cell_type = /obj/item/stock_parts/cell/mini_egun
 	single_shot_type_overlay = FALSE

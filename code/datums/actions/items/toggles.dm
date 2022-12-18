@@ -114,3 +114,5 @@
 // scoundrel content
 /datum/action/item_action/toggle_helmet
 	name = "Toggle Helmet"
+/datum/action/item_action/toggle_gloves
+	name = "Toggle Gloves"

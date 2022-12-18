@@ -2928,6 +2928,7 @@
 #include "code\modules\clothing\suits\shirt.dm"
 #include "code\modules\clothing\suits\straightjacket.dm"
 #include "code\modules\clothing\suits\toggles.dm"
+#include "scoundrel\code\modules\clothing\under\glovejumpsuits.dm"
 #include "code\modules\clothing\suits\utility.dm"
 #include "code\modules\clothing\suits\wetfloor.dm"
 #include "code\modules\clothing\suits\wintercoats.dm"

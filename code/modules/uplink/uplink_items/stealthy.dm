@@ -101,3 +101,13 @@
 	cost = 10
 	surplus = 50
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+
+// Scoundrel content
+/datum/uplink_item/stealthy_weapons/xrayflash
+	name = "X-Ray Flashes"
+	desc = "A pouch containing three powerful x-ray flashes. Highly effective at blinding victims \
+	and ignores most forms of eye protection. Exposure to multiple flashes is known to cause lasting eye damage. \
+	Each one only has one charge. Useful for getaways or ambushes."
+	item = /obj/item/storage/pouch/tactical/xrayflash
+	cost = 2
+	limited_stock = 2

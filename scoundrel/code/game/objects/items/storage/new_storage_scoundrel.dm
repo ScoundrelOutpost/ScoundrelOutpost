@@ -223,6 +223,11 @@
 	new /obj/item/ammo_box/magazine/m9mm/fire(src)
 	new /obj/item/ammo_box/magazine/m9mm/fire(src)
 
+/obj/item/storage/pouch/tactical/xrayflash/PopulateContents()
+	new /obj/item/assembly/flash/handheld/xray(src)
+	new /obj/item/assembly/flash/handheld/xray(src)
+	new /obj/item/assembly/flash/handheld/xray(src)
+
 // BELTS // BELTS // BELTS
 /obj/item/storage/belt/utility/small
 	name = "belt"

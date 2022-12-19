@@ -16,7 +16,7 @@
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	throwforce = 0
-	w_class = WEIGHT_CLASS_TINY
+	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = 300, /datum/material/glass = 300)
 	light_system = MOVABLE_LIGHT //Used as a flash here.
 	light_range = FLASH_LIGHT_RANGE
@@ -33,6 +33,8 @@
 	var/last_used = 0 //last world.time it was used.
 	var/cooldown = 0
 	var/last_trigger = 0 //Last time it was successfully triggered.
+	var/flash_intensity = 2
+	var/blind_length = 1 SECONDS
 
 /obj/item/assembly/flash/suicide_act(mob/living/user)
 	if(burnt_out)
@@ -69,7 +71,7 @@
 
 /obj/item/assembly/flash/proc/clown_check(mob/living/carbon/human/user)
 	if(HAS_TRAIT(user, TRAIT_CLUMSY) && prob(50))
-		flash_carbon(user, user, confusion_duration = 15 SECONDS, targeted = FALSE)
+		flash_carbon(user, user, confusion_duration = 0 SECONDS, targeted = FALSE)
 		return FALSE
 	return TRUE
 
@@ -86,12 +88,12 @@
 	last_used = world.time
 	times_used = max(0, times_used) //sanity
 	if(max(0, prob(times_used * 3) - burnout_resistance)) //The more often it's used in a short span of time the more likely it will burn out
-		burn_out()
+		burn_out() // remove this if you want to remove guaranteed oneshot burnout
 		return FALSE
 	return TRUE
 
 //BYPASS CHECKS ALSO PREVENTS BURNOUT!
-/obj/item/assembly/flash/proc/AOE_flash(bypass_checks = FALSE, range = 3, confusion_duration = 5 SECONDS, targeted = FALSE, mob/user)
+/obj/item/assembly/flash/proc/AOE_flash(bypass_checks = FALSE, range = 3, confusion_duration = 0 SECONDS, targeted = FALSE, mob/user)
 	if(!bypass_checks && !try_use_flash())
 		return FALSE
 	var/list/mob/targets = get_flash_targets(get_turf(src), range, FALSE)
@@ -100,6 +102,7 @@
 		to_chat(user, span_danger("[src] emits a blinding light!"))
 	for(var/mob/living/carbon/nearby_carbon in targets)
 		flash_carbon(nearby_carbon, user, confusion_duration = confusion_duration, targeted = targeted, generic_message = TRUE)
+		burn_out() // remove this if you want to remove guaranteed oneshot burnout
 	return TRUE
 
 /obj/item/assembly/flash/proc/get_flash_targets(atom/target_loc, range = 3, override_vision_checks = FALSE)
@@ -119,6 +122,7 @@
 	playsound(src, 'sound/weapons/flash.ogg', 100, TRUE)
 	set_light_on(TRUE)
 	addtimer(CALLBACK(src, PROC_REF(flash_end)), FLASH_LIGHT_DURATION, TIMER_OVERRIDE|TIMER_UNIQUE)
+	burn_out() // remove this if you want to remove guaranteed oneshot burnout
 	times_used++
 	if(!flash_recharge())
 		return FALSE
@@ -143,7 +147,7 @@
  * * targeted - determines if it was aoe or targeted
  * * generic_message - checks if it should display default message.
  */
-/obj/item/assembly/flash/proc/flash_carbon(mob/living/carbon/flashed, mob/user, confusion_duration = 15 SECONDS, targeted = TRUE, generic_message = FALSE)
+/obj/item/assembly/flash/proc/flash_carbon(mob/living/carbon/flashed, mob/user, confusion_duration = 0 SECONDS, targeted = TRUE, generic_message = FALSE)
 	if(!istype(flashed))
 		return
 	if(user)
@@ -163,7 +167,7 @@
 		return
 
 	if(targeted)
-		if(flashed.flash_act(1, 1))
+		if(flashed.flash_act(intensity = flash_intensity, override_blindness_check = 1, length = blind_length))
 			flashed.set_confusion_if_lower(confusion_duration * CONFUSION_STACK_MAX_MULTIPLIER)
 			// Special check for if we're a revhead. Special cases to attempt conversion.
 			if(converter)
@@ -176,14 +180,14 @@
 				terrible_conversion_proc(flashed, user)
 				visible_message(span_danger("[user] blinds [flashed] with the flash!"), span_userdanger("[user] blinds you with the flash!"))
 			//easy way to make sure that you can only long stun someone who is facing in your direction
-			flashed.adjustStaminaLoss(rand(80, 120) * (1 - (deviation * 0.5)))
-			flashed.Paralyze(rand(25, 50) * (1 - (deviation * 0.5)))
+//			flashed.adjustStaminaLoss(rand(80, 120) * (1 - (deviation * 0.5)))
+//			flashed.Paralyze(rand(25, 50) * (1 - (deviation * 0.5)))
 		else if(user)
 			visible_message(span_warning("[user] fails to blind [flashed] with the flash!"), span_danger("[user] fails to blind you with the flash!"))
 		else
 			to_chat(flashed, span_danger("[src] fails to blind you!"))
 	else
-		if(flashed.flash_act())
+		if(flashed.flash_act(intensity = flash_intensity, length = blind_length))
 			flashed.set_confusion_if_lower(confusion_duration * CONFUSION_STACK_MAX_MULTIPLIER)
 
 /**
@@ -242,7 +246,7 @@
 
 	. = TRUE
 	if(iscarbon(M))
-		flash_carbon(M, user, confusion_duration = 5 SECONDS, targeted = TRUE)
+		flash_carbon(M, user, confusion_duration = 0 SECONDS, targeted = TRUE)
 		return
 	if(issilicon(M))
 		var/mob/living/silicon/robot/flashed_borgo = M
@@ -376,7 +380,7 @@
 /obj/item/assembly/flash/hypnotic/burn_out()
 	return
 
-/obj/item/assembly/flash/hypnotic/flash_carbon(mob/living/carbon/M, mob/user, confusion_duration = 15, targeted = TRUE, generic_message = FALSE)
+/obj/item/assembly/flash/hypnotic/flash_carbon(mob/living/carbon/M, mob/user, confusion_duration = 5, targeted = TRUE, generic_message = FALSE)
 	if(!istype(M))
 		return
 	if(user)
@@ -386,7 +390,7 @@
 	if(generic_message && M != user)
 		to_chat(M, span_notice("[src] emits a soothing light..."))
 	if(targeted)
-		if(M.flash_act(1, 1))
+		if(M.flash_act(intensity = flash_intensity, length = blind_length))
 			var/hypnosis = FALSE
 			if(M.hypnosis_vulnerable())
 				hypnosis = TRUE
@@ -395,10 +399,10 @@
 
 			if(!hypnosis)
 				to_chat(M, span_hypnophrase("The light makes you feel oddly relaxed..."))
-				M.adjust_confusion_up_to(10 SECONDS, 20 SECONDS)
-				M.adjust_dizzy_up_to(20 SECONDS, 40 SECONDS)
-				M.adjust_drowsyness(min(M.drowsyness+10, 20))
-				M.apply_status_effect(/datum/status_effect/pacify, 100)
+//				M.adjust_confusion_up_to(10 SECONDS, 20 SECONDS)
+//				M.adjust_dizzy_up_to(20 SECONDS, 40 SECONDS)
+//				M.adjust_drowsyness(min(M.drowsyness+10, 20))
+				M.apply_status_effect(/datum/status_effect/pacify, 5)
 			else
 				M.apply_status_effect(/datum/status_effect/trance, 200, TRUE)
 
@@ -407,14 +411,30 @@
 		else
 			to_chat(M, span_danger("[src] fails to blind you!"))
 
-	else if(M.flash_act())
+	else if(M.flash_act(intensity = flash_intensity, length = blind_length))
 		to_chat(M, span_notice("Such a pretty light..."))
-		M.adjust_confusion_up_to(4 SECONDS, 20 SECONDS)
-		M.adjust_dizzy_up_to(8 SECONDS, 40 SECONDS)
-		M.adjust_drowsyness(min(M.drowsyness+4, 20))
-		M.apply_status_effect(/datum/status_effect/pacify, 40)
+//		M.adjust_confusion_up_to(4 SECONDS, 20 SECONDS)
+//		M.adjust_dizzy_up_to(8 SECONDS, 40 SECONDS)
+//		M.adjust_drowsyness(min(M.drowsyness+4, 20))
+		M.apply_status_effect(/datum/status_effect/pacify, 5)
 
 #undef CONFUSION_STACK_MAX_MULTIPLIER
 #undef DEVIATION_NONE
 #undef DEVIATION_PARTIAL
 #undef DEVIATION_FULL
+
+// scoundrel content
+/obj/item/assembly/flash/handheld/xray
+	name = "x-ray flash"
+	desc = "A device capable of emitting a concentrated radiation wave that goes through most forms of eye protection and disrupts photoreceptors."
+	flash_intensity = 3
+	blind_length = 3 SECONDS
+	light_color = "#5DFF00"
+	w_class = WEIGHT_CLASS_TINY // so it can fit in the uplink pouch
+
+/obj/item/assembly/flash/handheld/xray/reusable
+	desc = "A device capable of emitting a concentrated radiation wave that goes through most forms of eye protection and disrupts photoreceptors. This one looks like it could be reused."
+	cooldown = 120
+
+/obj/item/assembly/flash/handheld/xray/reusable/burn_out()
+	return

@@ -202,3 +202,39 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/lime, 0)
 	bulb_emergency_colour = "#FF3232"
 	bulb_low_power_colour = "#FF3232"
 	nightshift_light_color = "#FF3232"
+
+
+/obj/machinery/light/nightshift // permanent nightshift light
+	nightshift_allowed = FALSE
+/obj/machinery/light/nightshift/Initialize(mapload)
+	. = ..()
+
+	bulb_colour = nightshift_light_color
+	bulb_power = (bulb_power * nightshift_light_power)
+	brightness = nightshift_brightness
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/nightshift, 0)
+
+/obj/machinery/light/small/nightshift // permanent nightshift light
+	nightshift_allowed = FALSE
+/obj/machinery/light/small/nightshift/Initialize(mapload)
+	. = ..()
+
+	bulb_colour = nightshift_light_color
+	bulb_power = (bulb_power * nightshift_light_power)
+	brightness = nightshift_brightness
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/small/nightshift, 0)
+
+/obj/machinery/light/emergency // permanent emergency light
+	nightshift_allowed = FALSE
+/obj/machinery/light/emergency/Initialize(mapload)
+	. = ..()
+
+	bulb_colour = bulb_low_power_colour
+	bulb_power = bulb_power * bulb_low_power_pow_mul
+	brightness = brightness * bulb_low_power_brightness_mul
+	bulb_low_power_brightness_mul = 1
+	bulb_low_power_pow_mul = 1
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/emergency, 0)

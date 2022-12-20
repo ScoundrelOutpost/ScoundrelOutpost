@@ -21,7 +21,7 @@
 	///Amount of power used
 	var/static_power_used = 0
 	///Luminosity when on, also used in power calculation
-	var/brightness = 6
+	var/brightness = 7
 	///Basically the alpha of the emitted light source
 	var/bulb_power = 1
 	///Default colour of the light.
@@ -38,7 +38,7 @@
 	var/switchcount = 0
 	///Cell reference
 	var/obj/item/stock_parts/cell/cell
-	///If true, this fixture generates a very weak cell at roundstart
+	///If true, this fixture generates a very weak cell at roundstartx
 	var/start_with_cell = TRUE
 	///Currently in night shift mode?
 	var/nightshift_enabled = FALSE
@@ -57,17 +57,17 @@
 	///If true, overrides lights to use emergency lighting
 	var/major_emergency = FALSE
 	///Multiplier for this light's base brightness during a cascade
-	var/bulb_major_emergency_brightness_mul = 0.75
+	var/bulb_major_emergency_brightness_mul = 0.45
 	///Colour of the light when major emergency mode is on
-	var/bulb_emergency_colour = "#ff4e4e"
+	var/bulb_emergency_colour = "#B6FF00"
 	///Multiplier for this light's base brightness in low power power mode
 	var/bulb_low_power_brightness_mul = 0.6
 	///Determines the colour of the light while it's in low power mode
 	var/bulb_low_power_colour = "#FF3232"
 	///The multiplier for determining the light's power in low power mode
-	var/bulb_low_power_pow_mul = 0.75
+	var/bulb_low_power_pow_mul = 0.45
 	///The minimum value for the light's power in low power mode
-	var/bulb_low_power_pow_min = 0.5
+	var/bulb_low_power_pow_min = 0.45
 	///Power usage - W per unit of luminosity
 	var/power_consumption_rate = 12
 
@@ -179,6 +179,7 @@
 		var/area/local_area =get_room_area(src)
 		if (local_area?.fire)
 			color_set = bulb_low_power_colour
+			power_set = bulb_low_power_pow_mul * bulb_power
 		else if (nightshift_enabled)
 			brightness_set = nightshift_brightness
 			power_set = nightshift_light_power

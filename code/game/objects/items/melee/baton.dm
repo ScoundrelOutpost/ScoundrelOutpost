@@ -743,11 +743,18 @@
 	hitsound = SFX_SWING_HIT
 	///Determines our active effects
 	var/active_force = 20 //5 hit stamina crit
-	var/active_damage_type = STAMINA
-	var/on_stun_sound = 'sound/scoundrel/tonfahit.ogg'
-	var/tonfa_active = FALSE
 	var/active_throwforce = 20
+	var/active_damage_type = STAMINA
+	var/active_sharpness = null
+	var/active_hit_sound = 'sound/scoundrel/tonfahit.ogg'
+	var/weapon_active = FALSE
 	var/active_w_class = WEIGHT_CLASS_NORMAL
+	var/active_verb_continuous = list("attacks", "whacks", "jabs", "zaps", "strikes", "shocks"),
+	var/active_verb_simple = list("attack", "whack", "jab", "zap", "strike", "shock")
+	var/activate_sound = SFX_SPARKS
+	var/activate_sound_volume = 75
+	//the popup message when activating/deactivating
+	var/activate_balloon = TRUE
 
 /obj/item/melee/tonfa/Initialize(mapload)
 	. = ..()
@@ -758,17 +765,18 @@
 		force_on = active_force, \
 		damage_type_on = active_damage_type, \
 		throwforce_on = active_throwforce, \
-		hitsound_on = on_stun_sound, \
+		sharpness_on = active_sharpness, \
+		hitsound_on = active_hit_sound, \
 		w_class_on = active_w_class, \
-		attack_verb_continuous_on = list("attacks", "whacks", "jabs", "zaps", "strikes", "shocks"), \
-		attack_verb_simple_on = list("attack", "whack", "jab", "zap", "strike", "shock"))
+		attack_verb_continuous_on = active_verb_continuous, \
+		attack_verb_simple_on = active_verb_simple)
 	RegisterSignal(src, COMSIG_TRANSFORMING_ON_TRANSFORM, PROC_REF(on_transform))
 
 /obj/item/melee/tonfa/proc/on_transform(obj/item/source, mob/user, active)
 	SIGNAL_HANDLER
 
-	tonfa_active = active
-	if(user)
+	weapon_active = active
+	if(user && activate_balloon == TRUE)
 		balloon_alert(user, "[name] [active ? "enabled":"disabled"]")
-	playsound(user ? user : src, SFX_SPARKS, 35, TRUE)
+	playsound(user ? user : src, activate_sound, activate_sound_volume, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE

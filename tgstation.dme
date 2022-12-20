@@ -4571,6 +4571,7 @@
 #include "code\modules\surgery\organs\_organ.dm"
 #include "code\modules\surgery\organs\appendix.dm"
 #include "code\modules\surgery\organs\augments_arms.dm"
+#include "scoundrel\code\modules\surgery\organs\scoundrel_augments.dm"
 #include "code\modules\surgery\organs\augments_chest.dm"
 #include "code\modules\surgery\organs\augments_eyes.dm"
 #include "code\modules\surgery\organs\augments_internal.dm"

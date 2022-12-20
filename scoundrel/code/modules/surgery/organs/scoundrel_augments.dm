@@ -41,8 +41,8 @@
 	active_sharpness = SHARP_EDGED
 	active_hit_sound = 'sound/scoundrel/weapons/energy_sword_swing3.ogg'
 	active_throwforce = 25
-	active_verb_continuous = list("tests")
-	active_verb_simple = list("test")
+	active_verb_continuous = list("slashes","phases","stabs","ripostes")
+	active_verb_simple = list("slash","phase","stab","riposte")
 	activate_sound = 'sound/scoundrel/weapons/energy_switch.ogg'
 	activate_sound_volume = 100
 	activate_balloon = FALSE

@@ -38,7 +38,7 @@
 	var/switchcount = 0
 	///Cell reference
 	var/obj/item/stock_parts/cell/cell
-	///If true, this fixture generates a very weak cell at roundstartx
+	///If true, this fixture generates a very weak cell at roundstart
 	var/start_with_cell = TRUE
 	///Currently in night shift mode?
 	var/nightshift_enabled = FALSE

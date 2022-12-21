@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "switched around many announcement sounds"
+  - soundadd: "three new alarm sounds"
+  - config: "alert level flavortext changes"

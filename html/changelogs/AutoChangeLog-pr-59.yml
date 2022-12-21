@@ -1,0 +1,7 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "xray flash"
+  - balance: "rebalanced flashes as a whole"
+  - imageadd: "new hudglasses sprites"
+  - code_imp: "flashes have new customizable vars"

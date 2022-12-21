@@ -1,12 +1,12 @@
 /datum/centcom_announcer/default
-	welcome_sounds = list('sound/ai/default/welcome.ogg')
-	alert_sounds = list('sound/ai/default/attention.ogg')
+	welcome_sounds = list('sound/ambience/cavesound3.ogg')
+	alert_sounds = list('sound/misc/announce_dig.ogg')
 	command_report_sounds = list('sound/ai/default/commandreport.ogg')
 	event_sounds = list(ANNOUNCER_AIMALF = 'sound/ai/default/aimalf.ogg',
 		ANNOUNCER_ALIENS = 'sound/ai/default/aliens.ogg',
 		ANNOUNCER_ANIMES = 'sound/ai/default/animes.ogg',
 		ANNOUNCER_GRANOMALIES = 'sound/ai/default/granomalies.ogg',
-		ANNOUNCER_INTERCEPT = 'sound/ai/default/intercept.ogg',
+		ANNOUNCER_INTERCEPT = 'sound/machines/FireAlarm3.ogg',
 		ANNOUNCER_IONSTORM = 'sound/ai/default/ionstorm.ogg',
 		ANNOUNCER_METEORS = 'sound/ai/default/meteors.ogg',
 		ANNOUNCER_OUTBREAK5 = 'sound/ai/default/outbreak5.ogg',

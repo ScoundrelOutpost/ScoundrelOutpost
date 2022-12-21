@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "dualmodesword and captain's variant to the job outfit"
+  - soundadd: "dualmodesword sounds"
+  - imageadd: "dualmodesword sprites"

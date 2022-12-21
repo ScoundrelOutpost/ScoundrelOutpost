@@ -298,7 +298,7 @@
 
 /obj/item/clothing/glasses/sunglasses
 	name = "sunglasses"
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks flashes."
+	desc = "Some slick shades."
 	icon_state = "sun"
 	inhand_icon_state = "sunglasses"
 	darkness_view = 1
@@ -430,7 +430,7 @@
 	. += M
 
 /obj/item/clothing/glasses/sunglasses/big
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks flashes."
+	desc = "Some thick shades."
 	icon_state = "bigsunglasses"
 	inhand_icon_state = null
 

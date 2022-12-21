@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "defender dual wield spread reduced to default value"
+  - imageadd: "new defender sprite"

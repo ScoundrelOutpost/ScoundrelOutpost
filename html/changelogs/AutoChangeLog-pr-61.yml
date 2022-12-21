@@ -1,0 +1,7 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "map changes"
+  - rscadd: "new light fixture types"
+  - bugfix: "light fixtures now use the appropriate light power (alpha) during fire emergencies"
+  - imageadd: "new grille and basic window sprites"

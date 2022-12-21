@@ -297,7 +297,7 @@
 		/obj/item/clothing/mask/bandana/striped/black = 1,
 		/obj/item/gun/energy/e_gun/defender,
 		)
-	belt = /obj/item/storage/belt/sabre
+	belt = /obj/item/storage/belt/utility/small
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/hud/diagnostic/sunglasses
 	gloves = /obj/item/clothing/gloves/combat
@@ -315,6 +315,11 @@
 		)
 	implants = list(/obj/item/implant/mindshield)
 	skillchips = list(/obj/item/skillchip/disk_verifier)
+
+/datum/outfit/job/captain_scoundrel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	.=..()
+	var/obj/item/organ/new_organ = new /obj/item/organ/internal/cyberimp/arm/dualmodesword/captain(src)
+	new_organ.Insert(H)
 
 // End job
 // Start job

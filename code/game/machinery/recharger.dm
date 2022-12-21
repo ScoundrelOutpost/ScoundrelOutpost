@@ -17,6 +17,7 @@
 		/obj/item/melee/baton/security,
 		/obj/item/ammo_box/magazine/recharge,
 		/obj/item/modular_computer,
+		/obj/item/beltshield,
 	))
 
 /obj/machinery/recharger/RefreshParts()

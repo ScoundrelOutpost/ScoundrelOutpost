@@ -32,7 +32,7 @@
 	/// What type of damage our shield is strong against. If null, there are no strengths.
 	var/shield_resistance
 	/// The multiplier for how many charges are lost from incoming damage if that damage matches our shield resistant type.
-	var/shield_resistance_divider = 1
+	var/shield_resistance_multiplier = 1
 	/// Shield uses no overlay while active
 	var/no_overlay = FALSE
 	/// The item we use for recharging
@@ -44,7 +44,7 @@
 	/// A callback for the sparks/message that play when a charge is used, see [/datum/component/shielded/proc/default_run_hit_callback]
 	var/datum/callback/on_hit_effects
 
-/datum/component/shielded/Initialize(max_charges = 3, recharge_start_delay = 20 SECONDS, charge_increment_delay = 1 SECONDS, charge_recovery = 1, lose_multiple_charges = FALSE, cannot_block_types, shield_weakness, shield_weakness_multiplier = 1, shield_resistance, shield_resistance_divider = 1, no_overlay = FALSE, recharge_path = null, starting_charges = null, shield_icon_file = 'icons/effects/effects.dmi', shield_icon = "shield-old", shield_inhand = FALSE, run_hit_callback)
+/datum/component/shielded/Initialize(max_charges = 3, recharge_start_delay = 20 SECONDS, charge_increment_delay = 1 SECONDS, charge_recovery = 1, lose_multiple_charges = FALSE, cannot_block_types, shield_weakness, shield_weakness_multiplier = 1, shield_resistance, shield_resistance_multiplier = 1, no_overlay = FALSE, recharge_path = null, starting_charges = null, shield_icon_file = 'icons/effects/effects.dmi', shield_icon = "shield-old", shield_inhand = FALSE, run_hit_callback)
 	if(!isitem(parent) || max_charges <= 0)
 		return COMPONENT_INCOMPATIBLE
 
@@ -57,7 +57,7 @@
 	src.shield_weakness = shield_weakness
 	src.shield_weakness_multiplier = shield_weakness_multiplier
 	src.shield_resistance = shield_resistance
-	src.shield_resistance_divider = shield_resistance_divider
+	src.shield_resistance_multiplier = shield_resistance_multiplier
 	src.no_overlay = no_overlay
 	src.recharge_path = recharge_path
 	src.shield_icon_file = shield_icon_file
@@ -175,7 +175,7 @@
 		if(shield_weakness && attack_type == shield_weakness)
 			incoming_damage = clamp((damage*shield_weakness_multiplier), damage, INFINITY)
 		if(shield_resistance && attack_type == shield_resistance)
-			incoming_damage = clamp((damage/shield_resistance_divider), 1, damage)
+			incoming_damage = clamp((damage*shield_resistance_multiplier), 1, damage)
 		charge_loss = incoming_damage
 
 

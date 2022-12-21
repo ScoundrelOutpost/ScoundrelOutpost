@@ -749,7 +749,7 @@
 	var/active_hit_sound = 'sound/scoundrel/tonfahit.ogg'
 	var/weapon_active = FALSE
 	var/active_w_class = WEIGHT_CLASS_NORMAL
-	var/active_verb_continuous = list("attacks", "whacks", "jabs", "zaps", "strikes", "shocks"),
+	var/active_verb_continuous = list("attacks", "whacks", "jabs", "zaps", "strikes", "shocks",)
 	var/active_verb_simple = list("attack", "whack", "jab", "zap", "strike", "shock")
 	var/activate_sound = SFX_SPARKS
 	var/activate_sound_volume = 75

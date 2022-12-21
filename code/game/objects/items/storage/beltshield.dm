@@ -22,7 +22,7 @@
 //	var/overload_sound_volume = 100
 
 //	var/damaged_sound = 'sound/scoundrel/weapons/dryfire.ogg' // sound when the shield is damaged
-//	var/damaged_sound_volume = 100 
+//	var/damaged_sound_volume = 100
 
 //	var/charging_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg' // sound played when the shield regains charge
 //	var/charging_sound_volume = 50
@@ -57,6 +57,9 @@
 		cell = new cell_type(src)
 	else
 		cell = new(src)
+
+/obj/item/beltshield/get_cell()
+	return cell
 
 // can probably be discarded
 /*/obj/item/beltshield/attack_self(mob/living/carbon/user)

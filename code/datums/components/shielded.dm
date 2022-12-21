@@ -172,10 +172,12 @@
 
 	if(lose_multiple_charges) // if the shield has health like damage we'll lose charges equal to the damage of the hit
 		var/incoming_damage = damage
-		if(shield_weakness && attack_type in shield_weakness)
-			incoming_damage = clamp((damage*shield_weakness_multiplier), damage, INFINITY)
-		if(shield_resistance && attack_type in shield_resistance)
-			incoming_damage = clamp((damage*shield_resistance_multiplier), 1, damage)
+		if(shield_weakness)
+			if(attack_type in shield_weakness)
+				incoming_damage = clamp((damage*shield_weakness_multiplier), damage, INFINITY)
+		if(shield_resistance)
+			if(attack_type in shield_resistance)
+				incoming_damage = clamp((damage*shield_resistance_multiplier), 1, damage)
 		charge_loss = incoming_damage
 
 

@@ -26,11 +26,11 @@
 	/// Attack types that cannot be blocked.
 	var/static/list/cannot_block_types = list()
 	/// What type of damage our shield is weakagainst. If null, there are no weaknesses.
-	var/shield_weakness
+	var/static/list/shield_weakness
 	/// The multiplier for how many charges are lost from incoming damage if that damage matches our shield weakness type
 	var/shield_weakness_multiplier = 1
 	/// What type of damage our shield is strong against. If null, there are no strengths.
-	var/shield_resistance
+	var/static/list/shield_resistance
 	/// The multiplier for how many charges are lost from incoming damage if that damage matches our shield resistant type.
 	var/shield_resistance_multiplier = 1
 	/// Shield uses no overlay while active
@@ -172,9 +172,9 @@
 
 	if(lose_multiple_charges) // if the shield has health like damage we'll lose charges equal to the damage of the hit
 		var/incoming_damage = damage
-		if(shield_weakness && attack_type == shield_weakness)
+		if(shield_weakness && attack_type in shield_weakness)
 			incoming_damage = clamp((damage*shield_weakness_multiplier), damage, INFINITY)
-		if(shield_resistance && attack_type == shield_resistance)
+		if(shield_resistance && attack_type in shield_resistance)
 			incoming_damage = clamp((damage*shield_resistance_multiplier), 1, damage)
 		charge_loss = incoming_damage
 

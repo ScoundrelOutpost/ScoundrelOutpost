@@ -18,9 +18,9 @@
 	var/shield_recharge_delay = 5 SECONDS
 	var/shield_recovery_amount = 5
 	var/shield_recharge_increment_delay = 1 SECONDS
-	var/shielded_vulnerability = MELEE_ATTACK
+	var/static/list/shielded_vulnerability = list(MELEE_ATTACK)
 	var/vulnerability_multiplier = 1.5
-	var/shielded_resistance = PROJECTILE_ATTACK
+	var/static/list/shielded_resistance = list(PROJECTILE_ATTACK)
 	var/resistance_multiplier = 0.3
 	var/static/list/unblockable_attack_types = list(UNARMED_ATTACK)
 	var/shield_tracked_health
@@ -87,9 +87,9 @@
 
 /obj/item/beltshield/proc/drain_cell_power(mob/living/carbon/human/owner, damage = 0, attack_type = MELEE_ATTACK)
 	var/cell_reduction_amount = damage*100
-	if(attack_type == shielded_vulnerability)
+	if(attack_type in shielded_vulnerability)
 		cell_reduction_amount = damage*vulnerability_multiplier
-	if(attack_type == shielded_resistance)
+	if(attack_type in shielded_resistance)
 		cell_reduction_amount = damage*resistance_multiplier
 	if(!cell)
 		return

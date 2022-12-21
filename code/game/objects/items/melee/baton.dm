@@ -738,8 +738,9 @@
 	slot_flags = ITEM_SLOT_BELT
 	force = 12 //8ish hit crit
 	throwforce = 12
-	w_class = WEIGHT_CLASS_NORMAL
+	wound_bonus = 5
 	armour_penetration = 20
+	w_class = WEIGHT_CLASS_NORMAL
 	hitsound = SFX_SWING_HIT
 	///Determines our active effects
 	var/active_force = 20 //5 hit stamina crit

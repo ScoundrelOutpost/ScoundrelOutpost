@@ -323,10 +323,10 @@
 	switch(hud?.mymob?.m_intent)
 		if(MOVE_INTENT_WALK)
 			icon_state = "walking"
-			SEND_SOUND(usr, sound('sound/scoundrel/buttons/walk_intent_inactive.ogg', volume = 80))
+			SEND_SOUND(usr, sound('sound/scoundrel/buttons/walk_intent_inactive.ogg', volume = 70))
 		if(MOVE_INTENT_RUN)
 			icon_state = "running"
-			SEND_SOUND(usr, sound('sound/scoundrel/buttons/walk_intent_active.ogg', volume = 80))
+			SEND_SOUND(usr, sound('sound/scoundrel/buttons/walk_intent_active.ogg', volume = 70))
 	return ..()
 
 /atom/movable/screen/mov_intent/proc/toggle(mob/user)

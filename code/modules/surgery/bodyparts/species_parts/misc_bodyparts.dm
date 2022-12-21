@@ -322,17 +322,17 @@
 	limb_id = SPECIES_GOLEM
 	dmg_overlay_type = null
 	bodypart_traits = list(TRAIT_CHUNKYFINGERS)
-	unarmed_damage_low = 5 // I'd like to take the moment that maintaining all of these random ass golem speciese is hell and oranges was right
-	unarmed_damage_high = 14
-	unarmed_stun_threshold = 11
+	unarmed_damage_low = 1 // I'd like to take the moment that maintaining all of these random ass golem speciese is hell and oranges was right
+	unarmed_damage_high = 10
+	unarmed_stun_threshold = 10
 
 /obj/item/bodypart/arm/right/golem
 	limb_id = SPECIES_GOLEM
 	dmg_overlay_type = null
 	bodypart_traits = list(TRAIT_CHUNKYFINGERS)
-	unarmed_damage_low = 5
-	unarmed_damage_high = 14
-	unarmed_stun_threshold = 11
+	unarmed_damage_low = 1
+	unarmed_damage_high = 10
+	unarmed_stun_threshold = 10
 
 /obj/item/bodypart/leg/left/golem
 	limb_id = SPECIES_GOLEM
@@ -389,16 +389,16 @@
 /obj/item/bodypart/arm/left/golem/cloth
 	limb_id = SPECIES_GOLEM_CLOTH
 	should_draw_greyscale = FALSE
-	unarmed_damage_low = 4
-	unarmed_stun_threshold = 7
-	unarmed_damage_high = 8
+	unarmed_damage_low = 1
+	unarmed_stun_threshold = 6
+	unarmed_damage_high = 5
 
 /obj/item/bodypart/arm/right/golem/cloth
 	limb_id = SPECIES_GOLEM_CLOTH
 	should_draw_greyscale = FALSE
-	unarmed_damage_low = 4
-	unarmed_stun_threshold = 7
-	unarmed_damage_high = 8
+	unarmed_damage_low = 1
+	unarmed_stun_threshold = 6
+	unarmed_damage_high = 5
 
 /obj/item/bodypart/leg/left/golem/cloth
 	limb_id = SPECIES_GOLEM_CLOTH
@@ -579,32 +579,32 @@
 	unarmed_attack_verb = "smash"
 	unarmed_attack_effect = ATTACK_EFFECT_SMASH
 	unarmed_attack_sound = 'sound/effects/meteorimpact.ogg' //hits pretty hard
-	unarmed_damage_low = 12
-	unarmed_damage_high = 21
-	unarmed_stun_threshold = 18
+	unarmed_damage_low = 2
+	unarmed_damage_high = 14
+	unarmed_stun_threshold = 10
 
 /obj/item/bodypart/arm/right/golem/plasteel
 	unarmed_attack_verb = "smash"
 	unarmed_attack_effect = ATTACK_EFFECT_SMASH
 	unarmed_attack_sound = 'sound/effects/meteorimpact.ogg'
-	unarmed_damage_low = 12
-	unarmed_damage_high = 21
-	unarmed_stun_threshold = 18
+	unarmed_damage_low = 2
+	unarmed_damage_high = 14
+	unarmed_stun_threshold = 10
 
 
 /obj/item/bodypart/leg/left/golem/plasteel
 	unarmed_attack_effect = ATTACK_EFFECT_SMASH
 	unarmed_attack_sound = 'sound/effects/meteorimpact.ogg'
-	unarmed_damage_low = 18
-	unarmed_damage_high = 32
-	unarmed_stun_threshold = 18
+	unarmed_damage_low = 12
+	unarmed_damage_high = 20
+	unarmed_stun_threshold = 15
 
 /obj/item/bodypart/leg/right/golem/plasteel
 	unarmed_attack_effect = ATTACK_EFFECT_SMASH
 	unarmed_attack_sound = 'sound/effects/meteorimpact.ogg'
-	unarmed_damage_low = 18
-	unarmed_damage_high = 32
-	unarmed_stun_threshold = 18
+	unarmed_damage_low = 12
+	unarmed_damage_high = 20
+	unarmed_stun_threshold = 15
 
 /obj/item/bodypart/arm/left/golem/bananium
 	unarmed_attack_verb = "honk"

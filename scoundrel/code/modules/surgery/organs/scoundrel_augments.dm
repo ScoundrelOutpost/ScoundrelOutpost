@@ -1,6 +1,6 @@
 /obj/item/organ/internal/cyberimp/arm/dualmodesword
-	name = "Dual-Mode Energy Blade"
-	desc = "A surgically attached, extending energy blade."
+	name = "\improper Elite Energy Blade Augment"
+	desc = "A surgically attached, extending energy blade. Requires a neural link to function."
 	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
 	icon_state = "dualmodesword_dead"
 	extend_sound = 'sound/scoundrel/weapons/energy_unsheathe.ogg'
@@ -13,10 +13,10 @@
 
 /obj/item/melee/tonfa/dualmodesword
 	name = "\improper Elite Energy Blade"
-	desc = "An advanced energy blade outfitted with two modes; stun and kill."
+	desc = "An advanced energy blade outfitted with two modes; disable and kill."
 	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
 	icon_state = "dualmodesword"
-	hitsound = 'sound/scoundrel/weapons/energy_sword_swing1.ogg'
+	hitsound = 'sound/scoundrel/weapons/energy_sword_swing4.ogg'
 	inhand_icon_state = "dualmodesword"
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
@@ -28,18 +28,20 @@
 	w_class = WEIGHT_CLASS_BULKY
 
 	damtype = STAMINA
-	force = 22
+	force = 18
 	throwforce = 25
 	w_class = WEIGHT_CLASS_BULKY
 	armour_penetration = 20
+	wound_bonus = 10
+	bare_wound_bonus = 10
 
 	///Determines our active effects
 	active_w_class = WEIGHT_CLASS_BULKY
 
-	active_force = 18
+	active_force = 15
 	active_damage_type = BRUTE
 	active_sharpness = SHARP_EDGED
-	active_hit_sound = 'sound/scoundrel/weapons/energy_sword_swing3.ogg'
+	active_hit_sound = 'sound/scoundrel/weapons/energy_sword_swing5.ogg'
 	active_throwforce = 25
 	active_verb_continuous = list("slashes","phases","stabs","ripostes")
 	active_verb_simple = list("slash","phase","stab","riposte")
@@ -54,7 +56,7 @@
 
 /obj/item/organ/internal/cyberimp/arm/dualmodesword/captain
 	name = "Akhune"
-	desc = "An exotic, extendible cybernetic energy blade subdermally attached to the arm. \
+	desc = "An exotic, extendible cybernetic energy blade subdermally attached to the arm. Requires a neural link to function. \
 	A collector would kill for this."
 
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF //steal objective items are hard to destroy.

@@ -1,8 +1,8 @@
 /obj/item/beltshield
 	name = "shield belt"
-	desc = "This is a basic level shield belt. Blocks forceful attacks, but permits hands through, and not especially durable."
-	icon = 'icons/obj/clothing/belts.dmi'
-	icon_state = "utility"
+	desc = "This is a basic level shield belt. Blocks forceful attacks, but permits hands through, and not especially durable. You probably shouldn't have this!"
+	icon = 'scoundrel/icons/obj/personal_shields.dmi'
+	icon_state = "personalshield"
 	inhand_icon_state = "utility"
 	worn_icon_state = "utility"
 	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
@@ -11,21 +11,44 @@
 	attack_verb_continuous = list("whips", "lashes", "disciplines")
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
-	equip_sound = 'sound/items/equip/toolbelt_equip.ogg'
+	equip_sound = 'sound/items/handling/component_pickup.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	actions_types = list(/datum/action/item_action/toggle_beltshield)
-	var/shield_health = 20
-	var/shield_recharge_delay = 5 SECONDS
-	var/shield_recovery_amount = 5
+
+	var/drained_sound = 'sound/scoundrel/rattle2.ogg' // sound played when the battery runs dry
+	var/drained_sound_volume = 100 // volume control is important
+
+//	var/overload_sound = 'sound/scoundrel/rattle2.ogg' // sound played when the shield is broken
+//	var/overload_sound_volume = 100
+
+//	var/damaged_sound = 'sound/scoundrel/weapons/dryfire.ogg' // sound when the shield is damaged
+//	var/damaged_sound_volume = 100 
+
+//	var/charging_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg' // sound played when the shield regains charge
+//	var/charging_sound_volume = 50
+
+	var/activate_sound = 'sound/scoundrel/buttons/walk_intent_active.ogg'
+	var/deactivate_sound = 'sound/scoundrel/buttons/walk_intent_inactive.ogg' // placeholders
+
+// var/warmup_time = 6 SECONDS // time required for the shield to start after being activated
+	// after warmup, run a check to see if it's in the appropriate slot. if not, abort activation
+
+	var/shield_health = 100
+	var/shield_recharge_delay = 60 SECONDS
+	var/shield_recovery_amount = 2
 	var/shield_recharge_increment_delay = 1 SECONDS
-	var/static/list/shielded_vulnerability = list(MELEE_ATTACK)
+	var/list/shielded_vulnerability = list(MELEE_ATTACK)
 	var/vulnerability_multiplier = 1.5
-	var/static/list/shielded_resistance = list(PROJECTILE_ATTACK)
-	var/resistance_multiplier = 0.3
-	var/static/list/unblockable_attack_types = list(UNARMED_ATTACK)
+	var/list/shielded_resistance = list(PROJECTILE_ATTACK)
+	var/resistance_multiplier = 0.5
+	var/list/unblockable_attack_types = list(UNARMED_ATTACK)
 	var/shield_tracked_health
 	var/on = FALSE
 	var/obj/item/stock_parts/cell/cell
+
+	// cell charge lost for every point of damage to the shield
+	// do cell.charge/shield_health to find the cell_power_lost required for the cell to last a single overload
+	var/cell_power_loss = 10
 	var/cell_type
 
 /obj/item/beltshield/Initialize(mapload)
@@ -34,6 +57,11 @@
 		cell = new cell_type(src)
 	else
 		cell = new(src)
+
+// can probably be discarded
+/*/obj/item/beltshield/attack_self(mob/living/carbon/user)
+	if(user)
+		toggle_shields(user)*/
 
 /obj/item/beltshield/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/toggle_beltshield))
@@ -51,16 +79,23 @@
 		remove_shield_component(user)
 
 /obj/item/beltshield/proc/add_shield_component(mob/user)
-	if(cell?.charge >= 0)
-		AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, charge_increment_delay = shield_recharge_increment_delay, \
-		charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
-		shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = TRUE)
-		to_chat(user, span_notice("You turn the [name] on."))
-		on = TRUE
-		update_action_buttons()
-	else
-		to_chat(user, span_notice("Not enough power to turn the [name] on."))
-		return
+	if(!on && ishuman(user))
+		var/mob/living/carbon/human/wearer = user
+		if(wearer.belt == src)
+
+			if(cell?.charge >= 0)
+				AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, charge_increment_delay = shield_recharge_increment_delay, \
+				charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
+				shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = TRUE)
+				to_chat(user, span_notice("You turn the [name] on."))
+				on = TRUE
+				icon_state = "[initial(icon_state)]_on"
+				SEND_SOUND(user, sound(activate_sound, volume = 80))
+				update_action_buttons()
+			else
+				to_chat(user, span_notice("Not enough power to turn the [name] on."))
+				SEND_SOUND(user, sound(drained_sound, drained_sound_volume))
+				return
 
 /obj/item/beltshield/proc/remove_shield_component(mob/user)
 	if(on)
@@ -69,14 +104,19 @@
 		on = FALSE
 		qdel(shield)
 		to_chat(user, span_notice("You turn the [name] off."))
+		icon_state = "[initial(icon_state)]"
+		SEND_SOUND(usr, sound(deactivate_sound, volume = 80))
 		update_action_buttons()
 
 /obj/item/beltshield/equipped(mob/user, slot, initial)
 	. = ..()
-	RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
+	if(slot & slot_flags)
+		add_shield_component(user)
+		RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
 
 /obj/item/beltshield/dropped(mob/user, silent)
 	. = ..()
+	remove_shield_component()
 	UnregisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS)
 
 /obj/item/beltshield/proc/shield_reaction(mob/living/carbon/human/owner, atom/movable/hitby, damage = 0, attack_text = "the attack", attack_type = MELEE_ATTACK, armour_penetration = 0)
@@ -85,18 +125,18 @@
 		return SHIELD_BLOCK
 	return NONE
 
-/obj/item/beltshield/proc/drain_cell_power(mob/living/carbon/human/owner, damage = 0, attack_type = MELEE_ATTACK)
-	var/cell_reduction_amount = damage*100
+/obj/item/beltshield/proc/drain_cell_power(mob/living/carbon/human/owner, damage = 0, attack_type)
+	var/cell_reduction_amount = damage*cell_power_loss
 	if(attack_type in shielded_vulnerability)
-		cell_reduction_amount = damage*vulnerability_multiplier
+		cell_reduction_amount = damage*vulnerability_multiplier*cell_power_loss
 	if(attack_type in shielded_resistance)
-		cell_reduction_amount = damage*resistance_multiplier
+		cell_reduction_amount = damage*resistance_multiplier*cell_power_loss
 	if(!cell)
 		return
 	. = cell.use(cell_reduction_amount)
 	if(on && cell.charge <= 0)
 		remove_shield_component(owner)
-		playsound(src, SFX_SPARKS, 75, TRUE, -1)
+		playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
 
 /obj/item/beltshield/emp_act(severity)
 	. = ..()
@@ -106,7 +146,32 @@
 		drain_cell_power(1000 / severity)
 
 /datum/action/item_action/toggle_beltshield
-	name = "Toggle Shield Belt"
-	desc = "Turns it on."
-	icon_icon = 'icons/mob/actions/actions_mecha.dmi'
-	button_icon_state = "mech_overload_off"
+	name = "Toggle Shield-Emitter"
+	desc = null
+	icon_icon = 'scoundrel/icons/obj/personal_shields.dmi'
+	button_icon_state = "personalshield"
+
+/obj/item/beltshield/standard
+	name = "personal shield-emitter"
+	desc = "A civilian-grade dynamic-field projector that encloses the entire body. High-kinetic projectiles and \
+	energetic bursts are halted as long as the field integrity remains stable. It has a basic cell that will last one \
+	lifetime of integrity."
+
+/*	desc = "A civilian-grade dynamic-field projector that encloses the entire body. High-kinetic projectiles and \
+	energetic bursts are halted as long as the field integrity remains stable. It has a protection rating of [shield_health] \
+	and the internal cell has a lifespan of [((cell.charge/cell_power_loss)/shield_health)]. It takes [shield_recharge_delay/20] seconds \
+	to resume charging after taking damage, and recovers [shield_recovery_amount] integrity every [shield_recharge_increment_delay/20] seconds."*/
+	// thing to add post implementation
+
+	shield_health = 80
+	shield_recharge_delay = 10 SECONDS
+	shield_recovery_amount = 25
+	shield_recharge_increment_delay = 5 SECONDS
+
+	shielded_vulnerability = null
+	vulnerability_multiplier = 4
+	shielded_resistance = list(PROJECTILE_ATTACK)
+	resistance_multiplier = 1
+	unblockable_attack_types = list(UNARMED_ATTACK, MELEE_ATTACK, THROWN_PROJECTILE_ATTACK)
+
+	cell_power_loss = 8 // empty after 80 health is lost

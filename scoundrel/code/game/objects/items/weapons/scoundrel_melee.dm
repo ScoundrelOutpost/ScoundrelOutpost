@@ -95,10 +95,18 @@
 	custom_materials = null
 	w_class = WEIGHT_CLASS_HUGE // can't store it. maybe this should get a new define
 
+/obj/item/throwing_star/energy/Initialize(mapload)
+	. = ..()
+	update_icon(UPDATE_OVERLAYS)
+
 /obj/item/throwing_star/energy/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
 	if(isinhands)
-		. += emissive_appearance(icon_file, icon_state, src, alpha = src.alpha)
+		. += emissive_appearance(icon_file, "energystar", src, alpha = src.alpha)
+
+/obj/item/throwing_star/energy/update_overlays()
+	. = ..()
+	. += emissive_appearance(icon, "energystar_light", src, alpha = src.alpha)
 
 /obj/item/throwing_star/energy/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, gentle = FALSE, quickstart = TRUE)
 	if(!..())
@@ -106,13 +114,15 @@
 	playsound(src.loc,throwsound, throwvolume, TRUE)
 
 /obj/item/throwing_star/energy/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
-	terminate_star()
+	if(proximity_flag && !isturf(target))
+		terminate_star()
 
 /obj/item/throwing_star/energy/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
 	terminate_star()
 
 /obj/item/throwing_star/energy/dropped() // this could be done better, but it works
+	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(terminate_star)), 1 SECONDS)
 
 /obj/item/throwing_star/energy/proc/terminate_star()

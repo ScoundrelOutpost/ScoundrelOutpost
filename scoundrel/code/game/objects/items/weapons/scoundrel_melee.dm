@@ -92,8 +92,13 @@
 	embedding = null
 	sharpness = null
 	resistance_flags = null // why did i make this a subtype again?
-
+	custom_materials = null
 	w_class = WEIGHT_CLASS_HUGE // can't store it. maybe this should get a new define
+
+/obj/item/throwing_star/energy/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+	. = ..()
+	if(isinhands)
+		. += emissive_appearance(icon_file, icon_state, src, alpha = src.alpha)
 
 /obj/item/throwing_star/energy/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, gentle = FALSE, quickstart = TRUE)
 	if(!..())

@@ -106,7 +106,7 @@
 
 /obj/item/throwing_star/energy/update_overlays()
 	. = ..()
-	. += emissive_appearance(icon, "energystar_light", src, alpha = src.alpha)
+	. += emissive_appearance(icon, "energystar", src, alpha = src.alpha)
 
 /obj/item/throwing_star/energy/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, gentle = FALSE, quickstart = TRUE)
 	if(!..())

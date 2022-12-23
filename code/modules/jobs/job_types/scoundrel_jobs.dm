@@ -445,7 +445,7 @@
 	suit = /obj/item/clothing/suit/jacket/det_suit/dark
 	backpack_contents = list(
 		/obj/item/melee/tonfa = 1,
-		/obj/item/gun/energy/disabler = 1,
+		/obj/item/gun/energy/e_gun/defender = 1,
 		/obj/item/pinpointer/crew = 1
 		)
 	belt = /obj/item/storage/belt/utility/small
@@ -453,7 +453,7 @@
 	mask = /obj/item/clothing/mask/russian_balaclava
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
+	gloves = /obj/item/clothing/gloves/toagloves
 	shoes = /obj/item/clothing/shoes/jackboots
 //	l_pocket = this should probably be a pda
 

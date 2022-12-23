@@ -1832,6 +1832,7 @@
 #include "code\game\objects\items\melee\baton.dm"
 #include "code\game\objects\items\melee\energy.dm"
 #include "code\game\objects\items\melee\misc.dm"
+#include "scoundrel\code\game\objects\items\weapons\scoundrel_melee.dm"
 #include "code\game\objects\items\robot\ai_upgrades.dm"
 #include "code\game\objects\items\robot\robot_parts.dm"
 #include "code\game\objects\items\robot\robot_upgrades.dm"

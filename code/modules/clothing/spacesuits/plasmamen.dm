@@ -384,6 +384,6 @@
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_SMALL
-	has_filter = FALSE
-	max_filters = 0
-	has_fov = FALSE
+//	has_filter = FALSE
+//	max_filters = 0
+//	has_fov = FALSE

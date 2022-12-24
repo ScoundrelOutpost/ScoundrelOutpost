@@ -34,7 +34,7 @@
 	var/cooldown = 0
 	var/last_trigger = 0 //Last time it was successfully triggered.
 	var/flash_intensity = 2
-	var/blind_length = 1 SECONDS
+	var/blind_length = 1.5 SECONDS
 
 /obj/item/assembly/flash/suicide_act(mob/living/user)
 	if(burnt_out)
@@ -428,7 +428,7 @@
 	name = "x-ray flash"
 	desc = "A device capable of emitting a concentrated radiation wave that goes through most forms of eye protection and disrupts photoreceptors."
 	flash_intensity = 3
-	blind_length = 3 SECONDS
+	blind_length = 3.5 SECONDS // enough time to mess someone up
 	light_color = "#5DFF00"
 	w_class = WEIGHT_CLASS_TINY // so it can fit in the uplink pouch
 

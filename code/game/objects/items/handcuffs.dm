@@ -172,6 +172,14 @@
 	cable_color = new_color
 	update_appearance(UPDATE_ICON)
 
+// cable untying -- why are there two different color vars? why is there even a single color var? placed cables don't have color variance. smart wires they say
+/obj/item/restraints/handcuffs/cable/attack_self(mob/user)
+	var/obj/item/stack/cable_coil/fifteen/untied_cables = new
+	untied_cables.color = color
+	untied_cables.cable_color = cable_color
+	user.put_in_hands(untied_cables)
+	qdel(src)
+
 /obj/item/restraints/handcuffs/cable/vv_edit_var(vname, vval)
 	if(vname == NAMEOF(src, cable_color))
 		set_cable_color(vval)

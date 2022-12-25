@@ -1,6 +1,8 @@
 // new storages used by scoundrel. it probably doesn't contain everything if you're reading this because it doesn't as of writing this
 
 // POUCHES // POUCHES // POUCHES
+// POUCHES // POUCHES // POUCHES
+// POUCHES // POUCHES // POUCHES
 /obj/item/storage/pouch
 	name = "pouch"
 	desc = "A pouch for holding small things. It has a hook for resting on a belt."
@@ -229,6 +231,8 @@
 	new /obj/item/assembly/flash/handheld/xray(src)
 
 // BELTS // BELTS // BELTS
+// BELTS // BELTS // BELTS
+// BELTS // BELTS // BELTS
 /obj/item/storage/belt/utility/small
 	name = "belt"
 	desc = "A trendy space-grade belt with an inbuilt digital clock. You can't really see it while you're wearing it, though."
@@ -378,3 +382,21 @@
 		/obj/item/storage/toolbox/mini/emergency/loaded = 1,
 		/obj/item/storage/toolbox/mini/electrical/loaded = 1,
 	)
+
+// SUITSTORAGE // SUITSTORAGE // SUITSTORAGE
+// SUITSTORAGE // SUITSTORAGE // SUITSTORAGE
+// SUITSTORAGE // SUITSTORAGE // SUITSTORAGE
+
+// suit storage needs code work to accommodate to space undersuits. i dont want to do it
+/obj/machinery/suit_storage_unit/starsuit
+	storage_type = /obj/item/clothing/under/starsuit
+	mask_type = /obj/item/clothing/mask/gas
+	helmet_type = /obj/item/clothing/head/helmet/space/starsuit
+
+/obj/machinery/suit_storage_unit/starsuit/engineering
+	helmet_type = /obj/item/clothing/head/helmet/space/starsuit/engineer
+
+/obj/machinery/suit_storage_unit/syndicate_hardsuit
+	storage_type = /obj/item/tank/jetpack/advanced/compact/syndicate
+	mask_type = /obj/item/clothing/mask/gas/syndicate
+	suit_type = /obj/item/clothing/suit/hooded/hardsuit/syndicate

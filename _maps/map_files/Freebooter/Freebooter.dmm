@@ -76,7 +76,6 @@
 /obj/item/pickaxe,
 /obj/item/pickaxe,
 /obj/item/mod/module/thermal_regulator,
-/obj/item/mod/module/thermal_regulator,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/cargo)
 "au" = (
@@ -1014,9 +1013,9 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/service/bar)
 "eV" = (
-/obj/machinery/suit_storage_unit/standard_unit,
-/obj/item/tank/jetpack/carbondioxide,
 /obj/effect/turf_decal/tile/dark_blue/full,
+/obj/machinery/suit_storage_unit/starsuit,
+/obj/item/tank/jetpack/carbondioxide,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/ai_monitored/command/storage/eva)
 "eW" = (
@@ -1253,7 +1252,7 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/security/brig)
 "gd" = (
-/obj/machinery/suit_storage_unit/atmos,
+/obj/machinery/suit_storage_unit/starsuit/engineering,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/engineering/break_room)
 "ge" = (
@@ -2646,8 +2645,8 @@
 /turf/open/floor/wood/large,
 /area/station/service/bar)
 "mz" = (
-/obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/light/red/dim/directional/north,
+/obj/machinery/suit_storage_unit/starsuit,
 /turf/open/floor/iron/smooth_half,
 /area/awaymission/secret/powered)
 "mA" = (
@@ -3496,8 +3495,8 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/hallway/primary)
 "ql" = (
-/obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/light/emergency/directional/north,
+/obj/machinery/suit_storage_unit/starsuit,
 /turf/open/floor/plating,
 /area/station/maintenance/department/bridge)
 "qp" = (
@@ -4959,6 +4958,7 @@
 /obj/item/pinpointer/nuke,
 /obj/item/circuitboard/machine/autolathe,
 /obj/structure/closet/secure_closet/engi_spec,
+/obj/item/clothing/glasses/welding,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/heads_quarters/ce)
 "wX" = (
@@ -6934,9 +6934,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
 "Gm" = (
-/obj/machinery/suit_storage_unit/engine,
+/obj/item/tank/jetpack/carbondioxide,
+/obj/effect/turf_decal/tile/dark_blue/full,
+/obj/machinery/suit_storage_unit/starsuit,
 /turf/open/floor/iron/dark/textured_large,
-/area/station/engineering/break_room)
+/area/station/ai_monitored/command/storage/eva)
 "Gn" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/decal/cleanable/cobweb,
@@ -7777,8 +7779,8 @@
 /turf/open/misc/asteroid/airless,
 /area/station/service/chapel/asteroid)
 "JZ" = (
-/obj/machinery/suit_storage_unit/mining/eva,
 /obj/machinery/light/small/directional/east,
+/obj/machinery/suit_storage_unit/starsuit/engineering,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/cargo)
 "Kd" = (
@@ -8492,7 +8494,7 @@
 "Nt" = (
 /obj/structure/sign/poster/contraband/random/directional/north,
 /obj/structure/rack,
-/obj/item/clothing/head/helmet/space/eva,
+/obj/item/clothing/head/helmet/space/starsuit,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science)
 "Nu" = (
@@ -8784,6 +8786,13 @@
 /obj/structure/table,
 /obj/structure/cable,
 /obj/item/storage/medkit/fire,
+/obj/item/clothing/glasses/welding{
+	pixel_y = -13;
+	pixel_x = 4
+	},
+/obj/item/clothing/glasses/welding{
+	pixel_y = -16
+	},
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "OO" = (
@@ -8986,7 +8995,7 @@
 "Pz" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/obj/machinery/suit_storage_unit/standard_unit,
+/obj/machinery/suit_storage_unit/starsuit/engineering,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/heads_quarters/ce)
 "PA" = (
@@ -10673,7 +10682,7 @@
 /turf/closed/wall,
 /area/station/maintenance/department/engine/atmos)
 "Xz" = (
-/obj/machinery/suit_storage_unit/standard_unit,
+/obj/machinery/suit_storage_unit/starsuit/engineering,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/aft)
 "XA" = (
@@ -11154,10 +11163,10 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/awaymission/secret/powered)
 "ZJ" = (
-/obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 8
 	},
+/obj/machinery/suit_storage_unit/starsuit,
 /turf/open/floor/iron/smooth_half,
 /area/awaymission/secret/powered)
 "ZK" = (
@@ -41159,7 +41168,7 @@ wJ
 ha
 Aa
 NQ
-eV
+Gm
 eV
 eV
 be
@@ -49636,7 +49645,7 @@ US
 EP
 EP
 sg
-Gm
+gd
 bx
 ON
 ME

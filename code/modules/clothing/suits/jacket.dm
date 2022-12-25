@@ -6,7 +6,7 @@
 	cold_protection = CHEST|GROIN|ARMS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	species_exception = list(/datum/species/golem)
-
+	w_class = WEIGHT_CLASS_SMALL
 /obj/item/clothing/suit/toggle/jacket/sweater
 	name = "sweater jacket"
 	desc = "A sweater jacket."

@@ -2962,6 +2962,7 @@
 #include "code\modules\clothing\under\jobs\Plasmaman\engineering.dm"
 #include "code\modules\clothing\under\jobs\Plasmaman\medsci.dm"
 #include "code\modules\clothing\under\jobs\Plasmaman\security.dm"
+#include "scoundrel\code\modules\clothing\under\scoundrel_jumpsuits.dm"
 #include "code\modules\detectivework\evidence.dm"
 #include "code\modules\detectivework\scanner.dm"
 #include "code\modules\discord\accountlink.dm"

@@ -29,7 +29,7 @@
 	name = "inactive cyberform"
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "remains"
-	var/mob_name = "Nameless Thing"
+	mob_name = "Nameless Thing"
 
 	anchored = FALSE
 	move_resist = MOVE_FORCE_NORMAL

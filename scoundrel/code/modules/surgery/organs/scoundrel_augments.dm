@@ -1,5 +1,5 @@
 /obj/item/organ/internal/cyberimp/arm/dualmodesword
-	name = "\improper Elite Energy Blade Augment"
+	name = "elite energy blade augment"
 	desc = "A surgically attached, extending energy blade. Requires a neural link to function."
 	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
 	icon_state = "dualmodesword_dead"
@@ -12,7 +12,7 @@
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/melee/tonfa/dualmodesword
-	name = "\improper Elite Energy Blade"
+	name = "elite energy blade"
 	desc = "An advanced energy blade outfitted with two modes; disable and kill."
 	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
 	icon_state = "dualmodesword"

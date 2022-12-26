@@ -6,7 +6,7 @@
 /obj/item/storage/pouch
 	name = "pouch"
 	desc = "A pouch for holding small things. It has a hook for resting on a belt."
-	icon = 'icons/obj/storage/pouch.dmi'
+	icon = 'scoundrel/icons/obj/storage/pouch.dmi'
 	icon_state = "pouch"
 	worn_icon = 'icons/mob/clothing/belt.dmi'
 	worn_icon_state = "empty"
@@ -203,6 +203,27 @@
 /obj/item/storage/pouch/traitor/sinister
 	desc = "A compact, ergonomically designed pouch for holding more things than usual. It has a sinister look to it."
 	icon_state = "sinister red"
+
+//flares
+/obj/item/storage/pouch/flares
+	name = "flare pouch"
+	desc = "A pouch with narrow slots for storing a few flares. The shape doesn't leave room for much else."
+	icon_state = "flare"
+/obj/item/storage/pouch/flares/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+	atom_storage.max_slots = 6
+	atom_storage.max_total_storage = 12
+	atom_storage.set_holdable(list(
+		/obj/item/flashlight/flare,
+		))
+/obj/item/storage/pouch/flares/preloaded/PopulateContents()
+	new /obj/item/flashlight/flare(src)
+	new /obj/item/flashlight/flare(src)
+	new /obj/item/flashlight/flare(src)
+	new /obj/item/flashlight/flare(src)
+	new /obj/item/flashlight/flare(src)
+	new /obj/item/flashlight/flare(src) // lmao
 
 // generic - keep this list at the bottom please
 /obj/item/storage/pouch/grey

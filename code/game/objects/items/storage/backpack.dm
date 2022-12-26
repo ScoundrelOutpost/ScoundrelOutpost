@@ -333,11 +333,23 @@
 	atom_storage.set_holdable(cant_hold_list = list(/obj/item/storage/backpack/satchel/flat)) //muh recursive backpacks)
 
 /obj/item/storage/backpack/satchel/flat/PopulateContents()
-	var/datum/supply_pack/costumes_toys/randomised/contraband/C = new
+	var/datum/smuggler_satchel_contents/C = new
 	for(var/i in 1 to 2)
-		var/ctype = pick(C.contains)
-		new ctype(src)
-
+		var/junktype = pick(C.junk)
+		new junktype(src)
+	if(prob(50))
+		for(var/i in 1 to 2)
+			var/commontype = pick(C.common)
+			new commontype(src)
+	if(prob(15))
+		var/mediumtype = pick(C.medium)
+		new mediumtype(src)
+	if(prob(5))
+		var/raretype = pick(C.rare)
+		new raretype(src)
+	if(prob(1))
+		var/ultratype = pick(C.ultra)
+		new ultratype(src)
 	qdel(C)
 
 /obj/item/storage/backpack/satchel/flat/with_tools/PopulateContents()

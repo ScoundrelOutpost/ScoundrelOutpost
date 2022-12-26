@@ -298,7 +298,7 @@
 
 /obj/item/flashlight/flare/Initialize(mapload)
 	. = ..()
-	fuel = rand(1600, 2000)
+	fuel = rand(400, 800) // 6.6 to 13.3 minutes
 
 /obj/item/flashlight/flare/process(delta_time)
 	open_flame(heat)

@@ -1906,6 +1906,7 @@
 #include "code\game\objects\items\tools\wirebrush.dm"
 #include "code\game\objects\items\tools\wirecutters.dm"
 #include "code\game\objects\items\tools\wrench.dm"
+#include "scoundrel\code\game\objects\items\tools\scoundrel_tools.dm"
 #include "code\game\objects\structures\ai_core.dm"
 #include "code\game\objects\structures\aliens.dm"
 #include "code\game\objects\structures\barsigns.dm"

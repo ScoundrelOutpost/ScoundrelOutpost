@@ -18,7 +18,7 @@
 	actions_types = list(/datum/action/item_action/toggle_beltshield)
 
 	var/activate_start_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg'
-	var/activate_start_sound_volume = 25
+	var/activate_start_sound_volume = 35
 
 	var/drained_sound = 'sound/scoundrel/rattle2.ogg' // sound played when the battery runs dry
 	var/drained_sound_volume = 100 // volume control is important
@@ -103,7 +103,7 @@
 			if(wearer.belt == src)
 				// cleared to start / feedback
 				activating = TRUE
-				to_chat(user, span_notice("[src] activating!"))
+				to_chat(user, span_notice("[src] is activating!"))
 				playsound(src, activate_start_sound, activate_start_sound_volume, FALSE, -2)
 				// begin startup sequence
 				if(do_after(user, activation_time, user, PERSONAL_SHIELD_STEP_FLAGS))

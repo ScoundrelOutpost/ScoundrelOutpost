@@ -17,6 +17,9 @@
 	w_class = WEIGHT_CLASS_BULKY
 	actions_types = list(/datum/action/item_action/toggle_beltshield)
 
+	var/activate_start_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg'
+	var/activate_start_sound_volume = 25
+
 	var/drained_sound = 'sound/scoundrel/rattle2.ogg' // sound played when the battery runs dry
 	var/drained_sound_volume = 100 // volume control is important
 
@@ -31,10 +34,10 @@
 
 	var/activate_sound = 'sound/scoundrel/buttons/walk_intent_active.ogg'
 	var/deactivate_sound = 'sound/scoundrel/buttons/walk_intent_inactive.ogg' // placeholders
+	var/activate_sound_volume = 100
+	var/deactivate_sound_volume = 100
 
-// var/warmup_time = 6 SECONDS // time required for the shield to start after being activated
-	// after warmup, run a check to see if it's in the appropriate slot. if not, abort activation
-
+// shield stats
 	var/shield_health = 100
 	var/shield_recharge_delay = 60 SECONDS
 	var/shield_recovery_amount = 2
@@ -47,7 +50,7 @@
 	var/shield_tracked_health
 	var/on = FALSE
 	var/activating = FALSE
-	var/activation_time = 6 SECONDS
+	var/activation_time = 5 SECONDS
 
 	// cell charge lost for every point of damage to the shield
 	// do cell.charge/shield_health to find the cell_power_lost required for the cell to last a single overload
@@ -89,14 +92,21 @@
 		remove_shield_component(user)
 
 /obj/item/beltshield/proc/add_shield_component(mob/user)
+	
+	// if the button is pressed during startup sequence
 	if(activating)
-		balloon_alert(user, "[src] already starting up!")
+		to_chat(user, span_notice("[src] already starting up!"))
 		return
+
 	if(!on && ishuman(user))
 		var/mob/living/carbon/human/wearer = user
 		if(cell?.charge >= cell_failsafe_value)
 			if(wearer.belt == src)
+				// cleared to start / feedback
 				activating = TRUE
+				to_chat(user, span_notice("[src] activating!"))
+				playsound(src, activate_start_sound, activate_start_sound_volume, FALSE, -2)
+				// begin startup sequence
 				if(do_after(user, activation_time, user, PERSONAL_SHIELD_STEP_FLAGS))
 					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, charge_increment_delay = shield_recharge_increment_delay, \
 					charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
@@ -105,19 +115,22 @@
 					on = TRUE
 					activating = FALSE
 					update_appearance()
-					playsound(src, activate_sound, 80, TRUE, -1)
+					playsound(src, activate_sound, activate_sound_volume, FALSE, -2)
 					update_action_buttons()
+				// didn't start
 				else
 					to_chat(user, span_notice("Failed to activate [src]"))
-					playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
+					playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 					activating = FALSE
 					return
+			// didn't start because it wasn't being worn
 			else
 				to_chat(user, span_notice("You need to be wearing [src] to turn it on."))
 				return
+		// didn't start because it didn't have enough power
 		else
 			to_chat(user, span_notice("Not enough power to turn [src] on."))
-			playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
+			playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 			return
 
 /obj/item/beltshield/proc/remove_shield_component(mob/user)
@@ -128,7 +141,7 @@
 		qdel(shield)
 		to_chat(user, span_notice("You turn the [src] off."))
 		update_appearance()
-		playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
+		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 		update_action_buttons()
 
 /obj/item/beltshield/equipped(mob/user, slot, initial)
@@ -159,7 +172,7 @@
 	. = cell.use(cell_reduction_amount)
 	if(on && cell.charge <= cell_failsafe_value)
 		remove_shield_component(owner)
-		playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
+		playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 
 /obj/item/beltshield/emp_act(severity)
 	. = ..()

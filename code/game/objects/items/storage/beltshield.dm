@@ -1,3 +1,5 @@
+#define PERSONAL_SHIELD_STEP_FLAGS IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE|IGNORE_SLOWDOWNS
+
 /obj/item/beltshield
 	name = "shield belt"
 	desc = "This is a basic level shield belt. Blocks forceful attacks, but permits hands through, and not especially durable. You probably shouldn't have this!"
@@ -44,11 +46,16 @@
 	var/list/unblockable_attack_types = list(UNARMED_ATTACK)
 	var/shield_tracked_health
 	var/on = FALSE
-	var/obj/item/stock_parts/cell/cell
+	var/activating = FALSE
+	var/activation_time = 6 SECONDS
 
 	// cell charge lost for every point of damage to the shield
 	// do cell.charge/shield_health to find the cell_power_lost required for the cell to last a single overload
 	var/cell_power_loss = 10
+	// the amount of cell charge before our shield switches off the shield entirely.
+	var/cell_failsafe_value = 100
+	// Our cell. Loses power when the shield is hit while active equal to the damage inflicted to the shield.
+	var/obj/item/stock_parts/cell/cell
 	var/cell_type
 
 /obj/item/beltshield/Initialize(mapload)
@@ -75,30 +82,43 @@
 		return
 	if(!on)
 		if(add_shield_component(user))
-			to_chat(user, span_notice("You toggle the [name]."))
+			to_chat(user, span_notice("You toggle the [src]."))
 		else
 			return
 	else
 		remove_shield_component(user)
 
 /obj/item/beltshield/proc/add_shield_component(mob/user)
+	if(activating)
+		balloon_alert(user, "[src] already starting up!")
+		return
 	if(!on && ishuman(user))
 		var/mob/living/carbon/human/wearer = user
-		if(wearer.belt == src)
-
-			if(cell?.charge >= 0)
-				AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, charge_increment_delay = shield_recharge_increment_delay, \
-				charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
-				shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = TRUE)
-				to_chat(user, span_notice("You turn the [name] on."))
-				on = TRUE
-				icon_state = "[initial(icon_state)]_on"
-				SEND_SOUND(user, sound(activate_sound, volume = 80))
-				update_action_buttons()
+		if(cell?.charge >= cell_failsafe_value)
+			if(wearer.belt == src)
+				activating = TRUE
+				if(do_after(user, activation_time, user, PERSONAL_SHIELD_STEP_FLAGS))
+					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, charge_increment_delay = shield_recharge_increment_delay, \
+					charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
+					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = TRUE)
+					to_chat(user, span_notice("You turn the [src] on."))
+					on = TRUE
+					activating = FALSE
+					update_appearance()
+					playsound(src, activate_sound, 80, TRUE, -1)
+					update_action_buttons()
+				else
+					to_chat(user, span_notice("Failed to activate [src]"))
+					playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
+					activating = FALSE
+					return
 			else
-				to_chat(user, span_notice("Not enough power to turn the [name] on."))
-				SEND_SOUND(user, sound(drained_sound, drained_sound_volume))
+				to_chat(user, span_notice("You need to be wearing [src] to turn it on."))
 				return
+		else
+			to_chat(user, span_notice("Not enough power to turn [src] on."))
+			playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
+			return
 
 /obj/item/beltshield/proc/remove_shield_component(mob/user)
 	if(on)
@@ -106,16 +126,14 @@
 		shield_tracked_health = shield.current_charges
 		on = FALSE
 		qdel(shield)
-		to_chat(user, span_notice("You turn the [name] off."))
-		icon_state = "[initial(icon_state)]"
-		SEND_SOUND(usr, sound(deactivate_sound, volume = 80))
+		to_chat(user, span_notice("You turn the [src] off."))
+		update_appearance()
+		playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
 		update_action_buttons()
 
 /obj/item/beltshield/equipped(mob/user, slot, initial)
 	. = ..()
-	if(slot & slot_flags)
-		add_shield_component(user)
-		RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
+	RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
 
 /obj/item/beltshield/dropped(mob/user, silent)
 	. = ..()
@@ -123,21 +141,23 @@
 	UnregisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS)
 
 /obj/item/beltshield/proc/shield_reaction(mob/living/carbon/human/owner, atom/movable/hitby, damage = 0, attack_text = "the attack", attack_type = MELEE_ATTACK, armour_penetration = 0)
-	if(SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, owner, hitby, attack_text, 0, damage, attack_type) & COMPONENT_HIT_REACTION_BLOCK)
+	if(SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, owner, hitby, attack_text, 0, damage, attack_type) & COMPONENT_HIT_REACTION_BLOCK && owner.belt == src)
 		drain_cell_power(owner, damage, attack_type)
 		return SHIELD_BLOCK
 	return NONE
 
 /obj/item/beltshield/proc/drain_cell_power(mob/living/carbon/human/owner, damage = 0, attack_type)
-	var/cell_reduction_amount = damage*cell_power_loss
-	if(attack_type in shielded_vulnerability)
-		cell_reduction_amount = damage*vulnerability_multiplier*cell_power_loss
-	if(attack_type in shielded_resistance)
-		cell_reduction_amount = damage*resistance_multiplier*cell_power_loss
 	if(!cell)
 		return
+
+	var/cell_reduction_amount = clamp(damage*cell_power_loss, 0, cell.charge)
+	if(attack_type in shielded_vulnerability)
+		cell_reduction_amount = clamp(damage*vulnerability_multiplier*cell_power_loss, 0, cell.charge)
+	if(attack_type in shielded_resistance)
+		cell_reduction_amount = clamp(damage*resistance_multiplier*cell_power_loss, damage, cell.charge)
+
 	. = cell.use(cell_reduction_amount)
-	if(on && cell.charge <= 0)
+	if(on && cell.charge <= cell_failsafe_value)
 		remove_shield_component(owner)
 		playsound(src, drained_sound, drained_sound_volume, TRUE, -1)
 
@@ -147,6 +167,13 @@
 		return
 	if (!(. & EMP_PROTECT_SELF))
 		drain_cell_power(1000 / severity)
+
+/obj/item/beltshield/update_icon_state()
+	if(on)
+		icon_state = "[initial(icon_state)]_on"
+	else
+		icon_state = "[initial(icon_state)]"
+	return ..()
 
 /datum/action/item_action/toggle_beltshield
 	name = "Toggle Shield-Emitter"

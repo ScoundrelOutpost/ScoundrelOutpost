@@ -1,4 +1,4 @@
-#define PERSONAL_SHIELD_STEP_FLAGS IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE|IGNORE_SLOWDOWNS
+#define PERSONAL_SHIELD_STEP_FLAGS IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE|IGNORE_SLOWDOWNS|IGNORE_HELD_ITEM
 
 /obj/item/beltshield
 	name = "shield belt"
@@ -92,7 +92,6 @@
 		remove_shield_component(user)
 
 /obj/item/beltshield/proc/add_shield_component(mob/user)
-	
 	// if the button is pressed during startup sequence
 	if(activating)
 		to_chat(user, span_notice("[src] already starting up!"))

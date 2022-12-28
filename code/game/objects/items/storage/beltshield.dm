@@ -9,12 +9,12 @@
 	worn_icon_state = "utility"
 	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
-	slot_flags = ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE | ITEM_SLOT_POCKETS
 	attack_verb_continuous = list("whips", "lashes", "disciplines")
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
 	equip_sound = 'sound/items/handling/component_pickup.ogg'
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_SMALL
 	actions_types = list(/datum/action/item_action/toggle_beltshield)
 
 	var/activate_start_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg'
@@ -100,7 +100,7 @@
 	if(!on && ishuman(user))
 		var/mob/living/carbon/human/wearer = user
 		if(cell?.charge >= cell_failsafe_value)
-			if(wearer.belt == src)
+			if(slot_check(wearer))
 				// cleared to start / feedback
 				activating = TRUE
 				to_chat(user, span_notice("[src] is activating!"))
@@ -143,6 +143,16 @@
 		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 		update_action_buttons()
 
+/obj/item/beltshield/proc/slot_check(mob/living/carbon/human/wearer)
+	var/equipped_to_valid_slot = FALSE
+	if(wearer.belt == src)
+		equipped_to_valid_slot = TRUE
+	if(wearer.s_store == src)
+		equipped_to_valid_slot = TRUE
+	if(wearer.r_store == src | wearer.l_store == src)
+		equipped_to_valid_slot = TRUE
+	return equipped_to_valid_slot
+
 /obj/item/beltshield/equipped(mob/user, slot, initial)
 	. = ..()
 	RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
@@ -153,7 +163,7 @@
 	UnregisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS)
 
 /obj/item/beltshield/proc/shield_reaction(mob/living/carbon/human/owner, atom/movable/hitby, damage = 0, attack_text = "the attack", attack_type = MELEE_ATTACK, armour_penetration = 0)
-	if(SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, owner, hitby, attack_text, 0, damage, attack_type) & COMPONENT_HIT_REACTION_BLOCK && owner.belt == src)
+	if(SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, owner, hitby, attack_text, 0, damage, attack_type) & COMPONENT_HIT_REACTION_BLOCK && slot_check(owner))
 		drain_cell_power(owner, damage, attack_type)
 		return SHIELD_BLOCK
 	return NONE

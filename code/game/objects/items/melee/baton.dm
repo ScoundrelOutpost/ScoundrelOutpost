@@ -729,36 +729,72 @@
 	desc = "A defense-oriented martial weapon of ancient design. \
 			Since the advent of personal shields, the weapon has seen a dramatic resurgence among spacers on the fringes of controlled space. \
 			This one's equipped with a low-yield charge coil for more painful, non-lethal strikes as well as ease of use."
-	icon = 'icons/obj/weapons/transforming_tonfa.dmi'
+	
+	//icons
+	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
 	icon_state = "tonfa"
 	inhand_icon_state = "tonfa"
 	worn_icon_state = "baton"
-	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
-	slot_flags = ITEM_SLOT_BELT
-	force = 12 //8ish hit crit
+	lefthand_file = 'scoundrel/icons/mob/inhands/weapons_lefthand.dmi'
+	righthand_file = 'scoundrel/icons/mob/inhands/weapons_righthand.dmi'
+	//combat values
+	force = 12
 	throwforce = 12
-	w_class = WEIGHT_CLASS_NORMAL
+	wound_bonus = 5
 	armour_penetration = 20
+	//utility values
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BELT
 	hitsound = SFX_SWING_HIT
+
 	///Determines our active effects
-	var/active_force = 20 //5 hit stamina crit
+	var/active_force = 20
 	var/active_throwforce = 20
 	var/active_damage_type = STAMINA
 	var/active_sharpness = null
-	var/active_hit_sound = 'sound/scoundrel/tonfahit.ogg'
 	var/weapon_active = FALSE
 	var/active_w_class = WEIGHT_CLASS_NORMAL
+	//active flavor
 	var/active_verb_continuous = list("attacks", "whacks", "jabs", "zaps", "strikes", "shocks",)
 	var/active_verb_simple = list("attack", "whack", "jab", "zap", "strike", "shock")
 	var/activate_sound = SFX_SPARKS
-	var/activate_sound_volume = 75
+	var/activate_sound_volume = 100
+	var/active_hit_sound = 'sound/scoundrel/tonfahit.ogg'
+
 	//the popup message when activating/deactivating
 	var/activate_balloon = TRUE
 
+	//emissives
+	var/active_emissive = null
+	var/inactive_emissive = null
+	var/active_emissive_inhand = null
+	var/inactive_emissive_inhand = null
+
+//this handles emissives on subtypes
 /obj/item/melee/tonfa/Initialize(mapload)
 	. = ..()
+	active_emissive = "[icon_state]_on_emissive"
+	inactive_emissive = "[icon_state]_emissive"
+	active_emissive_inhand = "[inhand_icon_state]_on_emissive"
+	inactive_emissive_inhand = "[inhand_icon_state]_emissive"
 	make_transformable()
+	update_icon(UPDATE_OVERLAYS)
+
+//obj emissives
+/obj/item/melee/tonfa/update_overlays()
+	. = ..()
+	if(weapon_active == TRUE)
+		. += emissive_appearance(icon, active_emissive, src, alpha = src.alpha)
+	if(weapon_active == FALSE && inactive_emissive != null)
+		. += emissive_appearance(icon, inactive_emissive, src, alpha = src.alpha)
+
+//inhand emissives
+/obj/item/melee/tonfa/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+	. = ..()
+	if(isinhands && weapon_active == TRUE)
+		. += emissive_appearance(icon_file, active_emissive_inhand, src, alpha = src.alpha)
+	if(isinhands && weapon_active == FALSE)
+		. += emissive_appearance(icon_file, inactive_emissive_inhand, src, alpha = src.alpha)
 
 /obj/item/melee/tonfa/proc/make_transformable()
 	AddComponent(/datum/component/transforming, \
@@ -779,4 +815,5 @@
 	if(user && activate_balloon == TRUE)
 		balloon_alert(user, "[name] [active ? "enabled":"disabled"]")
 	playsound(user ? user : src, activate_sound, activate_sound_volume, TRUE)
+	update_icon(UPDATE_OVERLAYS)
 	return COMPONENT_NO_DEFAULT_MESSAGE

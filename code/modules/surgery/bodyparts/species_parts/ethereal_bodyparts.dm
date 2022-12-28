@@ -4,7 +4,7 @@
 	is_dimorphic = FALSE
 	dmg_overlay_type = null
 	attack_type = BURN // bish buzz
-	unarmed_attack_sound = 'sound/items/welder.ogg'
+	unarmed_attack_sound = 'sound/scoundrel/weapons/punch_ethereal.ogg'
 
 /obj/item/bodypart/head/ethereal/update_limb(dropping_limb, is_creating)
 	. = ..()
@@ -32,7 +32,7 @@
 	dmg_overlay_type = null
 	attack_type = BURN //burn bish
 	unarmed_attack_verb = "burn"
-	unarmed_attack_sound = 'sound/items/welder.ogg'
+	unarmed_attack_sound = 'sound/scoundrel/weapons/punch_ethereal.ogg'
 
 /obj/item/bodypart/arm/left/ethereal/update_limb(dropping_limb, is_creating)
 	. = ..()
@@ -47,7 +47,7 @@
 	dmg_overlay_type = null
 	attack_type = BURN // bish buzz
 	unarmed_attack_verb = "burn"
-	unarmed_attack_sound = 'sound/items/welder.ogg'
+	unarmed_attack_sound = 'sound/scoundrel/weapons/punch_ethereal.ogg'
 
 /obj/item/bodypart/arm/right/ethereal/update_limb(dropping_limb, is_creating)
 	. = ..()
@@ -62,7 +62,7 @@
 	limb_id = SPECIES_ETHEREAL
 	dmg_overlay_type = null
 	attack_type = BURN // bish buzz
-	unarmed_attack_sound = 'sound/items/welder.ogg'
+	unarmed_attack_sound = 'sound/scoundrel/weapons/punch_ethereal.ogg'
 
 /obj/item/bodypart/leg/left/ethereal/update_limb(dropping_limb, is_creating)
 	. = ..()
@@ -76,7 +76,7 @@
 	limb_id = SPECIES_ETHEREAL
 	dmg_overlay_type = null
 	attack_type = BURN // bish buzz
-	unarmed_attack_sound = 'sound/items/welder.ogg'
+	unarmed_attack_sound = 'sound/scoundrel/weapons/punch_ethereal.ogg'
 
 /obj/item/bodypart/leg/right/ethereal/update_limb(dropping_limb, is_creating)
 	. = ..()

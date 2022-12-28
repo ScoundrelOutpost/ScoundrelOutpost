@@ -395,3 +395,73 @@
 	greyscale_config = null
 	greyscale_colors = null
 	long_ranged = TRUE
+
+// scoundrel content
+
+/obj/item/modular_computer/tablet/pda/deckhand
+	name = "deckhand PDA"
+	starting_programs = list(
+		/datum/computer_file/program/crew_manifest,
+		/datum/computer_file/program/status,
+		/datum/computer_file/program/bounty_board,
+	)
+
+/obj/item/modular_computer/tablet/pda/deckhand/greenhand
+	name = "greenhand PDA"
+	greyscale_colors = "#8EB77C#C7C7C7"
+
+/obj/item/modular_computer/tablet/pda/deckhand/medsci
+	name = "medsci PDA"
+	greyscale_colors = "#BADBDB#C7C7C7"
+	starting_programs = list(
+		/datum/computer_file/program/science,
+		/datum/computer_file/program/phys_scanner/all,
+		/datum/computer_file/program/radar/lifeline,
+		/datum/computer_file/program/scipaper_program,
+	)
+
+/obj/item/modular_computer/tablet/pda/deckhand/engineer
+	name = "engineering PDA"
+	greyscale_colors = "#CE946D#C7C7C7"
+	starting_programs = list(
+		/datum/computer_file/program/science,
+		/datum/computer_file/program/atmosscan,
+		/datum/computer_file/program/alarm_monitor,
+		/datum/computer_file/program/supermatter_monitor,
+		/datum/computer_file/program/scipaper_program,
+	)
+
+/obj/item/modular_computer/tablet/pda/deckhand/mining
+	name = "mining PDA"
+	greyscale_colors = "#563C2B#C7C7C7"
+
+/obj/item/modular_computer/tablet/pda/deckhand/leader
+	name = "leader's PDA"
+	max_capacity = 128
+	starting_programs = list(
+		/datum/computer_file/program/crew_manifest,
+		/datum/computer_file/program/status,
+		/datum/computer_file/program/science,
+		/datum/computer_file/program/robocontrol,
+		/datum/computer_file/program/atmosscan,
+		/datum/computer_file/program/alarm_monitor,
+		/datum/computer_file/program/supermatter_monitor,
+		/datum/computer_file/program/radar/lifeline,
+		/datum/computer_file/program/shipping,
+		/datum/computer_file/program/scipaper_program,
+	)
+
+/obj/item/modular_computer/tablet/pda/deckhand/leader/captain
+	name = "captain's PDA"
+	greyscale_config = /datum/greyscale_config/tablet/stripe_thick
+	greyscale_colors = "#282828#808080#ADADAD"
+
+/obj/item/modular_computer/tablet/pda/deckhand/leader/quartermaster
+	name = "quartermaster's PDA"
+	greyscale_config = null
+	greyscale_colors = null
+	icon_state = "pda-library"
+
+/obj/item/modular_computer/tablet/pda/deckhand/leader/detective
+	name = "detective's PDA"
+	greyscale_colors = "#333333#C7C7C7"

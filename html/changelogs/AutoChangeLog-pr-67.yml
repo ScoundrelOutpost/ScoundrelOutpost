@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "flashes now generally blind for slightly longer"

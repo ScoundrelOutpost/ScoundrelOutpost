@@ -21,7 +21,7 @@
 	var/alt_covers_chest = FALSE // for adjusted/rolled-down jumpsuits, FALSE = exposes chest and arms, TRUE = exposes arms only
 	var/obj/item/clothing/accessory/attached_accessory
 	var/mutable_appearance/accessory_overlay
-
+	w_class = WEIGHT_CLASS_SMALL
 /obj/item/clothing/under/Initialize(mapload)
 	. = ..()
 	if(random_sensor)

@@ -11,7 +11,7 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	allowed = list()
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 0, ACID = 0)
-
+	w_class = WEIGHT_CLASS_SMALL
 /obj/item/clothing/suit/hooded/wintercoat/Initialize(mapload)
 	. = ..()
 	allowed += list(

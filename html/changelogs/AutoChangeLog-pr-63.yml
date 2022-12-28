@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "adds a basic wound chance to tonfa"
+  - balance: "unarmed damage and dualmodesword damage"
+  - soundadd: "new ethereal punches and energy sword swings"

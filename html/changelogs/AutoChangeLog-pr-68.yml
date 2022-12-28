@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "the comms console can be fully accessed with only command access now"

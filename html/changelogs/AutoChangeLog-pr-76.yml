@@ -1,0 +1,9 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "new smuggler satchel loot table"
+  - rscadd: "flare pouches to mining lockers, replacing sandbags"
+  - balance: "flares now operate for roughly a third of the time they did"
+  - balance: "smuggler satchels have a max stock of 2"
+  - imageadd: "pouch dmi moved"
+  - spellcheck: "capitalization on elite energy blade"

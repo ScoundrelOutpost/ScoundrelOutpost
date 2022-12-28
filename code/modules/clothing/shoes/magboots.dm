@@ -11,6 +11,7 @@
 	strip_delay = 70
 	equip_delay_other = 70
 	resistance_flags = FIRE_PROOF
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/clothing/shoes/magboots/equipped(mob/user, slot)
 	. = ..()

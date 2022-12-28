@@ -8,7 +8,7 @@
 
 	body_parts_covered = FEET
 	slot_flags = ITEM_SLOT_FEET
-
+	w_class = WEIGHT_CLASS_SMALL
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 0)
 	slowdown = SHOES_SLOWDOWN
 	strip_delay = 1 SECONDS
@@ -19,7 +19,7 @@
 	///Are we currently tied? Can either be SHOES_UNTIED, SHOES_TIED, or SHOES_KNOTTED
 	var/tied = SHOES_TIED
 	///How long it takes to lace/unlace these shoes
-	var/lace_time = 5 SECONDS
+	var/lace_time = 0.5 SECONDS
 	///An active alert
 	var/datum/weakref/our_alert_ref
 

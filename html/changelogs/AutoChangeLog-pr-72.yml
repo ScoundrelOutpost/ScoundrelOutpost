@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscdel: "FOV and filters code commented out"
+  - imageadd: "new gasmask sprite"

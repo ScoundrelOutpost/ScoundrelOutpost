@@ -49,7 +49,10 @@
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand
 //	r_pocket = 
+
+	pda_slot = ITEM_SLOT_LPOCKET
 
 // End job
 // Start job
@@ -92,8 +95,11 @@
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	l_hand = /obj/item/clipboard
-	
+
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/greenhand
 //	r_pocket = 
+
+	pda_slot = ITEM_SLOT_LPOCKET
 
 // End job
 // Start job
@@ -159,10 +165,10 @@
 	accessory = /obj/item/clothing/accessory/armband/medblue
 	l_hand = /obj/item/storage/medkit/surgery
 	mask = /obj/item/clothing/mask/surgical
-//	l_pocket = 
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/medsci
 	r_pocket = /obj/item/storage/pouch/medical/preloaded/advanced
 
-	chameleon_extras = /obj/item/stamp/cmo
+	pda_slot = ITEM_SLOT_LPOCKET
 
 // End job
 // Start job
@@ -229,8 +235,10 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	accessory = /obj/item/clothing/accessory/armband/engine
 	box = /obj/item/storage/box/survival/engineer
-	l_pocket = /obj/item/modular_computer/tablet/pda/heads/ce
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/engineer
 //	r_pocket = 
+
+	pda_slot = ITEM_SLOT_LPOCKET
 
 // End job
 // Start job
@@ -303,8 +311,10 @@
 	gloves = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/jackboots
 
-	l_pocket = /obj/item/modular_computer/tablet/pda/heads/captain
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/leader/captain
 //	r_pocket = 
+
+	pda_slot = ITEM_SLOT_LPOCKET
 
 	box = /obj/item/storage/box/survival/engineer
 
@@ -380,10 +390,10 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/clipboard
 
-	l_pocket = /obj/item/modular_computer/tablet/pda/heads/quartermaster
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/leader/quartermaster
 	r_pocket = /obj/item/storage/pouch/holding // move this to the locker when it becomes a steal obj
 
-	chameleon_extras = /obj/item/stamp/qm
+	pda_slot = ITEM_SLOT_LPOCKET
 
 	implants = list(/obj/item/implant/mindshield)
 
@@ -445,7 +455,7 @@
 	suit = /obj/item/clothing/suit/jacket/det_suit/dark
 	backpack_contents = list(
 		/obj/item/melee/tonfa = 1,
-		/obj/item/gun/energy/disabler = 1,
+		/obj/item/gun/energy/e_gun/defender = 1,
 		/obj/item/pinpointer/crew = 1
 		)
 	belt = /obj/item/storage/belt/utility/small
@@ -453,14 +463,15 @@
 	mask = /obj/item/clothing/mask/russian_balaclava
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
+	gloves = /obj/item/clothing/gloves/toagloves
 	shoes = /obj/item/clothing/shoes/jackboots
-//	l_pocket = this should probably be a pda
 
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/leader/detective
 	r_pocket = /obj/item/storage/pouch/forensic/preloaded
 	
 	implants = list(/obj/item/implant/mindshield)
 
+	pda_slot = ITEM_SLOT_LPOCKET
 // End job
 // Start job
 
@@ -512,7 +523,8 @@
 		/obj/item/stack/marker_beacon/ten = 3,
 		/obj/item/mining_voucher,
 		/obj/item/flashlight/seclite,
-		/obj/item/gun/energy/e_gun/defender
+		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/reagent_containers/hypospray/medipen/survival,
 	)
 	id_trim = /datum/id_trim/job/deckhand/mining_spec
 	id = /obj/item/card/id/advanced
@@ -524,8 +536,9 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	accessory = /obj/item/clothing/accessory/talisman
-	l_pocket = /obj/item/reagent_containers/hypospray/medipen/survival
+	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/mining
 	r_pocket = /obj/item/storage/bag/ore
 
+	pda_slot = ITEM_SLOT_LPOCKET
 	box = /obj/item/storage/box/survival/mining
 // End job

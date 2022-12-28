@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "replaced screwdriver and multitool in suspicious mini-toolbox with stealthy versions"
+  - imageadd: "new multitool sprite"

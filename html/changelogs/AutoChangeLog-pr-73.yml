@@ -1,0 +1,8 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "starsuits"
+  - balance: "most clothing items are now small"
+  - imageadd: "starsuits"
+  - imageadd: "replaced plasmaman jumpsuits with gloved versions"
+  - code_imp: "OVER_HANDS_LAYER defined"

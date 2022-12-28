@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "new role pda presets"
+  - balance: "laptops have had their size reduced by 1"

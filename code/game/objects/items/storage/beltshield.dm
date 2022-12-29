@@ -5,10 +5,10 @@
 	desc = "This is a basic level shield belt. Blocks forceful attacks, but permits hands through, and not especially durable. You probably shouldn't have this!"
 	icon = 'scoundrel/icons/obj/personal_shields.dmi'
 	icon_state = "personalshield"
-	inhand_icon_state = "utility"
-	worn_icon_state = "utility"
-	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
+	inhand_icon_state = "electronic"
+	worn_icon_state = "pda"
+	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE | ITEM_SLOT_POCKETS
 	attack_verb_continuous = list("whips", "lashes", "disciplines")
 	attack_verb_simple = list("whip", "lash", "discipline")
@@ -16,6 +16,10 @@
 	equip_sound = 'sound/items/handling/component_pickup.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	actions_types = list(/datum/action/item_action/toggle_beltshield)
+
+	var/no_overlay = FALSE
+	var/shield_icon_file = 'icons/effects/effects.dmi'
+	var/shield_icon = "shield"
 
 	var/activate_start_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg'
 	var/activate_start_sound_volume = 35
@@ -107,9 +111,9 @@
 				playsound(src, activate_start_sound, activate_start_sound_volume, FALSE, -2)
 				// begin startup sequence
 				if(do_after(user, activation_time, user, PERSONAL_SHIELD_STEP_FLAGS))
-					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, charge_increment_delay = shield_recharge_increment_delay, \
+					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, shield_icon_file = shield_icon_file, shield_icon = shield_icon, charge_increment_delay = shield_recharge_increment_delay, \
 					charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
-					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = TRUE)
+					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay)
 					to_chat(user, span_notice("You turn the [src] on."))
 					on = TRUE
 					activating = FALSE

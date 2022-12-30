@@ -160,7 +160,7 @@
 		var/list/shuttle_spawns = list()
 		switch(dispatch_type)
 			if(HIJACK_SYNDIE)
-				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/emergency/specialops]
+				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/weapons/defender_pistols]
 				pack.generate(pick_n_take(empty_shuttle_turfs))
 
 				shuttle_spawns.Add(/mob/living/simple_animal/hostile/syndicate/ranged/infiltrator)
@@ -171,7 +171,7 @@
 					shuttle_spawns.Add(/mob/living/simple_animal/hostile/syndicate/ranged/infiltrator)
 
 			if(RUSKY_PARTY)
-				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/service/party]
+				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/weapons/single/defender_pistol]
 				pack.generate(pick_n_take(empty_shuttle_turfs))
 
 				shuttle_spawns.Add(/mob/living/simple_animal/hostile/russian)
@@ -183,7 +183,7 @@
 					shuttle_spawns.Add(/mob/living/simple_animal/hostile/bear/russian)
 
 			if(SPIDER_GIFT)
-				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/emergency/specialops]
+				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/weapons/defender_pistols]
 				pack.generate(pick_n_take(empty_shuttle_turfs))
 
 				shuttle_spawns.Add(/mob/living/simple_animal/hostile/giant_spider)
@@ -220,15 +220,7 @@
 
 			if(DEPARTMENT_RESUPPLY)
 				var/list/crate_types = list(
-					/datum/supply_pack/emergency/equipment,
-					/datum/supply_pack/security/supplies,
-					/datum/supply_pack/organic/food,
-					/datum/supply_pack/emergency/weedcontrol,
-					/datum/supply_pack/engineering/tools,
-					/datum/supply_pack/engineering/engiequipment,
-					/datum/supply_pack/science/robotics,
-					/datum/supply_pack/science/plasma,
-					/datum/supply_pack/medical/supplies
+					/datum/supply_pack/critter/butterfly, // if you're seeing this, someone forgot to fill out this list
 					)
 				for(var/crate in crate_types)
 					var/datum/supply_pack/pack = SSshuttle.supply_packs[crate]

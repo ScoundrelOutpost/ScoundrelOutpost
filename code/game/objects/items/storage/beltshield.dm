@@ -107,14 +107,14 @@
 			if(slot_check(wearer))
 				// cleared to start / feedback
 				activating = TRUE
-				to_chat(user, span_notice("[src] is activating!"))
+				to_chat(wearer, span_notice("[src] is activating!"))
 				playsound(src, activate_start_sound, activate_start_sound_volume, FALSE, -2)
 				// begin startup sequence
-				if(do_after(user, activation_time, user, PERSONAL_SHIELD_STEP_FLAGS))
+				if(do_after(wearer, activation_time, wearer, PERSONAL_SHIELD_STEP_FLAGS, extra_checks=CALLBACK(src, PROC_REF(slot_check), wearer)))
 					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, shield_icon_file = shield_icon_file, shield_icon = shield_icon, charge_increment_delay = shield_recharge_increment_delay, \
 					charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
 					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay)
-					to_chat(user, span_notice("You turn the [src] on."))
+					to_chat(wearer, span_notice("You turn the [src] on."))
 					on = TRUE
 					activating = FALSE
 					update_appearance()
@@ -122,17 +122,17 @@
 					update_action_buttons()
 				// didn't start
 				else
-					to_chat(user, span_notice("Failed to activate [src]"))
+					to_chat(wearer, span_notice("Failed to activate [src]"))
 					playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 					activating = FALSE
 					return
 			// didn't start because it wasn't being worn
 			else
-				to_chat(user, span_notice("You need to be wearing [src] to turn it on."))
+				to_chat(wearer, span_notice("You need to be wearing [src] to turn it on."))
 				return
 		// didn't start because it didn't have enough power
 		else
-			to_chat(user, span_notice("Not enough power to turn [src] on."))
+			to_chat(wearer, span_notice("Not enough power to turn [src] on."))
 			playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 			return
 
@@ -155,6 +155,10 @@
 		equipped_to_valid_slot = TRUE
 	if(wearer.r_store == src | wearer.l_store == src)
 		equipped_to_valid_slot = TRUE
+	for(var/obj/item/beltshield/additional_shields in loc.get_all_contents())
+		if(additional_shields.type != type || additional_shields == src || !additional_shields.on)
+			continue
+		return FALSE
 	return equipped_to_valid_slot
 
 /obj/item/beltshield/equipped(mob/user, slot, initial)

@@ -167,7 +167,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 	list(//tools
 		/obj/item/grenade/iedcasing/spawned = 1,
 		/obj/item/hatchet = 1,
-		/obj/item/melee/baton/security/cattleprod = 1,
+		/obj/item/melee/tonfa/stunprod = 1,
 		/obj/item/multitool = 1,
 		/obj/item/pen/fountain = 1,
 		/obj/item/restraints/handcuffs/cable = 1,

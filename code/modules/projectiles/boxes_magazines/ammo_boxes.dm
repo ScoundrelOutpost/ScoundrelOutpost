@@ -105,3 +105,8 @@
 	icon_state = "foambox_riot"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	custom_materials = list(/datum/material/iron = 50000)
+
+// scoundrel content
+/obj/item/ammo_box/c9mm/surplus
+	name = "ammo box (surplus 9mm)"
+	ammo_type = /obj/item/ammo_casing/c9mm/surplus

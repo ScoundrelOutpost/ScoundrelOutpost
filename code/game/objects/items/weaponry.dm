@@ -287,7 +287,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	flags_1 = CONDUCT_1
 	force = 9
 	throwforce = 10
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=1150, /datum/material/glass=75)
 	attack_verb_continuous = list("hits", "bludgeons", "whacks", "bonks")
 	attack_verb_simple = list("hit", "bludgeon", "whack", "bonk")
@@ -309,37 +309,52 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/wirerod/attackby(obj/item/attacking_item, mob/user, params)
 	if(istype(attacking_item, /obj/item/shard))
-		var/datum/crafting_recipe/recipe_to_use = /datum/crafting_recipe/spear
-		user.balloon_alert(user, "crafting spear...")
-		if(do_after(user, initial(recipe_to_use.time), src)) // we do initial work here to get the correct timer
-			var/obj/item/spear/crafted_spear = new /obj/item/spear()
+		var/obj/item/spear/crafted_spear = new /obj/item/spear()
 
-			remove_item_from_storage(user)
-			if (!user.transferItemToLoc(attacking_item, crafted_spear))
-				return
-			crafted_spear.CheckParts(list(attacking_item))
-			qdel(src)
+		remove_item_from_storage(user)
+		if (!user.transferItemToLoc(attacking_item, crafted_spear))
+			return
+		crafted_spear.CheckParts(list(attacking_item))
+		qdel(src)
 
-			user.put_in_hands(crafted_spear)
-			user.balloon_alert(user, "crafted spear")
+		user.put_in_hands(crafted_spear)
+		user.balloon_alert(user, "crafted spear")
 		return
 
 	if(isigniter(attacking_item) && !(HAS_TRAIT(attacking_item, TRAIT_NODROP)))
-		var/datum/crafting_recipe/recipe_to_use = /datum/crafting_recipe/stunprod
-		user.balloon_alert(user, "crafting cattleprod...")
-		if(do_after(user, initial(recipe_to_use.time), src))
-			var/obj/item/melee/baton/security/cattleprod/prod = new
+		var/obj/item/unfinished_stunprod/prod = new
 
-			remove_item_from_storage(user)
+		remove_item_from_storage(user)
 
-			qdel(attacking_item)
-			qdel(src)
+		qdel(attacking_item)
+		qdel(src)
 
-			user.put_in_hands(prod)
-			user.balloon_alert(user, "crafted cattleprod")
-		return
+		user.put_in_hands(prod)
+		user.balloon_alert(user, "crafted stunprod")
+	return
 	return ..()
 
+/obj/item/unfinished_stunprod
+	name = "stunprod"
+	desc = "A makeshift shock-prod. Looks like it's missing a power cell."
+	icon = 'icons/obj/weapons/items_and_weapons.dmi'
+	icon_state = "stunprod_nocell"
+	force = 12
+	throwforce = 12
+
+/obj/item/unfinished_stunprod/attackby(obj/item/attacking_item, mob/user, params)
+	if(istype(attacking_item, /obj/item/stock_parts/cell))
+		var/obj/item/melee/tonfa/stunprod/prod = new /obj/item/melee/tonfa/stunprod()
+
+		remove_item_from_storage(user)
+		if (!user.transferItemToLoc(attacking_item, prod))
+			return
+		prod.CheckParts(list(attacking_item))
+		qdel(src)
+
+		user.put_in_hands(prod)
+		user.balloon_alert(user, "finished stunprod")
+	return
 
 /obj/item/throwing_star
 	name = "throwing star"

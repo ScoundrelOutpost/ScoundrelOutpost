@@ -984,7 +984,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
-/datum/design/beanbag_slug
+/*/datum/design/beanbag_slug
 	name = "Beanbag Slug"
 	id = "beanbag_slug"
 	build_type = AUTOLATHE | PROTOLATHE | AWAY_LATHE
@@ -994,9 +994,9 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
-/datum/design/rubbershot
+/*/datum/design/rubbershot
 	name = "Rubber Shot"
 	id = "rubber_shot"
 	build_type = AUTOLATHE | PROTOLATHE | AWAY_LATHE
@@ -1006,9 +1006,9 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
-/datum/design/c38
+/*/datum/design/c38
 	name = "Speed Loader (.38)"
 	id = "c38"
 	build_type = AUTOLATHE | PROTOLATHE | AWAY_LATHE
@@ -1018,7 +1018,7 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
 /datum/design/recorder
 	name = "Universal Recorder"
@@ -1271,7 +1271,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
-/datum/design/flamethrower
+/*/datum/design/flamethrower
 	name = "Flamethrower"
 	id = "flamethrower"
 	build_type = AUTOLATHE
@@ -1281,7 +1281,7 @@
 		RND_CATEGORY_HACKED,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/ // craft it yourself
 
 /datum/design/electropack
 	name = "Electropack"
@@ -1339,7 +1339,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
-/datum/design/shotgun_dart
+/*/datum/design/shotgun_dart
 	name = "Shotgun Dart"
 	id = "shotgun_dart"
 	build_type = AUTOLATHE
@@ -1349,9 +1349,9 @@
 		RND_CATEGORY_HACKED,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
-/datum/design/incendiary_slug
+/*/datum/design/incendiary_slug
 	name = "Incendiary Slug"
 	id = "incendiary_slug"
 	build_type = AUTOLATHE
@@ -1361,7 +1361,7 @@
 		RND_CATEGORY_HACKED,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
 /datum/design/riot_dart
 	name = "Foam Riot Dart"
@@ -1387,7 +1387,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
-/datum/design/a357
+/*/datum/design/a357
 	name = ".357 Casing"
 	id = "a357"
 	build_type = AUTOLATHE
@@ -1397,9 +1397,9 @@
 		RND_CATEGORY_HACKED,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
-/datum/design/c10mm
+/*/datum/design/c10mm
 	name = "Ammo Box (10mm)"
 	id = "c10mm"
 	build_type = AUTOLATHE
@@ -1409,9 +1409,9 @@
 		RND_CATEGORY_HACKED,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
-/datum/design/c45
+/*/datum/design/c45
 	name = "Ammo Box (.45)"
 	id = "c45"
 	build_type = AUTOLATHE
@@ -1421,9 +1421,9 @@
 		RND_CATEGORY_HACKED,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
-/datum/design/c9mm
+/*/datum/design/c9mm
 	name = "Ammo Box (9mm)"
 	id = "c9mm"
 	build_type = AUTOLATHE
@@ -1433,7 +1433,7 @@
 		RND_CATEGORY_HACKED,
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY*/
 
 /datum/design/cleaver
 	name = "Butcher's Cleaver"

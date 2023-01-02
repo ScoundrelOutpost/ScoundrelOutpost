@@ -165,7 +165,7 @@ GLOBAL_LIST_INIT(phobia_objs, list(
 
 	"greytide" = (typecacheof(list(
 		/obj/item/clothing/under/color/grey,
-		/obj/item/melee/baton/security/cattleprod,
+		/obj/item/melee/tonfa/stunprod,
 		/obj/item/spear,
 		/obj/item/toy/figure/assistant,
 		/obj/structure/statue/sandstone/assistant,

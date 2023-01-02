@@ -724,6 +724,7 @@
 		return
 	do_teleport(target, get_turf(target), 15, channel = TELEPORT_CHANNEL_BLUESPACE)
 
+// scoundrel content
 /obj/item/melee/tonfa
 	name = "shock tonfa"
 	desc = "A defense-oriented martial weapon of ancient design. \
@@ -817,3 +818,17 @@
 	playsound(user ? user : src, activate_sound, activate_sound_volume, TRUE)
 	update_icon(UPDATE_OVERLAYS)
 	return COMPONENT_NO_DEFAULT_MESSAGE
+
+
+
+// makeshift stunprod
+/obj/item/melee/tonfa/stunprod
+	name = "stunprod"
+	desc = "An improvised stun baton."
+	icon_state = "stunprod"
+	inhand_icon_state = "prod"
+	worn_icon_state = "stunprod"
+	
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
+	w_class = WEIGHT_CLASS_BULKY
+	active_w_class = WEIGHT_CLASS_BULKY

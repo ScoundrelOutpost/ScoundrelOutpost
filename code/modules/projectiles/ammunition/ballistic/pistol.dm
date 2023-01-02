@@ -52,3 +52,9 @@
 	desc = "A .50AE bullet casing."
 	caliber = CALIBER_50
 	projectile_type = /obj/projectile/bullet/a50ae
+
+// scoundrel content
+/obj/item/ammo_casing/c9mm/surplus
+	name = "surplus 9mm bullet casing"
+	desc = "A surplus 9mm bullet casing."
+	projectile_type = /obj/projectile/bullet/c9mm/surplus

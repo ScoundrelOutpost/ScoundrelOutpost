@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - bugfix: "fixes automatic ethereal resurrection"

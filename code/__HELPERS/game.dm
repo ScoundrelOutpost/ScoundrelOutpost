@@ -191,7 +191,7 @@
 	if ((!candidate_mob.client.prefs.read_preference(/datum/preference/toggle/ghost_roles_as_admin)) && candidate_mob.client.holder)
 		return
 
-	SEND_SOUND(candidate_mob, 'sound/misc/notice2.ogg') //Alerting them to their consideration
+	SEND_SOUND(candidate_mob, 'sound/misc/compiler-stage1.ogg') //Alerting them to their consideration
 	if(flashwindow)
 		window_flash(candidate_mob.client)
 	var/list/answers = ignore_category ? list("Yes", "No", "Never for this round") : list("Yes", "No")

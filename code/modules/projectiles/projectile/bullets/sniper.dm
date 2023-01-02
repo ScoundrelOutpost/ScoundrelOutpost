@@ -73,3 +73,10 @@
 	ricochet_incidence_leeway = 90
 	ricochet_decay_damage = 1
 	ricochet_shoots_firer = FALSE
+
+// scoundrel content
+/obj/projectile/bullet/p50/surplus
+	name ="surplus .50 bullet"
+	damage = 45
+	paralyze = 0
+	dismemberment = 0

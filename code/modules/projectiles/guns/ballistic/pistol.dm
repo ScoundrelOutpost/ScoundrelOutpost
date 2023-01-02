@@ -111,3 +111,7 @@
 	else
 		to_chat(user, span_notice("..and falls into view. Whew, that was a close one."))
 		user.dropItemToGround(src)
+
+// scoundrel content
+/obj/item/gun/ballistic/automatic/pistol/empty
+	spawnwithmagazine = FALSE

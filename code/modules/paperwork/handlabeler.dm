@@ -4,8 +4,9 @@
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "labeler0"
 	inhand_icon_state = null
+	w_class = WEIGHT_CLASS_SMALL
 	var/label = null
-	var/labels_left = 30
+	var/labels_left = 8
 	var/mode = 0
 
 /obj/item/hand_labeler/suicide_act(mob/living/user)

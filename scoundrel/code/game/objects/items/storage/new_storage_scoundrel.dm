@@ -96,7 +96,7 @@
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 	atom_storage.max_slots = 4
-	atom_storage.max_total_storage = 20
+	atom_storage.max_total_storage = 8
 	atom_storage.set_holdable(list(
 		/obj/item/evidencebag,
 		/obj/item/detective_scanner,
@@ -106,6 +106,7 @@
 		/obj/item/taperecorder,
 		/obj/item/paper,
 		/obj/item/tape,
+		/obj/item/hand_labeler,
 		/obj/item/toy/crayon/white,
 		))
 
@@ -116,6 +117,17 @@
 	new /obj/item/camera(src)
 	new /obj/item/evidencebag(src)
 	new /obj/item/taperecorder(src)
+
+/obj/item/storage/pouch/forensic/alibi
+	name = "alibi kit"
+	desc = "A pouch ergonomically designed for storing political self-defense tools."
+	icon_state = "black"
+/obj/item/storage/pouch/forensic/alibi/preloaded/PopulateContents()
+	new /obj/item/camera(src)
+	new /obj/item/taperecorder(src)
+	new /obj/item/hand_labeler(src)
+	new /obj/item/folder/alibipouch(src)
+
 
 //engineering
 /obj/item/storage/pouch/engineer

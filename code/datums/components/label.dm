@@ -60,10 +60,20 @@
 	if(!istype(labeler) || labeler.mode)
 		return
 
-	remove_label()
-	playsound(parent, 'sound/items/poster_ripped.ogg', 20, TRUE)
-	to_chat(user, span_warning("You remove the label from [parent]."))
-	qdel(src) // Remove the component from the object.
+	to_chat(user, span_warning("You begin scraping the label from [parent]."))
+
+	if(do_after(user, 5 SECONDS, target = source))
+		var/obj/item/paper/crumpled/label/discarded_label = new /obj/item/paper/crumpled/label(src)
+		var/datum/paper_input/label_datum = new /datum/paper_input(discarded_label.loc)
+		label_datum.raw_text = "([label_name])"
+	
+		discarded_label.raw_text_inputs = list(label_datum)
+		user.put_in_hands(discarded_label)
+
+		remove_label()
+		playsound(parent, 'sound/items/poster_ripped.ogg', 80, TRUE)
+		to_chat(user, span_warning("You remove the label from [parent]."))
+		qdel(src) // Remove the component from the object.
 
 /**
 	This proc will trigger when someone examines the parent.
@@ -89,3 +99,13 @@
 	var/atom/owner = parent
 	owner.name = replacetext(owner.name, "([label_name])", "") // Remove the label text from the parent's name, wherever it's located.
 	owner.name = trim(owner.name) // Shave off any white space from the beginning or end of the parent's name.
+
+// scoundrel content
+/obj/item/paper/crumpled/label
+	name = "discarded label"
+	desc = "A durable, inflammable label, painstakingly scraped away from something."
+	icon_state = "scrap"
+	resistance_flags = null // harder to get rid of the evidence than that
+
+/obj/item/paper/crumpled/label/burn_paper_product_attackby_check(obj/item/I, mob/living/user, bypass_clumsy)
+	return

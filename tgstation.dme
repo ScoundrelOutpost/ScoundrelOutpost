@@ -3481,6 +3481,7 @@
 #include "code\modules\mapfluff\ruins\spaceruin_code\whiteshipruin_box.dm"
 #include "scoundrel\code\modules\mapfluff\freebooter.dm"
 #include "scoundrel\code\modules\mapfluff\space_ruins_fluff.dm"
+#include "scoundrel\code\modules\mapfluff\alibi.dm"
 #include "code\modules\mapping\access_helpers.dm"
 #include "code\modules\mapping\mail_sorting_helpers.dm"
 #include "code\modules\mapping\map_template.dm"

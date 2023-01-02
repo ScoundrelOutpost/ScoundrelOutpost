@@ -220,7 +220,14 @@
 
 			if(DEPARTMENT_RESUPPLY)
 				var/list/crate_types = list(
-					/datum/supply_pack/critter/butterfly, // if you're seeing this, someone forgot to fill out this list
+					/datum/supply_pack/weapons/single/sniper,
+					/datum/supply_pack/weapons/single/agentpistol,
+					/datum/supply_pack/security/recharger,
+					/datum/supply_pack/clothing_pack/randomised,
+					/datum/supply_pack/clothing_pack/formalwear,
+					/datum/supply_pack/clothing_pack/mafia,
+					/datum/supply_pack/tools/insulatedgloves,
+					/datum/supply_pack/tools/space_heater,
 					)
 				for(var/crate in crate_types)
 					var/datum/supply_pack/pack = SSshuttle.supply_packs[crate]

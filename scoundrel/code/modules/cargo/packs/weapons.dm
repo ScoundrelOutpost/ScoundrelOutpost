@@ -59,6 +59,24 @@
 	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/empty = 1)
 	goody = TRUE
+	contraband = TRUE
+
+/datum/supply_pack/weapons/single/sniper
+	name = "(Single) .50 Sniper Rifle"
+	desc = "A high-caliber, long-range anti-materiel rifle, for piercing through hulls and eliminating priority targets. \
+	They won't know what hit 'em. Does not come with ammunition!"
+	cost = CARGO_CRATE_VALUE * 20
+	contains = list(/obj/item/gun/ballistic/automatic/sniper_rifle/empty = 1)
+	goody = TRUE
+	contraband = TRUE
+
+/datum/supply_pack/weapons/single/suppressor
+	name = "(Single) Universal Suppressor"
+	desc = "A cheap suppressor that fits most standard ballistic guns."
+	cost = CARGO_CRATE_VALUE * 1
+	contains = list(/obj/item/suppressor = 1)
+	goody = TRUE
+	contraband = TRUE
 
 /datum/supply_pack/weapons/single/bolabox
 	name = "(Single) Box of Bolas"

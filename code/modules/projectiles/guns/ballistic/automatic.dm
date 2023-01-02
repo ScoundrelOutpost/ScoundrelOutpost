@@ -390,3 +390,7 @@
 	actions_types = list()
 	fire_sound = 'sound/weapons/laser.ogg'
 	casing_ejector = FALSE
+
+// scoundrel content
+/obj/item/gun/ballistic/automatic/sniper_rifle/empty
+	spawnwithmagazine = FALSE

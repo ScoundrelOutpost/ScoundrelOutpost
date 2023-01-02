@@ -23,3 +23,9 @@
 	name = ".50 marksman round bullet casing"
 	desc = "A .50 caliber marksman round casing."
 	projectile_type = /obj/projectile/bullet/p50/marksman
+
+// scoundrel content
+/obj/item/ammo_casing/p50/surplus
+	name = "surplus .50 bullet casing"
+	desc = "A surplus .50 bullet casing."
+	projectile_type = /obj/projectile/bullet/p50/surplus

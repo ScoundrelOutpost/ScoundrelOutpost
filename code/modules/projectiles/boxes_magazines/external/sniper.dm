@@ -29,3 +29,8 @@
 	desc = "An extremely fast sniper round able to pretty much instantly shoot through something."
 	ammo_type = /obj/item/ammo_casing/p50/marksman
 	max_ammo = 5
+
+// scoundrel content
+/obj/item/ammo_box/magazine/sniper_rounds/surplus
+	name = "sniper rounds (surplus)"
+	ammo_type = /obj/item/ammo_casing/p50/surplus

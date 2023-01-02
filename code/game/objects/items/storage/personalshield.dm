@@ -14,7 +14,7 @@
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
 	equip_sound = 'sound/items/handling/component_pickup.ogg'
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_NORMAL
 	actions_types = list(/datum/action/item_action/toggle_personalshield)
 
 	var/no_overlay = FALSE
@@ -24,17 +24,20 @@
 	var/activate_start_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg'
 	var/activate_start_sound_volume = 35
 
-	var/drained_sound = 'sound/scoundrel/rattle2.ogg' // sound played when the battery runs dry
+	var/drained_sound = 'sound/machines/defib_failed.ogg' // sound played when the battery runs dry
 	var/drained_sound_volume = 100 // volume control is important
 
-//	var/overload_sound = 'sound/scoundrel/rattle2.ogg' // sound played when the shield is broken
-//	var/overload_sound_volume = 100
+	var/overload_sound = 'sound/misc/fingersnap1.ogg' // sound played when the shield is broken
+	var/overload_sound_volume = 100
 
-//	var/damaged_sound = 'sound/scoundrel/weapons/dryfire.ogg' // sound when the shield is damaged
-//	var/damaged_sound_volume = 100
+	var/impact_sound = 'sound/scoundrel/shield/shieldimpact.ogg' // sound when the shield is damaged
+	var/impact_sound_volume = 100
 
-//	var/charging_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg' // sound played when the shield regains charge
-//	var/charging_sound_volume = 50
+	var/recharge_sound_effect = 'sound/scoundrel/devices/shieldrecharge_5s.ogg' // sound played when the shield regains charge
+	var/recharge_sound_effect_volume = 50
+
+	var/recharge_finished_sound_effect = 'sound/machines/defib_success.ogg'
+	var/recharge_finished_sound_effect_volume = 100
 
 	var/activate_sound = 'sound/scoundrel/buttons/walk_intent_active.ogg'
 	var/deactivate_sound = 'sound/scoundrel/buttons/walk_intent_inactive.ogg' // placeholders
@@ -118,7 +121,9 @@
 				if(do_after(wearer, activation_time, wearer, PERSONAL_SHIELD_STEP_FLAGS, extra_checks=CALLBACK(src, PROC_REF(slot_check), wearer)))
 					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, shield_icon_file = shield_icon_file, shield_icon = shield_icon, charge_increment_delay = shield_recharge_increment_delay, \
 					charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
-					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay, run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)))
+					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay, \
+					recharge_sound_effect = recharge_sound_effect, recharge_sound_effect_volume = recharge_sound_effect_volume, recharge_finished_sound_effect = recharge_finished_sound_effect, recharge_finished_sound_effect_volume = recharge_finished_sound_effect_volume, \
+					run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)))
 					to_chat(wearer, span_notice("You turn the [src] on."))
 					on = TRUE
 					activating = FALSE
@@ -213,10 +218,13 @@
 	return ..()
 
 /obj/item/personalshield/proc/shield_damaged(mob/living/wearer, attack_text, new_current_charges)
+
+	playsound(src, impact_sound, impact_sound_volume, FALSE, -2)
 	wearer.visible_message(span_danger("[wearer]'s [src] deflects [attack_text] with a shimmering barrier!"))
 	new /obj/effect/temp_visual/personalshield(get_turf(wearer))
 	if(new_current_charges == 0)
-		wearer.visible_message(span_danger("The [src] emits a light beep as the barrier arounded [wearer] fails to spring forth!"))
+		playsound(src, overload_sound, overload_sound_volume, FALSE, -2)
+		wearer.visible_message(span_danger("The [src] emits a light beep as the barrier arounded [wearer] shatters!"))
 
 /obj/effect/temp_visual/personalshield
 	icon = 'icons/effects/personalshields.dmi'

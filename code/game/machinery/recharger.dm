@@ -199,3 +199,7 @@
 
 	. += mutable_appearance(icon, "[base_icon_state]-full", alpha = src.alpha)
 	. += emissive_appearance(icon, "[base_icon_state]-full", src, alpha = src.alpha)
+
+// scoundrel content
+/obj/machinery/recharger/unanchored
+	anchored = 0

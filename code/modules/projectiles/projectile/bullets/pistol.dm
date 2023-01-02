@@ -42,3 +42,7 @@
 	name = "10mm incendiary bullet"
 	damage = 20
 	fire_stacks = 3
+
+// scoundrel content
+/obj/projectile/bullet/c9mm/surplus
+	damage = 18

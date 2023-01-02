@@ -160,7 +160,7 @@
 		var/list/shuttle_spawns = list()
 		switch(dispatch_type)
 			if(HIJACK_SYNDIE)
-				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/weapons/defender_pistols]
+				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/weapons/protected/defender_pistols]
 				pack.generate(pick_n_take(empty_shuttle_turfs))
 
 				shuttle_spawns.Add(/mob/living/simple_animal/hostile/syndicate/ranged/infiltrator)
@@ -183,7 +183,7 @@
 					shuttle_spawns.Add(/mob/living/simple_animal/hostile/bear/russian)
 
 			if(SPIDER_GIFT)
-				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/weapons/defender_pistols]
+				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/weapons/protected/defender_pistols]
 				pack.generate(pick_n_take(empty_shuttle_turfs))
 
 				shuttle_spawns.Add(/mob/living/simple_animal/hostile/giant_spider)

@@ -263,3 +263,13 @@
 	unblockable_attack_types = list(UNARMED_ATTACK, MELEE_ATTACK, THROWN_PROJECTILE_ATTACK)
 
 	cell_power_loss = 12.5 // with a standard cell of 1000 charge, empty after 80 health is lost
+
+/obj/item/personalshield/standard/advanced
+	name = "advanced personal shield-emitter"
+	desc = "A high-grade dynamic-field projector that encloses the entire body. High-kinetic projectiles and \
+	energetic bursts are halted as long as the field integrity remains stable. It features an efficient lattice \
+	that will sustain slightly more damage than the standard, and uses less power."
+	icon_state = "advanced"
+	shield_health = 100
+
+	cell_power_loss = 6 // almost two full lifespans

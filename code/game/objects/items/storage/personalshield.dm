@@ -1,8 +1,8 @@
 #define PERSONAL_SHIELD_STEP_FLAGS IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE|IGNORE_SLOWDOWNS|IGNORE_HELD_ITEM
 
-/obj/item/beltshield
-	name = "shield belt"
-	desc = "This is a basic level shield belt. Blocks forceful attacks, but permits hands through, and not especially durable. You probably shouldn't have this!"
+/obj/item/personalshield
+	name = "personal shield device"
+	desc = "This is a basic level personal shield device. Blocks forceful attacks, but permits hands through, and not especially durable. You probably shouldn't have this!"
 	icon = 'scoundrel/icons/obj/personal_shields.dmi'
 	icon_state = "personalshield"
 	inhand_icon_state = "electronic"
@@ -15,7 +15,7 @@
 	max_integrity = 300
 	equip_sound = 'sound/items/handling/component_pickup.ogg'
 	w_class = WEIGHT_CLASS_SMALL
-	actions_types = list(/datum/action/item_action/toggle_beltshield)
+	actions_types = list(/datum/action/item_action/toggle_personalshield)
 
 	var/no_overlay = FALSE
 	var/shield_icon_file = 'icons/effects/effects.dmi'
@@ -65,26 +65,26 @@
 	var/obj/item/stock_parts/cell/cell
 	var/cell_type
 
-/obj/item/beltshield/Initialize(mapload)
+/obj/item/personalshield/Initialize(mapload)
 	. = ..()
 	if(cell_type)
 		cell = new cell_type(src)
 	else
 		cell = new(src)
 
-/obj/item/beltshield/get_cell()
+/obj/item/personalshield/get_cell()
 	return cell
 
 // can probably be discarded
-/*/obj/item/beltshield/attack_self(mob/living/carbon/user)
+/*/obj/item/personalshield/attack_self(mob/living/carbon/user)
 	if(user)
 		toggle_shields(user)*/
 
-/obj/item/beltshield/ui_action_click(mob/user, action)
-	if(istype(action, /datum/action/item_action/toggle_beltshield))
+/obj/item/personalshield/ui_action_click(mob/user, action)
+	if(istype(action, /datum/action/item_action/toggle_personalshield))
 		toggle_shields(user)
 
-/obj/item/beltshield/proc/toggle_shields(mob/user)
+/obj/item/personalshield/proc/toggle_shields(mob/user)
 	if(user.incapacitated())
 		return
 	if(!on)
@@ -95,7 +95,7 @@
 	else
 		remove_shield_component(user)
 
-/obj/item/beltshield/proc/add_shield_component(mob/user)
+/obj/item/personalshield/proc/add_shield_component(mob/user)
 	// if the button is pressed during startup sequence
 	if(activating)
 		to_chat(user, span_notice("[src] already starting up!"))
@@ -104,7 +104,7 @@
 	if(!on && ishuman(user))
 		var/mob/living/carbon/human/wearer = user
 		if(cell?.charge >= cell_failsafe_value)
-			if(slot_check(wearer))
+			if(slot_check(wearer, FALSE))
 				// cleared to start / feedback
 				activating = TRUE
 				to_chat(wearer, span_notice("[src] is activating!"))
@@ -113,7 +113,7 @@
 				if(do_after(wearer, activation_time, wearer, PERSONAL_SHIELD_STEP_FLAGS, extra_checks=CALLBACK(src, PROC_REF(slot_check), wearer)))
 					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, shield_icon_file = shield_icon_file, shield_icon = shield_icon, charge_increment_delay = shield_recharge_increment_delay, \
 					charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
-					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay)
+					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay, run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)))
 					to_chat(wearer, span_notice("You turn the [src] on."))
 					on = TRUE
 					activating = FALSE
@@ -136,7 +136,7 @@
 			playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 			return
 
-/obj/item/beltshield/proc/remove_shield_component(mob/user)
+/obj/item/personalshield/proc/remove_shield_component(mob/user)
 	if(on)
 		var/datum/component/shielded/shield = GetComponent(/datum/component/shielded)
 		shield_tracked_health = shield.current_charges
@@ -147,7 +147,7 @@
 		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 		update_action_buttons()
 
-/obj/item/beltshield/proc/slot_check(mob/living/carbon/human/wearer)
+/obj/item/personalshield/proc/slot_check(mob/living/carbon/human/wearer, interference_check = TRUE)
 	var/equipped_to_valid_slot = FALSE
 	if(wearer.belt == src)
 		equipped_to_valid_slot = TRUE
@@ -155,28 +155,30 @@
 		equipped_to_valid_slot = TRUE
 	if(wearer.r_store == src | wearer.l_store == src)
 		equipped_to_valid_slot = TRUE
-	for(var/obj/item/beltshield/additional_shields in loc.get_all_contents())
-		if(additional_shields.type != type || additional_shields == src || !additional_shields.on)
-			continue
-		return FALSE
+	if(interference_check)
+		for(var/obj/item/personalshield/additional_shields in loc.get_all_contents())
+			if(additional_shields.type != type || additional_shields == src || !additional_shields.on)
+				continue
+			to_chat(wearer, span_warning("[src] won't function if you have another personal shield active."))
+			return FALSE
 	return equipped_to_valid_slot
 
-/obj/item/beltshield/equipped(mob/user, slot, initial)
+/obj/item/personalshield/equipped(mob/user, slot, initial)
 	. = ..()
 	RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
 
-/obj/item/beltshield/dropped(mob/user, silent)
+/obj/item/personalshield/dropped(mob/user, silent)
 	. = ..()
 	remove_shield_component()
 	UnregisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS)
 
-/obj/item/beltshield/proc/shield_reaction(mob/living/carbon/human/owner, atom/movable/hitby, damage = 0, attack_text = "the attack", attack_type = MELEE_ATTACK, armour_penetration = 0)
+/obj/item/personalshield/proc/shield_reaction(mob/living/carbon/human/owner, atom/movable/hitby, damage = 0, attack_text = "the attack", attack_type = MELEE_ATTACK, armour_penetration = 0)
 	if(SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, owner, hitby, attack_text, 0, damage, attack_type) & COMPONENT_HIT_REACTION_BLOCK && slot_check(owner))
 		drain_cell_power(owner, damage, attack_type)
 		return SHIELD_BLOCK
 	return NONE
 
-/obj/item/beltshield/proc/drain_cell_power(mob/living/carbon/human/owner, damage = 0, attack_type)
+/obj/item/personalshield/proc/drain_cell_power(mob/living/carbon/human/owner, damage = 0, attack_type)
 	if(!cell)
 		return
 
@@ -191,27 +193,40 @@
 		remove_shield_component(owner)
 		playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 
-/obj/item/beltshield/emp_act(severity)
+/obj/item/personalshield/emp_act(severity)
 	. = ..()
 	if (!cell)
 		return
 	if (!(. & EMP_PROTECT_SELF))
 		drain_cell_power(1000 / severity)
 
-/obj/item/beltshield/update_icon_state()
+/obj/item/personalshield/update_icon_state()
 	if(on)
 		icon_state = "[initial(icon_state)]_on"
 	else
 		icon_state = "[initial(icon_state)]"
 	return ..()
 
-/datum/action/item_action/toggle_beltshield
+/obj/item/personalshield/proc/shield_damaged(mob/living/wearer, attack_text, new_current_charges)
+	wearer.visible_message(span_danger("[wearer]'s [src] deflects [attack_text] with a shimmering barrier!"))
+	new /obj/effect/temp_visual/personalshield(get_turf(wearer))
+	if(new_current_charges == 0)
+		wearer.visible_message(span_danger("The [src] emits a light beep as the barrier arounded [wearer] fails to spring forth!"))
+
+/obj/effect/temp_visual/personalshield
+	icon = 'icons/effects/personalshields.dmi'
+	name = "shield impact"
+	icon_state = "shieldimpact"
+	randomdir = FALSE
+	duration = 1 SECONDS
+
+/datum/action/item_action/toggle_personalshield
 	name = "Toggle Shield-Emitter"
 	desc = null
 	icon_icon = 'scoundrel/icons/obj/personal_shields.dmi'
 	button_icon_state = "personalshield"
 
-/obj/item/beltshield/standard
+/obj/item/personalshield/standard
 	name = "personal shield-emitter"
 	desc = "A civilian-grade dynamic-field projector that encloses the entire body. High-kinetic projectiles and \
 	energetic bursts are halted as long as the field integrity remains stable. It has a basic cell that will last one \

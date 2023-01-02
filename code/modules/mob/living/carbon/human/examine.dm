@@ -112,7 +112,7 @@
 		. += status_examines
 
 	if(HAS_TRAIT(src, TRAIT_SHIELD_PROTECTED))
-		. += "<span class='warning'><B>[t_He] [t_is] protected by a shimmering barrier.</B></span>"
+		. += "[t_He] [t_is] protected by a shimmering barrier."
 
 	var/appears_dead = FALSE
 	var/just_sleeping = FALSE

@@ -80,6 +80,11 @@
 	if(user)
 		toggle_shields(user)*/
 
+/obj/item/personalshield/examine(mob/user)
+	. = ..()
+	if(cell)
+		. += span_notice("\The [src] is [round(cell.percent())]% charged.")
+
 /obj/item/personalshield/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/toggle_personalshield))
 		toggle_shields(user)

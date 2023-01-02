@@ -17,7 +17,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	actions_types = list(/datum/action/item_action/toggle_personalshield)
 
-	var/no_overlay = FALSE
+	var/no_overlay = TRUE
 	var/shield_icon_file = 'icons/effects/effects.dmi'
 	var/shield_icon = "shield"
 
@@ -27,7 +27,7 @@
 	var/drained_sound = 'sound/machines/defib_failed.ogg' // sound played when the battery runs dry
 	var/drained_sound_volume = 100 // volume control is important
 
-	var/overload_sound = 'sound/misc/fingersnap1.ogg' // sound played when the shield is broken
+	var/overload_sound = 'sound/scoundrel/shield/shieldshatter2.ogg' // sound played when the shield is broken
 	var/overload_sound_volume = 100
 
 	var/impact_sound = 'sound/scoundrel/shield/shieldimpact.ogg' // sound when the shield is damaged
@@ -78,7 +78,7 @@
 /obj/item/personalshield/get_cell()
 	return cell
 
-// can probably be discarded
+// add this back when it's usable inhand
 /*/obj/item/personalshield/attack_self(mob/living/carbon/user)
 	if(user)
 		toggle_shields(user)*/
@@ -201,7 +201,7 @@
 	. = cell.use(cell_reduction_amount)
 	if(on && cell.charge <= cell_failsafe_value)
 		remove_shield_component(owner)
-		playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
+		playsound(src, drained_sound, drained_sound_volume, FALSE, 2)
 
 /obj/item/personalshield/emp_act(severity)
 	. = ..()
@@ -223,7 +223,7 @@
 	wearer.visible_message(span_danger("[wearer]'s [src] deflects [attack_text] with a shimmering barrier!"))
 	new /obj/effect/temp_visual/personalshield(get_turf(wearer))
 	if(new_current_charges == 0)
-		playsound(src, overload_sound, overload_sound_volume, FALSE, -2)
+		playsound(src, overload_sound, overload_sound_volume, FALSE, 2)
 		wearer.visible_message(span_danger("The [src] emits a light beep as the barrier arounded [wearer] shatters!"))
 
 /obj/effect/temp_visual/personalshield
@@ -262,4 +262,4 @@
 	resistance_multiplier = 1
 	unblockable_attack_types = list(UNARMED_ATTACK, MELEE_ATTACK, THROWN_PROJECTILE_ATTACK)
 
-	cell_power_loss = 8 // empty after 80 health is lost
+	cell_power_loss = 12.5 // with a standard cell of 1000 charge, empty after 80 health is lost

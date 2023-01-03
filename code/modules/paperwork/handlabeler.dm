@@ -57,6 +57,14 @@
 		to_chat(user, span_warning("You can't label creatures!")) // use a collar
 		return
 
+	var/old_label = null
+	old_label = A.GetComponent(/datum/component/label)
+	
+	// checks if there's already a label present
+	if(old_label != null)
+		to_chat(user, span_warning("You need to remove the old label!"))
+		return
+
 	user.visible_message(span_notice("[user] labels [A] with \"[label]\"."), \
 		span_notice("You label [A] with \"[label]\"."))
 	A.AddComponent(/datum/component/label, label)
@@ -125,3 +133,8 @@
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
+
+// scoundrel content
+/obj/item/hand_labeler/examine(mob/user)
+	. = ..()
+	. += span_notice("It has [labels_left] out of [initial(labels_left)] labels left.")

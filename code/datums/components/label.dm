@@ -66,10 +66,13 @@
 		var/obj/item/paper/crumpled/label/discarded_label = new /obj/item/paper/crumpled/label(src)
 		var/datum/paper_input/label_datum = new /datum/paper_input(discarded_label.loc)
 		label_datum.raw_text = "([label_name])"
-	
+		discarded_label.name += " ([label_name])"
+		discarded_label.desc += "<br>Residue on the back looks like it might've belonged to [source]."
+
 		discarded_label.raw_text_inputs = list(label_datum)
 		user.put_in_hands(discarded_label)
 
+		source.AddComponent(/datum/component/label_residue)
 		remove_label()
 		playsound(parent, 'sound/items/poster_ripped.ogg', 80, TRUE)
 		to_chat(user, span_warning("You remove the label from [parent]."))
@@ -103,9 +106,50 @@
 // scoundrel content
 /obj/item/paper/crumpled/label
 	name = "discarded label"
-	desc = "A durable, inflammable label, painstakingly scraped away from something."
+	desc = "A sticky, durable, annoying scrap. Painstakingly scraped away from something."
 	icon_state = "scrap"
 	resistance_flags = null // harder to get rid of the evidence than that
 
 /obj/item/paper/crumpled/label/burn_paper_product_attackby_check(obj/item/I, mob/living/user, bypass_clumsy)
 	return
+
+/obj/item/paper/crumpled/label/AltClick(mob/living/user, obj/item/I)
+	return
+
+/obj/item/paper/crumpled/label/examine(mob/user)
+	. = ..()
+	. -= span_notice("Alt-click [src] to fold it into a paper plane.") // is this really the best way to do this?
+
+
+// residue
+/datum/component/label_residue
+	dupe_mode = COMPONENT_DUPE_UNIQUE_PASSARGS
+
+/datum/component/label_residue/Initialize()
+	if(!isatom(parent))
+		return COMPONENT_INCOMPATIBLE
+
+/datum/component/label_residue/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, PROC_REF(OnAttackby))
+	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, PROC_REF(Examine))
+/datum/component/label_residue/UnregisterFromParent()
+	UnregisterSignal(parent, list(COMSIG_PARENT_ATTACKBY, COMSIG_PARENT_EXAMINE))
+
+/datum/component/label_residue/proc/Examine(datum/source, mob/user, list/examine_list)
+	SIGNAL_HANDLER
+
+	examine_list += span_notice("There's a small strip of adhesive residue left on it.")
+
+/datum/component/label_residue/proc/OnAttackby(datum/source, obj/item/attacker, mob/user)
+	SIGNAL_HANDLER
+
+	var/obj/item/soap/soap = attacker
+	if(!istype(soap))
+		return
+
+	to_chat(user, span_warning("You begin scrubbing away the adhesive residue."))
+
+	if(do_after(user, 5 SECONDS, target = source))
+
+		to_chat(user, span_warning("You scrub the residue from [parent]."))
+		qdel(src) // Remove the component from the object.

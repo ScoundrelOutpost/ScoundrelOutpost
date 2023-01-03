@@ -121,7 +121,7 @@
 /obj/item/storage/pouch/forensic/alibi
 	name = "alibi kit"
 	desc = "A pouch ergonomically designed for storing political self-defense tools."
-	icon_state = "black"
+	icon_state = "alibi"
 /obj/item/storage/pouch/forensic/alibi/preloaded/PopulateContents()
 	new /obj/item/camera(src)
 	new /obj/item/taperecorder(src)

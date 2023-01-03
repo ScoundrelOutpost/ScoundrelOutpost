@@ -56,6 +56,9 @@
 	if(ismob(A))
 		to_chat(user, span_warning("You can't label creatures!")) // use a collar
 		return
+	if(isturf(A))
+		to_chat(user, span_warning("You can't label that!")) // don't be a menace
+		return
 
 	var/old_label = null
 	old_label = A.GetComponent(/datum/component/label)
@@ -81,7 +84,7 @@
 	if(mode)
 		to_chat(user, span_notice("You turn on [src]."))
 		//Now let them chose the text.
-		var/str = reject_bad_text(tgui_input_text(user, "Label text", "Set Label", label, MAX_NAME_LEN))
+		var/str = reject_bad_text(tgui_input_text(user, "Label text", "Set Label", label, 8))
 		if(!str)
 			to_chat(user, span_warning("Invalid text!"))
 			return

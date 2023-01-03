@@ -67,7 +67,7 @@
 		var/datum/paper_input/label_datum = new /datum/paper_input(discarded_label.loc)
 		label_datum.raw_text = "([label_name])"
 		discarded_label.name += " ([label_name])"
-		discarded_label.desc += "<br>Residue on the back looks like it might've belonged to [source]."
+		discarded_label.desc += span_notice("<br>Residue on the back looks like it might've belonged to [source].")
 
 		discarded_label.raw_text_inputs = list(label_datum)
 		user.put_in_hands(discarded_label)

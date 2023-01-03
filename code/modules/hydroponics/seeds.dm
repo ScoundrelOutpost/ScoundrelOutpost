@@ -305,7 +305,7 @@
 			T.reagents.remove_all_type(/datum/reagent/consumable/nutriment, num_nutriment, strict = TRUE)
 			T.reagents.chem_temp = max(3, (T.reagents.chem_temp + num_nutriment * -5))
 			T.reagents.handle_reactions()
-			playsound(T.loc, 'sound/effects/space_wind.ogg', 50)
+			playsound(T.loc, 'sound/scoundrel/ambience/spacewind2.ogg', 50)
 
 /// Setters procs ///
 

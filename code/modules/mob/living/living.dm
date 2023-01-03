@@ -999,7 +999,7 @@
 		return pick("trails_1", "trails_2")
 
 /mob/living/experience_pressure_difference(pressure_difference, direction, pressure_resistance_prob_delta = 0)
-	playsound(src, 'sound/effects/space_wind.ogg', 50, TRUE)
+	playsound(src, 'sound/scoundrel/ambience/spacewind2.ogg', 25, TRUE, ignore_walls = FALSE)
 	if(buckled || mob_negates_gravity())
 		return
 

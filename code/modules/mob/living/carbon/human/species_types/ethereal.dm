@@ -14,6 +14,8 @@
 	species_language_holder = /datum/language_holder/ethereal
 	toxic_food = NONE
 
+	death_sound = 'sound/scoundrel/species/ethereal/ethereal_deathgasp.ogg'
+
 	hair_color = "fixedmutcolor"
 	hair_alpha = 180
 

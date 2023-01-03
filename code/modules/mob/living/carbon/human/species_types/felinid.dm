@@ -20,6 +20,8 @@
 	family_heirlooms = list(/obj/item/toy/cattoy)
 	examine_limb_id = SPECIES_HUMAN
 
+	death_sound = 'sound/effects/bodyfall2.ogg'
+	
 // Prevents felinids from taking toxin damage from carpotoxin
 /datum/species/human/felinid/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H, delta_time, times_fired)
 	. = ..()

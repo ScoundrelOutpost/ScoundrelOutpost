@@ -71,7 +71,7 @@
 		return
 
 	user.visible_message(span_notice("[user] analyzes [M]'s vitals."))
-	balloon_alert(user, "analyzing vitals")
+//	balloon_alert(user, "analyzing vitals") // pointless, annoying
 
 	switch (scanmode)
 		if (SCANMODE_HEALTH)

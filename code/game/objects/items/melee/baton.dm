@@ -760,6 +760,7 @@
 	var/active_verb_simple = list("attack", "whack", "jab", "zap", "strike", "shock")
 	var/activate_sound = SFX_SPARKS
 	var/activate_sound_volume = 100
+	var/deactivate_sound = null
 	var/active_hit_sound = 'sound/scoundrel/tonfahit.ogg'
 
 	//the popup message when activating/deactivating
@@ -771,9 +772,13 @@
 	var/active_emissive_inhand = null
 	var/inactive_emissive_inhand = null
 
-//this handles emissives on subtypes
 /obj/item/melee/tonfa/Initialize(mapload)
 	. = ..()
+	// if there's no deactivate sound, use the activate sound
+	if(!deactivate_sound)
+		deactivate_sound = activate_sound
+		
+	//this handles emissives on subtypes
 	active_emissive = "[icon_state]_on_emissive"
 	inactive_emissive = "[icon_state]_emissive"
 	active_emissive_inhand = "[inhand_icon_state]_on_emissive"
@@ -815,7 +820,7 @@
 	weapon_active = active
 	if(user && activate_balloon == TRUE)
 		balloon_alert(user, "[name] [active ? "enabled":"disabled"]")
-	playsound(user ? user : src, activate_sound, activate_sound_volume, TRUE)
+	playsound(user ? user : src, active ? activate_sound : deactivate_sound, activate_sound_volume, TRUE)
 	update_icon(UPDATE_OVERLAYS)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 

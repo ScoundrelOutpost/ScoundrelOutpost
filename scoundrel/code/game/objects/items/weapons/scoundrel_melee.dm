@@ -134,3 +134,42 @@
 	desc = "Hardlight projectors in the Toa gauntlets generate an energy throwing-star."
 	icon_icon = 'scoundrel/icons/obj/weapons/melee.dmi'
 	button_icon_state = "energystar"
+
+// agent energysword
+/obj/item/melee/tonfa/esword
+	name = "energy blade"
+	desc = "A contained-plasma energy blade, effective at penetrating armor. It can be folded into a compact shape for concealed carrying."
+	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
+	icon_state = "esword"
+	inhand_icon_state = "esword"
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+//	worn_icon_state = null
+	lefthand_file = 'scoundrel/icons/mob/inhands/64x64_weapons_left.dmi'
+	righthand_file = 'scoundrel/icons/mob/inhands/64x64_weapons_right.dmi'
+	slot_flags = null
+
+	damtype = BRUTE
+	force = 0
+	throwforce = 0
+	w_class = WEIGHT_CLASS_SMALL
+	armour_penetration = 50
+	wound_bonus = 10
+	bare_wound_bonus = 10
+
+	///Determines our active effects
+	active_w_class = WEIGHT_CLASS_BULKY
+
+	active_force = 20
+	active_damage_type = BRUTE
+	active_sharpness = SHARP_EDGED
+	active_hit_sound = 'sound/scoundrel/weapons/energy_sword_swing5.ogg'
+	active_throwforce = 25
+	active_verb_continuous = list("slashes","phases","stabs","ripostes")
+	active_verb_simple = list("slash","phase","stab","riposte")
+	activate_sound = 'sound/scoundrel/weapons/esword_on.ogg'
+	activate_sound_volume = 38
+	activate_balloon = FALSE
+
+/obj/item/melee/tonfa/esword/add_blood_DNA(list/blood_dna)
+	return FALSE

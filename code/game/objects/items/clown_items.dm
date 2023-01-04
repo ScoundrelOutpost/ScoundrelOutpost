@@ -28,7 +28,7 @@
 	grind_results = list(/datum/reagent/lye = 10)
 	var/cleanspeed = 3.5 SECONDS //slower than mop
 	force_string = "robust... against germs"
-	var/uses = 100
+	var/uses = 50
 
 /obj/item/soap/Initialize(mapload)
 	. = ..()
@@ -69,7 +69,7 @@
 	inhand_icon_state = "soapnt"
 	worn_icon_state = "soapnt"
 	cleanspeed = 2.8 SECONDS //janitor gets this
-	uses = 300
+//	uses = 300
 
 /obj/item/soap/nanotrasen/cyborg
 

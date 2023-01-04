@@ -7,7 +7,7 @@
 	body_zone = BODY_ZONE_CHEST
 	body_part = CHEST
 	plaintext_zone = "chest"
-	is_dimorphic = TRUE
+	is_dimorphic = FALSE
 	px_x = 0
 	px_y = 0
 	stam_damage_coeff = 1

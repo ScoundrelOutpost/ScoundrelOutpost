@@ -137,7 +137,7 @@
 
 // agent energysword
 /obj/item/melee/tonfa/esword
-	name = "energy blade"
+	name = "plasma blade"
 	desc = "A contained-plasma energy blade, effective at penetrating armor. It can be folded into a compact shape for concealed carrying."
 	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
 	icon_state = "esword"

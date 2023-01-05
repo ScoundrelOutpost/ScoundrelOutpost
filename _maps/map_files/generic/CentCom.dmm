@@ -10126,9 +10126,6 @@
 	opacity = 1
 	},
 /obj/item/soap/syndie,
-/obj/structure/sign/poster/contraband/got_wood{
-	pixel_x = 32
-	},
 /turf/open/floor/iron/freezer,
 /area/centcom/syndicate_mothership/control)
 "DL" = (

@@ -40,7 +40,7 @@
 	return BRUTELOSS
 
 /obj/item/healthanalyzer/attack_self(mob/user)
-	if(!user.can_read(src) || user.is_blind())
+	if(!user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return
 
 	scanmode = (scanmode + 1) % SCANMODE_COUNT
@@ -82,7 +82,7 @@
 	add_fingerprint(user)
 
 /obj/item/healthanalyzer/attack_secondary(mob/living/victim, mob/living/user, params)
-	if(!user.can_read(src) || user.is_blind())
+	if(!user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	chemscan(user, victim)
@@ -442,7 +442,7 @@
 /obj/item/healthanalyzer/AltClick(mob/user)
 	..()
 
-	if(!user.canUseTopic(src, be_close = TRUE) || !user.can_read(src) || user.is_blind())
+	if(!user.canUseTopic(src, be_close = TRUE) || !user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return
 
 	mode = !mode
@@ -505,7 +505,7 @@
 			L.dropItemToGround(src)
 
 /obj/item/healthanalyzer/wound/attack(mob/living/carbon/patient, mob/living/carbon/human/user)
-	if(!user.can_read(src) || user.is_blind())
+	if(!user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return
 
 	add_fingerprint(user)

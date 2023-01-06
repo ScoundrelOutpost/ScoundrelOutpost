@@ -72,14 +72,11 @@
 		deconstruct(FALSE)
 
 /obj/structure/transit_tube_pod/container_resist_act(mob/living/user)
-	if(!user.incapacitated())
-		empty_pod()
-		return
 	if(!moving)
 		user.changeNext_move(CLICK_CD_BREAKOUT)
 		user.last_special = world.time + CLICK_CD_BREAKOUT
 		to_chat(user, span_notice("You start trying to escape from the pod..."))
-		if(do_after(user, 1 MINUTES, target = src))
+		if(do_after(user, 10 SECONDS, target = src))
 			to_chat(user, span_notice("You manage to open the pod."))
 			empty_pod()
 

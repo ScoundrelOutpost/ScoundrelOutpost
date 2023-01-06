@@ -1,9 +1,10 @@
 /obj/item/gun/ballistic/automatic/pistol
-	name = "\improper Makarov pistol"
-	desc = "A small, easily concealable 9mm handgun. Has a threaded barrel for suppressors."
-	icon_state = "pistol"
+	name = "agent pistol"
+	desc = "An easily concealed, clandestine 9mm handgun. Has a threaded barrel for suppressors."
+	icon_state = "pistol_evil"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/m9mm
+	empty_indicator = TRUE
 	can_suppress = TRUE
 	burst_size = 1
 	fire_delay = 0

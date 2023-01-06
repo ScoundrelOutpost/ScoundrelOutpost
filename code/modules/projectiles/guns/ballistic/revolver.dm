@@ -115,7 +115,7 @@
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("Default" = "c38",
 						"Fitz Special" = "c38_fitz",
-						"Police Positive Special" = "c38_police",
+//						"Police Positive Special" = "c38_police", // looks too similar to the 357
 						"Blued Steel" = "c38_blued",
 						"Stainless Steel" = "c38_stainless",
 						"Gold Trim" = "c38_trim",

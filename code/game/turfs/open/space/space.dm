@@ -106,7 +106,7 @@
 			if(isspaceturf(t))
 				//let's NOT update this that much pls
 				continue
-			set_light(2)
+			set_light(2, 1, COLOR_SPACE_AMBIENCE_MAIN)
 			return
 		set_light(0)
 

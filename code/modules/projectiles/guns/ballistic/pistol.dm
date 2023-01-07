@@ -41,7 +41,6 @@
 	desc = "The spiritual successor of the Makarov, or maybe someone just dropped their gun in a bucket of paint. The gun is chambered in 10mm."
 	icon_state = "pistol_evil"
 	mag_type = /obj/item/ammo_box/magazine/m10mm
-	empty_indicator = TRUE
 	suppressor_x_offset = 12
 
 /obj/item/gun/ballistic/automatic/pistol/m1911
@@ -49,6 +48,7 @@
 	desc = "A classic .45 handgun with a small magazine capacity."
 	icon_state = "m1911"
 	w_class = WEIGHT_CLASS_NORMAL
+	empty_indicator = FALSE
 	mag_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
 	fire_sound = 'sound/weapons/gun/pistol/shot_alt.ogg'
@@ -65,6 +65,7 @@
 	icon_state = "deagle"
 	force = 14
 	mag_type = /obj/item/ammo_box/magazine/m50
+	empty_indicator = FALSE
 	can_suppress = FALSE
 	mag_display = TRUE
 	fire_sound = 'sound/weapons/gun/rifle/shot.ogg'
@@ -88,6 +89,7 @@
 	icon_state = "aps"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m9mm_aps
+	empty_indicator = FALSE
 	can_suppress = TRUE
 	burst_size = 3
 	fire_delay = 1
@@ -99,6 +101,7 @@
 	name = "flat gun"
 	desc = "A 2 dimensional gun.. what?"
 	icon_state = "flatgun"
+	empty_indicator = FALSE
 	mag_display = FALSE
 	show_bolt_icon = FALSE
 

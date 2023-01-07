@@ -656,7 +656,7 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module))
 	cost = 50
 	power_type = /datum/action/innate/ai/break_air_alarms
 	unlock_text = "<span class='notice'>You remove the safety overrides on all air alarms, but you leave the confirm prompts open. You can hit 'Yes' at any time... you bastard.</span>"
-	unlock_sound = 'sound/effects/space_wind.ogg'
+	unlock_sound = 'sound/scoundrel/ambience/spacewind2.ogg'
 
 /datum/action/innate/ai/break_air_alarms
 	name = "Override Air Alarm Safeties"

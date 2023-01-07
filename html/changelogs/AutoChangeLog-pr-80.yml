@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "starsuits can now also be worn in the exosuit slot"
+  - imageadd: "starsuit emissives"

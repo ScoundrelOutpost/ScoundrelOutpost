@@ -35,6 +35,8 @@
 	species_cookie = /obj/item/reagent_containers/condiment/milk
 	species_language_holder = /datum/language_holder/skeleton
 
+	death_sound = 'sound/scoundrel/species/plasmaman/plasmaman_deathgasp.ogg'
+
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/skeleton,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/skeleton,

@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscdel: "removed some horrible shock content"

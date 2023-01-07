@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "stunprods reworked"
+  - balance: "slapcrafting stunprods and spears is now instant"
+  - imageadd: "stunprod emissives"

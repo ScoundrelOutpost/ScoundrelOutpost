@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscdel: "removed instances of notice2.ogg"
+  - soundadd: "added a new nightshift announcement sound"

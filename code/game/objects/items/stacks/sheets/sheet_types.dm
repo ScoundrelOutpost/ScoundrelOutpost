@@ -15,8 +15,9 @@
  * Iron
  */
 GLOBAL_LIST_INIT(metal_recipes, list ( \
-	new/datum/stack_recipe("stool", /obj/structure/chair/stool, one_per_turf = TRUE, on_solid_ground = TRUE), \
-	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, one_per_turf = TRUE, on_solid_ground = TRUE), \
+	new/datum/stack_recipe("chair", /obj/structure/chair, 1, time = 1.5 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
+	new/datum/stack_recipe("stool", /obj/structure/chair/stool, 1, time = 1.5 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
+	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, 1, time = 1.5 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
 	new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = TRUE, on_solid_ground = TRUE), \
 	new/datum/stack_recipe("double bed", /obj/structure/bed/double, 4, one_per_turf = TRUE, on_solid_ground = TRUE), \
 	null, \
@@ -287,8 +288,8 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 1 SECONDS), \
 	new/datum/stack_recipe("rolling pin", /obj/item/kitchen/rollingpin, 2, time = 3 SECONDS), \
-	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood/, 3, time = 1 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
-	new/datum/stack_recipe("winged wooden chair", /obj/structure/chair/wood/wings, 3, time = 1 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
+	new/datum/stack_recipe("wooden chair", /obj/structure/chair/wood/, 3, time = 2 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
+	new/datum/stack_recipe("winged wooden chair", /obj/structure/chair/wood/wings, 3, time = 2 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
 	new/datum/stack_recipe("wooden barricade", /obj/structure/barricade/wooden, 5, time = 5 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
 	new/datum/stack_recipe("wooden door", /obj/structure/mineral_door/wood, 10, time = 2 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \
 	new/datum/stack_recipe("wooden stairs frame", /obj/structure/stairs_frame/wood, 10, time = 5 SECONDS, one_per_turf = TRUE, on_solid_ground = TRUE), \

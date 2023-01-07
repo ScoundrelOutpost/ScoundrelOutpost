@@ -448,6 +448,7 @@
 		/datum/computer_file/program/supermatter_monitor,
 		/datum/computer_file/program/radar/lifeline,
 		/datum/computer_file/program/shipping,
+		/datum/computer_file/program/budgetorders,
 		/datum/computer_file/program/scipaper_program,
 	)
 

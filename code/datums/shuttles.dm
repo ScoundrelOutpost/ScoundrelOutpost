@@ -187,7 +187,7 @@
 /datum/map_template/shuttle/emergency/construction/post_load()
 	. = ..()
 	//enable buying engines from cargo
-	var/datum/supply_pack/P = SSshuttle.supply_packs[/datum/supply_pack/engineering/shuttle_engine]
+	var/datum/supply_pack/P = SSshuttle.supply_packs[/datum/supply_pack/construction/shuttle_engine]
 	P.special_enabled = TRUE
 
 

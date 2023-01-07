@@ -385,7 +385,7 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	accessory = /obj/item/clothing/accessory/armband/hydro
 	belt = /obj/item/storage/belt/utility/small
-	ears = /obj/item/radio/headset
+	ears = /obj/item/radio/headset/heads/captain
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/clipboard

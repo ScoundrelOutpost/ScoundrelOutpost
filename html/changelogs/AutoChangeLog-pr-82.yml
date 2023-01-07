@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "surplus ammunition obtained through cargo"
+  - balance: "cargo given a thorough balance overhaul"

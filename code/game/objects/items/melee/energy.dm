@@ -18,7 +18,7 @@
 	/// Whether our blade is active or not.
 	var/blade_active = FALSE
 	/// Force while active.
-	var/active_force = 30
+	var/active_force = 20
 	/// Throwforce while active.
 	var/active_throwforce = 20
 	/// Sharpness while active.
@@ -209,7 +209,7 @@
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "esaw"
 	hitsound = 'sound/weapons/circsawhit.ogg'
-	force = 18
+	force = 16
 	hitcost = 75 // Costs more than a standard cyborg esword.
 	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = SHARP_EDGED
@@ -217,7 +217,7 @@
 	tool_behaviour = TOOL_SAW
 	toolspeed = 0.7 // Faster than a normal saw.
 
-	active_force = 30
+	active_force = 20
 	sword_color_icon = null // Stops icon from breaking when turned on.
 
 /obj/item/melee/energy/sword/cyborg/saw/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
@@ -302,7 +302,7 @@
 	hitsound = 'sound/weapons/blade1.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	force = 30
+	force = 20
 	throwforce = 1 // Throwing or dropping the item deletes it.
 	throw_speed = 3
 	throw_range = 1

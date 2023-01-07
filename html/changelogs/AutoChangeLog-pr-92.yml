@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "health analyzer is now a small item, up from tiny"
+  - bugfix: "health analyzer can now be used in the dark"

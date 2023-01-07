@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscdel: "most ammo types have been removed from the autolathe's list of printables."
+  - bugfix: "QM now has a captain's headset"

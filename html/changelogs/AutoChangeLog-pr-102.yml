@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "transit tubes now have a delay for carbons, and cannot be broken out of mid-transit"

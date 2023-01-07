@@ -105,3 +105,10 @@
 	caliber = CALIBER_50
 	max_ammo = 7
 	multiple_sprites = AMMO_BOX_PER_BULLET
+
+// scoundrel content
+
+/obj/item/ammo_box/magazine/m9mm/surplus
+	name = "pistol magazine (9mm surplus)"
+	desc = "A gun magazine. Loaded with rounds of subpar quality."
+	ammo_type = /obj/item/ammo_casing/c9mm/surplus

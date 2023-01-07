@@ -250,16 +250,32 @@
 	. = ..()
 	. += span_notice("This station will create a pod for you to ride, no need to wait for one.")
 
+#define TRANSIT_TUBE_STEP_FLAGS IGNORE_SLOWDOWNS|IGNORE_HELD_ITEM|IGNORE_INCAPACITATED
 /obj/structure/transit_tube/station/dispenser/Bumped(atom/movable/AM)
 	if(!(istype(AM) && AM.dir == boarding_dir) || AM.anchored)
 		return
-	var/obj/structure/transit_tube_pod/dispensed/pod = new(loc)
-	AM.visible_message(span_notice("[pod] forms around [AM]."), span_notice("[pod] materializes around you."))
-	playsound(src, 'sound/weapons/emitter2.ogg', 50, TRUE)
-	pod.setDir(turn(src.dir, -90))
-	AM.forceMove(pod)
-	pod.update_appearance()
-	launch_pod()
+
+	if(!iscarbon(AM))
+		var/obj/structure/transit_tube_pod/dispensed/pod = new(loc)
+		AM.visible_message(span_notice("[pod] forms around [AM]."), span_notice("[pod] materializes around you."))
+		playsound(src, 'sound/weapons/emitter2.ogg', 50, TRUE)
+		pod.setDir(turn(src.dir, -90))
+		AM.forceMove(pod)
+		pod.update_appearance()
+		launch_pod()
+
+	// does a do_after if the atom is a carbon. idk a better way to do this
+	if(iscarbon(AM))
+		AM.visible_message(span_notice("A transit pod begins forming around [AM]."), span_notice("A transit pod begins forming around you."))
+		playsound(src, SFX_SPARKS, 100, TRUE)
+		if(do_after(AM, 1.2 SECONDS, timed_action_flags = TRANSIT_TUBE_STEP_FLAGS))
+			var/obj/structure/transit_tube_pod/dispensed/pod = new(loc)
+			AM.visible_message(span_notice("[pod] forms around [AM]."), span_notice("[pod] materializes around you."))
+			playsound(src, 'sound/weapons/emitter2.ogg', 50, TRUE)
+			pod.setDir(turn(src.dir, -90))
+			AM.forceMove(pod)
+			pod.update_appearance()
+			launch_pod()
 
 /obj/structure/transit_tube/station/dispenser/pod_stopped(obj/structure/transit_tube_pod/pod, from_dir)
 	playsound(src, 'sound/machines/ding.ogg', 50, TRUE)

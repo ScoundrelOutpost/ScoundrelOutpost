@@ -5,7 +5,7 @@
 	worn_icon = 'icons/mob/clothing/head/helmet.dmi'
 	icon_state = "helmet"
 	inhand_icon_state = "helmet"
-	armor = list(MELEE = 35, BULLET = 30, LASER = 30,ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	armor = list(MELEE = 20, BULLET = 20, LASER = 20,ENERGY = 20, BOMB = 40, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -13,7 +13,7 @@
 	strip_delay = 60
 	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT
 	flags_cover = HEADCOVERSEYES
-	flags_inv = HIDEHAIR
+//	flags_inv = HIDEHAIR // milsimmers begone, my colorful hair is more important
 
 	dog_fashion = /datum/dog_fashion/head/helmet
 
@@ -56,7 +56,7 @@
 	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
 	icon_state = "helmetalt"
 	inhand_icon_state = "helmet"
-	armor = list(MELEE = 15, BULLET = 60, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 50, WOUND = 5)
+	armor = list(MELEE = 20, BULLET = 30, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
 	dog_fashion = null
 
 /obj/item/clothing/head/helmet/alt/Initialize(mapload)
@@ -139,7 +139,7 @@
 	inhand_icon_state = "riot_helmet"
 	toggle_message = "You pull the visor down on"
 	alt_toggle_message = "You push the visor up on"
-	armor = list(MELEE = 50, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 0, BIO = 0, FIRE = 80, ACID = 80, WOUND = 15)
+	armor = list(MELEE = 30, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 50, WOUND = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT
 	strip_delay = 80
 	actions_types = list(/datum/action/item_action/toggle)
@@ -238,7 +238,7 @@
 	desc = "An ancient helmet made of bronze and leather."
 	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
-	armor = list(MELEE = 25, BULLET = 0, LASER = 25, ENERGY = 10, BOMB = 10, BIO = 0, FIRE = 100, ACID = 50, WOUND = 5)
+	armor = list(MELEE = 20, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 100, ACID = 50, WOUND = 10)
 	resistance_flags = FIRE_PROOF
 	icon_state = "roman"
 	inhand_icon_state = "roman_helmet"
@@ -331,7 +331,7 @@
 	icon_state = "durathread"
 	inhand_icon_state = "durathread_helmet"
 	resistance_flags = FLAMMABLE
-	armor = list(MELEE = 20, BULLET = 10, LASER = 30, ENERGY = 40, BOMB = 15, BIO = 0, FIRE = 40, ACID = 50, WOUND = 5)
+//	armor = list(MELEE = 20, BULLET = 10, LASER = 30, ENERGY = 40, BOMB = 15, BIO = 0, FIRE = 40, ACID = 50, WOUND = 5)
 	strip_delay = 60
 
 /obj/item/clothing/head/helmet/rus_helmet
@@ -339,7 +339,7 @@
 	desc = "It can hold a bottle of vodka."
 	icon_state = "rus_helmet"
 	inhand_icon_state = "rus_helmet"
-	armor = list(MELEE = 25, BULLET = 30, LASER = 0, ENERGY = 10, BOMB = 10, BIO = 0, FIRE = 20, ACID = 50, WOUND = 5)
+//	armor = list(MELEE = 25, BULLET = 30, LASER = 0, ENERGY = 10, BOMB = 10, BIO = 0, FIRE = 20, ACID = 50, WOUND = 5)
 
 /obj/item/clothing/head/helmet/rus_helmet/Initialize(mapload)
 	. = ..()
@@ -354,7 +354,7 @@
 	body_parts_covered = HEAD
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	armor = list(MELEE = 25, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 50, FIRE = -10, ACID = 50, WOUND = 5)
+//	armor = list(MELEE = 25, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 50, FIRE = -10, ACID = 50, WOUND = 5)
 
 /obj/item/clothing/head/helmet/elder_atmosian
 	name = "\improper Elder Atmosian Helmet"
@@ -365,3 +365,60 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS //Can change color and add prefix
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+// scoundrel content
+
+// the main, all-purpose helmet. use this instead of the parent
+/obj/item/clothing/head/helmet/scoundrel
+	name = "helmet"
+	desc = "A general-purpose helmet employed by private security and industrial contractors alike. It offers reasonable protection and \
+	has an inbuilt headlamp."
+	icon = 'scoundrel/icons/obj/clothing/scoundrel_head.dmi'
+	icon_state = "helmet"
+	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_head.dmi'
+	worn_icon_state = "helmet"
+	resistance_flags = FIRE_PROOF
+
+	lefthand_file = 'icons/mob/inhands/clothing/hats_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing/hats_righthand.dmi'
+	inhand_icon_state = "blueshift_helmet"
+
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
+	light_range = 5
+	light_power = 1
+	light_on = FALSE
+
+	// whether the headlamp is on or off
+	var/on = FALSE
+
+/obj/item/clothing/head/helmet/scoundrel/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob, ITEM_SLOT_HEAD)
+
+/obj/item/clothing/head/helmet/scoundrel/attack_self(mob/living/user)
+	toggle_helmet_light(user)
+
+/obj/item/clothing/head/helmet/scoundrel/proc/toggle_helmet_light(mob/living/user)
+	on = !on
+	if(on)
+		playsound(src, 'sound/weapons/magin.ogg', 40, TRUE, ignore_walls = FALSE)
+		turn_on(user)
+	else
+		playsound(src, 'sound/weapons/magout.ogg', 40, TRUE, ignore_walls = FALSE)
+		turn_off(user)
+	update_appearance()
+
+/obj/item/clothing/head/helmet/scoundrel/update_icon_state()
+	if(on)
+		icon_state = worn_icon_state = "[initial(worn_icon_state)]_light"
+	if(!on)
+		icon_state = worn_icon_state = "[initial(worn_icon_state)]"
+	return ..()
+
+/obj/item/clothing/head/helmet/scoundrel/proc/turn_on(mob/user)
+	set_light_on(TRUE)
+
+/obj/item/clothing/head/helmet/scoundrel/proc/turn_off(mob/user)
+	set_light_on(FALSE)

@@ -20,7 +20,7 @@
 	desc = "A crate containing 3 general-protection armor vests and helmets. Requires bridge access to open."
 	cost = CARGO_CRATE_VALUE * 16
 	contains = list(/obj/item/clothing/suit/armor/vest = 3,
-	/obj/item/clothing/head/helmet/sec = 3,)
+	/obj/item/clothing/head/helmet/scoundrel = 3,)
 	crate_name = "armor crate"
 
 // goodies
@@ -30,5 +30,5 @@
 	the important parts."
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/obj/item/clothing/suit/armor/vest,
-	/obj/item/clothing/head/helmet/sec,)
+	/obj/item/clothing/head/helmet/scoundrel,)
 	goody = TRUE

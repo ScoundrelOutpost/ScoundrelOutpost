@@ -13,7 +13,8 @@
 	attack_verb_continuous = list("whips", "lashes", "disciplines")
 	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
-	equip_sound = 'sound/items/handling/component_pickup.ogg'
+	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	drop_sound = 'sound/items/handling/component_drop.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	actions_types = list(/datum/action/item_action/toggle_personalshield)
 

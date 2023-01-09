@@ -4,8 +4,9 @@
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "labeler0"
 	inhand_icon_state = null
+	w_class = WEIGHT_CLASS_SMALL
 	var/label = null
-	var/labels_left = 30
+	var/labels_left = 8
 	var/mode = 0
 
 /obj/item/hand_labeler/suicide_act(mob/living/user)
@@ -55,6 +56,17 @@
 	if(ismob(A))
 		to_chat(user, span_warning("You can't label creatures!")) // use a collar
 		return
+	if(isturf(A))
+		to_chat(user, span_warning("You can't label that!")) // don't be a menace
+		return
+
+	var/old_label = null
+	old_label = A.GetComponent(/datum/component/label)
+	
+	// checks if there's already a label present
+	if(old_label != null)
+		to_chat(user, span_warning("You need to remove the old label!"))
+		return
 
 	user.visible_message(span_notice("[user] labels [A] with \"[label]\"."), \
 		span_notice("You label [A] with \"[label]\"."))
@@ -72,7 +84,7 @@
 	if(mode)
 		to_chat(user, span_notice("You turn on [src]."))
 		//Now let them chose the text.
-		var/str = reject_bad_text(tgui_input_text(user, "Label text", "Set Label", label, MAX_NAME_LEN))
+		var/str = reject_bad_text(tgui_input_text(user, "Label text", "Set Label", label, 8))
 		if(!str)
 			to_chat(user, span_warning("Invalid text!"))
 			return
@@ -124,3 +136,8 @@
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
+
+// scoundrel content
+/obj/item/hand_labeler/examine(mob/user)
+	. = ..()
+	. += span_notice("It has [labels_left] out of [initial(labels_left)] labels left.")

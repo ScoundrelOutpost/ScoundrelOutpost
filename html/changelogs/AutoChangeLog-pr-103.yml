@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "the makarov is now called the agent pistol and uses the black pistol sprite"
+  - balance: "agent pistol pistol now costs 5 tc from the uplink"

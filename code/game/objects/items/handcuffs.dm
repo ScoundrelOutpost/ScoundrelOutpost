@@ -500,6 +500,7 @@
 /obj/item/restraints/legcuffs/bola
 	name = "bola"
 	desc = "An ancient restraining weapon designed to wrap around the target's legs when thrown. Barraging something with enough of these has been known to tire targets out. it can also be swung like a flail, to less effect."
+	icon = 'scoundrel/icons/obj/weapons/scoundrel_thrown.dmi'
 	icon_state = "bola"
 	inhand_icon_state = "bola"
 	lefthand_file = 'icons/mob/inhands/weapons/thrown_lefthand.dmi'

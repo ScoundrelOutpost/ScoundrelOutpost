@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "new eswords can now light cigarettes"
+  - rscadd: "renamed energy blade to plasma blade"

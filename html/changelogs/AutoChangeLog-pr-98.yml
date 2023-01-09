@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "funds acquired through science should now go directly to the cargo budget"

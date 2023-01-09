@@ -44,7 +44,7 @@ Slimecrossing Weapons
 			attack_verb_continuous = string_list(list("poisons", "doses", "toxifies"))
 			attack_verb_simple = string_list(list("poison", "dose", "toxify"))
 		if(OXY)
-			hitsound = 'sound/effects/space_wind.ogg'
+			hitsound = 'sound/scoundrel/ambience/spacewind2.ogg'
 			attack_verb_continuous = string_list(list("suffocates", "winds", "vacuums"))
 			attack_verb_simple = string_list(list("suffocate", "wind", "vacuum"))
 		if(CLONE)

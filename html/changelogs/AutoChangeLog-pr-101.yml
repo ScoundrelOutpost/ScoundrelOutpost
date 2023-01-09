@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "\"All the Fuzz\", \"Izutsumi\", \"bedhead 4\" and \"shorter long bedhead\" hairstyles"
+  - imageadd: "replaced bedhead 1-3 and jade hairstyles"

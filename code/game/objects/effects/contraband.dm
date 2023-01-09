@@ -523,11 +523,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/random, 32)
 	desc = "A poster advertising bounty hunting services. \"I hear you got a problem.\""
 	icon_state = "bountyhunters"
 
-/obj/structure/sign/poster/contraband/got_wood
-	name = "Got Wood?"
-	desc = "A grimy old advert for a seedy lumber company. \"You got a friend in me.\" is scrawled in the corner."
-	icon_state = "got_wood"
-
 /obj/structure/sign/poster/contraband/moffuchis_pizza
 	name = "Moffuchi's Pizza"
 	desc = "Moffuchi's Pizzeria: family style pizza for 2 centuries."

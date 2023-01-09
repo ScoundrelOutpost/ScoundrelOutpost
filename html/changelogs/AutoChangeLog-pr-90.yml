@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "humans and felinids now have generic deathgasp sounds"
+  - soundadd: "ethereal & plasmaman deathgasps"

@@ -22,12 +22,11 @@
 // Low progression cost
 
 /datum/uplink_item/dangerous/pistol
-	name = "Makarov Pistol"
-	desc = "A small, easily concealable handgun that uses 9mm auto rounds in 8-round magazines and is compatible \
-			with suppressors."
-	progression_minimum = 10 MINUTES
+	name = "Agent Pistol"
+	desc = "An easily concealed, clandestine handgun that uses 9mm auto rounds in 8-round magazines. Has a \
+			threaded barrel for suppressors."
 	item = /obj/item/gun/ballistic/automatic/pistol
-	cost = 7
+	cost = 5
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/dangerous/throwingweapons
@@ -43,9 +42,8 @@
 	name = "Energy Sword"
 	desc = "The energy sword is an edged weapon with a blade of pure energy. The sword is small enough to be \
 			pocketed when inactive. Activating it produces a loud, distinctive noise."
-	progression_minimum = 20 MINUTES
-	item = /obj/item/melee/energy/sword/saber
-	cost = 8
+	item = /obj/item/melee/tonfa/esword
+	cost = 4
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/powerfist

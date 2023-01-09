@@ -320,15 +320,20 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	lefthand_file = 'icons/mob/inhands/items/chairs_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/chairs_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
-	force = 8
-	throwforce = 10
-	demolition_mod = 1.25
-	throw_range = 3
+	force = 10
+	throwforce = 8
+	throw_speed = 1
+	throw_range = 2
 	hitsound = 'sound/items/trayhit1.ogg'
 	hit_reaction_chance = 50
 	custom_materials = list(/datum/material/iron = 2000)
+
+	item_flags = SLOWS_WHILE_IN_HAND
+	slowdown = 0.25
+
 	var/break_chance = 5 //Likely hood of smashing the chair.
 	var/obj/structure/chair/origin_type = /obj/structure/chair
+	var/chairsmash_sound = 'sound/scoundrel/weapons/misc/chairbreak1.ogg'
 
 /obj/item/chair/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins hitting [user.p_them()]self with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -365,10 +370,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 
 /obj/item/chair/proc/smash(mob/living/user)
 	var/stack_type = initial(origin_type.buildstacktype)
+	playsound(loc, chairsmash_sound, 30, TRUE, -2)
 	if(!stack_type)
 		return
 	var/remaining_mats = initial(origin_type.buildstackamount)
-	remaining_mats-- //Part of the chair was rendered completely unusable. It magically dissapears. Maybe make some dirt?
+//	remaining_mats-- //Part of the chair was rendered completely unusable. It magically dissapears. Maybe make some dirt?
 	if(remaining_mats)
 		for(var/M=1 to remaining_mats)
 			new stack_type(get_turf(loc))
@@ -389,13 +395,24 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	. = ..()
 	if(!proximity)
 		return
-	if(prob(break_chance))
-		user.visible_message(span_danger("[user] smashes \the [src] to pieces against \the [target]"))
-		if(iscarbon(target))
-			var/mob/living/carbon/C = target
-			if(C.health < C.maxHealth*0.5)
-				C.Paralyze(20)
-		smash(user)
+	if(!ismob(target))
+		return
+
+	user.visible_message(span_danger("[user] smashes \the [src] to pieces against \the [target]"))
+	if(iscarbon(target))
+		var/mob/living/carbon/C = target
+		C.Knockdown(0.1)
+	smash(user)
+
+/obj/item/chair/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	. = ..()
+	if(!ismob(hit_atom))
+		return
+	hit_atom.visible_message(span_danger("[src] smashes to pieces against \the [hit_atom]"))
+	if(iscarbon(hit_atom))
+		var/mob/living/carbon/C = hit_atom
+		C.Knockdown(0.1)
+	smash()
 
 /obj/item/chair/greyscale
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS

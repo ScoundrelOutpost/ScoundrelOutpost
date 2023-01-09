@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "health analyzers have been returned to standard medkits"
+  - bugfix: "analyzers can now, definitely be used in the dark"

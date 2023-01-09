@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "chairs now break and knockdown when used as a weapon"
+  - balance: "chairs take slightly longer to construct"
+  - soundadd: "chair break sound effect"

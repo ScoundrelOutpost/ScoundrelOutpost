@@ -547,14 +547,17 @@
 /obj/item/storage/bag/quiver_maint
 	name = "makeshift quiver"
 	desc = "A quiver jury-rigged from some scrap materials. Suited to storing javelins and bolas."
+	icon = 'scoundrel/icons/obj/clothing/scoundrel_belt.dmi'
 	icon_state = "quiver"
-	worn_icon_state = "harpoon_quiver"
+	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_belt.dmi'
+	worn_icon_state = "quiver"
 
 /obj/item/storage/bag/quiver_maint/Initialize(mapload)
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.max_slots = 15
-	atom_storage.max_total_storage = 100
+	atom_storage.max_slots = 14
+	atom_storage.max_total_storage = 21
+	atom_storage.numerical_stacking = FALSE
 	atom_storage.set_holdable(list(
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/restraints/legcuffs/bola/tactical,

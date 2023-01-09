@@ -52,6 +52,20 @@
 /obj/item/melee/tonfa/dualmodesword/add_blood_DNA(list/blood_dna)
 	return FALSE
 
+/obj/item/melee/tonfa/dualmodesword/ignition_effect(atom/atom, mob/user)
+	if(!weapon_active)
+		user.visible_message("[user] tries to light [atom] using [user.p_their()] [name], but it doesn't do anything. Nice one.")
+		playsound(loc, hitsound, get_clamped_volume(), TRUE, -1)
+		return ""
+
+	var/in_mouth = ""
+	if(iscarbon(user))
+		var/mob/living/carbon/carbon_user = user
+		if(carbon_user.wear_mask)
+			in_mouth = ", barely missing [carbon_user.p_their()] nose"
+	. = span_warning("[user] swings [user.p_their()] [name][in_mouth]. [user.p_they(TRUE)] light[user.p_s()] [user.p_their()] [atom.name] in the process.")
+	playsound(loc, hitsound, get_clamped_volume(), TRUE, -1)
+	add_fingerprint(user)
 
 
 /obj/item/organ/internal/cyberimp/arm/dualmodesword/captain

@@ -12,6 +12,8 @@
 	var/internal_type = /obj/item/tank/internals/emergency_oxygen
 	/// What medipen should be present in this box?
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
+	/// scoundrel content - What pouch should be present in this box?
+	var/pouch_type = /obj/item/storage/pouch/forensic/alibi/preloaded
 	/// Are we crafted?
 	var/crafted = FALSE
 
@@ -41,6 +43,9 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
 		new /obj/item/flashlight/flare(src)
 		new /obj/item/radio/off(src)
+
+	if(!isnull(pouch_type))
+		new pouch_type(src)
 
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.

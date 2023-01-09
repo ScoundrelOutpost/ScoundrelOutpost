@@ -1,6 +1,7 @@
 /obj/item/clothing/under/starsuit
 	name = "starsuit"
-	desc = "A mobile, form-fitting EVA suit. Sleek and fashionable, but not particularly warming or durable. Don't forget to wear a jacket."
+	desc = "A mobile, form-fitting EVA suit. Sleek and fashionable, but not particularly warming or durable. Don't forget to wear a jacket.\n\
+	It can be worn as an undersuit or oversuit, but it doesn't have any vital tracking attached."
 	icon = 'scoundrel/icons/obj/clothing/scoundrel_under.dmi'
 	icon_state = "starsuit"
 	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_under.dmi'
@@ -21,14 +22,13 @@
 
 	strip_delay = 80
 	equip_delay_other = 80
-	limb_integrity = 60
+	limb_integrity = 30
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 100, WOUND = 0)
 	clothing_flags = STOPSPRESSUREDAMAGE
 	w_class = WEIGHT_CLASS_NORMAL
 //	slowdown = 0.5 need to figure out a better downside than this
 
-	has_sensor = LOCKED_SENSORS
-	sensor_mode = SENSOR_COORDS
+	has_sensor = NO_SENSORS
 	random_sensor = FALSE
 	can_adjust = FALSE
 
@@ -45,6 +45,7 @@
 	icon_state = "starsuit"
 	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_head.dmi'
 	worn_icon_state = "starsuit"
+	flash_protect = 0
 
 /obj/item/clothing/head/helmet/space/starsuit/engineer
 	name = "starsuit hardhat"

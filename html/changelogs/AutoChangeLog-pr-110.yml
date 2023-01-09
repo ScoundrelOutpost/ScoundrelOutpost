@@ -1,0 +1,8 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "quivers have been rebalanced"
+  - balance: "embeds have been rebalanced"
+  - balance: "spears and javelins can once again embed"
+  - imageadd: "new sprites for bolas and reinforced bolas"
+  - imageadd: "new maint quiver sprites"

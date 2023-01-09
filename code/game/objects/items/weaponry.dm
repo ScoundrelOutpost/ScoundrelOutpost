@@ -331,7 +331,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 		user.put_in_hands(prod)
 		user.balloon_alert(user, "crafted stunprod")
-	return
+		return
+		
 	return ..()
 
 /obj/item/unfinished_stunprod
@@ -365,8 +366,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	force = 2
 	throwforce = 10 //10 + 2 (WEIGHT_CLASS_SMALL) * 4 (EMBEDDED_IMPACT_PAIN_MULTIPLIER) = 18 damage on hit due to guaranteed embedding
-	throw_speed = 4
-	embedding = list("pain_mult" = 4, "embed_chance" = 100, "fall_chance" = 0)
+	throw_speed = 2
+	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 1, "embed_chance" = 100, "fall_chance" = 0)
 	armour_penetration = 40
 
 	w_class = WEIGHT_CLASS_SMALL

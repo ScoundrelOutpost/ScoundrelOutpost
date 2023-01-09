@@ -1,0 +1,6 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscdel: "removed dimorphism from human body parts"
+  - imageadd: "tweaked human sprites"
+  - imageadd: "tweaked short hair 3"

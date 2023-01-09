@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "lowered throwing star pain_mult from 4 to 1"

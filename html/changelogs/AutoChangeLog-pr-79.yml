@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "a tone-appropriate ambient starlight color"
+  - bugfix: "starlight is no longer fullbright"

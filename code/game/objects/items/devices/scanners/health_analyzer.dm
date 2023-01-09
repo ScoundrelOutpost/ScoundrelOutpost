@@ -18,7 +18,7 @@
 	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
 	throwforce = 3
-	w_class = WEIGHT_CLASS_TINY
+	w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 3
 	throw_range = 7
 	custom_materials = list(/datum/material/iron=200)
@@ -40,7 +40,7 @@
 	return BRUTELOSS
 
 /obj/item/healthanalyzer/attack_self(mob/user)
-	if(!user.can_read(src) || user.is_blind())
+	if(!user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return
 
 	scanmode = (scanmode + 1) % SCANMODE_COUNT
@@ -51,7 +51,7 @@
 			to_chat(user, span_notice("You switch the health analyzer to report extra info on wounds."))
 
 /obj/item/healthanalyzer/attack(mob/living/M, mob/living/carbon/human/user)
-	if(!user.can_read(src) || user.is_blind())
+	if(!user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return
 
 	flick("[icon_state]-scan", src) //makes it so that it plays the scan animation upon scanning, including clumsy scanning
@@ -71,7 +71,7 @@
 		return
 
 	user.visible_message(span_notice("[user] analyzes [M]'s vitals."))
-	balloon_alert(user, "analyzing vitals")
+//	balloon_alert(user, "analyzing vitals") // pointless, annoying
 
 	switch (scanmode)
 		if (SCANMODE_HEALTH)
@@ -82,7 +82,7 @@
 	add_fingerprint(user)
 
 /obj/item/healthanalyzer/attack_secondary(mob/living/victim, mob/living/user, params)
-	if(!user.can_read(src) || user.is_blind())
+	if(!user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	chemscan(user, victim)
@@ -442,7 +442,7 @@
 /obj/item/healthanalyzer/AltClick(mob/user)
 	..()
 
-	if(!user.canUseTopic(src, be_close = TRUE) || !user.can_read(src) || user.is_blind())
+	if(!user.canUseTopic(src, be_close = TRUE) || !user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return
 
 	mode = !mode
@@ -505,7 +505,7 @@
 			L.dropItemToGround(src)
 
 /obj/item/healthanalyzer/wound/attack(mob/living/carbon/patient, mob/living/carbon/human/user)
-	if(!user.can_read(src) || user.is_blind())
+	if(!user.can_read(src, reading_check_flags = (READING_CHECK_LITERACY)) || user.is_blind())
 		return
 
 	add_fingerprint(user)

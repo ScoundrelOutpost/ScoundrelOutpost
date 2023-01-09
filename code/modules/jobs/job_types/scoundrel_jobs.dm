@@ -298,6 +298,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/deckhand/captain_scoundrel
+	head = /obj/item/clothing/head/helmet/scoundrel
 	uniform = /obj/item/clothing/under/color/grey
 	suit = /obj/item/clothing/suit/jacket/fancy
 	backpack_contents = list(
@@ -459,8 +460,8 @@
 		/obj/item/pinpointer/crew = 1
 		)
 	belt = /obj/item/storage/belt/utility/small
-	head = /obj/item/clothing/head/helmet/toggleable/riot
-	mask = /obj/item/clothing/mask/russian_balaclava
+	head = /obj/item/clothing/head/helmet/scoundrel
+//	mask = /obj/item/clothing/mask/russian_balaclava
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
 	gloves = /obj/item/clothing/gloves/toagloves

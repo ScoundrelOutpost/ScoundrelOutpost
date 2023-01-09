@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "reagent splashing visual effects"
+  - imageadd: "splash effects to effects.dm"

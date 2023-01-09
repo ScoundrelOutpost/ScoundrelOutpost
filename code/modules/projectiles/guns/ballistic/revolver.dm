@@ -98,10 +98,10 @@
 		. = span_notice("[user] touches the end of [src] to \the [A], using the residual heat to ignite it in a puff of smoke. What a badass.")
 
 /obj/item/gun/ballistic/revolver/detective
-	name = "\improper Colt Detective Special"
+	name = "\improper c38 Special"
 	desc = "A classic, if not outdated, law enforcement firearm. Uses .38 Special rounds. \nSome spread rumors that if you loosen the barrel with a wrench, you can \"improve\" it."
 	fire_sound = 'sound/weapons/gun/revolver/shot.ogg'
-	icon_state = "detective"
+	icon_state = "c38"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	initial_caliber = CALIBER_38
 	alternative_caliber = CALIBER_357
@@ -113,15 +113,15 @@
 	misfire_probability = 0
 	misfire_percentage_increment = 25 //about 1 in 4 rounds, which increases rapidly every shot
 	obj_flags = UNIQUE_RENAME
-	unique_reskin = list("Default" = "detective",
-						"Fitz Special" = "detective_fitz",
-						"Police Positive Special" = "detective_police",
-						"Blued Steel" = "detective_blued",
-						"Stainless Steel" = "detective_stainless",
-						"Gold Trim" = "detective_gold",
-						"Leopard Spots" = "detective_leopard",
-						"The Peacemaker" = "detective_peacemaker",
-						"Black Panther" = "detective_panther"
+	unique_reskin = list("Default" = "c38",
+						"Fitz Special" = "c38_fitz",
+//						"Police Positive Special" = "c38_police", // looks too similar to the 357
+						"Blued Steel" = "c38_blued",
+						"Stainless Steel" = "c38_stainless",
+						"Gold Trim" = "c38_trim",
+						"Golden" = "c38_gold",
+						"The Peacemaker" = "c38_peacemaker",
+						"Black Panther" = "c38_panther"
 						)
 
 /obj/item/gun/ballistic/revolver/mateba

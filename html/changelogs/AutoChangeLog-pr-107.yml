@@ -1,0 +1,8 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscdel: "most jumpsuits no longer have a \"female\" worn variant"
+  - balance: "standard jumpsuits have a much higher durability"
+  - balance: "starsuits have a lower durability"
+  - balance: "starsuits no longer have suit sensors"
+  - bugfix: "starsuits no longer have flash protection"

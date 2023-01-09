@@ -109,6 +109,10 @@
 	name = "Afro (Large)"
 	icon_state = "hair_bigafro"
 
+/datum/sprite_accessory/hair/allthefuzz
+	name = "All The Fuzz"
+	icon_state = "hair_allthefuzz"
+
 /datum/sprite_accessory/hair/antenna
 	name = "Ahoge"
 	icon_state = "hair_antenna"
@@ -133,6 +137,10 @@
 	name = "Bedhead 3"
 	icon_state = "hair_bedheadv3"
 
+/datum/sprite_accessory/hair/bedheadv4
+	name = "Bedhead 4"
+	icon_state = "hair_bedheadv4"
+
 /datum/sprite_accessory/hair/bedheadlong
 	name = "Long Bedhead"
 	icon_state = "hair_long_bedhead"
@@ -140,6 +148,10 @@
 /datum/sprite_accessory/hair/bedheadfloorlength
 	name = "Floorlength Bedhead"
 	icon_state = "hair_floorlength_bedhead"
+
+/datum/sprite_accessory/hair/badlycut
+	name = "Shorter Long Bedhead"
+	icon_state = "hair_verybadlycut"
 
 /datum/sprite_accessory/hair/beehive
 	name = "Beehive"
@@ -420,6 +432,10 @@
 /datum/sprite_accessory/hair/hitop
 	name = "Hitop"
 	icon_state = "hair_hitop"
+
+/datum/sprite_accessory/hair/izutsumi
+	name = "Izutsumi"
+	icon_state = "hair_izutsumi"
 
 /datum/sprite_accessory/hair/jade
 	name = "Jade"
@@ -1527,6 +1543,10 @@
 	icon_state = "yellowshirt"
 	gender = NEUTER
 
+/datum/sprite_accessory/undershirt/fishnet_shirt
+	name = "Fishnet Shirt"
+	icon_state = "fishnet_shirt"
+
 ///////////////////////
 // Socks Definitions //
 ///////////////////////
@@ -1585,6 +1605,10 @@
 	name = "Knee-high (White)"
 	icon_state = "white_knee"
 
+/datum/sprite_accessory/socks/fishnet_knee
+	name = "Knee-high (Fishnet)"
+	icon_state = "fishnet_knee"
+
 /datum/sprite_accessory/socks/black_norm
 	name = "Normal (Black)"
 	icon_state = "black_norm"
@@ -1637,6 +1661,10 @@
 	name = "Stockings (Yellow)"
 	icon_state = "stockings_yellow"
 
+/datum/sprite_accessory/socks/stockings_fishnet
+	name = "Stockings (Fishnet)"
+	icon_state = "fishnet_full"
+
 /datum/sprite_accessory/socks/ace_thigh
 	name = "Thigh-high (Ace)"
 	icon_state = "ace_thigh"
@@ -1680,6 +1708,10 @@
 /datum/sprite_accessory/socks/white_thigh
 	name = "Thigh-high (White)"
 	icon_state = "white_thigh"
+
+/datum/sprite_accessory/socks/fishnet_thigh
+	name = "Thigh-high (Fishnet)"
+	icon_state = "fishnet_thigh"
 
 /datum/sprite_accessory/socks/thocks
 	name = "Thocks"

@@ -1,0 +1,7 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "new scoundrel-themed sec helmets, purchased through cargo and found on detective/captain roundstart"
+  - balance: "basic hardhats have a stronger light now"
+  - balance: "helmets now generally have lower protective values"
+  - bugfix: "helmets no longer hide hair"

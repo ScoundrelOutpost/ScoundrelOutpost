@@ -151,21 +151,21 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 ///Chance for an object to embed into somebody when thrown
 #define EMBED_CHANCE 45
 ///Coefficient of multiplication for the damage the item does while embedded (this*item.w_class)
-#define EMBEDDED_PAIN_MULTIPLIER 2
+#define EMBEDDED_PAIN_MULTIPLIER 0.5
 ///Coefficient of multiplication for the damage the item does when it first embeds (this*item.w_class)
-#define EMBEDDED_IMPACT_PAIN_MULTIPLIER 4
+#define EMBEDDED_IMPACT_PAIN_MULTIPLIER 1
 ///The minimum value of an item's throw_speed for it to embed (Unless it has embedded_ignore_throwspeed_threshold set to 1)
 #define EMBED_THROWSPEED_THRESHOLD 4
 ///Coefficient of multiplication for the damage the item does when it falls out or is removed without a surgery (this*item.w_class)
-#define EMBEDDED_UNSAFE_REMOVAL_PAIN_MULTIPLIER 6
+#define EMBEDDED_UNSAFE_REMOVAL_PAIN_MULTIPLIER 0.5
 ///A Time in ticks, total removal time = (this*item.w_class)
 #define EMBEDDED_UNSAFE_REMOVAL_TIME 30
 ///Chance for embedded objects to cause pain every time they move (jostle)
 #define EMBEDDED_JOSTLE_CHANCE 5
 ///Coefficient of multiplication for the damage the item does while
-#define EMBEDDED_JOSTLE_PAIN_MULTIPLIER 1
+#define EMBEDDED_JOSTLE_PAIN_MULTIPLIER 0.5
 ///This percentage of all pain will be dealt as stam damage rather than brute (0-1)
-#define EMBEDDED_PAIN_STAM_PCT 0.0
+#define EMBEDDED_PAIN_STAM_PCT 0.5
 ///For thrown weapons, every extra speed it's thrown at above its normal throwspeed will add this to the embed chance
 #define EMBED_CHANCE_SPEED_BONUS 10
 

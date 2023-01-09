@@ -633,10 +633,10 @@
 	category = CAT_CLOTHING
 
 /datum/crafting_recipe/quiver_maint
-	name = "Wooden Quiver"
+	name = "Leather Quiver"
 	result = /obj/item/storage/bag/quiver_maint
 	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
-				/obj/item/stack/sheet/mineral/wood = 10)
+				/obj/item/stack/sheet/leather = 3)
 	time = 4 SECONDS
 	category= CAT_CLOTHING
 

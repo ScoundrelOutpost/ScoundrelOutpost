@@ -31,6 +31,8 @@
 	outfit_important_for_life = /datum/outfit/plasmaman
 	species_language_holder = /datum/language_holder/skeleton
 
+	death_sound = 'sound/scoundrel/species/plasmaman/plasmaman_deathgasp.ogg'
+
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/plasmaman,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/plasmaman,

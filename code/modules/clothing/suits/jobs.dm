@@ -104,7 +104,7 @@
 
 /obj/item/clothing/suit/jacket/det_suit/Initialize(mapload)
 	. = ..()
-	allowed = GLOB.detective_vest_allowed
+	allowed += GLOB.detective_vest_allowed
 
 /obj/item/clothing/suit/jacket/det_suit/dark
 	name = "noir trenchcoat"

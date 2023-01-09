@@ -53,3 +53,33 @@
  **/
 /obj/item/clothing/suit/proc/setup_shielding()
 	return
+
+
+// scoundrel content
+/obj/item/clothing/suit/Initialize(mapload)
+	. = ..()
+	allowed += GLOB.generic_suit_allowed
+
+//generic allowed list
+GLOBAL_LIST_INIT(generic_suit_allowed, typecacheof(list(
+		// misc
+		/obj/item/flashlight,
+		/obj/item/radio,
+		/obj/item/storage/bag/construction,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/toy,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/lighter,
+		/obj/item/pinpointer,
+		/obj/item/storage/pouch,
+		// tools
+		/obj/item/t_scanner,
+		// weapons
+		/obj/item/melee/tonfa,
+		/obj/item/fireaxe/metal_h2_axe,
+		/obj/item/gun,
+		/obj/item/knife,
+		// shield
+		/obj/item/personalshield,
+	)))

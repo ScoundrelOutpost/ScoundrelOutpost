@@ -16,7 +16,7 @@
 /obj/item/clothing/suit/armor/Initialize(mapload)
 	. = ..()
 	if(!allowed)
-		allowed = GLOB.security_vest_allowed
+		allowed += GLOB.security_vest_allowed
 
 /obj/item/clothing/suit/armor/vest
 	name = "armor vest"

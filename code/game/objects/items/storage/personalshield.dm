@@ -6,7 +6,7 @@
 	icon = 'scoundrel/icons/obj/personal_shields.dmi'
 	icon_state = "personalshield"
 	inhand_icon_state = "electronic"
-	worn_icon_state = "pda"
+	worn_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE | ITEM_SLOT_POCKETS
@@ -21,28 +21,34 @@
 	var/shield_icon_file = 'icons/effects/effects.dmi'
 	var/shield_icon = "shield"
 
-	var/activate_start_sound = 'sound/scoundrel/devices/shieldrecharge_5s.ogg'
-	var/activate_start_sound_volume = 35
+	// sound played when you toggle it on
+	var/activate_start_sound = 'sound/scoundrel/shield/shield_activate2.ogg'
+	var/activate_start_sound_volume = 50
 
-	var/drained_sound = 'sound/machines/defib_failed.ogg' // sound played when the battery runs dry
-	var/drained_sound_volume = 100 // volume control is important
+	// sound played when the battery runs dry
+	var/drained_sound = 'sound/machines/defib_failed.ogg'
+	var/drained_sound_volume = 80
 
-	var/overload_sound = 'sound/scoundrel/shield/shieldshatter2.ogg' // sound played when the shield is broken
-	var/overload_sound_volume = 100
+	// sound played when the shield is broken
+	var/overload_sound = 'sound/scoundrel/shield/shieldshatter3.ogg'
+	var/overload_sound_volume = 80
 
-	var/impact_sound = 'sound/scoundrel/shield/shieldimpact.ogg' // sound when the shield is damaged
-	var/impact_sound_volume = 100
+	// sound played when the shield intercepts damage
+	var/impact_sound = 'sound/scoundrel/shield/shieldimpact.ogg'
+	var/impact_sound_volume = 80
 
-	var/recharge_sound_effect = 'sound/scoundrel/devices/shieldrecharge_5s.ogg' // sound played when the shield regains charge
+	// sound played when the shield regains charge
+	var/recharge_sound_effect = 'sound/scoundrel/shield/shieldrecharge.ogg'
 	var/recharge_sound_effect_volume = 50
 
+	// sound played when the shield finished recharging
 	var/recharge_finished_sound_effect = 'sound/machines/defib_success.ogg'
-	var/recharge_finished_sound_effect_volume = 100
+	var/recharge_finished_sound_effect_volume = 70
 
-	var/activate_sound = 'sound/scoundrel/buttons/walk_intent_active.ogg'
-	var/deactivate_sound = 'sound/scoundrel/buttons/walk_intent_inactive.ogg' // placeholders
-	var/activate_sound_volume = 100
-	var/deactivate_sound_volume = 100
+	var/activate_sound = 'sound/scoundrel/shield/optimisticbeep.ogg'
+	var/deactivate_sound = 'sound/scoundrel/shield/shield_deactivate.ogg'
+	var/activate_sound_volume = 40
+	var/deactivate_sound_volume = 40
 
 // shield stats
 	var/shield_health = 100
@@ -101,6 +107,7 @@
 		else
 			return
 	else
+		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 		remove_shield_component(user)
 
 /obj/item/personalshield/proc/add_shield_component(mob/user)
@@ -154,7 +161,6 @@
 		qdel(shield)
 		to_chat(user, span_notice("You turn the [src] off."))
 		update_appearance()
-		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 		update_action_buttons()
 
 /obj/item/personalshield/proc/slot_check(mob/living/carbon/human/wearer, interference_check = TRUE)
@@ -220,11 +226,11 @@
 /obj/item/personalshield/proc/shield_damaged(mob/living/wearer, attack_text, new_current_charges)
 
 	if(new_current_charges != 0)
-		playsound(src, impact_sound, impact_sound_volume, FALSE, -2)
+		playsound(src, impact_sound, impact_sound_volume, FALSE)
 		wearer.visible_message(span_danger("[wearer]'s [src] deflects [attack_text] with a shimmering barrier!"))
 		new /obj/effect/temp_visual/personalshield(get_turf(wearer))
 	if(new_current_charges == 0)
-		playsound(src, overload_sound, overload_sound_volume, FALSE, 2)
+		playsound(src, overload_sound, overload_sound_volume, FALSE)
 		wearer.visible_message(span_danger("The [src] emits a light beep as the barrier arounded [wearer] shatters!"))
 		new /obj/effect/temp_visual/personalshield_break(get_turf(wearer))
 
@@ -280,3 +286,15 @@
 	shield_health = 100
 
 	cell_power_loss = 6 // almost two full lifespans
+
+/obj/item/personalshield/debug
+	name = "debug shield emitter"
+	desc = "for admin abuse, more likely"
+	icon_state = "syndicate"
+
+	shield_health = 10000000
+	cell_power_loss = 6
+	shielded_vulnerability = null
+	shielded_resistance = list(UNARMED_ATTACK, MELEE_ATTACK, THROWN_PROJECTILE_ATTACK, PROJECTILE_ATTACK)
+	unblockable_attack_types = null
+	resistance_multiplier = 0

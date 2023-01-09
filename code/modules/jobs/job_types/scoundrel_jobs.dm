@@ -49,6 +49,8 @@
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
+	suit_store = /obj/item/personalshield/standard
+
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand
 //	r_pocket = 
 
@@ -95,6 +97,8 @@
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	l_hand = /obj/item/clipboard
+
+	suit_store = /obj/item/personalshield/standard
 
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/greenhand
 //	r_pocket = 
@@ -168,6 +172,8 @@
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/medsci
 	r_pocket = /obj/item/storage/pouch/medical/preloaded/advanced
 
+	suit_store = /obj/item/personalshield/standard
+
 	pda_slot = ITEM_SLOT_LPOCKET
 
 // End job
@@ -237,6 +243,8 @@
 	box = /obj/item/storage/box/survival/engineer
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/engineer
 //	r_pocket = 
+
+	suit_store = /obj/item/personalshield/standard
 
 	pda_slot = ITEM_SLOT_LPOCKET
 
@@ -311,6 +319,8 @@
 	glasses = /obj/item/clothing/glasses/hud/diagnostic/sunglasses
 	gloves = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/jackboots
+
+	suit_store = /obj/item/personalshield/standard/advanced
 
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/leader/captain
 //	r_pocket = 
@@ -391,6 +401,8 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/clipboard
 
+	suit_store = /obj/item/personalshield/standard/advanced
+
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/leader/quartermaster
 	r_pocket = /obj/item/storage/pouch/holding // move this to the locker when it becomes a steal obj
 
@@ -467,6 +479,8 @@
 	gloves = /obj/item/clothing/gloves/toagloves
 	shoes = /obj/item/clothing/shoes/jackboots
 
+	suit_store = /obj/item/personalshield/standard/advanced
+
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/leader/detective
 	r_pocket = /obj/item/storage/pouch/forensic/preloaded
 	
@@ -539,6 +553,8 @@
 	accessory = /obj/item/clothing/accessory/talisman
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/mining
 	r_pocket = /obj/item/storage/bag/ore
+
+	suit_store = /obj/item/personalshield/standard
 
 	pda_slot = ITEM_SLOT_LPOCKET
 	box = /obj/item/storage/box/survival/mining

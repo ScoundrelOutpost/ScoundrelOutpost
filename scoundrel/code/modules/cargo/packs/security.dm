@@ -32,3 +32,18 @@
 	contains = list(/obj/item/clothing/suit/armor/vest,
 	/obj/item/clothing/head/helmet/scoundrel,)
 	goody = TRUE
+
+/datum/supply_pack/security/personal_shield
+	name = "(Single) Personal Shield-Emitter"
+	desc = "No spacer's in a good position being vulnerable to high-speed projectiles. You need a JX Co. personal field-emitter to protect your body."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/personalshield/standard)
+	goody = TRUE
+
+/datum/supply_pack/security/personal_shield_advanced
+	name = "(Single) Advanced Personal Shield-Emitter"
+	desc = "VIPs need not worry about encasing themselves in unbecoming power armor, JX Co. has you covered. This enhanced, efficient and \
+	stylish shield-emitter is ideal for protecting the stellar community's elite."
+	cost = CARGO_CRATE_VALUE * 7
+	contains = list(/obj/item/personalshield/standard/advanced)
+	goody = TRUE

@@ -144,17 +144,15 @@
 /datum/component/shielded/proc/lost_wearer(datum/source, mob/user)
 	SIGNAL_HANDLER
 
-	if(wearer)
-		UnregisterSignal(wearer, list(COMSIG_ATOM_UPDATE_OVERLAYS, COMSIG_PARENT_QDELETING))
+	if(user)
+		UnregisterSignal(user, list(COMSIG_ATOM_UPDATE_OVERLAYS, COMSIG_PARENT_QDELETING))
 		wearer.update_appearance(UPDATE_ICON)
-		REMOVE_TRAIT(wearer, TRAIT_SHIELD_PROTECTED, CLOTHING_TRAIT)
-		wearer = null
+		user = null
 
 /datum/component/shielded/proc/set_wearer(mob/user)
 	wearer = user
 	RegisterSignal(wearer, COMSIG_ATOM_UPDATE_OVERLAYS, PROC_REF(on_update_overlays))
 	RegisterSignal(wearer, COMSIG_PARENT_QDELETING, PROC_REF(lost_wearer))
-	ADD_TRAIT(wearer, TRAIT_SHIELD_PROTECTED, CLOTHING_TRAIT)
 	if(current_charges)
 		wearer.update_appearance(UPDATE_ICON)
 

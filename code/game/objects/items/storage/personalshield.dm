@@ -219,12 +219,14 @@
 
 /obj/item/personalshield/proc/shield_damaged(mob/living/wearer, attack_text, new_current_charges)
 
-	playsound(src, impact_sound, impact_sound_volume, FALSE, -2)
-	wearer.visible_message(span_danger("[wearer]'s [src] deflects [attack_text] with a shimmering barrier!"))
-	new /obj/effect/temp_visual/personalshield(get_turf(wearer))
+	if(new_current_charges != 0)
+		playsound(src, impact_sound, impact_sound_volume, FALSE, -2)
+		wearer.visible_message(span_danger("[wearer]'s [src] deflects [attack_text] with a shimmering barrier!"))
+		new /obj/effect/temp_visual/personalshield(get_turf(wearer))
 	if(new_current_charges == 0)
 		playsound(src, overload_sound, overload_sound_volume, FALSE, 2)
 		wearer.visible_message(span_danger("The [src] emits a light beep as the barrier arounded [wearer] shatters!"))
+		new /obj/effect/temp_visual/personalshield_break(get_turf(wearer))
 
 /obj/effect/temp_visual/personalshield
 	icon = 'icons/effects/personalshields.dmi'
@@ -233,11 +235,16 @@
 	randomdir = FALSE
 	duration = 1 SECONDS
 
+/obj/effect/temp_visual/personalshield_break
+	icon = 'icons/effects/personalshields.dmi'
+	name = "shield shatter"
+	icon_state = "shieldbreak"
+	randomdir = FALSE
+	duration = 1 SECONDS
+
 /datum/action/item_action/toggle_personalshield
 	name = "Toggle Shield-Emitter"
-	desc = null
-	icon_icon = 'scoundrel/icons/obj/personal_shields.dmi'
-	button_icon_state = "personalshield"
+//	desc = null
 
 /obj/item/personalshield/standard
 	name = "personal shield-emitter"

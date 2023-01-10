@@ -388,6 +388,19 @@
 		)
 	)
 
+/datum/quirk/item_quirk/fashionable
+	name = "Fashionable"
+	desc = "You know a thing or two about putting together an outfit."
+	icon = "shirt"
+	value = 0
+	gain_text = "<span class='notice'>You think you have a good idea of what kind of outfit you'll wear today.</span>"
+	lose_text = "<span class='danger'>You have lost touch with your own sense of fashion.</span>"
+	medical_record_text = "Patient appears to have a keen sense of style."
+	mail_goodies = list(/obj/item/clothing/shoes/swagshoes, /obj/item/clothing/under/costume/swagoutfit)
+
+/datum/quirk/item_quirk/fashionable/add_unique()
+	give_item_to_holder(/obj/item/choice_beacon/fashionable, list(LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
+
 /datum/quirk/item_quirk/colorist
 	name = "Colorist"
 	desc = "You like carrying around a hair dye spray to quickly apply color patterns to your hair."

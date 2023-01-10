@@ -88,6 +88,25 @@
 	new choice(get_turf(M))
 	to_chat(M, span_hear("You hear something crackle from the beacon for a moment before a voice speaks. \"Please stand by for a message from Sophronia Broadcasting. Message as follows: <b>Please enjoy your Sophronia Broadcasting's 'History Comes Alive branded' Costume Set, exactly as shown in the hit show!</b> Message ends.\""))
 
+/obj/item/choice_beacon/fashionable
+	name = "fashion request beacon"
+	desc = "Clothes: apparrel straight from frontier fashionistas!"
+
+/obj/item/choice_beacon/fashionable/generate_display_names()
+	var/static/list/fashion_item_list
+	if(!fashion_item_list)
+		fashion_item_list = list()
+		var/list/templist = typesof(/obj/item/storage/box/fashion)
+		for(var/V in templist)
+			var/atom/A = V
+			fashion_item_list[initial(A.name)] = A
+	return fashion_item_list
+
+/obj/item/choice_beacon/fashionable/spawn_option(obj/choice,mob/living/fashionable_person)
+	new choice(get_turf(fashionable_person))
+	to_chat(fashionable_person, span_hear("You hear something crackle from the beacon for a moment before a voice speaks. \"Please stand by for a message from Sophronia Broadcasting. Message as follows: <b>Please enjoy your Sophronia Broadcasting's 'Fashion on the Frontier branded' Apparel Set, exactly as seen in the hit show!</b> Message ends.\""))
+
+
 /obj/item/choice_beacon/augments
 	name = "augment beacon"
 	desc = "Summons augmentations. Can be used 3 times!"

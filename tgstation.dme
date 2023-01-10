@@ -1888,6 +1888,7 @@
 #include "code\game\objects\items\storage\boxes\_boxes.dm"
 #include "code\game\objects\items\storage\boxes\cargo_boxes.dm"
 #include "code\game\objects\items\storage\boxes\clothes_boxes.dm"
+#include "code\game\objects\items\storage\boxes\fashion_boxes.dm"
 #include "code\game\objects\items\storage\boxes\engineering_boxes.dm"
 #include "code\game\objects\items\storage\boxes\food_boxes.dm"
 #include "code\game\objects\items\storage\boxes\job_boxes.dm"
@@ -2740,7 +2741,7 @@
 //#include "code\modules\cargo\packs\security.dm"
 //#include "code\modules\cargo\packs\service.dm"
 #include "code\modules\cargo\packs\vending_restock.dm"
-// cargo packs are sorted by the console inversely to the order they're loaded. ungh 
+// cargo packs are sorted by the console inversely to the order they're loaded. ungh
 #include "scoundrel\code\modules\cargo\packs\not_sold.dm"
 #include "scoundrel\code\modules\cargo\packs\fishing.dm"
 #include "scoundrel\code\modules\cargo\packs\exploration.dm"

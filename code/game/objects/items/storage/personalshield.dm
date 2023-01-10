@@ -74,6 +74,8 @@
 	// Our cell. Loses power when the shield is hit while active equal to the damage inflicted to the shield.
 	var/obj/item/stock_parts/cell/cell
 	var/cell_type
+	// Speed at which the internal cell is recharged when inserted into a recharger
+	var/cell_charge_rate = 300
 
 /obj/item/personalshield/Initialize(mapload)
 	. = ..()
@@ -81,6 +83,7 @@
 		cell = new cell_type(src)
 	else
 		cell = new(src)
+	cell.chargerate = cell_charge_rate
 
 /obj/item/personalshield/get_cell()
 	return cell
@@ -93,7 +96,7 @@
 /obj/item/personalshield/examine(mob/user)
 	. = ..()
 	if(cell)
-		. += span_notice("\The [src] is [round(cell.percent())]% charged.")
+		. += span_notice("\The [src] is [round(cell.percent())]% charged, with an integrity of [shield_health].")
 
 /obj/item/personalshield/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/toggle_personalshield))
@@ -104,7 +107,7 @@
 		return
 	if(!on)
 		if(add_shield_component(user))
-			to_chat(user, span_notice("You toggle the [src]."))
+			to_chat(user, span_notice("You toggle [src]."))
 		else
 			return
 	else
@@ -114,7 +117,7 @@
 /obj/item/personalshield/proc/add_shield_component(mob/user)
 	// if the button is pressed during startup sequence
 	if(activating)
-		to_chat(user, span_notice("[src] already starting up!"))
+		to_chat(user, span_notice("\The [src] already starting up!"))
 		return
 
 	if(!on && ishuman(user))
@@ -123,7 +126,7 @@
 			if(slot_check(wearer, FALSE))
 				// cleared to start / feedback
 				activating = TRUE
-				to_chat(wearer, span_notice("[src] is activating!"))
+				to_chat(wearer, span_notice("\The [src] is activating!"))
 				playsound(src, activate_start_sound, activate_start_sound_volume, FALSE, -2)
 				// begin startup sequence
 				if(do_after(wearer, activation_time, wearer, PERSONAL_SHIELD_STEP_FLAGS, extra_checks=CALLBACK(src, PROC_REF(slot_check), wearer)))
@@ -132,7 +135,7 @@
 					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay, \
 					recharge_sound_effect = recharge_sound_effect, recharge_sound_effect_volume = recharge_sound_effect_volume, recharge_finished_sound_effect = recharge_finished_sound_effect, recharge_finished_sound_effect_volume = recharge_finished_sound_effect_volume, \
 					run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)))
-					to_chat(wearer, span_notice("You turn the [src] on."))
+					to_chat(wearer, span_notice("You turn [src] on."))
 					on = TRUE
 					activating = FALSE
 					update_appearance()
@@ -160,7 +163,7 @@
 		shield_tracked_health = shield.current_charges
 		on = FALSE
 		qdel(shield)
-		to_chat(user, span_notice("You turn the [src] off."))
+		to_chat(user, span_notice("You turn [src] off."))
 		update_appearance()
 		update_action_buttons()
 
@@ -176,7 +179,7 @@
 		for(var/obj/item/personalshield/additional_shields in loc.get_all_contents())
 			if(additional_shields.type != type || additional_shields == src || !additional_shields.on)
 				continue
-			to_chat(wearer, span_warning("[src] won't function if you have another personal shield active."))
+			to_chat(wearer, span_warning("\The [src] won't function if you have another personal shield active."))
 			return FALSE
 	return equipped_to_valid_slot
 
@@ -208,7 +211,9 @@
 	. = cell.use(cell_reduction_amount)
 	if(on && cell.charge <= cell_failsafe_value)
 		remove_shield_component(owner)
-		playsound(src, drained_sound, drained_sound_volume, FALSE, 2)
+		playsound(src, overload_sound, overload_sound_volume, FALSE)
+		owner.visible_message(span_danger("\The [src] emits a light beep as the barrier arounded [owner] shatters!"))
+		new /obj/effect/temp_visual/personalshield_break(get_turf(owner))
 
 /obj/item/personalshield/emp_act(severity)
 	. = ..()
@@ -228,11 +233,11 @@
 
 	if(new_current_charges != 0)
 		playsound(src, impact_sound, impact_sound_volume, FALSE)
-		wearer.visible_message(span_danger("[wearer]'s [src] deflects [attack_text] with a shimmering barrier!"))
+		wearer.visible_message(span_danger("[wearer]'s [src.name] deflects [attack_text] with a shimmering barrier!"))
 		new /obj/effect/temp_visual/personalshield(get_turf(wearer))
 	if(new_current_charges == 0)
 		playsound(src, overload_sound, overload_sound_volume, FALSE)
-		wearer.visible_message(span_danger("The [src] emits a light beep as the barrier arounded [wearer] shatters!"))
+		wearer.visible_message(span_danger("\The [src] emits a light beep as the barrier arounded [wearer] shatters!"))
 		new /obj/effect/temp_visual/personalshield_break(get_turf(wearer))
 
 /obj/effect/temp_visual/personalshield

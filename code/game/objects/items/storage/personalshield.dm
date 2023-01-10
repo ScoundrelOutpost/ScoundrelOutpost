@@ -117,7 +117,7 @@
 /obj/item/personalshield/proc/add_shield_component(mob/user)
 	// if the button is pressed during startup sequence
 	if(activating)
-		to_chat(user, span_notice("\The [src] already starting up!"))
+		to_chat(user, span_notice("\The [src] is already starting up!"))
 		return
 
 	if(!on && ishuman(user))
@@ -126,7 +126,6 @@
 			if(slot_check(wearer, FALSE))
 				// cleared to start / feedback
 				activating = TRUE
-				to_chat(wearer, span_notice("\The [src] is activating!"))
 				playsound(src, activate_start_sound, activate_start_sound_volume, FALSE, -2)
 				// begin startup sequence
 				if(do_after(wearer, activation_time, wearer, PERSONAL_SHIELD_STEP_FLAGS, extra_checks=CALLBACK(src, PROC_REF(slot_check), wearer)))
@@ -143,7 +142,7 @@
 					update_action_buttons()
 				// didn't start
 				else
-					to_chat(wearer, span_notice("Failed to activate [src]"))
+					to_chat(wearer, span_warning("\The [src] crackles ominously. There seems to be some interference."))
 					playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
 					activating = FALSE
 					return
@@ -179,7 +178,6 @@
 		for(var/obj/item/personalshield/additional_shields in loc.get_all_contents())
 			if(istype(additional_shields) && additional_shields == src || istype(additional_shields) && !additional_shields.on)
 				continue
-			to_chat(wearer, span_warning("\The [src] won't function if you have another personal shield active."))
 			return FALSE
 	return equipped_to_valid_slot
 
@@ -189,6 +187,8 @@
 
 /obj/item/personalshield/dropped(mob/user, silent)
 	. = ..()
+	if(on)
+		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 	remove_shield_component()
 	UnregisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS)
 
@@ -293,10 +293,36 @@
 
 	cell_power_loss = 6 // almost two full lifespans
 
+/obj/item/personalshield/standard/traitor
+	name = "experimental shield-emitter"
+	desc = "An unusual dynamic-field projector with an experimental lattice that blocks high-and-low kinetic \
+	strikes, without sacrificing user mobility. The structure is highly power-efficient as well, allowing the power cell to survive \
+	multiple full-integrity breaches. A blindspot in the inertial modulation leaves the user vulnerable still to \
+	moderate-speed projectiles, such as thrown weapons."
+	icon_state = "syndicate"
+
+	shield_health = 100
+
+	shielded_vulnerability = list(MELEE_ATTACK)
+	vulnerability_multiplier = 2
+	shielded_resistance = list(PROJECTILE_ATTACK)
+	resistance_multiplier = 1
+	unblockable_attack_types = list(UNARMED_ATTACK, THROWN_PROJECTILE_ATTACK)
+
+	cell_power_loss = 3 // almost four full lifespans
+	cell_charge_rate = 100
+
+// debug
 /obj/item/personalshield/debug
-	name = "debug shield emitter"
+	name = "debug shield-emitter"
 	desc = "for admin abuse, more likely"
 	icon_state = "syndicate"
+
+	strip_delay = 1 HOURS // good luck
+
+	activate_start_sound_volume = 0
+	activate_sound_volume = 0
+	deactivate_sound_volume = 0
 
 	shield_health = 10000000
 	cell_power_loss = 6
@@ -304,3 +330,7 @@
 	shielded_resistance = list(UNARMED_ATTACK, MELEE_ATTACK, THROWN_PROJECTILE_ATTACK, PROJECTILE_ATTACK)
 	unblockable_attack_types = null
 	resistance_multiplier = 0
+
+	activation_time = 1
+
+	cell = /obj/item/stock_parts/cell/infinite

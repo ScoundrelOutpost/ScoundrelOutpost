@@ -99,3 +99,12 @@
 	cost = 13
 	surplus = 50
 	purchasable_from = ~UPLINK_CLOWN_OPS
+
+// scoundrel content
+/datum/uplink_item/dangerous/personalshield
+	name = "Experimental Shield-Emitter"
+	desc = "A dynamic-field projector capable of deflecting both projectiles & melee, but not thrown weapons or unarmed strikes. \
+	More powerful than any typical personal shield, but caution should be taken with the knowledge that the integrity shares \
+	a pool between melee strikes and projectiles."
+	item = /obj/item/personalshield/standard/traitor
+	cost = 10

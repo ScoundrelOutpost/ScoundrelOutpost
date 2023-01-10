@@ -177,7 +177,7 @@
 		equipped_to_valid_slot = TRUE
 	if(interference_check)
 		for(var/obj/item/personalshield/additional_shields in loc.get_all_contents())
-			if(additional_shields.type != type || additional_shields == src || !additional_shields.on)
+			if(istype(additional_shields) && additional_shields == src || istype(additional_shields) && !additional_shields.on)
 				continue
 			to_chat(wearer, span_warning("\The [src] won't function if you have another personal shield active."))
 			return FALSE

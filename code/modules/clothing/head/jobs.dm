@@ -393,3 +393,7 @@
 #undef DRILL_SHOUTING
 #undef DRILL_YELLING
 #undef DRILL_CANADIAN
+
+// scoundrel content
+/obj/item/clothing/head/hats/warden/red/fake
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0, WOUND = 0)

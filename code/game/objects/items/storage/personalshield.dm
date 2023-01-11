@@ -107,10 +107,10 @@
 		return
 	if(!on)
 		if(add_shield_component(user))
-			to_chat(user, span_notice("You toggle [src]."))
 		else
 			return
 	else
+		to_chat(user, span_notice("You turn [src] off."))
 		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 		remove_shield_component(user)
 
@@ -162,7 +162,6 @@
 		shield_tracked_health = shield.current_charges
 		on = FALSE
 		qdel(shield)
-		to_chat(user, span_notice("You turn [src] off."))
 		update_appearance()
 		update_action_buttons()
 
@@ -220,7 +219,9 @@
 	if (!cell)
 		return
 	if (!(. & EMP_PROTECT_SELF))
-		drain_cell_power(1000 / severity)
+		drain_cell_power(damage = 1000 / severity)
+		if(cell?.charge <= cell_failsafe_value)
+			new /obj/effect/temp_visual/personalshield_break(get_turf(src))
 
 /obj/item/personalshield/update_icon_state()
 	if(on)

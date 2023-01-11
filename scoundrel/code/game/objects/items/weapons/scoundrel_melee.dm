@@ -80,8 +80,8 @@
 
 	// combat stats
 	damtype = STAMINA
-	force = 18
-	throwforce = 18
+	force = 21
+	throwforce = 21
 	throw_speed = 2
 	throw_range = 10
 	armour_penetration = 40

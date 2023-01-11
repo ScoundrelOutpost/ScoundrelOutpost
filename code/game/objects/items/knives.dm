@@ -10,9 +10,8 @@
 	desc = "The original knife, it is said that all other knives are only copies of this one."
 	flags_1 = CONDUCT_1
 	force = 10
-	demolition_mod = 0.75
 	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 10
+	throwforce = 15
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	throw_speed = 3
 	throw_range = 6
@@ -25,6 +24,7 @@
 	wound_bonus = 5
 	bare_wound_bonus = 15
 	tool_behaviour = TOOL_KNIFE
+	embedding = list("ignore_throwspeed_threshold" = TRUE)
 
 /obj/item/knife/Initialize(mapload)
 	. = ..()
@@ -115,9 +115,8 @@
 	name = "combat knife"
 	icon_state = "buckknife"
 	desc = "A military combat utility survival knife."
-	embedding = list("pain_mult" = 4, "embed_chance" = 65, "fall_chance" = 10, "ignore_throwspeed_threshold" = TRUE)
-	force = 20
-	throwforce = 20
+	force = 12
+	throwforce = 15
 	attack_verb_continuous = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "cuts")
 	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "cut")
 	bayonet = TRUE
@@ -125,9 +124,8 @@
 /obj/item/knife/combat/survival
 	name = "survival knife"
 	icon_state = "survivalknife"
-	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
 	desc = "A hunting grade survival knife."
-	force = 15
+	force = 12
 	throwforce = 15
 	bayonet = TRUE
 
@@ -139,8 +137,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharpened bone. The bare minimum in survival."
-	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
-	force = 15
+	force = 12
 	throwforce = 15
 	custom_materials = null
 
@@ -158,11 +155,8 @@
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A makeshift glass shiv."
-	force = 8
-	throwforce = 12
 	attack_verb_continuous = list("shanks", "shivs")
 	attack_verb_simple = list("shank", "shiv")
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
 	custom_materials = list(/datum/material/glass=400)
 
 /obj/item/knife/shiv/plasma
@@ -170,9 +164,8 @@
 	icon_state = "plasmashiv"
 	inhand_icon_state = "plasmashiv"
 	desc = "A makeshift plasma glass shiv."
-	force = 9
-	throwforce = 13
-	armor = list(MELEE = 25, BULLET = 25, LASER = 25, ENERGY = 25, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
+	force = 12
+	throwforce = 15
 	custom_materials = list(/datum/material/glass=400, /datum/material/plasma=200)
 
 /obj/item/knife/shiv/titanium
@@ -180,10 +173,8 @@
 	icon_state = "titaniumshiv"
 	inhand_icon_state = "titaniumshiv"
 	desc = "A makeshift titanium-infused glass shiv."
-	throwforce = 14
-	throw_range = 7
-	wound_bonus = 10
-	armor = list(MELEE = 25, BULLET = 25, LASER = 25, ENERGY = 25, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
+	force = 12
+	throwforce = 15
 	custom_materials = list(/datum/material/glass=400, /datum/material/titanium=200)
 
 /obj/item/knife/shiv/plastitanium
@@ -191,13 +182,8 @@
 	icon_state = "plastitaniumshiv"
 	inhand_icon_state = "plastitaniumshiv"
 	desc = "A makeshift titanium-infused plasma glass shiv."
-	force = 10
+	force = 12
 	throwforce = 15
-	throw_speed = 4
-	throw_range = 8
-	wound_bonus = 10
-	bare_wound_bonus = 20
-	armor = list(MELEE = 50, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 0, FIRE = 75, ACID = 75)
 	custom_materials = list(/datum/material/glass=400, /datum/material/alloy/plastitanium=200)
 
 /obj/item/knife/shiv/carrot

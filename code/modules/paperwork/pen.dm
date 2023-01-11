@@ -245,7 +245,7 @@
 	attack_verb_continuous = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts") //these won't show up if the pen is off
 	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	sharpness = SHARP_POINTY
-	armour_penetration = 20
+	armour_penetration = 50
 	bare_wound_bonus = 10
 	light_system = MOVABLE_LIGHT
 	light_range = 1.5
@@ -268,7 +268,7 @@
 	butcher_sound = 'sound/weapons/blade1.ogg', \
 	)
 	AddComponent(/datum/component/transforming, \
-		force_on = 18, \
+		force_on = 16, \
 		throwforce_on = 35, \
 		throw_speed_on = 4, \
 		sharpness_on = SHARP_EDGED, \

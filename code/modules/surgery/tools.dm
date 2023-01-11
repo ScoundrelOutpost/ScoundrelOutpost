@@ -119,7 +119,7 @@
 	custom_materials = list(/datum/material/iron = 10000, /datum/material/glass = 6000)
 	flags_1 = CONDUCT_1
 	item_flags = SURGICAL_TOOL
-	force = 15
+	force = 12
 	demolition_mod = 0.5
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_continuous = list("drills")
@@ -202,7 +202,7 @@
 	mob_throw_hit_sound = 'sound/weapons/pierce.ogg'
 	flags_1 = CONDUCT_1
 	item_flags = SURGICAL_TOOL
-	force = 15
+	force = 12
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 9
 	throw_speed = 2

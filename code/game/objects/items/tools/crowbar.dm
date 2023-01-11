@@ -9,8 +9,8 @@
 	usesound = 'sound/items/crowbar.ogg'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
-	force = 5
-	throwforce = 7
+	force = 8
+	throwforce = 12
 	demolition_mod = 1.25
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron=50)

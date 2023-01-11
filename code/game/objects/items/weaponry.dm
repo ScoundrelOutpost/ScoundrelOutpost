@@ -420,8 +420,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 	AddComponent(/datum/component/transforming, \
 		start_transformed = start_extended, \
-		force_on = 20, \
-		throwforce_on = 23, \
+		force_on = 12, \
+		throwforce_on = 15, \
 		throw_speed_on = throw_speed, \
 		sharpness_on = SHARP_EDGED, \
 		hitsound_on = 'sound/weapons/bladeslice.ogg', \
@@ -450,8 +450,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	desc = "Should anything ever go wrong..."
 	icon = 'icons/obj/weapons/items_and_weapons.dmi'
 	icon_state = "red_phone"
-	force = 3
-	throwforce = 2
+	force = 12
+	throwforce = 15
 	throw_speed = 3
 	throw_range = 4
 	w_class = WEIGHT_CLASS_SMALL
@@ -474,8 +474,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	inhand_icon_state = "stick"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 5
-	throwforce = 5
+	force = 10
+	throwforce = 12
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron=50)
 	attack_verb_continuous = list("bludgeons", "whacks", "disciplines", "thrashes")
@@ -524,8 +524,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	inhand_icon_state = "staff"
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	force = 3
-	throwforce = 5
+	force = 10
+	throwforce = 12
 	throw_speed = 2
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
@@ -689,9 +689,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	inhand_icon_state = "baseball_bat"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 12
-	wound_bonus = -10
-	throwforce = 12
+	force = 15
+	throwforce = 18
 	demolition_mod = 1.25
 	attack_verb_continuous = list("beats", "smacks")
 	attack_verb_simple = list("beat", "smack")
@@ -820,8 +819,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	desc = "This bat is made of highly reflective, highly armored material."
 	icon_state = "baseball_bat_metal"
 	inhand_icon_state = "baseball_bat_metal"
-	force = 12
-	throwforce = 15
+	force = 18
+	throwforce = 20
 	mob_thrower = TRUE
 
 /obj/item/melee/baseball_bat/ablative/IsReflect()//some day this will reflect thrown items instead of lasers
@@ -940,8 +939,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
 	block_chance = 20
 	sharpness = SHARP_EDGED
-	force = 14
-	throwforce = 12
+	force = 18
+	throwforce = 20
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
@@ -956,13 +955,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	worn_icon_state = "hfrequency0"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	force = 10
-	wound_bonus = 25
-	bare_wound_bonus = 50
-	throwforce = 25
+	force = 18
+	throwforce = 20
 	throw_speed = 4
 	embedding = list("embed_chance" = 100)
-	block_chance = 25
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK

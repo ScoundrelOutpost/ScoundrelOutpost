@@ -230,7 +230,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "javelin"
 	desc = "A short spear ideal for throwing, crudely crafted from maintenance supplies."
-	force = 12
+	force = 10
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 15
 	throw_speed = 2

@@ -16,22 +16,21 @@
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_SMALL
 	hitsound = SFX_SWING_HIT
-	armour_penetration = 35
+	armour_penetration = 50
 	light_system = MOVABLE_LIGHT
 	light_range = 6 //TWICE AS BRIGHT AS A REGULAR ESWORD
 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
 	light_on = FALSE
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
-	block_chance = 75
+	block_chance = 0
 	max_integrity = 200
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 100, ACID = 70)
 	resistance_flags = FIRE_PROOF
-	wound_bonus = -10
 	bare_wound_bonus = 20
 	var/w_class_on = WEIGHT_CLASS_BULKY
 	var/saber_color = "green"
-	var/two_hand_force = 34
+	var/two_hand_force = 25
 	var/hacked = FALSE
 	var/list/possible_colors = list("red", "blue", "green", "purple")
 

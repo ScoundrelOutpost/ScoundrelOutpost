@@ -321,7 +321,7 @@
 
 /obj/item/gun/ballistic/automatic/sniper_rifle
 	name = "sniper rifle"
-	desc = "A long ranged weapon that does significant damage. No, you can't quickscope."
+	desc = "A long ranged weapon that does significant damage."
 	icon_state = "sniper"
 	w_class = WEIGHT_CLASS_BULKY
 	inhand_icon_state = "sniper"
@@ -336,8 +336,7 @@
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds
 	fire_delay = 4 SECONDS
 	burst_size = 1
-	w_class = WEIGHT_CLASS_NORMAL
-	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 	mag_display = TRUE
 	suppressor_x_offset = 3

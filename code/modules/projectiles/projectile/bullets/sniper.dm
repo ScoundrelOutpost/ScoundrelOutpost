@@ -72,4 +72,4 @@
 // scoundrel content
 /obj/projectile/bullet/p50/surplus
 	name ="surplus .50 bullet"
-	damage = 0.5
+	damage = 0.65

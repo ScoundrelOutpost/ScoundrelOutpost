@@ -15,7 +15,7 @@
 	rack_sound = 'sound/weapons/gun/rifle/bolt_out.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/rifle/bolt_in.ogg'
 	tac_reloads = FALSE
-	projectile_damage_multiplier = 45
+	projectile_damage_multiplier = 40
 
 /obj/item/gun/ballistic/rifle/rack(mob/user = null)
 	if (bolt_locked == FALSE)
@@ -166,7 +166,6 @@
 	can_bayonet = TRUE
 	knife_y_offset = 11
 	can_be_sawn_off = FALSE
-	projectile_damage_multiplier = 45
 
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/handle_chamber()
 	. = ..()

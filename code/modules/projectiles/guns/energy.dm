@@ -105,9 +105,9 @@
 			continue
 
 		if(initial(exam_proj.damage) > 0) // Don't divide by 0!!!!!
-			readout += "[span_warning("[FORCE_DESCRIPTIVE(initial(exam_proj.damage) * for_ammo.pellets)] [initial(exam_proj.damage_type)] force")] on [span_warning("[for_ammo.select_name]")] mode, taking about [span_warning("[HITS_TO_CRIT(initial(exam_proj.damage) * for_ammo.pellets)] [initial(exam_proj.armor_flag)]")] shots to [initial(exam_proj.damage_type) == STAMINA ? "down" : "critically injure"] someone, with an armor penetration of [span_warning("[initial(exam_proj.armour_penetration)]")]."
+			readout += "[span_warning("[FORCE_DESCRIPTIVE((initial(exam_proj.damage) * projectile_damage_multiplier) * for_ammo.pellets)] [initial(exam_proj.damage_type)] force")] on [span_warning("[for_ammo.select_name]")] mode, taking about [span_warning("[HITS_TO_CRIT((initial(exam_proj.damage) * projectile_damage_multiplier) * for_ammo.pellets)] [initial(exam_proj.armor_flag)]")] shots to [initial(exam_proj.damage_type) == STAMINA ? "down" : "critically injure"] someone, with an armor penetration of [span_warning("[initial(exam_proj.armour_penetration)]")]."
 			if(initial(exam_proj.stamina) > 0) // In case a projectile does damage AND stamina damage (Energy Crossbow)
-				readout += "[span_warning("[FORCE_DESCRIPTIVE(initial(exam_proj.stamina) * for_ammo.pellets)] stamina force")] on [span_warning("[for_ammo.select_name]")] mode."
+				readout += "[span_warning("[FORCE_DESCRIPTIVE((initial(exam_proj.stamina) * projectile_damage_multiplier) * for_ammo.pellets)] stamina force")] on [span_warning("[for_ammo.select_name]")] mode."
 		else
 			readout += "a theoretically infinite number of shots on [span_warning("[for_ammo.select_name]")] mode."
 

@@ -26,7 +26,7 @@
 	weapon_weight = WEAPON_HEAVY
 
 	pb_knockback = 2
-	projectile_damage_multiplier = 45
+	projectile_damage_multiplier = 40
 
 /obj/item/gun/ballistic/shotgun/blow_up(mob/user)
 	. = 0
@@ -265,7 +265,7 @@
 	bolt_type = BOLT_TYPE_NO_BOLT
 	can_be_sawn_off = TRUE
 	pb_knockback = 3 // it's a super shotgun!
-	projectile_damage_multiplier = 35
+	projectile_damage_multiplier = 40
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/AltClick(mob/user)
 	. = ..()

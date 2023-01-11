@@ -287,29 +287,29 @@
 		. += how_cool_are_your_threads.Join()
 
 	if(armor.bio || armor.bomb || armor.bullet || armor.energy || armor.laser || armor.melee || armor.fire || armor.acid || flags_cover & HEADCOVERSMOUTH || flags_cover & PEPPERPROOF)
-		. += span_notice("It has a <a href='?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.")
+		. += span_notice("This looks like it offers some protection. <a href='?src=[REF(src)];list_armor=1'>Take a closer look.</a>")
 
 /obj/item/clothing/Topic(href, href_list)
 	. = ..()
 
 	if(href_list["list_armor"])
-		var/list/readout = list("<span class='notice'><u><b>PROTECTION CLASSES</u></b>")
+		var/list/readout = list("<span class='notice'><u><b>DAMAGE MITIGATION</u></b>")
 		if(armor.bio || armor.bomb || armor.bullet || armor.energy || armor.laser || armor.melee)
-			readout += "\n<b>ARMOR (I-X)</b>"
-			if(armor.bio)
-				readout += "\nBIOHAZARD [armor_to_protection_class(armor.bio)]"
-			if(armor.bomb)
-				readout += "\nEXPLOSIVE [armor_to_protection_class(armor.bomb)]"
+			readout += "\n<b>ARMOR</b>"
+			if(armor.melee)
+				readout += "\nMELEE [armor_to_protection_class(armor.melee)]"
 			if(armor.bullet)
 				readout += "\nBULLET [armor_to_protection_class(armor.bullet)]"
 			if(armor.energy)
 				readout += "\nENERGY [armor_to_protection_class(armor.energy)]"
 			if(armor.laser)
 				readout += "\nLASER [armor_to_protection_class(armor.laser)]"
-			if(armor.melee)
-				readout += "\nMELEE [armor_to_protection_class(armor.melee)]"
+			if(armor.bio)
+				readout += "\nBIOHAZARD [armor_to_protection_class(armor.bio)]"
+			if(armor.bomb)
+				readout += "\nEXPLOSIVE [armor_to_protection_class(armor.bomb)]"
 		if(armor.fire || armor.acid)
-			readout += "\n<b>DURABILITY (I-X)</b>"
+			readout += "\n<b>DURABILITY</b>"
 			if(armor.fire)
 				readout += "\nFIRE [armor_to_protection_class(armor.fire)]"
 			if(armor.acid)
@@ -337,7 +337,7 @@
 /obj/item/clothing/proc/armor_to_protection_class(armor_value)
 	if (armor_value < 0)
 		. = "-"
-	. += "\Roman[round(abs(armor_value), 10) / 10]"
+	. += "[armor_value]"
 	return .
 
 /obj/item/clothing/atom_break(damage_flag)

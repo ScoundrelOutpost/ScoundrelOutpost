@@ -1,7 +1,7 @@
 /obj/projectile/energy/declone
 	name = "radiation beam"
 	icon_state = "declone"
-	damage = 20
+	damage = 1
 	damage_type = CLONE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 
@@ -15,5 +15,5 @@
 	..()
 
 /obj/projectile/energy/declone/weak
-	damage = 9
+	damage = 0.5
 	radiation_chance = 10

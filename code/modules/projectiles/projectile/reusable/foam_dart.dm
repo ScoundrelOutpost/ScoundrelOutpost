@@ -41,4 +41,4 @@
 	base_icon_state = "foamdart_riot_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	nodamage = FALSE
-	stamina = 25
+	stamina = 1

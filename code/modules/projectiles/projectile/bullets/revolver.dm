@@ -2,26 +2,23 @@
 
 /obj/projectile/bullet/n762
 	name = "7.62x38mmR bullet"
-	damage = 60
+	damage = 1
 
 // .50AE (Desert Eagle)
 
 /obj/projectile/bullet/a50ae
 	name = ".50AE bullet"
-	damage = 60
+	damage = 1
 
 // .38 (Detective's Gun)
 
 /obj/projectile/bullet/c38
 	name = ".38 bullet"
-	damage = 25
+	damage = 1
 	ricochets_max = 2
 	ricochet_chance = 50
 	ricochet_auto_aim_angle = 10
 	ricochet_auto_aim_range = 3
-	wound_bonus = -20
-	bare_wound_bonus = 10
-	embedding = list(embed_chance=25, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=1 SECONDS)
 	embed_falloff_tile = -4
 
 /obj/projectile/bullet/c38/match
@@ -36,8 +33,8 @@
 
 /obj/projectile/bullet/c38/match/bouncy
 	name = ".38 Rubber bullet"
-	damage = 10
-	stamina = 30
+	damage = 0.3
+	stamina = 0.7
 	weak_against_armour = TRUE
 	ricochets_max = 6
 	ricochet_incidence_leeway = 0
@@ -50,7 +47,7 @@
 // premium .38 ammo from cargo, weak against armor, lower base damage, but excellent at embedding and causing slice wounds at close range
 /obj/projectile/bullet/c38/dumdum
 	name = ".38 DumDum bullet"
-	damage = 15
+	damage = 0.7
 	weak_against_armour = TRUE
 	ricochets_max = 0
 	sharpness = SHARP_EDGED
@@ -62,7 +59,7 @@
 
 /obj/projectile/bullet/c38/trac
 	name = ".38 TRAC bullet"
-	damage = 10
+	damage = 0.3
 	ricochets_max = 0
 
 /obj/projectile/bullet/c38/trac/on_hit(atom/target, blocked = FALSE)
@@ -80,7 +77,7 @@
 
 /obj/projectile/bullet/c38/hotshot //similar to incendiary bullets, but do not leave a flaming trail
 	name = ".38 Hot Shot bullet"
-	damage = 20
+	damage = 0.7
 	ricochets_max = 0
 
 /obj/projectile/bullet/c38/hotshot/on_hit(atom/target, blocked = FALSE)
@@ -92,7 +89,7 @@
 
 /obj/projectile/bullet/c38/iceblox //see /obj/projectile/temp for the original code
 	name = ".38 Iceblox bullet"
-	damage = 20
+	damage = 0.5
 	var/temperature = 100
 	ricochets_max = 0
 
@@ -106,8 +103,7 @@
 
 /obj/projectile/bullet/a357
 	name = ".357 bullet"
-	damage = 60
-	wound_bonus = -30
+	damage = 1
 
 // admin only really, for ocelot memes
 /obj/projectile/bullet/a357/match

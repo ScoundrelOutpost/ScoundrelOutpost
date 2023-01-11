@@ -46,7 +46,7 @@
 /obj/projectile/bullet/marksman
 	name = "marksman nanoshot"
 	hitscan = TRUE
-	damage = 30
+	damage = 1
 	tracer_type = /obj/effect/projectile/tracer/solar
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
 	impact_type = /obj/effect/projectile/impact/sniper
@@ -82,7 +82,7 @@
 	icon_state = "coinshot"
 	pixel_speed_multiplier = 0.333
 	speed = 1
-	damage = 5
+	damage = 1
 	color = "#dbdd4c"
 
 	/// Save the turf we're aiming for for future use

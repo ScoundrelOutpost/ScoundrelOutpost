@@ -1,5 +1,5 @@
 /obj/projectile/bullet/incendiary
-	damage = 20
+	damage = 0.7
 	/// How many firestacks to apply to the target
 	var/fire_stacks = 4
 	/// If TRUE, leaves a trail of hotspots as it flies, very very chaotic
@@ -24,7 +24,7 @@
 
 /// Incendiary bullet that more closely resembles a real flamethrower sorta deal, no visible bullet, just flames.
 /obj/projectile/bullet/incendiary/fire
-	damage = 15
+	damage = 0.7
 	range = 6
 	alpha = 0
 	pass_flags = PASSTABLE | PASSMOB

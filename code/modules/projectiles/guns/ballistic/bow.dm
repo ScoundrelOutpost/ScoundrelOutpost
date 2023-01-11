@@ -17,6 +17,7 @@
 	cartridge_wording = "arrow"
 	bolt_type = BOLT_TYPE_NO_BOLT
 	var/drawn = FALSE
+	projectile_damage_multiplier = 35
 
 /obj/item/gun/ballistic/bow/update_icon_state()
 	. = ..()
@@ -89,7 +90,7 @@
 	name = "arrow"
 	desc = "Ow! Get it out of me!"
 	ammo_type = /obj/item/ammo_casing/caseless/arrow
-	damage = 50
+	damage = 1
 	speed = 1
 	range = 25
 

@@ -143,7 +143,7 @@
 	var/homing_offset_x = 0
 	var/homing_offset_y = 0
 
-	var/damage = 10
+	var/damage = 1
 	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE are the only things that should be in here
 	var/nodamage = FALSE //Determines if the projectile will skip any damage inflictions
 	///Defines what armor to use when it hits things.  Must be set to bullet, laser, energy, or bomb

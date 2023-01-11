@@ -55,13 +55,13 @@
 
 /obj/item/ammo_casing/energy/laser/scatter
 	projectile_type = /obj/projectile/beam/scatter
-	pellets = 5
-	variance = 25
+	pellets = 7
+	variance = 15
 	select_name = "scatter"
 
 /obj/item/ammo_casing/energy/laser/scatter/disabler
 	projectile_type = /obj/projectile/beam/disabler
-	pellets = 3
+	pellets = 1
 	variance = 15
 	harmful = FALSE
 

@@ -108,6 +108,7 @@
 	can_bayonet = TRUE
 	knife_x_offset = 20
 	knife_y_offset = 12
+	projectile_damage_multiplier = 20
 
 /obj/item/gun/energy/recharge/ebow/halloween
 	name = "candy corn crossbow"
@@ -127,3 +128,4 @@
 	custom_materials = list(/datum/material/iron=4000)
 	suppressed = null
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/large)
+	projectile_damage_multiplier = 30

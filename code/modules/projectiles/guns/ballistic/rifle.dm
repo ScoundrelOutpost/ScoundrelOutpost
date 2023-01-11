@@ -15,6 +15,7 @@
 	rack_sound = 'sound/weapons/gun/rifle/bolt_out.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/rifle/bolt_in.ogg'
 	tac_reloads = FALSE
+	projectile_damage_multiplier = 45
 
 /obj/item/gun/ballistic/rifle/rack(mob/user = null)
 	if (bolt_locked == FALSE)
@@ -165,7 +166,7 @@
 	can_bayonet = TRUE
 	knife_y_offset = 11
 	can_be_sawn_off = FALSE
-	projectile_damage_multiplier = 0.75
+	projectile_damage_multiplier = 45
 
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/handle_chamber()
 	. = ..()
@@ -182,7 +183,6 @@
 	can_jam = FALSE
 	misfire_probability = 0
 	misfire_percentage_increment = 0
-	projectile_damage_multiplier = 1
 
 /// MAGICAL BOLT ACTIONS + ARCANE BARRAGE? ///
 

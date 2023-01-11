@@ -16,6 +16,8 @@
 	var/recent_spin = 0
 	var/last_fire = 0
 
+	projectile_damage_multiplier = 45
+
 /obj/item/gun/ballistic/revolver/process_fire(atom/target, mob/living/user, message, params, zone_override, bonus_spread)
 	..()
 	last_fire = world.time
@@ -103,6 +105,7 @@
 	fire_sound = 'sound/weapons/gun/revolver/shot.ogg'
 	icon_state = "c38"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
+	projectile_damage_multiplier = 30
 	initial_caliber = CALIBER_38
 	alternative_caliber = CALIBER_357
 	initial_fire_sound = 'sound/weapons/gun/revolver/shot.ogg'
@@ -111,7 +114,7 @@
 	alternative_ammo_misfires = TRUE
 	can_misfire = FALSE
 	misfire_probability = 0
-	misfire_percentage_increment = 25 //about 1 in 4 rounds, which increases rapidly every shot
+	misfire_percentage_increment = 1 // there's no positive to use 357 as of writing this, so this is a placeholder increment
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("Default" = "c38",
 						"Fitz Special" = "c38_fitz",
@@ -133,8 +136,6 @@
 	name = "\improper Golden revolver"
 	desc = "This ain't no game, ain't never been no show, And I'll gladly gun down the oldest lady you know. Uses .357 ammo."
 	icon_state = "goldrevolver"
-	fire_sound = 'sound/weapons/resonator_blast.ogg'
-	recoil = 8
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/revolver/nagant

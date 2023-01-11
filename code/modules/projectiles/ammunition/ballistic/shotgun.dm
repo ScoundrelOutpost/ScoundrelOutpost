@@ -44,7 +44,7 @@
 	desc = "A shotgun shell which fires a spread of incendiary pellets."
 	icon_state = "ishell2"
 	projectile_type = /obj/projectile/bullet/incendiary/shotgun/dragonsbreath
-	pellets = 4
+	pellets = 5
 	variance = 35
 
 /obj/item/ammo_casing/shotgun/stunslug
@@ -79,15 +79,15 @@
 	desc = "A 12 gauge buckshot shell."
 	icon_state = "gshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot
-	pellets = 6
-	variance = 25
+	pellets = 5
+	variance = 15
 
 /obj/item/ammo_casing/shotgun/rubbershot
 	name = "rubber shot"
 	desc = "A shotgun casing filled with densely-packed rubber balls, used to incapacitate crowds from a distance."
 	icon_state = "rshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_rubbershot
-	pellets = 6
+	pellets = 5
 	variance = 20
 	custom_materials = list(/datum/material/iron=4000)
 
@@ -102,12 +102,12 @@
 
 /obj/item/ammo_casing/shotgun/improvised
 	name = "improvised shell"
-	desc = "An extremely weak shotgun shell with multiple small pellets made out of metal shards."
+	desc = "A makeshift shotgun shell with multiple small pellets made out of metal shards."
 	icon_state = "improvshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_improvised
 	custom_materials = list(/datum/material/iron=250)
-	pellets = 10
-	variance = 25
+	pellets = 5
+	variance = 35
 
 /obj/item/ammo_casing/shotgun/ion
 	name = "ion shell"
@@ -115,7 +115,7 @@
 	The unique properties of the crystal split the pulse into a spread of individually weaker bolts."
 	icon_state = "ionshell"
 	projectile_type = /obj/projectile/ion/weak
-	pellets = 4
+	pellets = 5
 	variance = 35
 
 /obj/item/ammo_casing/shotgun/laserslug
@@ -123,7 +123,7 @@
 	desc = "An advanced shotgun shell that uses a micro laser to replicate the effects of a scatter laser weapon in a ballistic package."
 	icon_state = "lshell"
 	projectile_type = /obj/projectile/beam/weak
-	pellets = 6
+	pellets = 5
 	variance = 35
 
 /obj/item/ammo_casing/shotgun/techshell

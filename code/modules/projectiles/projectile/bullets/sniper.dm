@@ -4,9 +4,7 @@
 	name =".50 bullet"
 	speed = 0.4
 	range = 400 // Enough to travel from one corner of the Z to the opposite corner and then some.
-	damage = 70
-	paralyze = 100
-	dismemberment = 50
+	damage = 1
 	armour_penetration = 50
 	var/breakthings = TRUE
 
@@ -33,25 +31,22 @@
 /obj/projectile/bullet/p50/penetrator
 	name = "penetrator round"
 	icon_state = "gauss"
-	damage = 60
+	damage = 0.8
 	range = 50
 	projectile_piercing = PASSMOB|PASSVEHICLE
 	projectile_phasing = ~(PASSMOB|PASSVEHICLE)
 	phasing_ignore_direct_target = TRUE
-	dismemberment = 0 //It goes through you cleanly.
-	paralyze = 0
 	breakthings = FALSE
 
 /obj/projectile/bullet/p50/penetrator/shuttle //Nukeop Shuttle Variety
 	icon_state = "gaussstrong"
-	damage = 25
+	damage = 10
 	speed = 0.3
 	range = 16
 
 /obj/projectile/bullet/p50/marksman
 	name = ".50 marksman round"
-	damage = 50
-	paralyze = 0
+	damage = 0.7
 	tracer_type = /obj/effect/projectile/tracer/sniper
 	impact_type = /obj/effect/projectile/impact/sniper
 	muzzle_type = /obj/effect/projectile/muzzle/sniper
@@ -77,6 +72,4 @@
 // scoundrel content
 /obj/projectile/bullet/p50/surplus
 	name ="surplus .50 bullet"
-	damage = 45
-	paralyze = 0
-	dismemberment = 0
+	damage = 0.5

@@ -81,6 +81,7 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
+	projectile_damage_multiplier = 15
 
 /obj/item/gun/ballistic/automatic/c20r/update_overlays()
 	. = ..()
@@ -111,6 +112,7 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
+	projectile_damage_multiplier = 30
 
 /obj/item/gun/ballistic/automatic/wt550/Initialize(mapload)
 	. = ..()
@@ -126,7 +128,7 @@
 	spread = 25
 	can_suppress = FALSE
 	actions_types = list()
-	projectile_damage_multiplier = 0.35 //It's like 10.5 damage per bullet, it's close enough to 10 shots
+	projectile_damage_multiplier = 10 //It's like 10.5 damage per bullet, it's close enough to 10 shots
 	mag_display = TRUE
 	empty_indicator = TRUE
 	fire_sound = 'sound/weapons/gun/smg/shot_alt.ogg'
@@ -141,6 +143,7 @@
 	show_bolt_icon = FALSE
 	mag_display = TRUE
 	rack_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+	projectile_damage_multiplier = 10
 
 /obj/item/gun/ballistic/automatic/m90
 	name = "\improper M-90gl Carbine"
@@ -159,6 +162,7 @@
 	mag_display = TRUE
 	empty_indicator = TRUE
 	fire_sound = 'sound/weapons/gun/smg/shot_alt.ogg'
+	projectile_damage_multiplier = 18
 
 /obj/item/gun/ballistic/automatic/m90/Initialize(mapload)
 	. = ..()
@@ -209,6 +213,7 @@
 	bolt_type = BOLT_TYPE_OPEN
 	empty_indicator = TRUE
 	show_bolt_icon = FALSE
+	projectile_damage_multiplier = 4
 
 /obj/item/gun/ballistic/automatic/tommygun/Initialize(mapload)
 	. = ..()
@@ -224,7 +229,7 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 1
-
+	projectile_damage_multiplier = 10
 
 // L6 SAW //
 
@@ -252,6 +257,7 @@
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 	var/cover_open = FALSE
+	projectile_damage_multiplier = 12
 
 /obj/item/gun/ballistic/automatic/l6_saw/unrestricted
 	pin = /obj/item/firing_pin
@@ -331,11 +337,12 @@
 	fire_delay = 4 SECONDS
 	burst_size = 1
 	w_class = WEIGHT_CLASS_NORMAL
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
 	actions_types = list()
 	mag_display = TRUE
 	suppressor_x_offset = 3
 	suppressor_y_offset = 3
+	projectile_damage_multiplier = 70
 
 /obj/item/gun/ballistic/automatic/sniper_rifle/Initialize(mapload)
 	. = ..()
@@ -373,6 +380,7 @@
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 	mag_display = TRUE
+	projectile_damage_multiplier = 30
 
 // Laser rifle (rechargeable magazine) //
 
@@ -390,6 +398,7 @@
 	actions_types = list()
 	fire_sound = 'sound/weapons/laser.ogg'
 	casing_ejector = FALSE
+	projectile_damage_multiplier = 18
 
 // scoundrel content
 /obj/item/gun/ballistic/automatic/sniper_rifle/empty

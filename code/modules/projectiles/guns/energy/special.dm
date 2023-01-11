@@ -38,6 +38,7 @@
 	icon_state = "decloner"
 	ammo_type = list(/obj/item/ammo_casing/energy/declone)
 	ammo_x_offset = 1
+	projectile_damage_multiplier = 30
 
 /obj/item/gun/energy/decloner/update_overlays()
 	. = ..()
@@ -371,6 +372,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/tesla_cannon)
 	shaded_charge = TRUE
 	weapon_weight = WEAPON_HEAVY
+	projectile_damage_multiplier = 20
 
 /obj/item/gun/energy/tesla_cannon/Initialize(mapload)
 	. = ..()
@@ -392,6 +394,7 @@
 	var/coin_regen_rate = 2 SECONDS
 	/// The cooldown for regenning coins
 	COOLDOWN_DECLARE(coin_regen_cd)
+	projectile_damage_multiplier = 25
 
 /obj/item/gun/energy/marksman_revolver/Initialize(mapload)
 	. = ..()

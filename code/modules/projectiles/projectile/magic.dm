@@ -574,7 +574,7 @@
 	trigger_range = 0
 	can_only_hit_target = TRUE
 	nodamage = FALSE
-	paralyze = 6 SECONDS
+	paralyze = 1 SECONDS
 	hitsound = 'sound/magic/mm_hit.ogg'
 
 	trail = TRUE

@@ -538,8 +538,9 @@
 
 /mob/living/carbon/update_stamina()
 	var/stam = getStaminaLoss()
-	var/harddam = getBruteLoss() + getFireLoss() // remove or change this line to 0 to remove hard damage consideration for stamcrit
-	if(stam > DAMAGE_PRECISION && (maxHealth - (stam + harddam)) <= crit_threshold)
+	var/harddam = getBruteLoss() + getFireLoss() + getCloneLoss() // remove or change this line to 0 to remove hard damage consideration for stamcrit
+	var/miscdam = getToxLoss() + getOxyLoss()
+	if(stam > DAMAGE_PRECISION && (maxHealth - (stam + harddam + miscdam)) <= crit_threshold)
 		if (!stat)
 			enter_stamcrit()
 	else if(HAS_TRAIT_FROM(src, TRAIT_INCAPACITATED, STAMINA))

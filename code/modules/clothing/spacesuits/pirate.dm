@@ -3,7 +3,7 @@
 	desc = "A modified helmet to allow space pirates to intimidate their customers whilst staying safe from the void. Comes with some additional protection."
 	icon_state = "spacepirate"
 	inhand_icon_state = "space_pirate_helmet"
-	armor = list(MELEE = 30, BULLET = 50, LASER = 30,ENERGY = 40, BOMB = 30, BIO = 30, FIRE = 60, ACID = 75)
+	armor = GENERIC_ARMOR_T2_SEALED
 	strip_delay = 40
 	equip_delay_other = 20
 
@@ -17,6 +17,6 @@
 	icon_state = "spacepirate"
 	w_class = WEIGHT_CLASS_NORMAL
 	allowed = list(/obj/item/gun, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/restraints/handcuffs, /obj/item/tank/internals, /obj/item/melee/energy/sword/pirate, /obj/item/clothing/glasses/eyepatch, /obj/item/reagent_containers/cup/glass/bottle/rum)
-	armor = list(MELEE = 30, BULLET = 50, LASER = 30,ENERGY = 40, BOMB = 30, BIO = 30, FIRE = 60, ACID = 75)
+	armor = GENERIC_ARMOR_T2_SEALED
 	strip_delay = 40
 	equip_delay_other = 20

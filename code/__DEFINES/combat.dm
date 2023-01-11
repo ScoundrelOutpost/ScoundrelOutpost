@@ -333,6 +333,8 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 
 // T2 ARMOR
 #define GENERIC_ARMOR_T2 list(MELEE = 20, BULLET = 20, LASER = 20,ENERGY = 20, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
+// bio protected
+#define GENERIC_ARMOR_T2_SEALED list(MELEE = 20, BULLET = 20, LASER = 20,ENERGY = 20, BOMB = 40, BIO = 100, FIRE = 50, ACID = 20, WOUND = 10)
 
 // Sacrifices other defenses for improved melee armor
 #define GENERIC_ARMOR_MELEE list(MELEE = 30, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)

@@ -311,3 +311,41 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 #define BATON_ATTACK_DONE 2
 /// The baton attack is still going. baton_effect() is called.
 #define BATON_ATTACKING 3
+
+//// ARMOR ////
+
+// No protections whatsoever
+#define TOTALLY_UNARMORED list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0, WOUND = 0)
+
+// Jumpsuits should never have considerable combat advantages
+#define GENERIC_JUMPSUIT_ARMOR list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 10, ACID = 0, WOUND = 0)
+
+// T1 ARMOR
+#define GENERIC_ARMOR_T1 list(MELEE = 10, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 30, BIO = 0, FIRE = 20, ACID = 0, WOUND = 5)
+
+// Hardhats get slightly better noncombat armor
+#define GENERIC_HARDHAT_ARMOR list(MELEE = 10, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 100, ACID = 10, WOUND = 5)
+
+// Basic environmental protections, like labcoats
+#define GENERIC_ENV_ARMOR_T1 list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 20, BIO = 60, FIRE = 60, ACID = 60, WOUND = 5)
+
+////
+
+// T2 ARMOR
+#define GENERIC_ARMOR_T2 list(MELEE = 20, BULLET = 20, LASER = 20,ENERGY = 20, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
+
+// Sacrifices other defenses for improved melee armor
+#define GENERIC_ARMOR_MELEE list(MELEE = 30, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
+
+// Sacrifices other defenses for improved bullet armor
+#define GENERIC_ARMOR_BULLET list(MELEE = 20, BULLET = 30, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
+
+// Sacrifices other defenses for improved energy armor
+#define GENERIC_ARMOR_ENERGY list(MELEE = 20, BULLET = 10, LASER = 30, ENERGY = 30, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
+
+////
+
+// T3 ARMOR
+#define GENERIC_ARMOR_T3 list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 50, BIO = 0, FIRE = 50, ACID = 50, WOUND = 15)
+// bio protected
+#define GENERIC_ARMOR_T3_SEALED list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 50, BIO = 100, FIRE = 50, ACID = 50, WOUND = 15)

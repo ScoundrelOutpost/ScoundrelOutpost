@@ -98,7 +98,7 @@
 	inhand_icon_state = "det_suit"
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST|GROIN|ARMS
-	armor = list(MELEE = 25, BULLET = 10, LASER = 25, ENERGY = 35, BOMB = 0, BIO = 0, FIRE = 0, ACID = 45)
+	armor = GENERIC_ARMOR_ENERGY
 	cold_protection = CHEST|GROIN|ARMS
 	heat_protection = CHEST|GROIN|ARMS
 
@@ -277,7 +277,7 @@
 		/obj/item/storage/bag/books,
 		/obj/item/tank/internals,
 	)
-	armor = list(MELEE = 25, BULLET = 10, LASER = 25, ENERGY = 35, BOMB = 0, BIO = 0, FIRE = 0, ACID = 45)
+	armor = GENERIC_ARMOR_T1
 	cold_protection = CHEST|ARMS
 	heat_protection = CHEST|ARMS
 
@@ -308,7 +308,7 @@
 	name = "research director's coat"
 	desc = "A mix between a labcoat and just a regular coat. It's made out of a special anti-bacterial, anti-acidic, and anti-biohazardous synthetic fabric."
 	icon_state = "labcoat_rd"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 75, FIRE = 75, ACID = 75)
+	armor = GENERIC_ENV_ARMOR_T1
 	body_parts_covered = CHEST|GROIN|ARMS
 
 /obj/item/clothing/suit/jacket/research_director/Initialize(mapload)

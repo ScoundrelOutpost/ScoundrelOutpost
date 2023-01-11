@@ -7,7 +7,7 @@
 	desc = "A piece of headgear used in dangerous working conditions to proect the head. Comes with a built-in flashlight."
 	icon_state = "hardhat0_yellow"
 	inhand_icon_state = null
-	armor = list(MELEE = 15, BULLET = 5, LASER = 20, ENERGY = 10, BOMB = 20, BIO = 50, FIRE = 100, ACID = 50, WOUND = 10) // surprisingly robust against head trauma
+	armor = GENERIC_HARDHAT_ARMOR
 	flags_inv = 0
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	clothing_flags = SNUG_FIT | PLASMAMAN_HELMET_EXEMPT

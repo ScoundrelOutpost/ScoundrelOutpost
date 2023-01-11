@@ -48,7 +48,7 @@
 	worn_icon_state = "syndi"
 	icon_state = "syndi"
 	inhand_icon_state = "space_suit_syndicate"
-	armor = list(MELEE = 30, BULLET = 35, LASER = 30, ENERGY = 30, BOMB = 80, BIO = 100, FIRE = 70, ACID = 100)
+	armor = GENERIC_ARMOR_T3_SEALED
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 	allowed = list(
@@ -69,6 +69,6 @@
 	worn_icon_state = "syndi"
 	icon_state = "syndi"
 
-	armor = list(MELEE = 30, BULLET = 35, LASER = 30, ENERGY = 30, BOMB = 80, BIO = 100, FIRE = 70, ACID = 100)
+	armor = GENERIC_ARMOR_T3_SEALED
 	flash_protect = FLASH_PROTECTION_WELDER
 	resistance_flags = FIRE_PROOF | ACID_PROOF

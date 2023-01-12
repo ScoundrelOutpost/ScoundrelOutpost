@@ -318,7 +318,7 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 #define TOTALLY_UNARMORED list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0, WOUND = 0)
 
 // Jumpsuits should never have considerable combat advantages
-#define GENERIC_JUMPSUIT_ARMOR list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 10, ACID = 0, WOUND = 0)
+#define GENERIC_JUMPSUIT_ARMOR list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 10, ACID = 10, WOUND = 0)
 
 ////
 

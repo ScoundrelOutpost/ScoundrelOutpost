@@ -213,7 +213,7 @@
 	bolt_type = BOLT_TYPE_OPEN
 	empty_indicator = TRUE
 	show_bolt_icon = FALSE
-	projectile_damage_multiplier = 4
+	projectile_damage_multiplier = 6
 
 /obj/item/gun/ballistic/automatic/tommygun/Initialize(mapload)
 	. = ..()

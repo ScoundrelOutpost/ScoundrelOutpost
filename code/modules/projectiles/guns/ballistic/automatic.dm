@@ -343,6 +343,9 @@
 	suppressor_y_offset = 3
 	projectile_damage_multiplier = 70
 
+	force = 10
+	throwforce = 18
+
 /obj/item/gun/ballistic/automatic/sniper_rifle/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 2)

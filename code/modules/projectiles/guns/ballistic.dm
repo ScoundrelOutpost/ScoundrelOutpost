@@ -157,10 +157,34 @@
  *
  */
 /obj/item/gun/ballistic/proc/add_notes_ballistic()
-	if(magazine) // Make sure you have a magazine, to get the notes from
-		return "\n[magazine.add_notes_box()]"
-	else
-		return "\nThe warning attached to the magazine is missing..."
+	var/list/readout = list()
+
+	var/obj/item/ammo_box/magazine/exam_mag = mag_type
+
+	if(!chambered)
+		readout += "\nAs a loaded projectile weapon, you get the impression this could do..."
+		readout += "[span_warning("[projectile_damage_multiplier]")] damage per shot using standard [initial(exam_mag.caliber)] ammunition, but there's nothing chambered."
+
+		return readout.Join("\n") // Sending over the singular string, rather than the whole list
+
+	var/obj/projectile/exam_proj
+	var/obj/item/ammo_casing/for_ammo = chambered
+	exam_proj = for_ammo.projectile_type
+	if(chambered)
+		readout += "\nAs a loaded projectile weapon, you get the impression this could do..."
+		if(initial(exam_proj.damage) > 0)
+			readout += "[span_warning("[initial(exam_proj.damage) * projectile_damage_multiplier * initial(for_ammo.pellets)] [initial(exam_proj.damage_type)] force")] per shot using the chambered ammunition, with an armor penetration of [span_warning("[initial(exam_proj.armour_penetration)].")]"
+		if(initial(exam_proj.stamina) > 0)
+			readout += "[span_warning("[initial(exam_proj.stamina) * projectile_damage_multiplier * initial(for_ammo.pellets)] stamina force")] per shot using the chambered ammunition, with an armor penetration of [span_warning("[initial(exam_proj.armour_penetration)].")]"
+		if(burst_size > 1)
+			readout += "Additionally, it seems to fire in bursts of [burst_size]."
+		if(initial(for_ammo.pellets) > 1)
+			readout += "\The [initial(for_ammo.name)] will eject in a cloud of roughly [span_warning("[initial(for_ammo.pellets)] pellets.")]"
+			
+		if(initial(exam_proj.nodamage = TRUE))
+			readout += "Probably nothing, in terms of damage -- but you never know."
+
+		return readout.Join("\n") // Sending over the singular string, rather than the whole list
 
 /obj/item/gun/ballistic/vv_edit_var(vname, vval)
 	. = ..()

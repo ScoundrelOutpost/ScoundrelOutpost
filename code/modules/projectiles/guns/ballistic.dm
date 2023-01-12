@@ -177,7 +177,7 @@
 		if(initial(exam_proj.stamina) > 0)
 			readout += "[span_warning("[initial(exam_proj.stamina) * projectile_damage_multiplier * initial(for_ammo.pellets)] stamina force")] per shot using the chambered ammunition, with an armor penetration of [span_warning("[initial(exam_proj.armour_penetration)].")]"
 		if(burst_size > 1)
-			readout += "Additionally, it seems to fire in bursts of [burst_size]."
+			readout += "Additionally, it seems to fire in [span_warning("bursts of [burst_size].")]"
 		if(initial(for_ammo.pellets) > 1)
 			readout += "\The [initial(for_ammo.name)] will eject in a cloud of roughly [span_warning("[initial(for_ammo.pellets)] pellets.")]"
 			

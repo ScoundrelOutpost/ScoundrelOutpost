@@ -334,4 +334,4 @@
 
 	activation_time = 1
 
-	cell = /obj/item/stock_parts/cell/infinite
+	cell_type = /obj/item/stock_parts/cell/infinite

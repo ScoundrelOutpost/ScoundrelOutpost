@@ -135,8 +135,6 @@
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharpened bone. The bare minimum in survival."
-	force = 12
-	throwforce = 15
 	custom_materials = null
 
 /obj/item/knife/combat/cyborg

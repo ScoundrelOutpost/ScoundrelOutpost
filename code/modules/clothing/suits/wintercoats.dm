@@ -46,7 +46,7 @@
 	icon_state = "coateva"
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 0.75
-	armor = GENERIC_ENV_ARMOR_T1
+	armor = GENERIC_ENV_ARMOR_T2
 	strip_delay = 6 SECONDS
 	equip_delay_other = 6 SECONDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT // Protects very cold.
@@ -64,7 +64,7 @@
 	name = "\proper Endotherm winter hood"
 	desc = "A thickly padded hood attached to an even thicker coat."
 	icon_state = "hood_eva"
-	armor = GENERIC_ENV_ARMOR_T1
+	armor = GENERIC_ENV_ARMOR_T2
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	clothing_flags = THICKMATERIAL|SNUG_FIT // Snug fit doesn't really matter, but might as well

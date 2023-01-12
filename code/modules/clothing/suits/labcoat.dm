@@ -28,7 +28,7 @@
 		/obj/item/tank/internals/emergency_oxygen,
 		/obj/item/tank/internals/plasmaman,
 		)
-	armor = GENERIC_ENV_ARMOR_T1
+	armor = GENERIC_ENV_ARMOR_T2
 	species_exception = list(/datum/species/golem)
 
 /obj/item/clothing/suit/toggle/labcoat/cmo

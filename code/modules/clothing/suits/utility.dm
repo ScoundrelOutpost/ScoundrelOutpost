@@ -28,7 +28,7 @@
 		/obj/item/tank/internals,
 	)
 	slowdown = 0.5
-	armor = GENERIC_ARMOR_T2_FIRE
+	armor = GENERIC_ARMOR_T1_FIRE
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -128,7 +128,7 @@
 	desc = "A hood with radiation protective properties. The label reads, 'Made with lead. Please do not consume insulation.'"
 	clothing_flags = THICKMATERIAL | SNUG_FIT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
-	armor = GENERIC_ENV_ARMOR_T1
+	armor = GENERIC_ENV_ARMOR_T2
 	strip_delay = 60
 	equip_delay_other = 60
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
@@ -152,7 +152,7 @@
 		/obj/item/tank/internals,
 		)
 	slowdown = 0.5
-	armor = GENERIC_ENV_ARMOR_T1
+	armor = GENERIC_ENV_ARMOR_T2
 	strip_delay = 60
 	equip_delay_other = 60
 	flags_inv = HIDEJUMPSUIT

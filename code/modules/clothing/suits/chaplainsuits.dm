@@ -10,9 +10,6 @@
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	armor = GENERIC_ARMOR_MELEE
-	clothing_flags = BLOCKS_SHOVE_KNOCKDOWN
-	strip_delay = 80
-	equip_delay_other = 60
 
 /obj/item/clothing/suit/hooded/chaplainsuit
 	allowed = list(/obj/item/storage/book/bible, /obj/item/nullrod, /obj/item/reagent_containers/cup/glass/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/candle, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)

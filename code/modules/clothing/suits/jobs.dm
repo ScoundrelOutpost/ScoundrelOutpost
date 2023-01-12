@@ -306,7 +306,7 @@
 	name = "research director's coat"
 	desc = "A mix between a labcoat and just a regular coat. It's made out of a special anti-bacterial, anti-acidic, and anti-biohazardous synthetic fabric."
 	icon_state = "labcoat_rd"
-	armor = GENERIC_ENV_ARMOR_T1
+	armor = GENERIC_ENV_ARMOR_T2
 	body_parts_covered = CHEST|GROIN|ARMS
 
 /obj/item/clothing/suit/jacket/research_director/Initialize(mapload)

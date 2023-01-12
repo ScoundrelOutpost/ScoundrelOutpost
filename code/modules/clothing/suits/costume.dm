@@ -269,7 +269,7 @@
 	desc = "A slimming piece of dubious space carp technology, you suspect it won't stand up to hand-to-hand blows."
 	icon_state = "carp_suit"
 	inhand_icon_state = "space_suit_syndicate"
-	armor = GENERIC_ARMOR_VULNERABILITY_T1 //As whimpy whimpy whoo
+	armor = GENERIC_ARMOR_T1_SEALED //As whimpy whimpy whoo
 	allowed = list(/obj/item/tank/internals, /obj/item/gun/ballistic/rifle/boltaction/harpoon) //I'm giving you a hint here
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -285,7 +285,7 @@
 	name = "carp helmet"
 	desc = "Spaceworthy and it looks like a space carp's head, smells like one too."
 	icon_state = "carp_helm"
-	armor = GENERIC_ARMOR_VULNERABILITY_T1 //As whimpy as a space carp
+	armor = GENERIC_ARMOR_T1_SEALED //As whimpy as a space carp
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR //facial hair will clip with the helm, this'll need a dynamic_fhair_suffix at some point.
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -454,7 +454,7 @@
 	name = "bronze suit"
 	desc = "A big and clanky suit made of bronze that offers no protection and looks very unfashionable. Nice."
 	icon_state = "clockwork_cuirass_old"
-	armor = GENERIC_ARMOR_VULNERABILITY_T1
+	armor = TOTALLY_UNARMORED
 
 /obj/item/clothing/suit/hooded/mysticrobe
 	name = "mystic's robe"

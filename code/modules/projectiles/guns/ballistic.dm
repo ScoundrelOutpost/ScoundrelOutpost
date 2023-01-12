@@ -163,7 +163,7 @@
 
 	if(!chambered)
 		readout += "\nAs a loaded projectile weapon, you get the impression this could do..."
-		readout += "[span_warning("[projectile_damage_multiplier]")] damage per shot using standard [initial(exam_mag.caliber)] ammunition, but there's nothing chambered."
+		readout += "[span_warning("[projectile_damage_multiplier] force")] per shot using standard [initial(exam_mag.caliber)] ammunition, but there's nothing chambered."
 
 		return readout.Join("\n") // Sending over the singular string, rather than the whole list
 

@@ -66,7 +66,6 @@
 	desc = "A thick jacket with a rubbery, water-resistant shell."
 	icon_state = "pufferjacket"
 	inhand_icon_state = "hostrench"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 0)
 	species_exception = list(/datum/species/golem/bone)
 
 /obj/item/clothing/suit/jacket/puffer/vest
@@ -76,7 +75,6 @@
 	inhand_icon_state = "armor"
 	body_parts_covered = CHEST|GROIN
 	cold_protection = CHEST|GROIN
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 30, FIRE = 0, ACID = 0)
 
 /obj/item/clothing/suit/jacket/miljacket
 	name = "military jacket"
@@ -119,5 +117,5 @@
 	desc = "A durable jacket made of space-grade polymer-nanoweave. The protection from radiation burns makes jackets like these common choice for EVA specialists."
 	icon_state = "bomberjacket"
 	inhand_icon_state = "brownjsuit"
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 0)
+	armor = GENERIC_ENV_ARMOR_T1
 	clothing_traits = list(TRAIT_RADIATION_PROTECTED_CLOTHING)

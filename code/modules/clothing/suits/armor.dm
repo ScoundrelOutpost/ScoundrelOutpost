@@ -181,6 +181,7 @@
 	inhand_icon_state = null
 	blood_overlay_type = "armor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = GENERIC_ARMOR_MELEE
 
 /obj/item/clothing/suit/armor/bulletproof
 	name = "bulletproof armor"
@@ -275,6 +276,7 @@
 	icon_state = "knight_green"
 	inhand_icon_state = null
 	allowed = list(/obj/item/nullrod, /obj/item/claymore, /obj/item/banner, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
+	armor = GENERIC_ARMOR_MELEE
 
 /obj/item/clothing/suit/armor/riot/knight/yellow
 	icon_state = "knight_yellow"

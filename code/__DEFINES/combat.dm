@@ -329,12 +329,22 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 // Basic environmental protections, like labcoats
 #define GENERIC_ENV_ARMOR_T1 list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 20, BIO = 60, FIRE = 60, ACID = 60, WOUND = 5)
 
+// Bio
+#define GENERIC_ARMOR_BIO list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 100, FIRE = 30, ACID = 100)
+
+// Actively detrimental T1
+#define GENERIC_ENV_ARMOR_VULNERABILITY_T1 list(MELEE = -20, BULLET = -20, LASER = -20, ENERGY = -20, BOMB = 0, BIO = 100, FIRE = 60, ACID = 75)
+
 ////
 
 // T2 ARMOR
 #define GENERIC_ARMOR_T2 list(MELEE = 20, BULLET = 20, LASER = 20,ENERGY = 20, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
+
 // bio protected
 #define GENERIC_ARMOR_T2_SEALED list(MELEE = 20, BULLET = 20, LASER = 20,ENERGY = 20, BOMB = 40, BIO = 100, FIRE = 50, ACID = 20, WOUND = 10)
+
+// fire protected
+#define GENERIC_ARMOR_T2_FIRE list(MELEE = 20, BULLET = 20, LASER = 20,ENERGY = 20, BOMB = 40, BIO = 50, FIRE = 100, ACID = 50)
 
 // Sacrifices other defenses for improved melee armor
 #define GENERIC_ARMOR_MELEE list(MELEE = 30, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
@@ -345,9 +355,13 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 // Sacrifices other defenses for improved energy armor
 #define GENERIC_ARMOR_ENERGY list(MELEE = 20, BULLET = 10, LASER = 30, ENERGY = 30, BOMB = 40, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10)
 
+// Sacrifices other defenses to not gib from explosions
+#define GENERIC_ARMOR_BOMB list(MELEE = 10, BULLET = 10, LASER = 10,ENERGY = 10, BOMB = 100, BIO = 0, FIRE = 50, ACID = 20, WOUND = 10))
+
 ////
 
 // T3 ARMOR
 #define GENERIC_ARMOR_T3 list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 50, BIO = 0, FIRE = 50, ACID = 50, WOUND = 15)
 // bio protected
 #define GENERIC_ARMOR_T3_SEALED list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 50, BIO = 100, FIRE = 50, ACID = 50, WOUND = 15)
+

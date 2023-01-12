@@ -27,7 +27,6 @@
 		/obj/item/storage/bag/plants,
 	)
 	species_exception = list(/datum/species/golem)
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 0)
 
 /obj/item/clothing/suit/apron/waders
 	name = "horticultural waders"
@@ -66,7 +65,6 @@
 	inhand_icon_state = "chef"
 	icon = 'icons/obj/clothing/suits/jacket.dmi'
 	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 0)
 	body_parts_covered = CHEST|GROIN|ARMS
 	allowed = list(
 		/obj/item/kitchen,

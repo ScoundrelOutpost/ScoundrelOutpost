@@ -125,8 +125,6 @@
 	name = "survival knife"
 	icon_state = "survivalknife"
 	desc = "A hunting grade survival knife."
-	force = 12
-	throwforce = 15
 	bayonet = TRUE
 
 /obj/item/knife/combat/bone

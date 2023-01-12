@@ -24,7 +24,7 @@
 	equip_delay_other = 80
 	limb_integrity = 30
 	armor = STARSUIT_ARMOR
-	clothing_flags = STOPSPRESSUREDAMAGE
+	clothing_flags = STOPSPRESSUREDAMAGE|PLASMAMAN_PREVENT_IGNITION
 	w_class = WEIGHT_CLASS_NORMAL
 //	slowdown = 0.5 need to figure out a better downside than this
 
@@ -50,7 +50,6 @@
 	icon_state = "starsuit"
 	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_head.dmi'
 	worn_icon_state = "starsuit"
-	
 	
 	flash_protect = 0
 	armor = STARSUIT_ARMOR

@@ -23,7 +23,7 @@
 	strip_delay = 80
 	equip_delay_other = 80
 	limb_integrity = 30
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 100, WOUND = 0)
+	armor = STARSUIT_ARMOR
 	clothing_flags = STOPSPRESSUREDAMAGE
 	w_class = WEIGHT_CLASS_NORMAL
 //	slowdown = 0.5 need to figure out a better downside than this
@@ -31,6 +31,11 @@
 	has_sensor = NO_SENSORS
 	random_sensor = FALSE
 	can_adjust = FALSE
+
+/obj/item/clothing/under/starsuit/Initialize(mapload)
+	. = ..()
+	allowed += GLOB.space_suit_allowed
+	allowed += GLOB.generic_suit_allowed
 
 /obj/item/clothing/under/starsuit/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
@@ -45,7 +50,10 @@
 	icon_state = "starsuit"
 	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_head.dmi'
 	worn_icon_state = "starsuit"
+	
+	
 	flash_protect = 0
+	armor = STARSUIT_ARMOR
 
 /obj/item/clothing/head/helmet/space/starsuit/engineer
 	name = "starsuit hardhat"
@@ -53,7 +61,7 @@
 	icon_state = "starsuit_hardhat"
 	worn_icon_state = "starsuit_hardhat"
 
-	armor = list(MELEE = 10, BULLET = 10, LASER = 10,ENERGY = 10, BOMB = 30, BIO = 100, FIRE = 80, ACID = 70)
+	armor = STARSUIT_HARDHAT_ARMOR
 
 /obj/item/clothing/head/helmet/space/starsuit/engineer/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()

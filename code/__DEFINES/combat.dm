@@ -376,3 +376,8 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 // bio protected
 #define GENERIC_ARMOR_T3_SEALED list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 50, BIO = 100, FIRE = 50, ACID = 50, WOUND = 15)
 
+////
+
+// misc armor
+#define STARSUIT_ARMOR list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 70, FIRE = 70, ACID = 70, WOUND = 0)
+#define STARSUIT_HARDHAT_ARMOR list(MELEE = 10, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 70, FIRE = 70, ACID = 70, WOUND = 5)

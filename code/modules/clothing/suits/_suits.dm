@@ -62,6 +62,7 @@
 //generic allowed list
 GLOBAL_LIST_INIT(generic_suit_allowed, typecacheof(list(
 		// misc
+		/obj/item/modular_computer/tablet/pda,
 		/obj/item/flashlight,
 		/obj/item/radio,
 		/obj/item/storage/bag/construction,
@@ -76,10 +77,23 @@ GLOBAL_LIST_INIT(generic_suit_allowed, typecacheof(list(
 		/obj/item/t_scanner,
 		// weapons
 		/obj/item/melee/tonfa,
-		/obj/item/fireaxe/metal_h2_axe,
+		/obj/item/fireaxe,
+		/obj/item/spear,
+		/obj/item/javelin,
 		/obj/item/gun,
 		/obj/item/knife,
 		// shield
 		/obj/item/personalshield,
 	)))
 
+/obj/item/clothing/suit/space/Initialize(mapload)
+	. = ..()
+	allowed += GLOB.space_suit_allowed
+
+/obj/item/clothing/suit/utility/Initialize(mapload)
+	. = ..()
+	allowed += GLOB.space_suit_allowed
+
+GLOBAL_LIST_INIT(space_suit_allowed, typecacheof(list(
+		/obj/item/tank/internals,
+	)))

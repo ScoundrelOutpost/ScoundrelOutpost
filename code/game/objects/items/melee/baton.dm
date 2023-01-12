@@ -834,6 +834,6 @@
 	inhand_icon_state = "prod"
 	worn_icon_state = "stunprod"
 	
-	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	active_w_class = WEIGHT_CLASS_BULKY

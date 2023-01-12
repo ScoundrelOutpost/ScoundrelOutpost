@@ -9,7 +9,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
 	name = "fire axe"
 	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
-	force = 5
+	force = 12
 	throwforce = 15
 	demolition_mod = 1.25
 	w_class = WEIGHT_CLASS_BULKY
@@ -24,9 +24,9 @@
 	wound_bonus = -15
 	bare_wound_bonus = 20
 	/// How much damage to do unwielded
-	var/force_unwielded = 5
+	var/force_unwielded = 12
 	/// How much damage to do wielded
-	var/force_wielded = 24
+	var/force_wielded = 18
 
 /obj/item/fireaxe/Initialize(mapload)
 	. = ..()
@@ -64,8 +64,8 @@
 	base_icon_state = "bone_axe"
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
-	force_unwielded = 5
-	force_wielded = 23
+	force_unwielded = 12
+	force_wielded = 20
 
 /*
  * Metal Hydrogen Axe
@@ -75,8 +75,8 @@
 	base_icon_state = "metalh2_axe"
 	name = "metallic hydrogen axe"
 	desc = "A lightweight crowbar with an extreme sharp fire axe head attached. It trades it's hefty as a weapon by making it easier to carry around when holstered to suits without having to sacrifice your backpack."
-	force_unwielded = 5
-	force_wielded = 15
+	force_unwielded = 12
+	force_wielded = 22
 	demolition_mod = 2
 	tool_behaviour = TOOL_CROWBAR
 	toolspeed = 1

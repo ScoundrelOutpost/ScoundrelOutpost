@@ -26,7 +26,6 @@
 	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 	family_heirlooms = list(/obj/item/clothing/mask/gas, /obj/item/clothing/gloves/color/yellow)
-	mail_goodies = list()
 	rpg_title = "Deckhand"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_ASSIGN_QUIRKS
 
@@ -132,7 +131,6 @@
 	bounty_types = CIV_JOB_RANDOM
 
 	family_heirlooms = list(/obj/item/toy/plush/slimeplushie, /obj/item/organ/internal/heart, /obj/item/storage/medkit/ancient/heirloom)
-	mail_goodies = list()
 	rpg_title = "Mystic Theurge"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE
@@ -195,7 +193,6 @@
 	
 	family_heirlooms = list(/obj/item/clothing/head/utility/hardhat/white, /obj/item/screwdriver, /obj/item/wrench, /obj/item/weldingtool, /obj/item/crowbar, /obj/item/wirecutters)
 
-	mail_goodies = list()
 	rpg_title = "Artificer"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE
@@ -262,8 +259,6 @@
 	)
 
 	family_heirlooms = list(/obj/item/stack/telecrystal, /obj/item/flamethrower/full, /obj/item/ammo_box/magazine/m9mm/surplus)
-
-	mail_goodies = list()
 
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	rpg_title = "Shipmaster"
@@ -341,7 +336,6 @@
 		/datum/job_department/command,
 		)
 	family_heirlooms = list(/obj/item/storage/pouch)
-	mail_goodies = list()
 	rpg_title = "Steward"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE
@@ -411,8 +405,6 @@
 
 	family_heirlooms = list(/obj/item/throwing_star, /obj/item/clothing/mask/gas/ninja)
 
-	mail_goodies = list()
-
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	rpg_title = "Sellsword"
 
@@ -476,7 +468,6 @@
 	bounty_types = CIV_JOB_RANDOM
 
 	family_heirlooms = list(/obj/item/survivalcapsule/luxury)
-	mail_goodies = list()
 	rpg_title = "Spelunker"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE

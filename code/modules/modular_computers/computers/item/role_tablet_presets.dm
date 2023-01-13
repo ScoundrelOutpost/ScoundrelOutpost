@@ -436,9 +436,9 @@
 	greyscale_colors = "#563C2B#C7C7C7"
 
 /obj/item/modular_computer/tablet/pda/deckhand/leader
-	name = "leader's PDA"
-	desc = "A small portable microcomputer."
+	name = "advanced PDA"
 	max_capacity = 128
+	greyscale_colors = "#282828#808080#ADADAD"
 	starting_programs = list(
 		/datum/computer_file/program/crew_manifest,
 		/datum/computer_file/program/status,

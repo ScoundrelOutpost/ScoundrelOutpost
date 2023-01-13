@@ -360,7 +360,7 @@
 	uniform = /obj/item/clothing/under/rank/centcom/official
 	suit = /obj/item/clothing/suit/armor/vest
 	gloves = /obj/item/clothing/gloves/color/black
-	accessory = /obj/item/clothing/accessory/armband/hydro
+	accessory = /obj/item/clothing/accessory/medal/silver
 	belt = /obj/item/storage/belt/utility/small
 	ears = /obj/item/radio/headset/heads/captain
 	glasses = /obj/item/clothing/glasses/sunglasses/big
@@ -436,6 +436,8 @@
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
 	gloves = /obj/item/clothing/gloves/toagloves
 	shoes = /obj/item/clothing/shoes/jackboots
+
+	accessory = /obj/item/clothing/accessory/medal/silver
 
 	suit_store = /obj/item/personalshield/standard/advanced
 

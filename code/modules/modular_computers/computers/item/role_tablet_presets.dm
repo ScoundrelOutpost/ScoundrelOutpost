@@ -438,6 +438,7 @@
 /obj/item/modular_computer/tablet/pda/deckhand/leader
 	name = "advanced PDA"
 	max_capacity = 128
+	greyscale_config = /datum/greyscale_config/tablet/stripe_thick
 	greyscale_colors = "#282828#808080#ADADAD"
 	starting_programs = list(
 		/datum/computer_file/program/crew_manifest,

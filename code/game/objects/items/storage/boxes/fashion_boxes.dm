@@ -11,6 +11,27 @@
 	new /obj/item/clothing/mask/bandana/striped/engineering(src)
 
 
+/obj/item/storage/box/fashion/assistant
+	name = "maintenance outfit"
+	desc = "Some comfortable, utilitarian attire suited to all kinds of work. Commands respect among the corporate warrior-underclass."
+/obj/item/storage/box/fashion/assistant/PopulateContents()
+	new /obj/item/clothing/under/color/grey(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/clothing/shoes/sneakers/black(src)
+	new /obj/item/clothing/gloves/color/fyellow/old(src)
+	new /obj/item/clothing/head/soft/black(src)
+
+/obj/item/storage/box/fashion/janitor
+	name = "janitor outfit"
+	desc = "Some durable, moisture-resistant cleaning apparel."	
+/obj/item/storage/box/fashion/janitor/PopulateContents()
+	new /obj/item/clothing/under/rank/civilian/janitor(src)
+	new /obj/item/clothing/mask/bandana/purple(src)
+	new /obj/item/clothing/shoes/sneakers/black(src)
+	new /obj/item/clothing/gloves/color/black(src)
+	new /obj/item/clothing/head/soft/purple(src)
+
+
 /obj/item/storage/box/fashion/robotics
 	name = "roboticist outfit"
 	desc = "A sleek, clinical outfit for the cybernetic engineer."
@@ -31,6 +52,16 @@
 	new /obj/item/clothing/shoes/laceup(src)
 
 
+/obj/item/storage/box/fashion/miner
+	name = "mining outfit"
+	desc = "A rugged spelunking look with durability and padding suited to hard labor in rough environments."
+/obj/item/storage/box/fashion/miner/PopulateContents()
+	new /obj/item/clothing/under/rank/cargo/miner/lavaland(src)
+	new /obj/item/clothing/glasses/eyepatch(src)
+	new /obj/item/clothing/gloves/color/black(src)
+	new /obj/item/clothing/shoes/workboots/mining(src)
+
+
 /obj/item/storage/box/fashion/bartender
 	name = "bartender outfit"
 	desc = "A formal, old-fashioned bartender's outfit."
@@ -40,12 +71,23 @@
 	new /obj/item/clothing/shoes/laceup(src)
 
 
+/obj/item/storage/box/fashion/chef
+	name = "chef outfit"
+	desc = "A clean outfit demonstrating how serious you are about cooking, including an eccentrically anachronistic hat."
+/obj/item/storage/box/fashion/chef/PopulateContents()
+	new /obj/item/clothing/under/rank/civilian/chef(src)
+	new /obj/item/clothing/head/utility/chefhat(src)
+	new /obj/item/clothing/suit/apron/chef(src)
+	new /obj/item/clothing/shoes/laceup(src)
+
+
 /obj/item/storage/box/fashion/executive
 	name = "executive outfit"
 	desc = "A sleek, expensive suit, for that refined & punchable look."
 /obj/item/storage/box/fashion/executive/PopulateContents()
-	new /obj/item/clothing/under/suit/black_really(src)
-	new /obj/item/clothing/neck/tie/black(src)
+	new /obj/item/clothing/under/suit/black(src)
+	new /obj/item/clothing/suit/toggle/lawyer/black(src)
+	new /obj/item/clothing/neck/tie/red(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/shoes/laceup(src)
 
@@ -55,6 +97,9 @@
 	desc = "A dark, militant & tactical look, for people who take their work very seriously."
 /obj/item/storage/box/fashion/operative/PopulateContents()
 	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/glasses/eyepatch(src)
+	new /obj/item/clothing/neck/scarf/black(src)
+	new /obj/item/clothing/suit/toggle/jacket/sweater(src)
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 
@@ -105,6 +150,7 @@
 	if(prob(50))
 		new /obj/item/clothing/mask/animal/small/bee(src)
 
+
 /obj/item/storage/box/fashion/security
 	name = "private security outfit"
 	desc = "An authoritative private security uniform in red, for the domesticated mercenary."
@@ -113,3 +159,13 @@
 	new /obj/item/clothing/head/hats/warden/red/fake(src)
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/shoes/jackboots/sec(src)
+
+
+/obj/item/storage/box/fashion/hacker
+	name = "hacker outfit"
+	desc = "A gloomy look expressing a neo-modern cultural angst, a fashion sentiment built by the Cyberstar underclass."
+/obj/item/storage/box/fashion/hacker/PopulateContents()
+	new /obj/item/clothing/under/color/black(src)
+	new /obj/item/clothing/suit/costume/gothcoat(src)
+	new /obj/item/clothing/gloves/fingerless(src)
+	new /obj/item/clothing/shoes/laceup(src)

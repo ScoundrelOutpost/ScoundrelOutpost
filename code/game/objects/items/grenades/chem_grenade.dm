@@ -420,9 +420,9 @@
 	var/obj/item/reagent_containers/cup/beaker/large/beaker_one = new(src)
 	var/obj/item/reagent_containers/cup/beaker/beaker_two = new(src)
 
-	beaker_one.reagents.add_reagent(/datum/reagent/aluminium, 75)
-	beaker_two.reagents.add_reagent(/datum/reagent/smart_foaming_agent, 25)
-	beaker_two.reagents.add_reagent(/datum/reagent/toxin/acid/fluacid, 25)
+	beaker_one.reagents.add_reagent(/datum/reagent/aluminium, 30)
+	beaker_two.reagents.add_reagent(/datum/reagent/smart_foaming_agent, 10)
+	beaker_two.reagents.add_reagent(/datum/reagent/toxin/acid/fluacid, 10)
 
 	beakers += beaker_one
 	beakers += beaker_two
@@ -664,6 +664,24 @@
 
 	beaker_one.reagents.add_reagent(/datum/reagent/potassium, 150)
 	beaker_two.reagents.add_reagent(/datum/reagent/water/holywater, 150)
+
+	beakers += beaker_one
+	beakers += beaker_two
+
+// scoundrel content
+/obj/item/grenade/chem_grenade/smart_metal_foam_mini
+	name = "mini smartfoam grenade"
+	desc = "Used for emergency sealing of small hull breaches. Try not to waste it."
+	stage = GRENADE_READY
+
+/obj/item/grenade/chem_grenade/smart_metal_foam_mini/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/cup/beaker/beaker_one = new(src)
+	var/obj/item/reagent_containers/cup/beaker/beaker_two = new(src)
+
+	beaker_one.reagents.add_reagent(/datum/reagent/aluminium, 3)
+	beaker_two.reagents.add_reagent(/datum/reagent/smart_foaming_agent, 1)
+	beaker_two.reagents.add_reagent(/datum/reagent/toxin/acid/fluacid, 1)
 
 	beakers += beaker_one
 	beakers += beaker_two

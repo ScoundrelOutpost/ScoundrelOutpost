@@ -33,6 +33,7 @@
 		/obj/item/pinpointer/crew,
 		/obj/item/melee/tonfa,
 		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/choice_beacon/hero,
 	)
 	var/medium = list(
 		// 15% chance to spawn 1

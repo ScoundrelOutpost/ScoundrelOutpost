@@ -19,14 +19,7 @@
 	/// How many goodies this mail contains.
 	var/goodie_count = 1
 	/// Goodies which can be given to anyone. The base weight is 50. For there to be a 50/50 chance of getting a department item, they need 50 weight as well.
-	var/list/generic_goodies = list(
-		/obj/effect/spawner/random/entertainment/money_medium = 25,
-		/obj/effect/spawner/random/food_or_drink/refreshing_beverage = 10,
-		/obj/effect/spawner/random/food_or_drink/snack = 5,
-		/obj/effect/spawner/random/food_or_drink/donkpockets_single = 5,
-		/obj/effect/spawner/random/entertainment/toy = 3,
-		/obj/effect/spawner/random/entertainment/coin = 2,
-	)
+	var/list/generic_goodies = list()
 	// Overlays (pure fluff)
 	/// Does the letter have the postmark overlay?
 	var/postmarked = TRUE
@@ -65,6 +58,7 @@
 			ACCOUNT_CAR = COLOR_BEIGE,
 			ACCOUNT_SEC = COLOR_PALE_RED_GRAY,
 		)
+	generic_goodies += GLOB.generic_mail_loot
 
 	// Icons
 	// Add some random stamps.
@@ -163,12 +157,12 @@
 
 	if(!is_mail_restricted)
 		// the weighted list is 50 (generic items) + 50 (job items)
-		// every quirk adds 5 to the final weighted list (regardless the number of items or weights in the quirk list)
-		// 5% is not too high or low so that stacking multiple quirks doesn't tilt the weighted list too much
+		// every quirk adds 3 to the final weighted list (regardless the number of items or weights in the quirk list)
+		// 3% is not too high or low so that stacking multiple quirks doesn't tilt the weighted list too much
 		for(var/datum/quirk/quirk as anything in body.quirks)
 			if(LAZYLEN(quirk.mail_goodies))
 				var/quirk_goodie = pick(quirk.mail_goodies)
-				goodies[quirk_goodie] = 5
+				goodies[quirk_goodie] = 3
 
 	for(var/iterator in 1 to goodie_count)
 		var/target_good = pick_weight(goodies)

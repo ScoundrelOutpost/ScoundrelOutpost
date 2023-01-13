@@ -25,10 +25,8 @@
 	display_order = JOB_DISPLAY_ORDER_DECKHAND
 	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
-	family_heirlooms = list(/obj/item/stamp, /obj/item/stamp/denied)
-	mail_goodies = list(
-		/obj/item/circuitboard/machine/emitter = 3
-	)
+	family_heirlooms = list(/obj/item/clothing/mask/gas, /obj/item/clothing/gloves/color/yellow)
+	mail_goodies = list()
 	rpg_title = "Deckhand"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_ASSIGN_QUIRKS
 
@@ -133,17 +131,8 @@
 	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 
-	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
-	mail_goodies = list(
-		/obj/item/healthanalyzer/advanced = 15,
-		/obj/item/scalpel/advanced = 6,
-		/obj/item/retractor/advanced = 6,
-		/obj/item/cautery/advanced = 6,
-		/obj/effect/spawner/random/medical/memeorgans = 1,
-		/obj/item/raw_anomaly_core/random = 10,
-		/obj/item/disk/tech_disk/spaceloot = 2,
-		/obj/item/camera_bug = 1
-	)
+	family_heirlooms = list(/obj/item/toy/plush/slimeplushie, /obj/item/organ/internal/heart, /obj/item/storage/medkit/ancient/heirloom)
+	mail_goodies = list()
 	rpg_title = "Mystic Theurge"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE
@@ -206,16 +195,7 @@
 	
 	family_heirlooms = list(/obj/item/clothing/head/utility/hardhat/white, /obj/item/screwdriver, /obj/item/wrench, /obj/item/weldingtool, /obj/item/crowbar, /obj/item/wirecutters)
 
-	mail_goodies = list(
-		/obj/item/healthanalyzer/advanced = 15,
-		/obj/item/scalpel/advanced = 6,
-		/obj/item/retractor/advanced = 6,
-		/obj/item/cautery/advanced = 6,
-		/obj/effect/spawner/random/medical/memeorgans = 1,
-		/obj/item/raw_anomaly_core/random = 10,
-		/obj/item/disk/tech_disk/spaceloot = 2,
-		/obj/item/camera_bug = 1
-	)
+	mail_goodies = list()
 	rpg_title = "Artificer"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE
@@ -281,24 +261,12 @@
 		/datum/job_department/command,
 	)
 
-	family_heirlooms = list(/obj/item/reagent_containers/cup/glass/flask/gold, /obj/item/toy/captainsaid/collector)
+	family_heirlooms = list(/obj/item/stack/telecrystal, /obj/item/flamethrower/full, /obj/item/ammo_box/magazine/m9mm/surplus)
 
-	mail_goodies = list(
-		/obj/item/clothing/mask/cigarette/cigar/havana = 20,
-		/obj/item/storage/fancy/cigarettes/cigars/havana = 15,
-		/obj/item/reagent_containers/cup/glass/bottle/champagne = 5,
-		/obj/item/reagent_containers/cup/glass/bottle/champagne/cursed = 5,
-		/obj/item/toy/captainsaid/collector = 20,
-		/obj/item/skillchip/sabrage = 5,
-	)
+	mail_goodies = list()
 
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	rpg_title = "Shipmaster"
-
-
-/datum/job/captain/get_captaincy_announcement(mob/living/captain)
-	return "Captain [captain.real_name] on deck!"
-
 
 /datum/outfit/job/captain_scoundrel
 	name = "Captain"
@@ -372,10 +340,8 @@
 	departments_list = list(
 		/datum/job_department/command,
 		)
-	family_heirlooms = list(/obj/item/stamp, /obj/item/stamp/denied)
-	mail_goodies = list(
-		/obj/item/circuitboard/machine/emitter = 3
-	)
+	family_heirlooms = list(/obj/item/storage/pouch)
+	mail_goodies = list()
 	rpg_title = "Steward"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE
@@ -443,20 +409,12 @@
 		/datum/job_department/command,
 	)
 
-	family_heirlooms = list(/obj/item/reagent_containers/cup/glass/flask/gold, /obj/item/toy/captainsaid/collector)
+	family_heirlooms = list(/obj/item/throwing_star, /obj/item/clothing/mask/gas/ninja)
 
-	mail_goodies = list(
-		/obj/item/clothing/mask/cigarette/cigar/havana = 20,
-		/obj/item/storage/fancy/cigarettes/cigars/havana = 15,
-		/obj/item/reagent_containers/cup/glass/bottle/champagne = 5,
-		/obj/item/reagent_containers/cup/glass/bottle/champagne/cursed = 5,
-		/obj/item/toy/captainsaid/collector = 20,
-		/obj/item/skillchip/sabrage = 5,
-	)
+	mail_goodies = list()
 
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	rpg_title = "Sellsword"
-
 
 /datum/outfit/job/detective_scoundrel
 	name = "Detective"
@@ -515,17 +473,8 @@
 	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 
-	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
-	mail_goodies = list(
-		/obj/item/healthanalyzer/advanced = 15,
-		/obj/item/scalpel/advanced = 6,
-		/obj/item/retractor/advanced = 6,
-		/obj/item/cautery/advanced = 6,
-		/obj/effect/spawner/random/medical/memeorgans = 1,
-		/obj/item/raw_anomaly_core/random = 10,
-		/obj/item/disk/tech_disk/spaceloot = 2,
-		/obj/item/camera_bug = 1
-	)
+	family_heirlooms = list(/obj/item/survivalcapsule/luxury)
+	mail_goodies = list()
 	rpg_title = "Spelunker"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE

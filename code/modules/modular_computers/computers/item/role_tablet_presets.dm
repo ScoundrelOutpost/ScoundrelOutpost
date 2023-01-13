@@ -437,6 +437,7 @@
 
 /obj/item/modular_computer/tablet/pda/deckhand/leader
 	name = "leader's PDA"
+	desc = "A small portable microcomputer."
 	max_capacity = 128
 	starting_programs = list(
 		/datum/computer_file/program/crew_manifest,
@@ -451,6 +452,15 @@
 		/datum/computer_file/program/budgetorders,
 		/datum/computer_file/program/scipaper_program,
 	)
+	
+	// never locked out
+	inserted_item = /obj/item/pen/screwdriver
+	tool_behaviour = TOOL_MULTITOOL
+	usesound = 'sound/weapons/empty.ogg'
+	
+/obj/item/modular_computer/tablet/pda/deckhand/leader/Initialize(mapload)
+	. = ..()
+	desc += "\n[span_notice("It has a multitool jack attached to it.")]"
 
 /obj/item/modular_computer/tablet/pda/deckhand/leader/captain
 	name = "captain's PDA"

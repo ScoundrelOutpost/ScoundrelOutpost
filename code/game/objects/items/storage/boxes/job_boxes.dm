@@ -14,6 +14,8 @@
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
 	/// scoundrel content - What pouch should be present in this box?
 	var/pouch_type = /obj/item/storage/pouch/forensic/alibi/preloaded
+	/// scoundrel content - aux item
+	var/aux_type = /obj/item/grenade/chem_grenade/smart_metal_foam_mini
 	/// Are we crafted?
 	var/crafted = FALSE
 
@@ -46,7 +48,10 @@
 
 	if(!isnull(pouch_type))
 		new pouch_type(src)
-
+	
+	if(!isnull(aux_type))
+		new aux_type(src)
+		
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
 	new /obj/item/radio/off(src)

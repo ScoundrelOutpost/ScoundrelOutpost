@@ -87,13 +87,6 @@
 	draw_color = "#807373ce"
 	organ_flags = ORGAN_SYNTHETIC
 
-/obj/item/organ/external/tail/cat/cybernetic/emp_act(severity)
-	. = ..()
-	if(. & EMP_PROTECT_SELF)
-		return
-	if(prob(100/severity))
-		owner.emote("wag")
-
 /obj/item/organ/external/tail/monkey
 	color_source = NONE
 

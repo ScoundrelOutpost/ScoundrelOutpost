@@ -80,6 +80,20 @@
 /obj/item/organ/external/tail/cat/get_global_feature_list()
 	return GLOB.tails_list_human
 
+/obj/item/organ/external/tail/cat/cybernetic
+	name = "cybernetic cat tail"
+	color_source = NONE
+	color = "#807373ce"
+	draw_color = "#807373ce"
+	organ_flags = ORGAN_SYNTHETIC
+
+/obj/item/organ/external/tail/cat/cyber/emp_act(severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+	if(prob(100/severity))
+		owner.emote("wag")
+
 /obj/item/organ/external/tail/monkey
 	color_source = NONE
 

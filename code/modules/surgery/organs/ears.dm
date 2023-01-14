@@ -68,11 +68,15 @@
 	icon_state = "kitty"
 	visual = TRUE
 	damage_multiplier = 2
+	var/color_override = NONE
 
 /obj/item/organ/internal/ears/cat/Insert(mob/living/carbon/human/ear_owner, special = 0, drop_if_replaced = TRUE)
 	..()
 	if(istype(ear_owner))
-		color = ear_owner.hair_color
+		if(!color_override)
+			color = ear_owner.hair_color
+		else
+			color = color_override
 		ear_owner.dna.features["ears"] = ear_owner.dna.species.mutant_bodyparts["ears"] = "Cat"
 		ear_owner.dna.update_uf_block(DNA_EARS_BLOCK)
 		ear_owner.update_body()
@@ -80,9 +84,31 @@
 /obj/item/organ/internal/ears/cat/Remove(mob/living/carbon/human/ear_owner,  special = 0)
 	..()
 	if(istype(ear_owner))
-		color = ear_owner.hair_color
+		if(!color_override)
+			color = ear_owner.hair_color
+		else
+			color = color_override
 		ear_owner.dna.species.mutant_bodyparts -= "ears"
 		ear_owner.update_body()
+
+/obj/item/organ/internal/ears/cat/cybernetic
+	name = "cybernetic cat ears"
+	desc = "A basic cybernetic organ designed to mimic the operation of cat ears."
+	damage_multiplier = 0.9
+	organ_flags = ORGAN_SYNTHETIC
+	color = "#807373ce"
+	color_override = "#807373ce"
+
+/obj/item/organ/internal/ears/cat/cybernetic/upgraded
+	name = "upgraded cybernetic cat ears"
+	desc = "An advanced cybernetic cat ear, surpassing the performance of organic cat ears."
+	damage_multiplier = 0.5
+
+/obj/item/organ/internal/ears/cat/cybernetic/emp_act(severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+	applyOrganDamage(40/severity)
 
 /obj/item/organ/internal/ears/penguin
 	name = "penguin ears"
@@ -124,3 +150,4 @@
 	if(. & EMP_PROTECT_SELF)
 		return
 	applyOrganDamage(40/severity)
+

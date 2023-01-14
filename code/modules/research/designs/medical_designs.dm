@@ -704,6 +704,19 @@
 	materials = list(/datum/material/iron = 500, /datum/material/glass = 500, /datum/material/silver = 500)
 	build_path = /obj/item/organ/internal/stomach/cybernetic/tier3
 
+/datum/design/cybernetic_cat_tail
+	name = "Cybernetic Cat Tail"
+	desc = "A cybernetic cat tail."
+	id = "cybernetic_cat_tail"
+	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
+	construction_time = 30
+	materials = list(/datum/material/iron = 250, /datum/material/glass = 400)
+	build_path = /obj/item/organ/external/tail/cat/cybernetic
+	category = list(
+		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
 /datum/design/cybernetic_ears
 	name = "Cybernetic Ears"
 	desc = "A pair of cybernetic ears."
@@ -717,6 +730,19 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
+/datum/design/cybernetic_cat_ears
+	name = "Cybernetic Cat Ears"
+	desc = "A pair of cybernetic cat ears."
+	id = "cybernetic_cat_ears"
+	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
+	construction_time = 30
+	materials = list(/datum/material/iron = 250, /datum/material/glass = 400)
+	build_path = /obj/item/organ/internal/ears/cat/cybernetic
+	category = list(
+		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
 /datum/design/cybernetic_ears_u
 	name = "Upgraded Cybernetic Ears"
 	desc = "A pair of upgraded cybernetic ears."
@@ -725,6 +751,19 @@
 	construction_time = 40
 	materials = list(/datum/material/iron = 500, /datum/material/glass = 500, /datum/material/silver = 500)
 	build_path = /obj/item/organ/internal/ears/cybernetic/upgraded
+	category = list(
+		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/cybernetic_cat_ears_u
+	name = "Upgraded Cybernetic Cat Ears"
+	desc = "A pair of upgraded cybernetic cat ears."
+	id = "cybernetic_cat_ears_u"
+	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
+	construction_time = 40
+	materials = list(/datum/material/iron = 500, /datum/material/glass = 500, /datum/material/silver = 500)
+	build_path = /obj/item/organ/internal/ears/cat/cybernetic/upgraded
 	category = list(
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS
 	)

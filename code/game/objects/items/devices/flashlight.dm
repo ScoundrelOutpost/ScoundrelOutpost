@@ -435,7 +435,7 @@
 	. = ..()
 	if(!proximity)
 		return
-	if(isturf(A))
+	if(isturf(A) && !istype(A, /turf/open/floor/light))
 		return
 
 	if(emp_cur_charges > 0)

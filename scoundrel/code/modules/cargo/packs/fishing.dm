@@ -21,3 +21,18 @@
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/machinery/fishing_portal_generator)
 	crate_name = "fishing portal crate"
+
+/datum/supply_pack/fishing/fishing_toolbox
+	name = "Fishing Supplies"
+	desc = "Contains two toolboxes filled with fishing necessities."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/storage/toolbox/fishing = 2)
+	crate_name = "fishing supplies crate"
+
+// singles
+/datum/supply_pack/fishing/fishing_toolbox/single
+	name = "(Single) Fishing Toolbox"
+	desc = "Become the ire of fish and the desire of women on your relaxing fishing getaway."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/storage/toolbox/fishing = 2)
+	goody = TRUE

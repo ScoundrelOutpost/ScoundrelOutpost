@@ -96,13 +96,13 @@
 	update_appearance()
 
 /obj/item/gun/ballistic/automatic/wt550
-	name = "security auto rifle"
-	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
+	name = "\improper WT-550 autorifle"
+	desc = "An ancient personal defense weapon. Uses 4.6x30mm rounds. Designated the WT-550 Automatic Rifle."
 	icon_state = "wt550"
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
-	fire_delay = 2
+	fire_delay = 1
 	can_suppress = FALSE
 	burst_size = 1
 	actions_types = list()
@@ -112,11 +112,11 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
-	projectile_damage_multiplier = 30
+	projectile_damage_multiplier = 15
 
 /obj/item/gun/ballistic/automatic/wt550/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
 
 /obj/item/gun/ballistic/automatic/plastikov
 	name = "\improper PP-95 SMG"
@@ -404,4 +404,7 @@
 
 // scoundrel content
 /obj/item/gun/ballistic/automatic/sniper_rifle/empty
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/wt550/empty
 	spawnwithmagazine = FALSE

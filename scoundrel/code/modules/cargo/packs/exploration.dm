@@ -54,3 +54,30 @@
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/fuel_pellet)
 	crate_name = "exodrone fuel crate"
+
+/datum/supply_pack/exploration/unlocked
+	special = FALSE
+
+/datum/supply_pack/exploration/unlocked/advanced_jetpacks
+	name = "Advanced Jetpacks"
+	desc = "Contains three advanced jetpacks suited to local-longrange single-personnel space exploration."
+	cost = CARGO_CRATE_VALUE * 7
+	contains = list(/obj/item/tank/jetpack/advanced = 3)
+	crate_name = "advanced jetpack crate"
+
+/datum/supply_pack/exploration/unlocked/eva_suits
+	name = "EVA Space Suits"
+	desc = "Contains three old-fashioned atmos-sealed EVA suits, allowing for space exploration & maintenance. \
+	Yes, we're still in production! They're more durable than starsuits, leakproof guaranteed."
+	cost = CARGO_CRATE_VALUE * 4
+	contains = list(/obj/item/clothing/suit/space/eva = 3,
+					/obj/item/clothing/head/helmet/space/eva = 3,)
+	crate_name = "EVA suit crate"
+
+/datum/supply_pack/exploration/unlocked/starsuits
+	name = "Starsuits"
+	desc = "Contains three complete form-fitting starsuits, allowing for space exploration & maintenance. Can be worn as an undersuit."
+	cost = CARGO_CRATE_VALUE * 4
+	contains = list(/obj/item/clothing/under/starsuit = 3,
+					/obj/item/clothing/head/helmet/space/starsuit = 3,)
+	crate_name = "starsuit crate"

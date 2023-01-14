@@ -26,10 +26,17 @@
 
 /datum/supply_pack/weapons/protected/bolaboxes
 	name = "Bulk Bolas"
-	desc = "Three boxes of hunting bolas - the low-tech bounty hunter's solution."
+	desc = "Contains three boxes of hunting bolas - the low-tech bounty hunter's solution."
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/storage/box/bolas = 3)
 	crate_name = "bulk bola crate"
+
+/datum/supply_pack/weapons/protected/survival_knives
+	name = "Bulk Survival Knives"
+	desc = "Contains three survival knives, for rough living."
+	cost = CARGO_CRATE_VALUE * 2.5
+	contains = list(/obj/item/knife/combat/survival = 3)
+	crate_name = "survival knife crate"
 
 // goodies
 /datum/supply_pack/weapons/single/defender_pistol
@@ -70,6 +77,14 @@
 	goody = TRUE
 	contraband = TRUE
 
+/datum/supply_pack/weapons/single/wt550
+	name = "(Single) WT Autorifle"
+	desc = "An affordable submachine-gun produced and utilized largely by industrial-paramilitary groups. Guaranteed to hold a lot of bullets! \
+	Does not come loaded."
+	cost = CARGO_CRATE_VALUE * 8
+	contains = list(/obj/item/gun/ballistic/automatic/wt550/empty = 1)
+	goody = TRUE
+
 /datum/supply_pack/weapons/single/suppressor
 	name = "(Single) Universal Suppressor"
 	desc = "A cheap suppressor that fits most standard ballistic guns."
@@ -83,6 +98,13 @@
 	desc = "A single box of hunting bolas, for decoration or personal use."
 	cost = CARGO_CRATE_VALUE * 1
 	contains = list(/obj/item/storage/box/bolas = 1)
+	goody = TRUE
+
+/datum/supply_pack/weapons/single/survival_knife
+	name = "(Single) Survival Knife"
+	desc = "A single survival knife, for rough living."
+	cost = CARGO_CRATE_VALUE * 0.5
+	contains = list(/obj/item/knife/combat/survival = 1)
 	goody = TRUE
 
 /datum/supply_pack/weapons/secure

@@ -156,3 +156,21 @@
 	contains = list(/obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck,
 					/obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck/skirt,
 				)
+
+/datum/supply_pack/medical/plasmasuits
+	name = "Plasma Envirosuits"
+	desc = "Contains three sturdy plasma envirosuits & enviromasks, for sealing and protecting plasmamen from hazardous conditions."
+	cost = CARGO_CRATE_VALUE * 2.5
+	contains = list(/obj/item/clothing/under/plasmaman = 3,
+					/obj/item/clothing/mask/gas/plasmamask = 3,
+					/obj/item/tank/internals/plasmaman/belt/full = 3,)
+	crate_name = "plasma envirosuit crate"
+
+/datum/supply_pack/medical/plasmasuit_single
+	name = "(Single) Plasma Envirosuit"
+	desc = "Left your plasmasuit in the wash? You might need an extra - it pays to be prepared."
+	cost = CARGO_CRATE_VALUE * 0.5
+	contains = list(/obj/item/clothing/under/plasmaman = 1,
+					/obj/item/clothing/mask/gas/plasmamask = 1,
+					/obj/item/tank/internals/plasmaman/belt/full = 1,)
+	goody = TRUE

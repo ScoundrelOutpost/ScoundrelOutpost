@@ -7,14 +7,13 @@
 	inhand_icon_state = "nullrod"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 18
+	force = 12
 	throw_speed = 3
 	throw_range = 4
-	throwforce = 10
+	throwforce = 15
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_TINY
 	obj_flags = UNIQUE_RENAME
-	wound_bonus = -10
 	/// boolean on whether it's allowed to be picked from the nullrod's transformation ability
 	var/chaplain_spawnable = TRUE
 	/// Short description of what this item is capable of, for radial menu uses.
@@ -112,9 +111,8 @@
 	worn_icon_state = "claymore_gold"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
-	block_chance = 30
 	sharpness = SHARP_EDGED
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
@@ -177,7 +175,6 @@
 	inhand_icon_state = "multiverse"
 	worn_icon_state = "multiverse"
 	slot_flags = ITEM_SLOT_BACK
-	force = 15
 	menu_description = "An odd sharp blade which provides a low chance of blocking incoming melee attacks and deals a random amount of damage, which can range from almost nothing to very high. Can be worn on the back."
 
 /obj/item/nullrod/claymore/multiverse/melee_attack_chain(mob/user, atom/target, params)
@@ -239,8 +236,7 @@
 	inhand_icon_state = "scythe1"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	w_class = WEIGHT_CLASS_BULKY
-	armour_penetration = 35
+	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BACK
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = list("chops", "slices", "cuts", "reaps")
@@ -320,7 +316,7 @@
 	worn_icon_state = "hammeron"
 	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_continuous = list("smashes", "bashes", "hammers", "crunches")
 	attack_verb_simple = list("smash", "bash", "hammer", "crunch")
 	menu_description = "A war hammer. Capable of tapping knees to measure brain health. Can be worn on the belt."
@@ -382,9 +378,7 @@
 	worn_icon_state = "pride"
 	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
-	force = 16
-	throwforce = 15
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb_continuous = list("attacks", "smashes", "crushes", "splatters", "cracks")
 	attack_verb_simple = list("attack", "smash", "crush", "splatter", "crack")
@@ -452,8 +446,6 @@
 	item_flags = ABSTRACT
 	w_class = WEIGHT_CLASS_HUGE
 	sharpness = SHARP_EDGED
-	wound_bonus = -20
-	bare_wound_bonus = 25
 	menu_description = "An undroppable sharp armblade capable of inflicting deep wounds. Capable of an ineffective butchering of bodies. Disappears if the arm holding it is cut off."
 
 /obj/item/nullrod/armblade/Initialize(mapload)
@@ -479,7 +471,6 @@
 	worn_icon_state = "nullrod"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
-	force = 15
 	attack_verb_continuous = list("bites", "eats", "fin slaps")
 	attack_verb_simple = list("bite", "eat", "fin slap")
 	hitsound = 'sound/weapons/bite.ogg'
@@ -492,10 +483,10 @@
 /obj/item/nullrod/claymore/bostaff //May as well make it a "claymore" and inherit the blocking
 	name = "monk's staff"
 	desc = "A long, tall staff made of polished wood. Traditionally used in ancient old-Earth martial arts, it is now used to harass the clown."
-	force = 15
+	force = 8
 	block_chance = 40
 	slot_flags = ITEM_SLOT_BACK
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = NONE
 	hitsound = SFX_SWING_HIT
 	attack_verb_continuous = list("smashes", "slams", "whacks", "thwacks")
@@ -551,7 +542,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	worn_icon_state = "pitchfork0"
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BACK
 	attack_verb_continuous = list("pokes", "impales", "pierces", "jabs")
 	attack_verb_simple = list("poke", "impale", "pierce", "jab")
@@ -600,9 +591,8 @@
 	lefthand_file = 'icons/mob/inhands/antag/clockwork_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/antag/clockwork_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
-	armour_penetration = 10
 	sharpness = SHARP_POINTY
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_continuous = list("stabs", "pokes", "slashes", "clocks")
 	attack_verb_simple = list("stab", "poke", "slash", "clock")
 	hitsound = 'sound/weapons/bladeslice.ogg'

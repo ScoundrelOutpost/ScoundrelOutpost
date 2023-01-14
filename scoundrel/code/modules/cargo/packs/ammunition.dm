@@ -30,3 +30,10 @@
 	contains = list(/obj/item/ammo_box/magazine/sniper_rounds/surplus,)
 	goody = TRUE
 	contraband = TRUE
+
+/datum/supply_pack/ammunition/surplus_autorifle_ammo
+	name = "(Single) Surplus WT Autorifle Magazine"
+	desc = "A magazine of surplus WT Autorifle rounds. Who needs quality when you've got quantity?"
+	cost = CARGO_CRATE_VALUE * 1
+	contains = list(/obj/item/ammo_box/magazine/wt550m9/surplus)
+	goody = TRUE

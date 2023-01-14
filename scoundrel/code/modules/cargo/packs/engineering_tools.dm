@@ -19,7 +19,7 @@
 	name = "Insulated Gloves Crate"
 	desc = "The backbone of modern society. Barely ever ordered for actual engineering. \
 		Contains three insulated gloves."
-	cost = CARGO_CRATE_VALUE * 8
+	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/clothing/gloves/color/yellow = 3)
 	crate_name = "insulated gloves crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical
@@ -91,3 +91,42 @@
 	contains = list(/obj/machinery/space_heater)
 	crate_name = "space heater crate"
 	crate_type = /obj/structure/closet/crate/large
+
+/datum/supply_pack/tools/smartfoam_grenades
+	name = "Smartfoam Grenades"
+	desc = "Contains a box of smartfoam grenades and a box of mini-smartfoam grenades, for atmos-breach emergencies or metal-foamy construction projects."
+	cost = CARGO_CRATE_VALUE * 4
+	contains = list(/obj/item/storage/box/smart_metal_foam = 1,
+					/obj/item/storage/box/smart_metal_foam/mini = 1,)
+	crate_name = "smartfoam crate"
+
+// singles
+
+/datum/supply_pack/tools/insulatedgloves_single
+	name = "(Single) Insulated Gloves"
+	desc = "The backbone of modern society. Barely ever ordered for actual engineering."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/clothing/gloves/color/yellow = 1)
+	goody = TRUE
+
+/datum/supply_pack/tools/advanced_insuls_single
+	name = "(Single) Advanced Insulated Gloves"
+	desc = "A pair of advanced, grippy insulated gloves that enable faster construction and thermal protection."
+	cost = CARGO_CRATE_VALUE * 3.5
+	contains = list(/obj/item/clothing/gloves/color/chief_engineer = 1)
+	goody = TRUE
+
+/datum/supply_pack/tools/combat_gloves_single
+	name = "(Single) Combat Gloves"
+	desc = "A pair of tactical combat gloves with electrical insulation, thermal protection and a good grip."
+	cost = CARGO_CRATE_VALUE * 3.7
+	contains = list(/obj/item/clothing/gloves/combat = 1)
+	goody = TRUE
+	contraband = TRUE
+
+/datum/supply_pack/tools/mini_smartfoam_single
+	name = "(Single) Mini-Smartfoam Grenade"
+	desc = "A single mini-smartfoam grenade for quickly sealing breaches in an emergency."
+	cost = CARGO_CRATE_VALUE * 0.25
+	contains = list(/obj/item/grenade/chem_grenade/smart_metal_foam_mini = 1)
+	goody = TRUE

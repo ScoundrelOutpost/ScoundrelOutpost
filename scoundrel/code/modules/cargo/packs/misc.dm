@@ -110,3 +110,47 @@
 					/obj/item/stock_parts/subspace/ansible,
 				)
 	crate_name = "crate"
+
+/datum/supply_pack/misc/dyespray
+	name = "(Single) Hairdye Spray"
+	desc = "An advanced hairdye applicator for honing your unique appearance."
+	cost = CARGO_CRATE_VALUE * 0.5
+	contains = list(/obj/item/dyespray = 1)
+	goody = TRUE
+
+/datum/supply_pack/misc/soap_single
+	name = "(Single) Soap"
+	desc = "A bar of unscented soap, an ancient staple of hygiene and wellness."
+	cost = CARGO_CRATE_VALUE * 0.5
+	contains = list(/obj/item/soap = 1)
+	goody = TRUE
+
+/datum/supply_pack/misc/fashionbeacon
+	name = "(Single) Outfit Beacon"
+	desc = "Choose a new outfit with this fashion-forward quantum potential package."
+	cost = CARGO_CRATE_VALUE * 0.5
+	contains = list(/obj/item/choice_beacon/fashionable = 1)
+	goody = TRUE
+
+/datum/supply_pack/misc/herobeacon
+	name = "(Single) Heroic Beacon"
+	desc = "Choose an outfit reenacting a piece of ancient history with this quantum potential package."
+	cost = CARGO_CRATE_VALUE * 1.5
+	contains = list(/obj/item/choice_beacon/hero = 1)
+	goody = TRUE
+	contraband = TRUE
+
+/datum/supply_pack/misc/nullrod
+	name = "(Single) Obsidian Rod"
+	desc = "An engraved rod of solid obsidian with inlays of rosegold. An object of particular spiritual importance for some."
+	cost = CARGO_CRATE_VALUE * 1.5
+	contains = list(/obj/item/nullrod = 1)
+	goody = TRUE
+
+/datum/supply_pack/misc/advanced_pda
+	name = "(Single) Advanced PDA"
+	desc = "An advanced micro-computer for personal data, with an expanded datastore and an inbuilt multiool jack. Comes with a free screwdriver pen, \
+	and many preloaded programs for station upkeep."
+	cost = CARGO_CRATE_VALUE * 0.75
+	contains = list(/obj/item/modular_computer/tablet/pda/deckhand/leader = 1)
+	goody = TRUE

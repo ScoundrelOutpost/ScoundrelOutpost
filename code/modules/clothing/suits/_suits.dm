@@ -75,6 +75,7 @@ GLOBAL_LIST_INIT(generic_suit_allowed, typecacheof(list(
 		/obj/item/storage/pouch,
 		// tools
 		/obj/item/t_scanner,
+		/obj/item/crowbar,
 		// weapons
 		/obj/item/melee/tonfa,
 		/obj/item/fireaxe,
@@ -82,6 +83,7 @@ GLOBAL_LIST_INIT(generic_suit_allowed, typecacheof(list(
 		/obj/item/javelin,
 		/obj/item/gun,
 		/obj/item/knife,
+		/obj/item/grenade/chem_grenade,
 		// shield
 		/obj/item/personalshield,
 	)))

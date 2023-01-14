@@ -30,6 +30,10 @@
 	. = ..()
 	icon_state = "[base_icon_state]-[round(ammo_count(), 4)]"
 
+/obj/item/ammo_box/magazine/wt550m9/surplus
+	name = "wt550 magazine (surplus)"
+	ammo_type = /obj/item/ammo_casing/c46x30mm/surplus
+
 /obj/item/ammo_box/magazine/plastikov9mm
 	name = "PP-95 magazine (9mm)"
 	icon_state = "9x19-50"

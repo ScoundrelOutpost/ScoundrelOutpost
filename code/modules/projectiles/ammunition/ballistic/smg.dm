@@ -16,6 +16,11 @@
 	desc = "A 4.6x30mm incendiary bullet casing."
 	projectile_type = /obj/projectile/bullet/incendiary/c46x30mm
 
+/obj/item/ammo_casing/c46x30mm/surplus
+	name = "surplus 4.6x30mm bullet casing"
+	desc = "A surplus 4.6x30mm bullet casing."
+	caliber = CALIBER_46X30MM
+	projectile_type = /obj/projectile/bullet/c46x30mm/surplus
 // .45 (M1911 + C20r)
 
 /obj/item/ammo_casing/c45

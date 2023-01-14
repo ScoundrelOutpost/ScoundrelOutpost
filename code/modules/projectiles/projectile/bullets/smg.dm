@@ -31,3 +31,7 @@
 	name = "4.6x30mm incendiary bullet"
 	damage = 0.7
 	fire_stacks = 1
+
+/obj/projectile/bullet/c46x30mm/surplus
+	name = "surplus 4.6x30mm bullet"
+	damage = 0.6

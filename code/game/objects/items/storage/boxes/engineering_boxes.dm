@@ -96,3 +96,13 @@
 	..()
 	for(var/i in 1 to 7)
 		new /obj/item/tank/internals/emergency_oxygen/engi(src) //in case anyone ever wants to do anything with spawning them, apart from crafting the box
+
+// scoundrel content
+/obj/item/storage/box/smart_metal_foam/mini
+	name = "box of mini smartfoam grenades"
+	desc = "Used to rapidly seal hull breaches. These have a very small payload, for handling minor breaches."
+	illustration = "grenade"
+
+/obj/item/storage/box/smart_metal_foam/mini/PopulateContents()
+	for(var/i in 1 to 7)
+		new/obj/item/grenade/chem_grenade/smart_metal_foam_mini(src)

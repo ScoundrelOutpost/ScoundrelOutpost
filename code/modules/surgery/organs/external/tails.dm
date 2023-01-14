@@ -87,7 +87,7 @@
 	draw_color = "#807373ce"
 	organ_flags = ORGAN_SYNTHETIC
 
-/obj/item/organ/external/tail/cat/cyber/emp_act(severity)
+/obj/item/organ/external/tail/cat/cybernetic/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return

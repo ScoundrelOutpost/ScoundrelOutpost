@@ -174,3 +174,10 @@
 					/obj/item/clothing/mask/gas/plasmamask = 1,
 					/obj/item/tank/internals/plasmaman/belt/full = 1,)
 	goody = TRUE
+
+/datum/supply_pack/medical/tritizine_single
+	name = "(Single) Tritizine Pills"
+	desc = "A bottle of tritizine pills for treating benign injuries, like scrapes and bruises."
+	cost = CARGO_CRATE_VALUE * 0.25
+	contains = list(/obj/item/storage/pill_bottle/tritizine,)
+	goody = TRUE

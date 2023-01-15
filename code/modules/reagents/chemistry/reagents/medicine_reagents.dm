@@ -388,6 +388,7 @@
 	color = "#d8c7b7"
 	healing = 0.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	overdose_threshold = 15
 
 /datum/reagent/medicine/calomel
 	name = "Calomel"
@@ -1613,3 +1614,69 @@
 	clot_rate = 0.4 //slightly better than regular coagulant
 	passive_bleed_modifier = 0.5
 	overdose_threshold = 10 //but easier to overdose on
+
+// scoundrel content
+/datum/reagent/medicine/tritizine
+	name = "Tritizine"
+	description = "A dilute painkiller that very slowly heals bruises, burns and toxins. Causes fatigue."
+	reagent_state = LIQUID
+	color = "#70366d"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	overdose_threshold = 7
+	var/healing = 0.2
+	ph = 2
+
+/datum/reagent/medicine/tritizine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+
+	// damage type picked at random
+	var/random_type = rand(1, 3)
+	var/selected_part = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_CHEST, BODY_ZONE_HEAD)
+	var/obj/item/bodypart/bp = M.get_bodypart(selected_part)
+	
+	// brute
+	if(random_type == 1)
+		if(!M.getBruteLoss())
+			random_type += 1
+		else
+			M.adjustBruteLoss(-healing * REM * delta_time, 0)
+			bp.receive_damage(stamina = healing * REM * delta_time)
+
+	// burn
+	if(random_type == 2)
+		if(!M.getFireLoss())
+			random_type += 1
+		else
+			M.adjustFireLoss(-healing * REM * delta_time, 0)
+			bp.receive_damage(stamina = healing * REM * delta_time)
+
+	// tox
+	if(random_type == 3)
+		if(!M.getToxLoss())
+			random_type += 1
+		else
+			M.adjustToxLoss(-healing * REM * delta_time, 0)
+			bp.receive_damage(stamina = healing * REM * delta_time)
+
+	// compensates for the survivorship bias by going in reverse priority. if no damage, then just do stamina
+	if(random_type == 4)
+		if(M.getBruteLoss())
+			M.adjustBruteLoss(-healing * REM * delta_time, 0)
+			bp.receive_damage(stamina = healing * REM * delta_time)
+		else if(M.getFireLoss())
+			M.adjustFireLoss(-healing * REM * delta_time, 0)
+			bp.receive_damage(stamina = healing * REM * delta_time)
+		else
+			bp.receive_damage(stamina = healing * REM * delta_time)
+
+	..()
+	. = TRUE
+
+/datum/reagent/medicine/tritizine/overdose_process(mob/living/M, delta_time, times_fired)
+	var/selected_part = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_CHEST, BODY_ZONE_HEAD)
+	var/obj/item/bodypart/bp = M.get_bodypart(selected_part)
+
+	// OD stops applying extra staminaloss after it reaches 60, to keep OD from being too powerful
+	if(M.getStaminaLoss() <= 60)
+		bp.receive_damage(stamina = (healing * 5) * REM * delta_time)
+	..()
+	. = TRUE

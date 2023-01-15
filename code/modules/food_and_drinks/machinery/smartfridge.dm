@@ -483,6 +483,7 @@
 	name = "smart chemical storage"
 	desc = "A refrigerated storage unit for medicine storage."
 	base_build_path = /obj/machinery/smartfridge/chemistry
+	use_power = FALSE
 
 /obj/machinery/smartfridge/chemistry/accept_check(obj/item/O)
 	var/static/list/chemfridge_typecache = typecacheof(list(
@@ -513,6 +514,8 @@
 
 /obj/machinery/smartfridge/chemistry/preloaded
 	initial_contents = list(
+		/obj/item/storage/pill_bottle/tritizine = 3,
+		/obj/item/reagent_containers/pill/tritizine = 6,
 		/obj/item/reagent_containers/pill/epinephrine = 12,
 		/obj/item/reagent_containers/pill/multiver = 5,
 		/obj/item/reagent_containers/cup/bottle/epinephrine = 1,

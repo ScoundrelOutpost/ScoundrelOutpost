@@ -511,6 +511,16 @@
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/pill/maintenance(src)
 
+// scoundrel content
+/obj/item/storage/pill_bottle/tritizine
+	name = "tritizine pillbottle"
+	desc = "Contains pills taken to quickly heal benign bruises and burns. Side effects include fatigue. WARNING: Do not take more than two within five minutes!"
+
+/obj/item/storage/pill_bottle/tritizine/PopulateContents()
+	for(var/i in 1 to 4)
+		new /obj/item/reagent_containers/pill/tritizine(src)
+// scoundrel content
+
 ///////////////////////////////////////// Psychologist inventory pillbottles
 /obj/item/storage/pill_bottle/happinesspsych
 	name = "happiness pills"

@@ -5,7 +5,7 @@
 	amount = 6
 	max_amount = 6
 	w_class = WEIGHT_CLASS_TINY
-	full_w_class = WEIGHT_CLASS_TINY
+	full_w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 3
 	throw_range = 7
 	resistance_flags = FLAMMABLE
@@ -219,12 +219,12 @@
 	gender = PLURAL
 	singular_name = "suture"
 	icon_state = "suture"
-	self_delay = 3 SECONDS
-	other_delay = 1 SECONDS
-	amount = 10
-	max_amount = 10
+	self_delay = 1 SECONDS
+	other_delay = 0.5 SECONDS
+	amount = 20
+	max_amount = 20
 	repeating = TRUE
-	heal_brute = 10
+	heal_brute = 5
 	stop_bleeding = 0.6
 	grind_results = list(/datum/reagent/medicine/spaceacillin = 2)
 	merge_type = /obj/item/stack/medical/suture
@@ -233,22 +233,24 @@
 	name = "emergency suture"
 	desc = "A value pack of cheap sutures, not very good at repairing damage, but still decent at stopping bleeding."
 	heal_brute = 5
-	amount = 5
-	max_amount = 5
+	amount = 10
+	max_amount = 10
 	merge_type = /obj/item/stack/medical/suture/emergency
 
 /obj/item/stack/medical/suture/medicated
 	name = "medicated suture"
 	icon_state = "suture_purp"
 	desc = "A suture infused with drugs that speed up wound healing of the treated laceration."
-	heal_brute = 15
+	heal_brute = 10
+	amount = 10
+	max_amount = 20
 	stop_bleeding = 0.75
 	grind_results = list(/datum/reagent/medicine/polypyr = 1)
 	merge_type = /obj/item/stack/medical/suture/medicated
 
 /obj/item/stack/medical/ointment
 	name = "ointment"
-	desc = "Basic burn ointment, rated effective for second degree burns with proper bandaging, though it's still an effective stabilizer for worse burns. Not terribly good at outright healing burns though."
+	desc = "Basic burn ointment, rated effective for second degree burns with proper bandaging, though it's still an effective stabilizer for worse burns."
 	gender = PLURAL
 	singular_name = "ointment"
 	icon_state = "ointment"
@@ -256,10 +258,10 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount = 8
 	max_amount = 8
-	self_delay = 4 SECONDS
-	other_delay = 2 SECONDS
+	self_delay = 2 SECONDS
+	other_delay = 1 SECONDS
 
-	heal_burn = 5
+	heal_burn = 15
 	flesh_regeneration = 2.5
 	sanitization = 0.25
 	grind_results = list(/datum/reagent/medicine/c2/lenturi = 10)
@@ -275,11 +277,11 @@
 	gender = PLURAL
 	singular_name = "mesh piece"
 	icon_state = "regen_mesh"
-	self_delay = 3 SECONDS
-	other_delay = 1 SECONDS
-	amount = 15
-	heal_burn = 10
-	max_amount = 15
+	self_delay = 1 SECONDS
+	other_delay = 0.5 SECONDS
+	amount = 20
+	heal_burn = 5
+	max_amount = 20
 	repeating = TRUE
 	sanitization = 0.75
 	flesh_regeneration = 3
@@ -332,7 +334,9 @@
 
 	gender = PLURAL
 	icon_state = "aloe_mesh"
-	heal_burn = 15
+	amount = 10
+	max_amount = 20
+	heal_burn = 10
 	sanitization = 1.25
 	flesh_regeneration = 3.5
 	grind_results = list(/datum/reagent/consumable/aloejuice = 1)
@@ -350,19 +354,19 @@
 	gender = PLURAL
 	singular_name = "aloe cream"
 	icon_state = "aloe_paste"
-	self_delay = 2 SECONDS
-	other_delay = 1 SECONDS
+	self_delay = 0.5 SECONDS
+	other_delay = 0.1 SECONDS
 	novariants = TRUE
 	amount = 20
 	max_amount = 20
 	repeating = TRUE
-	heal_brute = 3
-	heal_burn = 3
+	heal_brute = 2
+	heal_burn = 2
 	grind_results = list(/datum/reagent/consumable/aloejuice = 1)
 	merge_type = /obj/item/stack/medical/aloe
 
 /obj/item/stack/medical/aloe/fresh
-	amount = 2
+	amount = 4
 
 /obj/item/stack/medical/bone_gel
 	name = "bone gel"

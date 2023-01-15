@@ -295,3 +295,11 @@
 	icon_state = "pill8"
 	list_reagents = list(/datum/reagent/iron = 30)
 	rename_with_volume = TRUE
+
+// scoundrel content
+/obj/item/reagent_containers/pill/tritizine
+	name = "tritizine pill"
+	desc = "A slow-acting treatment for minor injuries. Causes fatigue and has a low overdose threshold."
+	icon_state = "pill12"
+	list_reagents = list(/datum/reagent/medicine/tritizine = 5)
+	rename_with_volume = TRUE

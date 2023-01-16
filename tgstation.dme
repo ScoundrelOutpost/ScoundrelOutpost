@@ -2486,6 +2486,7 @@
 #include "code\modules\antagonists\wizard\equipment\spellbook_entries\offensive.dm"
 #include "code\modules\antagonists\wizard\equipment\spellbook_entries\summons.dm"
 #include "code\modules\antagonists\xeno\xeno.dm"
+#include "code\modules\antagonists\scoundrel\scoundrel.dm"
 #include "code\modules\art\paintings.dm"
 #include "code\modules\art\statues.dm"
 #include "code\modules\assembly\assembly.dm"

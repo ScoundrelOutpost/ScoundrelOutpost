@@ -8,6 +8,7 @@
 //then you MUST update the database!
 
 // Roundstart roles
+#define ROLE_SCOUNDREL "Scoundrel"
 #define ROLE_BROTHER "Blood Brother"
 #define ROLE_CHANGELING "Changeling"
 #define ROLE_CULTIST "Cultist"
@@ -108,6 +109,7 @@
 /// first connection in order to play.
 GLOBAL_LIST_INIT(special_roles, list(
 	// Roundstart
+	ROLE_SCOUNDREL = 0,
 	ROLE_BROTHER = 0,
 	ROLE_CHANGELING = 0,
 	ROLE_CLOWN_OPERATIVE = 14,

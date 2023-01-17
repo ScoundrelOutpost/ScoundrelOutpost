@@ -364,6 +364,12 @@
 	for(var/i in 1 to 7)
 		new /obj/item/firing_pin/clown/ultra(src)
 
+/obj/item/storage/box/syndie_kit/imp_adrenal
+	name = "adrenal implant box"
+
+/obj/item/storage/box/syndie_kit/imp_adrenal/PopulateContents()
+	new /obj/item/implanter/adrenalin(src)
+
 /obj/item/storage/box/syndie_kit/imp_storage
 	name = "storage implant box"
 

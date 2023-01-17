@@ -36,7 +36,7 @@
 /datum/supply_pack/engineering/rpd
 	name = "Rapid Pipe Dispenser (RPD) Crate"
 	desc = "For quickly and effecitvely laying pipes for all your gas transference needs!"
-	cost = CARGO_CRATE_VALUE * 7
+	cost = CARGO_CRATE_VALUE * 5
 	access_view = ACCESS_ENGINE_EQUIP
 	contains = list(/obj/item/pipe_dispenser = 3)
 	crate_name = "rapid pipe dispenser crate"

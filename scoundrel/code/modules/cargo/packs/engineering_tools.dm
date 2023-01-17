@@ -27,7 +27,7 @@
 /datum/supply_pack/engineering/rcd
 	name = "Rapid Construction Device (RCD) Crate"
 	desc = "Rapid Construction Devices for rapidly constructing...things. And also deconstructiong them, but don't tell anyone!"
-	cost = CARGO_CRATE_VALUE * 7
+	cost = CARGO_CRATE_VALUE * 16
 	access_view = ACCESS_ENGINE_EQUIP
 	contains = list(/obj/item/construction/rcd = 3)
 	crate_name = "rapid construction device crate"

@@ -263,7 +263,7 @@
 			else
 				return list("mode" = RCD_AIRLOCK, "delay" = 50, "cost" = 16)
 		if(RCD_DECONSTRUCT)
-			return list("mode" = RCD_DECONSTRUCT, "delay" = 50, "cost" = 33)
+			return list("mode" = RCD_DECONSTRUCT, "delay" = 50, "cost" = 15)
 		if(RCD_WINDOWGRILLE)
 			return rcd_result_with_memory(
 				list("mode" = RCD_WINDOWGRILLE, "delay" = 1 SECONDS, "cost" = 4),

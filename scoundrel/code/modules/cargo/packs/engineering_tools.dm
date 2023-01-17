@@ -24,6 +24,33 @@
 	crate_name = "insulated gloves crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical
 
+/datum/supply_pack/engineering/rcd
+	name = "Rapid Construction Device (RCD) Crate"
+	desc = "Rapid Construction Devices for rapidly constructing...things. And also deconstructiong them, but don't tell anyone!"
+	cost = CARGO_CRATE_VALUE * 7
+	access_view = ACCESS_ENGINE_EQUIP
+	contains = list(/obj/item/construction/rcd = 3)
+	crate_name = "rapid construction device crate"
+	crate_type = /obj/structure/closet/crate/engineering/electrical
+
+/datum/supply_pack/engineering/rpd
+	name = "Rapid Pipe Dispenser (RPD) Crate"
+	desc = "For quickly and effecitvely laying pipes for all your gas transference needs!"
+	cost = CARGO_CRATE_VALUE * 7
+	access_view = ACCESS_ENGINE_EQUIP
+	contains = list(/obj/item/pipe_dispenser = 3)
+	crate_name = "rapid pipe dispenser crate"
+	crate_type = /obj/structure/closet/crate/engineering/electrical
+
+/datum/supply_pack/engineering/rpd
+	name = "Plumbing Constructor Crate"
+	desc = "For quickly and effecitvely putting down ugly plastic tubes for use in biochemical experiments and admixtures!"
+	cost = CARGO_CRATE_VALUE * 7
+	access_view = ACCESS_ENGINE_EQUIP
+	contains = list(/obj/item/construction/plumbing = 3)
+	crate_name = "plumbing constructor crate"
+	crate_type = /obj/structure/closet/crate/engineering/electrical
+
 /datum/supply_pack/tools/inducers
 	name = "NT-75 Electromagnetic Power Inducers Crate"
 	desc = "No rechargers? No problem, with the NT-75 EPI, you can recharge any standard \

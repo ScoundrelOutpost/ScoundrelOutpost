@@ -42,7 +42,7 @@
 	crate_name = "rapid pipe dispenser crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical
 
-/datum/supply_pack/engineering/rpd
+/datum/supply_pack/engineering/plumbing_constructor
 	name = "Plumbing Constructor Crate"
 	desc = "For quickly and effecitvely putting down ugly plastic tubes for use in biochemical experiments and admixtures!"
 	cost = CARGO_CRATE_VALUE * 7

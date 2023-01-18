@@ -476,3 +476,11 @@
 /obj/item/modular_computer/tablet/pda/deckhand/leader/detective
 	name = "detective's PDA"
 	greyscale_colors = "#333333#C7C7C7"
+
+// anonymous PDA
+/obj/item/modular_computer/tablet/pda/syndicate/traitor
+	name = "PDA"
+	greyscale_colors = "#891417#80FF80"
+	saved_identification = "!)%&@/"
+	saved_job = "Unknown"
+	device_theme = "syndicate"

@@ -70,6 +70,7 @@
 		/obj/item/wirecutters,
 		/obj/item/wrench,
 		/obj/item/storage/pouch,
+		/obj/item/modular_computer/tablet/pda,
 		// janitorial supplies
 		/obj/item/grenade/chem_grenade,
 		/obj/item/holosign_creator,

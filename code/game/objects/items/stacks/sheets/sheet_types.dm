@@ -450,6 +450,10 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	pickup_sound = 'sound/items/handling/cloth_pickup.ogg'
 	grind_results = list(/datum/reagent/cellulose = 20)
 
+/obj/item/stack/sheet/cloth/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/surgery_initiator)
+
 /obj/item/stack/sheet/cloth/get_main_recipes()
 	. = ..()
 	. += GLOB.cloth_recipes

@@ -726,10 +726,8 @@
 
 // scoundrel content
 /obj/item/melee/tonfa
-	name = "shock tonfa"
-	desc = "A defense-oriented martial weapon of ancient design. \
-			Since the advent of personal shields, the weapon has seen a dramatic resurgence among spacers on the fringes of controlled space. \
-			This one's equipped with a low-yield charge coil for more painful, non-lethal strikes as well as ease of use."
+	name = "base tonfa"
+	desc = "You're probably looking for /obj/item/melee/tonfa/shock_tonfa. Let an admin or coder know if you see this."
 	
 	//icons
 	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
@@ -824,10 +822,14 @@
 	update_icon(UPDATE_OVERLAYS)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 
-
+/obj/item/melee/tonfa/shock_tonfa
+	name = "shock tonfa"
+	desc = "A defense-oriented martial weapon of ancient design. \
+			Since the advent of personal shields, the weapon has seen a dramatic resurgence among spacers on the fringes of controlled space. \
+			This one's equipped with a low-yield charge coil for more painful, non-lethal strikes as well as ease of use."
 
 // makeshift stunprod
-/obj/item/melee/tonfa/stunprod
+/obj/item/melee/tonfa/shock_tonfa/stunprod
 	name = "stunprod"
 	desc = "An improvised stun baton."
 	icon_state = "stunprod"

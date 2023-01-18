@@ -31,7 +31,7 @@
 		/obj/item/stack/spacecash/c500,
 		/obj/item/storage/toolbox/mini/syndicate/loaded,
 		/obj/item/pinpointer/crew,
-		/obj/item/melee/tonfa,
+		/obj/item/melee/tonfa/shock_tonfa,
 		/obj/item/gun/energy/e_gun/defender,
 		/obj/item/choice_beacon/hero,
 	)

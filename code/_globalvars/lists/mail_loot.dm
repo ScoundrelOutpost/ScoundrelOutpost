@@ -7,7 +7,7 @@ GLOBAL_LIST_INIT(generic_mail_loot, list(
         /obj/item/clothing/suit/armor/vest = 50,
         // weapons
         /obj/item/gun/energy/e_gun/defender = 50,
-        /obj/item/melee/tonfa = 50,
+        /obj/item/melee/tonfa/shock_tonfa = 50,
         /obj/item/storage/box/bolas = 50,
 
         /obj/item/melee/tonfa/esword = 25,

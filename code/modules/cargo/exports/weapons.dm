@@ -6,8 +6,8 @@
 /datum/export/weapon/baton
 	cost = CARGO_CRATE_VALUE * 0.5
 	unit_name = "shock tonfa"
-	export_types = list(/obj/item/melee/tonfa)
-	exclude_types = list(/obj/item/melee/tonfa/stunprod)
+	export_types = list(/obj/item/melee/tonfa/shock_tonfa)
+	exclude_types = list(/obj/item/melee/tonfa/shock_tonfa/stunprod)
 	include_subtypes = TRUE
 
 /datum/export/weapon/knife

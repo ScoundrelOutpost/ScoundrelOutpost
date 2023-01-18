@@ -407,7 +407,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 // Definitions
 ////////////////////////////////
 
-#define CABLE_RESTRAINTS_COST 15
+#define CABLE_RESTRAINTS_COST 10
 
 /obj/item/stack/cable_coil
 	name = "cable coil"
@@ -766,6 +766,9 @@ GLOBAL_LIST(hub_radial_layer_list)
 // scoundrel content
 /obj/item/stack/cable_coil/fifteen
 	amount = 15 // why wasnt this a thing?
+
+/obj/item/stack/cable_coil/ten
+	amount = 10
 
 /obj/item/stack/cable_coil/one
 	amount = 1

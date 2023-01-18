@@ -345,7 +345,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/unfinished_stunprod/attackby(obj/item/attacking_item, mob/user, params)
 	if(istype(attacking_item, /obj/item/stock_parts/cell))
-		var/obj/item/melee/tonfa/stunprod/prod = new /obj/item/melee/tonfa/stunprod()
+		var/obj/item/melee/tonfa/shock_tonfa/stunprod/prod = new /obj/item/melee/tonfa/shock_tonfa/stunprod()
 
 		remove_item_from_storage(user)
 		if (!user.transferItemToLoc(attacking_item, prod))

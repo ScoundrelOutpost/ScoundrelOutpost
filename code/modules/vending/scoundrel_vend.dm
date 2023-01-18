@@ -143,7 +143,7 @@
 		/obj/item/retractor/advanced = 1,
 		/obj/item/crowbar/power = 1,
 		/obj/item/construction/rcd/loaded/upgraded = 1,
-		/obj/item/melee/tonfa = 1,
+		/obj/item/melee/tonfa/shock_tonfa = 1,
 		//exotic
 		/obj/item/organ/internal/cyberimp/arm/toolset = 1,
 		/obj/item/organ/internal/cyberimp/brain/anti_drop = 1,

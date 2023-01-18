@@ -273,7 +273,7 @@
 	uniform = /obj/item/clothing/under/color/grey
 	suit = /obj/item/clothing/suit/jacket/fancy
 	backpack_contents = list(
-		/obj/item/melee/tonfa = 1,
+		/obj/item/melee/tonfa/shock_tonfa = 1,
 		/obj/item/clothing/mask/bandana/striped/black = 1,
 		/obj/item/gun/energy/e_gun/defender,
 		)
@@ -344,7 +344,7 @@
 	name = "Quartermaster"
 	jobtype = /datum/job/quartermaster_scoundrel
 	backpack_contents = list(
-		/obj/item/melee/tonfa = 1,
+		/obj/item/melee/tonfa/shock_tonfa = 1,
 		/obj/item/gun/energy/e_gun/defender,
 		/obj/item/station_charter = 1,
 		/obj/item/clothing/mask/bandana/striped/botany
@@ -417,7 +417,7 @@
 	uniform = /obj/item/clothing/under/color/black
 	suit = /obj/item/clothing/suit/jacket/det_suit/dark
 	backpack_contents = list(
-		/obj/item/melee/tonfa = 1,
+		/obj/item/melee/tonfa/shock_tonfa = 1,
 		/obj/item/gun/energy/e_gun/defender = 1,
 		/obj/item/pinpointer/crew = 1
 		)
@@ -501,3 +501,11 @@
 	pda_slot = ITEM_SLOT_LPOCKET
 	box = /obj/item/storage/box/survival/mining
 // End job
+
+// apply to all
+/datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+	var/list/potential_cash = list(/obj/item/stack/spacecash/c1000, /obj/item/stack/spacecash/c500, /obj/item/stack/spacecash/c200)
+	if(prob(13))
+		var/obj/item/stack/spacecash/picked_cash = pick(potential_cash)
+		backpack_contents += picked_cash

@@ -99,7 +99,7 @@
 
 /datum/crafting_recipe/stunprod
 	name = "Stunprod"
-	result = /obj/item/melee/tonfa/stunprod
+	result = /obj/item/melee/tonfa/shock_tonfa/stunprod
 	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
 				/obj/item/stack/rods = 1,
 				/obj/item/assembly/igniter = 1,
@@ -550,7 +550,7 @@
 				/obj/item/spear = 1,
 				/obj/item/storage/toolbox= 1)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
-	tool_paths = list(/obj/item/clothing/gloves/color/yellow, /obj/item/clothing/mask/gas, /obj/item/melee/tonfa/stunprod)
+	tool_paths = list(/obj/item/clothing/gloves/color/yellow, /obj/item/clothing/mask/gas, /obj/item/melee/tonfa/shock_tonfa/stunprod)
 	time = 30 SECONDS //contemplate for a bit
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON

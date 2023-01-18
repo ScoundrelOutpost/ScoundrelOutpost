@@ -174,7 +174,7 @@
 
 // cable untying -- why are there two different color vars? why is there even a single color var? placed cables don't have color variance. smart wires they say
 /obj/item/restraints/handcuffs/cable/attack_self(mob/user)
-	var/obj/item/stack/cable_coil/fifteen/untied_cables = new
+	var/obj/item/stack/cable_coil/ten/untied_cables = new
 	untied_cables.color = color
 	untied_cables.cable_color = cable_color
 	user.put_in_hands(untied_cables)
@@ -288,19 +288,17 @@
 			return
 	else if(istype(I, /obj/item/stack/sheet/iron))
 		var/obj/item/stack/sheet/iron/M = I
-		if(M.get_amount() < 6)
+		if(M.get_amount() < 2)
 			to_chat(user, span_warning("You need at least six iron sheets to make good enough weights!"))
 			return
-		to_chat(user, span_notice("You begin to apply [I] to [src]..."))
-		if(do_after(user, 35, target = src))
-			if(M.get_amount() < 6 || !M)
-				return
-			var/obj/item/restraints/legcuffs/bola/S = new /obj/item/restraints/legcuffs/bola
-			M.use(6)
-			user.put_in_hands(S)
-			to_chat(user, span_notice("You make some weights out of [I] and tie them to [src]."))
-			remove_item_from_storage(user)
-			qdel(src)
+		if(M.get_amount() < 2 || !M)
+			return
+		var/obj/item/restraints/legcuffs/bola/S = new /obj/item/restraints/legcuffs/bola
+		M.use(6)
+		user.put_in_hands(S)
+		to_chat(user, span_notice("You make some weights out of [I] and tie them to [src]."))
+		remove_item_from_storage(user)
+		qdel(src)
 	else
 		return ..()
 

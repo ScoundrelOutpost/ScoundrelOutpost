@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(generic_suit_allowed, typecacheof(list(
 		/obj/item/t_scanner,
 		/obj/item/crowbar,
 		// weapons
-		/obj/item/melee/tonfa,
+		/obj/item/melee/tonfa/shock_tonfa,
 		/obj/item/fireaxe,
 		/obj/item/spear,
 		/obj/item/javelin,

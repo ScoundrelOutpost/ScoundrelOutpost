@@ -7,16 +7,17 @@
 	lefthand_file = 'icons/mob/inhands/weapons/flamethrower_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/flamethrower_righthand.dmi'
 	flags_1 = CONDUCT_1
-	force = 3
-	throwforce = 10
+	force = 9
+	throwforce = 12
 	throw_speed = 1
 	throw_range = 5
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=500)
 	resistance_flags = FIRE_PROOF
-	trigger_guard = TRIGGER_GUARD_NORMAL
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 	light_system = MOVABLE_LIGHT
 	light_on = FALSE
+	light_power = 0
 	var/status = FALSE
 	var/lit = FALSE //on or off
 	var/operating = FALSE//cooldown
@@ -30,6 +31,8 @@
 	var/igniter_type = /obj/item/assembly/igniter
 	var/acti_sound = 'sound/items/welderactivate.ogg'
 	var/deac_sound = 'sound/items/welderdeactivate.ogg'
+	drop_sound = 'sound/items/handling/weldingtool_drop.ogg'
+	pickup_sound = 'sound/items/handling/weldingtool_pickup.ogg'
 
 /obj/item/flamethrower/Initialize(mapload)
 	. = ..()
@@ -132,10 +135,12 @@
 				ptank.forceMove(get_turf(src))
 				ptank = W
 				to_chat(user, span_notice("You swap the plasma tank in [src]!"))
+				playsound(loc, 'sound/machines/click.ogg', 20, TRUE)
 			return
 		if(!user.transferItemToLoc(W, src))
 			return
 		ptank = W
+		playsound(loc, 'sound/machines/click.ogg', 20, TRUE)
 		update_appearance()
 		return
 
@@ -156,6 +161,7 @@
 		user.put_in_hands(ptank)
 		ptank = null
 		to_chat(user, span_notice("You remove the plasma tank from [src]!"))
+		playsound(loc, 'sound/machines/click.ogg', 20, TRUE)
 		update_appearance()
 
 /obj/item/flamethrower/examine(mob/user)

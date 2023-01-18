@@ -38,8 +38,9 @@
 	inhand_icon_state = null
 	w_class = WEIGHT_CLASS_TINY
 	clothing_flags = INEDIBLE_CLOTHING|BLOCKS_SPEECH
-	equip_delay_other = 40
-	strip_delay = 40
+	body_parts_covered = NONE
+	equip_delay_other = 0
+	strip_delay = 10
 	greyscale_config = /datum/greyscale_config/tape_piece
 	greyscale_config_worn = /datum/greyscale_config/tape_piece/worn
 	greyscale_colors = "#B2B2B2"
@@ -71,10 +72,8 @@
 	if(!mob_can_equip(victim, ITEM_SLOT_MASK))
 		to_chat(attacker, span_notice("[victim] is already wearing somthing on their face."))
 		return
-	balloon_alert(attacker, "taping mouth...")
-	to_chat(victim, span_userdanger("[attacker] is attempting to tape your mouth closed!"))
-	if(!do_after(attacker, equip_delay_other, target = victim))
-		return
+	balloon_alert(victim, "mouth taped!")
+	to_chat(victim, span_userdanger("[attacker] slaps some tape over your mouth!"))
 	victim.equip_to_slot_if_possible(src, ITEM_SLOT_MASK)
 	update_appearance()
 
@@ -88,8 +87,6 @@
 	name = "surgical tape piece"
 	desc = "A piece of tape that can be put over someone's mouth. As long as you apply this to your patient, you won't hear their screams of pain!"
 	greyscale_colors = "#70BAE7"
-	equip_delay_other = 30
-	strip_delay = 30
 
 /obj/item/clothing/mask/muzzle/tape/pointy
 	name = "pointy tape piece"

@@ -26,6 +26,7 @@
 	armor = STARSUIT_ARMOR
 	clothing_flags = STOPSPRESSUREDAMAGE|PLASMAMAN_PREVENT_IGNITION
 	w_class = WEIGHT_CLASS_NORMAL
+	resistance_flags = null
 //	slowdown = 0.5 need to figure out a better downside than this
 
 	has_sensor = NO_SENSORS

@@ -692,3 +692,47 @@
 
 	for(var/department_type in department_types)
 		create_separatist_nation(department_type, announcement = FALSE, dangerous = FALSE, message_admins = FALSE)
+
+// scoundrel content
+
+
+//////////////////////////////////////////////
+//                                          //
+//               SCOUNDREL                  //
+//                                          //
+//////////////////////////////////////////////
+
+/datum/dynamic_ruleset/roundstart/scoundrel
+	name = "Scoundrel"
+	antag_flag = ROLE_SCOUNDREL
+	antag_datum = /datum/antagonist/scoundrel
+	minimum_required_age = 0
+	protected_roles = list(
+		JOB_CAPTAIN_SCOUNDREL,
+		JOB_DETECTIVE_SCOUNDREL,
+		JOB_QUARTERMASTER_SCOUNDREL,
+	)
+	restricted_roles = list(
+		JOB_AI,
+		JOB_CYBORG,
+	)
+	required_candidates = 1
+	weight = 10
+	cost = 1
+	scaling_cost = 2
+	requirements = list(8,8,8,8,8,8,8,8,8,8)
+	antag_cap = list("denominator" = 38)
+	var/autotraitor_cooldown = (15 MINUTES)
+
+/datum/dynamic_ruleset/roundstart/scoundrel/pre_execute(population)
+	. = ..()
+	var/num_scoundrels = get_antag_cap(population) * (scaled_times + 1)
+	for (var/i = 1 to num_scoundrels)
+		if(candidates.len <= 0)
+			break
+		var/mob/M = pick_n_take(candidates)
+		assigned += M.mind
+		M.mind.special_role = ROLE_SCOUNDREL
+		M.mind.restricted_roles = restricted_roles
+		GLOB.pre_setup_antags += M.mind
+	return TRUE

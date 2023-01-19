@@ -20,7 +20,6 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/sneakers/black
-	suit_store = /obj/item/personalshield/standard
 
 /datum/antagonist/scoundrel/on_gain()
 	create_objectives()

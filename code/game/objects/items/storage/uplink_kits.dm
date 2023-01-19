@@ -370,6 +370,12 @@
 /obj/item/storage/box/syndie_kit/imp_adrenal/PopulateContents()
 	new /obj/item/implanter/adrenalin(src)
 
+/obj/item/storage/box/syndie_kit/imp_adrenal/single
+	name = "adrenal implant box"
+
+/obj/item/storage/box/syndie_kit/imp_adrenal/single/PopulateContents()
+	new /obj/item/implanter/adrenalin/single(src)
+
 /obj/item/storage/box/syndie_kit/imp_storage
 	name = "storage implant box"
 

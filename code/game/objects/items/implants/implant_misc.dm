@@ -18,6 +18,9 @@
 	icon_state = "adrenal"
 	uses = 3
 
+/obj/item/implant/adrenalin/single
+	uses = 1
+
 /obj/item/implant/adrenalin/get_data()
 	var/dat = {"<b>Implant Specifications:</b><BR>
 				<b>Name:</b> Cybersun Industries Adrenaline Implant<BR>
@@ -33,23 +36,34 @@
 	. = ..()
 	uses--
 	to_chat(imp_in, "<span class='notice'>You feel a sudden surge of energy!</span>")
+	playsound(loc, 'sound/scoundrel/shield/beepbeep.ogg', 15, FALSE)
 	imp_in.SetStun(0)
 	imp_in.SetKnockdown(0)
 	imp_in.SetUnconscious(0)
 	imp_in.SetParalyzed(0)
 	imp_in.SetImmobilized(0)
-	imp_in.adjustStaminaLoss(-75)
+
+	imp_in.adjustStaminaLoss(-100)
+	imp_in.adjustBruteLoss(-10)
+	imp_in.adjustFireLoss(-10)
+	imp_in.adjustToxLoss(-10)
+	imp_in.adjustOxyLoss(-10)
+
 	imp_in.set_resting(FALSE)
 
-	imp_in.reagents.add_reagent(/datum/reagent/medicine/synaptizine, 10)
+	imp_in.reagents.add_reagent(/datum/reagent/medicine/ephedrine, 5)
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/omnizine, 10)
-	imp_in.reagents.add_reagent(/datum/reagent/medicine/stimulants, 10)
+	imp_in.reagents.add_reagent(/datum/reagent/pax, 1)
 	if(!uses)
+		to_chat(imp_in, "<span class='notice'>You feel a faint electrical buzz as you use up the last adrenal!</span>")
 		qdel(src)
 
 /obj/item/implanter/adrenalin
 	name = "implanter (adrenalin)"
 	imp_type = /obj/item/implant/adrenalin
+
+/obj/item/implanter/adrenalin/single
+	imp_type = /obj/item/implant/adrenalin/single
 
 /obj/item/implant/emp
 	name = "emp implant"

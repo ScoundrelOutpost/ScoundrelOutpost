@@ -34,7 +34,7 @@
 /datum/supply_pack/weapons/protected/survival_knives
 	name = "Bulk Survival Knives"
 	desc = "Contains three survival knives, for rough living."
-	cost = CARGO_CRATE_VALUE * 2.5
+	cost = CARGO_CRATE_VALUE * 3.1
 	contains = list(/obj/item/knife/combat/survival = 3)
 	crate_name = "survival knife crate"
 
@@ -103,8 +103,15 @@
 /datum/supply_pack/weapons/single/survival_knife
 	name = "(Single) Survival Knife"
 	desc = "A single survival knife, for rough living."
-	cost = CARGO_CRATE_VALUE * 0.5
+	cost = CARGO_CRATE_VALUE * 0.7
 	contains = list(/obj/item/knife/combat/survival = 1)
+	goody = TRUE
+
+/datum/supply_pack/weapons/single/switchblade
+	name = "(Single) Switchblade"
+	desc = "A single spring-loaded knife, for concealed and compact self-defense."
+	cost = CARGO_CRATE_VALUE * 0.4
+	contains = list(/obj/item/switchblade = 1)
 	goody = TRUE
 
 /datum/supply_pack/weapons/secure

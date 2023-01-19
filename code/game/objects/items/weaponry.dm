@@ -391,22 +391,24 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/switchblade
 	name = "switchblade"
+	desc = "A sharp, concealable, spring-loaded knife."
+	icon = 'scoundrel/icons/obj/weapons/transforming_melee.dmi'
 	icon_state = "switchblade"
 	base_icon_state = "switchblade"
+	inhand_icon_state = "switchblade"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	desc = "A sharp, concealable, spring-loaded knife."
 	flags_1 = CONDUCT_1
-	force = 3
 	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 5
-	throw_speed = 3
-	throw_range = 6
+	throw_speed = 4
+	throw_range = 8
 	custom_materials = list(/datum/material/iron=12000)
 	hitsound = 'sound/weapons/genhit.ogg'
 	attack_verb_continuous = list("stubs", "pokes")
 	attack_verb_simple = list("stub", "poke")
 	resistance_flags = FIRE_PROOF
+	// sound played when extended/retracted
+	var/on_sound = 'sound/weapons/batonextend.ogg'
 	/// Whether the switchblade starts extended or not.
 	var/start_extended = FALSE
 
@@ -434,7 +436,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/switchblade/proc/on_transform(obj/item/source, mob/user, active)
 	SIGNAL_HANDLER
-
+	playsound(user ? user : src, on_sound, 50, TRUE)
 	tool_behaviour = (active ? TOOL_KNIFE : NONE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
 

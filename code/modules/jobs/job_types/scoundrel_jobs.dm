@@ -33,7 +33,7 @@
 	name = "Deckhand"
 	jobtype = /datum/job/deckhand
 	backpack_contents = list(
-		/obj/item/knife/combat/survival,
+		/obj/item/switchblade,
 		/obj/item/gun/energy/e_gun/defender,
 		/obj/item/storage/toolbox/mini/mechanical/loaded,
 	)
@@ -82,7 +82,7 @@
 	name = "Greenhand"
 	jobtype = /datum/job/deckhand/greenhand
 	backpack_contents = list(
-		/obj/item/knife/combat/survival,
+		/obj/item/switchblade,
 		/obj/item/storage/toolbox/mini/mechanical/loaded,
 	)
 	id_trim = /datum/id_trim/job/deckhand/greenhand

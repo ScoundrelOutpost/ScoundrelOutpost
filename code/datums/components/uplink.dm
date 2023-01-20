@@ -75,15 +75,12 @@
 			purchase_log = new(owner, src)
 	src.lockable = lockable
 	src.active = enabled
-	if(!uplink_handler_override)
-		uplink_handler = new()
-		uplink_handler.has_objectives = FALSE
-		uplink_handler.uplink_flag = uplink_flag
-		uplink_handler.telecrystals = starting_tc
-		uplink_handler.has_progression = has_progression
-		uplink_handler.purchase_log = purchase_log
-	else
-		uplink_handler = uplink_handler_override
+	uplink_handler = new()
+	uplink_handler.has_objectives = FALSE
+	uplink_handler.uplink_flag = uplink_flag
+	uplink_handler.telecrystals = starting_tc
+	uplink_handler.has_progression = has_progression
+	uplink_handler.purchase_log = purchase_log
 	RegisterSignal(uplink_handler, COMSIG_UPLINK_HANDLER_ON_UPDATE, PROC_REF(handle_uplink_handler_update))
 	if(!lockable)
 		active = TRUE

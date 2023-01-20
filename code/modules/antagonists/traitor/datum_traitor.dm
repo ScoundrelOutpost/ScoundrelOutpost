@@ -47,14 +47,13 @@
 			uplink.uplink_handler = uplink_handler
 		else
 			uplink_handler = uplink.uplink_handler
-		uplink_handler.has_progression = TRUE
+		uplink_handler.has_progression = FALSE
 		SStraitor.register_uplink_handler(uplink_handler)
 
-		uplink_handler.has_objectives = TRUE
+		uplink_handler.has_objectives = FALSE
 		uplink_handler.generate_objectives()
 
-		if(uplink_handler.progression_points < SStraitor.current_global_progression)
-			uplink_handler.progression_points = SStraitor.current_global_progression * SStraitor.newjoin_progression_coeff
+		uplink_handler.progression_points = 500
 
 		var/list/uplink_items = list()
 		for(var/datum/uplink_item/item as anything in SStraitor.uplink_items)

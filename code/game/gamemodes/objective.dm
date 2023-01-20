@@ -562,7 +562,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 GLOBAL_LIST_EMPTY(possible_items)
 /datum/objective/steal
 	name = "steal"
-	martyr_compatible = FALSE
+	martyr_compatible = TRUE
 	admin_grantable = TRUE
 	var/datum/objective_item/targetinfo = null //Save the chosen item datum so we can access it later.
 	var/obj/item/steal_target = null //Needed for custom objectives (they're just items, not datums).

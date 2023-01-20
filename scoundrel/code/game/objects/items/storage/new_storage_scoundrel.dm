@@ -211,10 +211,12 @@
 /obj/item/storage/pouch/traitor/nanotrasen
 	desc = "A compact, ergonomically designed pouch for holding more things than usual. it's decorated with shameless Nanotrasen symbols."
 	icon_state = "nanotrasen"
+	flags_inv = EXAMINE_SKIP
 
 /obj/item/storage/pouch/traitor/sinister
 	desc = "A compact, ergonomically designed pouch for holding more things than usual. It has a sinister look to it."
 	icon_state = "sinister red"
+	flags_inv = EXAMINE_SKIP
 
 //flares
 /obj/item/storage/pouch/flares
@@ -257,19 +259,22 @@
 	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/a357(src)
 /obj/item/storage/pouch/bullet/ammo_357/traitor
-	icon_state = "sinister ammo"
+	icon_state = "ammo_syndicate"
+	item_flags = EXAMINE_SKIP
 
 /obj/item/storage/pouch/bullet/ammo_minislug/PopulateContents()
 	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/minislug(src)
 /obj/item/storage/pouch/bullet/ammo_minislug/traitor
-	icon_state = "sinister ammo"
+	icon_state = "ammo_syndicate"
+	item_flags = EXAMINE_SKIP
 
 /obj/item/storage/pouch/bullet/ammo_minislug_surplus/PopulateContents()
 	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/minislug/surplus(src)
 /obj/item/storage/pouch/bullet/ammo_minislug_surplus/traitor
-	icon_state = "sinister ammo"
+	icon_state = "ammo_syndicate"
+	item_flags = EXAMINE_SKIP
 
 // generic - keep this list at the bottom please
 /obj/item/storage/pouch/grey

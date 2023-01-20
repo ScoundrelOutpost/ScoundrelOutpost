@@ -212,7 +212,7 @@
 	objectives += objective_completion */
 
 	switch(rand(1,100))
-		if(1 to 30)
+		if(1 to 32)
 			var/datum/objective/assassinate/kill_objective = new
 			kill_objective.owner = owner
 			kill_objective.find_target()
@@ -223,7 +223,7 @@
 			kill_objective_2.find_target()
 			objectives += kill_objective_2
 
-		if(31 to 60)
+		if(33 to 65)
 			var/datum/objective/steal/steal_objective = new
 			steal_objective.owner = owner
 			steal_objective.find_target()
@@ -234,7 +234,7 @@
 			steal_objective_2.find_target()
 			objectives += steal_objective_2
 
-		if(61 to 85)
+		if(66 to 100)
 			var/datum/objective/assassinate/kill_objective = new
 			kill_objective.owner = owner
 			kill_objective.find_target()

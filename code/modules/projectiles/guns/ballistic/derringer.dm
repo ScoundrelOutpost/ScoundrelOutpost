@@ -21,7 +21,7 @@
 
 /obj/item/gun/ballistic/derringer/energy
 	name = "executive pistol"
-	desc = "A compact personal defense weapon with an exotic firing mechanism and an old-fashioned flare. \
+	desc = "A compact personal defense weapon with an exotic firing mechanism and some old-fashioned flare. \
 	JX-EXECUTIVE is engraved on the barrel."
 	icon_state = "e_derringer2"
 	mag_type = /obj/item/ammo_box/magazine/internal/derringer/energy

@@ -115,5 +115,5 @@
 	undetectable to cursory examination even in the hand, and hits viciously. The ideal weapon of choice for underhanded hitmen or \
 	merciless corporate climbers."
 	item = /obj/item/gun/ballistic/derringer/energy
-	cost = 6
+	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)

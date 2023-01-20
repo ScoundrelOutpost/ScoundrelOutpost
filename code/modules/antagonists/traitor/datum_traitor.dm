@@ -203,20 +203,54 @@
 /datum/antagonist/traitor/proc/forge_traitor_objectives()
 	objectives.Cut()
 
-	var/datum/objective/traitor_progression/final_objective = new /datum/objective/traitor_progression()
+/*	var/datum/objective/traitor_progression/final_objective = new /datum/objective/traitor_progression()
 	final_objective.owner = owner
-	objectives += final_objective
+	objectives += final_objective */
 
-	var/datum/objective/traitor_objectives/objective_completion = new /datum/objective/traitor_objectives()
+/*	var/datum/objective/traitor_objectives/objective_completion = new /datum/objective/traitor_objectives()
 	objective_completion.owner = owner
-	objectives += objective_completion
+	objectives += objective_completion */
+
+	switch(rand(1,100))
+		if(1 to 30)
+			var/datum/objective/assassinate/kill_objective = new
+			kill_objective.owner = owner
+			kill_objective.find_target()
+			objectives += kill_objective
+
+			var/datum/objective/assassinate/kill_objective_2 = new
+			kill_objective_2.owner = owner
+			kill_objective_2.find_target()
+			objectives += kill_objective_2
+
+		if(31 to 60)
+			var/datum/objective/steal/steal_objective = new
+			steal_objective.owner = owner
+			steal_objective.find_target()
+			objectives += steal_objective
+
+			var/datum/objective/steal/steal_objective_2 = new
+			steal_objective_2.owner = owner
+			steal_objective_2.find_target()
+			objectives += steal_objective_2
+
+		if(61 to 85)
+			var/datum/objective/assassinate/kill_objective = new
+			kill_objective.owner = owner
+			kill_objective.find_target()
+			objectives += kill_objective
+
+			var/datum/objective/steal/steal_objective = new
+			steal_objective.owner = owner
+			steal_objective.find_target()
+			objectives += steal_objective
 
 	var/datum/objective/objective_escape
 	var/random_escape = pick_weight(list(
-		/datum/objective/escape = 85,
-		/datum/objective/hijack = 10,
-		/datum/objective/survive = 4,
-		/datum/objective/martyr = 1
+		/datum/objective/escape = 50,
+		/datum/objective/hijack = 15,
+		/datum/objective/survive = 25,
+		/datum/objective/martyr = 10,
 	))
 	objective_escape = new random_escape()
 	objective_escape.owner = owner

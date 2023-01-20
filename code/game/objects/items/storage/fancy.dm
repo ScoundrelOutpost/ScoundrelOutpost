@@ -210,6 +210,8 @@
 	var/derringer_spawner = FALSE
 	///What kind of derringer we are going to spawn
 	var/derringer_to_spawn = /obj/item/gun/ballistic/derringer
+	///Whether or not to use quickdraw when the storage atom is generated. Makes derringer packets less annoying to use.
+	var/is_quickdraw = TRUE
 
 /obj/item/storage/fancy/cigarettes/attack_self(mob/user)
 	if(contents.len != 0 || !spawn_coupon)
@@ -231,8 +233,8 @@
 		max_storage = spawn_count
 		spawn_count --
 	. = ..()
-	atom_storage.quickdraw = TRUE
-	atom_storage.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter, /obj/item/gun/ballistic/derringer))
+	atom_storage.quickdraw = is_quickdraw
+	atom_storage.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter, /obj/item/gun/ballistic/derringer, /obj/item/ammo_casing))
 
 /obj/item/storage/fancy/cigarettes/PopulateContents()
 	. = ..()
@@ -382,6 +384,18 @@
 	. = ..()
 	if(!contents.len)
 		. += "[base_icon_state]_empty"
+
+// derringer
+/obj/item/storage/fancy/cigarettes/cigpack_robust/derringer
+	derringer_spawner = TRUE
+	spawn_type = /obj/item/ammo_casing/a357
+	is_quickdraw = FALSE
+
+/obj/item/storage/fancy/cigarettes/cigpack_carp/e_derringer
+	derringer_spawner = TRUE
+	derringer_to_spawn = /obj/item/gun/ballistic/derringer/energy
+	spawn_type = /obj/item/ammo_casing/minislug
+	is_quickdraw = FALSE
 
 /////////////
 //CIGAR BOX//

@@ -38,6 +38,7 @@
 	var/medium = list(
 		// 15% chance to spawn 1
 		/obj/item/ammo_box/a357,
+		/obj/item/storage/fancy/cigarettes/cigpack_robust/derringer,
 		/obj/item/storage/pouch/tactical/ammo_9mm,
 		/obj/item/clothing/neck/heretic_focus,
 		/obj/item/storage/pouch/tactical/xrayflash,

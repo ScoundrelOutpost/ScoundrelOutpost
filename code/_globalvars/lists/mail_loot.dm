@@ -9,6 +9,7 @@ GLOBAL_LIST_INIT(generic_mail_loot, list(
         /obj/item/gun/energy/e_gun/defender = 50,
         /obj/item/melee/tonfa/shock_tonfa = 50,
         /obj/item/storage/box/bolas = 50,
+        /obj/item/storage/fancy/cigarettes/cigpack_robust/derringer = 50,
 
         /obj/item/melee/tonfa/esword = 25,
         /obj/item/organ/internal/cyberimp/arm/katana = 25,

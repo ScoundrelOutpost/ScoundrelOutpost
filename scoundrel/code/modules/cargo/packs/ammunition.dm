@@ -37,3 +37,10 @@
 	cost = CARGO_CRATE_VALUE * 1
 	contains = list(/obj/item/ammo_box/magazine/wt550m9/surplus)
 	goody = TRUE
+
+/datum/supply_pack/ammunition/laser_minislug_pouch
+	name = "(Single) Low-Yield Minislug Pouch"
+	desc = "A pouch loaded with low-yield laser minislugs for use with low-caliber tech weapons."
+	cost = CARGO_CRATE_VALUE * 1
+	contains = list(/obj/item/storage/pouch/bullet/ammo_minislug_surplus)
+	goody = TRUE

@@ -85,6 +85,14 @@
 	contains = list(/obj/item/gun/ballistic/automatic/wt550/empty = 1)
 	goody = TRUE
 
+/datum/supply_pack/weapons/single/energy_derringer
+	name = "(Single) JX-Executive Pistol"
+	desc = "The mark of a certified JX-Corporation executive. Protect yourself with old-fashioned class and \
+	ruthless firepower in a compact, two-tap package. Loaded with laser minislugs. Does not come with JX executive certification."
+	cost = CARGO_CRATE_VALUE * 50 // corporate decadence
+	contains = list(/obj/item/gun/ballistic/derringer/energy = 1)
+	goody = TRUE
+
 /datum/supply_pack/weapons/single/suppressor
 	name = "(Single) Universal Suppressor"
 	desc = "A cheap suppressor that fits most standard ballistic guns."

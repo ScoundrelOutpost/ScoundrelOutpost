@@ -54,5 +54,5 @@
 #define CALIBER_HOOK "hook"
 /// The caliber used by the changeling tentacle mutation.
 #define CALIBER_TENTACLE "tentacle"
-/// The caliber used by most revolver variants.
-#define CALIBER_ENERGY_SLUG "energy_slug"
+/// The caliber used by the energy derringer
+#define CALIBER_MINISLUG "tech-minislug"

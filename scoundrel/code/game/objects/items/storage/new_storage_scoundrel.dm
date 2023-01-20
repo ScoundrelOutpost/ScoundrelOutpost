@@ -237,6 +237,40 @@
 	new /obj/item/flashlight/flare(src)
 	new /obj/item/flashlight/flare(src) // lmao
 
+// bullet pouches
+/obj/item/storage/pouch/bullet
+	name = "ammo pouch"
+	desc = "A pouch for storing considerable amounts of loose ammo."
+	icon_state = "ammo"
+/obj/item/storage/pouch/bullet/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_TINY
+	atom_storage.max_slots = 14
+	atom_storage.max_total_storage = 14
+	atom_storage.allow_quick_gather = TRUE
+	atom_storage.numerical_stacking = TRUE
+	atom_storage.set_holdable(list(
+		/obj/item/ammo_casing,
+		))
+
+/obj/item/storage/pouch/bullet/ammo_357/PopulateContents()
+	for(var/i in 1 to 14)
+		new /obj/item/ammo_casing/a357(src)
+/obj/item/storage/pouch/bullet/ammo_357/traitor
+	icon_state = "sinister ammo"
+
+/obj/item/storage/pouch/bullet/ammo_minislug/PopulateContents()
+	for(var/i in 1 to 14)
+		new /obj/item/ammo_casing/minislug(src)
+/obj/item/storage/pouch/bullet/ammo_minislug/traitor
+	icon_state = "sinister ammo"
+
+/obj/item/storage/pouch/bullet/ammo_minislug_surplus/PopulateContents()
+	for(var/i in 1 to 14)
+		new /obj/item/ammo_casing/minislug/surplus(src)
+/obj/item/storage/pouch/bullet/ammo_minislug_surplus/traitor
+	icon_state = "sinister ammo"
+
 // generic - keep this list at the bottom please
 /obj/item/storage/pouch/grey
 	icon_state = "grey"

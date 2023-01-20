@@ -7,5 +7,5 @@
 
 /obj/item/ammo_box/magazine/internal/derringer/energy
 	name = "energy derringer internal magazine"
-	ammo_type = /obj/item/ammo_casing/energy_slug
-	caliber = CALIBER_ENERGY_SLUG
+	ammo_type = /obj/item/ammo_casing/minislug
+	caliber = CALIBER_MINISLUG

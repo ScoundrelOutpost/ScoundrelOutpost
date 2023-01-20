@@ -66,3 +66,11 @@
 	cost = 4
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
+
+/datum/uplink_item/ammo/laser_minislug
+	name = "Laser Minislug Ammo-Pouch"
+	desc = "A pouch filled with fourteen standard darkmatter-driven laser minislugs; for use with the Executive Pistol."
+	item = /obj/item/storage/pouch/bullet/ammo_minislug
+	cost = 1
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	illegal_tech = FALSE

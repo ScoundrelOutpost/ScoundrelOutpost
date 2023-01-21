@@ -234,13 +234,13 @@ GLOBAL_LIST_INIT(ai_employers, list(
 // Progression traitor defines
 
 /// How many telecrystals a normal traitor starts with
-#define TELECRYSTALS_DEFAULT 20
+#define TELECRYSTALS_DEFAULT 100
 /// How many telecrystals mapper/admin only "precharged" uplink implant
-#define TELECRYSTALS_PRELOADED_IMPLANT 10
+#define TELECRYSTALS_PRELOADED_IMPLANT 50
 /// The normal cost of an uplink implant; used for calcuating how many
 /// TC to charge someone if they get a free implant through choice or
 /// because they have nothing else that supports an implant.
-#define UPLINK_IMPLANT_TELECRYSTAL_COST 4
+#define UPLINK_IMPLANT_TELECRYSTAL_COST 10
 
 // Used for traitor objectives
 /// If the objective hasn't been taken yet

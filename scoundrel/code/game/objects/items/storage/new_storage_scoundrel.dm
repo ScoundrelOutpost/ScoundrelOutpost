@@ -198,25 +198,25 @@
 
 //traitor
 /obj/item/storage/pouch/traitor
-	name = "pouch" //generic to make stealth easier
+	name = "suspicious pouch"
 	desc = "A compact, ergonomically designed pouch for holding more things than usual. it's decorated with shameless Syndicate symbols."
 	icon_state = "syndicate"
+	flags_inv = EXAMINE_SKIP
 
 /obj/item/storage/pouch/traitor/Initialize(mapload)
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 	atom_storage.max_slots = 6
 	atom_storage.max_total_storage = 6
+	atom_storage.silent = TRUE
 
 /obj/item/storage/pouch/traitor/nanotrasen
 	desc = "A compact, ergonomically designed pouch for holding more things than usual. it's decorated with shameless Nanotrasen symbols."
 	icon_state = "nanotrasen"
-	flags_inv = EXAMINE_SKIP
 
 /obj/item/storage/pouch/traitor/sinister
 	desc = "A compact, ergonomically designed pouch for holding more things than usual. It has a sinister look to it."
 	icon_state = "sinister red"
-	flags_inv = EXAMINE_SKIP
 
 //flares
 /obj/item/storage/pouch/flares

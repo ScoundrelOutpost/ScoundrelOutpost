@@ -323,13 +323,13 @@
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	//Uses of the device left
-	var/charges = 4
+	var/charges = 1
 	//The maximum number of stored uses
-	var/max_charges = 4
+	var/max_charges = 1
 	///Minimum distance to teleport user forward
-	var/minimum_teleport_distance = 4
+	var/minimum_teleport_distance = 12
 	///Maximum distance to teleport user forward
-	var/maximum_teleport_distance = 8
+	var/maximum_teleport_distance = 16
 	//How far the emergency teleport checks for a safe position
 	var/parallel_teleport_distance = 3
 
@@ -475,8 +475,8 @@
 		to_chat(victim, span_userdanger("You teleport into [destination]."))
 	destination.ex_act(EXPLODE_HEAVY)
 	victim.unequip_everything()
-	victim.investigate_log("has been gibbed by [src].", INVESTIGATE_DEATHS)
-	victim.gib()
+	to_chat(victim, span_userdanger("You feel yourself being shredded on a molecular level! You don't feel so good..."))
+	victim.apply_damage(75)
 
 ///Damage and stun all mobs in fragging_location turf, called after a teleport
 /obj/item/syndicate_teleporter/proc/telefrag(turf/fragging_location, mob/user) // Don't let this gib. Never let this gib.

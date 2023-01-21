@@ -51,9 +51,9 @@
 	D.visible_message(span_danger("[A] [atk_verb]s [D]!"), \
 					span_userdanger("[A] [atk_verb]s you!"), null, null, A)
 	to_chat(A, span_danger("You [atk_verb] [D]!"))
-	playsound(get_turf(D), 'sound/weapons/punch1.ogg', 25, TRUE, -1)
+	playsound(get_turf(D), 'sound/weapons/bite.ogg', 75, TRUE, -1)
 	log_combat(A, D, "strong punched (Sleeping Carp)")
-	D.apply_damage(20, A.get_attack_type(), affecting)
+	D.apply_damage(22, A.get_attack_type(), affecting)
 	return
 
 ///Crashing Wave Kick: Punch Shove combo, throws people seven tiles backwards
@@ -63,8 +63,17 @@
 					span_userdanger("You are kicked square in the chest by [A], sending you flying!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), COMBAT_MESSAGE_RANGE, A)
 	playsound(get_turf(A), 'sound/effects/hit_kick.ogg', 50, TRUE, -1)
 	var/atom/throw_target = get_edge_target_turf(D, A.dir)
-	D.throw_at(throw_target, 7, 4, A)
-	D.apply_damage(15, A.get_attack_type(), BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
+	var/obj/item/stuff_in_hand = null
+	stuff_in_hand = D.get_active_held_item()
+	if(prob(100) && stuff_in_hand)
+		if(D.temporarilyRemoveItemFromInventory(stuff_in_hand))
+			A.put_in_hands(stuff_in_hand)
+			D.visible_message("<span class='danger'>[A] snatches [stuff_in_hand] out of the air as it leaves [D]'s hand!</span>", \
+				"<span class='userdanger'>[A] snatches [stuff_in_hand] out of the air!</span>", "<span class='hear'>You hear aggressive shuffling!</span>", COMBAT_MESSAGE_RANGE, A)
+			to_chat(A, "<span class='danger'>You expertly catch [stuff_in_hand] as it leaves [D]'s hand.</span>")
+	D.Paralyze(0.5 SECONDS)
+	D.throw_at(throw_target, 7, 2, A)
+	D.apply_damage(12, A.get_attack_type(), BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
 	log_combat(A, D, "launchkicked (Sleeping Carp)")
 	return
 
@@ -73,14 +82,14 @@
 	A.do_attack_animation(D, ATTACK_EFFECT_KICK)
 	playsound(get_turf(A), 'sound/effects/hit_kick.ogg', 50, TRUE, -1)
 	if(D.body_position == STANDING_UP)
-		D.apply_damage(10, A.get_attack_type(), BODY_ZONE_HEAD, wound_bonus = CANT_WOUND)
-		D.apply_damage(40, STAMINA, BODY_ZONE_HEAD)
-		D.Knockdown(40)
+		D.apply_damage(6, A.get_attack_type(), BODY_ZONE_HEAD, wound_bonus = CANT_WOUND)
+		D.apply_damage(12, STAMINA, BODY_ZONE_HEAD)
+		D.Knockdown(1)
 		D.visible_message(span_warning("[A] kicks [D] in the head, sending them face first into the floor!"), \
 					span_userdanger("You are kicked in the head by [A], sending you crashing to the floor!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), COMBAT_MESSAGE_RANGE, A)
 	else
-		D.apply_damage(5, A.get_attack_type(), BODY_ZONE_HEAD, wound_bonus = CANT_WOUND)
-		D.apply_damage(40, STAMINA, BODY_ZONE_HEAD)
+		D.apply_damage(6, A.get_attack_type(), BODY_ZONE_HEAD, wound_bonus = CANT_WOUND)
+		D.apply_damage(12, STAMINA, BODY_ZONE_HEAD)
 		D.drop_all_held_items()
 		D.visible_message(span_warning("[A] kicks [D] in the head!"), \
 					span_userdanger("You are kicked in the head by [A]!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), COMBAT_MESSAGE_RANGE, A)
@@ -105,7 +114,7 @@
 					span_userdanger("[A] [atk_verb]s you!"), null, null, A)
 	to_chat(A, span_danger("You [atk_verb] [D]!"))
 	D.apply_damage(rand(10,15), BRUTE, affecting, wound_bonus = CANT_WOUND)
-	playsound(get_turf(D), 'sound/weapons/punch1.ogg', 25, TRUE, -1)
+	playsound(get_turf(D), 'sound/scoundrel/weapons/punch3.ogg', 25, TRUE, -1)
 	log_combat(A, D, "punched (Sleeping Carp)")
 	return TRUE
 
@@ -113,7 +122,17 @@
 	add_to_streak("D",D)
 	if(check_streak(A,D))
 		return TRUE
-	log_combat(A, D, "disarmed (Sleeping Carp)")
+	// this chunk of code is taken from krav maga
+	var/obj/item/gun/stuff_in_hand = null // only looks for guns
+	stuff_in_hand = D.get_active_held_item()
+	if(stuff_in_hand && istype(stuff_in_hand, /obj/item/gun))
+		if(D.temporarilyRemoveItemFromInventory(stuff_in_hand))
+			A.put_in_hands(stuff_in_hand)
+			D.visible_message("<span class='danger'>[A] disarms [D]!</span>", \
+				"<span class='userdanger'>You're disarmed by [A]!</span>", "<span class='hear'>You hear aggressive shuffling!</span>", COMBAT_MESSAGE_RANGE, A)
+			to_chat(A, "<span class='danger'>You disarm [D]!</span>")
+			playsound(D, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
+	log_combat(A, D, "disarmed (Sleeping Carp)", "[stuff_in_hand ? " removing \the [stuff_in_hand]" : ""]")
 	return ..()
 
 /datum/martial_art/the_sleeping_carp/proc/can_deflect(mob/living/carp_user)

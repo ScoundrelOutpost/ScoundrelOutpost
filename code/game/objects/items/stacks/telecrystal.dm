@@ -6,7 +6,7 @@
 	icon_state = "telecrystal"
 	dye_color = DYE_SYNDICATE
 	w_class = WEIGHT_CLASS_TINY
-	max_amount = 50
+	max_amount = 100
 	item_flags = NOBLUDGEON
 	merge_type = /obj/item/stack/telecrystal
 
@@ -27,3 +27,12 @@
 
 /obj/item/stack/telecrystal/twenty
 	amount = 20
+
+/obj/item/stack/telecrystal/twentyfive
+	amount = 25
+
+/obj/item/stack/telecrystal/fifty
+	amount = 50
+
+/obj/item/stack/telecrystal/onehundred
+	amount = 100

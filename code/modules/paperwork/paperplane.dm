@@ -16,6 +16,7 @@
 
 /obj/item/paperplane/syndicate
 	desc = "Paper, masterfully folded in the shape of a plane."
+	throw_speed = 2
 	throwforce = 20 //same as throwing stars, but no chance of embedding.
 	hit_probability = 100 //guaranteed to cause eye damage when it hits a mob.
 
@@ -105,7 +106,7 @@
 		visible_message(span_danger("\The [src] hits [H] in the eye[eyes ? "" : " socket"]!"))
 		H.adjust_blurriness(6)
 		eyes?.applyOrganDamage(rand(6,8))
-		H.Paralyze(40)
+		H.Knockdown(1)
 		H.emote("scream")
 
 /obj/item/paper/examine(mob/user)

@@ -14,7 +14,7 @@
 	desc = "A sinister-looking surfactant used to clean blood stains to hide murders and prevent DNA analysis. \
 			You can also drop it underfoot to slip people."
 	item = /obj/item/soap/syndie
-	cost = 1
+	cost = 5
 	surplus = 50
 	illegal_tech = FALSE
 
@@ -23,17 +23,7 @@
 	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
 			a Syndicate brand MMI, a straitjacket, and a muzzle."
 	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
-	cost = 3
-
-/datum/uplink_item/device_tools/encryptionkey
-	name = "Syndicate Encryption Key"
-	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
-			as well as talk on an encrypted Syndicate channel with other agents that have the same key. In addition, this key also protects \
-			your headset from radio jammers."
-	item = /obj/item/encryptionkey/syndicate
-	cost = 2
-	surplus = 75
-	restricted = TRUE
+	cost = 10
 
 /datum/uplink_item/device_tools/syndietome
 	name = "Syndicate Tome"
@@ -42,7 +32,7 @@
 			of the originals, these inferior copies are still quite useful, being able to provide \
 			both weal and woe on the battlefield, even if they do occasionally bite off a finger."
 	item = /obj/item/storage/book/bible/syndicate
-	cost = 5
+	cost = 15
 
 /datum/uplink_item/device_tools/thermal
 	name = "Thermal Imaging Glasses"
@@ -51,14 +41,14 @@
 			emitted as heat and light by objects. Hotter objects, such as warm bodies, cybernetic organisms \
 			and artificial intelligence cores emit more of this light than cooler objects like walls and airlocks."
 	item = /obj/item/clothing/glasses/thermal/syndi
-	cost = 4
+	cost = 30
 
 /datum/uplink_item/device_tools/cutouts
 	name = "Adaptive Cardboard Cutouts"
 	desc = "These cardboard cutouts are coated with a thin material that prevents discoloration and makes the images on them appear more lifelike. \
 			This pack contains three as well as a crayon for changing their appearances."
 	item = /obj/item/storage/box/syndie_kit/cutouts
-	cost = 1
+	cost = 2
 	surplus = 20
 
 /datum/uplink_item/device_tools/briefcase_launchpad
@@ -67,45 +57,44 @@
 			Also includes a remote control, disguised as an ordinary folder. Touch the briefcase with the remote to link it."
 	surplus = 0
 	item = /obj/item/storage/briefcase/launchpad
-	cost = 6
+	cost = 15
 
 /datum/uplink_item/device_tools/syndicate_teleporter
 	name = "Experimental Syndicate Teleporter"
-	desc = "A handheld device that teleports the user 4-8 meters forward. \
+	desc = "A handheld device that teleports the user 12-16 meters forward. \
 			Beware, teleporting into a wall will trigger a parallel emergency teleport; \
 			however if that fails, you may need to be stitched back together. \
-			Comes with 4 charges, recharges randomly. Warranty null and void if exposed to an electromagnetic pulse."
-	item = /obj/item/storage/box/syndie_kit/syndicate_teleporter
-	cost = 8
+			Comes with a single charge, recharges randomly. Warranty null and void if exposed to an electromagnetic pulse."
+	item = /obj/item/syndicate_teleporter
+	cost = 20
 
 /datum/uplink_item/device_tools/camera_bug
 	name = "Camera Bug"
 	desc = "Enables you to view all cameras on the main network, set up motion alerts and track a target. \
 			Bugging cameras allows you to disable them remotely."
 	item = /obj/item/camera_bug
-	cost = 1
+	cost = 5
 	surplus = 90
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
-/datum/uplink_item/device_tools/military_belt
+/*/datum/uplink_item/device_tools/military_belt
 	name = "Chest Rig"
 	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
 	item = /obj/item/storage/belt/military
-	cost = 1
+	cost = 1*/
 
 /datum/uplink_item/device_tools/doorjack
 	name = "Airlock Authentication Override Card"
 	desc = "A specialized cryptographic sequencer specifically designed to override station airlock access codes. \
 			After hacking a certain number of airlocks, the device will require some time to recharge."
 	item = /obj/item/card/emag/doorjack
-	cost = 3
+	cost = 15
 
 /datum/uplink_item/device_tools/fakenucleardisk
 	name = "Decoy Nuclear Authentication Disk"
 	desc = "It's just a normal disk. Visually it's identical to the real deal, but it won't hold up under closer scrutiny by the Captain. \
 			Don't try to give this to us to complete your objective, we know better!"
 	item = /obj/item/disk/nuclear/fake
-	cost = 1
+	cost = 5
 	surplus = 1
 	illegal_tech = FALSE
 
@@ -116,7 +105,7 @@
 			You will receive the unlock code upon activating the virus, and the new uplink may be charged with \
 			telecrystals normally."
 	item = /obj/item/computer_disk/virus/frame
-	cost = 4
+	cost = 10
 	restricted = TRUE
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
@@ -131,7 +120,7 @@
 	name = "Failsafe Uplink Code"
 	desc = "When entered the uplink will self-destruct immediately."
 	item = /obj/effect/gibspawner/generic
-	cost = 1
+	cost = 5
 	surplus = 0
 	restricted = TRUE
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
@@ -158,7 +147,7 @@
 	desc = "A supicious-looking compact toolbox. It comes loaded with a full toolset, including a \
 			multitool & insulated heatproof combat gloves."
 	item = /obj/item/storage/toolbox/mini/syndicate/loaded
-	cost = 1
+	cost = 4
 	illegal_tech = FALSE
 
 /datum/uplink_item/device_tools/rad_laser
@@ -168,17 +157,17 @@
 			of humanoids. It has two settings: intensity, which controls the power of the radiation, \
 			and wavelength, which controls the delay before the effect kicks in."
 	item = /obj/item/healthanalyzer/rad_laser
-	cost = 3
+	cost = 20
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
-/datum/uplink_item/device_tools/suspiciousphone
+/*/datum/uplink_item/device_tools/suspiciousphone
 	name = "Protocol CRAB-17 Phone"
 	desc = "The Protocol CRAB-17 Phone, a phone borrowed from an unknown third party, it can be used to crash the space market, funneling the losses of the crew to your bank account.\
 	The crew can move their funds to a new banking site though, unless they HODL, in which case they deserve it."
 	item = /obj/item/suspiciousphone
 	restricted = TRUE
-	cost = 7
-	limited_stock = 1
+	cost = 45
+	limited_stock = 1*/
 
 /datum/uplink_item/device_tools/binary
 	name = "Binary Translator Key"
@@ -186,7 +175,7 @@
 			such as AI units and cyborgs, over their private binary channel. Caution should \
 			be taken while doing this, as unless they are allied with you, they are programmed to report such intrusions."
 	item = /obj/item/encryptionkey/binary
-	cost = 5
+	cost = 15
 	surplus = 75
 	restricted = TRUE
 
@@ -198,7 +187,7 @@
 			in electronic devices, subverts intended functions, and easily breaks security mechanisms. Cannot be used to open airlocks."
 	progression_minimum = 20 MINUTES
 	item = /obj/item/card/emag
-	cost = 4
+	cost = 15
 
 /datum/uplink_item/device_tools/stimpack
 	name = "Stimpack"
@@ -206,40 +195,40 @@
 			5 minutes after injection."
 	progression_minimum = 20 MINUTES
 	item = /obj/item/reagent_containers/hypospray/medipen/stimulants
-	cost = 5
+	cost = 15
 	surplus = 90
 
-/datum/uplink_item/device_tools/super_pointy_tape
+/*/datum/uplink_item/device_tools/super_pointy_tape
 	name = "Super Pointy Tape"
 	desc = "An all-purpose super pointy tape roll. The tape is built with hundreds of tiny metal needles, the roll comes with in 5 pieces. When added to items the \
 			item that was taped will embed when thrown at people. Taping people's mouthes with it will hurt them if pulled off by someone else."
 	progression_minimum = 10 MINUTES
 	item = /obj/item/stack/sticky_tape/pointy/super
-	cost = 1
+	cost = 1*/
 
 // Medium progression cost
 
-/datum/uplink_item/device_tools/hacked_module
+/*/datum/uplink_item/device_tools/hacked_module
 	name = "Hacked AI Law Upload Module"
 	desc = "When used with an upload console, this module allows you to upload priority laws to an artificial intelligence. \
 			Be careful with wording, as artificial intelligences may look for loopholes to exploit."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/ai_module/syndicate
-	cost = 4
+	cost = 4*/
 
 /datum/uplink_item/device_tools/hypnotic_flash
 	name = "Hypnotic Flash"
 	desc = "A modified flash able to hypnotize targets. If the target is not in a mentally vulnerable state, it will only confuse and pacify them temporarily."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/assembly/flash/hypnotic
-	cost = 7
+	cost = 45
 
-/datum/uplink_item/device_tools/hypnotic_grenade
+/*/datum/uplink_item/device_tools/hypnotic_grenade
 	name = "Hypnotic Grenade"
 	desc = "A modified flashbang grenade able to hypnotize targets. The sound portion of the flashbang causes hallucinations, and will allow the flash to induce a hypnotic trance to viewers."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/grenade/hypnotic
-	cost = 12
+	cost = 12*/
 
 /datum/uplink_item/device_tools/singularity_beacon
 	name = "Power Beacon"
@@ -249,7 +238,7 @@
 			sends you a small beacon that will teleport the larger beacon to your location upon activation."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/sbeacondrop
-	cost = 10
+	cost = 40
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/device_tools/powersink
@@ -259,4 +248,12 @@
 			traditional bags and boxes. Caution: Will explode if the powernet contains sufficient amounts of energy."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/powersink
-	cost = 11
+	cost = 55
+
+/datum/uplink_item/device_tools/brainwash_disk
+	name = "Brainwashing Surgery Program"
+	desc = "A disk containing the procedure to perform a brainwashing surgery, allowing you to implant an objective onto a target. \
+	Insert into an Operating Console to enable the procedure."
+	progression_minimum = 25 MINUTES
+	item = /obj/item/disk/surgery/brainwashing
+	cost = 25

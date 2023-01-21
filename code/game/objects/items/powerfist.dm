@@ -16,7 +16,7 @@
 	flags_1 = CONDUCT_1
 	attack_verb_continuous = list("whacks", "fists", "power-punches")
 	attack_verb_simple = list("whack", "fist", "power-punch")
-	force = 20
+	force = 12
 	throwforce = 10
 	throw_range = 7
 	w_class = WEIGHT_CLASS_NORMAL

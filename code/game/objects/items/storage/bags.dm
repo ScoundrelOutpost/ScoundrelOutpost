@@ -551,11 +551,12 @@
 	icon_state = "quiver"
 	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_belt.dmi'
 	worn_icon_state = "quiver"
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/bag/quiver_maint/Initialize(mapload)
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.max_slots = 14
+	atom_storage.max_slots = 7
 	atom_storage.max_total_storage = 21
 	atom_storage.numerical_stacking = FALSE
 	atom_storage.set_holdable(list(

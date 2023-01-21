@@ -13,7 +13,7 @@
 	progression_minimum = 10 MINUTES
 	desc = "A traditional clusterbang grenade with a payload consisting entirely of Syndicate soap. Useful in any scenario!"
 	item = /obj/item/grenade/clusterbuster/soap
-	cost = 3
+	cost = 15
 
 // Medium progression cost
 
@@ -24,15 +24,14 @@
 			minimum setting of 10 seconds."
 	progression_minimum = 10 MINUTES
 	item = /obj/item/grenade/c4
-	cost = 1
+	cost = 5
 
 /datum/uplink_item/explosives/c4bag
 	name = "Bag of C-4 explosives"
 	desc = "Because sometimes quantity is quality. Contains 10 C-4 plastic explosives."
 	item = /obj/item/storage/backpack/duffelbag/syndie/c4
 	progression_minimum = 20 MINUTES
-	cost = 8 //20% discount!
-	cant_discount = TRUE
+	cost = 40 //20% discount!
 
 /datum/uplink_item/explosives/x4bag
 	name = "Bag of X-4 explosives"
@@ -41,18 +40,18 @@
 			For when you want a controlled explosion that leaves a wider, deeper, hole."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/storage/backpack/duffelbag/syndie/x4
-	cost = 4
+	cost = 25
 	cant_discount = TRUE
 
-/datum/uplink_item/explosives/detomatix
+/*/datum/uplink_item/explosives/detomatix
 	name = "Detomatix disk"
 	desc = "When inserted into a tablet, this cartridge gives you four opportunities to \
 			detonate tablets of crewmembers who have their message feature enabled. \
 			The concussive effect from the explosion will knock the recipient out for a short period, and deafen them for longer."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/computer_disk/virus/detomatix
-	cost = 6
-	restricted = TRUE
+	cost = 30
+	restricted = TRUE*/
 
 /datum/uplink_item/explosives/emp
 	name = "EMP Grenades and Implanter Kit"
@@ -60,7 +59,7 @@
 			security's energy weapons and silicon lifeforms when you're in a tight spot."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/storage/box/syndie_kit/emp
-	cost = 2
+	cost = 10
 
 /datum/uplink_item/explosives/emp/New()
 	..()
@@ -73,7 +72,7 @@
 			opening the box again will trigger the detonation after the timer has elapsed. Comes with free pizza, for you or your target!"
 	progression_minimum = 30 MINUTES
 	item = /obj/item/pizzabox/bomb
-	cost = 6
+	cost = 30
 	surplus = 8
 
 /datum/uplink_item/explosives/syndicate_minibomb
@@ -82,7 +81,7 @@
 			in addition to dealing high amounts of damage to nearby personnel."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/grenade/syndieminibomb
-	cost = 3
+	cost = 15
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	limited_stock = 2
 
@@ -91,7 +90,7 @@
 	desc = "A variation of the syndicate bomb designed to produce a large EMP effect."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/sbeacondrop/emp
-	cost = 7
+	cost = 45
 
 /datum/uplink_item/explosives/syndicate_bomb/emp/New()
 	..()
@@ -110,7 +109,7 @@
 		The bomb core can be pried out and manually detonated with other explosives."
 	progression_minimum = 40 MINUTES
 	item = /obj/item/sbeacondrop/bomb
-	cost = 5
+	cost = 40
 	limited_stock = 1
 
 /datum/uplink_item/explosives/syndicate_bomb/New()

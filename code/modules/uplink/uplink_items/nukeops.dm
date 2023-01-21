@@ -3,21 +3,21 @@
 	desc = "Lean and mean: Optimized for people that want to get up close and personal. Contains the popular \
 			Bulldog shotgun, two 12g buckshot drums, and a pair of Thermal imaging goggles."
 	item = /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle
-	cost = 13 // normally 16
+	cost = 65
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/c20r
 	name = "C-20r bundle"
 	desc = "Old Faithful: The classic C-20r, bundled with two magazines and a (surplus) suppressor at discount price."
 	item = /obj/item/storage/backpack/duffelbag/syndie/c20rbundle
-	cost = 14 // normally 16
+	cost = 70
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/cyber_implants
 	name = "Cybernetic Implants Bundle"
 	desc = "A random selection of cybernetic implants. Guaranteed 5 high quality implants. Comes with an autosurgeon."
 	item = /obj/item/storage/box/cyber_implants
-	cost = 40
+	cost = 200
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/medical
@@ -25,7 +25,7 @@
 	desc = "The support specialist: Aid your fellow operatives with this medical bundle. Contains a tactical medkit, \
 			a Donksoft LMG, a box of riot darts and a pair of magboots to rescue your friends in no-gravity environments."
 	item = /obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle
-	cost = 15 // normally 20
+	cost = 75
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/sniper
@@ -34,7 +34,7 @@
 			two soporific knockout magazines, a free surplus suppressor, and a sharp-looking tactical turtleneck suit. \
 			We'll throw in a free red tie if you order NOW."
 	item = /obj/item/storage/briefcase/sniperbundle
-	cost = 20 // normally 26
+	cost = 100
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/firestarter
@@ -43,7 +43,7 @@
 			Stechkin APS machine pistol, two incendiary magazines, a minibomb and a stimulant syringe. \
 			Order NOW and comrade Boris will throw in an extra tracksuit."
 	item = /obj/item/storage/backpack/duffelbag/syndie/firestarter
-	cost = 30
+	cost = 150
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/dangerous/rawketlawnchair
@@ -51,14 +51,13 @@
 	desc = "A reusable rocket propelled grenade launcher preloaded with a low-yield 84mm HE round. \
 		Guaranteed to send your target out with a bang or your money back!"
 	item = /obj/item/gun/ballistic/rocketlauncher
-	cost = 8
-	surplus = 30
+	cost = 40
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/dangerous/pie_cannon
 	name = "Banana Cream Pie Cannon"
 	desc = "A special pie cannon for a special clown, this gadget can hold up to 20 pies and automatically fabricates one every two seconds!"
-	cost = 10
+	cost = 50
 	item = /obj/item/pneumatic_cannon/pie/selfcharge
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS
@@ -69,7 +68,7 @@
 		by bouncing them back at the ones who fired them. It can also be thrown to bounce off of people, slipping them, \
 		and returning to you even if you miss. WARNING: DO NOT ATTEMPT TO STAND ON SHIELD WHILE DEPLOYED, EVEN IF WEARING ANTI-SLIP SHOES."
 	item = /obj/item/shield/energy/bananium
-	cost = 16
+	cost = 80
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS
 
@@ -78,14 +77,14 @@
 	desc = "An energy sword that deals no damage, but will slip anyone it contacts, be it by melee attack, thrown \
 	impact, or just stepping on it. Beware friendly fire, as even anti-slip shoes will not protect against it."
 	item = /obj/item/melee/energy/sword/bananium
-	cost = 3
+	cost = 15
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/clownoppin
 	name = "Ultra Hilarious Firing Pin"
 	desc = "A firing pin that, when inserted into a gun, makes that gun only useable by clowns and clumsy people and makes that gun honk whenever anyone tries to fire it."
-	cost = 1 //much cheaper for clown ops than for clowns
+	cost = 5 //much cheaper for clown ops than for clowns
 	item = /obj/item/firing_pin/clown/ultra
 	purchasable_from = UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
@@ -93,7 +92,7 @@
 /datum/uplink_item/dangerous/clownopsuperpin
 	name = "Super Ultra Hilarious Firing Pin"
 	desc = "Like the ultra hilarious firing pin, except the gun you insert this pin into explodes when someone who isn't clumsy or a clown tries to fire it."
-	cost = 4 //much cheaper for clown ops than for clowns
+	cost = 20 //much cheaper for clown ops than for clowns
 	item = /obj/item/firing_pin/clown/ultra/selfdestruct
 	purchasable_from = UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
@@ -103,7 +102,7 @@
 	desc = "A fully-loaded semi-automatic drum-fed shotgun, complete with a secondary magazine. Compatible with all 12g rounds. Designed for close \
 			quarter anti-personnel engagements."
 	item = /obj/item/gun/ballistic/shotgun/bulldog
-	cost = 8
+	cost = 40
 	surplus = 40
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -112,7 +111,7 @@
 	desc = "A fully-loaded Scarborough Arms bullpup submachine gun. The C-20r fires .45 rounds with a \
 			24-round magazine and is compatible with suppressors."
 	item = /obj/item/gun/ballistic/automatic/c20r
-	cost = 13
+	cost = 65
 	surplus = 40
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -121,7 +120,7 @@
 	desc = "An incredibly useful personal shield projector, capable of reflecting energy projectiles and defending \
 			against other attacks. Pair with an Energy Sword for a killer combination."
 	item = /obj/item/shield/energy
-	cost = 16
+	cost = 65
 	surplus = 20
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -130,7 +129,7 @@
 	desc = "A fully-loaded Aussec Armoury belt-fed machine gun. \
 			This deadly weapon has a massive 50-round magazine of devastating 7.12x82mm ammunition."
 	item = /obj/item/gun/ballistic/automatic/l6_saw
-	cost = 18
+	cost = 90
 	surplus = 0
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -139,7 +138,7 @@
 	desc = "A fully-loaded, specialized three-round burst carbine that fires 5.56mm ammunition from a 30 round magazine \
 			with a 40mm underbarrel grenade launcher. Use secondary-fire to fire the grenade launcher."
 	item = /obj/item/gun/ballistic/automatic/m90
-	cost = 14
+	cost = 70
 	surplus = 50
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -147,7 +146,7 @@
 	name = "Sniper Rifle"
 	desc = "Ranged fury, Syndicate style. Guaranteed to cause shock and awe or your TC back!"
 	item = /obj/item/gun/ballistic/automatic/sniper_rifle/syndicate
-	cost = 16
+	cost = 80
 	surplus = 25
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -156,21 +155,21 @@
 	desc = "A small, easily concealable handgun that uses 10mm auto rounds in 8-round magazines and is compatible \
 			with suppressors."
 	item = /obj/item/gun/ballistic/automatic/pistol/clandestine
-	cost = 6
+	cost = 30
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/dangerous/surplus_smg
 	name = "Surplus SMG"
 	desc = "A horribly outdated automatic weapon. Why would you want to use this?"
 	item = /obj/item/gun/ballistic/automatic/plastikov
-	cost = 2
+	cost = 10
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/dangerous/foamsmg
 	name = "Toy Submachine Gun"
 	desc = "A fully-loaded Donksoft bullpup submachine gun that fires riot grade darts with a 20-round magazine."
 	item = /obj/item/gun/ballistic/automatic/c20r/toy
-	cost = 5
+	cost = 25
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS
 
@@ -179,7 +178,7 @@
 	desc = "A fully-loaded Donksoft belt-fed machine gun. This weapon has a massive 50-round magazine of devastating \
 			riot grade darts, that can briefly incapacitate someone in just one volley."
 	item = /obj/item/gun/ballistic/automatic/l6_saw/toy
-	cost = 10
+	cost = 50
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS
 
@@ -188,14 +187,14 @@
 	desc = "A manual that teaches a single user tactical Close-Quarters Combat before self-destructing."
 	item = /obj/item/book/granter/martial/cqc
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
-	cost = 13
+	cost = 65
 	surplus = 0
 
 /datum/uplink_item/ammo/pistol_nukeop
 	name = "10mm Handgun Magazine"
 	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol."
 	item = /obj/item/ammo_box/magazine/m10mm
-	cost = 2
+	cost = 10
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/ammo/pistolap_nukeop
@@ -203,7 +202,7 @@
 	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
 			These rounds are less effective at injuring the target but penetrate protective gear."
 	item = /obj/item/ammo_box/magazine/m10mm/ap
-	cost = 3
+	cost = 15
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/ammo/pistolhp_nukeop
@@ -211,7 +210,7 @@
 	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
 			These rounds are more damaging but ineffective against armour."
 	item = /obj/item/ammo_box/magazine/m10mm/hp
-	cost = 3
+	cost = 15
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/ammo/pistolfire_nukeop
@@ -219,18 +218,18 @@
 	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
 			Loaded with incendiary rounds which inflict less damage, but ignite the target."
 	item = /obj/item/ammo_box/magazine/m10mm/fire
-	cost = 2
+	cost = 10
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/ammo/shotgun
-	cost = 2
+	cost = 10
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/ammo/shotgun/bag
 	name = "12g Ammo Duffel Bag"
 	desc = "A duffel bag filled with enough 12g ammo to supply an entire team, at a discounted price."
 	item = /obj/item/storage/backpack/duffelbag/syndie/ammo/shotgun
-	cost = 12
+	cost = 60
 
 /datum/uplink_item/ammo/shotgun/buck
 	name = "12g Buckshot Drum"

@@ -260,7 +260,7 @@
 	contains = list()
 	crate_name = "syndicate gear crate"
 	crate_type = /obj/structure/closet/crate
-	var/crate_value = 30 ///Total TC worth of contained uplink items
+	var/crate_value = 150 ///Total TC worth of contained uplink items
 	var/uplink_flag = UPLINK_TRAITORS
 
 ///Generate assorted uplink items, taking into account the same surplus modifiers used for surplus crates

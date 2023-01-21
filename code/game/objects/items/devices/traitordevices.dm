@@ -280,6 +280,7 @@ effective or pretty fucking useless.
 	desc = "Device used to disrupt nearby radio communication."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "jammer"
+	w_class = WEIGHT_CLASS_SMALL
 	var/active = FALSE
 	var/range = 12
 
@@ -349,12 +350,13 @@ effective or pretty fucking useless.
 
 /obj/machinery/porta_turret/syndicate/toolbox
 	integrity_failure = 0
-	max_integrity = 100
+	max_integrity = 120
 	shot_delay = 0.5 SECONDS
 	stun_projectile = /obj/projectile/bullet/toolbox_turret
 	lethal_projectile = /obj/projectile/bullet/toolbox_turret
 	subsystem_type = /datum/controller/subsystem/processing/projectiles
 	ignore_faction = TRUE
+	req_access = list("impossible") // messing with the interface breaks the AI
 	/// The toolbox we store.
 	var/obj/item/toolbox
 

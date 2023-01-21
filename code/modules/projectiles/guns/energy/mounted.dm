@@ -21,6 +21,8 @@
 	force = 5
 	selfcharge = 1
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire/antique)
+	projectile_damage_multiplier = 25
 
 /obj/item/gun/energy/laser/mounted/augment
 	icon = 'icons/obj/medical/organs/organs.dmi'

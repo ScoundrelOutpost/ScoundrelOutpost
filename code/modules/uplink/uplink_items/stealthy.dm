@@ -1,4 +1,3 @@
-// File organised based on progression
 /datum/uplink_category/stealthy
 	name = "Stealthy Weapons"
 	weight = 8
@@ -6,52 +5,46 @@
 /datum/uplink_item/stealthy_weapons
 	category = /datum/uplink_category/stealthy
 
-// No progression cost
-
 /datum/uplink_item/stealthy_weapons/dart_pistol
 	name = "Dart Pistol"
 	desc = "A miniaturized version of a normal syringe gun. It is very quiet when fired and can fit into any \
 			space a small item can."
 	item = /obj/item/gun/syringe/syndicate
-	cost = 4
-	surplus = 50
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	cost = 25
+
+/datum/uplink_item/stealthy_weapons/foampistol
+	name = "Toy Pistol with Riot Darts"
+	desc = "An innocent-looking toy pistol designed to fire foam darts. Comes loaded with riot-grade \
+			darts effective at incapacitating a target."
+	item = /obj/item/gun/ballistic/automatic/pistol/toy/riot
+	cost = 5
+	surplus = 10
+	purchasable_from = ~UPLINK_NUKE_OPS
 
 /datum/uplink_item/stealthy_weapons/dehy_carp
 	name = "Dehydrated Space Carp"
 	desc = "Looks like a plush toy carp, but just add water and it becomes a real-life space carp! Activate in \
 			your hand before use so it knows not to kill you."
 	item = /obj/item/toy/plush/carpplushie/dehy_carp
-	cost = 1
+	cost = 5
 
 /datum/uplink_item/stealthy_weapons/edagger
 	name = "Energy Dagger"
 	desc = "A dagger made of energy that looks and functions as a pen when off."
 	item = /obj/item/pen/edagger
-	cost = 2
+	cost = 10
 
 /datum/uplink_item/stealthy_weapons/traitor_chem_bottle
 	name = "Poison Kit"
 	desc = "An assortment of deadly chemicals packed into a compact box. Comes with a syringe for more precise application."
 	item = /obj/item/storage/box/syndie_kit/chemical
-	cost = 6
-	surplus = 50
+	cost = 10
 
-/datum/uplink_item/stealthy_weapons/suppressor
-	name = "Suppressor"
-	desc = "A clandestine suppressor suited to a variety of weapons. It looks badass, but most operatives agree, they're nigh-completely useless in the tight corridors of a spacestation."
-	item = /obj/item/suppressor
-	cost = 0
-	limited_stock = 2
-	surplus = 10
-	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
-
-/datum/uplink_item/stealthy_weapons/holster
+/*/datum/uplink_item/stealthy_weapons/holster
 	name = "Syndicate Holster"
 	desc = "A useful little device that allows for inconspicuous carrying of guns using chameleon technology. It also allows for badass gun-spinning."
 	item = /obj/item/storage/belt/holster/chameleon
-	cost = 1
+	cost = 1*/
 
 /datum/uplink_item/stealthy_weapons/sleepy_pen
 	name = "Sleepy Pen"
@@ -60,31 +53,22 @@
 			The pen holds one dose of the mixture, and can be refilled with any chemicals. Note that before the target \
 			falls asleep, they will be able to move and act."
 	item = /obj/item/pen/sleepy
-	cost = 4
+	cost = 20
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
-// Low progression cost
-
 /datum/uplink_item/stealthy_weapons/origami_kit
-	name = "Boxed Origami Kit"
-	desc = "This box contains a guide on how to craft masterful works of origami, allowing you to transform normal pieces of paper into \
+	name = "Origami Guide"
+	desc = "A guide on how to craft masterful works of origami, allowing you to transform normal pieces of paper into \
 			perfectly aerodynamic (and potentially lethal) paper airplanes."
-	progression_minimum = 15 MINUTES
-	item = /obj/item/storage/box/syndie_kit/origami_bundle
-	cost = 14
-	surplus = 0
-	purchasable_from = ~UPLINK_NUKE_OPS //clown ops intentionally left in, because that seems like some s-tier shenanigans.
-
-
-// Medium progression cost
+	item = /obj/item/book/granter/action/origami
+	cost = 25
 
 /datum/uplink_item/stealthy_weapons/martialarts
 	name = "Martial Arts Scroll"
 	desc = "This scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat \
 			and gain the ability to swat bullets from the air, but you will also refuse to use dishonorable ranged weaponry."
 	item = /obj/item/book/granter/martial/carp
-	progression_minimum = 30 MINUTES
-	cost = 13
+	cost = 70
 	surplus = 0
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
@@ -97,10 +81,7 @@
 	slur as if inebriated. It can produce an infinite number \
 	of bolts, but takes time to automatically recharge after each shot."
 	item = /obj/item/gun/energy/recharge/ebow
-	progression_minimum = 30 MINUTES
-	cost = 10
-	surplus = 50
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	cost = 25
 
 // Scoundrel content
 /datum/uplink_item/stealthy_weapons/xrayflash
@@ -109,5 +90,14 @@
 	and ignores most forms of eye protection. Exposure to multiple flashes is known to cause lasting eye damage. \
 	Each one only has one charge. Useful for getaways or ambushes."
 	item = /obj/item/storage/pouch/tactical/xrayflash
-	cost = 2
+	cost = 10
 	limited_stock = 2
+
+/datum/uplink_item/stealthy_weapons/concealed_weapon_bay
+	name = "Concealed Weapon Bay"
+	desc = "A modification for non-combat exosuits that allows them to equip one piece of equipment designed for combat units. \
+			Attach to an exosuit with an existing equipment to disguise the bay as that equipment. The sacrificed equipment will be lost.\
+			Alternatively, you can attach the bay to an empty equipment slot, but the bay will not be concealed. Once the bay is \
+			attached, an exosuit weapon can be fitted inside."
+	item = /obj/item/mecha_parts/mecha_equipment/concealed_weapon_bay
+	cost = 15

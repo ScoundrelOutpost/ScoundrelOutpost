@@ -11,7 +11,7 @@
 	desc = "For showing that you are THE BOSS: A useless red balloon with the Syndicate logo on it. \
 			Can blow the deepest of covers."
 	item = /obj/item/toy/balloon/syndicate
-	cost = 20
+	cost = 100
 	cant_discount = TRUE
 	illegal_tech = FALSE
 
@@ -21,7 +21,7 @@
 			making them slightly more robust than a normal deck of cards. \
 			You can also play card games with them or leave them on your victims."
 	item = /obj/item/toy/cards/deck/syndicate
-	cost = 1
+	cost = 5
 	surplus = 40
 	illegal_tech = FALSE
 
@@ -29,7 +29,7 @@
 	name = "Syndicate Smokes"
 	desc = "Strong flavor, dense smoke, infused with omnizine."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
-	cost = 2
+	cost = 8
 	illegal_tech = FALSE
 
 // Low progression
@@ -40,7 +40,7 @@
 			and services at lucrative prices. The briefcase also feels a little heavier to hold; it has been \
 			manufactured to pack a little bit more of a punch if your client needs some convincing."
 	item = /obj/item/storage/secure/briefcase/syndie
-	cost = 5
+	cost = 25
 	progression_minimum = 5 MINUTES
 	restricted = TRUE
 	illegal_tech = FALSE
@@ -48,7 +48,7 @@
 // Ultra high progression
 /datum/uplink_item/badass/costumes/clown
 	name = "Clown Costume"
-	desc = "Nothing is more terrifying than clowns with fully automatic weaponry."
+	desc = "Nothing is more terrifying than clowns with fully automatic weaponry. Does not come with fully automatic weaponry."
 	item = /obj/item/storage/backpack/duffelbag/clown/syndie
 	purchasable_from = ALL
 	progression_minimum = 70 MINUTES
@@ -57,9 +57,7 @@
 	name = "Sleepy Time Pajama Bundle"
 	desc = "Even soldiers need to get a good nights rest. Comes with blood-red pajamas, a blankie, a hot mug of cocoa and a fuzzy friend."
 	item = /obj/item/storage/box/syndie_kit/sleepytime
-	purchasable_from = ALL
 	progression_minimum = 90 MINUTES
-	cost = 4
 	limited_stock = 1
 	cant_discount = TRUE
 
@@ -67,7 +65,6 @@
 	name = "Broken Chameleon Kit"
 	desc = "A set of items that contain chameleon technology allowing you to disguise as pretty much anything on the station, and more! \
 			Please note that this kit did NOT pass quality control."
-	purchasable_from = ALL
 	progression_minimum = 90 MINUTES
 	item = /obj/item/storage/box/syndie_kit/chameleon/broken
 
@@ -75,6 +72,5 @@
 	name = "CentCom Official Costume"
 	desc = "Ask the crew to \"inspect\" their nuclear disk and weapons system, and then when they decline, pull out a fully automatic rifle and gun down the Captain. \
 			Radio headset does not include encryption key. No gun included."
-	purchasable_from = ALL
 	progression_minimum = 110 MINUTES
 	item = /obj/item/storage/box/syndie_kit/centcom_costume

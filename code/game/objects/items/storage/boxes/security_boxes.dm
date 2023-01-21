@@ -318,3 +318,13 @@
 	..()
 	for(var/i in 1 to 7)
 		new /obj/item/restraints/legcuffs/bola/energy(src)
+
+/obj/item/storage/box/r_bolas
+	name = "reinforced bola box"
+	desc = "A box labeled to contain reinforced bolas."
+	icon_state = "syndiebox"
+
+/obj/item/storage/box/r_bolas/PopulateContents()
+	..()
+	for(var/i in 1 to 7)
+		new /obj/item/restraints/legcuffs/bola/tactical(src)

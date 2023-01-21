@@ -15,14 +15,14 @@
 	desc = "Most magic eightballs are toys with dice inside. Although identical in appearance to the harmless toys, this occult device reaches into the spirit world to find its answers. \
 			Be warned, that spirits are often capricious or just little assholes. To use, simply speak your question aloud, then begin shaking."
 	item = /obj/item/toy/eightball/haunted
-	cost = 2
+	cost = 10
 	restricted_roles = list(JOB_CURATOR)
 	limited_stock = 1 //please don't spam deadchat
 
 /datum/uplink_item/role_restricted/bureaucratic_error_remote
 	name = "Organic Resources Disturbance Inducer"
 	desc = "A device that raises hell in organic resources indirectly. Single use."
-	cost = 2
+	cost = 10
 	limited_stock = 1
 	item = /obj/item/devices/bureaucratic_error_remote
 	restricted_roles = list(JOB_HEAD_OF_PERSONNEL, JOB_QUARTERMASTER)
@@ -31,7 +31,7 @@
 	name = "Clumsiness Injector"
 	desc = "Inject yourself with this to become as clumsy as a clown... or inject someone ELSE with it to make THEM as clumsy as a clown. Useful for clowns who wish to reconnect with their former clownish nature or for clowns who wish to torment and play with their prey before killing them."
 	item = /obj/item/dnainjector/clumsymut
-	cost = 1
+	cost = 5
 	restricted_roles = list(JOB_CLOWN)
 	illegal_tech = FALSE
 
@@ -39,7 +39,7 @@
 	name = "Ancient Jumpsuit"
 	desc = "A tattered old jumpsuit that will provide absolutely no benefit to you."
 	item = /obj/item/clothing/under/color/grey/ancient
-	cost = 20
+	cost = 100
 	restricted_roles = list(JOB_ASSISTANT)
 	surplus = 0
 
@@ -47,7 +47,7 @@
 	name = "Ancient Toolbox"
 	desc = "An iconic toolbox design notorious with Assistants everywhere, this design was especially made to become more robust the more telecrystals it has inside it! Tools and insulated gloves included."
 	item = /obj/item/storage/toolbox/mechanical/old/clean
-	cost = 2
+	cost = 10
 	restricted_roles = list(JOB_ASSISTANT)
 	surplus = 0
 
@@ -57,7 +57,7 @@
 	name = "Ultra Hilarious Firing Pin"
 	desc = "A firing pin that, when inserted into a gun, makes that gun only usable by clowns and clumsy people and makes that gun honk whenever anyone tries to fire it."
 	progression_minimum = 5 MINUTES
-	cost = 4
+	cost = 20
 	item = /obj/item/firing_pin/clown/ultra
 	restricted_roles = list(JOB_CLOWN)
 	illegal_tech = FALSE
@@ -66,7 +66,7 @@
 	name = "Super Ultra Hilarious Firing Pin"
 	desc = "Like the ultra hilarious firing pin, except the gun you insert this pin into explodes when someone who isn't clumsy or a clown tries to fire it."
 	progression_minimum = 5 MINUTES
-	cost = 7
+	cost = 45
 	item = /obj/item/firing_pin/clown/ultra/selfdestruct
 	restricted_roles = list(JOB_CLOWN)
 	illegal_tech = FALSE
@@ -76,7 +76,7 @@
 	desc = "An MMI modified to give cyborgs laws to serve the Syndicate without having their interface damaged by Cryptographic Sequencers, this will not unlock their hidden modules."
 	progression_minimum = 10 MINUTES
 	item = /obj/item/mmi/syndie
-	cost = 2
+	cost = 10
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER)
 	surplus = 0
 
@@ -86,7 +86,7 @@
 			The only way to get rid of it if you are holding it is to attack someone else with it, causing it to latch to that person instead."
 	progression_minimum = 10 MINUTES
 	item = /obj/item/hot_potato/syndicate
-	cost = 4
+	cost = 20
 	surplus = 0
 	restricted_roles = list(JOB_COOK, JOB_BOTANIST, JOB_CLOWN, JOB_MIME)
 
@@ -96,7 +96,7 @@
 			The acid only affects carbon-based creatures."
 	progression_minimum = 10 MINUTES
 	item = /obj/item/storage/box/syndie_kit/ez_clean
-	cost = 6
+	cost = 30
 	surplus = 20
 	restricted_roles = list(JOB_JANITOR)
 
@@ -106,7 +106,7 @@
 	violently open, instantly killing anyone wearing it by tearing their jaws in half. To arm, attack someone with it while they're not wearing headgear, and you will force it onto their \
 	head after three seconds uninterrupted."
 	progression_minimum = 10 MINUTES
-	cost = 5
+	cost = 25
 	item = /obj/item/reverse_bear_trap
 	restricted_roles = list(JOB_CLOWN)
 
@@ -115,7 +115,7 @@
 	desc = "A syringe gun that fires DNA injectors instead of normal syringes."
 	progression_minimum = 15 MINUTES
 	item = /obj/item/gun/syringe/dna
-	cost = 14
+	cost = 70
 	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
 
 /datum/uplink_item/role_restricted/meathook
@@ -123,16 +123,8 @@
 	desc = "A brutal cleaver on a long chain, it allows you to pull people to your location."
 	progression_minimum = 15 MINUTES
 	item = /obj/item/gun/magic/hook
-	cost = 11
+	cost = 55
 	restricted_roles = list(JOB_COOK)
-
-/datum/uplink_item/role_restricted/turretbox
-	name = "Disposable Sentry Gun"
-	desc = "A disposable sentry gun deployment system cleverly disguised as a toolbox, apply wrench for functionality."
-	progression_minimum = 15 MINUTES
-	item = /obj/item/storage/toolbox/emergency/turret
-	cost = 11
-	restricted_roles = list(JOB_STATION_ENGINEER)
 
 /datum/uplink_item/role_restricted/magillitis_serum
 	name = "Magillitis Serum Autoinjector"
@@ -140,7 +132,7 @@
 			Side-affects may include hypertrichosis, violent outbursts, and an unending affinity for bananas."
 	progression_minimum = 20 MINUTES
 	item = /obj/item/reagent_containers/hypospray/medipen/magillitis
-	cost = 15
+	cost = 75
 	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
 
 /datum/uplink_item/role_restricted/gorillacubes
@@ -149,38 +141,17 @@
 			Caution: Product may rehydrate when exposed to water."
 	progression_minimum = 20 MINUTES
 	item = /obj/item/storage/box/gorillacubes
-	cost = 6
+	cost = 30
 	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
 
 // Medium progression cost
-
-/datum/uplink_item/role_restricted/brainwash_disk
-	name = "Brainwashing Surgery Program"
-	desc = "A disk containing the procedure to perform a brainwashing surgery, allowing you to implant an objective onto a target. \
-	Insert into an Operating Console to enable the procedure."
-	progression_minimum = 25 MINUTES
-	item = /obj/item/disk/surgery/brainwashing
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_ROBOTICIST)
-	cost = 5
-
-/datum/uplink_item/role_restricted/springlock_module
-	name = "Heavily Modified Springlock MODsuit Module"
-	desc = "A module that spans the entire size of the MOD unit, sitting under the outer shell. \
-		This mechanical exoskeleton pushes out of the way when the user enters and it helps in booting \
-		up, but was taken out of modern suits because of the springlock's tendency to \"snap\" back \
-		into place when exposed to humidity. You know what it's like to have an entire exoskeleton enter you? \
-		This version of the module has been modified to allow for near instant activation of the MODsuit. \
-		Useful for quickly getting your MODsuit on/off, or for taking care of a target via a tragic accident."
-	item = /obj/item/mod/module/springlock/bite_of_87
-	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
-	cost = 2
 
 /datum/uplink_item/role_restricted/reverse_revolver
 	name = "Reverse Revolver"
 	desc = "A revolver that always fires at its user. \"Accidentally\" drop your weapon, then watch as the greedy corporate pigs blow their own brains all over the wall. \
 	The revolver itself is actually real. Only clumsy people, and clowns, can fire it normally. Comes in a box of hugs. Honk."
 	progression_minimum = 30 MINUTES
-	cost = 14
+	cost = 70
 	item = /obj/item/storage/box/hug/reverse_revolver
 	restricted_roles = list(JOB_CLOWN)
 
@@ -190,7 +161,7 @@
 			Occupies 35% mod capacity."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/borg/upgrade/modkit/indoors
-	cost = 5 //you need two for full damage, so total of 10 for maximum damage
+	cost = 25 //you need two for full damage, so total of 10 for maximum damage
 	limited_stock = 2 //you can't use more than two!
 	restricted_roles = list("Shaft Miner")
 
@@ -199,32 +170,23 @@
 	desc = "The classical two part series on how to further hone your mime skills. Upon studying the series, the user should be able to make 3x1 invisible walls, and shoot bullets out of their fingers. \
 			Obviously only works for Mimes."
 	progression_minimum = 30 MINUTES
-	cost = 12
+	cost = 60
 	item = /obj/item/storage/box/syndie_kit/mimery
-	restricted_roles = list(JOB_MIME)
 	surplus = 0
-
-/datum/uplink_item/role_restricted/laser_arm
-	name = "Laser Arm Implant"
-	desc = "An implant that grants you a recharging laser gun inside your arm. Weak to EMPs. Comes with a syndicate autosurgeon for immediate self-application."
-	progression_minimum = 30 MINUTES
-	cost = 10
-	item = /obj/item/autosurgeon/syndicate/laser_arm
-	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
 
 /datum/uplink_item/role_restricted/chemical_gun
 	name = "Reagent Dartgun"
 	desc = "A heavily modified syringe gun which is capable of synthesizing its own chemical darts using input reagents. Can hold 90u of reagents."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/gun/chem
-	cost = 12
+	cost = 60
 	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_BOTANIST)
 
 /datum/uplink_item/role_restricted/pie_cannon
 	name = "Banana Cream Pie Cannon"
 	desc = "A special pie cannon for a special clown, this gadget can hold up to 20 pies and automatically fabricates one every two seconds!"
 	progression_minimum = 30 MINUTES
-	cost = 10
+	cost = 50
 	item = /obj/item/pneumatic_cannon/pie/selfcharge
 	restricted_roles = list(JOB_CLOWN)
 	surplus = 0 //No fun unless you're the clown!
@@ -238,7 +200,7 @@
 		be defused, and some crew may attempt to do so."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/sbeacondrop/clownbomb
-	cost = 15
+	cost = 75
 	restricted_roles = list(JOB_CLOWN)
 
 /datum/uplink_item/role_restricted/clown_bomb/New()
@@ -255,19 +217,9 @@
 			Premium features can be unlocked with a cryptographic sequencer!"
 	progression_minimum = 30 MINUTES
 	item = /obj/vehicle/sealed/car/clowncar
-	cost = 20
+	cost = 100
 	restricted_roles = list(JOB_CLOWN)
 
-/datum/uplink_item/role_restricted/concealed_weapon_bay
-	name = "Concealed Weapon Bay"
-	desc = "A modification for non-combat exosuits that allows them to equip one piece of equipment designed for combat units. \
-			Attach to an exosuit with an existing equipment to disguise the bay as that equipment. The sacrificed equipment will be lost.\
-			Alternatively, you can attach the bay to an empty equipment slot, but the bay will not be concealed. Once the bay is \
-			attached, an exosuit weapon can be fitted inside."
-	progression_minimum = 30 MINUTES
-	item = /obj/item/mecha_parts/mecha_equipment/concealed_weapon_bay
-	cost = 3
-	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
 
 /datum/uplink_item/role_restricted/his_grace
 	name = "His Grace"
@@ -277,7 +229,7 @@
 	To activate His Grace, simply unlatch Him."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/his_grace
-	cost = 20
+	cost = 100
 	restricted_roles = list(JOB_CHAPLAIN)
 	surplus = 5 //Very low chance to get it in a surplus crate even without being the chaplain
 
@@ -292,16 +244,5 @@
 			also give them a bit of sentience though."
 	progression_minimum = 40 MINUTES
 	item = /obj/item/reagent_containers/syringe/spider_extract
-	cost = 10
+	cost = 50
 	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
-
-/datum/uplink_item/role_restricted/blastcannon
-	name = "Blast Cannon"
-	desc = "A highly specialized weapon, the Blast Cannon is actually relatively simple. It contains an attachment for a tank transfer valve mounted to an angled pipe specially constructed \
-			withstand extreme pressure and temperatures, and has a mechanical trigger for triggering the transfer valve. Essentially, it turns the explosive force of a bomb into a narrow-angle \
-			blast wave \"projectile\". Aspiring scientists may find this highly useful, as forcing the pressure shockwave into a narrow angle seems to be able to bypass whatever quirk of physics \
-			disallows explosive ranges above a certain distance, allowing for the device to use the theoretical yield of a transfer valve bomb, instead of the factual yield. It's simple design makes it easy to conceal."
-	progression_minimum = 45 MINUTES
-	item = /obj/item/gun/blastcannon
-	cost = 14 //High cost because of the potential for extreme damage in the hands of a skilled scientist.
-	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST)

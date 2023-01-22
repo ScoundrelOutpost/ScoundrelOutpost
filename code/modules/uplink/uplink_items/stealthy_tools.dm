@@ -34,7 +34,7 @@
 	cost = 45
 
 /datum/uplink_item/stealthy_tools/codespeak_manual
-	name = "Codespeak Manual"
+	name = "Backup Codespeak Manual"
 	desc = "Syndicate agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
 			This manual teaches you this Codespeak. You can also hit someone else with the manual in order to teach them. Can only be used once."
 	item = /obj/item/language_manual/codespeak_manual
@@ -43,10 +43,10 @@
 /datum/uplink_item/stealthy_tools/emplight
 	name = "EMP Flashlight"
 	desc = "A small, self-recharging, short-ranged EMP device disguised as a working flashlight. \
-			Useful for disrupting headsets, cameras, doors, lockers and borgs during stealth operations. \
+			Useful for disrupting headsets, cameras, doors, lockers, borgs and shields during stealth operations. \
 			Attacking a target with this flashlight will direct an EM pulse at it and consumes a charge."
 	item = /obj/item/flashlight/emp
-	cost = 20
+	cost = 15
 
 /datum/uplink_item/stealthy_tools/emplight/New()
 	..()
@@ -82,7 +82,7 @@
 	desc = "These shoes will allow the wearer to run on wet floors and slippery objects without falling down. \
 			They do not work on heavily lubricated surfaces."
 	item = /obj/item/clothing/shoes/chameleon/noslip
-	cost = 15
+	cost = 20
 
 /datum/uplink_item/stealthy_tools/telecomm_blackout
 	name = "Disable Telecomms"

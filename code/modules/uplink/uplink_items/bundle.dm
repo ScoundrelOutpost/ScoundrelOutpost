@@ -10,7 +10,7 @@
 
 /datum/uplink_item/bundles_tc/random
 	name = "Random Item"
-	desc = "Picking this will purchase a random item. Useful if you have some TC to spare or if you haven't decided on a strategy yet."
+	desc = "Picking this will purchase a random item you can afford. Not recommended for beginners."
 	item = /obj/effect/gibspawner/generic // non-tangible item because techwebs use this path to determine illegal tech
 	cost = 0
 	cost_override_string = "Varies"
@@ -65,14 +65,66 @@
 	cost = 100
 
 
+// bundles
+/datum/uplink_category/loadout
+	name = "Loadouts"
+	weight = 0
+
+/datum/uplink_item/loadout
+	category = /datum/uplink_category/loadout
+	surplus = 0
+	cant_discount = TRUE
+	restricted = TRUE
+	limited_stock = 1
+	illegal_tech = FALSE
+	cost = TELECRYSTALS_DEFAULT // all of em
+
+/datum/uplink_item/loadout/skirmisher
+	name = "Skirmisher Kit"
+	desc = "A ready-assembled loadout suited to evasive, skirmish-focused combat methods. Not recommended for beginners. Comes loaded with: \
+	Agent pistol, 9mm ammo, a single adrenal, no-slip shoes, a brick of c4, a mini energy crossbow and an advanced personal shield."
+	item = /obj/item/storage/toolbox/loadout/skirmisher
+
+/datum/uplink_item/loadout/saboteur
+	name = "Saboteur Kit"
+	desc = "A ready-assembled loadout suited to sabotage and indirect harassment. Comes loaded with: \
+	A sleepy pen, an energy dagger, an EMP kit, a storage implant, two dehydrated carp, two bricks of c4, and a stealthy pouch."
+	item = /obj/item/storage/toolbox/loadout/saboteur
+
+/datum/uplink_item/loadout/sleepingcarp
+	name = "Gnashing Shark Kit"
+	desc = "A ready-assembled loadout suited to a fearless approach to combat. Not recommended for beginners. Comes loaded with: \
+	A Sleeping Carp martial arts scroll, an experimental personal shield, a dehydrated carp, and a highly mobile, spaceproof carp suit."
+	item = /obj/item/storage/toolbox/loadout/sleepingcarp
+
+/datum/uplink_item/loadout/bomber
+	name = "Bomber Kit"
+	desc = "A ready-assembled loadout that doesn't overcomplicate things. Comes loaded with: \
+	A compact x4 duffelbag, a stealthy pouch, two minibombs, four bricks of c4, and a full-sized bomb."
+	item = /obj/item/storage/toolbox/loadout/bomber
+
+/datum/uplink_item/loadout/stealth
+	name = "Stealth Kit"
+	desc = "A ready-assembled loadout that prioritizes disguise and evasion. Comes loaded with: \
+	An experimental hand-teleporter, a stealth implant, an infiltrator suit, a mini-toolbox with stealth tools, some syndicate soap, \
+	a doorjack, and a pouch of x-ray flashes."
+	item = /obj/item/storage/toolbox/loadout/stealth
+
+/datum/uplink_item/loadout/executive
+	name = "Executive Kit"
+	desc = "A ready-assembled loadout with the means to buy anything with a pricetag. Comes loaded with: \
+	A storage implant, an executive pistol, two laser-minislug pouches, a briefcase launchpad, and fifteen-thousand credits in unmarked bills."
+	item = /obj/item/storage/toolbox/loadout/executive
+
 // freedbies
 /datum/uplink_category/freebies
 	name = "Standard Equipment"
-	weight = 10
+	weight = 2
 /datum/uplink_item/freebies
 	category = /datum/uplink_category/freebies
 	surplus = 0
 	cant_discount = TRUE
+	illegal_tech = FALSE
 
 /datum/uplink_item/freebies/encryptionkey
 	name = "Syndicate Encryption Key"
@@ -120,3 +172,13 @@
 	cost = 0
 	limited_stock = 2
 	illegal_tech = FALSE
+
+/datum/uplink_item/freebies/camera_bug
+	name = "Camera Bug"
+	desc = "Enables you to view all cameras on the main network, set up motion alerts and track a target. \
+			Bugging cameras allows you to disable them remotely."
+	item = /obj/item/camera_bug
+	cost = 0
+	limited_stock = 1
+	illegal_tech = FALSE
+	surplus = 25

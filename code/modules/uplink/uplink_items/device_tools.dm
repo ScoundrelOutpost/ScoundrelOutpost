@@ -41,7 +41,7 @@
 			emitted as heat and light by objects. Hotter objects, such as warm bodies, cybernetic organisms \
 			and artificial intelligence cores emit more of this light than cooler objects like walls and airlocks."
 	item = /obj/item/clothing/glasses/thermal/syndi
-	cost = 30
+	cost = 40
 
 /datum/uplink_item/device_tools/cutouts
 	name = "Adaptive Cardboard Cutouts"
@@ -68,14 +68,6 @@
 	item = /obj/item/syndicate_teleporter
 	cost = 20
 
-/datum/uplink_item/device_tools/camera_bug
-	name = "Camera Bug"
-	desc = "Enables you to view all cameras on the main network, set up motion alerts and track a target. \
-			Bugging cameras allows you to disable them remotely."
-	item = /obj/item/camera_bug
-	cost = 5
-	surplus = 90
-
 /*/datum/uplink_item/device_tools/military_belt
 	name = "Chest Rig"
 	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
@@ -83,11 +75,11 @@
 	cost = 1*/
 
 /datum/uplink_item/device_tools/doorjack
-	name = "Airlock Authentication Override Card"
+	name = "Doorjack"
 	desc = "A specialized cryptographic sequencer specifically designed to override station airlock access codes. \
 			After hacking a certain number of airlocks, the device will require some time to recharge."
 	item = /obj/item/card/emag/doorjack
-	cost = 15
+	cost = 10
 
 /datum/uplink_item/device_tools/fakenucleardisk
 	name = "Decoy Nuclear Authentication Disk"
@@ -147,7 +139,7 @@
 	desc = "A supicious-looking compact toolbox. It comes loaded with a full toolset, including a \
 			multitool & insulated heatproof combat gloves."
 	item = /obj/item/storage/toolbox/mini/syndicate/loaded
-	cost = 4
+	cost = 5
 	illegal_tech = FALSE
 
 /datum/uplink_item/device_tools/rad_laser

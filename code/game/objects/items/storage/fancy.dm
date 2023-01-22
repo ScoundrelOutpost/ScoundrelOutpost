@@ -392,6 +392,11 @@
 	spawn_type = /obj/item/ammo_casing/a357
 	is_quickdraw = FALSE
 	item_flags = EXAMINE_SKIP
+	
+/obj/item/storage/fancy/cigarettes/cigpack_robust/derringer/Initialize(mapload)
+	. = ..()
+	atom_storage.silent = TRUE
+	atom_storage.rustle_sound = FALSE
 
 /obj/item/storage/fancy/cigarettes/cigpack_carp/e_derringer
 	worn_icon_state = "empty"
@@ -400,6 +405,11 @@
 	spawn_type = /obj/item/ammo_casing/minislug
 	is_quickdraw = FALSE
 	item_flags = EXAMINE_SKIP
+
+/obj/item/storage/fancy/cigarettes/cigpack_carp/e_derringer/Initialize(mapload)
+	. = ..()
+	atom_storage.silent = TRUE
+	atom_storage.rustle_sound = FALSE
 
 /////////////
 //CIGAR BOX//

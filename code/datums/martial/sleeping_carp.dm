@@ -51,7 +51,7 @@
 	D.visible_message(span_danger("[A] [atk_verb]s [D]!"), \
 					span_userdanger("[A] [atk_verb]s you!"), null, null, A)
 	to_chat(A, span_danger("You [atk_verb] [D]!"))
-	playsound(get_turf(D), 'sound/weapons/bite.ogg', 75, TRUE, -1)
+	playsound(get_turf(D), 'sound/weapons/bite.ogg', 100, TRUE, -1)
 	log_combat(A, D, "strong punched (Sleeping Carp)")
 	D.apply_damage(22, A.get_attack_type(), affecting)
 	return
@@ -71,7 +71,7 @@
 			D.visible_message("<span class='danger'>[A] snatches [stuff_in_hand] out of the air as it leaves [D]'s hand!</span>", \
 				"<span class='userdanger'>[A] snatches [stuff_in_hand] out of the air!</span>", "<span class='hear'>You hear aggressive shuffling!</span>", COMBAT_MESSAGE_RANGE, A)
 			to_chat(A, "<span class='danger'>You expertly catch [stuff_in_hand] as it leaves [D]'s hand.</span>")
-	D.Paralyze(0.5 SECONDS)
+	D.Paralyze(0.2 SECONDS)
 	D.throw_at(throw_target, 7, 2, A)
 	D.apply_damage(12, A.get_attack_type(), BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
 	log_combat(A, D, "launchkicked (Sleeping Carp)")
@@ -181,13 +181,14 @@
 	set category = "Sleeping Carp"
 
 	to_chat(usr, "<b><i>You retreat inward and recall the teachings of the Sleeping Carp...</i></b>\n\
-	[span_notice("Gnashing Teeth")]: Punch Punch. Deal additional damage every second (consecutive) punch!\n\
-	[span_notice("Crashing Wave Kick")]: Punch Shove. Launch your opponent away from you with incredible force!\n\
-	[span_notice("Keelhaul")]: Punch Grab. Kick an opponent to the floor, knocking them down! If your opponent is already prone, this move will disarm them and deal additional stamina damage to them.\n\
-	<span class='notice'>While in throw mode (and not stunned, not a hulk, and not in a mech), you can reflect all projectiles that come your way, sending them back at the people who fired them! \
-	Also, you are more resilient against suffering wounds in combat, and your limbs cannot be dismembered. This grants you extra staying power during extended combat, especially against slashing and other bleeding weapons. \
-	You are not invincible, however- while you may not suffer debilitating wounds often, you must still watch your health and should have appropriate medical supplies for use during downtime. \
-	In addition, your training has imbued you with a loathing of guns, and you can no longer use them.</span>")
+	[span_notice("Gnashing Teeth")]: Punch Punch. Unleash primal fury, dealing critical damage!\n\
+	[span_notice("Crashing Wave Kick")]: Punch Shove. Launch your opponent away from you with incredible force, and snatch whatever they were holding!\n\
+	[span_notice("Keelhaul")]: Punch Grab. Kick an opponent to the floor, knocking them down!\n\
+	While in throw mode, you can deflect projectiles shot from guns! \
+	\n\
+	Additionally, your body has been hardened against wound statuses. This does not effect the raw damage you take. \
+	\n\
+	[span_notice("Simply shoving someone while they're holding a firearm will attempt to snatch it out of their hand!")]")
 
 
 /obj/item/staff/bostaff

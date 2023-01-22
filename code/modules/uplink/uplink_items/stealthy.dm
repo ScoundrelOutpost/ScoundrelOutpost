@@ -64,9 +64,10 @@
 	cost = 25
 
 /datum/uplink_item/stealthy_weapons/martialarts
-	name = "Martial Arts Scroll"
-	desc = "This scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat \
-			and gain the ability to swat bullets from the air, but you will also refuse to use dishonorable ranged weaponry."
+	name = "Sleeping Carp Scroll"
+	desc = "This scroll contains the secrets of an ancient martial arts technique. With this, you'll become a master of \
+	unarmed combat, with the ability to deflect projectiles with your bare hands. The strict mental training \
+	makes it impossible to partake in the use of guns or similar ranged weapons."
 	item = /obj/item/book/granter/martial/carp
 	cost = 70
 	surplus = 0

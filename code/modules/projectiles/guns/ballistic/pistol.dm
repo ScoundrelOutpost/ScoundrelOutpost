@@ -24,7 +24,7 @@
 	bolt_wording = "slide"
 	suppressor_x_offset = 10
 	suppressor_y_offset = -1
-	projectile_damage_multiplier = 30
+	projectile_damage_multiplier = 25
 
 /obj/item/gun/ballistic/automatic/pistol/no_mag
 	spawnwithmagazine = FALSE
@@ -43,6 +43,8 @@
 	icon_state = "pistol_evil"
 	mag_type = /obj/item/ammo_box/magazine/m10mm
 	suppressor_x_offset = 12
+
+	projectile_damage_multiplier = 30
 
 /obj/item/gun/ballistic/automatic/pistol/m1911
 	name = "\improper M1911"

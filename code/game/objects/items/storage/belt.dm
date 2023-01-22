@@ -715,6 +715,7 @@
 	icon_state = "bandolier"
 	inhand_icon_state = "bandolier"
 	worn_icon_state = "bandolier"
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/belt/bandolier/Initialize(mapload)
 	. = ..()
@@ -725,6 +726,12 @@
 		/obj/item/ammo_casing/a762,
 		/obj/item/ammo_casing/shotgun,
 		))
+
+/obj/item/storage/belt/bandolier/lethal/PopulateContents()
+	for(var/i in 1 to 15)
+		new /obj/item/ammo_casing/shotgun/buckshot(src)
+	for(var/i in 1 to 15)
+		new /obj/item/ammo_casing/shotgun(src)
 
 /obj/item/storage/belt/fannypack
 	name = "fannypack"

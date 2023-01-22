@@ -424,7 +424,47 @@
 	new /obj/item/clothing/shoes/laceup(src)
 	for(var/i in 1 to 15)
 		new /obj/item/stack/spacecash/c1000(src)
-	
+
+// brutal kit
+/obj/item/storage/toolbox/loadout/brutal/PopulateContents()
+	new /obj/item/melee/tonfa/esword(src)
+	new /obj/item/gun/ballistic/revolver(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/storage/pouch/bullet/ammo_357(src)
+	new /obj/item/flashlight/emp(src)
+	new /obj/item/storage/box/r_bolas(src)
+	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
+
+// hitman kit
+/obj/item/storage/toolbox/loadout/hitman/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol(src)
+	new /obj/item/clothing/glasses/thermal/syndi(src)
+	new /obj/item/storage/box/syndie_kit/imp_adrenal(src)
+	new /obj/item/storage/pouch/tactical/ammo_9mm(src)
+	new /obj/item/storage/pouch/tactical/ammo_9mm_fire(src)
+
+// slippery kit
+/obj/item/storage/toolbox/loadout/slippery/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/c20r/toy/unrestricted/riot(src)
+	new /obj/item/pen/edagger(src)
+	new /obj/item/ammo_box/foambox/riot(src)
+	new /obj/item/ammo_box/foambox/riot(src)
+	new /obj/item/clothing/shoes/chameleon/noslip(src)
+	new /obj/item/grenade/clusterbuster/soap(src)
+	new /obj/item/grenade/clusterbuster/soap(src)
+	new /obj/item/grenade/clusterbuster/soap(src)
+	new /obj/item/storage/toolbox/emergency/turret(src)
+
+// operative kit
+/obj/item/storage/toolbox/loadout/operative/PopulateContents()
+	new /obj/item/storage/toolbox/syndicatehardsuit(src)
+	new /obj/item/clothing/mask/gas/syndicate(src)
+	new /obj/item/gun/ballistic/shotgun/bulldog/unrestricted(src)
+	new /obj/item/storage/belt/bandolier/lethal(src)
+	new /obj/item/card/emag/doorjack(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/implanter/explosive(src)
+
 // mini toolboxes
 
 /obj/item/storage/toolbox/mini

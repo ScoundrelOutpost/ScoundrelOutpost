@@ -29,7 +29,7 @@
 	name = "Syndicate Smokes"
 	desc = "Strong flavor, dense smoke, infused with omnizine."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
-	cost = 8
+	cost = 5
 	illegal_tech = FALSE
 
 // Low progression

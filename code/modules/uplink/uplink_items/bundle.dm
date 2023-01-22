@@ -82,7 +82,8 @@
 /datum/uplink_item/loadout/skirmisher
 	name = "Skirmisher Kit"
 	desc = "A ready-assembled loadout suited to evasive, skirmish-focused combat methods. Not recommended for beginners. Comes loaded with: \
-	Agent pistol, 9mm ammo, a single adrenal, no-slip shoes, a brick of c4, a mini energy crossbow and an advanced personal shield."
+	Agent pistol, 9mm ammo, a single adrenal, no-slip shoes, a brick of c4, a mini energy crossbow and an advanced personal shield. \
+	Not recommended for beginners."
 	item = /obj/item/storage/toolbox/loadout/skirmisher
 
 /datum/uplink_item/loadout/saboteur
@@ -93,8 +94,9 @@
 
 /datum/uplink_item/loadout/sleepingcarp
 	name = "Gnashing Shark Kit"
-	desc = "A ready-assembled loadout suited to a fearless approach to combat. Not recommended for beginners. Comes loaded with: \
-	A Sleeping Carp martial arts scroll, an experimental personal shield, a dehydrated carp, and a highly mobile, spaceproof carp suit."
+	desc = "A ready-assembled loadout suited to a fearless approach to combat. Comes loaded with: \
+	A Sleeping Carp martial arts scroll, an experimental personal shield, a dehydrated carp, and a highly mobile, spaceproof carp suit. \
+	Not recommended for beginners."
 	item = /obj/item/storage/toolbox/loadout/sleepingcarp
 
 /datum/uplink_item/loadout/bomber
@@ -115,6 +117,33 @@
 	desc = "A ready-assembled loadout with the means to buy anything with a pricetag. Comes loaded with: \
 	A storage implant, an executive pistol, two laser-minislug pouches, a briefcase launchpad, and fifteen-thousand credits in unmarked bills."
 	item = /obj/item/storage/toolbox/loadout/executive
+
+/datum/uplink_item/loadout/brutal
+	name = "Brutal Kit"
+	desc = "A ready-assembled loadout suited to a viciously straightforward approach. Comes loaded with: \
+	A plasma blade, a 357 revolver, a 357 speedloader and ammo-pouch, a box of reinforced bolas, and an EMP flashlight."
+	item = /obj/item/storage/toolbox/loadout/brutal
+
+/datum/uplink_item/loadout/hitman
+	name = "Hitman Kit"
+	desc = "A ready-assembled loadout suited to well-timed strikes. Comes loaded with: \
+	An agent pistol, a pair of thermal glasses, an adrenal implant, a 9mm ammo-pouch, and a 9mm incendiary ammo-pouch. \
+	Not recommended for beginners."
+	item = /obj/item/storage/toolbox/loadout/hitman
+
+/datum/uplink_item/loadout/slippery
+	name = "Slippery Kit"
+	desc = "A ready-assembled loadout for raising slippery hell. Comes loaded with: \
+	A toy SMG loaded with riot darts, two extra boxes of riot darts, an energy dagger, some no-slip shoes, three soap clusterbangs, \
+	and a disposable sentry gun."
+	item = /obj/item/storage/toolbox/loadout/slippery
+
+/datum/uplink_item/loadout/operative
+	name = "Operative Kit"
+	desc = "A ready-assembled loadout suited to aggressive space combat. Comes loaded with: \
+	A syndicate hardsuit & jetpack, a bulldog shotgun, a bandolier loaded with lethal shells, \
+	a doorjack, a brick of c4, and a microbomb implant."
+	item = /obj/item/storage/toolbox/loadout/operative
 
 // freedbies
 /datum/uplink_category/freebies

@@ -1,4 +1,5 @@
 /obj/item/book/granter/action/spell
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/book/granter/action/spell/Initialize(mapload)
 	. = ..()
@@ -91,3 +92,24 @@
 
 	granted_action = pick(spell_options)
 	action_name = lowertext(initial(granted_action.name))
+
+// scoundrel content
+/obj/item/book/granter/action/spell/shadow_walk
+	granted_action = /datum/action/cooldown/spell/jaunt/shadow_walk
+	action_name = "shadow walk"
+	icon_state ="book1"
+	desc = "An unmarked black tome. What's the worst that could happen?"
+	remarks = list(
+		"...Light is just an illusion?",
+		"...Refraction form...",
+		"...Through shards of glass...",
+		"...Think yourself away...",
+		"...It's about the geometry of space...",
+		"...Slip through the cracks...",
+	)
+
+/obj/item/book/granter/action/spell/smoke/robeless
+	granted_action = /datum/action/cooldown/spell/smoke/robeless
+
+/obj/item/book/granter/action/spell/smoke/robeless/shadowkit
+	granted_action = /datum/action/cooldown/spell/smoke/robeless/shadowkit

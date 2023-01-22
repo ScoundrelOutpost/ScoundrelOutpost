@@ -35,3 +35,13 @@
 	cooldown_time = 20 SECONDS
 
 	smoke_type = /datum/effect_system/fluid_spread/smoke/sleeping
+
+// scoundrel content
+// robeless smoke
+/datum/action/cooldown/spell/smoke/robeless
+	spell_requirements = NONE
+
+/datum/action/cooldown/spell/smoke/robeless/shadowkit
+	desc = "Spawn a cloud of smoke that causes choking \
+	and smothers light. Cooldown of 60 seconds."
+	cooldown_time = 60 SECONDS

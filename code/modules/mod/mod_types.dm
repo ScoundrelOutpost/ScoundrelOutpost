@@ -206,6 +206,7 @@
 	)
 
 /obj/item/mod/control/pre_equipped/infiltrator
+	w_class = WEIGHT_CLASS_NORMAL
 	theme = /datum/mod_theme/infiltrator
 	applied_cell = /obj/item/stock_parts/cell/super
 	initial_modules = list(

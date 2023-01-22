@@ -465,6 +465,14 @@
 	new /obj/item/grenade/c4(src)
 	new /obj/item/implanter/explosive(src)
 
+// shadow kit
+/obj/item/storage/toolbox/loadout/shadow/PopulateContents()
+	new /obj/item/book/granter/action/spell/shadow_walk(src)
+	new /obj/item/book/granter/action/spell/smoke/robeless/shadowkit(src)
+	new /obj/item/clothing/glasses/night(src)
+	new /obj/item/storage/box/r_bolas(src)
+	new /obj/item/implanter/ventcrawling/deluxe(src)
+
 // mini toolboxes
 
 /obj/item/storage/toolbox/mini

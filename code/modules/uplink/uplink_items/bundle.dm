@@ -145,6 +145,14 @@
 	a doorjack, a brick of c4, and a microbomb implant."
 	item = /obj/item/storage/toolbox/loadout/operative
 
+/datum/uplink_item/loadout/shadow
+	name = "Shadow Kit"
+	desc = "A ready-assembled loadout for stalking the shadows. Comes loaded with: \
+	A book on shadow-walking, granting the ability to disappear into darkness and recover health, a smoke spellbook, \
+	a pair of nightvision goggles, a box of reinforced bolas, and a bluespace contortion implant. \
+	Not recommended for beginners."
+	item = /obj/item/storage/toolbox/loadout/shadow
+
 // freedbies
 /datum/uplink_category/freebies
 	name = "Standard Equipment"
@@ -211,3 +219,12 @@
 	limited_stock = 1
 	illegal_tech = FALSE
 	surplus = 25
+
+/datum/uplink_item/freebies/traitor_pda
+	name = "Hacked PDA"
+	desc = "A hacked PDA with a silent presence on the network and a preset account, for anonymity or impersonation. \
+	Any ID, including an agent card, can be used to change the name."
+	item = /obj/item/modular_computer/tablet/pda/syndicate/traitor
+	cost = 0
+	limited_stock = 1
+	illegal_tech = FALSE

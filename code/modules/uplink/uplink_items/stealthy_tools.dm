@@ -126,10 +126,3 @@
 			Overtly branded; the fashion of it is non-negotiable, which can implicate agents who aren't careful with it."
 	item = /obj/item/storage/pouch/traitor/nanotrasen
 	cost = 5
-
-/datum/uplink_item/stealthy_tools/traitor_pda
-	name = "Hacked PDA"
-	desc = "A hacked PDA with a silent presence on the network and a preset account, for anonymity or impersonation. \
-	Any ID, including an agent card, can be used to change the name."
-	item = /obj/item/modular_computer/tablet/pda/syndicate/traitor
-	cost = 5

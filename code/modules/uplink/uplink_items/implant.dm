@@ -69,3 +69,21 @@
 	uplink_box.name = "Uplink Implant Box"
 	new /obj/item/implanter/uplink(uplink_box, uplink_handler)
 	return uplink_box
+
+/datum/uplink_item/implants/ventcrawling_deluxe
+	name = "Bluespace Contortion Implant"
+	desc = "An implant injected into the body, passively allowing the user to spatially fold themself, enabling them to \
+	fit into vents and other small spaces with ease. Advances in transdimensional-organic safety tech allows for \
+	worn items to be carried with them. CAUTION! Ventilation ducts may trap you! The implant will provide \
+	protection from most hazardous atmospheres while contorting, but does not guarantee your safety!
+	item = /obj/item/implanter/ventcrawling/deluxe
+	cost = 60
+
+/datum/uplink_item/implants/ventcrawling
+	name = "Budget Contortion Implant"
+	desc = "An implant injected into the body, passively allowing the user to spatially fold themself, enabling them to \
+	fit into vents and other small spaces with relative ease. The user must be completely unclothed for the mechanics to function \
+	in many cases. CAUTION! Ventilation ducts may trap you! The implant will provide \
+	protection from most hazardous atmospheres while contorting, but does not guarantee your safety!
+	item = /obj/item/implanter/ventcrawling
+	cost = 15

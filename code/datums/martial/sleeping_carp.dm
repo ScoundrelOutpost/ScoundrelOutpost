@@ -65,7 +65,7 @@
 	var/atom/throw_target = get_edge_target_turf(D, A.dir)
 	var/obj/item/stuff_in_hand = null
 	stuff_in_hand = D.get_active_held_item()
-	if(prob(100) && stuff_in_hand)
+	if(stuff_in_hand)
 		if(D.temporarilyRemoveItemFromInventory(stuff_in_hand))
 			A.put_in_hands(stuff_in_hand)
 			D.visible_message("<span class='danger'>[A] snatches [stuff_in_hand] out of the air as it leaves [D]'s hand!</span>", \

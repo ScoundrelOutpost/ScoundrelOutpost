@@ -471,7 +471,7 @@
 	new /obj/item/book/granter/action/spell/smoke/robeless/shadowkit(src)
 	new /obj/item/clothing/glasses/night(src)
 	new /obj/item/storage/box/r_bolas(src)
-	new /obj/item/implanter/ventcrawling/deluxe(src)
+//	new /obj/item/implanter/ventcrawling/deluxe(src) // add this back in when the exploits are fixed
 
 // mini toolboxes
 

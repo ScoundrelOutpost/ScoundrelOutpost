@@ -81,12 +81,6 @@
 			ventcrawl_target.flick_overlay_static(image('icons/effects/vent_indicator.dmi', "insert", ABOVE_MOB_LAYER), 1 SECONDS)
 			visible_message(span_notice("[src] scrambles into the ventilation ducts!"),span_notice("You climb into the ventilation ducts."))
 			move_into_vent(ventcrawl_target)
-			if(HAS_TRAIT(src, TRAIT_VENTCRAWLER_PRESSURE_IMMUNE))
-				ADD_TRAIT(src, TRAIT_RESISTLOWPRESSURE, VENTCRAWLING_TRAIT)
-				ADD_TRAIT(src, TRAIT_RESISTHIGHPRESSURE, VENTCRAWLING_TRAIT)
-				ADD_TRAIT(src, TRAIT_RESISTHEAT, VENTCRAWLING_TRAIT)
-				ADD_TRAIT(src, TRAIT_RESISTCOLD, VENTCRAWLING_TRAIT)
-				ADD_TRAIT(src, TRAIT_NOBREATH, VENTCRAWLING_TRAIT)
 		else
 			to_chat(src, span_warning("This ventilation duct is not connected to anything!"))
 
@@ -106,6 +100,12 @@
 /mob/living/proc/move_into_vent(obj/machinery/atmospherics/components/ventcrawl_target)
 	forceMove(ventcrawl_target)
 	ADD_TRAIT(src, TRAIT_MOVE_VENTCRAWLING, VENTCRAWLING_TRAIT)
+	if(HAS_TRAIT(src, TRAIT_VENTCRAWLER_PRESSURE_IMMUNE))
+		ADD_TRAIT(src, TRAIT_RESISTLOWPRESSURE, VENTCRAWLING_TRAIT)
+		ADD_TRAIT(src, TRAIT_RESISTHIGHPRESSURE, VENTCRAWLING_TRAIT)
+		ADD_TRAIT(src, TRAIT_RESISTHEAT, VENTCRAWLING_TRAIT)
+		ADD_TRAIT(src, TRAIT_RESISTCOLD, VENTCRAWLING_TRAIT)
+		ADD_TRAIT(src, TRAIT_NOBREATH, VENTCRAWLING_TRAIT)
 	update_pipe_vision()
 
 /**

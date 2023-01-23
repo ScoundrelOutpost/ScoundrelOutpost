@@ -144,6 +144,13 @@
 
 
 // scoundrel content
+
+/*
+Can't leave the ventcrawling implants readily accessible ingame in good conscience, there are too many exploits I have yet to figure out how to deal with.
+As of writing this, exiting atmos pipes by any means other than leaving through a vent causes undesirable retention of TRAIT_MOVE_VENTCRAWLING
+and any other temporary traits. - Jan 2023
+*/
+
 // ventcrawling implant
 /obj/item/implant/ventcrawling
 	name = "contortion implant"

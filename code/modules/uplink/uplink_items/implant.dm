@@ -70,6 +70,13 @@
 	new /obj/item/implanter/uplink(uplink_box, uplink_handler)
 	return uplink_box
 
+
+/*
+
+Can't leave the ventcrawling implants readily accessible ingame in good conscience, there are too many exploits I have yet to figure out how to deal with.
+As of writing this, exiting atmos pipes by any means other than leaving through a vent causes undesirable retention of TRAIT_MOVE_VENTCRAWLING
+and any other temporary traits. - Jan 2023
+
 /datum/uplink_item/implants/ventcrawling_deluxe
 	name = "Bluespace Contortion Implant"
 	desc = "An implant injected into the body, passively allowing the user to spatially fold themself, enabling them to \
@@ -86,4 +93,5 @@
 	in many cases. CAUTION! Ventilation ducts may trap you! The implant will provide \
 	protection from most hazardous atmospheres while contorting, but does not guarantee your safety!"
 	item = /obj/item/implanter/ventcrawling
-	cost = 15
+	cost = 10
+*/

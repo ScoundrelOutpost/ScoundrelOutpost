@@ -104,6 +104,9 @@
 
 // This sets which way the current shuttle is moving (returns true if the shuttle has stopped moving so the caller can append their animation)
 /datum/hud/proc/set_parallax_movedir(new_parallax_movedir = 0, skip_windups, mob/viewmob)
+	// this causes issues by moving the entire parallax, including static parts so simply returns
+	// i'd quite like this fixed down the line but it's not essential, so there's that.
+	return
 	. = FALSE
 	var/mob/screenmob = viewmob || mymob
 	var/client/C = screenmob.client
@@ -235,6 +238,11 @@
 			else if(parallax_layer.offset_y - change_y < -240)
 				parallax_layer.offset_y += 480
 
+		// if unmoving, reset changes
+		if(parallax_layer.unmoving == TRUE)
+			change_x = 0
+			change_y = 0
+
 		// Now that we have our offsets, let's do our positioning
 		parallax_layer.offset_x -= change_x
 		parallax_layer.offset_y -= change_y
@@ -243,9 +251,10 @@
 
 		// We're going to use a transform to "glide" that last movement out, so it looks nicer
 		// Don't do any animates if we're not actually moving enough distance yeah? thanks lad
-		if(run_parralax && (largest_change * our_speed > 1))
-			parallax_layer.transform = matrix(1,0,change_x, 0,1,change_y)
-			animate(parallax_layer, transform=matrix(), time = glide_rate)
+		if(parallax_layer.unmoving == FALSE)
+			if(run_parralax && (largest_change * our_speed > 1))
+				parallax_layer.transform = matrix(1,0,change_x, 0,1,change_y)
+				animate(parallax_layer, transform=matrix(), time = glide_rate)
 
 /atom/movable/proc/update_parallax_contents()
 	for(var/mob/client_mob as anything in client_mobs_in_contents)
@@ -265,6 +274,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 	var/offset_x = 0
 	var/offset_y = 0
 	var/absolute = FALSE
+	var/unmoving = FALSE
 	blend_mode = BLEND_ADD
 	plane = PLANE_SPACE_PARALLAX
 	screen_loc = "CENTER-7,CENTER-7"
@@ -308,14 +318,16 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 
 /atom/movable/screen/parallax_layer/layer_1
 	icon_state = "layer1"
-	speed = 0
+	unmoving = TRUE
+	speed = 1
 	layer = 1
 	offset_x = -64
 
 /atom/movable/screen/parallax_layer/layer_2
 	icon_state = "layer2"
 	blend_mode = BLEND_OVERLAY
-	speed = 0
+	unmoving = TRUE
+	speed = 1
 	layer = 2
 	offset_x = 64
 

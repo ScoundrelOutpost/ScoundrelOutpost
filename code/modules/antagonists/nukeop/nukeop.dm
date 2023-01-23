@@ -199,10 +199,10 @@
 	back = /obj/item/storage/backpack/satchel/fireproof
 	suit = /obj/item/clothing/suit/hooded/hardsuit/syndicate
 
-/datum/outfit/nuclear_operative/post_equip(mob/living/carbon/human/H, visualsOnly)
-	var/obj/item/mod/module/armor_booster/booster = locate() in H.back
-	booster.active = TRUE
-	H.update_worn_back()
+///datum/outfit/nuclear_operative/post_equip(mob/living/carbon/human/H, visualsOnly)
+//	var/obj/item/mod/module/armor_booster/booster = locate() in H.back
+//	booster.active = TRUE
+//	H.update_worn_back()
 
 /datum/outfit/nuclear_operative_elite
 	name = "Nuclear Operative (Elite, Preview only)"

@@ -195,8 +195,9 @@
 /datum/outfit/nuclear_operative
 	name = "Nuclear Operative (Preview only)"
 
-	back = /obj/item/mod/control/pre_equipped/empty/syndicate
-	uniform = /obj/item/clothing/under/syndicate
+	head = /obj/item/clothing/head/hooded/hardsuit/syndicate
+	back = /obj/item/storage/backpack/satchel/fireproof
+	suit = /obj/item/clothing/suit/hooded/hardsuit/syndicate
 
 /datum/outfit/nuclear_operative/post_equip(mob/living/carbon/human/H, visualsOnly)
 	var/obj/item/mod/module/armor_booster/booster = locate() in H.back
@@ -206,11 +207,12 @@
 /datum/outfit/nuclear_operative_elite
 	name = "Nuclear Operative (Elite, Preview only)"
 
-	back = /obj/item/mod/control/pre_equipped/empty/elite
-	uniform = /obj/item/clothing/under/syndicate
-	l_hand = /obj/item/modular_computer/tablet/nukeops
+	head = /obj/item/clothing/head/hooded/hardsuit/syndicate
+	back = /obj/item/storage/backpack/satchel/fireproof
+	suit = /obj/item/clothing/suit/hooded/hardsuit/syndicate
 	r_hand = /obj/item/shield/energy
-
+	l_hand = /obj/item/gun/ballistic/shotgun/bulldog
+	
 /datum/outfit/nuclear_operative_elite/post_equip(mob/living/carbon/human/H, visualsOnly)
 	var/obj/item/mod/module/armor_booster/booster = locate() in H.back
 	booster.active = TRUE
@@ -295,7 +297,7 @@
 	name = "Lone Operative"
 	always_new_team = TRUE
 	send_to_spawnpoint = FALSE //Handled by event
-	nukeop_outfit = /datum/outfit/syndicate/full
+	nukeop_outfit = /datum/outfit/syndicate/scoundrel_operative
 	preview_outfit = /datum/outfit/nuclear_operative
 	preview_outfit_behind = null
 	nuke_icon_state = null

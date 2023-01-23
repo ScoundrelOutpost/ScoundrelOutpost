@@ -13,9 +13,9 @@
 
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 	box = /obj/item/storage/box/survival/syndie
-	var/tc = 25
+	var/tc = 50
 	var/command_radio = FALSE
-	var/uplink_type = /obj/item/uplink/nuclear
+	var/uplink_type = /obj/item/uplink/intruder_basic/locked
 
 	id_trim = /datum/id_trim/chameleon/operative
 
@@ -127,3 +127,21 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	faction = "MI13"
+
+// scoundrel content
+/datum/outfit/syndicate/scoundrel_operative
+	name = "Syndicate Operative - Full Kit (Scoundrel)"
+	head = /obj/item/clothing/head/hooded/hardsuit/syndicate
+	suit = /obj/item/clothing/suit/hooded/hardsuit/syndicate
+	suit_store = /obj/item/tank/jetpack/advanced/compact/syndicate
+	glasses = /obj/item/clothing/glasses/night
+	mask = /obj/item/clothing/mask/gas/syndicate
+	back = /obj/item/storage/backpack/satchel/fireproof
+	r_pocket = /obj/item/personalshield/standard/advanced
+	belt = /obj/item/gun/ballistic/automatic/pistol
+	r_hand = /obj/item/gun/ballistic/shotgun/bulldog
+	backpack_contents = list(
+		/obj/item/storage/pouch/tactical/ammo_9mm = 1,
+		/obj/item/melee/tonfa/esword = 1,
+	)
+	internals_slot = ITEM_SLOT_SUITSTORE

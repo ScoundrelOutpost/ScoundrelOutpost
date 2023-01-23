@@ -31,6 +31,9 @@
 	return 1
 
 /obj/item/stack/ore/bluespace_crystal/attack_self(mob/user)
+	if(HAS_TRAIT(user, TRAIT_MOVE_VENTCRAWLING))
+		balloon_alert(user, "Interference!")
+		return
 	user.visible_message(span_warning("[user] crushes [src]!"), span_danger("You crush [src]!"))
 	new /obj/effect/particle_effect/sparks(loc)
 	playsound(loc, SFX_SPARKS, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)

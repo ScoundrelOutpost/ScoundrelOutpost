@@ -149,6 +149,7 @@
 	name = "contortion implant"
 	desc = "Exotic technology allows for unlikely contortion of the body."
 	actions_types = null
+	icon_state = "adrenal"
 
 /obj/item/implant/ventcrawling/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()

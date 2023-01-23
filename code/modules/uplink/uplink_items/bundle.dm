@@ -149,7 +149,7 @@
 	name = "Shadow Kit"
 	desc = "A ready-assembled loadout for stalking the shadows. Comes loaded with: \
 	A book on shadow-walking, granting the ability to disappear into darkness and recover health, a smoke spellbook, \
-	a pair of nightvision goggles, a box of reinforced bolas, and a bluespace contortion implant. \
+	a pair of nightvision goggles, and a box of reinforced bolas. \
 	Not recommended for beginners."
 	item = /obj/item/storage/toolbox/loadout/shadow
 

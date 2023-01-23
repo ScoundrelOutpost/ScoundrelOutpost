@@ -11,12 +11,9 @@
 	antag_datum = /datum/antagonist/traitor
 	minimum_required_age = 0
 	protected_roles = list(
-		JOB_CAPTAIN,
-		JOB_DETECTIVE,
-		JOB_HEAD_OF_SECURITY,
-		JOB_PRISONER,
-		JOB_SECURITY_OFFICER,
-		JOB_WARDEN,
+		JOB_CAPTAIN_SCOUNDREL,
+		JOB_DETECTIVE_SCOUNDREL,
+		JOB_QUARTERMASTER_SCOUNDREL,
 	)
 	restricted_roles = list(
 		JOB_AI,
@@ -718,7 +715,7 @@
 	)
 	required_candidates = 1
 	weight = 10
-	cost = 1
+	cost = 2
 	scaling_cost = 2
 	requirements = list(8,8,8,8,8,8,8,8,8,8)
 	antag_cap = list("denominator" = 38)

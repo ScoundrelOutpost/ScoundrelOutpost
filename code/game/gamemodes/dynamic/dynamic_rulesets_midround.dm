@@ -217,13 +217,9 @@
 	antag_flag = ROLE_SLEEPER_AGENT
 	antag_flag_override = ROLE_TRAITOR
 	protected_roles = list(
-		JOB_CAPTAIN,
-		JOB_DETECTIVE,
-		JOB_HEAD_OF_PERSONNEL,
-		JOB_HEAD_OF_SECURITY,
-		JOB_PRISONER,
-		JOB_SECURITY_OFFICER,
-		JOB_WARDEN,
+		JOB_CAPTAIN_SCOUNDREL,
+		JOB_DETECTIVE_SCOUNDREL,
+		JOB_QUARTERMASTER_SCOUNDREL,
 	)
 	restricted_roles = list(
 		JOB_AI,
@@ -232,8 +228,8 @@
 	)
 	required_candidates = 1
 	weight = 35
-	cost = 3
-	requirements = list(3,3,3,3,3,3,3,3,3,3)
+	cost = 8
+	requirements = list(8,8,8,8,8,8,8,8,8,8)
 	repeatable = TRUE
 
 /datum/dynamic_ruleset/midround/from_living/autotraitor/trim_candidates()

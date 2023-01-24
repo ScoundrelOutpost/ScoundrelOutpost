@@ -275,6 +275,22 @@
 		/obj/item/storage/pill_bottle/penacid = 1)
 	generate_items_inside(items_inside,src)
 
+/obj/item/storage/medkit/traitorkit
+	icon_state = "medkit"
+	desc = "A first aid kit with the ability to heal common types of injuries."
+/obj/item/storage/medkit/traitorkit/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/tank/internals/emergency_oxygen = 1,
+		/obj/item/storage/pill_bottle/combat_combo = 1,
+		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
+		/obj/item/stack/medical/gauze = 1,
+		/obj/item/hemostat = 1,
+		/obj/item/healthanalyzer = 1,
+		/obj/item/paper/fluff/traitor_firstaid = 1,)
+	generate_items_inside(items_inside,src)
+
 /obj/item/storage/medkit/tactical
 	name = "combat medical kit"
 	desc = "I hope you've got insurance."
@@ -519,6 +535,21 @@
 /obj/item/storage/pill_bottle/tritizine/PopulateContents()
 	for(var/i in 1 to 4)
 		new /obj/item/reagent_containers/pill/tritizine(src)
+
+/obj/item/storage/pill_bottle/synthflesh_patches
+	name = "synthflesh pillbottle"
+	desc = "Contains synthflesh patches, which rapidly heal physical wounds while some toxin damage."
+/obj/item/storage/pill_bottle/synthflesh_patches/PopulateContents()
+	for(var/i in 1 to 3)
+		new /obj/item/reagent_containers/pill/patch/synthflesh(src)
+
+/obj/item/storage/pill_bottle/combat_combo
+	desc = "Contains synthflesh patches, pentetic acid pills, and iron pills, used in combination to rapidly treat combat injuries."
+/obj/item/storage/pill_bottle/combat_combo/PopulateContents()
+	for(var/i in 1 to 2)
+		new /obj/item/reagent_containers/pill/patch/synthflesh(src)
+		new /obj/item/reagent_containers/pill/penacid(src)
+		new /obj/item/reagent_containers/pill/iron(src)
 // scoundrel content
 
 ///////////////////////////////////////// Psychologist inventory pillbottles

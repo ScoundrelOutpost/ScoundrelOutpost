@@ -162,6 +162,8 @@
 	surplus = 0
 	cant_discount = TRUE
 	illegal_tech = FALSE
+	cost = 0
+	cost_override_string = "Free"
 
 /datum/uplink_item/freebies/encryptionkey
 	name = "Syndicate Encryption Key"
@@ -169,7 +171,6 @@
 			as well as talk on an encrypted Syndicate channel with other agents that have the same key. In addition, this key also protects \
 			your headset from radio jammers."
 	item = /obj/item/encryptionkey/syndicate
-	cost = 0
 	restricted = TRUE
 	limited_stock = 1
 	illegal_tech = FALSE
@@ -181,7 +182,6 @@
 			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
 			with these cards."
 	item = /obj/item/card/id/advanced/chameleon
-	cost = 0
 	limited_stock = 1
 	illegal_tech = FALSE
 
@@ -190,15 +190,13 @@
 	desc = "Syndicate agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
 			This manual teaches you this Codespeak. You can also hit someone else with the manual in order to teach them. Can only be used once."
 	item = /obj/item/language_manual/codespeak_manual
-	cost = 0
 	limited_stock = 1
 	illegal_tech = FALSE
 
 /datum/uplink_item/freebies/adv_firstaid
-	name = "Advanced First-Aid"
+	name = "Combat First-Aid"
 	desc = "An advanced first-aid kit for handling injuries sustained on operations. You only get one, so use it wisely."
-	item = /obj/item/storage/medkit/advanced
-	cost = 0
+	item = /obj/item/storage/medkit/traitorkit
 	limited_stock = 1
 	illegal_tech = FALSE
 
@@ -206,7 +204,6 @@
 	name = "Suppressor"
 	desc = "A clandestine suppressor suited to a variety of weapons. Conveys intent to operate covertly -- good luck with that on a spacestation. Limited stock of two."
 	item = /obj/item/suppressor
-	cost = 0
 	limited_stock = 2
 	illegal_tech = FALSE
 
@@ -215,7 +212,6 @@
 	desc = "Enables you to view all cameras on the main network, set up motion alerts and track a target. \
 			Bugging cameras allows you to disable them remotely."
 	item = /obj/item/camera_bug
-	cost = 0
 	limited_stock = 1
 	illegal_tech = FALSE
 	surplus = 25
@@ -225,6 +221,5 @@
 	desc = "A hacked PDA with a silent presence on the network and a preset account, for anonymity or impersonation. \
 	Any ID, including an agent card, can be used to change the name."
 	item = /obj/item/modular_computer/tablet/pda/syndicate/traitor
-	cost = 0
 	limited_stock = 1
 	illegal_tech = FALSE

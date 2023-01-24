@@ -23,3 +23,28 @@
 	. = ..()
 	new /obj/item/paper/fluff/alibipouch(src)
 	update_appearance()
+
+/obj/item/paper/fluff/traitor_firstaid
+	name = "\proper treatment instructions"
+	default_raw_text = "\
+	BLEEDING TREATMENT <br>\
+	1. Use Atropine injector <br>\
+	2. Apply Synthflesh patch <br>\
+	3. Apply gauze to wounds <br>\
+	4. Take a Pentetic-Acid pill <br>\
+	5. Take an iron pill as necessary. <br><br>\
+	\
+	TOXIN TREATMENT <br>\
+	1. Take a Pentetic-Acid pill <br><br>\
+	\
+	BRUTE/BURN TREATMENT <br>\
+	1. Apply Synthflesh patch <br>\
+	2. Take a Pentetic-Acid pill <br><br>\
+	\
+	EMBEDDED OBJECT TREATMENT <br>\
+	1. Target the embedded location <br>\
+	2. Apply hemostat to carefully remove <br><br>\
+	\
+	SUFFOCATION TREATMENT <br>\
+	1. Use Atropine injector <br>\
+	2. Take an iron pill if blood levels are low <br>"

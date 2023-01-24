@@ -98,4 +98,5 @@ GLOBAL_LIST_INIT(generic_suit_allowed, typecacheof(list(
 
 GLOBAL_LIST_INIT(space_suit_allowed, typecacheof(list(
 		/obj/item/tank/internals,
+		/obj/item/tank/jetpack,
 	)))

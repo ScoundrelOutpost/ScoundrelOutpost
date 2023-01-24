@@ -258,7 +258,7 @@
 	use_power = NO_POWER_USE
 	active_power_usage = 0
 	teleport_speed = 20
-	range = 8
+	range = 16
 	stationary = FALSE
 	hidden = TRUE
 	var/closed = TRUE
@@ -290,7 +290,7 @@
 		if(!briefcase || !usr.canUseTopic(src, be_close = TRUE, no_dexterity = TRUE, no_tk = FALSE, need_hands = TRUE))
 			return
 		usr.visible_message(span_notice("[usr] starts closing [src]..."), span_notice("You start closing [src]..."))
-		if(do_after(usr, 30, target = usr))
+		if(do_after(usr, 10, target = usr))
 			usr.put_in_hands(briefcase)
 			moveToNullspace() //hides it from suitcase contents
 			closed = TRUE
@@ -329,7 +329,7 @@
 		return
 	add_fingerprint(user)
 	user.visible_message(span_notice("[user] starts setting down [src]..."), span_notice("You start setting up [pad]..."))
-	if(do_after(user, 30, target = user))
+	if(do_after(user, 10, target = user))
 		pad.forceMove(get_turf(src))
 		pad.update_indicator()
 		pad.closed = FALSE

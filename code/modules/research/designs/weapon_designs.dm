@@ -131,6 +131,19 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
+/datum/design/trackstar
+	name = "Tracking Throwing Star"
+	desc = "A throwing star that, when it embeds, it activates an internal GPS. A less-than-lethal means of covertly following criminal elements."
+	id = "trackstar"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = 2000, /datum/material/silver = 500, /datum/material/gold = 100)
+	build_path = /obj/item/throwing_star/tracking
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_MELEE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	autolathe_exportable = FALSE
+
 /datum/design/stunrevolver
 	name = "Tesla Cannon Part Kit"
 	desc = "The kit for a high-tech cannon that fires internal, reusable bolt cartridges in a revolving cylinder. The cartridges can be recharged using conventional rechargers."

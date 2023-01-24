@@ -1574,6 +1574,7 @@
 		"c38_hotshot",
 		"c38_iceblox",
 		"techshotshell",
+		"trackstar",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 

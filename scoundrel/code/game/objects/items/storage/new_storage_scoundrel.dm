@@ -201,7 +201,7 @@
 	name = "suspicious pouch"
 	desc = "A compact, ergonomically designed pouch for holding more things than usual. it's decorated with shameless Syndicate symbols."
 	icon_state = "syndicate"
-	flags_inv = EXAMINE_SKIP
+	item_flags = EXAMINE_SKIP
 
 /obj/item/storage/pouch/traitor/Initialize(mapload)
 	. = ..()
@@ -275,6 +275,38 @@
 /obj/item/storage/pouch/bullet/ammo_minislug_surplus/traitor
 	icon_state = "ammo_syndicate"
 	item_flags = EXAMINE_SKIP
+
+// shuriken pouch
+/obj/item/storage/pouch/throwingstar
+	name = "shuriken pouch"
+	desc = "A pouch for holding shurikens."
+	icon_state = "softpouch_black"
+	item_flags = EXAMINE_SKIP
+
+/obj/item/storage/pouch/throwingstar/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+	atom_storage.max_slots = 7
+	atom_storage.max_total_storage = 14
+	atom_storage.allow_quick_gather = TRUE
+	atom_storage.numerical_stacking = TRUE
+	atom_storage.set_holdable(list(
+		/obj/item/throwing_star,
+		/obj/item/gps/off, // replace this with a pinpointer some day
+		))
+	atom_storage.silent = TRUE
+
+/obj/item/storage/pouch/throwingstar/loaded/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/throwing_star(src)
+/obj/item/storage/pouch/throwingstar/tracking/PopulateContents()
+	for(var/i in 1 to 6)
+		new /obj/item/throwing_star/tracking(src)
+	new /obj/item/gps/off(src)
+/obj/item/storage/pouch/throwingstar/hunting/PopulateContents()
+	for(var/i in 1 to 6)
+		new /obj/item/throwing_star/tracking/traitor(src)
+	new /obj/item/gps/off(src)
 
 // generic - keep this list at the bottom please
 /obj/item/storage/pouch/grey

@@ -21,8 +21,7 @@
 	sharpness = SHARP_EDGED
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 50)
 	var/bayonet = FALSE //Can this be attached to a gun?
-	wound_bonus = 5
-	bare_wound_bonus = 15
+	wound_bonus = 15
 	tool_behaviour = TOOL_KNIFE
 	embedding = list("ignore_throwspeed_threshold" = TRUE)
 
@@ -89,20 +88,21 @@
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown by-products."
 	flags_1 = CONDUCT_1
 	force = 15
-	throwforce = 10
+	throwforce = 18
+	slot_flags = ITEM_SLOT_SUITSTORE
 	custom_materials = list(/datum/material/iron=18000)
 	attack_verb_continuous = list("slices", "dices", "chops", "cubes", "minces", "juliennes", "chiffonades", "batonnets")
 	attack_verb_simple = list("slice", "dice", "chop", "cube", "mince", "julienne", "chiffonade", "batonnet")
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_BULKY
 	//custom_price = PAYCHECK_CREW * 5
-	wound_bonus = 15
 
 /obj/item/knife/hunting
 	name = "hunting knife"
 	desc = "Despite its name, it's mainly used for cutting meat from dead prey rather than actual hunting."
 	inhand_icon_state = "huntingknife"
 	icon_state = "huntingknife"
-	wound_bonus = 10
+	force = 12
+	throwforce = 15
 
 /obj/item/knife/hunting/set_butchering()
 	AddComponent(/datum/component/butchering, \
@@ -115,11 +115,11 @@
 	name = "combat knife"
 	icon_state = "buckknife"
 	desc = "A military combat utility survival knife."
-	force = 12
-	throwforce = 15
 	attack_verb_continuous = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "cuts")
 	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "cut")
 	bayonet = TRUE
+	force = 12
+	throwforce = 15
 
 /obj/item/knife/combat/survival
 	name = "survival knife"

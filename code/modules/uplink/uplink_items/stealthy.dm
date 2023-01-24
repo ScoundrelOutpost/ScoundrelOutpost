@@ -21,24 +21,45 @@
 	surplus = 10
 	purchasable_from = ~UPLINK_NUKE_OPS
 
+/datum/uplink_item/stealthy_weapons/throwingstar_pouch
+	name = "Shuriken Pouch"
+	desc = "A stealthy pouch full of razor-sharp shurikens, guaranteed to embed in \
+	struck targets. Useful for target harassment. The pouch itself is unremarkable \
+	enough to pass over most visual examinations. Limited stock of one."
+	item = /obj/item/storage/pouch/throwingstar/loaded
+	cost = 10
+	surplus = 10
+	limited_stock = 1 // let's not go overboard
+
+/datum/uplink_item/stealthy_weapons/huntingstar_pouch
+	name = "Hunting Shuriken Pouch"
+	desc = "A stealthy pouch full of sticky, painful hunting shurikens that activate a GPS signal \
+	when embedded in a target. Not particularly lethal on their own, but a menace \
+	for victims trying to hide or evade. WARNING! When active, the contained tracking device will reveal \
+	your location to other GPS units! Limited stock of one."
+	item = /obj/item/storage/pouch/throwingstar/hunting
+	cost = 10
+	surplus = 10
+	limited_stock = 1
+
 /datum/uplink_item/stealthy_weapons/dehy_carp
 	name = "Dehydrated Space Carp"
 	desc = "Looks like a plush toy carp, but just add water and it becomes a real-life space carp! Activate in \
 			your hand before use so it knows not to kill you."
 	item = /obj/item/toy/plush/carpplushie/dehy_carp
-	cost = 5
+	cost = 6
 
 /datum/uplink_item/stealthy_weapons/edagger
 	name = "Energy Dagger"
 	desc = "A dagger made of energy that looks and functions as a pen when off."
 	item = /obj/item/pen/edagger
-	cost = 10
+	cost = 8
 
 /datum/uplink_item/stealthy_weapons/traitor_chem_bottle
 	name = "Poison Kit"
 	desc = "An assortment of deadly chemicals packed into a compact box. Comes with a syringe for more precise application."
 	item = /obj/item/storage/box/syndie_kit/chemical
-	cost = 10
+	cost = 12
 
 /*/datum/uplink_item/stealthy_weapons/holster
 	name = "Syndicate Holster"
@@ -53,7 +74,7 @@
 			The pen holds one dose of the mixture, and can be refilled with any chemicals. Note that before the target \
 			falls asleep, they will be able to move and act."
 	item = /obj/item/pen/sleepy
-	cost = 20
+	cost = 25
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/stealthy_weapons/origami_kit

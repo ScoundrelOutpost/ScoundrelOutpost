@@ -94,3 +94,12 @@
 	tagged = null
 	STOP_PROCESSING(SSfastprocess, src)
 	. = ..()
+
+// scoundrel content
+// gps device that starts deactivated
+/obj/item/gps/off/Initialize(mapload)
+	. = ..()
+	var/datum/component/gps/item/gps_unit = GetComponent(/datum/component/gps/item)
+	if(gps_unit.tracking)
+		cut_overlay("working")
+		gps_unit.tracking = FALSE

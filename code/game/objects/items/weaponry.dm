@@ -358,16 +358,17 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	return
 
 /obj/item/throwing_star
-	name = "throwing star"
+	name = "shuriken"
 	desc = "An ancient weapon still used to this day, due to its ease of lodging itself into its victim's body parts."
+	icon = 'scoundrel/icons/obj/weapons/melee.dmi'
 	icon_state = "throwingstar"
 	inhand_icon_state = "eshield"
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	force = 2
-	throwforce = 10 //10 + 2 (WEIGHT_CLASS_SMALL) * 4 (EMBEDDED_IMPACT_PAIN_MULTIPLIER) = 18 damage on hit due to guaranteed embedding
+	throwforce = 10
 	throw_speed = 2
-	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 1, "embed_chance" = 100, "fall_chance" = 0)
+	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 0.5, "embed_chance" = 100, "fall_chance" = 0)
 	armour_penetration = 40
 
 	w_class = WEIGHT_CLASS_SMALL
@@ -376,7 +377,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	resistance_flags = FIRE_PROOF
 
 /obj/item/throwing_star/stamina
-	name = "shock throwing star"
+	name = "shock shuriken"
 	desc = "An aerodynamic disc designed to cause excruciating pain when stuck inside fleeing targets, hopefully without causing fatal harm."
 	throwforce = 5
 	embedding = list("pain_chance" = 5, "embed_chance" = 100, "fall_chance" = 0, "jostle_chance" = 10, "pain_stam_pct" = 0.8, "jostle_pain_mult" = 3)
@@ -407,6 +408,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb_continuous = list("stubs", "pokes")
 	attack_verb_simple = list("stub", "poke")
 	resistance_flags = FIRE_PROOF
+
+	wound_bonus = 15
+
 	// sound played when extended/retracted
 	var/on_sound = 'sound/weapons/batonextend.ogg'
 	/// Whether the switchblade starts extended or not.

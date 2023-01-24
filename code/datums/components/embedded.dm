@@ -271,7 +271,8 @@
 			vision_distance=COMBAT_MESSAGE_RANGE, ignored_mobs=victim)
 		to_chat(victim, span_userdanger("[user] begins plucking [weapon] from your [limb.plaintext_zone]..."))
 
-	var/pluck_time = 2.5 SECONDS * (self_pluck ? 2 : 1)
+	var/pluck_time_self = rip_time / 8
+	var/pluck_time = rip_time / 8 + (self_pluck ? pluck_time_self : 1)
 	if(!do_after(user, pluck_time, victim))
 		if(self_pluck)
 			to_chat(user, span_danger("You fail to pluck [weapon] from your [limb.plaintext_zone]."))

@@ -188,3 +188,54 @@
 	. = span_warning("[user] swings [user.p_their()] [name][in_mouth]. [user.p_they(TRUE)] light[user.p_s()] [user.p_their()] [atom.name] in the process.")
 	playsound(loc, hitsound, get_clamped_volume(), TRUE, -1)
 	add_fingerprint(user)
+
+// tracking throwingstar
+/obj/item/throwing_star/tracking
+	name = "tracking shuriken"
+	desc = "A throwing star loaded with a GPS unit and coated in microscopic metallic bristles for maximum embedding grip. \
+	Intensely uncomfortable and difficult to remove, but not very dangerous."
+	icon_state = "trackingstar"
+	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 0.25, "embed_chance" = 100, "fall_chance" = 0, "rip_time" = 30 SECONDS, "jostle_chance" = 0)
+
+	// will only activate once
+	var/used_up = FALSE
+	// the label seen on GPS units
+	var/gpstag = "TRACKING"
+	// time before the gps expires after initial embed
+	var/gps_timer = 120 SECONDS
+
+/obj/item/throwing_star/tracking/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/gps, gpstag)
+	disable_gps()
+
+/obj/item/throwing_star/tracking/embedded(atom/embedded_target, obj/item/bodypart/part)
+	. = ..()
+	var/datum/component/gps/gps_unit = GetComponent(/datum/component/gps)
+	if(gps_unit && used_up == FALSE)
+		gps_unit.tracking = TRUE
+		addtimer(CALLBACK(src, PROC_REF(disable_gps)), gps_timer)
+
+/obj/item/throwing_star/tracking/proc/disable_gps()
+	var/datum/component/gps/gps_unit = GetComponent(/datum/component/gps)
+	if(gps_unit)
+		gps_unit.tracking = FALSE
+
+/obj/item/throwing_star/tracking/unembedded()
+	. = ..()
+	var/datum/component/gps/gps_unit = GetComponent(/datum/component/gps)
+	if(gps_unit && used_up == FALSE)
+		used_up = TRUE
+		desc += "\n[span_notice("The GPS is expended. This won't be tracking anything anymore.")]"
+		gps_unit.tracking = FALSE
+		icon_state = "[initial(icon_state)]_dead"
+	
+
+/obj/item/throwing_star/tracking/traitor
+	name = "hunting shuriken"
+	desc = "A suspicious black throwing star loaded with a GPS unit that activates when embedded. \
+	Razor-sharp molecular fibers prevent it from being easily removed, and it has an extended lifespan."
+	icon_state = "trackingstar_black"
+	throwforce = 15
+	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 0.05, "embed_chance" = 100, "fall_chance" = 0, "rip_time" = 120 SECONDS, "jostle_chance" = 0, "pain_chance" = 1)
+	gps_timer = 10 MINUTES // can't ignore it

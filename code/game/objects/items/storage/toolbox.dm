@@ -22,7 +22,7 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_COLOR
 	var/latches = "single_latch"
 	var/has_latches = TRUE
-	wound_bonus = 5
+	wound_bonus = 15
 
 /obj/item/storage/toolbox/Initialize(mapload)
 	. = ..()

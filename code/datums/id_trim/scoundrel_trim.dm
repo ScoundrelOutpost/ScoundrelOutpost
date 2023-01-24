@@ -80,7 +80,8 @@
 		ACCESS_ROBOTICS,
 		ACCESS_HYDROPONICS,
 		//basic access end
-		ACCESS_CE
+		ACCESS_ENGINE_EQUIP,
+		ACCESS_CE,
 		)
 	job = /datum/job/engi_spec
 

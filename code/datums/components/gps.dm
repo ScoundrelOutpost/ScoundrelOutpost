@@ -44,7 +44,8 @@ GLOBAL_LIST_EMPTY(GPS_list)
 
 	var/atom/A = parent
 	if(overlay_state)
-		A.add_overlay(overlay_state)
+		if(tracking)
+			A.add_overlay(overlay_state)
 	A.name = "[initial(A.name)] ([gpstag])"
 	RegisterSignal(parent, COMSIG_ITEM_ATTACK_SELF, PROC_REF(interact))
 	if(!emp_proof)

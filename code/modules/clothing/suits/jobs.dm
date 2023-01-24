@@ -27,6 +27,7 @@
 		/obj/item/storage/bag/plants,
 	)
 	species_exception = list(/datum/species/golem)
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/clothing/suit/apron/waders
 	name = "horticultural waders"
@@ -137,6 +138,7 @@
 	worn_icon = 'icons/mob/clothing/suits/utility.dmi'
 	inhand_icon_state = null
 	blood_overlay_type = "armor"
+	w_class = WEIGHT_CLASS_SMALL
 	allowed = list(
 		/obj/item/fireaxe/metal_h2_axe,
 		/obj/item/flashlight,

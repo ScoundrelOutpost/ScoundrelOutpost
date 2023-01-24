@@ -104,8 +104,9 @@
 	icon_state = "rolling_pin"
 	worn_icon_state = "rolling_pin"
 	inhand_icon_state = "rolling_pin"
-	force = 8
-	throwforce = 5
+	force = 12
+	throwforce = 15
+	wound_bonus = 15
 	throw_speed = 3
 	throw_range = 7
 	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 1.5)

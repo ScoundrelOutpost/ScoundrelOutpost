@@ -106,5 +106,6 @@
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/binoculars(src)
+	new /obj/item/storage/pouch/throwingstar/tracking(src)
 	new /obj/item/storage/box/bolas(src)
 	new /obj/item/storage/pouch/cuffs/preloaded(src)

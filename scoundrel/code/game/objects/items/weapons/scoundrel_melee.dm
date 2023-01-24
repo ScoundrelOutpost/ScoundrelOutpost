@@ -195,7 +195,7 @@
 	desc = "A throwing star loaded with a GPS unit and coated in microscopic metallic bristles for maximum embedding grip. \
 	Intensely uncomfortable and difficult to remove, but not very dangerous."
 	icon_state = "trackingstar"
-	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 0.25, "embed_chance" = 100, "fall_chance" = 0, "rip_time" = 30 SECONDS, "jostle_chance" = 0)
+	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 0.25, "embed_chance" = 100, "fall_chance" = 0, "rip_time" = 10 SECONDS, "jostle_chance" = 0)
 
 	// will only activate once
 	var/used_up = FALSE
@@ -239,4 +239,4 @@
 	throwforce = 15
 	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 0.05, "embed_chance" = 100, "fall_chance" = 0, "rip_time" = 120 SECONDS, "jostle_chance" = 0, "pain_chance" = 1)
 	gps_timer = 10 MINUTES // can't ignore it
-	gpstag = "HUNT"
+	gpstag = "HUNT" // reminder to add a feature to huntingstars to rename the gps when used inhand

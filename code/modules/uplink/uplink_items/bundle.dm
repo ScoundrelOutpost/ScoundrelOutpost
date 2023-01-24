@@ -115,7 +115,8 @@
 /datum/uplink_item/loadout/executive
 	name = "Executive Kit"
 	desc = "A ready-assembled loadout with the means to buy anything with a pricetag. Comes loaded with: \
-	A storage implant, an executive pistol, two laser-minislug pouches, a briefcase launchpad, and fifteen-thousand credits in unmarked bills."
+	A storage implant, an executive pistol, two laser-minislug pouches, a briefcase launchpad, a flashy executive starsuit, \
+	and fifteen-thousand credits in unmarked bills."
 	item = /obj/item/storage/toolbox/loadout/executive
 
 /datum/uplink_item/loadout/brutal

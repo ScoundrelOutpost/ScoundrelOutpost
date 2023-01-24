@@ -53,6 +53,7 @@
 
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/ephedrine, 5)
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/omnizine, 10)
+	imp_in.reagents.add_reagent(/datum/reagent/consumable/coffee, 10)
 	imp_in.reagents.add_reagent(/datum/reagent/pax, 1)
 	if(!uses)
 		to_chat(imp_in, "<span class='notice'>You feel a faint electrical buzz as you use up the last adrenal!</span>")

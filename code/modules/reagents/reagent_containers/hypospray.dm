@@ -167,13 +167,14 @@
 
 /obj/item/reagent_containers/hypospray/medipen/stimulants
 	name = "stimulant medipen"
-	desc = "Contains a very large amount of an incredibly powerful stimulant, vastly increasing your movement speed and reducing stuns by a very large amount for around five minutes. Do not take if pregnant."
+	desc = "Contains a very large amount of an incredibly powerful stimulant, vastly increasing your movement speed and reducing stuns by a very large amount for around five minutes.\
+	Also includes a little bit of coffee to perk you up a little. Do not take if pregnant."
 	icon_state = "syndipen"
 	inhand_icon_state = "tbpen"
 	base_icon_state = "syndipen"
-	volume = 50
-	amount_per_transfer_from_this = 50
-	list_reagents = list(/datum/reagent/medicine/stimulants = 50)
+	volume = 60
+	amount_per_transfer_from_this = 60
+	list_reagents = list(/datum/reagent/medicine/stimulants = 50, /datum/reagent/consumable/coffee = 10)
 
 /obj/item/reagent_containers/hypospray/medipen/morphine
 	name = "morphine medipen"

@@ -239,3 +239,4 @@
 	throwforce = 15
 	embedding = list(ignore_throwspeed_threshold = TRUE, "pain_mult" = 0.05, "embed_chance" = 100, "fall_chance" = 0, "rip_time" = 120 SECONDS, "jostle_chance" = 0, "pain_chance" = 1)
 	gps_timer = 10 MINUTES // can't ignore it
+	gpstag = "HUNT"

@@ -1355,9 +1355,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo)
-"fD" = (
-/turf/open/floor/catwalk_floor/airless,
-/area/space/nearstation/nostarlight)
 "fE" = (
 /obj/structure/railing{
 	dir = 5
@@ -2757,8 +2754,24 @@
 "lx" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
-/obj/machinery/airalarm/directional/north,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 30;
+	req_access = list("command");
+	name = "backup circuitboards"
+	},
+/obj/item/circuitboard/machine/telecomms/relay,
+/obj/item/circuitboard/machine/telecomms/hub,
+/obj/item/circuitboard/machine/telecomms/bus,
+/obj/item/circuitboard/machine/telecomms/processor,
+/obj/item/circuitboard/machine/telecomms/broadcaster,
+/obj/item/circuitboard/machine/telecomms/receiver,
+/obj/item/stock_parts/subspace/amplifier,
+/obj/item/stock_parts/subspace/analyzer,
+/obj/item/stock_parts/subspace/ansible,
+/obj/item/stock_parts/subspace/crystal,
+/obj/item/stock_parts/subspace/filter,
+/obj/item/stock_parts/subspace/transmitter,
 /turf/open/floor/plating,
 /area/station/maintenance/department/bridge)
 "ly" = (
@@ -3659,6 +3672,9 @@
 "pi" = (
 /turf/open/floor/iron,
 /area/station/medical)
+"pj" = (
+/turf/open/floor/catwalk_floor/airless,
+/area/space/nearstation/nostarlight)
 "pk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -5399,6 +5415,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/violet/visible,
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine/atmos)
+"wo" = (
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/airless,
+/area/space/nearstation/nostarlight)
 "wq" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6557,6 +6577,7 @@
 /obj/structure/closet/firecloset/full,
 /obj/item/stock_parts/cell/high,
 /obj/item/weldingtool,
+/obj/machinery/airalarm/directional/east,
 /turf/open/floor/plating,
 /area/station/maintenance/department/bridge)
 "Bu" = (
@@ -11878,10 +11899,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary/aft)
-"WY" = (
-/obj/structure/cable,
-/turf/open/floor/catwalk_floor/airless,
-/area/space/nearstation/nostarlight)
 "WZ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/dark_blue/filled/corner{
@@ -33787,15 +33804,15 @@ dN
 pp
 pp
 pp
-fD
-fD
+pj
+pj
 pp
 pp
 pp
 dN
 dN
-fD
-fD
+pj
+pj
 dN
 dN
 pp
@@ -34044,15 +34061,15 @@ dN
 pp
 dN
 dN
-fD
-fD
+pj
+pj
 dN
 dN
 pp
 pp
 pp
-fD
-fD
+pj
+pj
 pp
 pp
 pp
@@ -43306,7 +43323,7 @@ dN
 dN
 Mi
 fs
-fD
+pj
 ZQ
 Mi
 ri
@@ -43864,14 +43881,14 @@ dN
 dN
 dN
 in
-WY
+wo
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -44090,7 +44107,7 @@ dN
 dN
 dN
 hu
-WY
+wo
 pp
 dN
 dN
@@ -44107,7 +44124,7 @@ og
 pp
 pp
 pp
-WY
+wo
 ky
 dN
 dN
@@ -44378,14 +44395,14 @@ pp
 pp
 pp
 in
-WY
+wo
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 pp
 pp
@@ -44604,7 +44621,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 ct
 dN
 dN
@@ -44621,7 +44638,7 @@ pp
 dN
 dN
 sN
-WY
+wo
 pp
 dN
 dN
@@ -44861,7 +44878,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 dN
@@ -44878,7 +44895,7 @@ pp
 dN
 dN
 Fo
-WY
+wo
 Mi
 Mi
 Mi
@@ -44892,14 +44909,14 @@ dN
 dN
 dN
 in
-WY
+wo
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -45118,7 +45135,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 RL
@@ -45135,7 +45152,7 @@ pp
 dN
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -45375,7 +45392,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 je
@@ -45392,7 +45409,7 @@ pp
 dN
 dN
 zi
-WY
+wo
 pp
 dN
 dN
@@ -45406,14 +45423,14 @@ dN
 dN
 dN
 in
-WY
+wo
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -45632,7 +45649,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 aT
@@ -45649,7 +45666,7 @@ pp
 dN
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -45906,7 +45923,7 @@ wi
 dN
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -45920,14 +45937,14 @@ dN
 dN
 dN
 in
-WY
+wo
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -46146,7 +46163,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 WH
@@ -46163,7 +46180,7 @@ Ov
 wi
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -46403,7 +46420,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 WH
@@ -46420,7 +46437,7 @@ Eu
 Po
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -46660,7 +46677,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 jk
@@ -46677,7 +46694,7 @@ Eu
 Po
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -46917,7 +46934,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 pp
@@ -46948,14 +46965,14 @@ dN
 dN
 dN
 in
-fD
+pj
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -47174,7 +47191,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 pp
@@ -47191,7 +47208,7 @@ Eu
 wh
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -47431,7 +47448,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 pp
@@ -47448,7 +47465,7 @@ Eu
 dN
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -47462,14 +47479,14 @@ dN
 dN
 dN
 in
-fD
+pj
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -47688,7 +47705,7 @@ dN
 dN
 dN
 Bb
-WY
+wo
 Fo
 dN
 pp
@@ -47705,7 +47722,7 @@ dN
 dN
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -47945,7 +47962,7 @@ dN
 dN
 dN
 Rv
-WY
+wo
 Fo
 dN
 pp
@@ -47962,7 +47979,7 @@ dN
 dN
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -47976,14 +47993,14 @@ dN
 dN
 dN
 in
-fD
+pj
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -48202,7 +48219,7 @@ dN
 dN
 dN
 pp
-WY
+wo
 Fo
 dN
 pp
@@ -48219,7 +48236,7 @@ dN
 dN
 dN
 Fo
-WY
+wo
 pp
 dN
 dN
@@ -48476,7 +48493,7 @@ dN
 dN
 dN
 Fo
-WY
+wo
 Mi
 Mi
 Mi
@@ -48490,14 +48507,14 @@ pp
 pp
 pp
 in
-WY
+wo
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 pp
 pp
@@ -48718,7 +48735,7 @@ WT
 WT
 WT
 Fo
-WY
+wo
 Mi
 Mi
 Mi
@@ -48733,7 +48750,7 @@ Mi
 Mi
 Mi
 iq
-WY
+wo
 pp
 dN
 dN
@@ -48975,7 +48992,7 @@ rJ
 iQ
 WT
 Fo
-WY
+wo
 pp
 IB
 IB
@@ -48990,8 +49007,8 @@ IB
 pp
 pp
 Fo
-WY
-WY
+wo
+wo
 dN
 dN
 pp
@@ -49004,14 +49021,14 @@ dN
 dN
 dN
 in
-WY
+wo
 in
 in
 in
 in
 in
 in
-WY
+wo
 in
 dN
 dN
@@ -49248,7 +49265,7 @@ IB
 zk
 JU
 IB
-WY
+wo
 dN
 dN
 pp
@@ -50797,7 +50814,7 @@ ys
 Vz
 PB
 ys
-fD
+pj
 BF
 dN
 dN
@@ -54624,7 +54641,7 @@ dN
 dN
 pp
 fs
-fD
+pj
 ZQ
 pp
 Dw

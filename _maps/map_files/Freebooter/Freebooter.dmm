@@ -3120,7 +3120,14 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary/fore)
 "mV" = (
-/obj/item/stack/spacecash/c1000,
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 11;
+	height = 22;
+	name = "SS13: Auxiliary Dock, Station-Port";
+	shuttle_id = "whiteship_home";
+	width = 35
+	},
 /turf/open/space/basic,
 /area/space)
 "mX" = (
@@ -16303,7 +16310,7 @@ dN
 dN
 dN
 dN
-mV
+dN
 dN
 dN
 dN
@@ -29003,7 +29010,7 @@ dN
 dN
 dN
 dN
-dN
+mV
 dN
 dN
 dN

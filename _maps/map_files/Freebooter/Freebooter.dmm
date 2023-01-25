@@ -1356,8 +1356,16 @@
 /turf/open/floor/iron,
 /area/station/cargo)
 "fD" = (
-/turf/open/floor/catwalk_floor/airless,
-/area/space/nearstation/nostarlight)
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 11;
+	height = 22;
+	name = "SS13: Auxiliary Dock, Station-Port";
+	shuttle_id = "whiteship_home";
+	width = 35
+	},
+/turf/open/space/basic,
+/area/space)
 "fE" = (
 /obj/structure/railing{
 	dir = 5
@@ -2075,8 +2083,12 @@
 /area/station/hallway/primary/fore)
 "iL" = (
 /obj/structure/table,
-/obj/item/paper_bin,
 /obj/structure/cable,
+/obj/item/clothing/gloves/color/yellow{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/item/t_scanner,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "iM" = (
@@ -3122,6 +3134,11 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary/fore)
+"mV" = (
+/obj/item/storage/box/disks,
+/obj/structure/table/glass,
+/turf/open/floor/iron/dark/textured_large,
+/area/station/science)
 "mX" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -3213,7 +3230,6 @@
 	dir = 1
 	},
 /obj/machinery/camera/autoname/directional/north,
-/obj/structure/sign/clock/directional/north,
 /turf/open/floor/iron,
 /area/station/engineering)
 "np" = (
@@ -3672,10 +3688,8 @@
 /turf/open/floor/iron,
 /area/station/medical)
 "pj" = (
-/obj/item/storage/box/disks,
-/obj/structure/table/glass,
-/turf/open/floor/iron/dark/textured_large,
-/area/station/science)
+/turf/open/floor/catwalk_floor/airless,
+/area/space/nearstation/nostarlight)
 "pk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -4116,6 +4130,7 @@
 "qU" = (
 /obj/structure/table,
 /obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "qV" = (
@@ -8932,10 +8947,6 @@
 /area/station/hallway/primary/aft)
 "KN" = (
 /obj/structure/table,
-/obj/item/clothing/gloves/color/yellow{
-	pixel_x = -8;
-	pixel_y = 8
-	},
 /obj/item/screwdriver,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
@@ -11048,6 +11059,7 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
+/obj/structure/sign/clock/directional/north,
 /turf/open/floor/iron,
 /area/station/engineering)
 "TE" = (
@@ -11901,17 +11913,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary/aft)
-"WY" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 11;
-	height = 22;
-	name = "SS13: Auxiliary Dock, Station-Port";
-	shuttle_id = "whiteship_home";
-	width = 35
-	},
-/turf/open/space/basic,
-/area/space)
 "WZ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/dark_blue/filled/corner{
@@ -29016,7 +29017,7 @@ dN
 dN
 dN
 dN
-WY
+fD
 dN
 dN
 dN
@@ -33817,15 +33818,15 @@ dN
 pp
 pp
 pp
-fD
-fD
+pj
+pj
 pp
 pp
 pp
 dN
 dN
-fD
-fD
+pj
+pj
 dN
 dN
 pp
@@ -34074,15 +34075,15 @@ dN
 pp
 dN
 dN
-fD
-fD
+pj
+pj
 dN
 dN
 pp
 pp
 pp
-fD
-fD
+pj
+pj
 pp
 pp
 pp
@@ -40518,7 +40519,7 @@ lJ
 lJ
 CK
 iy
-pj
+mV
 CE
 lJ
 PA
@@ -43336,7 +43337,7 @@ dN
 dN
 Mi
 fs
-fD
+pj
 ZQ
 Mi
 ri
@@ -46978,7 +46979,7 @@ dN
 dN
 dN
 in
-fD
+pj
 in
 in
 in
@@ -47492,7 +47493,7 @@ dN
 dN
 dN
 in
-fD
+pj
 in
 in
 in
@@ -48006,7 +48007,7 @@ dN
 dN
 dN
 in
-fD
+pj
 in
 in
 in
@@ -50827,7 +50828,7 @@ ys
 Vz
 PB
 ys
-fD
+pj
 BF
 dN
 dN
@@ -54654,7 +54655,7 @@ dN
 dN
 pp
 fs
-fD
+pj
 ZQ
 pp
 Dw

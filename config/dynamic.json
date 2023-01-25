@@ -3,40 +3,38 @@
 	"Roundstart": {
 		"Traitors": {
 			"cost": 8,
-			"scaling_cost": 9,
-			"weight": 0,
+			"scaling_cost": 15,
+			"weight": 5,
 			"required_candidates": 1,
 			"minimum_required_age": 0,
 			"requirements": [
-				10,
-				10,
-				10,
-				10,
-				10,
-				10,
-				10,
-				10,
-				10,
-				10
+				8,
+				8,
+				8,
+				8,
+				8,
+				8,
+				8,
+				8,
+				8,
+				8
 			],
 			"antag_cap": {
-				"denominator": 24
+				"denominator": 16
 			},
 			"protected_roles": [
-				"Prisoner",
-				"Security Officer",
-				"Warden",
+				"Captain",
 				"Detective",
-				"Head of Security",
-				"Captain"
+				"Quartermaster"
 			],
 			"restricted_roles": [
-				"Cyborg"
+				"Cyborg",
+				"AI"
 			]
 		},
 
 		"Blood Brothers": {
-			"weight": 0
+			"weight": 5
 		},
 
 		"Changelings": {

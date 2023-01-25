@@ -722,7 +722,7 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "da" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1301,7 +1301,7 @@
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "fu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment{
@@ -1348,7 +1348,7 @@
 /obj/item/stack/rods,
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "fC" = (
 /obj/effect/turf_decal/trimline/dark_green/filled/corner{
 	dir = 4
@@ -1357,7 +1357,7 @@
 /area/station/cargo)
 "fD" = (
 /turf/open/floor/catwalk_floor/airless,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "fE" = (
 /obj/structure/railing{
 	dir = 5
@@ -1976,7 +1976,7 @@
 /obj/machinery/power/solar,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/airless,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "ip" = (
 /obj/machinery/computer/operating,
 /obj/machinery/airalarm/directional/north,
@@ -3659,9 +3659,6 @@
 "pi" = (
 /turf/open/floor/iron,
 /area/station/medical)
-"pj" = (
-/turf/open/floor/catwalk_floor/airless,
-/area/space/nearstation/nostarlight)
 "pk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -4788,7 +4785,7 @@
 "tP" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "tQ" = (
 /obj/structure/railing,
 /turf/open/floor/iron/dark/textured_large,
@@ -5402,10 +5399,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/violet/visible,
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine/atmos)
-"wo" = (
-/obj/structure/cable,
-/turf/open/floor/catwalk_floor/airless,
-/area/space/nearstation/nostarlight)
 "wq" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6094,7 +6087,7 @@
 /area/station/command/heads_quarters/ce)
 "zp" = (
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "zq" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 1
@@ -7287,7 +7280,7 @@
 /obj/structure/cable,
 /obj/machinery/power/tracker,
 /turf/open/floor/catwalk_floor/airless,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "Ei" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7849,7 +7842,7 @@
 /obj/item/stack/cable_coil/one,
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "Gv" = (
 /obj/machinery/status_display/door_timer{
 	id = "Cell 1";
@@ -7892,7 +7885,7 @@
 /obj/item/stack/cable_coil/one,
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "GD" = (
 /turf/open/floor/iron/dark/textured_large,
 /area/station/engineering/gravity_generator)
@@ -9768,7 +9761,7 @@
 "NZ" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "Oa" = (
 /obj/machinery/button/door/directional/west{
 	id = "botanylockdown"
@@ -11090,7 +11083,7 @@
 /obj/structure/lattice/catwalk,
 /obj/item/stack/cable_coil/one,
 /turf/open/space/basic,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "TQ" = (
 /obj/structure/table/wood,
 /obj/structure/bedsheetbin,
@@ -11888,7 +11881,7 @@
 "WY" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/airless,
-/area/station/solars)
+/area/space/nearstation/nostarlight)
 "WZ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/dark_blue/filled/corner{
@@ -33794,15 +33787,15 @@ dN
 pp
 pp
 pp
-pj
-pj
+fD
+fD
 pp
 pp
 pp
 dN
 dN
-pj
-pj
+fD
+fD
 dN
 dN
 pp
@@ -34051,15 +34044,15 @@ dN
 pp
 dN
 dN
-pj
-pj
+fD
+fD
 dN
 dN
 pp
 pp
 pp
-pj
-pj
+fD
+fD
 pp
 pp
 pp
@@ -43313,7 +43306,7 @@ dN
 dN
 Mi
 fs
-pj
+fD
 ZQ
 Mi
 ri
@@ -44097,7 +44090,7 @@ dN
 dN
 dN
 hu
-wo
+WY
 pp
 dN
 dN
@@ -44114,7 +44107,7 @@ og
 pp
 pp
 pp
-wo
+WY
 ky
 dN
 dN
@@ -44611,7 +44604,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 ct
 dN
 dN
@@ -44628,7 +44621,7 @@ pp
 dN
 dN
 sN
-wo
+WY
 pp
 dN
 dN
@@ -44868,7 +44861,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 dN
@@ -44885,7 +44878,7 @@ pp
 dN
 dN
 Fo
-wo
+WY
 Mi
 Mi
 Mi
@@ -45125,7 +45118,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 RL
@@ -45142,7 +45135,7 @@ pp
 dN
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -45382,7 +45375,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 je
@@ -45399,7 +45392,7 @@ pp
 dN
 dN
 zi
-wo
+WY
 pp
 dN
 dN
@@ -45639,7 +45632,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 aT
@@ -45656,7 +45649,7 @@ pp
 dN
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -45913,7 +45906,7 @@ wi
 dN
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -46153,7 +46146,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 WH
@@ -46170,7 +46163,7 @@ Ov
 wi
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -46410,7 +46403,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 WH
@@ -46427,7 +46420,7 @@ Eu
 Po
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -46667,7 +46660,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 jk
@@ -46684,7 +46677,7 @@ Eu
 Po
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -46924,7 +46917,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 pp
@@ -47181,7 +47174,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 pp
@@ -47198,7 +47191,7 @@ Eu
 wh
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -47438,7 +47431,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 pp
@@ -47455,7 +47448,7 @@ Eu
 dN
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -47695,7 +47688,7 @@ dN
 dN
 dN
 Bb
-wo
+WY
 Fo
 dN
 pp
@@ -47712,7 +47705,7 @@ dN
 dN
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -47952,7 +47945,7 @@ dN
 dN
 dN
 Rv
-wo
+WY
 Fo
 dN
 pp
@@ -47969,7 +47962,7 @@ dN
 dN
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -48209,7 +48202,7 @@ dN
 dN
 dN
 pp
-wo
+WY
 Fo
 dN
 pp
@@ -48226,7 +48219,7 @@ dN
 dN
 dN
 Fo
-wo
+WY
 pp
 dN
 dN
@@ -48483,7 +48476,7 @@ dN
 dN
 dN
 Fo
-wo
+WY
 Mi
 Mi
 Mi
@@ -48725,7 +48718,7 @@ WT
 WT
 WT
 Fo
-wo
+WY
 Mi
 Mi
 Mi
@@ -48740,7 +48733,7 @@ Mi
 Mi
 Mi
 iq
-wo
+WY
 pp
 dN
 dN
@@ -48982,7 +48975,7 @@ rJ
 iQ
 WT
 Fo
-wo
+WY
 pp
 IB
 IB
@@ -48997,8 +48990,8 @@ IB
 pp
 pp
 Fo
-wo
-wo
+WY
+WY
 dN
 dN
 pp
@@ -49255,7 +49248,7 @@ IB
 zk
 JU
 IB
-wo
+WY
 dN
 dN
 pp
@@ -50804,7 +50797,7 @@ ys
 Vz
 PB
 ys
-pj
+fD
 BF
 dN
 dN
@@ -54631,7 +54624,7 @@ dN
 dN
 pp
 fs
-pj
+fD
 ZQ
 pp
 Dw

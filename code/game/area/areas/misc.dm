@@ -34,3 +34,12 @@
 	has_gravity = STANDARD_GRAVITY
 	name = "Test Room"
 	icon_state = "test_room"
+
+// scoundrel content
+/area/space/nearstation/nostarlight
+	color = "#9999FF"
+	area_flags = UNIQUE_AREA
+	static_lighting = TRUE
+	base_lighting_alpha = 0
+	power_light = TRUE
+	always_unpowered = FALSE

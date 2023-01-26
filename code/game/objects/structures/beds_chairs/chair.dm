@@ -368,13 +368,18 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	C.setDir(user.dir)
 	qdel(src)
 
-/obj/item/chair/proc/smash(mob/living/user)
+/obj/item/chair/proc/smash(mob/living/target_mob)
+	var/mob/living/carbon/C = target_mob
+	if(C.get_active_held_item() == src)
+		return
+	C.visible_message(span_danger("[src] smashes to pieces against \the [C]"))
+	if(iscarbon(C))
+		C.Knockdown(0.1)
 	var/stack_type = initial(origin_type.buildstacktype)
 	playsound(loc, chairsmash_sound, 30, TRUE, -2)
 	if(!stack_type)
 		return
 	var/remaining_mats = initial(origin_type.buildstackamount)
-//	remaining_mats-- //Part of the chair was rendered completely unusable. It magically dissapears. Maybe make some dirt?
 	if(remaining_mats)
 		for(var/M=1 to remaining_mats)
 			new stack_type(get_turf(loc))
@@ -382,37 +387,21 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 		new /obj/item/stack/rods(get_turf(loc), 2)
 	qdel(src)
 
-
-
-
 /obj/item/chair/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(attack_type == UNARMED_ATTACK && prob(hit_reaction_chance))
 		owner.visible_message(span_danger("[owner] fends off [attack_text] with [src]!"))
 		return TRUE
 	return FALSE
 
-/obj/item/chair/afterattack(atom/target, mob/living/carbon/user, proximity)
+/obj/item/chair/attack(mob/living/target_mob, mob/living/user, params)
 	. = ..()
-	if(!proximity)
-		return
-	if(!ismob(target))
-		return
-
-	user.visible_message(span_danger("[user] smashes \the [src] to pieces against \the [target]"))
-	if(iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.Knockdown(0.1)
-	smash(user)
+	var/C = target_mob
+	smash(C)
 
 /obj/item/chair/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
-	if(!ismob(hit_atom))
-		return
-	hit_atom.visible_message(span_danger("[src] smashes to pieces against \the [hit_atom]"))
-	if(iscarbon(hit_atom))
-		var/mob/living/carbon/C = hit_atom
-		C.Knockdown(0.1)
-	smash()
+	var/C = hit_atom
+	smash(C)
 
 /obj/item/chair/greyscale
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS

@@ -126,7 +126,7 @@
 	gender = PLURAL
 	singular_name = "medical gauze"
 	icon_state = "gauze"
-	self_delay = 5 SECONDS
+	self_delay = 2 SECONDS
 	other_delay = 2 SECONDS
 	max_amount = 12
 	amount = 6
@@ -197,8 +197,8 @@
 	name = "improvised gauze"
 	singular_name = "improvised gauze"
 	desc = "A roll of cloth roughly cut from something that does a decent job of stabilizing wounds, but less efficiently so than real medical gauze."
-	self_delay = 6 SECONDS
-	other_delay = 3 SECONDS
+	self_delay = 4 SECONDS
+	other_delay = 2 SECONDS
 	splint_factor = 0.85
 	burn_cleanliness_bonus = 0.7
 	absorption_rate = 0.075

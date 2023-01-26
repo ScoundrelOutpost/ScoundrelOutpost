@@ -200,21 +200,32 @@
 		temp = getFireLoss()
 		if(temp)
 			if(temp < 25)
-				msg += "[t_He] [t_has] minor [dna.species.burn_damage_desc].\n"
+				msg += "<span class='engradio'>[t_He] [t_has] minor [dna.species.burn_damage_desc].</span>\n"
 			else if (temp < 50)
-				msg += "[t_He] [t_has] <b>moderate</b> [dna.species.burn_damage_desc]!\n"
+				msg += "<span class='engradio'>[t_He] [t_has] <b>moderate</b> [dna.species.burn_damage_desc]!</span>\n"
 			else
-				msg += "<B>[t_He] [t_has] severe [dna.species.burn_damage_desc]!</B>\n"
+				msg += "<span class='engradio'><B>[t_He] [t_has] severe [dna.species.burn_damage_desc]!</B></span>\n"
 
 		temp = getCloneLoss()
 		if(temp)
 			if(temp < 25)
-				msg += "[t_He] [t_has] minor [dna.species.cellular_damage_desc].\n"
+				msg += "<span class='deadsay'>[t_He] [t_has] minor [dna.species.cellular_damage_desc].</span>\n"
 			else if(temp < 50)
-				msg += "[t_He] [t_has] <b>moderate</b> [dna.species.cellular_damage_desc]!\n"
+				msg += "<span class='deadsay'>[t_He] [t_has] <b>moderate</b> [dna.species.cellular_damage_desc]!</span>\n"
 			else
-				msg += "<b>[t_He] [t_has] severe [dna.species.cellular_damage_desc]!</b>\n"
+				msg += "<span class='deadsay'><b>[t_He] [t_has] severe [dna.species.cellular_damage_desc]!</b></span>\n"
 
+		temp = getToxLoss()
+		if(temp)
+			if(temp >= 90 && !obscured)
+				msg += "<span class='green'><b>[t_He] looks deathly ill!</b></span>\n"
+
+		temp = getOxyLoss()
+		if(temp)
+			if((temp >= 30 && temp <=120) && (!appears_dead && !obscured))
+				msg += "<span class='medradio'>[t_He] is gasping for air!</span>\n"
+			else if(temp > 120 && (!appears_dead && !obscured))
+				msg += "<span class='medradio'><b>[t_He] isn't breathing!</b></span>\n"
 
 	if(has_status_effect(/datum/status_effect/fire_handler/fire_stacks))
 		msg += "[t_He] [t_is] covered in something flammable.\n"

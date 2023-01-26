@@ -58,6 +58,9 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 8
 	throwforce = 8
+/obj/item/storage/medkit/emergency/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/medkit/emergency/PopulateContents()
 	if(empty)
@@ -158,6 +161,9 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
 	throwforce = 10
+/obj/item/storage/medkit/ancient/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/medkit/ancient/PopulateContents()
 	if(empty)
@@ -297,7 +303,6 @@
 	icon_state = "medkit_tactical"
 	inhand_icon_state = "medkit-tactical"
 	damagetype_healed = "all"
-	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/medkit/tactical/Initialize(mapload)
 	. = ..()

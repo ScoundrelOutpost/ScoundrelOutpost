@@ -113,6 +113,7 @@
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
 	projectile_damage_multiplier = 15
+	weapon_weight = WEAPON_HEAVY // there's a bug with onehanded weapons using the automatic_fire component. when fixed, reduce this to medium or light
 
 /obj/item/gun/ballistic/automatic/wt550/Initialize(mapload)
 	. = ..()

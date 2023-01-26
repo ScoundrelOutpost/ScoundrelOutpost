@@ -567,6 +567,7 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 		new /datum/stack_recipe("medipen box", /obj/item/storage/box/medipens), \
 		new /datum/stack_recipe("oxygen tank box", /obj/item/storage/box/emergencytank), \
 		new /datum/stack_recipe("extended oxygen tank box", /obj/item/storage/box/engitank), \
+		new /datum/stack_recipe("suspicious box", /obj/item/storage/box/syndie_kit), \
 		null, \
 
 		new /datum/stack_recipe("survival box", /obj/item/storage/box/survival/crafted), \

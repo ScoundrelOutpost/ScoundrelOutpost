@@ -775,14 +775,14 @@ GLOBAL_LIST_EMPTY(TabletMessengers) // a list of all active messengers, similar 
 
 	return ..()
 
-/obj/item/modular_computer/wrench_act(mob/living/user, obj/item/tool)
+/*/obj/item/modular_computer/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	tool.play_tool_sound(src, user, 20, volume=20)
 	new /obj/item/stack/sheet/iron(get_turf(loc), steel_sheet_cost)
 	user.balloon_alert(user, "disassembled")
 	relay_qdel()
 	qdel(src)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return TOOL_ACT_TOOLTYPE_SUCCESS*/
 
 /obj/item/modular_computer/welder_act(mob/living/user, obj/item/tool)
 	. = ..()

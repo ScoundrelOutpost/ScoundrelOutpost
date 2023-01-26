@@ -1069,10 +1069,10 @@
 	ADD_TRAIT(src, TRAIT_TASTEFULLY_THICK_ID_CARD, ROUNDSTART_TRAIT)
 
 /obj/item/card/id/advanced/gold/captains_spare
-	name = "captain's spare ID"
-	desc = "The spare ID of the High Lord himself."
-	registered_name = "Captain"
-	trim = /datum/id_trim/job/captain
+	name = "master ID"
+	desc = "This'll get you anywhere you need to go on the station."
+//	registered_name = "Captain"
+	trim = /datum/id_trim/job/master
 	registered_age = null
 
 /obj/item/card/id/advanced/gold/captains_spare/update_label() //so it doesn't change to Captain's ID card (Captain) on a sneeze
@@ -1635,6 +1635,13 @@
 	name = "Green Team identification card"
 	desc = "A card used to identify members of the green team for CTF"
 	icon_state = "ctf_green"
+
+// scoundrel content
+/obj/item/card/id/advanced/silver/leader_spare
+	name = "spare leadership ID"
+	desc = "A spare ID providing access to the station's sensitive areas."
+	trim = /datum/id_trim/job/deckhand/leader
+	registered_age = null
 
 #undef INTERN_THRESHOLD_FALLBACK_HOURS
 #undef ID_ICON_BORDERS

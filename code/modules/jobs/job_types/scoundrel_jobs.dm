@@ -263,6 +263,9 @@
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	rpg_title = "Shipmaster"
 
+/datum/job/captain_scoundrel/get_captaincy_announcement(mob/living/captain)
+	return
+
 /datum/outfit/job/captain_scoundrel
 	name = "Captain"
 	jobtype = /datum/job/captain_scoundrel
@@ -340,6 +343,9 @@
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 	ignore_human_authority = TRUE
 
+/datum/job/quartermaster_scoundrel/get_captaincy_announcement(mob/living/captain)
+	return
+
 /datum/outfit/job/quartermaster_scoundrel
 	name = "Quartermaster"
 	jobtype = /datum/job/quartermaster_scoundrel
@@ -364,7 +370,7 @@
 	suit_store = /obj/item/personalshield/standard/advanced
 
 	l_pocket = /obj/item/modular_computer/tablet/pda/deckhand/leader/quartermaster
-	r_pocket = /obj/item/storage/pouch/holding // move this to the locker when it becomes a steal obj
+//	r_pocket = /obj/item/storage/pouch/holding // moved to acting captain system
 
 	pda_slot = ITEM_SLOT_LPOCKET
 

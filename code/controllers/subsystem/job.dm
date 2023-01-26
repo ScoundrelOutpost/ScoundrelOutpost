@@ -41,13 +41,12 @@ SUBSYSTEM_DEF(job)
 	 * See [/datum/controller/subsystem/ticker/proc/equip_characters]
 	 */
 	var/list/chain_of_command = list(
-		JOB_CAPTAIN = 1,
-		JOB_HEAD_OF_PERSONNEL = 2,
-		JOB_RESEARCH_DIRECTOR = 3,
-		JOB_CHIEF_ENGINEER = 4,
-		JOB_CHIEF_MEDICAL_OFFICER = 5,
-		JOB_HEAD_OF_SECURITY = 6,
-		JOB_QUARTERMASTER = 7,
+		JOB_QUARTERMASTER_SCOUNDREL = 1,
+		JOB_CAPTAIN_SCOUNDREL = 2,
+		JOB_DETECTIVE_SCOUNDREL = 3,
+		JOB_MEDSCI_SPECIALIST = 4,
+		JOB_ENGINEERING_SPECIALIST = 5,
+		JOB_DECKHAND = 6,
 	)
 
 	/// If TRUE, some player has been assigned Captaincy or Acting Captaincy at some point during the shift and has been given the spare ID safe code.
@@ -1010,7 +1009,7 @@ SUBSYSTEM_DEF(job)
 	if(!id_safe_code)
 		CRASH("Cannot promote [new_captain.real_name] to Captain, there is no id_safe_code.")
 
-	var/paper = new /obj/item/paper/fluff/spare_id_safe_code()
+	var/paper = new /obj/item/storage/pouch/holding/leadership()
 	var/list/slots = list(
 		LOCATION_LPOCKET = ITEM_SLOT_LPOCKET,
 		LOCATION_RPOCKET = ITEM_SLOT_RPOCKET,
@@ -1020,22 +1019,23 @@ SUBSYSTEM_DEF(job)
 	var/where = new_captain.equip_in_one_of_slots(paper, slots, FALSE) || "at your feet"
 
 	if(acting_captain)
-		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
+		to_chat(new_captain, span_notice("Because of your conduct and standing with the crew, you've been entrusted with some leadership essentials. They can be found [where]."))
 	else
-		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
+		to_chat(new_captain, span_notice("Because of your conduct and standing with the crew, you've been entrusted with some leadership essentials. They can be found [where]."))
 
 	// Force-give their ID card bridge access.
-	var/obj/item/id_slot = new_captain.get_item_by_slot(ITEM_SLOT_ID)
+	// Commented out as of adding the spare leadership ID, jan 2023
+/*	var/obj/item/id_slot = new_captain.get_item_by_slot(ITEM_SLOT_ID)
 	if(id_slot)
 		var/obj/item/card/id/id_card = id_slot.GetID()
 		if(!(ACCESS_COMMAND in id_card.access))
-			id_card.add_wildcards(list(ACCESS_COMMAND), mode=FORCE_ADD_ALL)
+			id_card.add_wildcards(list(ACCESS_COMMAND), mode=FORCE_ADD_ALL)*/
 
 	assigned_captain = TRUE
 
 /// Send a drop pod containing a piece of paper with the spare ID safe code to loc
 /datum/controller/subsystem/job/proc/send_spare_id_safe_code(loc)
-	new /obj/effect/pod_landingzone(loc, /obj/structure/closet/supplypod/centcompod, new /obj/item/paper/fluff/emergency_spare_id_safe_code())
+	new /obj/effect/pod_landingzone(loc, /obj/structure/closet/supplypod/centcompod, new /obj/item/storage/pouch/holding/leadership())
 	safe_code_timer_id = null
 	safe_code_request_loc = null
 

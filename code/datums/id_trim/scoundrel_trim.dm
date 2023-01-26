@@ -174,3 +174,40 @@
 		ACCESS_COMMAND
 		)
 	job = /datum/job/detective_scoundrel
+
+/datum/id_trim/job/deckhand/leader
+	assignment = "Leader"
+	trim_state = "trim_headofpersonnel"
+	orbit_icon = "toolbox"
+	department_color = COLOR_MAROON
+	subdepartment_color = COLOR_MAROON
+	sechud_icon_state = SECHUD_HEAD_OF_PERSONNEL
+	minimal_access = list(
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_CARGO,
+		ACCESS_ATMOSPHERICS,
+		ACCESS_KITCHEN,
+		ACCESS_PHARMACY,
+		ACCESS_SURGERY,
+		ACCESS_KEYCARD_AUTH,
+		ACCESS_MINING,
+		ACCESS_MINING_STATION,
+		ACCESS_ROBOTICS,
+		ACCESS_HYDROPONICS,
+		//basic access end
+		ACCESS_DETECTIVE,
+		ACCESS_COMMAND
+		)
+	job = null
+
+/datum/id_trim/job/master
+	assignment = "Leader"
+	trim_state = "trim_captain"
+	orbit_icon = "crown"
+	department_color = COLOR_MAROON
+	subdepartment_color = COLOR_MAROON
+	sechud_icon_state = SECHUD_CAPTAIN
+	template_access = list(
+		ACCESS_CAPTAIN,
+		ACCESS_CHANGE_IDS,
+		)

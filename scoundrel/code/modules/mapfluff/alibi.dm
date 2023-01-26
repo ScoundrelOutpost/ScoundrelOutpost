@@ -1,3 +1,5 @@
+// rename this file to generic fluff
+
 /obj/item/paper/fluff/alibipouch
 	name = "\proper alibi instructions"
 	default_raw_text = "Life as an independent on the frontier means looking out for yourself \
@@ -60,3 +62,14 @@
 	KNOCKOUT <br>\
 	5u Sodium Thiopental <br>\
 	10u Fentanyl <br><br>"
+
+/obj/item/paper/fluff/leadership_assignment
+	name = "\proper your responsibility"
+	default_raw_text = "\
+	You have been entrusted with a spare leadership ID to be used \
+	in an emergency. The crew is depending on you to \
+	make the right call with it. No one having bridge access in an emergency can be as dangerous as \
+	letting it fall into the wrong hands. <br><br> \
+	\
+	Additionally, you've been provided a command remote and a stethoscope to extract the master keycard \
+	from the vault's safe, if necessary."

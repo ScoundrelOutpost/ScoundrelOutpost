@@ -12,7 +12,7 @@
 	icon = 'icons/obj/ore.dmi'
 	icon_state = "ore"
 	inhand_icon_state = null
-	full_w_class = WEIGHT_CLASS_BULKY
+	full_w_class = WEIGHT_CLASS_NORMAL
 	singular_name = "ore chunk"
 	material_flags = MATERIAL_EFFECTS
 	var/points = 0 //How many points this ore gets you from the ore redemption machine

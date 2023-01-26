@@ -66,8 +66,8 @@
 /obj/item/paper/fluff/leadership_assignment
 	name = "\proper your responsibility"
 	default_raw_text = "\
-	You have been entrusted with a spare leadership ID to be used \
-	in an emergency. The crew is depending on you to \
+	You have been entrusted with a spare leadership ID, granting access to the bridge and the \
+	detective's office. The crew is depending on you to \
 	make the right call with it. No one having bridge access in an emergency can be as dangerous as \
 	letting it fall into the wrong hands. <br><br> \
 	\

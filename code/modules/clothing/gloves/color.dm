@@ -102,7 +102,7 @@
 	desc = "The old gloves your great grandfather stole from Engineering, many moons ago. They've seen some tough times recently."
 
 /obj/item/clothing/gloves/color/black
-	desc = "These gloves are fire-resistant."
+	desc = "These gloves are fire-resistant and grippy, enabling faster construction."
 	name = "black gloves"
 	icon_state = "black"
 	greyscale_colors = "#2f2e31"
@@ -112,6 +112,7 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
 	cut_type = /obj/item/clothing/gloves/fingerless
+	clothing_traits = list(TRAIT_QUICK_BUILD)
 
 /obj/item/clothing/gloves/fingerless
 	name = "fingerless gloves"

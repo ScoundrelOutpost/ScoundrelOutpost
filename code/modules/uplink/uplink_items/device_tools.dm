@@ -12,7 +12,7 @@
 /datum/uplink_item/device_tools/soap
 	name = "Syndicate Soap"
 	desc = "A sinister-looking surfactant used to clean blood stains to hide murders and prevent DNA analysis. \
-			You can also drop it underfoot to slip people."
+			You can also drop it underfoot to slip people -- it's extra slippery and it'll keep them down longer."
 	item = /obj/item/soap/syndie
 	cost = 5
 	surplus = 50

@@ -168,7 +168,7 @@
 /datum/uplink_item/role_restricted/mimery
 	name = "Guide to Advanced Mimery Series"
 	desc = "The classical two part series on how to further hone your mime skills. Upon studying the series, the user should be able to make 3x1 invisible walls, and shoot bullets out of their fingers. \
-			Obviously only works for Mimes."
+			If the user is not already a mime, the use of these skills will require a vow of silence."
 	progression_minimum = 30 MINUTES
 	cost = 60
 	item = /obj/item/storage/box/syndie_kit/mimery

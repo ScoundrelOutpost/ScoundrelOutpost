@@ -196,7 +196,8 @@
 		ACCESS_HYDROPONICS,
 		//basic access end
 		ACCESS_DETECTIVE,
-		ACCESS_COMMAND
+		ACCESS_COMMAND,
+		ACCESS_ENGINE_EQUIP,
 		)
 	job = null
 

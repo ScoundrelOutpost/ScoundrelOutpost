@@ -285,7 +285,7 @@
 		broken = TRUE
 		rods_amount = 1
 		rods_broken = FALSE
-		var/obj/R = new rods_type(drop_location(), rods_broken)
+		var/obj/R = new rods_type(drop_location(), rods_amount)
 		transfer_fingerprints_to(R)
 
 /obj/structure/grille/proc/repair_grille()

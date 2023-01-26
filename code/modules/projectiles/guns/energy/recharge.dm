@@ -109,6 +109,7 @@
 	knife_x_offset = 20
 	knife_y_offset = 12
 	projectile_damage_multiplier = 20
+	pickup_sound = null
 
 /obj/item/gun/energy/recharge/ebow/halloween
 	name = "candy corn crossbow"
@@ -129,3 +130,4 @@
 	suppressed = null
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/large)
 	projectile_damage_multiplier = 30
+	pickup_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'

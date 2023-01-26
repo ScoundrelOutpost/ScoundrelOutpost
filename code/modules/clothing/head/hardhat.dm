@@ -35,8 +35,10 @@
 /obj/item/clothing/head/utility/hardhat/proc/toggle_helmet_light(mob/living/user)
 	on = !on
 	if(on)
+		playsound(src, 'sound/weapons/magin.ogg', 40, TRUE, ignore_walls = FALSE)
 		turn_on(user)
 	else
+		playsound(src, 'sound/weapons/magout.ogg', 40, TRUE, ignore_walls = FALSE)
 		turn_off(user)
 	update_appearance()
 

@@ -154,6 +154,14 @@
 	Not recommended for beginners."
 	item = /obj/item/storage/toolbox/loadout/shadow
 
+/datum/uplink_item/loadout/surgeon
+	name = "Night Surgeon Kit"
+	desc = "A ready-assembled loadout suited to kidnapping and medical crimes. Comes loaded with: \
+	A Syndicate surgery bag, a Syndicate shelter capsule, a dart pistol, a poison kit, a brainwashing surgery disk, a sleepy pen, and \
+	a radioactive microlaser. \
+	Not recommended for beginners."
+	item = /obj/item/storage/toolbox/loadout/surgeon
+
 // freedbies
 /datum/uplink_category/freebies
 	name = "Standard Equipment"

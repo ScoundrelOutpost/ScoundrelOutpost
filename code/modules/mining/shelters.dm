@@ -85,3 +85,16 @@
 	. = ..()
 	whitelisted_turfs = typecacheof(/turf/closed/mineral)
 	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+// scoundrel content
+/datum/map_template/shelter/construction_pod
+	name = "Construction Pod"
+	shelter_id = "shelter_construction_pod"
+	description = "An empty 11x11 construction pod, for engineering projects in space."
+	mappath = "_maps/templates/construction_pod.dmm"
+
+/datum/map_template/shelter/traitor
+	name = "Unknown Shelter"
+	shelter_id = "shelter_traitor"
+	description = "An unidentified shelter that requires a 13x13 space to deploy."
+	mappath = "_maps/templates/shelter_traitor.dmm"

@@ -269,3 +269,13 @@
 	lefthand_file = initial(I.lefthand_file)
 	righthand_file = initial(I.righthand_file)
 	cut_overlays() //to get rid of the big blue x
+
+// scoundrel content
+/obj/item/survivalcapsule/construction_pod
+	name = "construction capsule"
+	desc = "A bluespace capsule that when activated will rapidly expand into an empty, workable space \
+	for construction & engineering projects."
+	template_id = "shelter_construction_pod"
+
+/obj/item/survivalcapsule/traitor
+	template_id = "shelter_traitor"

@@ -48,3 +48,15 @@
 	SUFFOCATION TREATMENT <br>\
 	1. Use Atropine injector <br>\
 	2. Take an iron pill if blood levels are low <br>"
+
+/obj/item/paper/fluff/poison_kit_guide
+	name = "\proper how to poison large animals"
+	default_raw_text = "\
+	LETHAL <br>\
+	5u Curare <br>\
+	5u Coniine <br>\
+	5u Initropidril <br><br>\
+	\
+	KNOCKOUT <br>\
+	5u Sodium Thiopental <br>\
+	10u Fentanyl <br><br>"

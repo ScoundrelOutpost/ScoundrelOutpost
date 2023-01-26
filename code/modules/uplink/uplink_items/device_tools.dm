@@ -249,3 +249,12 @@
 	progression_minimum = 25 MINUTES
 	item = /obj/item/disk/surgery/brainwashing
 	cost = 25
+
+/datum/uplink_item/device_tools/traitorcapsule
+	name = "Syndicate Survival Capsule"
+	desc = "An emergency deployable getaway base equipped with surgical equipment, charging stations, an autolathe, \
+	a camera computer, a grinder, a spare starsuit, and a microwave. Also carries fulton-extraction supplies, a box of \
+	donk-pockets, and a first-aid kit. The blast door can only be operated by hand with Syndicate access, found on Agent ID cards."
+	item = /obj/item/survivalcapsule/traitor
+	cost = 10
+	limited_stock = 1

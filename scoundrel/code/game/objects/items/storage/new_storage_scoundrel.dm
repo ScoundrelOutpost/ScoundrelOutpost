@@ -506,6 +506,17 @@
 	new /obj/item/storage/box/r_bolas(src)
 //	new /obj/item/implanter/ventcrawling/deluxe(src) // add this back in when the exploits are fixed
 
+// surgeon kit
+/obj/item/storage/toolbox/loadout/surgeon/PopulateContents()
+	new /obj/item/storage/backpack/duffelbag/syndie/surgery(src)
+	new /obj/item/survivalcapsule/traitor(src)
+	new /obj/item/gun/syringe/syndicate(src)
+	new /obj/item/storage/box/syndie_kit/chemical(src)
+	new /obj/item/disk/surgery/brainwashing(src)
+	new /obj/item/pen/sleepy(src)
+	new /obj/item/healthanalyzer/rad_laser(src)
+	new /obj/item/paper/fluff/poison_kit_guide(src)
+
 // mini toolboxes
 
 /obj/item/storage/toolbox/mini

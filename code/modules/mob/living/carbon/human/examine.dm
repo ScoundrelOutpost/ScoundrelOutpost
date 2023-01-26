@@ -143,13 +143,13 @@
 		missing -= body_part.body_zone
 		for(var/obj/item/I in body_part.embedded_objects)
 			if(I.isEmbedHarmless())
-				msg += "<B>[t_He] [t_has] [icon2html(I, user)] \a [I] stuck to [t_his] [body_part.name]!</B>\n"
+				msg += "<span class='cult'><B>[t_He] [t_has] [icon2html(I, user)] \a [I] stuck to [t_his] [body_part.name]!</B></span>\n"
 			else
-				msg += "<B>[t_He] [t_has] [icon2html(I, user)] \a [I] embedded in [t_his] [body_part.name]!</B>\n"
+				msg += "<span class='cult'><B>[t_He] [t_has] [icon2html(I, user)] \a [I] embedded in [t_his] [body_part.name]!</B></span>\n"
 
 		for(var/i in body_part.wounds)
 			var/datum/wound/iter_wound = i
-			msg += "[iter_wound.get_examine_description(user)]\n"
+			msg += "<span class='cult'>[iter_wound.get_examine_description(user)]</span>\n"
 
 	for(var/X in disabled)
 		var/obj/item/bodypart/body_part = X
@@ -262,7 +262,7 @@
 		if(appears_dead)
 			bleed_text = list("<span class='deadsay'><B>Blood is visible in [t_his] open")
 		else
-			bleed_text = list("<B>[t_He] [t_is] bleeding from [t_his]")
+			bleed_text = list("<span class='cult'><B>[t_He] [t_is] bleeding from [t_his]")
 
 		switch(num_bleeds)
 			if(1 to 2)
@@ -279,7 +279,7 @@
 			if(reagents.has_reagent(/datum/reagent/toxin/heparin, needs_metabolizing = TRUE))
 				bleed_text += " incredibly quickly"
 
-			bleed_text += "!</B>\n"
+			bleed_text += "!</B></span>\n"
 
 		for(var/i in grasped_limbs)
 			var/obj/item/bodypart/grasped_part = i

@@ -279,7 +279,7 @@
 		if(appears_dead)
 			bleed_text = list("<span class='deadsay'><B>Blood is visible in [t_his] open")
 		else
-			bleed_text = list("<span class='cult'><B>[t_He] [t_is] bleeding from [t_his]")
+			bleed_text = list("<B>[t_He] [t_is] bleeding from [t_his]")
 
 		switch(num_bleeds)
 			if(1 to 2)

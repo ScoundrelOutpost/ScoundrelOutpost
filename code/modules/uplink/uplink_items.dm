@@ -9,10 +9,24 @@
 		var/discount = uplink_item.get_discount()
 		var/list/disclaimer = list("Void where prohibited.", "Not recommended for children.", "Contains small parts.", "Check local laws for legality in region.", "Do not taunt.", "Not responsible for direct, indirect, incidental or consequential damages resulting from any defect, error or failure to perform.", "Keep away from fire or flames.", "Product is provided \"as is\" without any implied or expressed warranties.", "As seen on TV.", "For recreational use only.", "Use only as directed.", "16% sales tax will be charged for orders originating within Space Nebraska.")
 		uplink_item.limited_stock = limited_stock
-		if(uplink_item.cost >= 20) //Tough love for nuke ops
-			discount *= 0.5
+		if(uplink_item.cost >= 25)
+			if(uplink_item.cost < 50)
+				discount *= 1.5 // reduces the discount slightly
+			else if(uplink_item.cost >= 50)
+				discount *= 2 // reduces the discount by half
+			if(discount >= 1) // if the resulting discount is 0%, set it to 5%
+				discount = 0.95
 		uplink_item.category = category
-		uplink_item.cost = max(round(uplink_item.cost * discount),1)
+		uplink_item.cost = max(round(uplink_item.cost * discount, 5),0)
+		if(uplink_item.cost == initial(uplink_item.cost)) // if the discount sucks so bad it gets rounded to its initial cost, just drop it by 5 tc
+			uplink_item.cost -= 5
+		/*
+		this section here doesn't work. i don't know how to fix that
+		if(uplink_item.cost == 0)
+			uplink_item.cost_override_string = "Free"
+		else if(uplink_item.cost < 0)
+			uplink_item.cost_override_string = "WE'LL PAY YOU" // indicator that something's gone wrong. this shouldn't happen
+		*/
 		uplink_item.name += " ([round(((initial(uplink_item.cost)-uplink_item.cost)/initial(uplink_item.cost))*100)]% off!)"
 		uplink_item.desc += " Normally costs [initial(uplink_item.cost)] TC. All sales final. [pick(disclaimer)]"
 		uplink_item.item = taken_item.item

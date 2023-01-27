@@ -160,7 +160,7 @@
 
 // scoundrel content
 /obj/item/card/access_inscriber
-	name = "default access inscriber"
+	name = "access inscriber"
 	desc = "A tool used to quickly inscribe access to airlocks and machinery."
 	icon_state = "doorjack"
 	worn_icon_state = "doorjack"
@@ -327,7 +327,6 @@
 
 // choice inscriber
 /obj/item/card/access_inscriber/choice
-	name = "access inscriber"
 	desc = "A tool used to quickly inscribe access to airlocks and machinery. This one can be activated to choose from a selection of access types."
 	inscribed_access = null
 	inscribed_one_access = null

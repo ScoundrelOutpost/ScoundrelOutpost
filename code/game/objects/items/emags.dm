@@ -180,7 +180,7 @@
 
 	// how long it takes to hijack access. null skips the do_after and makes it instant
 	var/hijack_time = 16 SECONDS
-	var/locker_hijack_time = 60 SECONDS // discourage bad behavior
+	var/locker_hijack_time = 45 SECONDS // discourage bad behavior
 	// used for APCs and air alarms
 	var/aux_hijack_time = 8 SECONDS
 	var/recharge_time = 90 SECONDS

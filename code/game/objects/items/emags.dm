@@ -183,7 +183,7 @@
 	var/locker_hijack_time = 60 SECONDS // discourage bad behavior
 	// used for APCs and air alarms
 	var/aux_hijack_time = 8 SECONDS
-	var/recharge_time = 120 SECONDS
+	var/recharge_time = 90 SECONDS
 
 	// the security level of an airlock that the inscriber is willing to ignore. greater than 1 will also bypass the screwdriver panel
 	var/security_override = 0

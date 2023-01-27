@@ -217,11 +217,11 @@
 				to_chat(user, span_warning("You need access to the electronics!"))
 				return
 
-		else if(hijack_time)
+		if(hijack_time)
+			do_sparks(1, TRUE, src)
+			to_chat(user, span_warning("You begin reprogramming the electronics!"))
 			if(do_after(user, hijack_time))
 				hijack_access(airlock, user)
-				do_sparks(1, TRUE, src)
-				to_chat(user, span_warning("You begin reprogramming the electronics!"))
 		else
 			hijack_access(airlock, user)
 
@@ -233,10 +233,10 @@
 			to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
 			return
 		else if(locker_hijack_time)
+			to_chat(user, span_warning("You begin reprogramming the electronics!"))
+			do_sparks(1, TRUE, src)
 			if(do_after(user, locker_hijack_time))
 				hijack_access(locker, user)
-				do_sparks(1, TRUE, src)
-				to_chat(user, span_warning("You begin reprogramming the electronics!"))
 		else
 			hijack_access(locker, user)
 
@@ -254,10 +254,10 @@
 				return
 
 		if(aux_hijack_time)
+			to_chat(user, span_warning("You begin reprogramming the electronics!"))
+			do_sparks(1, TRUE, src)
 			if(do_after(user, aux_hijack_time))
 				hijack_access(apc, user)
-				do_sparks(1, TRUE, src)
-				to_chat(user, span_warning("You begin reprogramming the electronics!"))
 		else
 			hijack_access(apc, user)
 
@@ -275,10 +275,10 @@
 				return
 
 		if(aux_hijack_time)
+			to_chat(user, span_warning("You begin reprogramming the electronics!"))
+			do_sparks(1, TRUE, src)
 			if(do_after(user, aux_hijack_time))
 				hijack_access(alarm, user)
-				do_sparks(1, TRUE, src)
-				to_chat(user, span_warning("You begin reprogramming the electronics!"))
 		else
 			hijack_access(alarm, user)
 
@@ -312,17 +312,23 @@
 	skip_panel = TRUE
 	access_string = "The programming chip is black and suspiciously unmarked."
 
+/obj/item/card/access_inscriber/default
+	name = "default access inscriber"
+	inscribed_access = null
+	inscribed_one_access = null
+	access_string = "It's programmed to reset access to defaults."
+
 /obj/item/card/access_inscriber/maintenance
 	name = "maintenance access inscriber"
 	inscribed_access = null
 	inscribed_one_access = list(ACCESS_MAINT_TUNNELS)
-	access_string = "It's programmed to set MAINTENANCE access requirements."
+	access_string = "It's programmed to add MAINTENANCE access requirements."
 
 /obj/item/card/access_inscriber/command
 	name = "command access inscriber"
 	inscribed_access = null
 	inscribed_one_access = list(ACCESS_COMMAND)
-	access_string = "It's programmed to set COMMAND access requirements."
+	access_string = "It's programmed to add COMMAND access requirements."
 
 // choice inscriber
 /obj/item/card/access_inscriber/choice
@@ -331,7 +337,6 @@
 	inscribed_one_access = null
 	access_string = "It's programmed to reset access to defaults."
 	var/selection = 0
-	max_charges = 6
 
 //i'm sure this could be done much better, i just don't know how
 /obj/item/card/access_inscriber/choice/attack_self(mob/user, modifiers)

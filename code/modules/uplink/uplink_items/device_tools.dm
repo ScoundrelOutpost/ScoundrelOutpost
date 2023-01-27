@@ -80,8 +80,8 @@
 	restricted access. Can be used on its own to lock non-Agents out of airlocks, lockers, APCs and air alarms, but an agent card \
 	can be used in conjunction to allow for exclusive access."
 	item = /obj/item/card/access_inscriber/syndicate
-	cost = 15
-	limited_stock = 2
+	cost = 20
+	limited_stock = 1
 
 /datum/uplink_item/device_tools/fakenucleardisk
 	name = "Decoy Nuclear Authentication Disk"

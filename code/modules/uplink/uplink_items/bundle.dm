@@ -150,7 +150,7 @@
 	name = "Shadow Kit"
 	desc = "A ready-assembled loadout for stalking the shadows. Comes loaded with: \
 	A book on shadow-walking, granting the ability to disappear into darkness and recover health, a smoke spellbook, \
-	a pair of nightvision goggles, and a box of reinforced bolas. \
+	a pair of nightvision goggles, a box of reinforced bolas, and a Syndicate access inscriber. \
 	Not recommended for beginners."
 	item = /obj/item/storage/toolbox/loadout/shadow
 
@@ -158,7 +158,7 @@
 	name = "Night Surgeon Kit"
 	desc = "A ready-assembled loadout suited to kidnapping and medical crimes. Comes loaded with: \
 	A Syndicate surgery bag, a Syndicate shelter capsule, a dart pistol, a poison kit, a brainwashing surgery disk, a sleepy pen, and \
-	a radioactive microlaser. \
+	a Syndicate access inscriber. \
 	Not recommended for beginners."
 	item = /obj/item/storage/toolbox/loadout/surgeon
 

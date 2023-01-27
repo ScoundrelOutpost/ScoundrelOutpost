@@ -19,14 +19,14 @@
 	emote_taunt = list("gnashes")
 	taunt_chance = 30
 	speed = 0
-	maxHealth = 25
-	health = 25
+	maxHealth = 75
+	health = 75
 	search_objects = 1
 	wanted_objects = list(/obj/item/storage/cans)
 	harm_intent_damage = 8
-	obj_damage = 50
-	melee_damage_lower = 20
-	melee_damage_upper = 20
+	obj_damage = 15
+	melee_damage_lower = 5
+	melee_damage_upper = 15
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
@@ -155,25 +155,19 @@
 	icon_gib = "megacarp_gib"
 	health_doll_icon = "megacarp"
 	ai_controller = null
-	maxHealth = 20
-	health = 20
+	maxHealth = 125
+	health = 125
+	melee_damage_lower = 10
+	melee_damage_upper = 20
 	pixel_x = -16
 	base_pixel_x = -16
 	mob_size = MOB_SIZE_LARGE
 	greyscale_config = /datum/greyscale_config/carp_mega
-
-	obj_damage = 80
-	melee_damage_lower = 20
-	melee_damage_upper = 20
 	butcher_results = list(/obj/item/food/fishmeat/carp = 2, /obj/item/stack/sheet/animalhide/carp = 3)
 
 /mob/living/simple_animal/hostile/carp/megacarp/Initialize(mapload)
 	. = ..()
 	name = "[pick(GLOB.megacarp_first_names)] [pick(GLOB.megacarp_last_names)]"
-	melee_damage_lower += rand(2, 10)
-	melee_damage_upper += rand(10,20)
-	maxHealth += rand(30,60)
-	move_to_delay = rand(3,7)
 
 /mob/living/simple_animal/hostile/carp/megacarp/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MEGACARP, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)

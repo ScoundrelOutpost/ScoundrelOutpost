@@ -287,6 +287,9 @@
 
 /obj/item/card/access_inscriber/proc/hijack_access(atom/target, mob/user)
 	var/obj/O = target
+	if(charges < 1)
+		to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
+		return
 	if(O.req_access == inscribed_access && O.req_one_access == inscribed_one_access)
 		to_chat(user, span_warning("[src] buzzes quietly! The access is already matching."))
 		return

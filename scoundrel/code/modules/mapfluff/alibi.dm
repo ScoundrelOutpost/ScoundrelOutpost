@@ -71,5 +71,8 @@
 	make the right call with it. No one having bridge access in an emergency can be as dangerous as \
 	letting it fall into the wrong hands. <br><br> \
 	\
-	Additionally, you've been provided a command remote and a stethoscope to extract the master keycard \
-	from the vault's safe, if necessary."
+	You've been provided a command remote and a stethoscope to extract the master keycard \
+	from the vault's safe, if necessary. <br><br> \
+	\
+	Additionally, a spare access inscriber has been included to repair or modify restrictions on \
+	airlocks and devices."

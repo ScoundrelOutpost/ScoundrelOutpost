@@ -35,6 +35,7 @@
 	..()
 
 	new /obj/item/storage/backpack/duffelbag(src)
+	new /obj/item/card/access_inscriber/choice(src)
 	new /obj/item/computer_disk/command/ce(src)
 	new /obj/item/radio/headset/(src)
 	new /obj/item/holosign_creator/atmos(src)
@@ -61,6 +62,7 @@
 	..()
 
 	new /obj/item/storage/backpack/duffelbag(src)
+	new /obj/item/card/access_inscriber/choice(src)
 	new /obj/item/computer_disk/command/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/captain/alt(src)
@@ -78,6 +80,7 @@
 /obj/structure/closet/secure_closet/quartermaster_scoundrel/PopulateContents()
 	..()
 	new /obj/item/storage/backpack/duffelbag(src)
+	new /obj/item/card/access_inscriber/choice(src)
 	new /obj/item/radio/headset/heads/captain/alt(src)
 	new /obj/item/universal_scanner(src)
 	new /obj/item/door_remote/captain(src)

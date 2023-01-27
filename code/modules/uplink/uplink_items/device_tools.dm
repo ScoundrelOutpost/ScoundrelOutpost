@@ -74,12 +74,14 @@
 	item = /obj/item/storage/belt/military
 	cost = 1*/
 
-/datum/uplink_item/device_tools/doorjack
-	name = "Doorjack"
-	desc = "A specialized cryptographic sequencer specifically designed to override station airlock access codes. \
-			After hacking a certain number of airlocks, the device will require some time to recharge."
-	item = /obj/item/card/emag/doorjack
+/datum/uplink_item/device_tools/access_inscriber
+	name = "Syndicate Access Inscriber"
+	desc = "A specialized access-inscription device capable of instantly overriding access requirements with Syndicate-only \
+	restricted access. Can be used on its own to lock non-Agents out of airlocks, lockers, APCs and air alarms, but an agent card \
+	can be used in conjunction to allow for exclusive access."
+	item = /obj/item/card/access_inscriber/syndicate
 	cost = 10
+	limited_stock = 2
 
 /datum/uplink_item/device_tools/fakenucleardisk
 	name = "Decoy Nuclear Authentication Disk"

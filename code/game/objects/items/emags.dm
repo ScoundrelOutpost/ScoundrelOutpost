@@ -180,10 +180,10 @@
 
 	// how long it takes to hijack access. null skips the do_after and makes it instant
 	var/hijack_time = 16 SECONDS
-	var/locker_hijack_time = 30 SECONDS // can't make it that easy
+	var/locker_hijack_time = 60 SECONDS // discourage bad behavior
 	// used for APCs and air alarms
 	var/aux_hijack_time = 8 SECONDS
-	var/recharge_time = 30 SECONDS
+	var/recharge_time = 60 SECONDS
 
 	// whether the inscriber checks for a closed/secure panel
 	var/skip_panel = FALSE
@@ -310,7 +310,6 @@
 	locker_hijack_time = 8 SECONDS
 	aux_hijack_time = null
 	skip_panel = TRUE
-	recharge_time = 60 SECONDS
 	access_string = "The programming chip is black and suspiciously unmarked."
 
 /obj/item/card/access_inscriber/maintenance

@@ -198,6 +198,7 @@
 
 /obj/item/storage/pouch/holding/leadership/PopulateContents()
 	new /obj/item/card/id/advanced/silver/leader_spare(src)
+	new /obj/item/card/access_inscriber/choice(src)
 	new /obj/item/clothing/neck/stethoscope(src)
 	new /obj/item/door_remote/captain(src)
 	new /obj/item/paper/fluff/leadership_assignment(src)

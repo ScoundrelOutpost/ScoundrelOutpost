@@ -81,8 +81,9 @@
 
 /obj/structure/railing/CanPass(atom/movable/mover, border_dir)
 	. = ..()
+	var/mob/living/carbon/C = mover
 	if(border_dir & dir)
-		return . || mover.throwing //|| mover.movement_type & (FLYING | FLOATING)
+		return . || mover.throwing || isprojectile(mover) || C.body_position != STANDING_UP //|| mover.movement_type & (FLYING | FLOATING)
 	return TRUE
 
 /obj/structure/railing/CanAStarPass(obj/item/card/id/ID, to_dir, atom/movable/caller, no_id = FALSE)
@@ -109,6 +110,13 @@
 		return
 
 	if (leaving.move_force >= MOVE_FORCE_EXTREMELY_STRONG)
+		return
+	
+	if (isprojectile(leaving))
+		return
+	
+	var/mob/living/carbon/C = leaving
+	if (C.body_position != STANDING_UP)
 		return
 
 	leaving.Bump(src)

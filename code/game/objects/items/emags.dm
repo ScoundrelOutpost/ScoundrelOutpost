@@ -185,8 +185,8 @@
 	var/aux_hijack_time = 8 SECONDS
 	var/recharge_time = 60 SECONDS
 
-	// whether the inscriber checks for a closed/secure panel
-	var/skip_panel = FALSE
+	// the security level of an airlock that the inscriber is willing to ignore. greater than 1 will also bypass the screwdriver panel
+	var/security_override = 0
 
 /obj/item/card/access_inscriber/Initialize(mapload)
 	. = ..()
@@ -212,10 +212,13 @@
 			to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
 			return
 
-		else if(skip_panel == FALSE)
-			if(airlock.panel_open == FALSE || airlock.security_level > 0)
-				to_chat(user, span_warning("You need access to the electronics!"))
-				return
+		else if(airlock.security_level > security_override)
+			to_chat(user, span_warning("You need access to the electronics!"))
+			return
+		
+		if(airlock.panel_open == FALSE && airlock.security_level >= security_override)
+			to_chat(user, span_warning("You need access to the electronics!"))
+			return
 
 		if(hijack_time)
 			do_sparks(1, TRUE, src)
@@ -248,7 +251,7 @@
 			to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
 			return
 
-		else if(skip_panel == FALSE)
+		else if(security_override < 1)
 			if(apc.panel_open == FALSE)
 				to_chat(user, span_warning("You need access to the electronics!"))
 				return
@@ -269,7 +272,7 @@
 			to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
 			return
 
-		else if(skip_panel == FALSE)
+		else if(security_override < 1)
 			if(alarm.panel_open == FALSE)
 				to_chat(user, span_warning("You need access to the electronics!"))
 				return
@@ -309,7 +312,7 @@
 	hijack_time = null
 	locker_hijack_time = 8 SECONDS
 	aux_hijack_time = null
-	skip_panel = TRUE
+	security_override = 5 // just short of getting through plasteel plating
 	access_string = "The programming chip is black and suspiciously unmarked."
 
 /obj/item/card/access_inscriber/default

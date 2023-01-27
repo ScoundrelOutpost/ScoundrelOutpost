@@ -179,5 +179,14 @@
 	return homunculus_list
 
 /obj/item/choice_beacon/plushie/spawn_option(obj/choice, mob/living/brazen_fool)
-	new choice(get_turf(brazen_fool))
-	to_chat(brazen_fool, span_hear("You hear something crackle from the beacon for a moment before a dark voice speaks. \"The pact...is sealed.\""))
+	podspawn(list(
+		"target" = get_turf(src),
+		"style" = STYLE_CULT,
+		"spawn" = choice,
+	))
+	var/msg = span_danger("After making your selection, you notice a strange target on the ground. It might be best to step back!")
+	if(ishuman(brazen_fool))
+		var/mob/living/carbon/human/H = brazen_fool
+		if(istype(H.ears, /obj/item/radio/headset))
+			msg = "You hear something crackle from your headset for a moment before a dark voice speaks. [span_bold("The pact...is sealed.")]"
+	to_chat(brazen_fool, msg)

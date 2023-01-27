@@ -161,8 +161,7 @@
 // scoundrel content
 /obj/item/card/access_inscriber
 	name = "default access inscriber"
-	desc = "It's a card with a magnetic strip attached to some circuitry. A tool used to \
-	quickly inscribe access to airlocks and machinery."
+	desc = "A tool used to quickly inscribe access to airlocks and machinery."
 	icon_state = "doorjack"
 	worn_icon_state = "doorjack"
 	inhand_icon_state = "card-id"
@@ -178,10 +177,14 @@
 	var/charges = 0
 	var/max_charges = 3
 	var/list/charge_timers = list()
+
 	// how long it takes to hijack access. null skips the do_after and makes it instant
 	var/hijack_time = 16 SECONDS
 	var/locker_hijack_time = 30 SECONDS // can't make it that easy
+	// used for APCs and air alarms
+	var/aux_hijack_time = 8 SECONDS
 	var/recharge_time = 30 SECONDS
+
 	// whether the inscriber checks for a closed/secure panel
 	var/skip_panel = FALSE
 
@@ -229,7 +232,7 @@
 		if(charges < 1)
 			to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
 			return
-		else if(hijack_time)
+		else if(locker_hijack_time)
 			if(do_after(user, locker_hijack_time))
 				hijack_access(locker, user)
 				do_sparks(1, TRUE, src)
@@ -237,6 +240,47 @@
 		else
 			hijack_access(locker, user)
 
+	// APCs
+	if(istype(O, /obj/machinery/power/apc))
+		log_combat(user, O, "attempted to inscribe")
+		var/obj/machinery/power/apc/apc = O
+		if(charges < 1)
+			to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
+			return
+
+		else if(skip_panel == FALSE)
+			if(apc.panel_open == FALSE)
+				to_chat(user, span_warning("You need access to the electronics!"))
+				return
+
+		if(aux_hijack_time)
+			if(do_after(user, aux_hijack_time))
+				hijack_access(apc, user)
+				do_sparks(1, TRUE, src)
+				to_chat(user, span_warning("You begin reprogramming the electronics!"))
+		else
+			hijack_access(apc, user)
+
+	// air alarms
+	if(istype(O, /obj/machinery/airalarm))
+		log_combat(user, O, "attempted to inscribe")
+		var/obj/machinery/airalarm/alarm = O
+		if(charges < 1)
+			to_chat(user, span_warning("[src] buzzes quietly. It needs to recharge!"))
+			return
+
+		else if(skip_panel == FALSE)
+			if(alarm.panel_open == FALSE)
+				to_chat(user, span_warning("You need access to the electronics!"))
+				return
+
+		if(aux_hijack_time)
+			if(do_after(user, aux_hijack_time))
+				hijack_access(alarm, user)
+				do_sparks(1, TRUE, src)
+				to_chat(user, span_warning("You begin reprogramming the electronics!"))
+		else
+			hijack_access(alarm, user)
 
 /obj/item/card/access_inscriber/proc/hijack_access(atom/target, mob/user)
 	var/obj/O = target
@@ -246,20 +290,14 @@
 	to_chat(user, span_warning("You swipe the inscriber in the reader!"))
 	O.req_access = inscribed_access
 	O.req_one_access = inscribed_one_access
-	do_sparks(1, TRUE, src)
-	use_charge()
-
-
-// taken from doorjack
-/obj/item/card/access_inscriber/proc/use_charge(mob/user)
 	charges --
-	to_chat(user, span_notice("You use [src]. It now has [charges] charge[charges == 1 ? "" : "s"] remaining."))
-	charge_timers.Add(addtimer(CALLBACK(src, PROC_REF(recharge)), recharge_time, TIMER_STOPPABLE))
+	addtimer(CALLBACK(src, PROC_REF(regain_charge)), recharge_time)
+	do_sparks(1, TRUE, O)
 
-/obj/item/card/access_inscriber/proc/recharge(mob/user)
-	charges = min(charges+1, max_charges)
-	playsound(src,'sound/machines/twobeep.ogg',10,TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
-	charge_timers.Remove(charge_timers[1])
+/obj/item/card/access_inscriber/proc/regain_charge(mob/user)
+	if(charges < max_charges)
+		charges ++
+		playsound(src,'sound/machines/twobeep.ogg',10,TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
 
 
 
@@ -270,8 +308,9 @@
 	inscribed_one_access = SYNDICATE_ACCESS // already a list
 	hijack_time = null
 	locker_hijack_time = 8 SECONDS
+	aux_hijack_time = null
 	skip_panel = TRUE
-	recharge_time = 30 SECONDS
+	recharge_time = 60 SECONDS
 	access_string = "The programming chip is black and suspiciously unmarked."
 
 /obj/item/card/access_inscriber/maintenance
@@ -288,7 +327,7 @@
 
 // choice inscriber
 /obj/item/card/access_inscriber/choice
-	name = "master access inscriber"
+	name = "access inscriber"
 	desc = "A tool used to quickly inscribe access to airlocks and machinery. This one can be activated to choose from a selection of access types."
 	inscribed_access = null
 	inscribed_one_access = null

@@ -47,8 +47,13 @@
 		loyalty_objective = new /datum/objective/scoundrel_loyalty
 		loyalty_objective.owner = owner
 		loyalty_objective.find_target()
-		if(loyalty_objective.target == beatdown_objective.target)
-			loyalty_objective.target = null
+		// if you get the same target for beatdown and loyalty, restarting the instance without a target
+		if(beatdown_objective) // because it will crash if beatdown is null
+			if(loyalty_objective.target == beatdown_objective.target && loyalty_objective.target != null)
+				qdel(loyalty_objective)
+				loyalty_objective = new /datum/objective/scoundrel_loyalty
+				loyalty_objective.owner = owner
+				loyalty_objective.update_explanation_text()
 		loyalty_objective.completed = TRUE
 		objectives += loyalty_objective
 

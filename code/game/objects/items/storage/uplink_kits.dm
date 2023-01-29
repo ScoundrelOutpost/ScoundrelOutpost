@@ -598,6 +598,13 @@
 		group.register(i)
 	desc += " The implants are registered to the \"[group.name]\" group."
 
+// scoundrel content
+// killswitch implants, used by the mass killswitch implanting objective
+/obj/item/storage/box/syndie_kit/killswitches/PopulateContents()
+	. = ..()
+	for(var/i in 1 to 7)
+		new /obj/item/implanter/killswitch(src)
+
 #undef KIT_RECON
 #undef KIT_BLOODY_SPAI
 #undef KIT_STEALTHY

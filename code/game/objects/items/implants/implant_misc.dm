@@ -212,12 +212,12 @@ and any other temporary traits. - Jan 2023
 
 /obj/item/implanter/killswitch
 	name = "implanter (killswitch)"
-	desc = "When activated, who knows what will happen!"
+	desc = "Who knows what'll happen if it's activated?"
 	imp_type = /obj/item/implant/killswitch
 
 /obj/item/implant/killswitch
 	name = "killswitch implant"
-	desc = "Why is it beeping like that?."
+	desc = "Why is it beeping like that?"
 	actions_types = null
 	icon_state = "adrenal"
 

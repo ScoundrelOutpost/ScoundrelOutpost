@@ -391,6 +391,8 @@ GLOBAL_LIST_INIT(syndicate_agent_objectives, list(
 		/datum/objective/killswitch_mass,
 		/datum/objective/killswitch_target,
 		/datum/objective/murdermess,
+		/datum/objective/mutiny,
+		/datum/objective/dangerous_experiment,
 	))
 /datum/objective/recruitment_drive
 	name = "recruitment drive"
@@ -438,6 +440,9 @@ GLOBAL_LIST_INIT(syndicate_agent_objectives, list(
 	explanation_text = "Implant as many crewmembers with the killswitch implant as possible."
 	martyr_compatible = TRUE
 	admin_grantable = TRUE
+/datum/objective/killswitch_mass/update_explanation_text()
+	. = ..()
+	give_special_equipment(list(/obj/item/storage/box/syndie_kit/killswitches))
 
 /datum/objective/killswitch_target
 	name = "targeted killswitch implanting"
@@ -445,6 +450,9 @@ GLOBAL_LIST_INIT(syndicate_agent_objectives, list(
 	by any means necessary."
 	martyr_compatible = TRUE
 	admin_grantable = TRUE
+/datum/objective/killswitch_target/update_explanation_text()
+	. = ..()
+	give_special_equipment(list(/obj/item/implanter/killswitch))
 
 /datum/objective/murdermess
 	name = "make a mess"
@@ -455,3 +463,15 @@ GLOBAL_LIST_INIT(syndicate_agent_objectives, list(
 	. = ..()
 	if(target)
 		explanation_text = "They aren't getting the message. Make a huge fucking mess out of [target.name]'s corpse and make sure everyone sees it."
+
+/datum/objective/mutiny
+	name = "mutiny"
+	explanation_text = "Rile the crew against the acting leadership and take charge by any means necessary."
+	martyr_compatible = TRUE
+	admin_grantable = TRUE
+
+/datum/objective/dangerous_experiment
+	name = "dangerous experiment"
+	explanation_text = "Use the station as a testing ground for dangerous experiments."
+	martyr_compatible = TRUE
+	admin_grantable = TRUE

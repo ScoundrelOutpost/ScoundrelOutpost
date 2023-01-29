@@ -19,6 +19,7 @@
 #define ROLE_WIZARD "Wizard"
 
 // Midround roles
+#define ROLE_MIDROUND_SCOUNDREL "Troublemaker"
 #define ROLE_ABDUCTOR "Abductor"
 #define ROLE_ALIEN "Xenomorph"
 #define ROLE_BLOB "Blob"

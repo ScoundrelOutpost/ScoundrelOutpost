@@ -841,3 +841,52 @@
 	message_admins("[ADMIN_LOOKUPFLW(obsessed)] has been made Obsessed by the midround ruleset.")
 	log_game("[key_name(obsessed)] was made Obsessed by the midround ruleset.")
 	return TRUE
+
+//////////////////////////////////////////////
+//                                          //
+//               SCOUNDREL                  //
+//                                          //
+//////////////////////////////////////////////
+
+/datum/dynamic_ruleset/midround/from_living/autoscoundrel
+	name = "Troublemaker"
+	midround_ruleset_style = MIDROUND_RULESET_STYLE_LIGHT
+	antag_datum = /datum/antagonist/scoundrel
+	antag_flag = ROLE_MIDROUND_SCOUNDREL
+	antag_flag_override = ROLE_SCOUNDREL
+	protected_roles = list(
+		JOB_CAPTAIN_SCOUNDREL,
+		JOB_DETECTIVE_SCOUNDREL,
+		JOB_QUARTERMASTER_SCOUNDREL,
+	)
+	restricted_roles = list(
+		JOB_AI,
+		JOB_CYBORG,
+		ROLE_POSITRONIC_BRAIN,
+	)
+	required_candidates = 1
+	weight = 10
+	cost = 6
+	requirements = list(8,8,8,8,8,8,8,8,8,8)
+	repeatable = TRUE
+
+/datum/dynamic_ruleset/midround/from_living/autoscoundrel/trim_candidates()
+	..()
+	candidates = living_players
+	for(var/mob/living/player in candidates)
+		if(issilicon(player)) // Your assigned role doesn't change when you are turned into a silicon.
+			candidates -= player
+		else if(is_centcom_level(player.z))
+			candidates -= player // We don't autotator people in CentCom
+		else if(player.mind && (player.mind.special_role || player.mind.antag_datums?.len > 0))
+			candidates -= player // We don't autotator people with roles already
+
+/datum/dynamic_ruleset/midround/from_living/autoscoundrel/execute()
+	var/mob/M = pick(candidates)
+	assigned += M
+	candidates -= M
+	var/datum/antagonist/scoundrel/newScoundrel = new
+	M.mind.add_antag_datum(newScoundrel)
+	message_admins("[ADMIN_LOOKUPFLW(M)] was selected by the [name] ruleset and has been made into a midround scoundrel.")
+	log_dynamic("[key_name(M)] was selected by the [name] ruleset and has been made into a midround scoundrel.")
+	return TRUE

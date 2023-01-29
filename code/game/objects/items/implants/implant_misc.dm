@@ -207,3 +207,51 @@ and any other temporary traits. - Jan 2023
 /obj/item/implanter/ventcrawling/deluxe
 	name = "implanter (bluespace contortion)"
 	imp_type = /obj/item/implant/ventcrawling/deluxe
+
+// The Killswitch Implant
+
+/obj/item/implanter/killswitch
+	name = "implanter (killswitch)"
+	desc = "When activated, who knows what will happen!"
+	imp_type = /obj/item/implant/killswitch
+
+/obj/item/implant/killswitch
+	name = "killswitch implant"
+	desc = "Why is it beeping like that?."
+	actions_types = null
+	icon_state = "adrenal"
+
+/obj/item/implant/killswitch/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
+	. = ..()
+	if(!.)
+		return FALSE
+	ADD_TRAIT(target, TRAIT_GAMER, IMPLANT_TRAIT)
+	return TRUE
+
+/obj/item/implant/killswitch/removed(mob/target, silent = FALSE, special = FALSE)
+	. = ..()
+	if(!.)
+		return FALSE
+	if(isliving(target))
+		var/mob/living/L = target
+		REMOVE_TRAIT(L, TRAIT_GAMER, IMPLANT_TRAIT)
+	return TRUE
+
+/obj/item/implantcase/killswitch
+	name = "implant case - 'Killswitch'"
+	desc = "A glass case containing a killswitch implant."
+	imp_type = /obj/item/implant/killswitch
+
+/obj/item/storage/box/killimp
+	name = "boxed killswitch implant kit"
+	desc = "Box of stuff used to implant killswitches."
+	icon_state = "syndiebox"
+	illustration = "implant"
+
+/obj/item/storage/box/chemimp/PopulateContents()
+	var/static/items_inside = list(
+		/obj/item/implantcase/killswitch = 5,
+		/obj/item/implanter = 1,
+		/obj/item/implantpad = 1,
+	)
+	generate_items_inside(items_inside,src)

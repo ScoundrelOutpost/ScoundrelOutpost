@@ -23,7 +23,7 @@
 
 /obj/item/storage/box/fashion/janitor
 	name = "janitor outfit"
-	desc = "Some durable, moisture-resistant cleaning apparel."	
+	desc = "Some durable, moisture-resistant cleaning apparel."
 /obj/item/storage/box/fashion/janitor/PopulateContents()
 	new /obj/item/clothing/under/rank/civilian/janitor(src)
 	new /obj/item/clothing/mask/bandana/purple(src)
@@ -113,7 +113,7 @@
 	new /obj/item/clothing/mask/gas/clown_hat(src)
 	new /obj/item/clothing/shoes/clown_shoes(src)
 	new /obj/item/stamp/clown(src)
-
+	new /obj/item/bikehorn(src)
 
 /obj/item/storage/box/fashion/mime
 	name = "mime outfit"

@@ -211,39 +211,12 @@
 	objective_completion.owner = owner
 	objectives += objective_completion */
 
-	switch(rand(1,100))
-		if(1 to 32)
-			var/datum/objective/assassinate/kill_objective = new
-			kill_objective.owner = owner
-			kill_objective.find_target()
-			objectives += kill_objective
-
-			var/datum/objective/assassinate/kill_objective_2 = new
-			kill_objective_2.owner = owner
-			kill_objective_2.find_target()
-			objectives += kill_objective_2
-
-		if(33 to 65)
-			var/datum/objective/steal/steal_objective = new
-			steal_objective.owner = owner
-			steal_objective.find_target()
-			objectives += steal_objective
-
-			var/datum/objective/steal/steal_objective_2 = new
-			steal_objective_2.owner = owner
-			steal_objective_2.find_target()
-			objectives += steal_objective_2
-
-		if(66 to 100)
-			var/datum/objective/assassinate/kill_objective = new
-			kill_objective.owner = owner
-			kill_objective.find_target()
-			objectives += kill_objective
-
-			var/datum/objective/steal/steal_objective = new
-			steal_objective.owner = owner
-			steal_objective.find_target()
-			objectives += steal_objective
+	var/datum/objective/main_objective = pick(GLOB.syndicate_agent_objectives)
+	if(main_objective)
+		main_objective.owner = owner
+		main_objective.find_target()
+		main_objective.completed = TRUE
+		objectives += main_objective
 
 	var/datum/objective/objective_escape
 	var/random_escape = pick_weight(list(
@@ -379,7 +352,7 @@
 	suit = /obj/item/clothing/under/starsuit/executive
 	mask = /obj/item/clothing/mask/gas
 	l_hand = /obj/item/gun/energy/recharge/ebow
-
+/*
 /datum/outfit/traitor/post_equip(mob/living/carbon/human/H, visualsOnly)
 	var/obj/item/melee/energy/sword/sword = locate() in H.held_items
 	if(sword.flags_1 & INITIALIZED_1)
@@ -390,4 +363,53 @@
 		sword.worn_icon_state = "e_sword_on_red"
 
 		H.update_held_items()
+*/
 
+GLOBAL_LIST_INIT(syndicate_agent_objectives, list(
+		/datum/objective/recruitment_drive,
+		/datum/objective/limb_repo,
+		/datum/objective/organ_repo,
+		/datum/objective/fundraiser,
+		/datum/objective/hostile_environment,
+		/datum/objective/killswitch_mass,
+		/datum/objective/killswitch_target,
+	))
+/datum/objective/recruitment_drive
+	name = "recruitment drive"
+	explanation_text = "Recruit as many people to the Syndicate's cause as possible, by any means necessary."
+	martyr_compatible = TRUE
+
+/datum/objective/limb_repo
+	name = "limb repossession"
+	explanation_text = "Dismember, collect and repossess two arms from the station crew."
+	martyr_compatible = TRUE
+/datum/objective/limb_repo/New(text)
+	. = ..()	
+	var/number = pick(list(2, 3, 4))
+	var/limbs = pick(list("arms", "legs"))
+	text = "Dismember, collect and reposses [number] [limbs] from [target.name]."
+
+/datum/objective/organ_repo
+	name = "organ repossession"
+	explanation_text = "Disembowel, collect and repossess a liver from the station crew."
+	martyr_compatible = TRUE
+
+/datum/objective/fundraiser
+	name = "fundraiser"
+	explanation_text = "Collect as many credits from the station as you can, by any means necessary."
+	martyr_compatible = TRUE
+
+/datum/objective/hostile_environment
+	name = "hostile environment"
+	explanation_text = "Make the station utterly uninhabitable for human life."
+	martyr_compatible = TRUE
+
+/datum/objective/killswitch_mass
+	name = "mass killswitch implanting"
+	explanation_text = "Implant as many crewmembers with the killswitch implant as possible."
+	martyr_compatible = TRUE
+
+/datum/objective/killswitch_target
+	name = "targeted killswitch implanting"
+	explanation_text = "Implant someone with the killswitch implant and ensure they escape with it alive."
+	martyr_compatible = TRUE

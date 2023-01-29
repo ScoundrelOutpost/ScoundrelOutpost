@@ -76,3 +76,19 @@
 	\
 	Additionally, a spare access inscriber has been included to repair or modify restrictions on \
 	airlocks and devices."
+
+/obj/item/paper/fluff/turbine_instructions
+	name = "\proper turbine setup procedure"
+	default_raw_text = "\
+	The turbine produces power when the inlet compressor is exposed to high pressures, which is usually done \
+	by igniting the burn chamber. The basic procedure for this goes as follows: <br><br> \
+	\
+	Pipe a mix of oxygen and plasma into the burn chamber with a ratio of 70:30 <br><br> \
+	Set burn chamber scrubbers to extract anything that isn't plasma & oxygen <br><br> \
+	Activate the power on the outlet gas filters, ensure they're not filtering anything out (It should all be going into space) <br><br> \
+	Ignite <br><br> \
+	Ensure there's a cable connected under the turbine core rotor <br><br> \
+	Use a multitool on the turbine to add a link to the buffer, then use it on the turbine control console to link <br><br> \
+	Turn the turbine on via the turbine control console <br><br> \
+	Adjust the turbine's input pressure via pipes and intake regular via the turbine control console <br><br> \
+	Or don't, that part doesn't really matter"

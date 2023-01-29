@@ -226,6 +226,13 @@
 		main_objective.completed = TRUE
 		objectives += main_objective
 
+	if(prob(60))
+		var/datum/objective/steal/steal_objective = new
+		steal_objective.owner = owner
+		steal_objective.find_target()
+		steal_objective.completed = TRUE
+		objectives += steal_objective
+
 	var/datum/objective/objective_escape
 	var/random_escape = pick_weight(list(
 		/datum/objective/escape = 50,

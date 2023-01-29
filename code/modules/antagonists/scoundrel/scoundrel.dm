@@ -62,6 +62,7 @@
 		var/datum/objective/steal/steal_objective = new
 		steal_objective.owner = owner
 		steal_objective.find_target()
+		steal_objective.completed = TRUE
 		objectives += steal_objective
 
 	if(prob(75))

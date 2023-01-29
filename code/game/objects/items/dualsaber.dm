@@ -26,10 +26,11 @@
 	max_integrity = 200
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 100, ACID = 70)
 	resistance_flags = FIRE_PROOF
-	bare_wound_bonus = 20
+	wound_bonus = 10
+	bare_wound_bonus = 10
 	var/w_class_on = WEIGHT_CLASS_BULKY
 	var/saber_color = "green"
-	var/two_hand_force = 25
+	var/two_hand_force = 20
 	var/hacked = FALSE
 	var/list/possible_colors = list("red", "blue", "green", "purple")
 

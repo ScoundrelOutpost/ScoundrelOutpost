@@ -68,8 +68,8 @@
 			all energy projectiles, but requires two hands to wield."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/dualsaber
-
-	cost = 35
+	cost = 60
+	cant_discount = TRUE // it combos hard
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/doublesword/get_discount()

@@ -35,16 +35,20 @@
     equal parts."))
 
 /datum/antagonist/scoundrel/proc/create_objectives()
+	var/datum/objective/beatdown_objective
+	var/datum/objective/loyalty_objective
 	if(prob(75))
-		var/datum/objective/scoundrel_beatdown/beatdown_objective = new
+		beatdown_objective = new /datum/objective/scoundrel_beatdown
 		beatdown_objective.owner = owner
 		beatdown_objective.find_target()
 		beatdown_objective.completed = TRUE
 		objectives += beatdown_objective
 	if(prob(75))
-		var/datum/objective/scoundrel_loyalty/loyalty_objective = new
+		loyalty_objective = new /datum/objective/scoundrel_loyalty
 		loyalty_objective.owner = owner
 		loyalty_objective.find_target()
+		if(loyalty_objective.target == beatdown_objective.target)
+			loyalty_objective.target = null
 		loyalty_objective.completed = TRUE
 		objectives += loyalty_objective
 
@@ -64,7 +68,7 @@
 
 	// if no objectives roll, just roll beatdown
 	if(!objectives)
-		var/datum/objective/scoundrel_beatdown/beatdown_objective = new
+		beatdown_objective = new /datum/objective/scoundrel_beatdown
 		beatdown_objective.owner = owner
 		beatdown_objective.find_target()
 		beatdown_objective.completed = TRUE

@@ -211,7 +211,15 @@
 	objective_completion.owner = owner
 	objectives += objective_completion */
 
-	var/datum/objective/main_objective = pick(GLOB.syndicate_agent_objectives)
+	var/datum/objective/antag_disposition/disposition_objective = new /datum/objective/antag_disposition
+	if(disposition_objective)
+		disposition_objective.owner = owner
+		disposition_objective.update_explanation_text()
+		disposition_objective.completed = TRUE
+		objectives += disposition_objective
+
+	var/picked_objective = pick(GLOB.syndicate_agent_objectives)
+	var/datum/objective/main_objective = new picked_objective
 	if(main_objective)
 		main_objective.owner = owner
 		main_objective.find_target()
@@ -365,6 +373,15 @@
 		H.update_held_items()
 */
 
+/datum/objective/antag_disposition
+	name = "disposition"
+	explanation_text = "To the extent that does not interfere with your plans or objectives, treat the crew with a neutral disposition."
+	martyr_compatible = TRUE
+/datum/objective/antag_disposition/update_explanation_text()
+	. = ..()
+	var/disposition = pick(list("friendly", "neutral", "hostile"))
+	explanation_text = "To the extent that does not interfere with your plans or objectives, treat the crew with a [disposition] disposition."
+
 GLOBAL_LIST_INIT(syndicate_agent_objectives, list(
 		/datum/objective/recruitment_drive,
 		/datum/objective/limb_repo,
@@ -373,43 +390,68 @@ GLOBAL_LIST_INIT(syndicate_agent_objectives, list(
 		/datum/objective/hostile_environment,
 		/datum/objective/killswitch_mass,
 		/datum/objective/killswitch_target,
+		/datum/objective/murdermess,
 	))
 /datum/objective/recruitment_drive
 	name = "recruitment drive"
 	explanation_text = "Recruit as many people to the Syndicate's cause as possible, by any means necessary."
 	martyr_compatible = TRUE
+	admin_grantable = TRUE
 
 /datum/objective/limb_repo
 	name = "limb repossession"
 	explanation_text = "Dismember, collect and repossess two arms from the station crew."
 	martyr_compatible = TRUE
-/datum/objective/limb_repo/New(text)
-	. = ..()	
+	admin_grantable = TRUE
+/datum/objective/limb_repo/update_explanation_text()
+	. = ..()
 	var/number = pick(list(2, 3, 4))
 	var/limbs = pick(list("arms", "legs"))
-	text = "Dismember, collect and reposses [number] [limbs] from [target.name]."
+	if(target)
+		explanation_text = "Dismember, collect and reposses [number] [limbs] from [target.name]."
 
 /datum/objective/organ_repo
 	name = "organ repossession"
 	explanation_text = "Disembowel, collect and repossess a liver from the station crew."
 	martyr_compatible = TRUE
+	admin_grantable = TRUE
+/datum/objective/organ_repo/update_explanation_text()
+	. = ..()
+	var/organ = pick(list("liver", "set of lungs","stomach", "heart"))
+	if(target)
+		explanation_text = "Disembowel, collect and repossess a [organ] from [target.name]."
 
 /datum/objective/fundraiser
 	name = "fundraiser"
 	explanation_text = "Collect as many credits from the station as you can, by any means necessary."
 	martyr_compatible = TRUE
+	admin_grantable = TRUE
 
 /datum/objective/hostile_environment
 	name = "hostile environment"
 	explanation_text = "Make the station utterly uninhabitable for human life."
 	martyr_compatible = TRUE
+	admin_grantable = TRUE
 
 /datum/objective/killswitch_mass
 	name = "mass killswitch implanting"
 	explanation_text = "Implant as many crewmembers with the killswitch implant as possible."
 	martyr_compatible = TRUE
+	admin_grantable = TRUE
 
 /datum/objective/killswitch_target
 	name = "targeted killswitch implanting"
-	explanation_text = "Implant someone with the killswitch implant and ensure they escape with it alive."
+	explanation_text = "Implant someone with the killswitch implant and ensure they escape with it alive \
+	by any means necessary."
 	martyr_compatible = TRUE
+	admin_grantable = TRUE
+
+/datum/objective/murdermess
+	name = "make a mess"
+	explanation_text = "They aren't getting the message. Make a huge fucking mess out of someone's corpse and make sure everyone sees it."
+	martyr_compatible = TRUE
+	admin_grantable = TRUE
+/datum/objective/murdermess/update_explanation_text()
+	. = ..()
+	if(target)
+		explanation_text = "They aren't getting the message. Make a huge fucking mess out of [target.name]'s corpse and make sure everyone sees it."

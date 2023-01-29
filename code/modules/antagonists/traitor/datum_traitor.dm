@@ -376,12 +376,9 @@
 /datum/outfit/traitor
 	name = "Traitor (Preview only)"
 
-	uniform = /obj/item/clothing/under/color/grey
-	suit = /obj/item/clothing/suit/hooded/ablative
-	gloves = /obj/item/clothing/gloves/color/yellow
+	suit = /obj/item/clothing/under/starsuit/executive
 	mask = /obj/item/clothing/mask/gas
-	l_hand = /obj/item/melee/energy/sword
-	r_hand = /obj/item/gun/energy/recharge/ebow
+	l_hand = /obj/item/gun/energy/recharge/ebow
 
 /datum/outfit/traitor/post_equip(mob/living/carbon/human/H, visualsOnly)
 	var/obj/item/melee/energy/sword/sword = locate() in H.held_items

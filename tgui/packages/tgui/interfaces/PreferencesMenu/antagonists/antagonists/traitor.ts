@@ -2,18 +2,19 @@ import { Antagonist, Category } from '../base';
 import { multiline } from 'common/string';
 
 export const TRAITOR_MECHANICAL_DESCRIPTION = multiline`
-      Start with an uplink to purchase your gear and take on your sinister
-      objectives. Ascend through the ranks and become an infamous legend.
+      Start with a Syndicate uplink loaded with high-grade gear, and use
+      it to take on dubious, dangerous covert objectives that may pit you
+      against the station crew.
    `;
 
 const Traitor: Antagonist = {
   key: 'traitor',
-  name: 'Traitor',
+  name: 'Syndicate Agent',
   description: [
     multiline`
-      An unpaid debt. A score to be settled. Maybe you were just in the wrong
-      place at the wrong time. Whatever the reasons, you were selected to
-      infiltrate Space Station 13.
+      An independent agent of the Syndicate. Be it for idealistic principle,
+      personal gain, or maybe as a punishment, you've been employed to carry
+      out the goals of the Syndicate. Out here, of all places.
     `,
     TRAITOR_MECHANICAL_DESCRIPTION,
   ],

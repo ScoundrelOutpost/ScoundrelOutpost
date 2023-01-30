@@ -58,7 +58,7 @@
 
 /obj/item/gun/ballistic/shotgun/toy/crossbow
 	name = "foam force crossbow"
-	desc = "A weapon favored by many overactive children. Ages 8 and up."
+	desc = "Kids love this thing. Ages 8 and up."
 	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "foamcrossbow"
 	inhand_icon_state = "crossbow"
@@ -73,6 +73,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 	gun_flags = NONE
+	projectile_damage_multiplier = 20
 
 /obj/item/gun/ballistic/automatic/c20r/toy //This is the syndicate variant with syndicate firing pin and riot darts.
 	name = "donksoft SMG"

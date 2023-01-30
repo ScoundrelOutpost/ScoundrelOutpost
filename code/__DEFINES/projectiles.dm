@@ -45,7 +45,7 @@
 /// The caliber used by most energy guns.
 #define CALIBER_ENERGY "energy"
 /// The acliber used by foam force and donksoft toy guns.
-#define CALIBER_FOAM "foam_force"
+#define CALIBER_FOAM "dart"
 /// The caliber used by the bow and arrow.
 #define CALIBER_ARROW "arrow"
 /// The caliber used by the harpoon gun.

@@ -511,7 +511,7 @@
 // apply to all
 /datum/outfit/job/post_equip(mob/living/carbon/human/equipped, visualsOnly)
 	. = ..()
-	var/list/potential_cash = list(/obj/item/stack/spacecash/c1000, /obj/item/stack/spacecash/c500, /obj/item/stack/spacecash/c200)
+	var/list/potential_item = list(/obj/item/stack/spacecash/c1000, /obj/item/storage/backpack/satchel/flat)
 	if(prob(13))
-		var/obj/item/stack/spacecash/picked_cash = pick(potential_cash)
-		equipped.put_in_backpack(new picked_cash, TRUE)
+		var/obj/item/picked_item = pick(potential_item)
+		equipped.put_in_backpack(new picked_item, TRUE)

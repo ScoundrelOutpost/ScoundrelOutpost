@@ -36,10 +36,10 @@
 
 /obj/item/organ/internal/eyes/ratfolk
 	name = "rat eyes"
-	maxHealth = 0.35 * STANDARD_ORGAN_THRESHOLD // more fragile than normal eyes
+	maxHealth = 0.7 * STANDARD_ORGAN_THRESHOLD // more fragile than normal eyes
 	flash_protect = FLASH_PROTECTION_SENSITIVE
-	lighting_alpha = LIGHTING_PLANE_ALPHA_RAT
-	see_in_dark = NIGHTVISION_FOV_RANGE
+//	lighting_alpha = LIGHTING_PLANE_ALPHA_RAT
+//	see_in_dark = NIGHTVISION_FOV_RANGE // free nightvision messes with stealth pretty bad
 
 // STOMACH - increases movespeed temporarily when you consume cheese reagent (found in raw cheese)
 

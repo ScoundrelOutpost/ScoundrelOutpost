@@ -22,7 +22,6 @@
 	disliked_food = CLOTH | BUGS
 
 	siemens_coeff = 0.75 // slightly resistant to shocks, but not as much as Ethereals
-	brutemod = 1.3 // more vulnerable to brute damage than humans
 
 	external_organs = list(
 		/obj/item/organ/external/snout_rat = "Round",
@@ -82,12 +81,6 @@
 	var/list/to_add = list()
 
 	to_add += list(
-		list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "eye",
-			SPECIES_PERK_NAME = "Darkvision",
-			SPECIES_PERK_DESC = "Centuries of living underground have given Ratfolk superior vision in the dark.",
-		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "cheese",

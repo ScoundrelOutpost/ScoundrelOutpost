@@ -21,7 +21,8 @@
 
 /obj/item/ammo_casing/caseless/foam_dart/update_desc()
 	. = ..()
-	desc = "It's Donk or Don't! [modified ? "... Although, this one doesn't look too safe." : "Ages 8 and up."]"
+	if(modified)
+		desc += "\n It looks like a pen's been hidden inside it. That could do some damage."
 
 /obj/item/ammo_casing/caseless/foam_dart/attackby(obj/item/A, mob/user, params)
 	var/obj/projectile/bullet/reusable/foam_dart/FD = loaded_projectile
@@ -38,7 +39,7 @@
 				if(!user.transferItemToLoc(A, FD))
 					return
 				FD.pen = A
-				FD.damage = 5
+				FD.damage += 0.5
 				FD.nodamage = FALSE
 				to_chat(user, span_notice("You insert [A] into [src]."))
 			else
@@ -58,8 +59,8 @@
 		FD.pen = null
 
 /obj/item/ammo_casing/caseless/foam_dart/riot
-	name = "riot foam dart"
-	desc = "Whose smart idea was it to use toys as crowd control? Ages 18 and up."
+	name = "riot dart"
+	desc = "A hard, rubber-tipped riot control dart."
 	projectile_type = /obj/projectile/bullet/reusable/foam_dart/riot
 	icon_state = "foamdart_riot"
 	base_icon_state = "foamdart_riot"

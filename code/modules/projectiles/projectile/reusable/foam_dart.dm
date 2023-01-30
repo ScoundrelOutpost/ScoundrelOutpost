@@ -36,9 +36,12 @@
 	return ..()
 
 /obj/projectile/bullet/reusable/foam_dart/riot
-	name = "riot foam dart"
+	name = "riot dart"
 	icon_state = "foamdart_riot_proj"
 	base_icon_state = "foamdart_riot_proj"
+	hitsound = 'sound/weapons/tap.ogg'
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	nodamage = FALSE
-	stamina = 1
+	damage_type = BRUTE
+	damage = 0.25
+	stamina = 0.75

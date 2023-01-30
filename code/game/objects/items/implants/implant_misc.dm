@@ -219,7 +219,6 @@ and any other temporary traits. - Jan 2023
 	name = "killswitch implant"
 	desc = "Why is it beeping like that?"
 	actions_types = null
-	icon_state = "adrenal"
 
 /obj/item/implant/killswitch/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()
@@ -241,17 +240,3 @@ and any other temporary traits. - Jan 2023
 	name = "implant case - 'Killswitch'"
 	desc = "A glass case containing a killswitch implant."
 	imp_type = /obj/item/implant/killswitch
-
-/obj/item/storage/box/killimp
-	name = "boxed killswitch implant kit"
-	desc = "Box of stuff used to implant killswitches."
-	icon_state = "syndiebox"
-	illustration = "implant"
-
-/obj/item/storage/box/chemimp/PopulateContents()
-	var/static/items_inside = list(
-		/obj/item/implantcase/killswitch = 5,
-		/obj/item/implanter = 1,
-		/obj/item/implantpad = 1,
-	)
-	generate_items_inside(items_inside,src)

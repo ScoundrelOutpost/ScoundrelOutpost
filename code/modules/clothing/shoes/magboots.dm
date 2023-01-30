@@ -6,6 +6,7 @@
 	var/magboot_state = "magboots"
 	var/magpulse = FALSE
 	var/slowdown_active = 0.5
+	slowdown = 0.5
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 90, FIRE = 0, ACID = 0)
 	actions_types = list(/datum/action/item_action/toggle)
 	strip_delay = 70
@@ -64,7 +65,8 @@
 	name = "advanced magboots"
 	icon_state = "advmag0"
 	magboot_state = "advmag"
-	slowdown_active = SHOES_SLOWDOWN
+	slowdown = SHOES_SLOWDOWN
+	slowdown_active = 0.5
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/shoes/magboots/syndie
@@ -72,4 +74,5 @@
 	name = "blood-red magboots"
 	icon_state = "syndiemag0"
 	magboot_state = "syndiemag"
-	slowdown_active = SHOES_SLOWDOWN
+	slowdown = SHOES_SLOWDOWN
+	slowdown_active = 0.5

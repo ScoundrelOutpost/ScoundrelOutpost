@@ -352,7 +352,7 @@
 	inhand_icon_state = "security"
 	worn_icon_state = "spacer"
 	content_overlays = TRUE
-	alternate_worn_layer = 19
+	alternate_worn_layer = EARS_LAYER
 	pickup_sound = 'sound/items/handling/cloth_pickup.ogg'
 	drop_sound = 'sound/items/handling/cloth_drop.ogg'
 	w_class = WEIGHT_CLASS_NORMAL

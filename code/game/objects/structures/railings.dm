@@ -116,8 +116,9 @@
 		return
 	
 	var/mob/living/carbon/C = leaving
-	if (C.body_position != STANDING_UP)
-		return
+	if(istype(C, /mob/living/carbon))
+		if(C.body_position != STANDING_UP)
+			return
 
 	leaving.Bump(src)
 	return COMPONENT_ATOM_BLOCK_EXIT

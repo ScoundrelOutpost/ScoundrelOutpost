@@ -71,11 +71,10 @@
 	name = "Smuggler's Satchel"
 	desc = "This satchel is thin enough to be hidden in the gap between plating and tiling; great for stashing \
 			your stolen goods. Comes with a crowbar, a floor tile and some contraband inside. Limited stock of 2."
-	item = /obj/item/storage/backpack/satchel/flat/with_tools
+	item = /obj/item/storage/backpack/satchel/flat/empty
 	cost = 5
 	surplus = 30
 	illegal_tech = FALSE
-	limited_stock = 2
 
 /datum/uplink_item/stealthy_tools/syndigaloshes
 	name = "No-Slip Chameleon Shoes"

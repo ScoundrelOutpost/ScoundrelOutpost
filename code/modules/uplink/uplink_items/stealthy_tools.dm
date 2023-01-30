@@ -33,12 +33,32 @@
 	item = /obj/item/chameleon
 	cost = 45
 
+/datum/uplink_item/stealthy_tools/encryptionkey
+	name = "Backup Syndicate Encryption Key"
+	desc = "In case you lose your standard equipment. A key that, when inserted into a radio headset, allows you to listen to all station department channels \
+			as well as talk on an encrypted Syndicate channel with other agents that have the same key. In addition, this key also protects \
+			your headset from radio jammers."
+	item = /obj/item/encryptionkey/syndicate
+	cost = 5
+	illegal_tech = FALSE
+
 /datum/uplink_item/stealthy_tools/codespeak_manual
 	name = "Backup Codespeak Manual"
-	desc = "Syndicate agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
+	desc = "In case you lose your standard equipment. Syndicate agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
 			This manual teaches you this Codespeak. You can also hit someone else with the manual in order to teach them. Can only be used once."
 	item = /obj/item/language_manual/codespeak_manual
 	cost = 5
+	illegal_tech = FALSE
+
+/datum/uplink_item/stealthy_tools/agent_card
+	name = "Backup Agent Identification Card"
+	desc = "In case you lose your standard equipment. Agent cards prevent artificial intelligences from tracking the wearer, and can copy access \
+			when swiped over other ID cards. In addition, they can be forged to display a new assignment, name and trim. \
+			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
+			with these cards."
+	item = /obj/item/card/id/advanced/chameleon
+	cost = 5
+	illegal_tech = FALSE
 
 /datum/uplink_item/stealthy_tools/emplight
 	name = "EMP Flashlight"

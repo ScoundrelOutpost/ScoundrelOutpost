@@ -145,8 +145,8 @@
 	)
 	id_trim = /datum/id_trim/job/deckhand/medsci_spec
 	id = /obj/item/card/id/advanced
-	uniform = /obj/item/clothing/under/rank/rnd/research_director/turtleneck
-	suit = /obj/item/clothing/suit/jacket/research_director
+	uniform = /obj/item/clothing/under/turtleneck/purple
+	suit = /obj/item/clothing/suit/jacket/purple_labcoat
 	belt = /obj/item/storage/belt/utility/small
 	neck = /obj/item/clothing/neck/stethoscope
 	ears = /obj/item/radio/headset
@@ -191,7 +191,7 @@
 	department_for_prefs = /datum/job_department/assistant
 	bounty_types = CIV_JOB_RANDOM
 	
-	family_heirlooms = list(/obj/item/clothing/head/utility/hardhat/white, /obj/item/screwdriver, /obj/item/wrench, /obj/item/weldingtool, /obj/item/crowbar, /obj/item/wirecutters)
+	family_heirlooms = list(/obj/item/screwdriver/caravan, /obj/item/wrench/caravan, /obj/item/crowbar/red/caravan, /obj/item/wirecutters/caravan)
 
 	rpg_title = "Artificer"
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
@@ -272,17 +272,17 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/deckhand/captain_scoundrel
-	head = /obj/item/clothing/head/helmet/scoundrel
-	uniform = /obj/item/clothing/under/color/grey
+//	head = /obj/item/clothing/head/helmet/scoundrel
+	mask = /obj/item/clothing/mask/bandana/striped/black
+	uniform = /obj/item/clothing/under/syndicate/tracking_on
 	suit = /obj/item/clothing/suit/jacket/fancy
 	backpack_contents = list(
 		/obj/item/melee/tonfa/shock_tonfa = 1,
-		/obj/item/clothing/mask/bandana/striped/black = 1,
 		/obj/item/gun/energy/e_gun/defender,
 		)
 	belt = /obj/item/storage/belt/utility/small
-	ears = /obj/item/radio/headset/heads/captain/alt
-	glasses = /obj/item/clothing/glasses/hud/diagnostic/sunglasses
+	ears = /obj/item/radio/headset/leader/bowman
+	glasses = /obj/item/clothing/glasses/eyepatch
 	gloves = /obj/item/clothing/gloves/combat
 	shoes = /obj/item/clothing/shoes/jackboots
 
@@ -357,12 +357,12 @@
 	)
 	id_trim = /datum/id_trim/job/deckhand/quartermaster_scoundrel
 	id = /obj/item/card/id/advanced/silver
-	uniform = /obj/item/clothing/under/rank/centcom/official
+	uniform = /obj/item/clothing/under/suit/green
 	suit = /obj/item/clothing/suit/armor/vest
 	gloves = /obj/item/clothing/gloves/color/black
 	accessory = /obj/item/clothing/accessory/medal/silver
 	belt = /obj/item/storage/belt/utility/small
-	ears = /obj/item/radio/headset/heads/captain
+	ears = /obj/item/radio/headset/leader
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/clipboard
@@ -430,7 +430,7 @@
 	belt = /obj/item/storage/belt/utility/small
 	head = /obj/item/clothing/head/helmet/scoundrel
 //	mask = /obj/item/clothing/mask/russian_balaclava
-	ears = /obj/item/radio/headset/heads/captain/alt
+	ears = /obj/item/radio/headset/leader/bowman
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
 	gloves = /obj/item/clothing/gloves/toagloves
 	shoes = /obj/item/clothing/shoes/jackboots

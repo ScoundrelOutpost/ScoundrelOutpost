@@ -402,3 +402,19 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	if (command)
 		use_command = !use_command
 		to_chat(user, span_notice("You toggle high-volume mode [use_command ? "on" : "off"]."))
+
+// scoundrel content
+/obj/item/radio/headset/leader
+	name = "headset"
+	icon_state = "sec_headset"
+	keyslot = /obj/item/encryptionkey/heads/captain
+
+/obj/item/radio/headset/leader/bowman
+	name = "bowman headset"
+	desc = "Protects ears from flashbangs."
+	icon_state = "syndie_headset"
+	keyslot = /obj/item/encryptionkey/heads/captain
+
+/obj/item/radio/headset/leader/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))

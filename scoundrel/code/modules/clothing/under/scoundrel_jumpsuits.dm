@@ -85,3 +85,25 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 
 	w_class = WEIGHT_CLASS_SMALL
+
+// normal
+/obj/item/clothing/under/suit/green
+	icon = 'icons/obj/clothing/under/centcom.dmi'
+	worn_icon = 'icons/mob/clothing/under/centcom.dmi'
+	name = "green suit"
+	desc = "A green suit, for people who are very professional about green."
+	icon_state = "official"
+	inhand_icon_state = "dg_suit"
+
+/obj/item/clothing/under/syndicate/tracking_on
+	sensor_mode = SENSOR_COORDS
+
+/obj/item/clothing/under/turtleneck/purple
+	icon = 'icons/obj/clothing/under/rnd.dmi'
+	worn_icon = 'icons/mob/clothing/under/rnd.dmi'
+	name = "purple turtleneck"
+	desc = "A royally purple turtleneck."
+	icon_state = "rdturtle"
+	inhand_icon_state = "p_suit"
+	can_adjust = TRUE
+	alt_covers_chest = TRUE

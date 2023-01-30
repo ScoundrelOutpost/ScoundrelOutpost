@@ -314,3 +314,11 @@
 /obj/item/clothing/suit/jacket/research_director/Initialize(mapload)
 	. = ..()
 	allowed += /obj/item/storage/bag/xeno
+
+// scoundrel content
+/obj/item/clothing/suit/jacket/purple_labcoat
+	name = "purple labcoat"
+	desc = "A mix between a labcoat and just a regular coat. It's made out of a special anti-bacterial, anti-acidic, and anti-biohazardous synthetic fabric."
+	icon_state = "labcoat_rd"
+	armor = GENERIC_ENV_ARMOR_T2
+	body_parts_covered = CHEST|GROIN|ARMS

@@ -14,7 +14,7 @@
 	slot_flags = ITEM_SLOT_BACK
 	force = 5
 	throwforce = 6
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	actions_types = list(/datum/action/item_action/toggle_paddles)
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 50)
 
@@ -282,7 +282,7 @@
 	icon_state = "defibcompact"
 	inhand_icon_state = null
 	worn_icon_state = "defibcompact"
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
 	paddle_state = "defibcompact-paddles"
 	powered_state = "defibcompact-powered"

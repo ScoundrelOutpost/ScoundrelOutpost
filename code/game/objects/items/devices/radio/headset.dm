@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset
 	name = "radio headset"
 	desc = "An updated, modular intercom that fits over the head. Takes encryption keys."
-	icon_state = "headset"
+	icon_state = "scoundrel_headset"
 	inhand_icon_state = "headset"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
@@ -406,13 +406,13 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 // scoundrel content
 /obj/item/radio/headset/leader
 	name = "headset"
-	icon_state = "sec_headset"
+	icon_state = "scoundrel_headset_leader"
 	keyslot = /obj/item/encryptionkey/heads/captain
 
 /obj/item/radio/headset/leader/bowman
 	name = "bowman headset"
-	desc = "Protects ears from flashbangs."
-	icon_state = "syndie_headset"
+	desc = "Protects your ears from flashbangs."
+	icon_state = "scoundrel_bowman"
 	keyslot = /obj/item/encryptionkey/heads/captain
 
 /obj/item/radio/headset/leader/Initialize(mapload)

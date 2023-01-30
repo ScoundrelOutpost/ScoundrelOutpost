@@ -1169,6 +1169,8 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 ///Returns a string based on the weight class define used as argument
 /proc/weight_class_to_text(w_class)
 	switch(w_class)
+		if(WEIGHT_CLASS_NONE)
+			. = "weightless"
 		if(WEIGHT_CLASS_TINY)
 			. = "tiny"
 		if(WEIGHT_CLASS_SMALL)

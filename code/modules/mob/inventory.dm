@@ -501,3 +501,12 @@
 			A.atom_storage.return_inv(item_stuff)
 			processing_list += item_stuff
 	return processing_list
+
+// scoundrel content
+/mob/living/carbon/proc/put_in_backpack(item, try_hands = FALSE)
+	var/mob/living/carbon/C = src
+	var/list/slots = list("backpack" = ITEM_SLOT_BACKPACK)
+	if(!C.equip_in_one_of_slots(item, slots) && try_hands == FALSE)
+		return
+	else if(try_hands == TRUE)
+		put_in_hand(item)

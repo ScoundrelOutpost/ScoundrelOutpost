@@ -6,19 +6,13 @@
 	inherent_traits = list(
 		TRAIT_CAN_USE_FLIGHT_POTION,
 		TRAIT_GENELESS,
-		TRAIT_NOBREATH,
-		TRAIT_NOCLONELOSS,
-		TRAIT_RADIMMUNE,
-		TRAIT_RESISTCOLD,
-		TRAIT_RESISTLOWPRESSURE,
-		TRAIT_RESISTHIGHPRESSURE,
-		TRAIT_TOXIMMUNE,
 		TRAIT_XENO_IMMUNE,
+		TRAIT_VIRUSIMMUNE,
+//		TRAIT_NOCLONELOSS, doesn't do anything
 	)
 	brute_damage_desc = ROBOTIC_BRUTE_EXAMINE_TEXT
 	burn_damage_desc = ROBOTIC_BURN_EXAMINE_TEXT
-	speedmod = 0.5
-	heatmod = 2
+	heatmod = 2.5
 
 	inherent_biotypes = MOB_ROBOTIC|MOB_HUMANOID
 
@@ -88,17 +82,19 @@
 	var/list/to_add = list()
 
 	to_add += list(
+		/*
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "wind",
 			SPECIES_PERK_NAME = "Spaceproof",
 			SPECIES_PERK_DESC = "Cyberforms are immune to hazardous atmospheric pressures, and do not need to breathe.",
 		),
+		*/
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "user-shield",
-			SPECIES_PERK_NAME = "Robust",
-			SPECIES_PERK_DESC = "Cyberforms are unaffected by radiation, toxins and cellular damage.",
+			SPECIES_PERK_NAME = "Inorganic",
+			SPECIES_PERK_DESC = "Cyberforms are unaffected by viruses.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
@@ -118,12 +114,14 @@
 			SPECIES_PERK_NAME = "Low-Quality Components",
 			SPECIES_PERK_DESC = "This particular chassis has some low-quality components that don't work as well as standard organs.",
 		),
+		/*
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "hard-hat",
 			SPECIES_PERK_NAME = "Slow Servos",
 			SPECIES_PERK_DESC = "Cyberforms tend to be a little slower getting around than most humanoids.",
 		),
+		*/
 	)
 
 	return to_add

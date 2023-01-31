@@ -17,9 +17,8 @@
 	worn_icon_state = "energy_katana"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	force = 30
-	throwforce = 30
-	block_chance = 50
+	force = 20
+	throwforce = 20
 	armour_penetration = 50
 	w_class = WEIGHT_CLASS_NORMAL
 	hitsound = 'sound/weapons/bladeslice.ogg'

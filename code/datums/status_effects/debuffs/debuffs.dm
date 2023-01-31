@@ -552,7 +552,7 @@
 
 /datum/status_effect/trance/tick()
 	if(stun)
-		owner.Stun(6 SECONDS, TRUE)
+		owner.Stun(2 SECONDS, TRUE)
 	owner.set_dizzy(40 SECONDS)
 
 /datum/status_effect/trance/on_apply()

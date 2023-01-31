@@ -105,7 +105,7 @@
 		target.apply_damage((force), BRUTE)
 		playsound(loc, hitsound_basic, 50, TRUE)
 		target.visible_message(span_danger("[user]'s powerfist lets out a dull thunk as [user.p_they()] punch[user.p_es()] [target.name]!"), \
-			span_userdanger("[user]'s punches you!"))
+			span_userdanger("[user] [pick(attack_verb_continuous)] you with [src]!"))
 		return
 
 	if(!molar_cmp_equals(gas_used.total_moles(), gas_per_fist * fist_pressure_setting))

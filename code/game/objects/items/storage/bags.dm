@@ -46,8 +46,8 @@
 /obj/item/storage/bag/trash/Initialize(mapload)
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
-	atom_storage.max_total_storage = 16
-	atom_storage.max_slots = 16
+	atom_storage.max_total_storage = 10
+	atom_storage.max_slots = 10
 	atom_storage.set_holdable(cant_hold_list = list(/obj/item/disk/nuclear))
 
 /obj/item/storage/bag/trash/suicide_act(mob/living/user)
@@ -88,8 +88,8 @@
 
 /obj/item/storage/bag/trash/bluespace/Initialize(mapload)
 	. = ..()
-	atom_storage.max_total_storage = 32
-	atom_storage.max_slots = 32
+	atom_storage.max_total_storage = 16
+	atom_storage.max_slots = 16
 
 /obj/item/storage/bag/trash/bluespace/cyborg
 	insertable = FALSE

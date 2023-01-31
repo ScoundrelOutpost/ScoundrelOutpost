@@ -96,7 +96,7 @@
 		speech_args[SPEECH_MESSAGE] = ""
 
 /datum/brain_trauma/mild/phobia/proc/freak_out(atom/reason, trigger_word)
-	COOLDOWN_START(src, scare_cooldown, 12 SECONDS)
+	COOLDOWN_START(src, scare_cooldown, 20 SECONDS)
 	if(owner.stat == DEAD)
 		return
 	var/message = pick("spooks you to the bone", "shakes you up", "terrifies you", "sends you into a panic", "sends chills down your spine")
@@ -110,7 +110,7 @@
 	switch(reaction)
 		if(1)
 			to_chat(owner, span_warning("You are paralyzed with fear!"))
-			owner.Stun(70)
+			owner.Stun(1 SECONDS)
 			owner.set_jitter_if_lower(16 SECONDS)
 		if(2)
 			owner.emote("scream")
@@ -121,10 +121,10 @@
 		if(3)
 			to_chat(owner, span_warning("You shut your eyes in terror!"))
 			owner.set_jitter_if_lower(10 SECONDS)
-			owner.adjust_blindness(10)
+			owner.adjust_blindness(2)
 		if(4)
-			owner.adjust_dizzy(20 SECONDS)
-			owner.adjust_confusion(10 SECONDS)
+			owner.adjust_dizzy(4 SECONDS)
+			owner.adjust_confusion(2 SECONDS)
 			owner.set_jitter_if_lower(20 SECONDS)
 			owner.adjust_stutter(20 SECONDS)
 

@@ -774,7 +774,7 @@
 			visible_message(span_warning("[src] dry heaves!"), \
 							span_userdanger("You try to throw up, but there's nothing in your stomach!"))
 		if(stun)
-			Stun(20 SECONDS)
+			Knockdown(2 SECONDS)
 		return 1
 	..()
 

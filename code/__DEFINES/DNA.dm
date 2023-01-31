@@ -79,8 +79,6 @@
 #define NOSTOMACH 10
 #define NO_DNA_COPY 11
 #define DRINKSBLOOD 12
-// ORB ADDITION, for pod blood preferences
-#define POD_BLOOD 13
 
 /// Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting
 #define DYNCOLORS 13
@@ -103,6 +101,8 @@
 /// Stops species from spawning with tongue. Doesn't actually make the species able to talk with no tongue
 #define NO_TONGUE 22
 #define NOAPPENDIX 23
+// ORB ADDITION, for pod blood preferences
+#define POD_BLOOD 24
 
 //organ slots
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"

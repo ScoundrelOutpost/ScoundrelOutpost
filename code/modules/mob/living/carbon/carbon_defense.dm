@@ -389,18 +389,23 @@
 	//Stun
 	var/should_stun = (!(flags & SHOCK_TESLA) || siemens_coeff > 0.5) && !(flags & SHOCK_NOSTUN)
 	if(should_stun)
-		Paralyze(40)
+		adjustStaminaLoss(shock_damage*0.25)
+		if(shock_damage > 20)
+			Knockdown(0.1)
+			ADD_TRAIT(src, TRAIT_SHOCKIMMUNE, "shock_cooldown") // stops you from rapidly frying yourself by holding down movement
 	//Jitter and other fluff.
 	do_jitter_animation(300)
 	adjust_jitter(20 SECONDS)
 	adjust_stutter(4 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(secondary_shock), should_stun), 2 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(secondary_shock), should_stun, shock_damage), 2 SECONDS)
 	return shock_damage
 
 ///Called slightly after electrocute act to apply a secondary stun.
-/mob/living/carbon/proc/secondary_shock(should_stun)
+/mob/living/carbon/proc/secondary_shock(should_stun, shock_damage)
+	REMOVE_TRAIT(src, TRAIT_SHOCKIMMUNE, "shock_cooldown")
 	if(should_stun)
-		Paralyze(60)
+		if(shock_damage > 20)
+			Knockdown(0.1)
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/helper)
 	if(on_fire)

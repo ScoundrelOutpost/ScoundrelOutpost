@@ -4,9 +4,11 @@
 	w_class = WEIGHT_CLASS_SMALL
 	martial_name = "sleeping carp"
 	desc = "A scroll filled with markings from an ancient language. It seems to describe some sort of martial art."
-	greet = "<span class='sciradio'>You have learned the ancient martial art of the Sleeping Carp! Your hand-to-hand combat has become much more effective, and you are now able to deflect any projectiles \
-		directed toward you while in Throw Mode. Your body has also hardened itself, granting extra protection against lasting wounds that would otherwise mount during extended combat. \
-		However, you are also unable to use any ranged weaponry. You can learn more about your newfound art by using the Recall Teachings verb in the Sleeping Carp tab.</span>"
+	greet = "<span class='sciradio'>You have learned the ancient martial art of the Sleeping Carp!</span>\
+		\n<span class='cultitalic'>You can now able to deflect high-speed projectiles shot at you while in Throw Mode! \
+		\nYou can now snatch guns out of the hands of your opponents by shoving them! \
+		\nYour rigour has also hardened you against wounding; your body is less likely to break and bleed! \
+		\nAdditionally, the strict mental training has left you unable to partake in the use of guns or similar ranged weapons!</span>"
 	icon = 'scoundrel/icons/obj/misc/books.dmi'
 	icon_state = "carpscroll"
 	worn_icon_state = "scroll"

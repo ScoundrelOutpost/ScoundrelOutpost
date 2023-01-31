@@ -36,8 +36,8 @@
 	hallucinator.client?.images |= electrocution_skeleton_anim
 
 	hallucinator.playsound_local(get_turf(src), SFX_SPARKS, 100, TRUE)
-	hallucinator.adjustStaminaLoss(50)
-	hallucinator.Stun(4 SECONDS)
+	hallucinator.adjustStaminaLoss(25)
+	hallucinator.Knockdown(0.1)
 	hallucinator.do_jitter_animation(300) // Maximum jitter
 	hallucinator.adjust_jitter(20 SECONDS)
 

@@ -73,7 +73,7 @@
 			to_chat(A, "<span class='danger'>You expertly catch [stuff_in_hand] as it leaves [D]'s hand.</span>")
 	D.Paralyze(0.2 SECONDS)
 	D.throw_at(throw_target, 7, 2, A)
-	D.apply_damage(12, A.get_attack_type(), BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
+	D.apply_damage(10, A.get_attack_type(), BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
 	log_combat(A, D, "launchkicked (Sleeping Carp)")
 	return
 
@@ -113,7 +113,7 @@
 	D.visible_message(span_danger("[A] [atk_verb]s [D]!"), \
 					span_userdanger("[A] [atk_verb]s you!"), null, null, A)
 	to_chat(A, span_danger("You [atk_verb] [D]!"))
-	D.apply_damage(rand(10,15), BRUTE, affecting, wound_bonus = CANT_WOUND)
+	D.apply_damage(rand(8,12), BRUTE, affecting, wound_bonus = CANT_WOUND)
 	playsound(get_turf(D), 'sound/scoundrel/weapons/punch3.ogg', 25, TRUE, -1)
 	log_combat(A, D, "punched (Sleeping Carp)")
 	return TRUE

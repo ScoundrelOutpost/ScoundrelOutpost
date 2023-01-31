@@ -98,6 +98,7 @@
 	. = ..()
 	var/hurt = TRUE
 	var/extra_speed = 0
+	var/rand_damage = rand(1,5)
 	if(throwingdatum.thrower != src)
 		extra_speed = min(max(0, throwingdatum.speed - initial(throw_speed)), CARBON_MAX_IMPACT_SPEED_BONUS)
 
@@ -105,22 +106,22 @@
 		hurt = !throwingdatum.gentle
 	if(hurt && hit_atom.density)
 		if(isturf(hit_atom))
-			Paralyze(2 SECONDS)
-			take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
+			Knockdown(1 SECONDS)
+			take_bodypart_damage(rand_damage + rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 		else if(isstructure(hit_atom) && extra_speed)
-			Paralyze(1 SECONDS)
-			take_bodypart_damage(5 + 5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
+			Knockdown(1 SECONDS)
+			take_bodypart_damage(rand_damage + rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 		else if(!iscarbon(hit_atom) && extra_speed)
-			take_bodypart_damage(5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
+			take_bodypart_damage(rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 	if(iscarbon(hit_atom) && hit_atom != src)
 		var/mob/living/carbon/victim = hit_atom
 		if(victim.movement_type & FLYING)
 			return
 		if(hurt)
-			victim.take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
-			take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
-			victim.Paralyze(2 SECONDS)
-			Paralyze(2 SECONDS)
+			victim.take_bodypart_damage(rand_damage + rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
+			take_bodypart_damage(rand_damage + rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
+			victim.Knockdown(1 SECONDS)
+			Knockdown(1 SECONDS)
 			visible_message(span_danger("[src] crashes into [victim][extra_speed ? " really hard" : ""], knocking them both over!"),\
 				span_userdanger("You violently crash into [victim][extra_speed ? " extra hard" : ""]!"))
 		playsound(src,'sound/weapons/punch1.ogg',50,TRUE)
@@ -428,7 +429,7 @@
 			visible_message(span_warning("[src] dry heaves!"), \
 							span_userdanger("You try to throw up, but there's nothing in your stomach!"))
 		if(stun)
-			Stun(20 SECONDS)
+			Knockdown(2 SECONDS)
 		return TRUE
 
 	if(is_mouth_covered()) //make this add a blood/vomit overlay later it'll be hilarious
@@ -444,7 +445,7 @@
 				add_mood_event("vomit", /datum/mood_event/vomit)
 
 	if(stun)
-		Stun(8 SECONDS)
+		Knockdown(2 SECONDS)
 
 	playsound(get_turf(src), 'sound/effects/splat.ogg', 50, TRUE)
 	var/turf/T = get_turf(src)

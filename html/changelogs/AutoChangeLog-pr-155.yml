@@ -1,0 +1,10 @@
+author: "psytc"
+delete-after: True
+changes:
+  - qol: "descriptive readout on gaining sleeping carp improved"
+  - balance: "sleeping carp damage numbers reduced slightly"
+  - balance: "wallstuns, tableslams, electrocution, and other stun sources are less punishing now"
+  - balance: "phobias are less punishing"
+  - balance: "powerfist given another balance pass"
+  - bugfix: "powerfist attack animation"
+  - imageadd: "new powerfist sprite"

@@ -702,6 +702,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	attack_verb_simple = list("beat", "smack")
 	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 3.5)
 	w_class = WEIGHT_CLASS_HUGE
+	/// How fast it launches struck mobs
+	var/melee_throw_speed = 2
 	/// Are we able to do a homerun?
 	var/homerun_able = FALSE
 	/// Are we ready to do a homerun?
@@ -750,8 +752,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		homerun_ready = FALSE
 		return
 	else if(!QDELETED(target) && !target.anchored)
-		var/whack_speed = (prob(60) ? 1 : 4)
-		target.throw_at(throw_target, rand(1, 2), whack_speed, user, gentle = TRUE) // sorry friends, 7 speed batting caused wounds to absolutely delete whoever you knocked your target into (and said target)
+		target.throw_at(throw_target, 1, melee_throw_speed, user)
 
 /obj/item/melee/baseball_bat/Destroy(force)
 	for(var/target in thrown_datums)

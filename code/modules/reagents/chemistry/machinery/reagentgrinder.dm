@@ -100,6 +100,11 @@
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
 	if(!can_interact(user) || !user.canUseTopic(src, !issilicon(user), FALSE, no_tk = TRUE))
+		drop_all_items() // might cause problems idk
+		if(beaker)
+			try_put_in_hand(beaker, user)
+			beaker = null
+			update_appearance()
 		return
 	if(operating)
 		return

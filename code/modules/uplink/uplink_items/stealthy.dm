@@ -17,7 +17,7 @@
 	desc = "An innocent-looking toy pistol designed to fire foam darts. Comes loaded with riot-grade \
 			darts effective at incapacitating a target."
 	item = /obj/item/gun/ballistic/automatic/pistol/toy/riot
-	cost = 5
+	cost = 15
 	surplus = 10
 	purchasable_from = ~UPLINK_NUKE_OPS
 

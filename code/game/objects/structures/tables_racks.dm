@@ -431,7 +431,8 @@
 	var/obj/item/shard/shard = new glass_shard_type(loc)
 	shard.throw_impact(victim)
 
-	victim.Paralyze(100)
+	victim.Paralyze(0.5 SECONDS)
+	victim.Knockdown(2 SECONDS)
 	qdel(src)
 
 /obj/structure/table/glass/deconstruct(disassembled = TRUE, wrench_disassembly = 0)

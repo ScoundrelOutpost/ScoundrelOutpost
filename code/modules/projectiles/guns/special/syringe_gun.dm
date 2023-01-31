@@ -112,7 +112,7 @@
 	force = 4
 
 /obj/item/gun/syringe/syndicate
-	name = "dart pistol"
+	name = "syringe pistol"
 	desc = "A small spring-loaded sidearm that functions identically to a syringe gun."
 	icon_state = "dartsyringegun"
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'

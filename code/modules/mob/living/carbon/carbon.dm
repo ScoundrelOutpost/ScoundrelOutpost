@@ -99,6 +99,7 @@
 	var/hurt = TRUE
 	var/extra_speed = 0
 	var/rand_damage = rand(1,5)
+	var/impact_sound = 'sound/effects/tableslam.ogg'
 	if(throwingdatum.thrower != src)
 		extra_speed = min(max(0, throwingdatum.speed - initial(throw_speed)), CARBON_MAX_IMPACT_SPEED_BONUS)
 
@@ -106,12 +107,15 @@
 		hurt = !throwingdatum.gentle
 	if(hurt && hit_atom.density)
 		if(isturf(hit_atom))
+			playsound(src, impact_sound, 90, TRUE)
 			Knockdown(1 SECONDS)
 			take_bodypart_damage(rand_damage + rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 		else if(isstructure(hit_atom) && extra_speed)
+			playsound(src, impact_sound, 90, TRUE)
 			Knockdown(1 SECONDS)
 			take_bodypart_damage(rand_damage + rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 		else if(!iscarbon(hit_atom) && extra_speed)
+			playsound(src, impact_sound, 90, TRUE)
 			take_bodypart_damage(rand_damage * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 	if(iscarbon(hit_atom) && hit_atom != src)
 		var/mob/living/carbon/victim = hit_atom

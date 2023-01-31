@@ -14,9 +14,9 @@
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	flags_1 = CONDUCT_1
-	attack_verb_continuous = list("whacks", "fists", "power-punches")
-	attack_verb_simple = list("whack", "fist", "power-punch")
-	force = 7 // up to 7*3 damage plus wall impacts
+	attack_verb_continuous = list("mauls", "smashes")
+	attack_verb_simple = list("maul", "smash")
+	force = 12 // 12 + (3 * 3) for max damage
 	throwforce = 10
 	throw_range = 7
 	w_class = WEIGHT_CLASS_NORMAL
@@ -87,6 +87,7 @@
 	tank = the_tank
 
 /obj/item/melee/powerfist/attack(mob/living/target, mob/living/user)
+	var/hitsound_basic = 'sound/weapons/smash.ogg'
 	if(!tank)
 		to_chat(user, span_warning("\The [src] can't operate without a source of gas!"))
 		return
@@ -97,11 +98,12 @@
 	if(!our_turf)
 		return
 
+	user.do_attack_animation(target)
 	var/datum/gas_mixture/gas_used = tank.remove_air(gas_per_fist * fist_pressure_setting)
 	if(!gas_used)
 		to_chat(user, span_warning("\The [src]'s tank is empty!"))
-		target.apply_damage((force / 5), BRUTE)
-		playsound(loc, 'sound/weapons/punch1.ogg', 50, TRUE)
+		target.apply_damage((force), BRUTE)
+		playsound(loc, hitsound_basic, 50, TRUE)
 		target.visible_message(span_danger("[user]'s powerfist lets out a dull thunk as [user.p_they()] punch[user.p_es()] [target.name]!"), \
 			span_userdanger("[user]'s punches you!"))
 		return
@@ -109,8 +111,8 @@
 	if(!molar_cmp_equals(gas_used.total_moles(), gas_per_fist * fist_pressure_setting))
 		our_turf.assume_air(gas_used)
 		to_chat(user, span_warning("\The [src]'s piston-ram lets out a weak hiss, it needs more gas!"))
-		playsound(loc, 'sound/weapons/punch4.ogg', 50, TRUE)
-		target.apply_damage((force / 2), BRUTE)
+		playsound(loc, hitsound_basic, 50, TRUE)
+		target.apply_damage((force), BRUTE)
 		target.visible_message(span_danger("[user]'s powerfist lets out a weak hiss as [user.p_they()] punch[user.p_es()] [target.name]!"), \
 			span_userdanger("[user]'s punch strikes with force!"))
 		return
@@ -118,9 +120,9 @@
 	target.visible_message(span_danger("[user]'s powerfist lets out a loud hiss as [user.p_they()] punch[user.p_es()] [target.name]!"), \
 		span_userdanger("You cry out in pain as [user]'s punch flings you backwards!"))
 	new /obj/effect/temp_visual/kinetic_blast(target.loc)
-	target.apply_damage(force * fist_pressure_setting, BRUTE, wound_bonus = CANT_WOUND)
+	target.apply_damage(force + (fist_pressure_setting * 3), BRUTE, wound_bonus = CANT_WOUND)
 	playsound(src, 'sound/weapons/resonator_blast.ogg', 50, TRUE)
-	playsound(src, 'sound/weapons/genhit2.ogg', 50, TRUE)
+	playsound(src, hitsound_basic, 50, TRUE)
 
 	if(!QDELETED(target))
 		var/atom/throw_target = get_edge_target_turf(target, get_dir(src, get_step_away(target, src)))

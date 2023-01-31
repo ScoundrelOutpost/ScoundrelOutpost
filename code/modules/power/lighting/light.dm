@@ -63,13 +63,17 @@
 	///Multiplier for this light's base brightness in low power power mode
 	var/bulb_low_power_brightness_mul = 0.6
 	///Determines the colour of the light while it's in low power mode
-	var/bulb_low_power_colour = "#FF3232"
+	var/bulb_low_power_colour = COLOR_VIVID_RED
 	///The multiplier for determining the light's power in low power mode
 	var/bulb_low_power_pow_mul = 0.45
 	///The minimum value for the light's power in low power mode
 	var/bulb_low_power_pow_min = 0.45
 	///Power usage - W per unit of luminosity
 	var/power_consumption_rate = 12
+	///The Light range to use when working in fire alarm status
+	var/fire_brightness = 4
+	///The Light colour to use when working in fire alarm status
+	var/fire_colour = COLOR_FIRE_LIGHT_RED
 
 /obj/machinery/light/Move()
 	if(status != LIGHT_BROKEN)
@@ -104,7 +108,7 @@
 	update(trigger = FALSE)
 
 /obj/machinery/light/Destroy()
-	var/area/local_area =get_room_area(src)
+	var/area/local_area = get_room_area(src)
 	if(local_area)
 		on = FALSE
 	QDEL_NULL(cell)
@@ -179,6 +183,8 @@
 		var/area/local_area =get_room_area(src)
 		if (local_area?.fire)
 			color_set = bulb_low_power_colour
+			color_set = fire_colour
+			brightness_set = fire_brightness
 			power_set = bulb_low_power_pow_mul * bulb_power
 		else if (nightshift_enabled)
 			brightness_set = nightshift_brightness
@@ -642,3 +648,4 @@
 	plane = FLOOR_PLANE
 	light_type = /obj/item/light/bulb
 	fitting = "bulb"
+	fire_brightness = 2

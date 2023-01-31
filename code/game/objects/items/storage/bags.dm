@@ -37,6 +37,7 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "trashbag"
 	inhand_icon_state = "trashbag"
+	worn_icon_state = "bottle" // where did the trashbag worn sprite go
 	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/custodial_righthand.dmi'
 	///If true, can be inserted into the janitor cart
@@ -45,8 +46,8 @@
 /obj/item/storage/bag/trash/Initialize(mapload)
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
-	atom_storage.max_total_storage = 30
-	atom_storage.max_slots = 30
+	atom_storage.max_total_storage = 16
+	atom_storage.max_slots = 16
 	atom_storage.set_holdable(cant_hold_list = list(/obj/item/disk/nuclear))
 
 /obj/item/storage/bag/trash/suicide_act(mob/living/user)
@@ -87,8 +88,8 @@
 
 /obj/item/storage/bag/trash/bluespace/Initialize(mapload)
 	. = ..()
-	atom_storage.max_total_storage = 60
-	atom_storage.max_slots = 60
+	atom_storage.max_total_storage = 32
+	atom_storage.max_slots = 32
 
 /obj/item/storage/bag/trash/bluespace/cyborg
 	insertable = FALSE

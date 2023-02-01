@@ -544,7 +544,7 @@
 	back = /obj/item/storage/backpack/satchel
 	uniform = /obj/item/clothing/under/starsuit
 	accessory = /obj/item/clothing/accessory/armband/medblue
-	gloves = /obj/item/clothing/gloves/color/black
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	belt = /obj/item/storage/belt/utility/small
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
 	shoes = /obj/item/clothing/shoes/jackboots

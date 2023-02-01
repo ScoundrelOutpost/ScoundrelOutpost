@@ -182,3 +182,17 @@
 	special = TRUE
 	contains = list(/obj/item/circuitboard/computer/sat_control)
 	crate_name= "shield control board crate"
+
+/datum/supply_pack/construction/construction_capsule
+	name = "Construction Capsules"
+	desc = "Two 11x11 bluespace capsules capable of providing a basic construction area following quick deployment."
+	cost = CARGO_CRATE_VALUE * 5
+	contains = list(/obj/item/survivalcapsule/construction_pod = 2)
+	crate_name = "construction capsule crate"
+
+/datum/supply_pack/construction/construction_capsule_single
+	name = "(Single) Construction Capsule"
+	desc = "A 11x11 bluespace capsule capable of providing a basic construction area following quick deployment."
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/survivalcapsule/construction_pod)
+	goody = TRUE

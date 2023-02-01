@@ -114,7 +114,7 @@
 
 	var/mob/living/carbon/carbon_parent = parent
 	if(carbon_parent.mind?.miming)
-		to_chat(carbon_parent, span_green("You stop yourself from signing in favor of the artform of mimery!"))
+		to_chat(carbon_parent, span_green("Your vow of silence prevents you from signing!"))
 		return COMPONENT_CANNOT_SPEAK
 
 	switch(check_signables_state())

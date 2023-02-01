@@ -1075,3 +1075,22 @@
 	if(!IS_ORGANIC_LIMB(old_limb))
 		cybernetics_level--
 		update_mood()
+
+/datum/quirk/vowofsilence
+	name = "Vow of Silence"
+	desc = "Nothing can convince you to partake in any kind of verbal communication."
+	icon = "comment-slash"
+	value = -4
+	gain_text = "<span class='notice'>You feel your desire to communicate disappear."
+	lose_text = "<span class='notice'>You feel a desire to communicate with others."
+	medical_record_text = "Patient is pathologically incapable of verbal communication."
+
+/datum/quirk/vowofsilence/add()
+	var/mob/living/carbon/human/human_holder = quirk_holder
+	var/datum/mind/holder_mind = human_holder.mind
+	holder_mind.miming = 1
+
+/datum/quirk/vowofsilence/remove()
+	var/mob/living/carbon/human/human_holder = quirk_holder
+	var/datum/mind/holder_mind = human_holder.mind
+	holder_mind.miming = 0

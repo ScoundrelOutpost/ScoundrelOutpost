@@ -20,6 +20,9 @@
 "cF" = (
 /obj/structure/railing,
 /obj/machinery/light/nightshift/directional/west,
+/obj/structure/sign/poster/official/help_others{
+	pixel_x = -32
+	},
 /turf/open/floor/iron,
 /area/misc/survivalpod)
 "cG" = (
@@ -33,6 +36,10 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
+/area/misc/survivalpod)
+"dz" = (
+/obj/item/flashlight,
+/turf/open/floor/iron/dark/textured_large,
 /area/misc/survivalpod)
 "dH" = (
 /obj/structure/chair,
@@ -207,6 +214,9 @@
 "pi" = (
 /obj/structure/chair,
 /obj/machinery/newscaster/directional/north,
+/obj/structure/sign/poster/official/cleanliness{
+	pixel_x = -32
+	},
 /turf/open/floor/iron/dark/textured_large,
 /area/misc/survivalpod)
 "ps" = (
@@ -362,6 +372,10 @@
 /obj/item/wrench/medical,
 /turf/open/floor/iron/white,
 /area/misc/survivalpod)
+"zF" = (
+/obj/structure/sign/poster/official/safety_eye_protection,
+/turf/closed/wall,
+/area/misc/survivalpod)
 "zW" = (
 /obj/machinery/atmospherics/components/unary/cryo_cell{
 	dir = 1
@@ -440,6 +454,13 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/misc/survivalpod)
+"Fo" = (
+/obj/effect/turf_decal/trimline/blue/filled/warning,
+/obj/structure/sign/poster/contraband/missing_gloves{
+	pixel_x = -32
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
 "Fw" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -485,7 +506,7 @@
 /turf/open/floor/catwalk_floor/iron_dark/airless,
 /area/misc/survivalpod)
 "MZ" = (
-/obj/machinery/portable_atmospherics/canister/anesthetic_mix,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/iron/dark/textured_large,
 /area/misc/survivalpod)
 "Np" = (
@@ -536,10 +557,6 @@
 "Pa" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron/white,
-/area/misc/survivalpod)
-"PD" = (
-/obj/item/flashlight,
-/turf/open/floor/iron/dark/textured_large,
 /area/misc/survivalpod)
 "Qb" = (
 /obj/structure/window/reinforced/spawner/north,
@@ -606,6 +623,10 @@
 /obj/machinery/light/nightshift/directional/east,
 /turf/open/floor/iron,
 /area/misc/survivalpod)
+"UF" = (
+/obj/structure/sign/poster/official/plasma_effects,
+/turf/closed/wall,
+/area/misc/survivalpod)
 "UL" = (
 /obj/machinery/chem_heater,
 /obj/effect/turf_decal/tile/yellow/full{
@@ -629,6 +650,10 @@
 /obj/structure/table,
 /obj/item/storage/box/beakers,
 /turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"WC" = (
+/obj/structure/sign/poster/official/safety_internals,
+/turf/closed/wall/r_wall,
 /area/misc/survivalpod)
 "XV" = (
 /obj/machinery/chem_dispenser,
@@ -680,13 +705,13 @@ xU
 xU
 xU
 MZ
-PD
+dz
 hx
 xU
 pi
 cF
 Hq
-VU
+Fo
 Ct
 nR
 xT
@@ -735,7 +760,7 @@ xT
 xU
 mQ
 Lj
-xU
+WC
 Er
 nE
 nE
@@ -756,7 +781,7 @@ xU
 Ii
 xU
 aD
-aD
+zF
 Ii
 Ux
 bx
@@ -774,7 +799,7 @@ xU
 Tp
 Kn
 Kn
-hO
+Ii
 hW
 hW
 dX
@@ -793,7 +818,7 @@ xU
 rU
 Kn
 iM
-hO
+Ii
 cX
 yZ
 Fw
@@ -809,9 +834,9 @@ xT
 (9,1,1) = {"
 xU
 aD
-aD
-hO
-hO
+UF
+Ii
+Ii
 aD
 ed
 Lj

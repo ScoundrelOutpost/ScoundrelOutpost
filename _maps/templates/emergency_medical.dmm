@@ -343,9 +343,10 @@
 /area/misc/survivalpod)
 "ye" = (
 /obj/structure/rack,
+/obj/machinery/light/no_nightlight/directional/north,
+/obj/item/storage/box/lights/mixed,
 /obj/item/storage/toolbox/mini/electrical/loaded,
 /obj/item/multitool,
-/obj/machinery/light/no_nightlight/directional/north,
 /turf/open/floor/iron/dark/textured_large,
 /area/misc/survivalpod)
 "yZ" = (
@@ -358,6 +359,7 @@
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /obj/machinery/atmospherics/components/unary/portables_connector,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/item/wrench/medical,
 /turf/open/floor/iron/white,
 /area/misc/survivalpod)
 "zW" = (
@@ -535,6 +537,10 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron/white,
 /area/misc/survivalpod)
+"PD" = (
+/obj/item/flashlight,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
 "Qb" = (
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/table,
@@ -674,7 +680,7 @@ xU
 xU
 xU
 MZ
-Lj
+PD
 hx
 xU
 pi

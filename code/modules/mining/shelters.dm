@@ -98,3 +98,9 @@
 	shelter_id = "shelter_traitor"
 	description = "An unidentified shelter that requires a 13x13 space to deploy."
 	mappath = "_maps/templates/shelter_traitor.dmm"
+
+/datum/map_template/shelter/emergency_medical
+	name = "Emergency Medical"
+	shelter_id = "shelter_emergency_medical"
+	description = "A 19x17 deployable emergency medical center."
+	mappath = "_maps/templates/emergency_medical.dmm"

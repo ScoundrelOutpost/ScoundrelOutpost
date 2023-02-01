@@ -1,0 +1,1011 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aD" = (
+/turf/closed/wall,
+/area/misc/survivalpod)
+"aF" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"aY" = (
+/obj/machinery/newscaster/directional/north,
+/obj/machinery/smartfridge/chemistry/preloaded,
+/turf/open/floor/plating,
+/area/misc/survivalpod)
+"bx" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/misc/survivalpod)
+"cF" = (
+/obj/structure/railing,
+/obj/machinery/light/nightshift/directional/west,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"cG" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"cX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"dH" = (
+/obj/structure/chair,
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"dX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/nightshift/directional/west,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"ed" = (
+/obj/machinery/smartfridge/organ,
+/turf/closed/wall,
+/area/misc/survivalpod)
+"eI" = (
+/obj/structure/closet/secure_closet/chemical/wall{
+	pixel_y = 30
+	},
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"fJ" = (
+/obj/structure/window/reinforced/spawner/north,
+/obj/item/storage/box/gloves,
+/obj/structure/table,
+/obj/item/storage/box/syringes{
+	pixel_x = 16
+	},
+/obj/item/storage/box/rxglasses{
+	pixel_x = -16
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"fQ" = (
+/obj/structure/rack,
+/obj/item/clothing/neck/stethoscope,
+/obj/item/wrench/medical,
+/obj/item/radio/intercom/directional/north,
+/obj/item/lazarus_injector,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"fR" = (
+/obj/structure/table/optable,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/radio/intercom/directional/north,
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"gi" = (
+/obj/structure/closet/crate/freezer/surplus_limbs,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"go" = (
+/obj/structure/chair,
+/obj/structure/sign/clock/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"hs" = (
+/obj/structure/railing,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"hx" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"hO" = (
+/obj/machinery/door/airlock/medical,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"hW" = (
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"iM" = (
+/obj/effect/turf_decal/tile/blue,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"jn" = (
+/obj/structure/table/glass,
+/obj/item/healthanalyzer,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"jU" = (
+/obj/structure/sink/directional/west,
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"ki" = (
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay"
+	},
+/obj/structure/sign/departments/chemistry/pharmacy/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"ks" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"kD" = (
+/obj/structure/closet/crate/freezer/blood,
+/obj/machinery/light/nightshift/directional/south,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"lK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"mz" = (
+/obj/machinery/recharger,
+/obj/structure/table,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"mQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/trash/cigbutt,
+/obj/item/assembly/igniter{
+	pixel_x = 8;
+	pixel_y = -6
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"mS" = (
+/obj/structure/table/glass,
+/obj/item/storage/pill_bottle/iron{
+	pixel_x = 10;
+	pixel_y = 7
+	},
+/obj/item/wheelchair{
+	pixel_y = 6;
+	pixel_x = -4
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"nE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"nG" = (
+/obj/machinery/stasis,
+/obj/item/storage/medkit/regular/wall{
+	pixel_y = 28
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"nO" = (
+/obj/structure/sign/departments/medbay/alt/directional/north,
+/turf/template_noop,
+/area/template_noop)
+"nR" = (
+/turf/open/floor/catwalk_floor/airless,
+/area/misc/survivalpod)
+"oD" = (
+/obj/structure/closet/secure_closet/medical3/wall{
+	pixel_y = 30;
+	req_access = list("maint_tunnels")
+	},
+/obj/structure/sink/directional/east,
+/obj/machinery/light/no_nightlight/directional/north,
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"pi" = (
+/obj/structure/chair,
+/obj/machinery/newscaster/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"ps" = (
+/obj/item/storage/medkit/o2,
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"pJ" = (
+/obj/structure/bed/roller,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"pT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"qE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/vending/medical,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"rq" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"rB" = (
+/obj/structure/table/glass,
+/obj/item/stack/cable_coil{
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"rU" = (
+/obj/machinery/shower/directional/south,
+/turf/open/floor/catwalk_floor/flat_white,
+/area/misc/survivalpod)
+"rX" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-21"
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"si" = (
+/obj/structure/bodycontainer/morgue,
+/obj/machinery/light/nightshift/directional/west,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"sM" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 1
+	},
+/obj/structure/mirror/directional/north,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"ti" = (
+/obj/structure/table/glass,
+/obj/machinery/cell_charger,
+/obj/item/stock_parts/cell/high,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"tz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"tC" = (
+/obj/structure/holosign/barrier/medical,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"tM" = (
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"vo" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"vx" = (
+/obj/machinery/reagentgrinder{
+	pixel_y = 12
+	},
+/obj/structure/table,
+/obj/item/clothing/glasses/science,
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"vX" = (
+/obj/structure/bed/roller,
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"wb" = (
+/obj/item/radio/intercom/directional/north,
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"xD" = (
+/obj/structure/table,
+/obj/item/storage/backpack/duffelbag/med/surgery{
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/obj/item/gps/off,
+/obj/item/gps/off,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"xT" = (
+/turf/template_noop,
+/area/template_noop)
+"xU" = (
+/turf/closed/wall/r_wall,
+/area/misc/survivalpod)
+"ye" = (
+/obj/structure/rack,
+/obj/item/storage/toolbox/mini/electrical/loaded,
+/obj/item/multitool,
+/obj/machinery/light/no_nightlight/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"yZ" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"ze" = (
+/obj/machinery/portable_atmospherics/canister/anesthetic_mix,
+/obj/machinery/atmospherics/components/unary/portables_connector,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"zW" = (
+/obj/machinery/atmospherics/components/unary/cryo_cell{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"zY" = (
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"zZ" = (
+/obj/machinery/computer/crew{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"Am" = (
+/obj/structure/table/glass,
+/obj/item/storage/bag/chemistry,
+/obj/item/roller{
+	pixel_y = 7;
+	pixel_x = -3
+	},
+/obj/item/storage/box/bodybags{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"BA" = (
+/obj/item/storage/fancy/donut_box,
+/obj/structure/table,
+/obj/item/storage/fancy/donut_box,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Cr" = (
+/obj/machinery/light/no_nightlight/directional/east,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"Ct" = (
+/obj/structure/holosign/barrier/atmos/sturdy,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"CI" = (
+/obj/machinery/door/window/brigdoor/left/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"CK" = (
+/obj/structure/window/reinforced/spawner/west,
+/obj/structure/table/reinforced,
+/obj/item/storage/medkit/brute,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Ek" = (
+/obj/machinery/atmospherics/components/unary/cryo_cell,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"Er" = (
+/obj/effect/spawner/random/engineering/atmospherics_portable,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"EB" = (
+/obj/structure/bodycontainer/morgue,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Fi" = (
+/obj/vehicle/ridden/wheelchair,
+/obj/item/storage/medkit/regular/wall{
+	pixel_y = 28
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Fw" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"Gh" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"Hq" = (
+/obj/structure/chair,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"HE" = (
+/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/north,
+/obj/structure/table/reinforced,
+/obj/item/storage/medkit/fire,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Ii" = (
+/obj/machinery/door/airlock/medical,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"IW" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Kn" = (
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"Lj" = (
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"LY" = (
+/obj/structure/tank_holder/anesthetic,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"MF" = (
+/obj/structure/sign/departments/medbay/alt/directional/north,
+/turf/open/floor/catwalk_floor/iron_dark/airless,
+/area/misc/survivalpod)
+"MZ" = (
+/obj/machinery/portable_atmospherics/canister/anesthetic_mix,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Np" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/machinery/light/blue/directional/west,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"Nt" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/cup/beaker/cryoxadone{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/obj/item/reagent_containers/cup/beaker/cryoxadone{
+	pixel_y = 12
+	},
+/obj/item/reagent_containers/cup/beaker/cryoxadone{
+	pixel_y = 12;
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/cup/beaker/cryoxadone{
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/cup/beaker/cryoxadone,
+/obj/item/reagent_containers/cup/beaker/cryoxadone{
+	pixel_x = -8
+	},
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"Ob" = (
+/obj/structure/table,
+/obj/item/clothing/gloves/color/latex,
+/obj/item/clothing/mask/surgical,
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = -10;
+	pixel_y = -1
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Og" = (
+/obj/machinery/stasis,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Pa" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"Qb" = (
+/obj/structure/window/reinforced/spawner/north,
+/obj/structure/table,
+/obj/item/storage/box/bodybags,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Ql" = (
+/obj/machinery/computer/operating,
+/obj/machinery/vending/wallmed/directional/north,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"QA" = (
+/obj/structure/railing,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"QD" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/medkit/toxin,
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Ro" = (
+/obj/machinery/iv_drip,
+/obj/machinery/newscaster/directional/north,
+/turf/open/floor/iron/white,
+/area/misc/survivalpod)
+"SA" = (
+/obj/machinery/iv_drip,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Tp" = (
+/obj/machinery/shower/directional/south,
+/obj/machinery/light/nightshift/directional/west,
+/turf/open/floor/catwalk_floor/flat_white,
+/area/misc/survivalpod)
+"TD" = (
+/obj/machinery/medical_kiosk,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"TM" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"Ul" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"Up" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"Ux" = (
+/obj/structure/noticeboard,
+/turf/closed/wall,
+/area/misc/survivalpod)
+"Uz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/nightshift/directional/east,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"UL" = (
+/obj/machinery/chem_heater,
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"Vr" = (
+/obj/machinery/chem_master,
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"VU" = (
+/obj/effect/turf_decal/trimline/blue/filled/warning,
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+"Wz" = (
+/obj/structure/window/reinforced/spawner/north,
+/obj/structure/table,
+/obj/item/storage/box/beakers,
+/turf/open/floor/iron/dark/textured_large,
+/area/misc/survivalpod)
+"XV" = (
+/obj/machinery/chem_dispenser,
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"Yf" = (
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/yellow/full{
+	color = "#FF6A00"
+	},
+/turf/open/floor/iron/large,
+/area/misc/survivalpod)
+"YY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/misc/survivalpod)
+
+(1,1,1) = {"
+xT
+xT
+xT
+xT
+xU
+xU
+xU
+xU
+xU
+xU
+xU
+xU
+xU
+xU
+MF
+xT
+xT
+"}
+(2,1,1) = {"
+xT
+xU
+xU
+xU
+xU
+MZ
+Lj
+hx
+xU
+pi
+cF
+Hq
+VU
+Ct
+nR
+xT
+xT
+"}
+(3,1,1) = {"
+xT
+xU
+si
+EB
+xU
+ye
+Lj
+mz
+aD
+go
+QA
+Hq
+VU
+Ct
+nR
+xT
+xT
+"}
+(4,1,1) = {"
+xT
+xU
+Lj
+nE
+xU
+fQ
+nE
+xD
+aD
+dH
+hs
+Hq
+VU
+Ct
+nR
+xT
+xT
+"}
+(5,1,1) = {"
+xT
+xU
+mQ
+Lj
+xU
+Er
+nE
+nE
+aD
+Fi
+hW
+Lj
+VU
+Ct
+nR
+xT
+xT
+"}
+(6,1,1) = {"
+xT
+xU
+xU
+Ii
+xU
+aD
+aD
+Ii
+Ux
+bx
+tC
+tC
+bx
+xU
+MF
+xT
+xT
+"}
+(7,1,1) = {"
+xT
+xU
+Tp
+Kn
+Kn
+hO
+hW
+hW
+dX
+vo
+hW
+vo
+zZ
+xU
+xU
+xT
+xT
+"}
+(8,1,1) = {"
+xT
+xU
+rU
+Kn
+iM
+hO
+cX
+yZ
+Fw
+cX
+cX
+cX
+pT
+IW
+xU
+xU
+xT
+"}
+(9,1,1) = {"
+xU
+aD
+aD
+hO
+hO
+aD
+ed
+Lj
+Lj
+Up
+Lj
+Lj
+TM
+HE
+CK
+xU
+xT
+"}
+(10,1,1) = {"
+xU
+Ek
+Np
+Kn
+cG
+zW
+aD
+nG
+Og
+Og
+Og
+mS
+TM
+CI
+Lj
+xU
+xU
+"}
+(11,1,1) = {"
+xU
+Ek
+rq
+Kn
+cG
+zW
+aD
+aY
+bx
+bx
+bx
+Am
+tz
+Wz
+Lj
+gi
+xU
+"}
+(12,1,1) = {"
+xU
+Ek
+rq
+Gh
+cG
+zW
+aD
+oD
+Vr
+XV
+bx
+SA
+TM
+fJ
+Lj
+kD
+xU
+"}
+(13,1,1) = {"
+xU
+sM
+rq
+Kn
+Pa
+rB
+aD
+eI
+tM
+vx
+bx
+BA
+tz
+Qb
+Lj
+jn
+xU
+"}
+(14,1,1) = {"
+xU
+ze
+rq
+Kn
+jU
+Nt
+aD
+wb
+Yf
+UL
+bx
+Ob
+TM
+CI
+Lj
+xU
+xU
+"}
+(15,1,1) = {"
+xU
+bx
+bx
+bx
+bx
+aD
+aD
+ki
+bx
+bx
+bx
+TD
+TM
+ps
+QD
+xU
+xT
+"}
+(16,1,1) = {"
+xT
+xU
+Ro
+ks
+Kn
+aD
+qE
+Ul
+Ul
+lK
+lK
+Ul
+YY
+rX
+xU
+xU
+xT
+"}
+(17,1,1) = {"
+xT
+xU
+fR
+zY
+aF
+hO
+hW
+vo
+hW
+Uz
+vo
+vo
+hW
+xU
+xU
+xT
+xT
+"}
+(18,1,1) = {"
+xT
+xU
+Ql
+Cr
+LY
+xU
+bx
+bx
+bx
+xU
+vX
+pJ
+ti
+xU
+xT
+xT
+xT
+"}
+(19,1,1) = {"
+xT
+xU
+xU
+xU
+xU
+xU
+nR
+nR
+nR
+xU
+xU
+xU
+xU
+xU
+nO
+xT
+xT
+"}

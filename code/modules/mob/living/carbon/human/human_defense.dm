@@ -90,7 +90,8 @@
 
 				return BULLET_ACT_FORCE_PIERCE // complete projectile permutation
 
-		if(check_shields(P, P.damage, "the [P.name]", PROJECTILE_ATTACK, P.armour_penetration))
+		var/bullet_damage_total = (P.damage + P.stamina) //adds normal damage AND stamina damage from the bullet together
+		if(check_shields(P, bullet_damage_total, "the [P.name]", PROJECTILE_ATTACK, P.armour_penetration))
 			P.on_hit(src, 100, def_zone, piercing_hit)
 			return BULLET_ACT_HIT
 

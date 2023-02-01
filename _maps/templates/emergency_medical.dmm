@@ -506,7 +506,7 @@
 /turf/open/floor/catwalk_floor/iron_dark/airless,
 /area/misc/survivalpod)
 "MZ" = (
-/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/iron/dark/textured_large,
 /area/misc/survivalpod)
 "Np" = (

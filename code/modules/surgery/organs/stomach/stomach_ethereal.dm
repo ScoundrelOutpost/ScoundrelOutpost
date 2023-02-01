@@ -51,12 +51,12 @@
 			carbon.add_mood_event("charge", /datum/mood_event/decharged)
 			carbon.throw_alert(ALERT_ETHEREAL_CHARGE, /atom/movable/screen/alert/emptycell/ethereal)
 			if(carbon.health > 10.5)
-				carbon.apply_damage(0.65, TOX, null, null, carbon)
+				carbon.apply_damage(0.65, STAMINA, null, null, carbon)
 		if(ETHEREAL_CHARGE_NONE to ETHEREAL_CHARGE_LOWPOWER)
 			carbon.add_mood_event("charge", /datum/mood_event/decharged)
 			carbon.throw_alert(ALERT_ETHEREAL_CHARGE, /atom/movable/screen/alert/lowcell/ethereal, 3)
 			if(carbon.health > 10.5)
-				carbon.apply_damage(0.325 * delta_time, TOX, null, null, carbon)
+				carbon.apply_damage(0.325 * delta_time, STAMINA, null, null, carbon)
 		if(ETHEREAL_CHARGE_LOWPOWER to ETHEREAL_CHARGE_NORMAL)
 			carbon.add_mood_event("charge", /datum/mood_event/lowpower)
 			carbon.throw_alert(ALERT_ETHEREAL_CHARGE, /atom/movable/screen/alert/lowcell/ethereal, 2)
@@ -65,11 +65,10 @@
 		if(ETHEREAL_CHARGE_FULL to ETHEREAL_CHARGE_OVERLOAD)
 			carbon.add_mood_event("charge", /datum/mood_event/overcharged)
 			carbon.throw_alert(ALERT_ETHEREAL_OVERCHARGE, /atom/movable/screen/alert/ethereal_overcharge, 1)
-			carbon.apply_damage(0.2, TOX, null, null, carbon)
 		if(ETHEREAL_CHARGE_OVERLOAD to ETHEREAL_CHARGE_DANGEROUS)
 			carbon.add_mood_event("charge", /datum/mood_event/supercharged)
 			carbon.throw_alert(ALERT_ETHEREAL_OVERCHARGE, /atom/movable/screen/alert/ethereal_overcharge, 2)
-			carbon.apply_damage(0.325 * delta_time, TOX, null, null, carbon)
+			carbon.apply_damage(0.325 * delta_time, STAMINA, null, null, carbon)
 			if(DT_PROB(5, delta_time)) // 5% each seacond for ethereals to explosively release excess energy if it reaches dangerous levels
 				discharge_process(carbon)
 		else
@@ -99,10 +98,10 @@
 		to_chat(carbon, span_warning("You violently discharge energy!"))
 		carbon.visible_message(span_danger("[carbon] violently discharges energy!"))
 
-		if(prob(10)) //chance of developing heart disease to dissuade overcharging oneself
-			var/datum/disease/D = new /datum/disease/heart_failure
+		if(prob(50)) //chance of developing magnitis
+			var/datum/disease/D = new /datum/disease/magnitis/nospread
 			carbon.ForceContractDisease(D)
-			to_chat(carbon, span_userdanger("You're pretty sure you just felt your heart stop for a second there.."))
-			carbon.playsound_local(carbon, 'sound/effects/singlebeat.ogg', 100, 0)
+			to_chat(carbon, span_userdanger("You can feel the currents inside your body shifting!"))
+			playsound(src.loc, 'sound/effects/empulse.ogg', 100, TRUE)
 
 		carbon.Paralyze(100)

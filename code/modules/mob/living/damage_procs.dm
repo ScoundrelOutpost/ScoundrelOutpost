@@ -125,6 +125,7 @@
 		eyeblur = 0,
 		drowsy = 0,
 		blocked = 0, // This one's not an effect, don't be confused - it's block chance
+		body_zone = null, // What body zone stamina damage is applied too, can be null
 		stamina = 0, // This one's a damage type, and not an effect
 		jitter = 0 SECONDS,
 		paralyze = 0,
@@ -150,7 +151,7 @@
 		apply_effect(drowsy, EFFECT_DROWSY, blocked)
 
 	if(stamina)
-		apply_damage(stamina, STAMINA, null, blocked)
+		apply_damage(stamina, STAMINA, body_zone, blocked)
 
 	if(jitter && (status_flags & CANSTUN) && !HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		adjust_jitter(jitter)

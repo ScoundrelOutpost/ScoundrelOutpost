@@ -1,0 +1,5 @@
+author: "necromanceranne"
+delete-after: True
+changes:
+  - bugfix: "Fixes shields blocking mixed damage projectiles too well."
+  - bugfix: "Removes a weird broken subtype of the pistol?"

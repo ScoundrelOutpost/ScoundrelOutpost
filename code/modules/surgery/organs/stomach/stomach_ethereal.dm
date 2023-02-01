@@ -10,7 +10,7 @@
 
 /obj/item/organ/internal/stomach/ethereal/on_life(delta_time, times_fired)
 	. = ..()
-	adjust_charge(-ETHEREAL_CHARGE_FACTOR * delta_time)
+	adjust_charge(-ETHEREAL_CHARGE_FACTOR * delta_time * 3) // *3 for parity with human stomachs. why? idk. - feb 1 2023
 	handle_charge(owner, delta_time, times_fired)
 
 /obj/item/organ/internal/stomach/ethereal/Insert(mob/living/carbon/carbon, special = FALSE, drop_if_replaced = TRUE)

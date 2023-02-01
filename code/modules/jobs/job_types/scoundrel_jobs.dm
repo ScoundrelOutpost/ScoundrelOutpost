@@ -275,7 +275,7 @@
 //	head = /obj/item/clothing/head/helmet/scoundrel
 	mask = /obj/item/clothing/mask/bandana/striped/black
 	uniform = /obj/item/clothing/under/syndicate/tracking_on
-	suit = /obj/item/clothing/suit/jacket/fancy
+	suit = /obj/item/clothing/suit/armor/furcoat
 	backpack_contents = list(
 		/obj/item/melee/tonfa/shock_tonfa = 1,
 		/obj/item/gun/energy/e_gun/defender,

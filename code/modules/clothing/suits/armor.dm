@@ -349,3 +349,17 @@
 	icon_state = "hop_coat"
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
+
+// scoundrel content
+/obj/item/clothing/suit/armor/furcoat
+	name = "armored fur coat"
+	desc = "A rugged fur coat padded with ballistic armor plates and kneepads."
+	icon = 'scoundrel/icons/obj/clothing/scoundrel_suit.dmi'
+	icon_state = "furcoat_armor"
+	worn_icon = 'scoundrel/icons/mob/clothing/scoundrel_suit.dmi'
+	worn_icon_state = "furcoat_armor"
+	inhand_icon_state = "swat_suit"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	armor = GENERIC_ARMOR_BULLET

@@ -524,11 +524,13 @@
 				informed = TRUE
 			switch(severity)
 				if(1)
-					L.receive_damage(0,10)
-					Paralyze(200)
+					L.receive_damage(0,1,3) // up to 6 burn and 18 stamina
+					electrocution_animation(1 SECONDS)
+					do_sparks(2, FALSE, src)
 				if(2)
-					L.receive_damage(0,5)
-					Paralyze(100)
+					L.receive_damage(0,1,2) // up to 6 burn and 12 stamina
+					electrocution_animation(0.5 SECONDS)
+					do_sparks(1, FALSE, src)
 
 /mob/living/carbon/human/acid_act(acidpwr, acid_volume, bodyzone_hit) //todo: update this to utilize check_obscured_slots() //and make sure it's check_obscured_slots(TRUE) to stop aciding through visors etc
 	var/list/damaged = list()

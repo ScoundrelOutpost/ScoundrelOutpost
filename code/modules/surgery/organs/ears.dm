@@ -108,7 +108,7 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
-	applyOrganDamage(40/severity)
+	applyOrganDamage(10/severity)
 
 /obj/item/organ/internal/ears/penguin
 	name = "penguin ears"

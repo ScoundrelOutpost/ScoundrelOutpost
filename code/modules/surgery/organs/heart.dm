@@ -191,7 +191,7 @@
 	var/dose_available = FALSE
 	var/rid = /datum/reagent/medicine/epinephrine
 	var/ramount = 10
-	var/emp_vulnerability = 80 //Chance of permanent effects if emp-ed.
+	var/emp_vulnerability = 40 //Chance of permanent effects if emp-ed.
 
 /obj/item/organ/internal/heart/cybernetic/tier2
 	name = "cybernetic heart"
@@ -200,7 +200,7 @@
 	base_icon_state = "heart-c-u"
 	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
 	dose_available = TRUE
-	emp_vulnerability = 40
+	emp_vulnerability = 20
 
 /obj/item/organ/internal/heart/cybernetic/tier3
 	name = "upgraded cybernetic heart"
@@ -209,7 +209,7 @@
 	base_icon_state = "heart-c-u2"
 	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
 	dose_available = TRUE
-	emp_vulnerability = 20
+	emp_vulnerability = 10
 
 /obj/item/organ/internal/heart/cybernetic/emp_act(severity)
 	. = ..()
@@ -229,7 +229,7 @@
 		Stop()
 		owner.visible_message(span_danger("[owner] clutches at [owner.p_their()] chest as if [owner.p_their()] heart is stopping!"), \
 						span_userdanger("You feel a terrible pain in your chest, as if your heart has stopped!"))
-		addtimer(CALLBACK(src, PROC_REF(Restart)), 10 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(Restart)), 1 SECONDS)
 
 /obj/item/organ/internal/heart/cybernetic/on_life(delta_time, times_fired)
 	. = ..()

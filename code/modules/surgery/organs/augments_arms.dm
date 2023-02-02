@@ -96,7 +96,8 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF || status == ORGAN_ROBOTIC)
 		return
-	if(prob(25/severity) && owner)
+	if(prob(25 / severity) && owner)
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
 		to_chat(owner, span_warning("\The [src] is malfunctioning!"))
 		Retract()
 
@@ -194,12 +195,13 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
-	if(prob(25/severity) && owner)
+	if(prob(25 / severity) && owner)
 		Retract()
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
 		to_chat(owner, span_userdanger("You feel burning inside your [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm, and realize it's overheating!"))
-		owner.adjust_fire_stacks(20)
+		owner.adjust_fire_stacks(5)
 		owner.ignite_mob()
-		owner.adjustFireLoss(25)
+		owner.adjustFireLoss(rand(5,15))
 
 /obj/item/organ/internal/cyberimp/arm/gun/laser
 	name = "arm-mounted laser implant"

@@ -265,8 +265,10 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
-	if(!COOLDOWN_FINISHED(src, severe_cooldown)) //So we cant just spam emp to kill people.
-		owner.adjustToxLoss(10)
-		COOLDOWN_START(src, severe_cooldown, 10 SECONDS)
-	if(prob(emp_vulnerability/severity)) //Chance of permanent effects
-		organ_flags |= ORGAN_SYNTHETIC_EMP //Starts organ faliure - gonna need replacing soon.
+	if(prob(25 / severity))
+		if(!COOLDOWN_FINISHED(src, severe_cooldown)) //So we cant just spam emp to kill people.
+			playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
+			owner.adjustToxLoss(10)
+			COOLDOWN_START(src, severe_cooldown, 10 SECONDS)
+		if(prob(emp_vulnerability/severity)) //Chance of permanent effects
+			organ_flags |= ORGAN_SYNTHETIC_EMP //Starts organ faliure - gonna need replacing soon.

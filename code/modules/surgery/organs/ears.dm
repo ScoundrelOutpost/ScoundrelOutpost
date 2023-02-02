@@ -108,7 +108,9 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
-	applyOrganDamage(10/severity)
+	if(prob(25 / severity))
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
+		applyOrganDamage(10/severity)
 
 /obj/item/organ/internal/ears/penguin
 	name = "penguin ears"
@@ -149,5 +151,7 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
-	applyOrganDamage(10/severity)
+	if(prob(25 / severity))
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
+		applyOrganDamage(10/severity)
 

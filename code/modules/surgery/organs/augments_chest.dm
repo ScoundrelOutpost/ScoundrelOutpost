@@ -33,6 +33,7 @@
 	if(!owner || . & EMP_PROTECT_SELF)
 		return
 	owner.reagents.add_reagent(/datum/reagent/toxin/bad_food, poison_amount / severity)
+	playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
 	to_chat(owner, span_warning("You feel like your insides are burning."))
 
 

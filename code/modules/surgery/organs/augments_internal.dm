@@ -34,6 +34,7 @@
 		return
 	var/stun_amount = 2 SECONDS / severity
 	if(prob(25 / severity))
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
 		owner.Knockdown(stun_amount)
 		to_chat(owner, span_warning("Your body briefly locks up!"))
 
@@ -150,7 +151,8 @@
 	. = ..()
 	if(!owner || . & EMP_PROTECT_SELF)
 		return
-	if(prob(25/severity))
+	if(prob(25 / severity))
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
 		to_chat(owner, span_warning("Your breathing tube suddenly closes!"))
 		owner.losebreath += 6
 

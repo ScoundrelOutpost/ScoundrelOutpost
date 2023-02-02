@@ -219,9 +219,9 @@
 	if(!owner || . & EMP_PROTECT_SELF)
 		return
 	if(prob(5 / severity))
-		return
-	to_chat(owner, span_warning("Static obfuscates your vision!"))
-	owner.flash_act(visual = 1)
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
+		to_chat(owner, span_warning("Static obfuscates your vision!"))
+		owner.flash_act(visual = 1)
 
 /obj/item/organ/internal/eyes/robotic/basic
 	name = "basic robotic eyes"
@@ -235,6 +235,7 @@
 	if(. & EMP_PROTECT_SELF)
 		return
 	if(prob(10 / severity))
+		playsound(owner, 'sound/weapons/ionrifle.ogg', 50, TRUE, -1)
 		applyOrganDamage(10 / severity)
 		to_chat(owner, span_warning("Your eyes start to fizzle in their sockets!"))
 		do_sparks(2, TRUE, owner)

@@ -279,3 +279,11 @@
 
 /obj/item/survivalcapsule/traitor
 	template_id = "shelter_traitor"
+
+//admin capsules
+/obj/item/survivalcapsule/admin
+	name = "admin capsule"
+	desc = "a funny little thing used for setting up events and stuff"
+
+/obj/item/survivalcapsule/admin/emergency_medical
+	template_id = "shelter_emergency_medical"

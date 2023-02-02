@@ -527,3 +527,63 @@
 	belt = /obj/item/storage/belt/utility/full/powertools/rcd
 	glasses = /obj/item/clothing/glasses/hud/diagnostic/sunglasses
 	additional_radio = /obj/item/encryptionkey/heads/ce
+
+// scoundrel content
+
+// private medical scout
+/datum/outfit/random/medical_scout
+	name = "Emergency Medical Scout (Will Randomize Player)"
+	id = /obj/item/card/id/advanced
+	id_trim = /datum/id_trim/job/medical_scout
+	suit = /obj/item/clothing/suit/armor/vest
+	suit_store = /obj/item/gun/energy/e_gun/defender
+	head = /obj/item/clothing/head/helmet/space/starsuit
+	mask = /obj/item/clothing/mask/gas
+	ears = /obj/item/radio/headset/bowman
+	neck = /obj/item/clothing/neck/stethoscope
+	back = /obj/item/storage/backpack/satchel
+	uniform = /obj/item/clothing/under/starsuit
+	accessory = /obj/item/clothing/accessory/armband/medblue
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	belt = /obj/item/storage/belt/utility/small
+	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
+	shoes = /obj/item/clothing/shoes/jackboots
+
+	box = /obj/item/storage/box/survival/engineer
+
+	backpack_contents = list(
+		/obj/item/storage/medkit/surgery = 1,
+		/obj/item/roller = 1,
+		/obj/item/melee/tonfa/shock_tonfa = 1,
+		/obj/item/defibrillator/compact/loaded = 1,
+		/obj/item/gps/off = 1,
+	)
+
+	l_pocket = /obj/item/personalshield/standard/advanced
+	r_pocket = /obj/item/tank/internals/emergency_oxygen/engi
+	internals_slot = ITEM_SLOT_RPOCKET
+
+	additional_radio = /obj/item/encryptionkey/headset_cent
+
+/datum/outfit/random
+	var/additional_radio = null
+
+/datum/outfit/random/post_equip(mob/living/carbon/human/H, visualsOnly) // pre_equip causes duplicate entries for some reason?
+	randomize_human(H)
+
+	// here be ert code
+	if(visualsOnly)
+		return
+
+	var/obj/item/radio/headset/R = H.ears
+	if(additional_radio)
+		R.keyslot2 = new additional_radio()
+		R.recalculateChannels()
+
+	var/obj/item/card/id/W = H.wear_id
+	if(W)
+		W.registered_name = H.real_name
+		W.update_label()
+		W.update_icon()
+	return ..()
+	// ert code end

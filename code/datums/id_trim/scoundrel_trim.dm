@@ -212,3 +212,16 @@
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
 		)
+
+// emergency roles
+
+/datum/id_trim/job/medical_scout
+	assignment = "Medical Scout"
+	trim_state = "trim_paramedic"
+	orbit_icon = "toolbox"
+	department_color = COLOR_COMMAND_BLUE
+	subdepartment_color = COLOR_COMMAND_BLUE
+	sechud_icon_state = SECHUD_MEDICAL_DOCTOR
+	minimal_access = list(
+		ACCESS_MAINT_TUNNELS,
+		)

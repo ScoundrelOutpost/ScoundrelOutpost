@@ -404,6 +404,15 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 		to_chat(user, span_notice("You toggle high-volume mode [use_command ? "on" : "off"]."))
 
 // scoundrel content
+/obj/item/radio/headset/bowman
+	name = "bowman headset"
+	desc = "Protects your ears from flashbangs."
+	icon_state = "scoundrel_bowman"
+
+/obj/item/radio/headset/bowman/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
+
 /obj/item/radio/headset/leader
 	name = "headset"
 	icon_state = "scoundrel_headset_leader"

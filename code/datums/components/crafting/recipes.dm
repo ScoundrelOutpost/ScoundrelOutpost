@@ -1881,5 +1881,18 @@
 	category = CAT_STRUCTURE
 	time = 10 SECONDS
 
+// scoundrel content
+/datum/crafting_recipe/personal_shield
+	name = "Makeshift Personal Shield-Emitter"
+	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	reqs = list(
+		/obj/item/t_scanner = 1,
+		/obj/item/stock_parts/cell/high = 1,
+		/obj/item/stock_parts/capacitor = 1,
+		/obj/item/stack/cable_coil = 15,
+	)
+	result = /obj/item/personalshield/standard
+	category = CAT_CLOTHING
+
 #undef CRAFTING_MACHINERY_CONSUME
 #undef CRAFTING_MACHINERY_USE

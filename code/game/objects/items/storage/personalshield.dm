@@ -70,12 +70,15 @@
 	// do cell.charge/shield_health to find the cell_power_lost required for the cell to last a single overload
 	var/cell_power_loss = 10
 	// the amount of cell charge before our shield switches off the shield entirely.
-	var/cell_failsafe_value = 100
+	var/cell_failsafe_value = 0 // does this really need to exist?
 	// Our cell. Loses power when the shield is hit while active equal to the damage inflicted to the shield.
 	var/obj/item/stock_parts/cell/cell
 	var/cell_type
 	// Speed at which the internal cell is recharged when inserted into a recharger
 	var/cell_charge_rate = 300
+
+	// Who has this equipped? emp_act doesn't know who to target without this
+	var/mob/living/carbon/wearer_fallback
 
 /obj/item/personalshield/Initialize(mapload)
 	. = ..()
@@ -97,6 +100,8 @@
 	. = ..()
 	if(cell)
 		. += span_notice("\The [src] is [round(cell.percent())]% charged, with an integrity of [shield_health].")
+	else
+		. += span_notice("Some wires are sticking out of the back. \The [src] looks like it's missing an internal power cell.")
 
 /obj/item/personalshield/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/toggle_personalshield))
@@ -122,13 +127,18 @@
 
 	if(!on && ishuman(user))
 		var/mob/living/carbon/human/wearer = user
-		if(cell?.charge >= cell_failsafe_value)
+		if(cell?.charge > cell_failsafe_value)
 			if(slot_check(wearer, FALSE))
 				// cleared to start / feedback
 				activating = TRUE
 				playsound(src, activate_start_sound, activate_start_sound_volume, FALSE, -2)
 				// begin startup sequence
 				if(do_after(wearer, activation_time, wearer, PERSONAL_SHIELD_STEP_FLAGS, extra_checks=CALLBACK(src, PROC_REF(slot_check), wearer)))
+					activating = FALSE
+					if(cell?.charge <= cell_failsafe_value)
+						to_chat(wearer, span_warning("\The [src] crackles impotently."))
+						playsound(src, drained_sound, drained_sound_volume, FALSE, -2)
+						return
 					AddComponent(/datum/component/shielded, max_charges = shield_health, recharge_start_delay = shield_recharge_delay, shield_icon_file = shield_icon_file, shield_icon = shield_icon, charge_increment_delay = shield_recharge_increment_delay, \
 					charge_recovery = shield_recovery_amount, lose_multiple_charges = TRUE, starting_charges = shield_tracked_health, cannot_block_types = unblockable_attack_types, shield_weakness = shielded_vulnerability, \
 					shield_weakness_multiplier = vulnerability_multiplier, shield_resistance = shielded_resistance, shield_resistance_multiplier = resistance_multiplier, no_overlay = no_overlay, \
@@ -136,7 +146,6 @@
 					run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)))
 					to_chat(wearer, span_notice("You turn [src] on."))
 					on = TRUE
-					activating = FALSE
 					update_appearance()
 					playsound(src, activate_sound, activate_sound_volume, FALSE, -2)
 					update_action_buttons()
@@ -182,10 +191,12 @@
 
 /obj/item/personalshield/equipped(mob/user, slot, initial)
 	. = ..()
+	wearer_fallback = user
 	RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
 
 /obj/item/personalshield/dropped(mob/user, silent)
 	. = ..()
+	wearer_fallback = null
 	if(on)
 		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 	remove_shield_component()
@@ -209,19 +220,19 @@
 
 	. = cell.use(cell_reduction_amount)
 	if(on && cell.charge <= cell_failsafe_value)
-		remove_shield_component(owner)
 		playsound(src, overload_sound, overload_sound_volume, FALSE)
 		owner.visible_message(span_danger("\The [src] emits a light beep as the barrier arounded [owner] shatters!"))
 		new /obj/effect/temp_visual/personalshield_break(get_turf(owner))
+		remove_shield_component(owner)
 
 /obj/item/personalshield/emp_act(severity)
 	. = ..()
 	if (!cell)
 		return
 	if (!(. & EMP_PROTECT_SELF))
-		drain_cell_power(damage = 1000 / severity)
-		if(cell?.charge <= cell_failsafe_value)
-			new /obj/effect/temp_visual/personalshield_break(get_turf(src))
+		if(wearer_fallback)
+			drain_cell_power(wearer_fallback, 1000 / severity)
+		else(cell.charge -= 1000 / severity)
 
 /obj/item/personalshield/update_icon_state()
 	if(on)

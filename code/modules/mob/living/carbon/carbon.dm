@@ -791,8 +791,10 @@
 		hud_used.stamina.icon_state = "stam0"
 		return
 
+	// In case our max health is higher or lower than the standard. Should be 1 for most carbons.
+	var/maxhealth_mult = MAX_LIVING_HEALTH / maxHealth
 	// These damage types are combinative toward stamcrit, so we want to telegraph them all
-	var/combined_damage = getStaminaLoss() + getBruteLoss() + getFireLoss() + getCloneLoss() + getToxLoss() + getOxyLoss()
+	var/combined_damage = maxhealth_mult * (getStaminaLoss() + getBruteLoss() + getFireLoss() + getCloneLoss() + getToxLoss() + getOxyLoss())
 	// our stam hud icon states are in increments of 10
 	var/hud_icon_increments = 10
 	// Helper for determining the icon state

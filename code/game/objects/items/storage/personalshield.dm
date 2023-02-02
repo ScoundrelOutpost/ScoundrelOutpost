@@ -77,9 +77,6 @@
 	// Speed at which the internal cell is recharged when inserted into a recharger
 	var/cell_charge_rate = 300
 
-	// Who has this equipped? emp_act doesn't know who to target without this
-	var/mob/living/carbon/wearer_fallback
-
 /obj/item/personalshield/Initialize(mapload)
 	. = ..()
 	if(cell_type)
@@ -191,12 +188,10 @@
 
 /obj/item/personalshield/equipped(mob/user, slot, initial)
 	. = ..()
-	wearer_fallback = user
 	RegisterSignal(user, COMSIG_HUMAN_CHECK_SHIELDS, PROC_REF(shield_reaction))
 
 /obj/item/personalshield/dropped(mob/user, silent)
 	. = ..()
-	wearer_fallback = null
 	if(on)
 		playsound(src, deactivate_sound, deactivate_sound_volume, FALSE, -2)
 	remove_shield_component()
@@ -230,9 +225,13 @@
 	if (!cell)
 		return
 	if (!(. & EMP_PROTECT_SELF))
-		if(wearer_fallback)
-			drain_cell_power(wearer_fallback, 1000 / severity)
-		else(cell.charge -= 1000 / severity)
+		var/emp_damage = 1000 / severity
+		var/mob/living/carbon/human/wearer = loc
+		if(istype(wearer))
+			drain_cell_power(wearer, emp_damage)
+		else
+			var/cell_reduction_amount = clamp(emp_damage, 0, cell.charge)
+			. = cell.use(cell_reduction_amount)
 
 /obj/item/personalshield/update_icon_state()
 	if(on)

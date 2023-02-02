@@ -89,6 +89,8 @@
 // admin starsuit
 /obj/item/clothing/under/starsuit/admin
 	name = "administrator starsuit"
+	worn_icon_state = "starsuit_exec"
+	icon_state = "starsuit_exec"
 	strip_delay = 1 HOURS
 	equip_delay_other = 1 HOURS // you simply cannot have it
 	limb_integrity = 100000

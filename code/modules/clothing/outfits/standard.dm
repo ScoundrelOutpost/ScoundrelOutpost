@@ -523,7 +523,7 @@
 	gloves = /obj/item/clothing/gloves/krav_maga/combatglovesplus
 	mask = /obj/item/clothing/mask/nobreath
 	head = /obj/item/clothing/head/helmet/space/starsuit/admin
-	neck = /obj/item/clothing/neck/tie/red/tied
+	neck = /obj/item/clothing/neck/tie/red/disguise/tied
 	shoes = /obj/item/clothing/shoes/jackboots
 
 	r_pocket = /obj/item/personalshield/debug

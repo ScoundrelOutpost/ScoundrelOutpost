@@ -145,3 +145,11 @@
 			Overtly branded; the fashion of it is non-negotiable, which can implicate agents who aren't careful with it."
 	item = /obj/item/storage/pouch/traitor/nanotrasen
 	cost = 5
+
+/datum/uplink_item/stealthy_tools/unassuming_tie
+	name = "Unassuming Tie"
+	desc = "A designer tie engineered to be as blasé as humanly imaginable. Observers will be unable to feel intrigue or \
+	collect small details about your appearance while it's tied around your neck, and your tone of speaking \
+	will become unrecognizably boring. Side effects may include migraines."
+	item = /obj/item/clothing/neck/tie/red/disguise
+	cost = 10

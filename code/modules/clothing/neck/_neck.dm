@@ -368,3 +368,31 @@
 /obj/item/clothing/neck/beads/Initialize(mapload)
 	. = ..()
 	color = color = pick("#ff0077","#d400ff","#2600ff","#00ccff","#00ff2a","#e5ff00","#ffae00","#ff0000", "#ffffff")
+
+
+// scoundrel content
+
+// unassuming tie
+/obj/item/clothing/neck/tie/red/disguise
+	desc = "It looks extraordinarily uninteresting and unassuming."
+
+/obj/item/clothing/neck/tie/red/disguise/equipped(mob/living/user, slot)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(H.wear_neck == src && is_tied == TRUE)
+		ADD_TRAIT(user, TRAIT_UNKNOWN, "disguise_tie")
+
+/obj/item/clothing/neck/tie/red/disguise/dropped(mob/living/user)
+	. = ..()
+	REMOVE_TRAIT(user, TRAIT_UNKNOWN, "disguise_tie")
+
+/obj/item/clothing/neck/tie/red/disguise/AltClick(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(H.wear_neck == src && is_tied == TRUE)
+		ADD_TRAIT(user, TRAIT_UNKNOWN, "disguise_tie")
+	else
+		REMOVE_TRAIT(user, TRAIT_UNKNOWN, "disguise_tie")
+
+/obj/item/clothing/neck/tie/red/disguise/tied
+	is_tied = TRUE

@@ -785,25 +785,25 @@
 /mob/living/carbon/update_stamina_hud(shown_stamina_amount)
 	if(!client || !hud_used?.stamina)
 		return
-	if(stat == DEAD || IsStun() || IsParalyzed() || IsImmobilized() || IsKnockdown() || IsFrozen())
-		hud_used.stamina.icon_state = "stamina6"
+	
+	// if dead, pretend we're tuckered out
+	if(stat == DEAD)
+		hud_used.stamina.icon_state = "stam0"
+		return
+
+	// These damage types are combinative toward stamcrit, so we want to telegraph them all
+	var/combined_damage = getStaminaLoss() + getBruteLoss() + getFireLoss() + getCloneLoss() + getToxLoss() + getOxyLoss()
+	// our stam hud icon states are in increments of 10
+	var/hud_icon_increments = 10
+	// Helper for determining the icon state
+	var/stampercent = 100 - clamp(round(combined_damage, hud_icon_increments), 0, 100)
+
+	if(combined_damage == 0)
+		hud_used.stamina.icon_state = "stam100"
+	else if(combined_damage > 0)
+		hud_used.stamina.icon_state = "stam[stampercent]"
 	else
-		if(shown_stamina_amount == null)
-			shown_stamina_amount = health - getStaminaLoss() - crit_threshold
-		if(shown_stamina_amount >= health)
-			hud_used.stamina.icon_state = "stamina0"
-		else if(shown_stamina_amount > health*0.8)
-			hud_used.stamina.icon_state = "stamina1"
-		else if(shown_stamina_amount > health*0.6)
-			hud_used.stamina.icon_state = "stamina2"
-		else if(shown_stamina_amount > health*0.4)
-			hud_used.stamina.icon_state = "stamina3"
-		else if(shown_stamina_amount > health*0.2)
-			hud_used.stamina.icon_state = "stamina4"
-		else if(shown_stamina_amount > 0)
-			hud_used.stamina.icon_state = "stamina5"
-		else
-			hud_used.stamina.icon_state = "stamina6"
+		hud_used.stamina.icon_state = "stam0"
 
 /mob/living/carbon/proc/update_spacesuit_hud_icon(cell_state = "empty")
 	if(hud_used?.spacesuit)

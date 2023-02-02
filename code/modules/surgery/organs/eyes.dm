@@ -218,7 +218,7 @@
 	. = ..()
 	if(!owner || . & EMP_PROTECT_SELF)
 		return
-	if(prob(10 * severity))
+	if(prob(5 / severity))
 		return
 	to_chat(owner, span_warning("Static obfuscates your vision!"))
 	owner.flash_act(visual = 1)
@@ -234,8 +234,8 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
-	if(prob(10 * severity))
-		applyOrganDamage(20 * severity)
+	if(prob(10 / severity))
+		applyOrganDamage(10 / severity)
 		to_chat(owner, span_warning("Your eyes start to fizzle in their sockets!"))
 		do_sparks(2, TRUE, owner)
 		owner.emote("scream")

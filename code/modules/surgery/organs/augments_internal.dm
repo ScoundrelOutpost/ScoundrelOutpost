@@ -32,9 +32,10 @@
 	. = ..()
 	if(!owner || . & EMP_PROTECT_SELF)
 		return
-	var/stun_amount = 200/severity
-	owner.Stun(stun_amount)
-	to_chat(owner, span_warning("Your body seizes up!"))
+	var/stun_amount = 2 SECONDS / severity
+	if(prob(25 / severity))
+		owner.Knockdown(stun_amount)
+		to_chat(owner, span_warning("Your body briefly locks up!"))
 
 
 /obj/item/organ/internal/cyberimp/brain/anti_drop
@@ -134,16 +135,6 @@
 		owner.SetImmobilized(0)
 		owner.SetParalyzed(0)
 
-/obj/item/organ/internal/cyberimp/brain/anti_stun/emp_act(severity)
-	. = ..()
-	if((organ_flags & ORGAN_FAILING) || . & EMP_PROTECT_SELF)
-		return
-	organ_flags |= ORGAN_FAILING
-	addtimer(CALLBACK(src, PROC_REF(reboot)), 90 / severity)
-
-/obj/item/organ/internal/cyberimp/brain/anti_stun/proc/reboot()
-	organ_flags &= ~ORGAN_FAILING
-
 //[[[[MOUTH]]]]
 /obj/item/organ/internal/cyberimp/mouth
 	zone = BODY_ZONE_PRECISE_MOUTH
@@ -159,9 +150,9 @@
 	. = ..()
 	if(!owner || . & EMP_PROTECT_SELF)
 		return
-	if(prob(60/severity))
+	if(prob(25/severity))
 		to_chat(owner, span_warning("Your breathing tube suddenly closes!"))
-		owner.losebreath += 2
+		owner.losebreath += 6
 
 //BOX O' IMPLANTS
 

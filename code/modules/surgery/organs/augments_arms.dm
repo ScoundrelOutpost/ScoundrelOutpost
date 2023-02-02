@@ -96,9 +96,8 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF || status == ORGAN_ROBOTIC)
 		return
-	if(prob(15/severity) && owner)
-		to_chat(owner, span_warning("The electromagnetic pulse causes [src] to malfunction!"))
-		// give the owner an idea about why his implant is glitching
+	if(prob(25/severity) && owner)
+		to_chat(owner, span_warning("\The [src] is malfunctioning!"))
 		Retract()
 
 /**
@@ -195,16 +194,12 @@
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
-	if(prob(30/severity) && owner && !(organ_flags & ORGAN_FAILING))
+	if(prob(25/severity) && owner)
 		Retract()
-		owner.visible_message(span_danger("A loud bang comes from [owner]\'s [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm!"))
-		playsound(get_turf(owner), 'sound/weapons/flashbang.ogg', 100, TRUE)
-		to_chat(owner, span_userdanger("You feel an explosion erupt inside your [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm as your implant breaks!"))
+		to_chat(owner, span_userdanger("You feel burning inside your [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm, and realize it's overheating!"))
 		owner.adjust_fire_stacks(20)
 		owner.ignite_mob()
 		owner.adjustFireLoss(25)
-		organ_flags |= ORGAN_FAILING
-
 
 /obj/item/organ/internal/cyberimp/arm/gun/laser
 	name = "arm-mounted laser implant"

@@ -100,22 +100,6 @@
 	else
 		reviver_cooldown += 20 SECONDS
 
-	if(ishuman(owner))
-		var/mob/living/carbon/human/human_owner = owner
-		if(human_owner.stat != DEAD && prob(50 / severity) && human_owner.can_heartattack())
-			human_owner.set_heartattack(TRUE)
-			to_chat(human_owner, span_userdanger("You feel a horrible agony in your chest!"))
-			addtimer(CALLBACK(src, PROC_REF(undo_heart_attack)), 600 / severity)
-
-/obj/item/organ/internal/cyberimp/chest/reviver/proc/undo_heart_attack()
-	var/mob/living/carbon/human/human_owner = owner
-	if(!istype(human_owner))
-		return
-	human_owner.set_heartattack(FALSE)
-	if(human_owner.stat == CONSCIOUS)
-		to_chat(human_owner, span_notice("You feel your heart beating again!"))
-
-
 /obj/item/organ/internal/cyberimp/chest/thrusters
 	name = "implantable thrusters set"
 	desc = "An implantable set of thruster ports. They use the gas from environment or subject's internals for propulsion in zero-gravity areas. \

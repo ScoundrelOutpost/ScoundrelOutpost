@@ -226,10 +226,14 @@
 		COOLDOWN_START(src, severe_cooldown, 20 SECONDS)
 	if(prob(emp_vulnerability/severity)) //Chance of permanent effects
 		organ_flags |= ORGAN_SYNTHETIC_EMP //Starts organ faliure - gonna need replacing soon.
+
+// EMPs really don't need random stuns like this to be useful
+/*
 		Stop()
 		owner.visible_message(span_danger("[owner] clutches at [owner.p_their()] chest as if [owner.p_their()] heart is stopping!"), \
 						span_userdanger("You feel a terrible pain in your chest, as if your heart has stopped!"))
 		addtimer(CALLBACK(src, PROC_REF(Restart)), 1 SECONDS)
+*/
 
 /obj/item/organ/internal/heart/cybernetic/on_life(delta_time, times_fired)
 	. = ..()

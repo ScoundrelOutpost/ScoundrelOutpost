@@ -86,6 +86,20 @@
 
 	w_class = WEIGHT_CLASS_SMALL
 
+// admin starsuit
+/obj/item/clothing/under/starsuit/admin
+	name = "administrator starsuit"
+	strip_delay = 1 HOURS
+	equip_delay_other = 1 HOURS // you simply cannot have it
+	limb_integrity = 100000
+	armor = ADMIN_ARMOR
+
+/obj/item/clothing/head/helmet/space/starsuit/admin
+	name = "administrator starsuit helmet"
+	armor = ADMIN_ARMOR
+	strip_delay = 1 HOURS
+	equip_delay_other = 1 HOURS // you simply cannot have it
+
 // normal
 /obj/item/clothing/under/suit/green
 	icon = 'icons/obj/clothing/under/centcom.dmi'

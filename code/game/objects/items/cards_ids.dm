@@ -1181,9 +1181,9 @@
 /obj/item/card/id/advanced/debug
 	name = "\improper Debug ID"
 	desc = "A debug ID card. Has ALL the all access, you really shouldn't have this."
-	icon_state = "card_centcom"
-	worn_icon_state = "card_centcom"
-	assigned_icon_state = "assigned_centcom"
+	icon_state = "card_black"
+	worn_icon_state = "card_black"
+	assigned_icon_state = "assigned_syndicate"
 	trim = /datum/id_trim/admin
 	wildcard_slots = WILDCARD_LIMIT_ADMIN
 

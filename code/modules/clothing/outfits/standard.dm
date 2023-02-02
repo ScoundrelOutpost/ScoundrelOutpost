@@ -499,3 +499,41 @@
 	W.registered_name = H.real_name
 	W.update_label()
 	W.update_icon()
+
+// scoundrel content
+/datum/outfit/admin/psinet // avoid breaking character too much
+	name = "Administrator"
+
+	id = /obj/item/card/id/advanced/debug
+	uniform = /obj/item/clothing/under/starsuit/admin
+	suit = /obj/item/clothing/suit/toggle/labcoat/admin
+	suit_store = /obj/item/tank/jetpack/advanced/compact/syndicate
+	back = /obj/item/storage/backpack/holding
+	backpack_contents = list(
+		/obj/item/storage/part_replacer/bluespace/tier4 = 1,
+		/obj/item/gun/magic/wand/resurrection/debug = 1,
+		/obj/item/gun/magic/wand/death/debug = 1,
+		/obj/item/debug/human_spawner = 1,
+		/obj/item/debug/omnitool = 1,
+		/obj/item/storage/box/stabilized = 1,
+)
+	belt = /obj/item/storage/belt/utility/chief/full/admin
+	ears = /obj/item/radio/headset/headset_cent/commander
+	glasses = /obj/item/clothing/glasses/debug
+	gloves = /obj/item/clothing/gloves/combat
+	mask = /obj/item/clothing/mask/nobreath
+	head = /obj/item/clothing/head/helmet/space/starsuit/admin
+	neck = /obj/item/clothing/neck/tie/red/tied
+	shoes = /obj/item/clothing/shoes/jackboots
+
+	r_pocket = /obj/item/personalshield/debug
+
+	box = /obj/item/storage/box/debugtools
+	internals_slot = null
+
+/datum/outfit/admin/psinet/random
+	name = "Administrator (Random Name)"
+/datum/outfit/admin/psinet/random/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	randomize_human(H)
+	. = ..()
+	

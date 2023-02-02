@@ -1,9 +1,9 @@
 /// Trim for admins and debug cards. Has every single access in the game.
 /datum/id_trim/admin
-	assignment = "Jannie"
-	trim_state = "trim_janitor"
-	department_color = COLOR_CENTCOM_BLUE
-	subdepartment_color = COLOR_SERVICE_LIME
+	assignment = "PsiNet Administrator"
+	trim_state = "trim_scientist"
+	department_color = COLOR_PURPLE
+	subdepartment_color = COLOR_PURPLE
 /datum/id_trim/admin/New()
 	. = ..()
 	// Every single access in the game, all on one handy trim.

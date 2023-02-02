@@ -381,3 +381,6 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 // misc armor
 #define STARSUIT_ARMOR list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 70, FIRE = 70, ACID = 70, WOUND = 0)
 #define STARSUIT_HARDHAT_ARMOR list(MELEE = 10, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 70, FIRE = 70, ACID = 70, WOUND = 5)
+
+// admin armor
+#define ADMIN_ARMOR list(MELEE = 100, BULLET = 100, LASER = 100, ENERGY = 100, BOMB = 100, BIO = 100, FIRE = 100, ACID = 100, WOUND = 100)

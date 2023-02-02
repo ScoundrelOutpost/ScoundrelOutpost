@@ -112,6 +112,12 @@
 /obj/item/storage/belt/utility/chief/full
 	preload = TRUE
 
+/obj/item/storage/belt/utility/chief/full/admin
+	w_class = WEIGHT_CLASS_NONE
+	worn_icon_state = "empty"
+	strip_delay = 10000
+	item_flags = EXAMINE_SKIP
+
 /obj/item/storage/belt/utility/chief/full/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/screwdriver/power, src)
 	SSwardrobe.provide_type(/obj/item/crowbar/power, src)

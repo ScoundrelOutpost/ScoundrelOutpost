@@ -96,3 +96,14 @@
 	name = "interdyne labcoat"
 	desc = "More like an eccentric coat than a labcoat. Helps pass off bloodstains as part of the aesthetic. Comes with red shoulder pads."
 	icon_state = "labcoat_robo"
+
+// scoundrel content
+/obj/item/clothing/suit/toggle/labcoat/admin
+	name = "administrator's labcoat"
+	desc = "It feels like it's made of paper."
+	icon_state = "labcoat_cmo"
+	inhand_icon_state = null
+
+/obj/item/clothing/suit/toggle/labcoat/admin/Initialize(mapload)
+	. = ..()
+	allowed += /obj/item/tank/jetpack

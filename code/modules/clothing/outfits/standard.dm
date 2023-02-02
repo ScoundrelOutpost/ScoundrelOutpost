@@ -520,7 +520,7 @@
 	belt = /obj/item/storage/belt/utility/chief/full/admin
 	ears = /obj/item/radio/headset/headset_cent/commander
 	glasses = /obj/item/clothing/glasses/debug
-	gloves = /obj/item/clothing/gloves/combat
+	gloves = /obj/item/clothing/gloves/krav_maga/combatglovesplus
 	mask = /obj/item/clothing/mask/nobreath
 	head = /obj/item/clothing/head/helmet/space/starsuit/admin
 	neck = /obj/item/clothing/neck/tie/red/tied

@@ -103,6 +103,13 @@
 //slowdown when crawling
 #define CRAWLING_ADD_SLOWDOWN 4
 
+//Human damage slowdown stats
+//Having this amount of cumulative damage will apply a slowdown to humans
+#define H_DAMAGE_SLOWDOWN_THRESHOLD 40
+//Damage slowdown is scales with the amount of damage cumulatively, and is then divided by these numbers
+#define H_DAMAGE_SLOWDOWN_DIVIDEBY 100
+#define H_DAMAGE_SLOWDOWN_DIVIDEBY_FLYING 125
+
 //Attack types for checking shields/hit reactions
 #define MELEE_ATTACK 1
 #define UNARMED_ATTACK 2

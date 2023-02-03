@@ -955,9 +955,9 @@
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
 		return
 	var/health_deficiency = ((maxHealth - health) + staminaloss)
-	if(health_deficiency >= 40)
-		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = health_deficiency / 75)
-		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = health_deficiency / 25)
+	if(health_deficiency >= H_DAMAGE_SLOWDOWN_THRESHOLD)
+		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = health_deficiency / H_DAMAGE_SLOWDOWN_DIVIDEBY)
+		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = health_deficiency / H_DAMAGE_SLOWDOWN_DIVIDEBY_FLYING)
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)

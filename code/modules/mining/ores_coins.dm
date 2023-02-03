@@ -340,6 +340,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	flags_1 = CONDUCT_1
 	force = 1
 	throwforce = 2
+	slot_flags = ITEM_SLOT_ID
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/iron = 400)
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS

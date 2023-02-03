@@ -6,6 +6,7 @@
 	base_icon_state = "holochip"
 	throwforce = 0
 	force = 0
+	slot_flags = ITEM_SLOT_ID
 	w_class = WEIGHT_CLASS_TINY
 	var/credits = 0
 

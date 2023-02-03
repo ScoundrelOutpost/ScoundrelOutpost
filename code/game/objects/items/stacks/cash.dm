@@ -8,6 +8,7 @@
 	throwforce = 0
 	throw_speed = 2
 	throw_range = 2
+	slot_flags = ITEM_SLOT_ID
 	w_class = WEIGHT_CLASS_TINY
 	full_w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE

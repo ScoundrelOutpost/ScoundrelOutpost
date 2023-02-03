@@ -54,7 +54,14 @@
 	if(HAS_TRAIT(src, TRAIT_WIELDED)) //destroys windows and grilles in one hit
 		if(istype(A, /obj/structure/window) || istype(A, /obj/structure/grille))
 			var/obj/structure/W = A
-			W.atom_destruction("fireaxe")
+			var/base_damage = force * demolition_mod
+			// if a third of the atom's max_integrity is greater than the damage the axe deals normally
+			if(W.max_integrity / 3 > base_damage)
+				// find the difference between a third of the atom's max_integrity and the axe's base damage
+				var/additive_damage = round((W.max_integrity / 3) - base_damage) + 1
+				// so it deals an amount cumulative to a third of the atom's max_integrity
+				W.take_damage(additive_damage)
+				// in effect, it will always deal at least a third of a window's max health per hit
 
 /*
  * Bone Axe

@@ -334,8 +334,10 @@
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 	recoil = 2
 	weapon_weight = WEAPON_HEAVY
+	bolt_type = BOLT_TYPE_STANDARD
+	semi_auto = FALSE
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds
-	fire_delay = 4 SECONDS
+	fire_delay = 2 SECONDS
 	burst_size = 1
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()

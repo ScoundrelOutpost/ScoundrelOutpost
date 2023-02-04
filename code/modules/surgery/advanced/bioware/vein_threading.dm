@@ -39,6 +39,7 @@
 	)
 	display_pain(target, "You can feel your blood pumping through reinforced veins!")
 	new /datum/bioware/threaded_veins(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()
 
 /datum/bioware/threaded_veins

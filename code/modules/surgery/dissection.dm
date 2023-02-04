@@ -59,7 +59,7 @@
 	var/obj/machinery/computer/operating/operating_computer = surgery.locate_operating_computer(get_turf(target))
 	if (!isnull(operating_computer))
 		SEND_SIGNAL(operating_computer, COMSIG_OPERATING_COMPUTER_DISSECTION_COMPLETE, target)
-		generate_research_notes(user, target)
+		generate_research_notes(user, target, surgery)
 
 	return TRUE
 
@@ -87,9 +87,9 @@
 	return implement_type != /obj/item || tool.get_sharpness() > 0
 
 // scoundrel content
-/datum/surgery_step/dissection/proc/generate_research_notes(mob/user, mob/living/target)
-	var/notes_value = 10
-	var/obj/item/research_notes/new_notes = new /obj/item/research_notes(target.loc)
+/datum/surgery_step/dissection/generate_research_notes(mob/user, mob/living/target, datum/surgery/surgery, notes_value = 10)
+	var/obj/machinery/computer/operating/operating_computer = surgery.locate_operating_computer(get_turf(target))
+	var/obj/item/research_notes/new_notes = new /obj/item/research_notes(operating_computer.loc)
 
 	if(isbasicmob(target))
 		notes_value = RNOTE_VALUE_BASIC
@@ -108,6 +108,4 @@
 			notes_value = RNOTE_VALUE_BASIC
 	
 	new_notes.research_points = notes_value
-	if(iscarbon(user))
-		var/mob/living/carbon/C = user
-		C.put_in_hands(new_notes)
+	new_notes.update_appearance()

@@ -8,6 +8,9 @@
 #define RNOTE_VALUE_ABDUCTOR 5000
 #define RNOTE_VALUE_XENO 10000
 
+// Generic value for research notes acquired by finishing surgeries
+#define RNOTE_SURGICAL_REWARD 100
+#define RNOTE_SURGICAL_REWARD_UNCOMMON 400
 
 // Multiplier for cash provided when research notes are turned in
 #define RNOTE_CASH_MULT 0.1

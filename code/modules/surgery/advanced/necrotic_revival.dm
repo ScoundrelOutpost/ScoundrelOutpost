@@ -48,4 +48,5 @@
 	if(!target.getorganslot(ORGAN_SLOT_ZOMBIE))
 		var/obj/item/organ/internal/zombie_infection/z_infection = new()
 		z_infection.Insert(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()

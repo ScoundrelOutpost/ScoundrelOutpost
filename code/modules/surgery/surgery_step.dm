@@ -156,6 +156,8 @@
 			span_notice("[user] succeeds!"),
 			span_notice("[user] finishes."),
 		)
+	if(prob(10))
+		generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD)
 	return TRUE
 
 /datum/surgery_step/proc/play_success_sound(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -241,3 +243,12 @@
 		to_chat(target, span_userdanger(pain_message))
 		if(prob(30) && !mechanical_surgery)
 			target.emote("scream")
+
+// scoundrel content
+/datum/surgery_step/proc/generate_research_notes(mob/user, mob/living/target, datum/surgery/surgery, notes_value = 0)
+	if(notes_value > 0)
+		var/obj/machinery/computer/operating/operating_computer = surgery.locate_operating_computer(get_turf(target))
+		var/obj/item/research_notes/new_notes = new /obj/item/research_notes(operating_computer.loc)
+		new_notes.research_points = notes_value
+		new_notes.update_appearance()
+		operating_computer.say("Recorded data of scientific intrigue.")

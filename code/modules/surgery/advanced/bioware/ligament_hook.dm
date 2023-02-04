@@ -39,6 +39,7 @@
 	)
 	display_pain(target, "Your limbs feel... strangely loose.")
 	new /datum/bioware/hooked_ligaments(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()
 
 /datum/bioware/hooked_ligaments

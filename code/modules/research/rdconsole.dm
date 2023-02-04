@@ -458,12 +458,14 @@ Nothing else in the console has ID requirements.
 
 /obj/item/research_notes/update_overlays()
 	. = ..()
-	if(research_points < 2000)
+	if(research_points < 1000)
 		icon_state = "rnote_1"
-	if(research_points >= 2000)
+	if(research_points >= 1000)
 		icon_state = "rnote_2"
-	if(research_points >= 5000)
+	if(research_points >= 2000)
 		icon_state = "rnote_3"
+	if(research_points >= 5000)
+		icon_state = "rnote_4"
 
 /obj/item/research_notes/attackby(obj/item/I, mob/user, params)
 	..()

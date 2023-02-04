@@ -407,5 +407,97 @@ Nothing else in the console has ID requirements.
 		t_disk.forceMove(get_turf(src))
 		t_disk = null
 
+// scoundrel content
+/obj/machinery/computer/rdconsole/attackby(obj/item/D, mob/user, params)
+	if(istype(D, /obj/item/research_notes))
+		if(is_operational == FALSE)
+			to_chat(user, span_notice("\The [src] won't take [D] while it's not operational!"))
+			return
+
+		var/obj/item/research_notes/rn = D
+		stored_research.add_points_all(rn.research_points)
+		if(rn.givecash == TRUE)
+			playsound(src, 'sound/machines/coindrop.ogg', 25, TRUE)
+			var/obj/item/holochip/cash_reward = new /obj/item/holochip(src.loc)
+			cash_reward.credits = round((rn.research_points * RNOTE_CASH_MULT) * RNOTE_CASH_RANDOMIZER, 1)
+			if(rn.research_points < 10)
+				qdel(cash_reward)
+			cash_reward.update_appearance()
+			say("[rn.research_points] research points added by [user] for [cash_reward.credits] credits! [(cash_reward.credits < 1) ? "Try more than that next time, buddy." : ""]")
+
+			if(ismob(D))
+				var/mob/m = D
+				m.put_in_hands(cash_reward)
+		else
+			playsound(src, 'sound/machines/twobeep_high.ogg', 50, TRUE)
+			say("[rn.research_points] research points added by [user]!")
+		qdel(rn)
+
+/obj/item/research_notes
+	name = "\proper research notes"
+	desc = "A crystal-hardlight holopad containing information of scientific intrigue."
+	icon = 'scoundrel/icons/obj/misc/research.dmi'
+	icon_state = "rnote_1"
+	base_icon_state = "rnote_1"
+	throwforce = 0
+	force = 0
+	w_class = WEIGHT_CLASS_TINY
+	// number of research points stored
+	var/research_points = 0
+	// whether it gives cash when it's turned in at the R&D console. Incase we want to make research purchaseable or something.
+	var/givecash = TRUE
+
+
+/obj/item/research_notes/Initialize(mapload)
+	. = ..()
+	update_appearance()
+/*
+	var/preface = list("It's about","It seems to detail","It seems to describe","It details","It describes","It suggests information about","It implies information about")
+	desc += "\n[pick(preface) [pick(GLOB.rnote_descriptor)]]."
+*/ // doesn't work idk why. come back and fix it later - feb 04 2023
+
+/obj/item/research_notes/update_overlays()
+	. = ..()
+	if(research_points < 2000)
+		icon_state = "rnote_1"
+	if(research_points >= 2000)
+		icon_state = "rnote_2"
+	if(research_points >= 5000)
+		icon_state = "rnote_3"
+
+/obj/item/research_notes/attackby(obj/item/I, mob/user, params)
+	..()
+	if(istype(I, /obj/item/research_notes))
+		var/obj/item/research_notes/R = I
+		research_points += R.research_points
+		to_chat(user, span_notice("You combine [src]."))
+		update_appearance()
+		qdel(R)
+
+/obj/item/research_notes/examine(mob/user)
+	. = ..()
+	. += "[span_notice("It's loaded with [research_points] research point[( research_points != 0 ) ? "s" : ""]")]"
+
+/obj/item/research_notes/p10
+	research_points = 10
+
+/obj/item/research_notes/p500
+	research_points = 500
+
+/obj/item/research_notes/p1000
+	research_points = 1000
+
+/obj/item/research_notes/p2000
+	research_points = 2000
+
+/obj/item/research_notes/p5000
+	research_points = 5000
+
+/obj/item/research_notes/p10000
+	research_points = 10000
+
+/obj/item/research_notes/p1000000
+	research_points = 1000000
+
 #undef RND_TECH_DISK
 #undef RND_DESIGN_DISK

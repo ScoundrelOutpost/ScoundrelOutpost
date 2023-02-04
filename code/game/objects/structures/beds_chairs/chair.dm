@@ -393,15 +393,19 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 		return TRUE
 	return FALSE
 
-/obj/item/chair/attack(mob/living/target_mob, mob/living/user, params)
+/obj/item/chair/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
-	var/C = target_mob
-	smash(C)
+	if(HAS_TRAIT(user, TRAIT_PACIFISM))
+		return
+	if(iscarbon(target))
+		var/C = target
+		smash(C)
 
 /obj/item/chair/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
-	var/C = hit_atom
-	smash(C)
+	if(iscarbon(hit_atom))
+		var/C = hit_atom
+		smash(C)
 
 /obj/item/chair/greyscale
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS

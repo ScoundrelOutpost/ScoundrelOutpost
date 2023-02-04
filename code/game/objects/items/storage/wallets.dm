@@ -80,7 +80,7 @@
 		if(wearing_human.wear_id == src)
 			wearing_human.sec_hud_set_ID()
 
-	update_label()
+//	update_label()
 	update_appearance(UPDATE_ICON)
 	update_slot_icon()
 
@@ -88,7 +88,7 @@
 	. = ..()
 	if(isidcard(arrived))
 		refreshID()
-
+/*
 /obj/item/storage/wallet/update_overlays()
 	. = ..()
 	cached_flat_icon = null
@@ -97,6 +97,7 @@
 	. += mutable_appearance(front_id.icon, front_id.icon_state)
 	. += front_id.overlays
 	. += mutable_appearance(icon, "wallet_overlay")
+*/ // anonymity is fine
 
 /obj/item/storage/wallet/proc/get_cached_flat_icon()
 	if(!cached_flat_icon)
@@ -108,16 +109,20 @@
 		return "[icon2html(get_cached_flat_icon(), user)] [thats? "That's ":""][get_examine_name(user)]" //displays all overlays in chat
 	return ..()
 
+/*
 /obj/item/storage/wallet/proc/update_label()
 	if(front_id)
 		name = "wallet displaying [front_id]"
 	else
 		name = "wallet"
+*/ // anonymity is fine. if you want to turn this back on, look for "powergaming.update_label"
 
+/*
 /obj/item/storage/wallet/examine()
 	. = ..()
 	if(front_id)
 		. += span_notice("Alt-click to remove the id.")
+*/ // no longer true, and for the best that way
 
 /obj/item/storage/wallet/get_id_examine_strings(mob/user)
 	. = ..()

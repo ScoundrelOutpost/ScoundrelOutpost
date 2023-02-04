@@ -409,6 +409,7 @@ Nothing else in the console has ID requirements.
 
 // scoundrel content
 /obj/machinery/computer/rdconsole/attackby(obj/item/D, mob/user, params)
+	. = ..()
 	if(istype(D, /obj/item/research_notes))
 		if(is_operational == FALSE)
 			to_chat(user, span_notice("\The [src] won't take [D] while it's not operational!"))

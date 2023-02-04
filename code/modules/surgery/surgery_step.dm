@@ -246,9 +246,13 @@
 
 // scoundrel content
 /datum/surgery_step/proc/generate_research_notes(mob/user, mob/living/target, datum/surgery/surgery, notes_value = 0)
+	// if there's no operating computer, give no research
+	if(!surgery.locate_operating_computer(get_turf(target)))
+		return
+
 	if(notes_value > 0)
 		var/obj/machinery/computer/operating/operating_computer = surgery.locate_operating_computer(get_turf(target))
 		var/obj/item/research_notes/new_notes = new /obj/item/research_notes(operating_computer.loc)
 		new_notes.research_points = notes_value
 		new_notes.update_appearance()
-		operating_computer.say("Recorded data of scientific intrigue.")
+		operating_computer.say("Recorded data worth [notes_value] points of scientific intrigue.")

@@ -109,3 +109,4 @@
 	
 	new_notes.research_points = notes_value
 	new_notes.update_appearance()
+	operating_computer.say("Recorded data worth [notes_value] points of scientific intrigue.")

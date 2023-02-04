@@ -12,6 +12,8 @@
 	var/preop_sound //Sound played when the step is started
 	var/success_sound //Sound played if the step succeeded
 	var/failure_sound //Sound played if the step fails
+	COOLDOWN_DECLARE(surgery_minor_reward_cooldown)
+	var/surgery_minor_reward_cooldown_time = 1 SECONDS
 
 /datum/surgery_step/proc/try_op(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, try_to_fail = FALSE)
 	var/success = FALSE
@@ -156,8 +158,9 @@
 			span_notice("[user] succeeds!"),
 			span_notice("[user] finishes."),
 		)
-	if(prob(10))
+	if(prob(10) && COOLDOWN_FINISHED(src, surgery_minor_reward_cooldown))
 		generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD)
+		COOLDOWN_START(src, surgery_minor_reward_cooldown, surgery_minor_reward_cooldown_time)
 	return TRUE
 
 /datum/surgery_step/proc/play_success_sound(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)

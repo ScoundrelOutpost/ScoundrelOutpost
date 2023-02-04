@@ -258,13 +258,13 @@
 
 // special messaging for those without arms
 /datum/component/riding/vehicle/wheelchair/hand/driver_move(obj/vehicle/vehicle_parent, mob/living/user, direction)
-	var/delay_multiplier = 6.7 // magic number from wheelchair code
+	var/delay_multiplier = 3 // magic number from wheelchair code
 	vehicle_move_delay = round(CONFIG_GET(number/movedelay/run_delay) * delay_multiplier) / clamp(user.usable_hands, 1, 2)
 	return ..()
 
 /datum/component/riding/vehicle/wheelchair/motorized/driver_move(obj/vehicle/vehicle_parent, mob/living/user, direction)
 	var/speed = 1 // Should never be under 1
-	var/delay_multiplier = 6.7 // magic number from wheelchair code
+	var/delay_multiplier = 3 // magic number from wheelchair code
 
 	var/obj/vehicle/ridden/wheelchair/motorized/our_chair = parent
 	for(var/obj/item/stock_parts/manipulator/M in our_chair.contents)

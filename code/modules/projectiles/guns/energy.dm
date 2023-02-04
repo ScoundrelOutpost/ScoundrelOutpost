@@ -84,6 +84,11 @@
 /obj/item/gun/energy/add_weapon_description()
 	AddElement(/datum/element/weapon_description, attached_proc = PROC_REF(add_notes_energy))
 
+/obj/item/gun/energy/examine(mob/user)
+	. = ..()
+	if(!cell)
+		. += span_warning("It doesn't have a <b>power source</b> installed, and won't fire.")
+
 /**
  *
  * Outputs type-specific weapon stats for energy-based firearms based on its firing modes

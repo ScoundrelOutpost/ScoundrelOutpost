@@ -118,7 +118,7 @@
 			. += "It has \a [pin] installed."
 			. += span_info("[pin] looks like it could be removed with some <b>tools</b>.")
 		else
-			. += "It doesn't have a <b>firing pin</b> installed, and won't fire."
+			. += span_warning("It doesn't have a <b>firing pin</b> installed, and won't fire.")
 
 	if(bayonet)
 		. += "It has \a [bayonet] [can_bayonet ? "" : "permanently "]affixed to it."

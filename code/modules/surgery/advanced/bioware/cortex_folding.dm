@@ -45,6 +45,7 @@
 	)
 	display_pain(target, "Your brain feels stronger... more flexible!")
 	new /datum/bioware/cortex_fold(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()
 
 /datum/surgery_step/fold_cortex/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)

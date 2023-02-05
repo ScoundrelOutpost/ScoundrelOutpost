@@ -59,6 +59,7 @@
 	var/obj/machinery/computer/operating/operating_computer = surgery.locate_operating_computer(get_turf(target))
 	if (!isnull(operating_computer))
 		SEND_SIGNAL(operating_computer, COMSIG_OPERATING_COMPUTER_DISSECTION_COMPLETE, target)
+		generate_research_notes(user, target, surgery)
 
 	return TRUE
 
@@ -84,3 +85,28 @@
 
 /datum/surgery_step/dissection/tool_check(mob/user, obj/item/tool)
 	return implement_type != /obj/item || tool.get_sharpness() > 0
+
+// scoundrel content
+/datum/surgery_step/dissection/generate_research_notes(mob/user, mob/living/target, datum/surgery/surgery, notes_value = 10)
+	var/obj/machinery/computer/operating/operating_computer = surgery.locate_operating_computer(get_turf(target))
+	var/obj/item/research_notes/new_notes = new /obj/item/research_notes(operating_computer.loc)
+
+	if(isbasicmob(target))
+		notes_value = RNOTE_VALUE_BASIC
+	else if(isalien(target))
+		notes_value = RNOTE_VALUE_XENO
+	
+	else if(ishuman(target))
+		notes_value = RNOTE_VALUE_HUMAN
+		if(ismonkey(target))
+			notes_value = RNOTE_VALUE_MONKEY
+		if(isgolem(target))
+			notes_value = RNOTE_VALUE_GOLEM
+		if(isalien(target))
+			notes_value = RNOTE_VALUE_XENO
+		if(isbasicmob(target))
+			notes_value = RNOTE_VALUE_BASIC
+	
+	new_notes.research_points = notes_value
+	new_notes.update_appearance()
+	operating_computer.say("Recorded data worth [notes_value] points of scientific intrigue.")

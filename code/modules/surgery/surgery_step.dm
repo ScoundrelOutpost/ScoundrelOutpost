@@ -12,6 +12,8 @@
 	var/preop_sound //Sound played when the step is started
 	var/success_sound //Sound played if the step succeeded
 	var/failure_sound //Sound played if the step fails
+	COOLDOWN_DECLARE(surgery_minor_reward_cooldown)
+	var/surgery_minor_reward_cooldown_time = 1 SECONDS
 
 /datum/surgery_step/proc/try_op(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, try_to_fail = FALSE)
 	var/success = FALSE
@@ -156,6 +158,9 @@
 			span_notice("[user] succeeds!"),
 			span_notice("[user] finishes."),
 		)
+	if(prob(10) && COOLDOWN_FINISHED(src, surgery_minor_reward_cooldown))
+		generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD)
+		COOLDOWN_START(src, surgery_minor_reward_cooldown, surgery_minor_reward_cooldown_time)
 	return TRUE
 
 /datum/surgery_step/proc/play_success_sound(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -241,3 +246,16 @@
 		to_chat(target, span_userdanger(pain_message))
 		if(prob(30) && !mechanical_surgery)
 			target.emote("scream")
+
+// scoundrel content
+/datum/surgery_step/proc/generate_research_notes(mob/user, mob/living/target, datum/surgery/surgery, notes_value = 0)
+	// if there's no operating computer, give no research
+	if(!surgery.locate_operating_computer(get_turf(target)))
+		return
+
+	if(notes_value > 0)
+		var/obj/machinery/computer/operating/operating_computer = surgery.locate_operating_computer(get_turf(target))
+		var/obj/item/research_notes/new_notes = new /obj/item/research_notes(operating_computer.loc)
+		new_notes.research_points = notes_value
+		new_notes.update_appearance()
+		operating_computer.say("Recorded data worth [notes_value] points of scientific intrigue.")

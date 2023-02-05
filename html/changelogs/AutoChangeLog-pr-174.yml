@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - balance: "penthrite, when mixed with epinephrine or atropine now turns into cyanide rather than exploding"
+  - balance: "that means mishandled luxury medipens are no longer instant death"

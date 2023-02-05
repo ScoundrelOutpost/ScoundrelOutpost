@@ -52,6 +52,7 @@
 		span_notice("[target]'s bone marrow begins pulsing slowly."),
 		span_notice("[user] finishes the operation."),
 	)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	display_pain(target, "You feel a faint throbbing in your chest.")
 	for(var/datum/disease/infected_disease as anything in target.diseases)
 		infected_disease.carrier = TRUE

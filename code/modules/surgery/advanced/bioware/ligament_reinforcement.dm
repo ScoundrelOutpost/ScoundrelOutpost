@@ -40,6 +40,7 @@
 	)
 	display_pain(target, "Your limbs feel more secure, but also more frail.")
 	new /datum/bioware/reinforced_ligaments(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()
 
 /datum/bioware/reinforced_ligaments

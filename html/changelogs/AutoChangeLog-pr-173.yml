@@ -1,0 +1,4 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscdel: "removed wallet overlay mechanics, allowing them to hide your role once again"

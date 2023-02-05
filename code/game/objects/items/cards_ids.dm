@@ -119,7 +119,7 @@
 
 	register_context()
 
-	RegisterSignal(src, COMSIG_ATOM_UPDATED_ICON, PROC_REF(update_in_wallet))
+//	RegisterSignal(src, COMSIG_ATOM_UPDATED_ICON, PROC_REF(update_in_wallet))
 	if(prob(1))
 		ADD_TRAIT(src, TRAIT_TASTEFULLY_THICK_ID_CARD, ROUNDSTART_TRAIT)
 
@@ -132,7 +132,7 @@
 
 /obj/item/card/id/get_id_examine_strings(mob/user)
 	. = ..()
-	. += list("[icon2html(get_cached_flat_icon(), user, extra_classes = "bigicon")]")
+//	. += list("[icon2html(get_cached_flat_icon(), user, extra_classes = "bigicon")]")
 
 /obj/item/card/id/update_overlays()
 	. = ..()
@@ -757,6 +757,7 @@
 /obj/item/card/id/RemoveID()
 	return src
 
+/*
 /// Called on COMSIG_ATOM_UPDATED_ICON. Updates the visuals of the wallet this card is in.
 /obj/item/card/id/proc/update_in_wallet()
 	SIGNAL_HANDLER
@@ -766,6 +767,7 @@
 		if(powergaming.front_id == src)
 			powergaming.update_label()
 			powergaming.update_appearance()
+*/ // used by wallets in disabled features
 
 /// Updates the name based on the card's vars and state.
 /obj/item/card/id/proc/update_label()

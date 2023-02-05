@@ -1,0 +1,5 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "added research notes that can be deposited into the R&D console for research points and cash"
+  - rscadd: "research notes have a chance of being acquired during most surgeries, and are a guaranteed drop from many major & experimental surgeries"

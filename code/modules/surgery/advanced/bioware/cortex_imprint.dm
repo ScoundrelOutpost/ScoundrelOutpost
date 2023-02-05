@@ -45,6 +45,7 @@
 	)
 	display_pain(target, "Your brain feels stronger... more resillient!")
 	new /datum/bioware/cortex_imprint(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()
 
 /datum/surgery_step/imprint_cortex/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)

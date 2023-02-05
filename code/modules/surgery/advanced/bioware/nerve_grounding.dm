@@ -39,6 +39,7 @@
 	)
 	display_pain(target, "You regain feeling in your body! You feel energzed!")
 	new /datum/bioware/grounded_nerves(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()
 
 /datum/bioware/grounded_nerves

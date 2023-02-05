@@ -39,6 +39,7 @@
 	)
 	display_pain(target, "You can feel your heartbeat's powerful pulses ripple through your body!")
 	new /datum/bioware/muscled_veins(target)
+	generate_research_notes(user, target, surgery, RNOTE_SURGICAL_REWARD_UNCOMMON)
 	return ..()
 
 /datum/bioware/muscled_veins

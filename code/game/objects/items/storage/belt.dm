@@ -51,6 +51,7 @@
 		/obj/item/analyzer,
 		/obj/item/assembly/signaler,
 		/obj/item/clothing/gloves,
+		/obj/item/clothing/glasses,
 		/obj/item/construction/rcd,
 		/obj/item/construction/rld,
 		/obj/item/crowbar,

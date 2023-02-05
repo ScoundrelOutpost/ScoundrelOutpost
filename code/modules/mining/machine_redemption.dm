@@ -52,6 +52,7 @@
 
 	if(O?.refined_type)
 		points += O.points * point_upgrade * O.amount
+		generate_research_notes(round((O.points * O.amount) * RNOTE_ORM_MULT) - 1, 1)
 
 	var/material_amount = mat_container.get_item_material_amount(O, BREAKDOWN_FLAGS_ORM)
 

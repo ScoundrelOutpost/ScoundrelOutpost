@@ -1072,3 +1072,26 @@
 	if(isliving(user))
 		last_used_time = world.time
 		last_user_mobtype = user.type
+
+
+// scoundrel content
+/obj/machinery/proc/generate_research_notes(notes_value = 0, givecash = TRUE, should_say = TRUE)
+	// make sure the machine is functional
+	if(!is_operational)
+		return
+
+	// if the note has no points, don't bother
+	if(notes_value > 0)
+		var/obj/item/research_notes/new_notes
+		new_notes = new /obj/item/research_notes(src.loc)
+		
+		// give the note its points
+		new_notes.research_points = notes_value
+		new_notes.update_appearance()
+
+		// Disable the ability to redeem cash by turning in the notes
+		if(givecash == FALSE)
+			new_notes.givecash = FALSE
+
+		if(should_say)
+			say("Recorded data worth [notes_value] points of scientific intrigue.")

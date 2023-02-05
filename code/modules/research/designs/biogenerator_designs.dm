@@ -185,3 +185,11 @@
 	materials = list(/datum/material/biomass= 1)
 	build_path = /obj/item/rollingpaper
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/research_notes
+	name = "Research Notes"
+	id = "research_notes"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass= RNOTE_BIOGEN_REWARD_COST)
+	build_path = RNOTE_BIOGEN_REWARD
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)

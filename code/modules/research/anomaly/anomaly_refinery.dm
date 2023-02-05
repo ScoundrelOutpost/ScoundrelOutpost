@@ -227,6 +227,7 @@
 	if(test_status)
 		return COMSIG_CANCEL_EXPLOSION
 	inserted_core = inserted_core.create_core(src, TRUE, TRUE)
+	generate_research_notes(RNOTE_ANOMALY_REFINED, should_say = FALSE)
 	test_status = "Success. Resultant detonation has theoretical range of [explosion_range]. Required radius was [required_range]. Core production complete."
 	return COMSIG_CANCEL_EXPLOSION
 

@@ -81,6 +81,16 @@
 
 	if(positive_result)
 		used_oven.visible_message(span_notice("You smell something great coming from [used_oven]."), blind_message = span_notice("You smell something great..."))
+
+		// play finished sound
+		playsound(used_oven.loc, 'sound/machines/microwave/microwave-end.ogg', 70, TRUE)
+		used_oven.audible_message(span_notice("[used_oven] dings!"))
+
+		// award research notes
+		if(istype(used_oven, /obj/machinery/oven))
+			if(prob(RNOTE_BAKING_CHANCE))
+				var/obj/machinery/oven/oven_proper = used_oven
+				oven_proper.generate_research_notes(RNOTE_BAKING_REWARD)
 	else
 		used_oven.visible_message(span_warning("You smell a burnt smell coming from [used_oven]."), blind_message = span_warning("You smell a burnt smell..."))
 	SEND_SIGNAL(parent, COMSIG_ITEM_BAKED, baked_result)

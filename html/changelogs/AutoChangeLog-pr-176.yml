@@ -1,0 +1,8 @@
+author: "psytc"
+delete-after: True
+changes:
+  - rscadd: "research notes can now be obtained through anomaly refining"
+  - rscadd: "research notes can now be obtained from the biogenerator"
+  - rscadd: "research notes can now be obtained by depositing ores in the ORM"
+  - rscadd: "baking, griddling and using the food processor can now generate research notes"
+  - rscadd: "added a sound indicator for when the oven is done cooking something"

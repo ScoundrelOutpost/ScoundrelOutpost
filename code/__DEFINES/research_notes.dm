@@ -16,6 +16,11 @@
 // Research notes cost in biomass
 #define RNOTE_BIOGEN_REWARD_COST 500
 
+// Chance of acquiring research notes from baking something
+#define RNOTE_BAKING_CHANCE 10 // % chance
+// Amount acquired from baking
+#define RNOTE_BAKING_REWARD 400
+
 // Research points acquired as a byproduct of mining points in the ore redemption machine
 #define RNOTE_ORM_MULT 0.25
 

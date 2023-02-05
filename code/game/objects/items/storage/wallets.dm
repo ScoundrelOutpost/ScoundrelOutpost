@@ -36,8 +36,9 @@
 		/obj/item/reagent_containers/syringe,
 		/obj/item/reagent_containers/pill,
 		/obj/item/screwdriver,
-		/obj/item/stamp),
-		list(/obj/item/screwdriver/power))
+		/obj/item/stamp,
+		/obj/item/research_notes,
+		))
 
 /obj/item/storage/wallet/Exited(atom/movable/gone, direction)
 	. = ..()

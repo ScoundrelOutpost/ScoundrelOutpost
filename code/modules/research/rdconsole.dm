@@ -435,11 +435,12 @@ Nothing else in the console has ID requirements.
 		qdel(rn)
 
 /obj/item/research_notes
-	name = "\proper research notes"
+	name = "research notes"
 	desc = "A crystal-hardlight holopad containing information of scientific intrigue."
 	icon = 'scoundrel/icons/obj/misc/research.dmi'
 	icon_state = "rnote_1"
 	base_icon_state = "rnote_1"
+	gender = PLURAL
 	throwforce = 0
 	force = 0
 	w_class = WEIGHT_CLASS_TINY

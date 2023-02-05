@@ -484,6 +484,9 @@ Nothing else in the console has ID requirements.
 /obj/item/research_notes/p10
 	research_points = 10
 
+/obj/item/research_notes/p250
+	research_points = 250
+
 /obj/item/research_notes/p500
 	research_points = 500
 

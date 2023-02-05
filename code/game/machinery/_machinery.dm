@@ -1072,3 +1072,16 @@
 	if(isliving(user))
 		last_used_time = world.time
 		last_user_mobtype = user.type
+
+
+// scoundrel content
+/obj/machinery/proc/generate_research_notes(notes_value = 0, givecash = TRUE)
+	if(!is_operational)
+		return
+	if(notes_value > 0)
+		var/obj/item/research_notes/new_notes = new /obj/item/research_notes(src.loc)
+		new_notes.research_points = notes_value
+		if(givecash == FALSE)
+			new_notes.givecash = FALSE
+		new_notes.update_appearance()
+		say("Recorded data worth [notes_value] points of scientific intrigue.")

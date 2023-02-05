@@ -83,7 +83,7 @@
 		used_oven.visible_message(span_notice("You smell something great coming from [used_oven]."), blind_message = span_notice("You smell something great..."))
 
 		// play finished sound
-		playsound(used_oven.loc, 'sound/machines/ding.ogg', 75, TRUE)
+		playsound(used_oven.loc, 'sound/machines/microwave/microwave-end.ogg', 70, TRUE)
 		used_oven.audible_message(span_notice("[used_oven] dings!"))
 
 		// award research notes

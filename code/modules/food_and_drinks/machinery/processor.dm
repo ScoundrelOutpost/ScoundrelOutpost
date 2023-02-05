@@ -59,6 +59,8 @@
 			what.reagents.copy_to(processed_food, what.reagents.total_volume, multiplier = 1 / cached_multiplier)
 			if(cached_mats)
 				processed_food.set_custom_materials(cached_mats, 1 / cached_multiplier)
+			if(prob(RNOTE_FOODPROCESSOR_CHANCE / cached_multiplier))
+				generate_research_notes(RNOTE_FOODPROCESSOR_REWARD)
 
 	if(isliving(what))
 		var/mob/living/themob = what

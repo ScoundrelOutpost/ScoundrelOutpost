@@ -21,6 +21,13 @@
 // Amount acquired from baking
 #define RNOTE_BAKING_REWARD 400
 
+// Same as above but for successful griddle cooking
+#define RNOTE_GRIDDLE_CHANCE 10 // % chance
+#define RNOTE_GRIDDLE_REWARD 300
+
+#define RNOTE_FOODPROCESSOR_CHANCE 10 // % chance
+#define RNOTE_FOODPROCESSOR_REWARD 400
+
 // Research points acquired as a byproduct of mining points in the ore redemption machine
 #define RNOTE_ORM_MULT 0.25
 

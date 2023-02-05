@@ -120,6 +120,8 @@
 /obj/machinery/griddle/proc/GrillCompleted(obj/item/source, atom/grilled_result)
 	SIGNAL_HANDLER
 	AddToGrill(grilled_result)
+	if(prob(RNOTE_GRIDDLE_CHANCE))
+		generate_research_notes(RNOTE_GRIDDLE_REWARD)
 
 /obj/machinery/griddle/proc/update_grill_audio()
 	if(on && griddled_objects.len)

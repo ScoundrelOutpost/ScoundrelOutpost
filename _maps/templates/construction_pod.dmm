@@ -18,6 +18,10 @@
 "p" = (
 /turf/template_noop,
 /area/template_noop)
+"r" = (
+/obj/item/electronics/apc,
+/turf/open/floor/plating,
+/area/space/nearstation/nostarlight)
 "z" = (
 /turf/open/floor/plating,
 /area/space/nearstation/nostarlight)
@@ -82,7 +86,7 @@ C
 z
 z
 A
-z
+r
 z
 z
 z

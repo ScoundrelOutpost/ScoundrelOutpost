@@ -41,5 +41,3 @@
 	area_flags = UNIQUE_AREA
 	static_lighting = TRUE
 	base_lighting_alpha = 0
-	power_light = TRUE
-	always_unpowered = FALSE

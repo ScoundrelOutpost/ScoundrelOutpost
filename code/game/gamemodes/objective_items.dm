@@ -116,6 +116,7 @@
 /obj/item/gun/energy/laser/captain/add_stealing_item_objective()
 	ADD_STEAL_ITEM(src, /obj/item/gun/energy/laser/captain)
 
+/*
 /datum/objective_item/steal/hoslaser
 	name = "the head of security's personal laser gun"
 	targetitem = /obj/item/gun/energy/e_gun/hos
@@ -125,6 +126,7 @@
 
 /obj/item/gun/energy/e_gun/hos/add_stealing_item_objective()
 	ADD_STEAL_ITEM(src, /obj/item/gun/energy/e_gun/hos)
+*/
 
 /datum/objective_item/steal/handtele
 	name = "a hand teleporter"
@@ -228,6 +230,7 @@
 	special_equipment += /obj/item/storage/box/syndie_kit/nuke
 	..()
 
+/*
 /datum/objective_item/steal/hdd_extraction
 	name = "the source code for Project Goon from the master R&D server mainframe"
 	targetitem = /obj/item/computer_disk/hdd_theft
@@ -241,7 +244,7 @@
 /datum/objective_item/steal/hdd_extraction/New()
 	special_equipment += /obj/item/paper/guides/antag/hdd_extraction
 	return ..()
-
+*/
 
 /datum/objective_item/steal/supermatter
 	name = "a sliver of a supermatter crystal"

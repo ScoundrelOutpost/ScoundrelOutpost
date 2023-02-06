@@ -2037,6 +2037,7 @@
 /obj/item/clothing/head/utility/hardhat/weldhat/white,
 /obj/item/disk/surgery/brainwashing,
 /obj/item/ai_module/reset,
+/obj/item/tank/jetpack/oxygen/captain,
 /turf/open/floor/carpet/neon/simple/orange/nodots,
 /area/station/command/heads_quarters/captain)
 "ht" = (

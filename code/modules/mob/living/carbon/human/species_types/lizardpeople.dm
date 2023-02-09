@@ -44,10 +44,6 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/lizard,
 	)
 
-/// Lizards are cold blooded and do not stabilize body temperature naturally
-/datum/species/lizard/body_temperature_core(mob/living/carbon/human/humi, delta_time, times_fired)
-	return
-
 /datum/species/lizard/random_name(gender,unique,lastname)
 	if(unique)
 		return random_unique_lizard_name(gender)
@@ -100,6 +96,7 @@
 /datum/species/lizard/create_pref_temperature_perks()
 	var/list/to_add = list()
 
+/*
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = "thermometer-empty",
@@ -108,7 +105,7 @@
 			tolerance for cold temperatures. Additionally, they cannot self-regulate their body temperature - \
 			they are as cold or as warm as the environment around them is. Stay warm!",
 	))
-
+*/
 	return to_add
 
 /*

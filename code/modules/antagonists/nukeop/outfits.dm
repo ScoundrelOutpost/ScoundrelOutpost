@@ -141,7 +141,6 @@
 	belt = /obj/item/gun/ballistic/automatic/pistol
 	r_hand = /obj/item/gun/ballistic/shotgun/bulldog
 	backpack_contents = list(
-		/obj/item/storage/pouch/tactical/ammo_9mm = 1,
-		/obj/item/melee/tonfa/esword = 1,
+		/obj/item/ammo_box/magazine/m12g = 1,
 	)
 	internals_slot = ITEM_SLOT_SUITSTORE

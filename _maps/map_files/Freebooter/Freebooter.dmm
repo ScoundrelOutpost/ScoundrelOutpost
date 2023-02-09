@@ -14,6 +14,15 @@
 	},
 /turf/open/floor/circuit/airless,
 /area/station/ai_monitored/aisat)
+"ad" = (
+/obj/machinery/button/door{
+	id = "cargo_blastwindow";
+	name = "emergency blast windows";
+	req_access = list("maint_tunnels");
+	pixel_y = -24
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/station/cargo/storage)
 "ae" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
@@ -1379,21 +1388,6 @@
 /obj/structure/closet/crate/bin,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/medical)
-"fe" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/button/door{
-	id = "ordnance_blastwindow";
-	name = "emergency blast windows";
-	req_access = list("maint_tunnels");
-	pixel_y = 24
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/department/engine)
 "ff" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -2498,10 +2492,6 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary/fore)
-"iS" = (
-/obj/item/flashlight,
-/turf/open/floor/plating,
-/area/station/engineering)
 "iT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/camera/autoname/directional/north,
@@ -3996,13 +3986,6 @@
 /obj/machinery/atmospherics/components/unary/thermomachine,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"op" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "evac_blastwindow"
-	},
-/turf/open/floor/plating,
-/area/station/commons/fitness)
 "oq" = (
 /obj/effect/spawner/structure/window/reinforced/tinted,
 /turf/open/floor/plating,
@@ -4424,6 +4407,13 @@
 /obj/item/tape,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
+"pO" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "cargo_blastwindow"
+	},
+/turf/open/floor/plating,
+/area/station/cargo/storage)
 "pR" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
@@ -4659,6 +4649,10 @@
 /area/station/service/library/lounge)
 "qD" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	dir = 1;
+	id = "arrivals_blastdoor"
+	},
 /turf/open/floor/plating,
 /area/station/hallway/primary/fore)
 "qE" = (
@@ -6088,6 +6082,21 @@
 /obj/item/razor,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
+"vS" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/button/door{
+	id = "ordnance_blastwindow";
+	name = "emergency blast windows";
+	req_access = list("maint_tunnels");
+	pixel_y = 24
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/department/engine)
 "vU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/carpet/red,
@@ -6236,6 +6245,10 @@
 	},
 /turf/open/floor/wood/large,
 /area/station/commons/fitness)
+"wt" = (
+/obj/item/flashlight,
+/turf/open/floor/plating,
+/area/station/engineering)
 "wv" = (
 /turf/closed/wall,
 /area/station/engineering/gravity_generator)
@@ -6423,14 +6436,6 @@
 /obj/structure/marker_beacon/cerulean,
 /turf/open/floor/catwalk_floor/airless,
 /area/space/nearstation)
-"xi" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	dir = 1;
-	id = "arrivals_blastdoor"
-	},
-/turf/open/floor/plating,
-/area/station/hallway/primary/fore)
 "xj" = (
 /turf/open/floor/plating,
 /area/station/maintenance/disposal/incinerator)
@@ -6581,15 +6586,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/research/abandoned)
-"xO" = (
-/obj/machinery/button/door{
-	id = "cargo_blastwindow";
-	name = "emergency blast windows";
-	req_access = list("maint_tunnels");
-	pixel_y = -24
-	},
-/turf/open/floor/iron/dark/textured_large,
-/area/station/cargo/storage)
 "xP" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -7955,6 +7951,13 @@
 /obj/effect/turf_decal/tile/dark_blue/full,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/hallway/primary/aft)
+"CM" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "arrivals_blastdoor"
+	},
+/turf/open/floor/plating,
+/area/station/hallway/primary/fore)
 "CN" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/iron/cafeteria,
@@ -9612,13 +9615,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
-"II" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "cargo_blastwindow"
-	},
-/turf/open/floor/plating,
-/area/station/cargo/storage)
 "IK" = (
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/pink/visible,
@@ -10343,6 +10339,16 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
+"Ls" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/button/door{
+	id = "arrivals_blastdoor";
+	name = "emergency blast windows";
+	pixel_x = 24;
+	req_access = list("maint_tunnels")
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/station/hallway/primary/fore)
 "Lt" = (
 /obj/item/melee/baseball_bat,
 /turf/open/misc/asteroid/airless,
@@ -10614,13 +10620,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/black,
 /area/station/commons/dorms)
-"Ms" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "arrivals_blastdoor"
-	},
-/turf/open/floor/plating,
-/area/station/hallway/primary/fore)
 "Mt" = (
 /obj/effect/decal/cleanable/robot_debris/down,
 /obj/effect/decal/cleanable/oil,
@@ -12727,16 +12726,6 @@
 /obj/machinery/space_heater,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
-"Ut" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/button/door{
-	id = "arrivals_blastdoor";
-	name = "emergency blast windows";
-	pixel_x = 24;
-	req_access = list("maint_tunnels")
-	},
-/turf/open/floor/iron/dark/textured_large,
-/area/station/hallway/primary/fore)
 "Uu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -14075,6 +14064,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/carpet/neon/simple/green/nodots,
 /area/station/commons/dorms)
+"Ze" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "evac_blastwindow"
+	},
+/turf/open/floor/plating,
+/area/station/commons/fitness)
 "Zf" = (
 /obj/machinery/door/airlock/public/glass,
 /obj/machinery/door/firedoor,
@@ -31920,8 +31916,8 @@ dN
 dN
 dN
 Jm
-II
-II
+pO
+pO
 fg
 Wy
 MC
@@ -31929,8 +31925,8 @@ Jm
 MC
 vY
 fg
-II
-II
+pO
+pO
 Jm
 dN
 dN
@@ -32430,8 +32426,8 @@ dN
 dN
 dN
 Jm
-II
-II
+pO
+pO
 Jm
 vp
 Dj
@@ -33216,7 +33212,7 @@ CO
 sE
 EJ
 gp
-xO
+ad
 Jm
 dN
 dN
@@ -33458,8 +33454,8 @@ dN
 dN
 dN
 Jm
-II
-II
+pO
+pO
 Jm
 yK
 Dj
@@ -37821,7 +37817,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 iJ
 XJ
 bL
@@ -38078,7 +38074,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 Pl
 MI
 Zj
@@ -38335,7 +38331,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 Pl
 MI
 Zj
@@ -38592,7 +38588,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 iJ
 MI
 gC
@@ -39106,7 +39102,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 KJ
 MI
 Zj
@@ -39363,7 +39359,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 BP
 MI
 lX
@@ -39620,7 +39616,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 Rb
 MI
 kt
@@ -39877,7 +39873,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 SC
 MI
 Es
@@ -39921,11 +39917,11 @@ UG
 UG
 UG
 Wn
-op
-op
-op
+Ze
+Ze
+Ze
 Jx
-op
+Ze
 UE
 pp
 pp
@@ -40134,7 +40130,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 iA
 MI
 is
@@ -40391,7 +40387,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 vw
 MI
 Es
@@ -40648,7 +40644,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 TW
 He
 TI
@@ -40891,9 +40887,9 @@ xt
 Mi
 Mi
 Mi
-xi
+qD
 Yy
-xi
+qD
 Mi
 Mi
 Mi
@@ -40905,7 +40901,7 @@ Mi
 Mi
 Mi
 Mi
-xi
+qD
 VO
 MI
 EF
@@ -41148,9 +41144,9 @@ Mi
 pp
 pp
 pp
-xi
+qD
 dc
-xi
+qD
 pp
 pp
 pp
@@ -41162,7 +41158,7 @@ pp
 pp
 pp
 pp
-xi
+qD
 DO
 MI
 gf
@@ -41403,22 +41399,22 @@ dN
 dN
 Mi
 Mi
-xi
-Ms
-xi
+qD
+CM
+qD
 BN
-xi
-Ms
+qD
+CM
 GG
-Ms
-Ms
-Ms
+CM
+CM
+qD
 BN
-Ms
-Ms
-Ms
+qD
+CM
+CM
 GG
-Ms
+CM
 GG
 nn
 bo
@@ -41660,7 +41656,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 iJ
 DO
 DO
@@ -41917,7 +41913,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 km
 DO
 tH
@@ -41931,7 +41927,7 @@ Ic
 Ag
 wm
 Qk
-Ut
+Ls
 Es
 RQ
 Es
@@ -42241,8 +42237,8 @@ mL
 lp
 ME
 UE
-op
-op
+Ze
+Ze
 dN
 dN
 dN
@@ -42431,7 +42427,7 @@ dN
 dN
 dN
 dN
-xi
+qD
 xe
 dc
 GG
@@ -42755,8 +42751,8 @@ Ys
 lp
 ME
 UE
-op
-op
+Ze
+Ze
 dN
 dN
 dN
@@ -52480,7 +52476,7 @@ YA
 YA
 YA
 zo
-fe
+vS
 Wj
 am
 bF
@@ -56084,7 +56080,7 @@ pp
 Dw
 Oj
 mA
-iS
+wt
 mA
 lN
 lN

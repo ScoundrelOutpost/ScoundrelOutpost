@@ -564,11 +564,14 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 
 	var/obj/item/bodypart/affecting = H.get_bodypart(check_zone(user.zone_selected))
 	if(affecting && !IS_ORGANIC_LIMB(affecting))
+		if(affecting.burn_dam <= 0)
+			user.show_message("\The [affecting] looks unburnt.")
+			return
 		if(user == H)
 			user.visible_message(span_notice("[user] starts to fix some of the wires in [H]'s [affecting.name]."), span_notice("You start fixing some of the wires in [H == user ? "your" : "[H]'s"] [affecting.name]."))
-			if(!do_mob(user, H, 50))
+			if(!do_mob(user, H, 2 SECONDS))
 				return
-		if(item_heal_robotic(H, user, 0, 15))
+		if(item_heal_robotic(H, user, 0, 10))
 			use(1)
 		return
 	else

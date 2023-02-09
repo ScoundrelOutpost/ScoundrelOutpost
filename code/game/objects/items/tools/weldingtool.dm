@@ -134,13 +134,16 @@
 	var/obj/item/bodypart/affecting = attacked_humanoid.get_bodypart(check_zone(user.zone_selected))
 
 	if(affecting && !IS_ORGANIC_LIMB(affecting) && !user.combat_mode)
+		if(affecting.brute_dam <= 0)
+			user.show_message("\The [affecting] looks undamaged.")
+			return
 		if(src.use_tool(attacked_humanoid, user, 0, volume=50, amount=1))
 			if(user == attacked_humanoid)
 				user.visible_message(span_notice("[user] starts to fix some of the dents on [attacked_humanoid]'s [affecting.name]."),
 					span_notice("You start fixing some of the dents on [attacked_humanoid == user ? "your" : "[attacked_humanoid]'s"] [affecting.name]."))
-				if(!do_mob(user, attacked_humanoid, 50))
+				if(!do_mob(user, attacked_humanoid, 2 SECONDS))
 					return
-			item_heal_robotic(attacked_humanoid, user, 15, 0)
+			item_heal_robotic(attacked_humanoid, user, 10, 0)
 	else
 		return ..()
 

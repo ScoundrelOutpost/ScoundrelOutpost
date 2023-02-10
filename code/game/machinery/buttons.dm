@@ -160,10 +160,10 @@
 			to_chat(user, span_notice("You remove electronics from the button frame."))
 
 		else
-			if(skin == "doorctrl")
-				skin = "launcher"
 			if(skin == "launcher")
 				skin = "blastbutton"
+			else if(skin == "doorctrl")
+				skin = "launcher"
 			else
 				skin = "doorctrl"
 			to_chat(user, span_notice("You change the button frame's front panel."))

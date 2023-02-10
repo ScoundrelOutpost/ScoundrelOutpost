@@ -125,7 +125,7 @@
 
 /obj/item/gun/ballistic/shotgun/bulldog
 	name = "\improper Bulldog Shotgun"
-	desc = "A semi-auto, mag-fed shotgun for combat in narrow corridors, nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines. Can have a secondary magazine attached to quickly swap between ammo types, or just to keep shooting."
+	desc = "A semi-auto, mag-fed shotgun for combat in narrow corridors, nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines."
 	icon_state = "bulldog"
 	inhand_icon_state = "bulldog"
 	worn_icon_state = "cshotgun"

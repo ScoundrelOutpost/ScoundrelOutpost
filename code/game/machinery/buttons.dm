@@ -162,6 +162,8 @@
 		else
 			if(skin == "doorctrl")
 				skin = "launcher"
+			if(skin == "launcher")
+				skin = "blastbutton"
 			else
 				skin = "doorctrl"
 			to_chat(user, span_notice("You change the button frame's front panel."))
@@ -337,3 +339,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/button/door, 24)
 	. = ..()
 	. += span_notice("There's a small inscription on the button...")
 	. += span_notice("THIS CALLS THE TRAM! IT DOES NOT OPERATE IT! The console on the tram tells it where to go!")
+
+// scoundrel content
+/obj/machinery/button/door/blast
+	name = "blast door controller"
+	desc = "A sturdy plunger for heavy-duty door control."
+	icon_state = "blastbutton"
+	skin = "blastbutton"

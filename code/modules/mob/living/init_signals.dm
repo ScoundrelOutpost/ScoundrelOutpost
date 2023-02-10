@@ -188,10 +188,10 @@
  */
 /mob/living/proc/update_succumb_action()
 	SIGNAL_HANDLER
-	if (CAN_SUCCUMB(src) || HAS_TRAIT(src, TRAIT_SUCCUMB_OVERRIDE))
+	/*if (CAN_SUCCUMB(src) || HAS_TRAIT(src, TRAIT_SUCCUMB_OVERRIDE))
 		throw_alert(ALERT_SUCCUMB, /atom/movable/screen/alert/succumb)
 	else
-		clear_alert(ALERT_SUCCUMB)
+		clear_alert(ALERT_SUCCUMB)*/
 
 ///From [element/movetype_handler/on_movement_type_trait_gain()]
 /mob/living/proc/on_movement_type_flag_enabled(datum/source, flag, old_movement_type)

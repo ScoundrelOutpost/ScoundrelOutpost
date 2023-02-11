@@ -96,7 +96,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "cargo_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = -24
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -308,7 +308,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "commandshutters2";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = 26;
 	pixel_x = -10
 	},
@@ -440,7 +440,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "north_hall_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = -24
 	},
 /turf/open/floor/iron/dark/textured,
@@ -458,9 +458,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "commandshutters1"
-	},
-/obj/machinery/status_display/evac/directional/north{
-	pixel_y = -32
 	},
 /turf/open/floor/plating,
 /area/station/command/bridge)
@@ -493,35 +490,35 @@
 /obj/machinery/button/door/blast{
 	name = "ordnance blast window";
 	id = "ordnance_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -22;
 	pixel_y = 12
 	},
 /obj/machinery/button/door/blast{
 	name = "teleporter blast window";
 	id = "teleporter_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -22;
 	pixel_y = 4
 	},
 /obj/machinery/button/door/blast{
 	name = "aft hall blast window";
 	id = "south_hall_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -32;
 	pixel_y = 4
 	},
 /obj/machinery/button/door/blast{
 	name = "fore hall blast window";
 	id = "north_hall_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -32;
 	pixel_y = 12
 	},
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "commandshutters2";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -22;
 	pixel_y = -12
 	},
@@ -822,7 +819,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "north_hall_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = 24
 	},
 /turf/open/floor/iron/dark/textured,
@@ -977,28 +974,28 @@
 /obj/machinery/button/door/blast{
 	name = "evac blast window";
 	id = "evac_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -22;
 	pixel_y = -12
 	},
 /obj/machinery/button/door/blast{
 	name = "dorms blast window";
 	id = "dorms_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -22;
 	pixel_y = -4
 	},
 /obj/machinery/button/door/blast{
 	name = "cargo blast window";
 	id = "cargo_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -32;
 	pixel_y = -12
 	},
 /obj/machinery/button/door/blast{
 	name = "arrivals blast window";
 	id = "arrivals_blastdoor";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = -4;
 	pixel_x = -32
 	},
@@ -1189,14 +1186,15 @@
 /obj/item/stamp/denied{
 	pixel_x = 7
 	},
-/obj/machinery/button/door/directional/south{
-	id = "qmwindow1";
-	name = "button";
-	pixel_x = -6;
-	pixel_y = -26
-	},
 /obj/machinery/keycard_auth/directional/south{
 	pixel_x = 8
+	},
+/obj/machinery/button/door/blast{
+	name = "emergency blast windows";
+	id = "qmwindow1";
+	req_access = list("command");
+	pixel_y = -26;
+	pixel_x = -6
 	},
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/qm)
@@ -1252,7 +1250,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "evac_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = 24
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -2265,16 +2263,15 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "commandshutters1";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = -24;
-	pixel_x = 8
+	pixel_x = 10
 	},
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "commandshutters2";
-	req_access = list("maint_tunnels");
-	pixel_y = -24;
-	pixel_x = -8
+	req_access = list("command");
+	pixel_y = -24
 	},
 /turf/open/floor/wood/large,
 /area/station/command/bridge)
@@ -2804,7 +2801,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "south_hall_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = -24
 	},
 /turf/open/floor/iron/dark/textured,
@@ -3799,7 +3796,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "teleporter_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -24
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -4271,7 +4268,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "arrivals_blastdoor";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = 24
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -4807,8 +4804,7 @@
 /area/station/hallway/primary/aft)
 "qM" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
+/obj/machinery/door/poddoor/preopen{
 	id = "brigshutters1"
 	},
 /turf/open/floor/plating,
@@ -5309,7 +5305,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "dorms_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -24
 	},
 /turf/open/floor/wood/large,
@@ -6034,7 +6030,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "cargo_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -24
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -6578,9 +6574,8 @@
 /area/station/commons/fitness)
 "xs" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "qmwindow1";
-	dir = 8
+/obj/machinery/door/poddoor/preopen{
+	id = "qmwindow1"
 	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/qm)
@@ -6791,6 +6786,9 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "commandshutters1"
+	},
+/obj/machinery/status_display/evac/directional/north{
+	pixel_y = -32
 	},
 /turf/open/floor/plating,
 /area/station/command/bridge)
@@ -7375,11 +7373,13 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/hallway/primary)
 "Ay" = (
-/obj/machinery/button/door/directional/south{
-	id = "brigshutters1"
-	},
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp,
+/obj/machinery/button/door/blast{
+	name = "emergency blast windows";
+	id = "brigshutters1";
+	pixel_y = -24
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/brig)
 "Az" = (
@@ -8765,16 +8765,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/hallway/primary)
-"Fu" = (
-/obj/machinery/computer/security{
-	dir = 1
-	},
-/obj/structure/railing,
-/obj/machinery/status_display/supply{
-	pixel_x = -32
-	},
-/turf/open/floor/wood/large,
-/area/station/command/bridge)
 "Fx" = (
 /obj/structure/closet/crate/solarpanel_small,
 /turf/open/floor/plating,
@@ -9044,11 +9034,13 @@
 	req_access = list("maint_tunnels");
 	id = "Cell 1"
 	},
-/obj/machinery/button/door/directional/south{
-	id = "brigshutters1"
-	},
 /obj/item/food/breadslice/plain,
 /obj/item/clothing/under/rank/prisoner,
+/obj/machinery/button/door/blast{
+	name = "emergency blast windows";
+	id = "brigshutters1";
+	pixel_y = -24
+	},
 /turf/open/floor/catwalk_floor,
 /area/station/security/brig)
 "Gy" = (
@@ -10904,7 +10896,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "evac_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = -24
 	},
 /turf/open/floor/wood/large,
@@ -10926,6 +10918,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/station/science/research/abandoned)
+"Nb" = (
+/obj/machinery/computer/security{
+	dir = 1
+	},
+/obj/structure/railing,
+/obj/machinery/status_display/supply{
+	pixel_x = -32
+	},
+/turf/open/floor/wood/large,
+/area/station/command/bridge)
 "Nc" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -12653,7 +12655,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "dorms_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = -24
 	},
 /turf/open/floor/wood/large,
@@ -12766,7 +12768,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "arrivals_blastdoor";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = 24
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -13014,7 +13016,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "south_hall_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_y = 24
 	},
 /turf/open/floor/iron/dark/textured,
@@ -13159,7 +13161,7 @@
 /obj/machinery/button/door/blast{
 	name = "emergency blast windows";
 	id = "cargo_blastwindow";
-	req_access = list("maint_tunnels");
+	req_access = list("command");
 	pixel_x = 24
 	},
 /turf/open/floor/iron/dark/textured_large,
@@ -37427,7 +37429,7 @@ OZ
 DB
 zl
 iv
-Fu
+Nb
 xD
 pp
 xf
@@ -39737,9 +39739,9 @@ sC
 IZ
 IZ
 IZ
-yq
-ND
 bG
+ND
+yq
 Qs
 TQ
 OU

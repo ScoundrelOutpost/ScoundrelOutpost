@@ -137,4 +137,4 @@
 #define TLV_OUTSIDE_HAZARD_LIMIT 2
 
 /// What's the minimum duration of a syndie bomb (in seconds)
-#define SYNDIEBOMB_MIN_TIMER_SECONDS 90
+#define SYNDIEBOMB_MIN_TIMER_SECONDS 120

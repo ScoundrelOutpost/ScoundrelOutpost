@@ -17,7 +17,6 @@
 	desc = "Micro-mechanical manipulator for retracting stuff."
 	toolspeed = 0.5
 
-
 /obj/item/hemostat
 	name = "hemostat"
 	desc = "You think you have seen this before."
@@ -146,6 +145,7 @@
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
+	force = 10
 
 /obj/item/scalpel
 	name = "scalpel"
@@ -185,6 +185,7 @@
 /obj/item/scalpel/augment
 	desc = "Ultra-sharp blade attached directly to your bone for extra-accuracy."
 	toolspeed = 0.5
+	force = 10
 
 /obj/item/scalpel/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is slitting [user.p_their()] [pick("wrists", "throat", "stomach")] with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -230,7 +231,7 @@
 	desc = "A small but very fast spinning saw. It rips and tears until it is done."
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
-
+	force = 10
 
 /obj/item/surgical_drapes
 	name = "surgical drapes"

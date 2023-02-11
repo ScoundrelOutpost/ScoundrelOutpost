@@ -163,6 +163,11 @@
 
 	pda_slot = ITEM_SLOT_LPOCKET
 
+/datum/outfit/job/medsci_spec/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	.=..()
+	var/obj/item/organ/new_organ = new /obj/item/organ/internal/cyberimp/arm/surgery(src)
+	new_organ.Insert(H)
+
 // End job
 // Start job
 

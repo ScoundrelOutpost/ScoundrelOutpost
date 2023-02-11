@@ -19,6 +19,7 @@ GLOBAL_LIST_INIT(generic_mail_loot, list(
         /obj/item/gun/ballistic/shotgun/doublebarrel = 25,
         /obj/item/gun/ballistic/revolver/detective = 25,
         /obj/item/gun/ballistic/automatic/tommygun = 25,
+        /obj/item/book/granter/martial/cqc = 25,
 
         // tools
         // engineering

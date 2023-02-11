@@ -49,6 +49,7 @@
 		/obj/item/circuitboard/computer/communications/syndicate,
 		/obj/item/stack/spacecash/c1000,
 		/obj/item/gun/energy/e_gun/defender/mini,
+		/obj/item/book/granter/martial/cqc,
 	)
 	var/rare = list(
 		// 5% chance to spawn 1

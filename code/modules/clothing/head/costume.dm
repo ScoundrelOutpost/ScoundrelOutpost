@@ -202,3 +202,10 @@
 	It's only a replica, and probably wouldn't protect you from anything."
 	icon_state = "allies_helmet"
 	inhand_icon_state = null
+
+// scoundrel content
+/obj/item/clothing/head/costume/bandana
+	name = "bandana"
+	desc = "A small, red bandana tied thin."
+	icon_state = "tmc_hat"
+	inhand_icon_state = null

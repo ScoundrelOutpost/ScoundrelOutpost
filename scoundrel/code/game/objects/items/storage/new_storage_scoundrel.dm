@@ -526,6 +526,15 @@
 	new /obj/item/card/access_inscriber/syndicate(src)
 	new /obj/item/paper/fluff/poison_kit_guide(src)
 
+// infiltration specialist kit
+/obj/item/storage/toolbox/loadout/bigboss/PopulateContents()
+	new /obj/item/book/granter/martial/cqc(src)
+	new /obj/item/implanter/stealth(src)
+	new /obj/item/implanter/adrenalin(src)
+	new /obj/item/storage/toolbox/mini/syndicate/loaded(src)
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/head/costume/bandana(src)
+
 // mini toolboxes
 
 /obj/item/storage/toolbox/mini

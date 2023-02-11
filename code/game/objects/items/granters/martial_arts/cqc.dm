@@ -1,8 +1,8 @@
 /obj/item/book/granter/martial/cqc
 	martial = /datum/martial_art/cqc
-	name = "old manual"
+	name = "CQC manual"
 	martial_name = "close quarters combat"
-	desc = "A small, black manual. There are drawn instructions of tactical hand-to-hand combat."
+	desc = "A small black manual. There are illustrated instructions on tactical hand-to-hand combat."
 	greet = "<span class='boldannounce'>You've mastered the basics of CQC.</span>"
 	icon_state = "cqcmanual"
 	remarks = list(
@@ -24,6 +24,7 @@
 	to_chat(user, span_warning("[src] explodes!"))
 	playsound(src,'sound/effects/explosion1.ogg',40,TRUE)
 	user.flash_act(1, 1)
-	user.adjustBruteLoss(6)
-	user.adjustFireLoss(6)
+	user.adjustBruteLoss(15)
+	user.adjustFireLoss(5)
+	user.Knockdown(2 SECONDS)
 	qdel(src)

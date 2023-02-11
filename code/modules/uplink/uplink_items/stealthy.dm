@@ -93,6 +93,15 @@
 	surplus = 0
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
+/datum/uplink_item/stealthy_weapons/cqc_manual
+	name = "Tactical CQC Manual"
+	desc = "A comprehensive, illustrated manual on the basics of Tactical CQC, an adaptable martial art capable of vicious surprise \
+	attacks as well as direct combat. Utilized by a sufficiently skilled special-ops agent, these techniques stand to make your \
+	hands into deadly weapons. Best employed by operators with extensive experience in unarmed combat."
+	item = /obj/item/book/granter/martial/cqc
+	cost = 30
+	surplus = 0
+
 /datum/uplink_item/stealthy_weapons/crossbow
 	name = "Miniature Energy Crossbow"
 	desc = "A short bow mounted across a tiller in miniature. \

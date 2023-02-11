@@ -162,6 +162,13 @@
 	Not recommended for beginners."
 	item = /obj/item/storage/toolbox/loadout/surgeon
 
+/datum/uplink_item/loadout/bigboss
+	name = "Infiltration Specialist Kit"
+	desc = "A ready-assembled loadout suited to advanced infiltration and close-quarters combat. Comes loaded with: \
+	A CQC Manual, a stealth implant, an adrenal implant, a set of syndicate tools, and some old infiltrator clothes we found in the back. \
+	Not recommended for beginners."
+	item = /obj/item/storage/toolbox/loadout/bigboss
+
 // freedbies
 /datum/uplink_category/freebies
 	name = "Standard Equipment"

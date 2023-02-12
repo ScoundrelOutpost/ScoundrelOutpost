@@ -150,23 +150,26 @@
 		return TRUE
 
 /datum/martial_art/cqc/grab_act(mob/living/A, mob/living/D)
-	add_to_streak("G",D)
-	if(check_streak(A,D))
-		return TRUE
+	if(A != D)
+		add_to_streak("G",D)
+		if(check_streak(A,D))
+			return TRUE
 	log_combat(A, D, "grabbed (CQC)")
 	return ..()
 
 /datum/martial_art/cqc/harm_act(mob/living/A, mob/living/D)
-	add_to_streak("H",D)
-	if(check_streak(A,D))
-		return TRUE
+	if(A != D)
+		add_to_streak("H",D)
+		if(check_streak(A,D))
+			return TRUE
 	log_combat(A, D, "harmed (CQC)")
 	return ..()
 
 /datum/martial_art/cqc/disarm_act(mob/living/A, mob/living/D)
-	add_to_streak("D",D)
-	if(check_streak(A,D))
-		return TRUE
+	if(A != D)
+		add_to_streak("D",D)
+		if(check_streak(A,D))
+			return TRUE
 	log_combat(A, D, "disarmed (CQC)")
 	return ..()
 

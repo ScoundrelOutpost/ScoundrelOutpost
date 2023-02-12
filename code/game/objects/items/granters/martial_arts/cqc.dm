@@ -10,7 +10,6 @@
 		"Lock... Kick...",
 		"Strike their abdomen, neck and back for critical damage...",
 		"Slam... Lock...",
-		"I could probably combine this with some other martial arts!",
 		"Words that kill...",
 		"The last and final moment is yours...",
 	)

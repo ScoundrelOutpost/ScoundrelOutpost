@@ -178,7 +178,7 @@
 	to_chat(usr, "<b><i>You try to remember some of the basics of CQC.</i></b>")
 
 	to_chat(usr, "[span_notice("Legsweep")]: Harm Grab. Knocks your opponent to the ground.")
-	to_chat(usr, "[span_notice("Forward Kick")]: Punch Punch. Knocks your opponent back a brief distance.")
+	to_chat(usr, "[span_notice("Forward Kick")]: Harm Harm. Knocks your opponent back a brief distance.")
 	to_chat(usr, "[span_notice("Restrain")]: Grab Grab Harm. Locks opponents into a restraining position.")
 	to_chat(usr, "[span_notice("Pressure")]: Disarm Harm. A strike to the neck that causes suffocation and silences the target for 8 seconds.")
 	to_chat(usr, "[span_notice("Consecutive Strikes")]: Harm Disarm Harm. A combo that deals significant damage and disarms your opponent.")

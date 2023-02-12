@@ -92,7 +92,7 @@
 	D.visible_message(span_danger("[A] kicks [D] back!"), \
 		span_userdanger("You're kicked back by [A]!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), COMBAT_MESSAGE_RANGE, A)
 	to_chat(A, span_danger("You kick [D] back!"))
-	playsound(get_turf(A), SFX_PUNCH, 50, TRUE, -1)
+	playsound(get_turf(A), SFX_PUNCH2, 50, TRUE, -1)
 	A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 	var/atom/throw_target = get_edge_target_turf(D, A.dir)
 	D.throw_at(throw_target, 2, 4, A)
@@ -110,7 +110,7 @@
 	D.apply_damage(8, A.get_attack_type())
 	D.apply_damage(10, OXY)
 	D.adjust_silence_up_to(8 SECONDS, 8 SECONDS)
-	playsound(get_turf(A), SFX_PUNCH, 50, TRUE, -1)
+	playsound(get_turf(A), SFX_SMACK, 50, TRUE, -1)
 	A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 	return TRUE
 

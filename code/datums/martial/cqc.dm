@@ -109,6 +109,7 @@
 	to_chat(A, span_danger("You punch [D]'s neck!"))
 	D.apply_damage(8, A.get_attack_type())
 	D.apply_damage(10, OXY)
+	D.adjust_silence_up_to(8 SECONDS, 8 SECONDS)
 	playsound(get_turf(A), SFX_PUNCH, 50, TRUE, -1)
 	A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 	return TRUE
@@ -179,7 +180,7 @@
 	to_chat(usr, "[span_notice("Legsweep")]: Harm Grab. Knocks your opponent to the ground.")
 	to_chat(usr, "[span_notice("Forward Kick")]: Punch Punch. Knocks your opponent back a brief distance.")
 	to_chat(usr, "[span_notice("Restrain")]: Grab Grab Harm. Locks opponents into a restraining position.")
-	to_chat(usr, "[span_notice("Pressure")]: Disarm Harm. A strike to the neck that causes suffocation.")
+	to_chat(usr, "[span_notice("Pressure")]: Disarm Harm. A strike to the neck that causes suffocation and silences the target for 8 seconds.")
 	to_chat(usr, "[span_notice("Consecutive Strikes")]: Harm Disarm Harm. A combo that deals significant damage and disarms your opponent.")
 
 ///Subtype of CQC. Only used for the chef.

@@ -1,3 +1,4 @@
+// generic mail loot list for all jobs
 GLOBAL_LIST_INIT(generic_mail_loot, list(
 
         // combat
@@ -51,6 +52,23 @@ GLOBAL_LIST_INIT(generic_mail_loot, list(
         /obj/item/food/pizza/margherita = 50,
         /obj/item/storage/box/donkpockets = 50,
         /obj/item/storage/fancy/donut_box = 50,
+
+        // abductor organs
+        /obj/item/organ/internal/heart/gland/access = 25,
+        /obj/item/organ/internal/heart/gland/blood = 25,
+        /obj/item/organ/internal/heart/gland/chem = 25,
+        /obj/item/organ/internal/heart/gland/egg = 25,
+        /obj/item/organ/internal/heart/gland/electric = 25,
+        /obj/item/organ/internal/heart/gland/heal = 25,
+        /obj/item/organ/internal/heart/gland/mindshock = 25,
+        /obj/item/organ/internal/heart/gland/plasma = 25,
+        /obj/item/organ/internal/heart/gland/quantum = 25,
+        /obj/item/organ/internal/heart/gland/slime = 25,
+        /obj/item/organ/internal/heart/gland/spiderman = 25,
+        /obj/item/organ/internal/heart/gland/transform = 25,
+        ///obj/item/organ/internal/heart/gland/trauma = 25, this one genuinely is the absolute worst. so maybe not.
+        /obj/item/organ/internal/heart/gland/ventcrawling = 25,
+        /obj/item/organ/internal/heart/gland/viral = 25,
 
         // junk
         /obj/item/reagent_containers/cup/glass/trophy/bronze_cup = 50,

@@ -23,7 +23,7 @@
 		new /obj/item/food/candyheart(b)
 		new /obj/item/storage/fancy/heart_box(b)
 
-	var/list/valentines = list()
+	/*var/list/valentines = list()
 	for(var/mob/living/M in GLOB.player_list)
 		var/turf/current_turf = get_turf(M.mind.current)
 		if(!M.stat && M.mind && !current_turf.onCentCom())
@@ -43,14 +43,14 @@
 				var/mob/living/notgoodenough = pick_n_take(valentines)
 				forge_valentines_objective(notgoodenough, date)
 		else
-			L.mind.add_antag_datum(/datum/antagonist/heartbreaker)
-
+			L.mind.add_antag_datum(/datum/antagonist/heartbreaker)*/
+/*
 /proc/forge_valentines_objective(mob/living/lover,mob/living/date)
 	lover.mind.special_role = "valentine"
 	var/datum/antagonist/valentine/V = new
 	V.date = date.mind
 	lover.mind.add_antag_datum(V) //These really should be teams but i can't be assed to incorporate third wheels right now
-
+*/
 /datum/round_event/valentines/announce(fake)
 	priority_announce("It's Valentine's Day! Give a valentine to that special someone!")
 

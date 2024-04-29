@@ -227,11 +227,11 @@
 
 /obj/item/extinguisher/proc/manage_chair_speed(datum/move_loop/move/source)
 	SIGNAL_HANDLER
-	switch(source.lifetime)
-		if(5 to 4)
-			source.delay = 2
-		if(3 to 1)
-			source.delay = 3
+//	switch(source.lifetime)
+//		if(5 to 4)
+//			source.delay = 2
+//		if(3 to 1)
+//			source.delay = 3
 
 /obj/item/extinguisher/AltClick(mob/user)
 	if(!user.canUseTopic(src, be_close = TRUE, no_dexterity = TRUE, no_tk = FALSE, need_hands = TRUE))

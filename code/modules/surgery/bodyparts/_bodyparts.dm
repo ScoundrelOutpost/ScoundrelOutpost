@@ -77,8 +77,6 @@
 	var/max_stamina_damage = 0
 	///The maximum "physical" damage a bodypart can take. Set by children
 	var/max_damage = 0
-	///Gradually increases while burning when at full damage, destroys the limb when at 100
-	var/cremation_progress = 0
 	///Subtracted to brute damage taken
 	var/brute_reduction = 0
 	///Subtracted to burn damage taken
@@ -508,7 +506,6 @@
 			update_disabled()
 		if(updating_health)
 			owner.updatehealth()
-	cremation_progress = min(0, cremation_progress - ((brute_dam + burn_dam)*(100/max_damage)))
 	return update_bodypart_damage_state()
 
 

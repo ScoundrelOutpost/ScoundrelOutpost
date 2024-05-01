@@ -332,7 +332,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		user.put_in_hands(prod)
 		user.balloon_alert(user, "crafted stunprod")
 		return
-		
+
 	return ..()
 
 /obj/item/unfinished_stunprod
@@ -752,7 +752,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		homerun_ready = FALSE
 		return
 	else if(!QDELETED(target) && !target.anchored)
-		target.throw_at(throw_target, 1, melee_throw_speed, user)
+		target.throw_at(throw_target, 1, melee_throw_speed, user, gentle = TRUE)
 
 /obj/item/melee/baseball_bat/Destroy(force)
 	for(var/target in thrown_datums)

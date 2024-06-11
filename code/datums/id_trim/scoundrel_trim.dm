@@ -56,6 +56,7 @@
 		ACCESS_HYDROPONICS,
 		//basic access end
 		ACCESS_CMO,
+		ACCESS_RESEARCH,
 		ACCESS_RD
 		)
 	job = /datum/job/medsci_spec

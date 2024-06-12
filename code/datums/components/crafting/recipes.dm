@@ -506,7 +506,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-/datum/crafting_recipe/improvisedslug
+/datum/crafting_recipe/improvisedshotgun
 	name = "Improvised Shotgun Shell"
 	result = /obj/item/ammo_casing/shotgun/improvised
 	reqs = list(/obj/item/stack/sheet/iron = 2,
@@ -528,13 +528,40 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/improvisedrifle
+	name = "Improvised Rifle Slug"
+	result = /obj/item/ammo_casing/improvised
+	reqs = list(/obj/item/stack/sheet/iron = 2,
+				/obj/item/stack/cable_coil = 1,
+				/datum/reagent/fuel = 10)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 1.2 SECONDS
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/pipegun
 	name = "Pipegun"
 	result = /obj/item/gun/ballistic/rifle/boltaction/pipegun
-	reqs = list(/obj/item/weaponcrafting/receiver = 1,
-				/obj/item/pipe = 1,
-				/obj/item/weaponcrafting/stock = 1,
-				/obj/item/stack/sticky_tape = 1)
+	reqs = list(
+		/obj/item/weaponcrafting/receiver = 1,
+		/obj/item/pipe = 1,
+		/obj/item/weaponcrafting/stock = 1,
+		/obj/item/stack/sticky_tape = 1,
+	)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 5 SECONDS
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/pipepistol
+	name = "Pipe Pistol"
+	result = /obj/item/gun/ballistic/rifle/boltaction/pipegun/pistol
+	reqs = list(
+		/obj/item/weaponcrafting/receiver = 1,
+		/obj/item/pipe = 1,
+		/obj/item/stack/sticky_tape = 1,
+		/obj/item/stack/sheet/mineral/wood = 2,
+	)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 5 SECONDS
 	category = CAT_WEAPONRY
@@ -544,14 +571,16 @@
 	name = "Regal Pipegun"
 	always_available = FALSE
 	result = /obj/item/gun/ballistic/rifle/boltaction/pipegun/prime
-	reqs = list(/obj/item/gun/ballistic/rifle/boltaction/pipegun = 1,
-				/obj/item/food/deadmouse = 1,
-				/datum/reagent/consumable/grey_bull = 20,
-				/obj/item/spear = 1,
-				/obj/item/storage/toolbox= 1)
+	reqs = list(
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun = 1,
+		/obj/item/food/deadmouse = 1,
+		/datum/reagent/consumable/grey_bull = 20,
+		/obj/item/spear = 1,
+		/obj/item/storage/toolbox= 1,
+	)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	tool_paths = list(/obj/item/clothing/gloves/color/yellow, /obj/item/clothing/mask/gas, /obj/item/melee/tonfa/shock_tonfa/stunprod)
-	time = 30 SECONDS //contemplate for a bit
+	time = 5 SECONDS
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 

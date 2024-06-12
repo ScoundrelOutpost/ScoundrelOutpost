@@ -145,43 +145,72 @@
 
 /obj/item/gun/ballistic/rifle/boltaction/pipegun
 	name = "pipegun"
-	desc = "An excellent weapon for flushing out tunnel rats and enemy assistants, but its rifling leaves much to be desired."
-	icon_state = "musket"
-	inhand_icon_state = "musket"
-	worn_icon_state = "musket"
-	lefthand_file = 'icons/mob/inhands/weapons/64x_guns_left.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/64x_guns_right.dmi'
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
+	desc = "A symbol that the true masters of this place are not those who merely inhabit it, but the one willing to twist it towards a killing intent."
+	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	icon_state = "pipegun"
+	inhand_icon_state = "pipegun"
+	worn_icon_state = "pipegun"
 	fire_sound = 'sound/weapons/gun/sniper/shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/pipegun
-	initial_caliber = CALIBER_SHOTGUN
-	alternative_caliber = CALIBER_A762
-	initial_fire_sound = 'sound/weapons/gun/sniper/shot.ogg'
-	alternative_fire_sound = 'sound/weapons/gun/shotgun/shot.ogg'
-	can_modify_ammo = TRUE
-	can_misfire = TRUE
-	misfire_probability = 0
-	misfire_percentage_increment = 5 //Slowly increases every shot
-	can_bayonet = TRUE
-	knife_y_offset = 11
+	projectile_damage_multiplier = 30
+	base_pixel_x = -8
+	pixel_x = -8
+	obj_flags = UNIQUE_RENAME
+	knife_x_offset = 35
+	knife_y_offset = 10
 	can_be_sawn_off = FALSE
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
+	can_jam = FALSE
 
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/handle_chamber()
 	. = ..()
 	do_sparks(1, TRUE, src)
 
+/obj/item/gun/ballistic/rifle/boltaction/pipegun/examine_more(mob/user)
+	. = ..()
+	. += span_notice("<b><i>Looking down at the [name], you recall a tale told to you in some distant memory...</i></b>")
+
+	. += span_info("It's said that the first slaying committed on a Nanotrasen space station was by an assistant.")
+	. += span_info("That this act, done by toolbox, maybe spear, was what consigned their kind to a life of destitution, rejection and violence.")
+	. += span_info("They carry the weight of this act visibly; the grey jumpsuit. Breathing deeply filtered air. And with bloodsoaked yellow hands clenched into fists. Eyes, sharp and waiting. Hunters in the dark.")
+	. += span_info("Eventually, these killing spirits sought to stake a claim on the metal tombs they were trapped within. Rejecting their status. Determined to be something more.")
+	. += span_info("This weapon is one such tool. And it is a grim one indeed. Wrought from scrap, pulled from the station's walls and floors and the very nails holding it together.")
+	. += span_info("It is a symbol that the true masters of this place are not those who merely inhabit it. But the one willing to twist it towards a killing intent.")
+
+	. += span_notice("<b><i>But this tale is old. What life is left in those husks? What is there to show, for all their ferocity? Yourself, of course. Be thankful for that.</i></b>")
+	. += span_notice("<b><i>In the end, the iron within was stronger than the cage that bound.</i></b>")
+
+/obj/item/gun/ballistic/rifle/boltaction/pipegun/pistol
+	name = "pipe pistol"
+	desc = "It is foolish to think that anyone wearing the grey is incapable of hurting you, simply because they are not baring their teeth."
+	icon_state = "pipepistol"
+	inhand_icon_state = "pipepistol"
+	worn_icon_state = "gun"
+	projectile_damage_multiplier = 20
+	base_pixel_x = 0
+	pixel_x = 0
+	slot_flags = ITEM_SLOT_BELT
+	w_class = WEIGHT_CLASS_NORMAL
+	can_bayonet = FALSE
+	weapon_weight = WEAPON_MEDIUM
+
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/prime
 	name = "regal pipegun"
-	desc = "Older, territorial assistants typically possess more valuable loot."
-	icon_state = "musket_prime"
-	inhand_icon_state = "musket_prime"
-	worn_icon_state = "musket_prime"
+	desc = "To call this 'regal' is a cruel irony. For the only noteworthy quality of nobility is in how it is wielded to kill. \
+		All monarchs deserve to be crowned. But none will remember the dead tyrant for the red stain they left on the carpet."
+	icon_state = "regal_pipegun"
+	inhand_icon_state = "regal_pipegun"
+	worn_icon_state = "regal_pipegun"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/pipegun/prime
-	can_misfire = FALSE
-	can_jam = FALSE
-	misfire_probability = 0
-	misfire_percentage_increment = 0
+	projectile_damage_multiplier = 45
+
+/obj/item/gun/ballistic/rifle/boltaction/pipegun/pistol/prime
+	name = "regal pipe pistol"
+	desc = "What value is there in honesty towards the dishonest? So that they might twist the arm and slit the wrist? \
+		The open palm is no sign of weakness; it is to draw the eyes away from the other hand, lying in wait."
+	icon_state = "regal_pipepistol"
+	inhand_icon_state = "regal_pipepistol"
+	projectile_damage_multiplier = 30
 
 /// MAGICAL BOLT ACTIONS + ARCANE BARRAGE? ///
 

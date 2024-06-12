@@ -31,3 +31,13 @@
 	caliber = CALIBER_40MM
 	icon_state = "40mmHE"
 	projectile_type = /obj/projectile/bullet/a40mm
+
+// Improvised (Pipeguns)
+
+/obj/item/ammo_casing/improvised
+	name = "improvised rifle slug"
+	desc = "A hotloaded bullet casing made from scrap. Can only be fitted into pipeguns"
+	icon_state = "improvshell"
+	caliber = CALIBER_IMPROVISED
+	projectile_type = /obj/projectile/bullet/improvised
+	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*2, /datum/material/glass=SMALL_MATERIAL_AMOUNT*1)

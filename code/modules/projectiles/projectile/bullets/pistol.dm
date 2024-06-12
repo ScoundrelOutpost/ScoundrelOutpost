@@ -45,4 +45,5 @@
 
 // scoundrel content
 /obj/projectile/bullet/c9mm/surplus
+	name = "9mm surplus bullet"
 	damage = 0.6

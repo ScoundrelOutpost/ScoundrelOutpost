@@ -45,6 +45,17 @@
 	desc = "Aviators not included."
 	icon_state = "bomberjacket"
 	inhand_icon_state = "brownjsuit"
+	allowed = list(
+		/obj/item/flashlight,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/toy,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/lighter,
+		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun,
+		/obj/item/radio,
+	)
 
 /obj/item/clothing/suit/jacket/leather
 	name = "leather jacket"
@@ -53,7 +64,19 @@
 	inhand_icon_state = "hostrench"
 	resistance_flags = NONE
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/gun/ballistic/revolver/detective, /obj/item/radio)
+	allowed = list(
+		/obj/item/flashlight,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/toy,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/lighter,
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun,
+		/obj/item/radio,
+	)
 	species_exception = list(/datum/species/golem/bone) //bad to the bone
 
 /obj/item/clothing/suit/jacket/leather/biker
@@ -81,7 +104,19 @@
 	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket"
 	inhand_icon_state = null
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/radio)
+	allowed = list(
+		/obj/item/flashlight,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/toy,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/lighter,
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun,
+		/obj/item/radio,
+	)
 
 /obj/item/clothing/suit/jacket/letterman
 	name = "letterman jacket"
@@ -89,6 +124,19 @@
 	icon_state = "letterman"
 	inhand_icon_state = null
 	species_exception = list(/datum/species/golem)
+	allowed = list(
+		/obj/item/flashlight,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/toy,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/lighter,
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun,
+		/obj/item/radio,
+	)
 
 /obj/item/clothing/suit/jacket/letterman_red
 	name = "red letterman jacket"
@@ -119,3 +167,14 @@
 	inhand_icon_state = "brownjsuit"
 	armor = GENERIC_ENV_ARMOR_T1
 	clothing_traits = list(TRAIT_RADIATION_PROTECTED_CLOTHING)
+	allowed = list(
+		/obj/item/flashlight,
+		/obj/item/tank/internals/emergency_oxygen,
+		/obj/item/tank/internals/plasmaman,
+		/obj/item/toy,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/lighter,
+		/obj/item/gun/energy/e_gun/defender,
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun,
+		/obj/item/radio,
+	)

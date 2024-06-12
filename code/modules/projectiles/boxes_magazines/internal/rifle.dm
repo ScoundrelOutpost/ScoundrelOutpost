@@ -8,13 +8,13 @@
 
 /obj/item/ammo_box/magazine/internal/boltaction/pipegun
 	name = "pipegun internal magazine"
-	caliber = CALIBER_SHOTGUN
-	ammo_type = /obj/item/ammo_casing/shotgun/improvised
-	max_ammo = 1
+	caliber = CALIBER_IMPROVISED
+	ammo_type = /obj/item/ammo_casing/improvised
+	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/boltaction/pipegun/prime
 	name = "regal pipegun internal magazine"
-	max_ammo = 3
+	max_ammo = 10
 
 /obj/item/ammo_box/magazine/internal/enchanted
 	max_ammo = 1

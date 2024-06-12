@@ -56,3 +56,5 @@
 #define CALIBER_TENTACLE "tentacle"
 /// The caliber used by the energy derringer
 #define CALIBER_MINISLUG "tech-minislug"
+/// The caliber used by pipeguns
+#define CALIBER_IMPROVISED "improvised"

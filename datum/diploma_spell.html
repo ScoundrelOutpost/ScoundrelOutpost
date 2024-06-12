@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;diploma_spell - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/diploma_spell.html#var">Var Details</a> - <a href="datum/diploma_spell.html#proc">Proc Details</a></header>
+<main>
+<h1>diploma_spell <aside>/<a href="datum.html">datum</a>/<a href="datum/diploma_spell.html">diploma_spell</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L10">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 10"/></a></h1>
+
+<h2 id="diploma-entries">Diploma entries</h2>
+<p>Wizard diplomas are automatically populated with
+a list of every subtype when they're made.</p>
+<p>Functionally very similar to wizard spellbook entries
+but with different spells and slightly different purchase functionality.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/diploma_spell.html#var/buy_word">buy_word</a></th><td>Flavor. Verb used in saying how the spell is aquired. Ex &quot;[Learn] Fireball&quot; or &quot;[Summon] Ghosts&quot;</td></tr>
+            <tr><th><a href="datum/diploma_spell.html#var/category">category</a></th><td>What category the entry falls in</td></tr>
+            <tr><th><a href="datum/diploma_spell.html#var/desc">desc</a></th><td>The description of the entry</td></tr>
+            <tr><th><a href="datum/diploma_spell.html#var/name">name</a></th><td>The name of the entry</td></tr>
+            <tr><th><a href="datum/diploma_spell.html#var/requires_wizard_garb">requires_wizard_garb</a></th><td>Whether the spell requires wizard garb or not</td></tr>
+            <tr><th><a href="datum/diploma_spell.html#var/spell_type">spell_type</a></th><td>The type of spell that the entry grants (typepath)</td></tr>
+            <tr><th><a href="datum/diploma_spell.html#var/weight">weight</a></th><td>How likely is this spell to be drafted?</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/diploma_spell.html#proc/buy_spell">buy_spell</a></th><td>Actually buy the entry for the user</td></tr>
+            <tr><th><a href="datum/diploma_spell.html#proc/can_be_purchased">can_be_purchased</a></th><td>Determines if this entry can be purchased from a spellbook
+Used for configs / round related restrictions.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/buy_word"><aside class="declaration">var </aside>buy_word
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L20">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 20"/></a></h3>
+        <p>Flavor. Verb used in saying how the spell is aquired. Ex &quot;[Learn] Fireball&quot; or &quot;[Summon] Ghosts&quot;</p><h3 id="var/category"><aside class="declaration">var </aside>category
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L18">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 18"/></a></h3>
+        <p>What category the entry falls in</p><h3 id="var/desc"><aside class="declaration">var </aside>desc
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L14">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 14"/></a></h3>
+        <p>The description of the entry</p><h3 id="var/name"><aside class="declaration">var </aside>name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L12">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 12"/></a></h3>
+        <p>The name of the entry</p><h3 id="var/requires_wizard_garb"><aside class="declaration">var </aside>requires_wizard_garb
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L22">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 22"/></a></h3>
+        <p>Whether the spell requires wizard garb or not</p><h3 id="var/spell_type"><aside class="declaration">var </aside>spell_type
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/action.html">action</a>/<a href="datum/action/cooldown.html">cooldown</a>/<a href="datum/action/cooldown/spell.html">spell</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L16">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 16"/></a></h3>
+        <p>The type of spell that the entry grants (typepath)</p><h3 id="var/weight"><aside class="declaration">var </aside>weight
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L24">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 24"/></a></h3>
+        <p>How likely is this spell to be drafted?</p><h2 id="proc">Proc Details</h2><h3 id="proc/buy_spell"><aside class="declaration">proc </aside>buy_spell<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/user) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L51">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 51"/></a></aside>
+        </h3>
+        <p>Actually buy the entry for the user</p>
+<p>Arguments</p>
+<ul>
+<li>user - the mob who's bought the spell</li>
+</ul>
+<p>Return TRUE if the purchase was successful, FALSE otherwise</p><h3 id="proc/can_be_purchased"><aside class="declaration">proc </aside>can_be_purchased<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/diploma/diploma_spell.dm#L38">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;diploma&#x2F;diploma_spell.dm 38"/></a></aside>
+        </h3>
+        <p>Determines if this entry can be purchased from a spellbook
+Used for configs / round related restrictions.</p>
+<p>Return FALSE to prevent the entry from being added to wizard spellbooks, TRUE otherwise</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

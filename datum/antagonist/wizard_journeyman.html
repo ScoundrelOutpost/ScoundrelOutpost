@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;antagonist&#x2F;wizard_journeyman - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/antagonist/wizard_journeyman.html#var">Var Details</a> - <a href="datum/antagonist/wizard_journeyman.html#proc">Proc Details</a></header>
+<main>
+<h1>wizard_journeyman <aside>/<a href="datum.html">datum</a>/<a href="datum/antagonist.html">antagonist</a>/<a href="datum/antagonist/wizard_journeyman.html">wizard_journeyman</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L3">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 3"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#var/give_objectives">give_objectives</a></th><td>True if we want you to be granted objectives</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#var/lair_exists">lair_exists</a></th><td>True if the wizard journeyman lair has been instantiated</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#var/learned_spells">learned_spells</a></th><td>List of names of spells for the round end report</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#var/outfit_type">outfit_type</a></th><td>Gear to apply</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#var/ritual">ritual</a></th><td>This mob's Grand Ritual ability</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/add_diskie_objective">add_diskie_objective</a></th><td>Get that fuckin disk</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/add_maroon_objective">add_maroon_objective</a></th><td>Trap someone alive and well on the station</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/add_roundend_objective">add_roundend_objective</a></th><td>Don't die, or do</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/add_theft_objective">add_theft_objective</a></th><td>Steal something
+Returns true if we managed to generate an objective</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/create_objectives">create_objectives</a></th><td>Generate objectives</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/grant_hangover">grant_hangover</a></th><td>You partied hard after graduating wizard school</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/on_gain">on_gain</a></th><td>On application, teleport to lair and set up</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/on_ritual_complete">on_ritual_complete</a></th><td>If we receive this signal, you're done with objectives</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/rename_wizard">rename_wizard</a></th><td>The random names are pretty good but our players are better</td></tr>
+            <tr><th><a href="datum/antagonist/wizard_journeyman.html#proc/send_to_lair">send_to_lair</a></th><td>Create wizard's house if it doesn't exist, then insert wizard</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/give_objectives"><aside class="declaration">var </aside>give_objectives
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L18">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 18"/></a></h3>
+        <p>True if we want you to be granted objectives</p><h3 id="var/lair_exists"><aside class="declaration">var </aside>lair_exists
+            <aside>&ndash; /static</aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L16">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 16"/></a></h3>
+        <p>True if the wizard journeyman lair has been instantiated</p><h3 id="var/learned_spells"><aside class="declaration">var </aside>learned_spells
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L24">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 24"/></a></h3>
+        <p>List of names of spells for the round end report</p><h3 id="var/outfit_type"><aside class="declaration">var </aside>outfit_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L20">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 20"/></a></h3>
+        <p>Gear to apply</p><h3 id="var/ritual"><aside class="declaration">var </aside>ritual
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/action.html">action</a>/<a href="datum/action/grand_ritual.html">grand_ritual</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L22">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 22"/></a></h3>
+        <p>This mob's Grand Ritual ability</p><h2 id="proc">Proc Details</h2><h3 id="proc/add_diskie_objective"><aside class="declaration">proc </aside>add_diskie_objective<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L119">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 119"/></a></aside>
+        </h3>
+        <p>Get that fuckin disk</p><h3 id="proc/add_maroon_objective"><aside class="declaration">proc </aside>add_maroon_objective<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L105">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 105"/></a></aside>
+        </h3>
+        <p>Trap someone alive and well on the station</p><h3 id="proc/add_roundend_objective"><aside class="declaration">proc </aside>add_roundend_objective<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L126">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 126"/></a></aside>
+        </h3>
+        <p>Don't die, or do</p><h3 id="proc/add_theft_objective"><aside class="declaration">proc </aside>add_theft_objective<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L96">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 96"/></a></aside>
+        </h3>
+        <p>Steal something
+Returns true if we managed to generate an objective</p><h3 id="proc/create_objectives"><aside class="declaration">proc </aside>create_objectives<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L80">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 80"/></a></aside>
+        </h3>
+        <p>Generate objectives</p><h3 id="proc/grant_hangover"><aside class="declaration">proc </aside>grant_hangover<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L162">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 162"/></a></aside>
+        </h3>
+        <p>You partied hard after graduating wizard school</p><h3 id="proc/on_gain"><aside class="parent"><a title="/datum/antagonist" href="datum/antagonist.html#proc/on_gain">&uarr;</a></aside>on_gain<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L58">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 58"/></a></aside>
+        </h3>
+        <p>On application, teleport to lair and set up</p><h3 id="proc/on_ritual_complete"><aside class="declaration">proc </aside>on_ritual_complete<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L48">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 48"/></a></aside>
+        </h3>
+        <p>If we receive this signal, you're done with objectives</p><h3 id="proc/rename_wizard"><aside class="declaration">proc </aside>rename_wizard<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L176">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 176"/></a></aside>
+        </h3>
+        <p>The random names are pretty good but our players are better</p><h3 id="proc/send_to_lair"><aside class="declaration">proc </aside>send_to_lair<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/wizard_journeyman.dm#L146">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;wizard_journeyman.dm 146"/></a></aside>
+        </h3>
+        <p>Create wizard's house if it doesn't exist, then insert wizard</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

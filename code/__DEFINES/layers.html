@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__DEFINES&#x2F;layers.dm - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__DEFINES/layers.html#define">Define Details</a></header>
+<main>
+<h1>code/__DEFINES/layers.dm 
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__DEFINES/layers.html#define/SEETHROUGH_PLANE">SEETHROUGH_PLANE</a></th><td>Slightly above the game plane but does not catch mouse clicks. Useful for certain visuals that should be clicked through, like seethrough trees</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/LIGHTING_PLANE">LIGHTING_PLANE</a></th><td>Normal 1 per turf dynamic lighting underlays</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/O_LIGHTING_VISUAL_PLANE">O_LIGHTING_VISUAL_PLANE</a></th><td>Lighting objects that are &quot;free floating&quot;</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/EMISSIVE_PLANE">EMISSIVE_PLANE</a></th><td>This plane masks out lighting to create an &quot;emissive&quot; effect, ie for glowing lights in otherwise dark areas.</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/ABOVE_LIGHTING_PLANE">ABOVE_LIGHTING_PLANE</a></th><td>Things that should render ignoring lighting</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/PIPECRAWL_IMAGES_PLANE">PIPECRAWL_IMAGES_PLANE</a></th><td>---------------- MISC -----------------------
+Pipecrawling images</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/CAMERA_STATIC_PLANE">CAMERA_STATIC_PLANE</a></th><td>AI Camera Static</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/HIGH_GAME_PLANE">HIGH_GAME_PLANE</a></th><td>Anything that wants to be part of the game plane, but also wants to draw above literally everything else</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/RUNECHAT_PLANE">RUNECHAT_PLANE</a></th><td>--------------- FULLSCREEN RUNECHAT BUBBLES ------------
+Popup Chat Messages</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/BALLOON_CHAT_PLANE">BALLOON_CHAT_PLANE</a></th><td>Plane for balloon text (text that fades up)</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/SPLASHSCREEN_PLANE">SPLASHSCREEN_PLANE</a></th><td>Plane of the &quot;splash&quot; icon used that shows on the lobby screen. only render plate planes should be above this</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/PLANE_RANGE">PLANE_RANGE</a></th><td>The range unique planes can be in</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/CATWALK_LAYER">CATWALK_LAYER</a></th><td>catwalk overlay of /turf/open/floor/plating/catwalk_floor</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/EMISSIVE_RENDER_TARGET">EMISSIVE_RENDER_TARGET</a></th><td>The render target used by the emissive layer.</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/EMISSIVE_LAYER_UNBLOCKABLE">EMISSIVE_LAYER_UNBLOCKABLE</a></th><td>The layer you should use if you <em>really</em> don't want an emissive overlay to be blocked.</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/FLASH_LAYER">FLASH_LAYER</a></th><td>--------------- FULLSCREEN IMAGES ------------</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/TYPING_LAYER">TYPING_LAYER</a></th><td>--------------- FULLSCREEN RUNECHAT BUBBLES ------------
+Bubble for typing indicators</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/RADIAL_CONTENT_LAYER">RADIAL_CONTENT_LAYER</a></th><td>1000 is an unimportant number, it's just to normalize copied layers</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/SCREENTIP_LAYER">SCREENTIP_LAYER</a></th><td>Layer for screentips</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/CINEMATIC_LAYER">CINEMATIC_LAYER</a></th><td>cinematics are &quot;below&quot; the splash screen</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/PLANE_MASTERS_GAME">PLANE_MASTERS_GAME</a></th><td>Plane master controller keys</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/PLANE_CRITICAL_DISPLAY">PLANE_CRITICAL_DISPLAY</a></th><td>This plane master will not go away if its layer is culled. useful for preserving effects</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/PLANE_CRITICAL_NO_EMPTY_RELAY">PLANE_CRITICAL_NO_EMPTY_RELAY</a></th><td>This plane master will temporarially remove relays to non critical planes if it's layer is culled (and it's critical)
+This is VERY hacky, but needed to ensure that some instances of BLEND_MULITPLY work as expected (fuck you god damn parallax)
+It also implies that the critical plane has a *'d render target, making it mask itself</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/MULTIZ_PERFORMANCE_DISABLE">MULTIZ_PERFORMANCE_DISABLE</a></th><td>A value of /datum/preference/numeric/multiz_performance that disables the option</td></tr>
+        <tr><th><a href="code/__DEFINES/layers.html#define/MAX_EXPECTED_Z_DEPTH">MAX_EXPECTED_Z_DEPTH</a></th><td>We expect at most 3 layers of multiz
+Increment this define if you make a huge map. We unit test for it too just to make it easy for you
+If you modify this, you'll need to modify the tsx file too</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/ABOVE_LIGHTING_PLANE"><aside class="declaration">#define </aside>ABOVE_LIGHTING_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 54"/></a>
+    </h3>
+    <p>Things that should render ignoring lighting</p><h3 id="define/BALLOON_CHAT_PLANE"><aside class="declaration">#define </aside>BALLOON_CHAT_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L74">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 74"/></a>
+    </h3>
+    <p>Plane for balloon text (text that fades up)</p><h3 id="define/CAMERA_STATIC_PLANE"><aside class="declaration">#define </aside>CAMERA_STATIC_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L62">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 62"/></a>
+    </h3>
+    <p>AI Camera Static</p><h3 id="define/CATWALK_LAYER"><aside class="declaration">#define </aside>CATWALK_LAYER
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L126">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 126"/></a>
+    </h3>
+    <p>catwalk overlay of /turf/open/floor/plating/catwalk_floor</p><h3 id="define/CINEMATIC_LAYER"><aside class="declaration">#define </aside>CINEMATIC_LAYER
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L234">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 234"/></a>
+    </h3>
+    <p>cinematics are &quot;below&quot; the splash screen</p><h3 id="define/EMISSIVE_LAYER_UNBLOCKABLE"><aside class="declaration">#define </aside>EMISSIVE_LAYER_UNBLOCKABLE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L203">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 203"/></a>
+    </h3>
+    <p>The layer you should use if you <em>really</em> don't want an emissive overlay to be blocked.</p><h3 id="define/EMISSIVE_PLANE"><aside class="declaration">#define </aside>EMISSIVE_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L49">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 49"/></a>
+    </h3>
+    <p>This plane masks out lighting to create an &quot;emissive&quot; effect, ie for glowing lights in otherwise dark areas.</p><h3 id="define/EMISSIVE_RENDER_TARGET"><aside class="declaration">#define </aside>EMISSIVE_RENDER_TARGET
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L201">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 201"/></a>
+    </h3>
+    <p>The render target used by the emissive layer.</p><h3 id="define/FLASH_LAYER"><aside class="declaration">#define </aside>FLASH_LAYER
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L207">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 207"/></a>
+    </h3>
+    <p>--------------- FULLSCREEN IMAGES ------------</p><h3 id="define/HIGH_GAME_PLANE"><aside class="declaration">#define </aside>HIGH_GAME_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 65"/></a>
+    </h3>
+    <p>Anything that wants to be part of the game plane, but also wants to draw above literally everything else</p><h3 id="define/LIGHTING_PLANE"><aside class="declaration">#define </aside>LIGHTING_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 42"/></a>
+    </h3>
+    <p>Normal 1 per turf dynamic lighting underlays</p><h3 id="define/MAX_EXPECTED_Z_DEPTH"><aside class="declaration">#define </aside>MAX_EXPECTED_Z_DEPTH
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L256">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 256"/></a>
+    </h3>
+    <p>We expect at most 3 layers of multiz
+Increment this define if you make a huge map. We unit test for it too just to make it easy for you
+If you modify this, you'll need to modify the tsx file too</p><h3 id="define/MULTIZ_PERFORMANCE_DISABLE"><aside class="declaration">#define </aside>MULTIZ_PERFORMANCE_DISABLE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L252">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 252"/></a>
+    </h3>
+    <p>A value of /datum/preference/numeric/multiz_performance that disables the option</p><h3 id="define/O_LIGHTING_VISUAL_PLANE"><aside class="declaration">#define </aside>O_LIGHTING_VISUAL_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 45"/></a>
+    </h3>
+    <p>Lighting objects that are &quot;free floating&quot;</p><h3 id="define/PIPECRAWL_IMAGES_PLANE"><aside class="declaration">#define </aside>PIPECRAWL_IMAGES_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L59">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 59"/></a>
+    </h3>
+    <p>---------------- MISC -----------------------
+Pipecrawling images</p><h3 id="define/PLANE_CRITICAL_DISPLAY"><aside class="declaration">#define </aside>PLANE_CRITICAL_DISPLAY
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L243">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 243"/></a>
+    </h3>
+    <p>This plane master will not go away if its layer is culled. useful for preserving effects</p><h3 id="define/PLANE_CRITICAL_NO_EMPTY_RELAY"><aside class="declaration">#define </aside>PLANE_CRITICAL_NO_EMPTY_RELAY
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L247">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 247"/></a>
+    </h3>
+    <p>This plane master will temporarially remove relays to non critical planes if it's layer is culled (and it's critical)
+This is VERY hacky, but needed to ensure that some instances of BLEND_MULITPLY work as expected (fuck you god damn parallax)
+It also implies that the critical plane has a *'d render target, making it mask itself</p><h3 id="define/PLANE_MASTERS_GAME"><aside class="declaration">#define </aside>PLANE_MASTERS_GAME
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L237">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 237"/></a>
+    </h3>
+    <p>Plane master controller keys</p><h3 id="define/PLANE_RANGE"><aside class="declaration">#define </aside>PLANE_RANGE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L94">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 94"/></a>
+    </h3>
+    <p>The range unique planes can be in</p><h3 id="define/RADIAL_CONTENT_LAYER"><aside class="declaration">#define </aside>RADIAL_CONTENT_LAYER
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L222">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 222"/></a>
+    </h3>
+    <p>1000 is an unimportant number, it's just to normalize copied layers</p><h3 id="define/RUNECHAT_PLANE"><aside class="declaration">#define </aside>RUNECHAT_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L72">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 72"/></a>
+    </h3>
+    <p>--------------- FULLSCREEN RUNECHAT BUBBLES ------------
+Popup Chat Messages</p><h3 id="define/SCREENTIP_LAYER"><aside class="declaration">#define </aside>SCREENTIP_LAYER
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L227">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 227"/></a>
+    </h3>
+    <p>Layer for screentips</p><h3 id="define/SEETHROUGH_PLANE"><aside class="declaration">#define </aside>SEETHROUGH_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 28"/></a>
+    </h3>
+    <p>Slightly above the game plane but does not catch mouse clicks. Useful for certain visuals that should be clicked through, like seethrough trees</p><h3 id="define/SPLASHSCREEN_PLANE"><aside class="declaration">#define </aside>SPLASHSCREEN_PLANE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L82">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 82"/></a>
+    </h3>
+    <p>Plane of the &quot;splash&quot; icon used that shows on the lobby screen. only render plate planes should be above this</p><h3 id="define/TYPING_LAYER"><aside class="declaration">#define </aside>TYPING_LAYER
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/layers.dm#L218">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;layers.dm 218"/></a>
+    </h3>
+    <p>--------------- FULLSCREEN RUNECHAT BUBBLES ------------
+Bubble for typing indicators</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

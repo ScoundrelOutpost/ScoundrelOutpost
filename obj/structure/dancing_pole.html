@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;structure&#x2F;dancing_pole - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/structure/dancing_pole.html#proc">Proc Details</a></header>
+<main>
+<h1>dancing_pole <aside>/<a href="obj.html">obj</a>/<a href="obj/structure/dancing_pole.html">structure/dancing_pole</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L10">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 10"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/add_context">add_context</a></th><td>Adds contextual screentips</td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/apply_dir">apply_dir</a></th><td>Applies a layer and positional offset based upon current facing direction.</td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/dance">dance</a></th><td>The user will dance for 10 seconds, as long as they don't try to do anything else with their hands.
+Letting go of the pole (or being shoved) will throw them in a random direction to dismount.
+If emagged they will dance faster and catch fire after a little while.
+If they dance to completion, everyone who can see it (including themselves) will get happy.
+This also gives you the exercise buff which makes you resistant to heart attacks!
+Arguments</td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/get_brag_message">get_brag_message</a></th><td>Returns a funny message to show to everyone when you start dancing.</td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/on_rotated">on_rotated</a></th><td>Respond to a dancer changing direction in order to reposition it.</td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/overdrive">overdrive</a></th><td>Sets the current dancer on fire halfway through the dance, if they are still the person who started dancing 5 seconds ago.
+Arguments</td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/process">process</a></th><td>Spins the current dancer every 2 seconds.</td></tr>
+            <tr><th><a href="obj/structure/dancing_pole.html#proc/spin_dancer">spin_dancer</a></th><td>Applies a spin animation to the current dancer for 2 seconds. Spin is faster if emagged.
+Arguments</td></tr></table><h2 id="proc">Proc Details</h2><h3 id="proc/add_context"><aside class="parent"><a title="/atom" href="atom.html#proc/add_context">&uarr;</a></aside>add_context<aside>(/<a href="atom.html">atom</a>/source, /list/context, /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/held_item, /<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L187">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 187"/></a></aside>
+        </h3>
+        <p>Adds contextual screentips</p><h3 id="proc/apply_dir"><aside class="declaration">proc </aside>apply_dir<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/dancer, dir) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L132">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 132"/></a></aside>
+        </h3>
+        <p>Applies a layer and positional offset based upon current facing direction.</p><h3 id="proc/dance"><aside class="declaration">proc </aside>dance<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/user) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L59">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 59"/></a></aside>
+        </h3>
+        <p>The user will dance for 10 seconds, as long as they don't try to do anything else with their hands.
+Letting go of the pole (or being shoved) will throw them in a random direction to dismount.
+If emagged they will dance faster and catch fire after a little while.
+If they dance to completion, everyone who can see it (including themselves) will get happy.
+This also gives you the exercise buff which makes you resistant to heart attacks!
+Arguments</p>
+<ul>
+<li>user - Human who is using the pole.</li>
+</ul><h3 id="proc/get_brag_message"><aside class="declaration">proc </aside>get_brag_message<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L155">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 155"/></a></aside>
+        </h3>
+        <p>Returns a funny message to show to everyone when you start dancing.</p><h3 id="proc/on_rotated"><aside class="declaration">proc </aside>on_rotated<aside>(/<a href="mob.html">mob</a>/source, old_dir, new_dir) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L109">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 109"/></a></aside>
+        </h3>
+        <p>Respond to a dancer changing direction in order to reposition it.</p><h3 id="proc/overdrive"><aside class="declaration">proc </aside>overdrive<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/victim) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L173">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 173"/></a></aside>
+        </h3>
+        <p>Sets the current dancer on fire halfway through the dance, if they are still the person who started dancing 5 seconds ago.
+Arguments</p>
+<ul>
+<li>victim - Person who was dancing 5 seconds ago, may not be the current dancer if they got off the pole.</li>
+</ul><h3 id="proc/process"><aside class="parent"><a title="/datum" href="datum.html#proc/process">&uarr;</a></aside>process<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L146">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 146"/></a></aside>
+        </h3>
+        <p>Spins the current dancer every 2 seconds.</p><h3 id="proc/spin_dancer"><aside class="declaration">proc </aside>spin_dancer<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/current_dancer) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/objects/items/dancing_pole.dm#L165">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;objects&#x2F;items&#x2F;dancing_pole.dm 165"/></a></aside>
+        </h3>
+        <p>Applies a spin animation to the current dancer for 2 seconds. Spin is faster if emagged.
+Arguments</p>
+<ul>
+<li>current_dancer - Mob who is using the pole.</li>
+</ul></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

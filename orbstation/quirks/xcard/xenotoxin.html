@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="orbstation/quirks/xcard/xenotoxin.html#define">Define Details</a></header>
+<main>
+<h1>orbstation/quirks/xcard/xenotoxin.dm 
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/STAM_DAMAGE_MIN">STAM_DAMAGE_MIN</a></th><td>Minimum stamina damage per stamina loss burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/STAM_DAMAGE_MAX">STAM_DAMAGE_MAX</a></th><td>Maximum stamina damage per stamina loss burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/STAM_DAMAGE_RATE">STAM_DAMAGE_RATE</a></th><td>What percentage of ticks you'll lose stamina</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/DAMAGE_BURST_MUL">DAMAGE_BURST_MUL</a></th><td>How much more damage a damage burst frame does than a normal one. This effectively goes up by one every damage burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/DAMAGE_BURST_RATE">DAMAGE_BURST_RATE</a></th><td>Percentage of ticks you'll take a damage burst on. This does not change over time</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/JITTER_TIME">JITTER_TIME</a></th><td>How long you'll spend jittery after taking a bad damage burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/ORGAN_DAMAGE_MIN">ORGAN_DAMAGE_MIN</a></th><td>Minimum organ damage taken upon a damage burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/ORGAN_DAMAGE_MAX">ORGAN_DAMAGE_MAX</a></th><td>Maximum organ damage taken upon a damage burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/BAD_BURST_CHANCE_MIN">BAD_BURST_CHANCE_MIN</a></th><td>Initial chance of a damage burst being &quot;bad&quot; (dealing extra damage, causing jitters, and displaying a scarier warning message)</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/BAD_BURST_HEALTH_RAMP_THRESHOLD">BAD_BURST_HEALTH_RAMP_THRESHOLD</a></th><td>Health value below which having lower health starts to increase the chance of having a bad damage burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/BAD_BURST_CHANCE_SOFTCAP">BAD_BURST_CHANCE_SOFTCAP</a></th><td>Percentage above which having low health no longer increases the probability of a bad damage burst</td></tr>
+        <tr><th><a href="orbstation/quirks/xcard/xenotoxin.html#define/SCREAM_PROB">SCREAM_PROB</a></th><td>Chance to scream on a bad damage burst</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/BAD_BURST_CHANCE_MIN"><aside class="declaration">#define </aside>BAD_BURST_CHANCE_MIN
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L23">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 23"/></a>
+    </h3>
+    <p>Initial chance of a damage burst being &quot;bad&quot; (dealing extra damage, causing jitters, and displaying a scarier warning message)</p><h3 id="define/BAD_BURST_CHANCE_SOFTCAP"><aside class="declaration">#define </aside>BAD_BURST_CHANCE_SOFTCAP
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L27">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 27"/></a>
+    </h3>
+    <p>Percentage above which having low health no longer increases the probability of a bad damage burst</p><h3 id="define/BAD_BURST_HEALTH_RAMP_THRESHOLD"><aside class="declaration">#define </aside>BAD_BURST_HEALTH_RAMP_THRESHOLD
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L25">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 25"/></a>
+    </h3>
+    <p>Health value below which having lower health starts to increase the chance of having a bad damage burst</p><h3 id="define/DAMAGE_BURST_MUL"><aside class="declaration">#define </aside>DAMAGE_BURST_MUL
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L11">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 11"/></a>
+    </h3>
+    <p>How much more damage a damage burst frame does than a normal one. This effectively goes up by one every damage burst</p><h3 id="define/DAMAGE_BURST_RATE"><aside class="declaration">#define </aside>DAMAGE_BURST_RATE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L13">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 13"/></a>
+    </h3>
+    <p>Percentage of ticks you'll take a damage burst on. This does not change over time</p><h3 id="define/JITTER_TIME"><aside class="declaration">#define </aside>JITTER_TIME
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L15">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 15"/></a>
+    </h3>
+    <p>How long you'll spend jittery after taking a bad damage burst</p><h3 id="define/ORGAN_DAMAGE_MAX"><aside class="declaration">#define </aside>ORGAN_DAMAGE_MAX
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L20">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 20"/></a>
+    </h3>
+    <p>Maximum organ damage taken upon a damage burst</p><h3 id="define/ORGAN_DAMAGE_MIN"><aside class="declaration">#define </aside>ORGAN_DAMAGE_MIN
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L18">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 18"/></a>
+    </h3>
+    <p>Minimum organ damage taken upon a damage burst</p><h3 id="define/SCREAM_PROB"><aside class="declaration">#define </aside>SCREAM_PROB
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L29">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 29"/></a>
+    </h3>
+    <p>Chance to scream on a bad damage burst</p><h3 id="define/STAM_DAMAGE_MAX"><aside class="declaration">#define </aside>STAM_DAMAGE_MAX
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L5">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 5"/></a>
+    </h3>
+    <p>Maximum stamina damage per stamina loss burst</p><h3 id="define/STAM_DAMAGE_MIN"><aside class="declaration">#define </aside>STAM_DAMAGE_MIN
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L3">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 3"/></a>
+    </h3>
+    <p>Minimum stamina damage per stamina loss burst</p><h3 id="define/STAM_DAMAGE_RATE"><aside class="declaration">#define </aside>STAM_DAMAGE_RATE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L7">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 7"/></a>
+    </h3>
+    <p>What percentage of ticks you'll lose stamina</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

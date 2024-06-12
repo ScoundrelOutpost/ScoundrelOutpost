@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;action&#x2F;conceal_organ - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/action/conceal_organ.html#var">Var Details</a> - <a href="datum/action/conceal_organ.html#proc">Proc Details</a></header>
+<main>
+<h1>conceal_organ <aside>/<a href="datum.html">datum</a>/<a href="datum/action.html">action</a>/<a href="datum/action/conceal_organ.html">conceal_organ</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L40">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 40"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#var/icon_state_hidden">icon_state_hidden</a></th><td>Icon state to use when organ is hidden</td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#var/organ_name">organ_name</a></th><td>A nice name for the organ in question</td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#var/rummaging">rummaging</a></th><td>Just to make sure you're not spamming the button</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#proc/get_organ">get_organ</a></th><td>Return the organ we want to hide</td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#proc/is_concealed">is_concealed</a></th><td>Return whether we are concealed or not</td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#proc/is_covered">is_covered</a></th><td>Returns true if you're wearing a big coat, override to check for something else</td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#proc/toggle_concealement">toggle_concealement</a></th><td>Implement this to actually toggle the organ hiding</td></tr>
+            <tr><th><a href="datum/action/conceal_organ.html#proc/update_display">update_display</a></th><td>Updates the current name, icon, and description</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/icon_state_hidden"><aside class="declaration">var </aside>icon_state_hidden
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L45">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 45"/></a></h3>
+        <p>Icon state to use when organ is hidden</p><h3 id="var/organ_name"><aside class="declaration">var </aside>organ_name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L47">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 47"/></a></h3>
+        <p>A nice name for the organ in question</p><h3 id="var/rummaging"><aside class="declaration">var </aside>rummaging
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L49">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 49"/></a></h3>
+        <p>Just to make sure you're not spamming the button</p><h2 id="proc">Proc Details</h2><h3 id="proc/get_organ"><aside class="declaration">proc </aside>get_organ<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L90">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 90"/></a></aside>
+        </h3>
+        <p>Return the organ we want to hide</p><h3 id="proc/is_concealed"><aside class="declaration">proc </aside>is_concealed<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L118">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 118"/></a></aside>
+        </h3>
+        <p>Return whether we are concealed or not</p><h3 id="proc/is_covered"><aside class="declaration">proc </aside>is_covered<aside>(feedback) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L73">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 73"/></a></aside>
+        </h3>
+        <p>Returns true if you're wearing a big coat, override to check for something else</p><h3 id="proc/toggle_concealement"><aside class="declaration">proc </aside>toggle_concealement<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L114">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 114"/></a></aside>
+        </h3>
+        <p>Implement this to actually toggle the organ hiding</p><h3 id="proc/update_display"><aside class="declaration">proc </aside>update_display<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/species/external_organ_concealment.dm#L122">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;species&#x2F;external_organ_concealment.dm 122"/></a></aside>
+        </h3>
+        <p>Updates the current name, icon, and description</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

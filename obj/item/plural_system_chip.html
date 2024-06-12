@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item&#x2F;plural_system_chip - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item/plural_system_chip.html#var">Var Details</a> - <a href="obj/item/plural_system_chip.html#proc">Proc Details</a></header>
+<main>
+<h1>plural_system_chip <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/plural_system_chip.html">plural_system_chip</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/plurality.dm#L25">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;plurality.dm 25"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item/plural_system_chip.html#var/fronter_name">fronter_name</a></th><td>The name of the system's current fronter, which will be displayed on the ID card in place of the registered name.</td></tr>
+            <tr><th><a href="obj/item/plural_system_chip.html#var/locked">locked</a></th><td>Whether the chip is locked or unlocked. When unlocked, it can be used in-hand to edit/add/remove system member names.</td></tr>
+            <tr><th><a href="obj/item/plural_system_chip.html#var/system_member_names">system_member_names</a></th><td>List of system member names. When the chip is attached to an ID, using the ID in-hand will allow the user to switch between these names.</td></tr>
+            <tr><th><a href="obj/item/plural_system_chip.html#var/system_name">system_name</a></th><td>The name of the plural system, which is displayed on the ID card in {braces} at all times.</td></tr>
+            <tr><th><a href="obj/item/plural_system_chip.html#var/system_name_locked">system_name_locked</a></th><td>When TRUE, prevents the system name from being modified. Used for the roundstart chips given by the plurality quirk. Set to FALSE when a HoP ID is swiped on the chip.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item/plural_system_chip.html#proc/update_system_name">update_system_name</a></th><td>Changes the system_name variable and automatically updates the name of the chip to include it.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/fronter_name"><aside class="declaration">var </aside>fronter_name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/plurality.dm#L44">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;plurality.dm 44"/></a></h3>
+        <p>The name of the system's current fronter, which will be displayed on the ID card in place of the registered name.</p><h3 id="var/locked"><aside class="declaration">var </aside>locked
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/plurality.dm#L40">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;plurality.dm 40"/></a></h3>
+        <p>Whether the chip is locked or unlocked. When unlocked, it can be used in-hand to edit/add/remove system member names.</p><h3 id="var/system_member_names"><aside class="declaration">var </aside>system_member_names
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/plurality.dm#L46">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;plurality.dm 46"/></a></h3>
+        <p>List of system member names. When the chip is attached to an ID, using the ID in-hand will allow the user to switch between these names.</p><h3 id="var/system_name"><aside class="declaration">var </aside>system_name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/plurality.dm#L42">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;plurality.dm 42"/></a></h3>
+        <p>The name of the plural system, which is displayed on the ID card in {braces} at all times.</p><h3 id="var/system_name_locked"><aside class="declaration">var </aside>system_name_locked
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/plurality.dm#L48">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;plurality.dm 48"/></a></h3>
+        <p>When TRUE, prevents the system name from being modified. Used for the roundstart chips given by the plurality quirk. Set to FALSE when a HoP ID is swiped on the chip.</p><h2 id="proc">Proc Details</h2><h3 id="proc/update_system_name"><aside class="declaration">proc </aside>update_system_name<aside>(new_system_name) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/plurality.dm#L141">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;plurality.dm 141"/></a></aside>
+        </h3>
+        <p>Changes the system_name variable and automatically updates the name of the chip to include it.</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

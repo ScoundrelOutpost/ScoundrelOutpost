@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__DEFINES/dcs/signals/signals_food.html#define">Define Details</a></header>
+<main>
+<h1>code/__DEFINES/dcs/signals/signals_food.dm 
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_FOOD_EATEN">COMSIG_FOOD_EATEN</a></th><td>From datum/component/edible/proc/TakeBite: (mob/living/eater, mob/feeder, bitecount, bitesize)</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_FOOD_CROSSED">COMSIG_FOOD_CROSSED</a></th><td>From base of datum/component/edible/on_entered: (mob/crosser, bitecount)</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_FOOD_CONSUMED">COMSIG_FOOD_CONSUMED</a></th><td>From base of Component/edible/On_Consume: (mob/living/eater, mob/living/feeder)</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_USED_AS_INGREDIENT">COMSIG_ITEM_USED_AS_INGREDIENT</a></th><td>called when an item is used as an ingredient: (atom/customized)</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_FOOD_INGREDIENT_ADDED">COMSIG_FOOD_INGREDIENT_ADDED</a></th><td>called when an edible ingredient is added: (datum/component/edible/ingredient)</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_FRIED">COMSIG_ITEM_FRIED</a></th><td>From obj/item/food/deepfryholder/Initialize</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_FRYING_HANDLED">COMSIG_FRYING_HANDLED</a></th><td>Return to not burn the item</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_MICROWAVE_ACT">COMSIG_ITEM_MICROWAVE_ACT</a></th><td>called on item when microwaved (): (obj/machinery/microwave/microwave, mob/microwaver)</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMPONENT_MICROWAVE_SUCCESS">COMPONENT_MICROWAVE_SUCCESS</a></th><td>Return on success - that is, a microwaved item was produced</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMPONENT_MICROWAVE_BAD_RECIPE">COMPONENT_MICROWAVE_BAD_RECIPE</a></th><td>Returned on &quot;failure&quot; - an item was produced but it was the default fail recipe</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_MICROWAVE_COOKED">COMSIG_ITEM_MICROWAVE_COOKED</a></th><td>called on item when created through microwaving (): (obj/machinery/microwave/M, cooking_efficiency)</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_GRILL_PLACED_ON">COMSIG_ITEM_GRILL_PLACED_ON</a></th><td>Called when an object is placed onto a griddle</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_GRILL_PROCESS">COMSIG_ITEM_GRILL_PROCESS</a></th><td>Called when an object is grilled ontop of a griddle</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMPONENT_HANDLED_GRILLING">COMPONENT_HANDLED_GRILLING</a></th><td>Return to not burn the item</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_GRILLED">COMSIG_ITEM_GRILLED</a></th><td>Called when an object is turned into another item through grilling ontop of a griddle</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMPONENT_HANDLED_BAKING">COMPONENT_HANDLED_BAKING</a></th><td>Return to not burn the item</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMPONENT_BAKING_GOOD_RESULT">COMPONENT_BAKING_GOOD_RESULT</a></th><td>Return if the result of the baking was a good thing</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMPONENT_BAKING_BAD_RESULT">COMPONENT_BAKING_BAD_RESULT</a></th><td>Return if the result of the baking was a bad thing / failuire</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_ITEM_BAKED">COMSIG_ITEM_BAKED</a></th><td>Called when an object is turned into another item through baking in an oven</td></tr>
+        <tr><th><a href="code/__DEFINES/dcs/signals/signals_food.html#define/COMSIG_GLASS_DRANK">COMSIG_GLASS_DRANK</a></th><td>from base of obj/item/reagent_containers/cup/attack(): (mob/M, mob/user)</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/COMPONENT_BAKING_BAD_RESULT"><aside class="declaration">#define </aside>COMPONENT_BAKING_BAD_RESULT
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 52"/></a>
+    </h3>
+    <p>Return if the result of the baking was a bad thing / failuire</p><h3 id="define/COMPONENT_BAKING_GOOD_RESULT"><aside class="declaration">#define </aside>COMPONENT_BAKING_GOOD_RESULT
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 50"/></a>
+    </h3>
+    <p>Return if the result of the baking was a good thing</p><h3 id="define/COMPONENT_HANDLED_BAKING"><aside class="declaration">#define </aside>COMPONENT_HANDLED_BAKING
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 48"/></a>
+    </h3>
+    <p>Return to not burn the item</p><h3 id="define/COMPONENT_HANDLED_GRILLING"><aside class="declaration">#define </aside>COMPONENT_HANDLED_GRILLING
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 38"/></a>
+    </h3>
+    <p>Return to not burn the item</p><h3 id="define/COMPONENT_MICROWAVE_BAD_RECIPE"><aside class="declaration">#define </aside>COMPONENT_MICROWAVE_BAD_RECIPE
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 28"/></a>
+    </h3>
+    <p>Returned on &quot;failure&quot; - an item was produced but it was the default fail recipe</p><h3 id="define/COMPONENT_MICROWAVE_SUCCESS"><aside class="declaration">#define </aside>COMPONENT_MICROWAVE_SUCCESS
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 26"/></a>
+    </h3>
+    <p>Return on success - that is, a microwaved item was produced</p><h3 id="define/COMSIG_FOOD_CONSUMED"><aside class="declaration">#define </aside>COMSIG_FOOD_CONSUMED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 10"/></a>
+    </h3>
+    <p>From base of Component/edible/On_Consume: (mob/living/eater, mob/living/feeder)</p><h3 id="define/COMSIG_FOOD_CROSSED"><aside class="declaration">#define </aside>COMSIG_FOOD_CROSSED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 8"/></a>
+    </h3>
+    <p>From base of datum/component/edible/on_entered: (mob/crosser, bitecount)</p><h3 id="define/COMSIG_FOOD_EATEN"><aside class="declaration">#define </aside>COMSIG_FOOD_EATEN
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 6"/></a>
+    </h3>
+    <p>From datum/component/edible/proc/TakeBite: (mob/living/eater, mob/feeder, bitecount, bitesize)</p><h3 id="define/COMSIG_FOOD_INGREDIENT_ADDED"><aside class="declaration">#define </aside>COMSIG_FOOD_INGREDIENT_ADDED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 14"/></a>
+    </h3>
+    <p>called when an edible ingredient is added: (datum/component/edible/ingredient)</p><h3 id="define/COMSIG_FRYING_HANDLED"><aside class="declaration">#define </aside>COMSIG_FRYING_HANDLED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 20"/></a>
+    </h3>
+    <p>Return to not burn the item</p><h3 id="define/COMSIG_GLASS_DRANK"><aside class="declaration">#define </aside>COMSIG_GLASS_DRANK
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L59">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 59"/></a>
+    </h3>
+    <p>from base of obj/item/reagent_containers/cup/attack(): (mob/M, mob/user)</p><h3 id="define/COMSIG_ITEM_BAKED"><aside class="declaration">#define </aside>COMSIG_ITEM_BAKED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 54"/></a>
+    </h3>
+    <p>Called when an object is turned into another item through baking in an oven</p><h3 id="define/COMSIG_ITEM_FRIED"><aside class="declaration">#define </aside>COMSIG_ITEM_FRIED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 18"/></a>
+    </h3>
+    <p>From obj/item/food/deepfryholder/Initialize</p><h3 id="define/COMSIG_ITEM_GRILLED"><aside class="declaration">#define </aside>COMSIG_ITEM_GRILLED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L40">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 40"/></a>
+    </h3>
+    <p>Called when an object is turned into another item through grilling ontop of a griddle</p><h3 id="define/COMSIG_ITEM_GRILL_PLACED_ON"><aside class="declaration">#define </aside>COMSIG_ITEM_GRILL_PLACED_ON
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L34">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 34"/></a>
+    </h3>
+    <p>Called when an object is placed onto a griddle</p><h3 id="define/COMSIG_ITEM_GRILL_PROCESS"><aside class="declaration">#define </aside>COMSIG_ITEM_GRILL_PROCESS
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 36"/></a>
+    </h3>
+    <p>Called when an object is grilled ontop of a griddle</p><h3 id="define/COMSIG_ITEM_MICROWAVE_ACT"><aside class="declaration">#define </aside>COMSIG_ITEM_MICROWAVE_ACT
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 24"/></a>
+    </h3>
+    <p>called on item when microwaved (): (obj/machinery/microwave/microwave, mob/microwaver)</p><h3 id="define/COMSIG_ITEM_MICROWAVE_COOKED"><aside class="declaration">#define </aside>COMSIG_ITEM_MICROWAVE_COOKED
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 30"/></a>
+    </h3>
+    <p>called on item when created through microwaving (): (obj/machinery/microwave/M, cooking_efficiency)</p><h3 id="define/COMSIG_ITEM_USED_AS_INGREDIENT"><aside class="declaration">#define </aside>COMSIG_ITEM_USED_AS_INGREDIENT
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/__DEFINES/dcs/signals/signals_food.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;dcs&#x2F;signals&#x2F;signals_food.dm 12"/></a>
+    </h3>
+    <p>called when an item is used as an ingredient: (atom/customized)</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;grand_event - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/grand_event.html#var">Var Details</a> - <a href="datum/grand_event.html#proc">Proc Details</a></header>
+<main>
+<h1>grand_event <aside>/<a href="datum.html">datum</a>/<a href="datum/grand_event.html">grand_event</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L7">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 7"/></a></h1>
+
+<p>Describes something which can happen when the grand ritual is completed, usually not confined to the ritual location.
+Mostly this will be triggering events of escalating danger based on how many times the ritual has already been completed.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/grand_event.html#var/has_run">has_run</a></th><td>Typecache of one-time-only events which have run already.</td></tr>
+            <tr><th><a href="datum/grand_event.html#var/max_escalation">max_escalation</a></th><td>Maximum number of rituals which must be completed before this event can occur, inclusive.</td></tr>
+            <tr><th><a href="datum/grand_event.html#var/min_escalation">min_escalation</a></th><td>Minimum number of rituals which must be completed before this event can occur, inclusive.</td></tr>
+            <tr><th><a href="datum/grand_event.html#var/once_only">once_only</a></th><td>If true, never trigger this more than once</td></tr>
+            <tr><th><a href="datum/grand_event.html#var/wizard_message">wizard_message</a></th><td>Feedback message shown to the wizard, as some events are silent and they should know what they did.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/grand_event.html#proc/is_valid_event">is_valid_event</a></th><td>Returns true if an event can be fired right now.</td></tr>
+            <tr><th><a href="datum/grand_event.html#proc/trigger_event">trigger_event</a></th><td>Makes the event happen.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/has_run"><aside class="declaration">var </aside>has_run
+            <aside>&ndash; /static/list</aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L15">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 15"/></a></h3>
+        <p>Typecache of one-time-only events which have run already.</p><h3 id="var/max_escalation"><aside class="declaration">var </aside>max_escalation
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L11">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 11"/></a></h3>
+        <p>Maximum number of rituals which must be completed before this event can occur, inclusive.</p><h3 id="var/min_escalation"><aside class="declaration">var </aside>min_escalation
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L9">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 9"/></a></h3>
+        <p>Minimum number of rituals which must be completed before this event can occur, inclusive.</p><h3 id="var/once_only"><aside class="declaration">var </aside>once_only
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L13">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 13"/></a></h3>
+        <p>If true, never trigger this more than once</p><h3 id="var/wizard_message"><aside class="declaration">var </aside>wizard_message
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L21">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 21"/></a></h3>
+        <p>Feedback message shown to the wizard, as some events are silent and they should know what they did.</p><h2 id="proc">Proc Details</h2><h3 id="proc/is_valid_event"><aside class="declaration">proc </aside>is_valid_event<aside>(escalation) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L22">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 22"/></a></aside>
+        </h3>
+        <p>Returns true if an event can be fired right now.</p><h3 id="proc/trigger_event"><aside class="declaration">proc </aside>trigger_event<aside>(/<a href="mob.html">mob</a>/invoker) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/antagonists/wizard_journeyman/grand_ritual/grand_event.dm#L28">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;antagonists&#x2F;wizard_journeyman&#x2F;grand_ritual&#x2F;grand_event.dm 28"/></a></aside>
+        </h3>
+        <p>Makes the event happen.</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

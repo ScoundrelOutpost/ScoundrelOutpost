@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;component&#x2F;supermatter_glow - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/component/supermatter_glow.html#var">Var Details</a> - <a href="datum/component/supermatter_glow.html#proc">Proc Details</a></header>
+<main>
+<h1>supermatter_glow <aside>/<a href="datum.html">datum</a>/<a href="datum/component.html">component</a>/<a href="datum/component/supermatter_glow.html">supermatter_glow</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/modules/power/supermatter/supermatter_glow.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;supermatter&#x2F;supermatter_glow.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/component/supermatter_glow.html#var/light_color">light_color</a></th><td>The current light colour. Default is the nice yellow!</td></tr>
+            <tr><th><a href="datum/component/supermatter_glow.html#var/loop_started">loop_started</a></th><td>BYOND has a limit to animations before a crash occurs, so we don't want to spam our animation loop constantly.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/component/supermatter_glow.html#proc/check_special_delamination">check_special_delamination</a></th><td>You might be wondering what this does. We're building a list. Filters are an array, right. The first will over-write the first when reapplied..
+However, they do not remove animate() from the entry in the array UNLESS it was deleted entirely.
+So, our first filter is the rays. The second filter will APPLY to the rays, and so forth.
+Sort of like photoshop. The loop will continue forever unless an accident happens.
+Evaluation proc to determine which special effect the supermatter filters will use. Two included in the box!</td></tr>
+            <tr><th><a href="datum/component/supermatter_glow.html#proc/update_effects">update_effects</a></th><td>This proc builds a list of effects to apply to the supermatter based on it's contexts.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/light_color"><aside class="declaration">var </aside>light_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/modules/power/supermatter/supermatter_glow.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;supermatter&#x2F;supermatter_glow.dm 3"/></a></h3>
+        <p>The current light colour. Default is the nice yellow!</p><h3 id="var/loop_started"><aside class="declaration">var </aside>loop_started
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/modules/power/supermatter/supermatter_glow.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;supermatter&#x2F;supermatter_glow.dm 5"/></a></h3>
+        <p>BYOND has a limit to animations before a crash occurs, so we don't want to spam our animation loop constantly.</p><h2 id="proc">Proc Details</h2><h3 id="proc/check_special_delamination"><aside class="declaration">proc </aside>check_special_delamination<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/modules/power/supermatter/supermatter_glow.dm#L95">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;supermatter&#x2F;supermatter_glow.dm 95"/></a></aside>
+        </h3>
+        <p>You might be wondering what this does. We're building a list. Filters are an array, right. The first will over-write the first when reapplied..
+However, they do not remove animate() from the entry in the array UNLESS it was deleted entirely.
+So, our first filter is the rays. The second filter will APPLY to the rays, and so forth.
+Sort of like photoshop. The loop will continue forever unless an accident happens.
+Evaluation proc to determine which special effect the supermatter filters will use. Two included in the box!</p><h3 id="proc/update_effects"><aside class="declaration">proc </aside>update_effects<aside>() 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/code/modules/power/supermatter/supermatter_glow.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;supermatter&#x2F;supermatter_glow.dm 18"/></a></aside>
+        </h3>
+        <p>This proc builds a list of effects to apply to the supermatter based on it's contexts.</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

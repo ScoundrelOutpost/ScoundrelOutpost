@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;reagent&#x2F;toxin&#x2F;xenotoxin - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/reagent/toxin/xenotoxin.html#var">Var Details</a> - <a href="datum/reagent/toxin/xenotoxin.html#proc">Proc Details</a></header>
+<main>
+<h1>xenotoxin <aside>/<a href="datum.html">datum</a>/<a href="datum/reagent.html">reagent</a>/<a href="datum/reagent/toxin.html">toxin</a>/<a href="datum/reagent/toxin/xenotoxin.html">xenotoxin</a></aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L31">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 31"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/reagent/toxin/xenotoxin.html#var/num_damage_bursts">num_damage_bursts</a></th><td>number of times a damage burst has been triggered
+the more bursts you suffer, the more damage each one does and the higher the chance that you'll get &quot;bad bursts&quot; that deal extra damage</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/reagent/toxin/xenotoxin.html#proc/damage_burst_bad">damage_burst_bad</a></th><td>Apply a particularly bad damage burst, which does more damage than a normal one, applies jitteryness, and can cause the victim to scream</td></tr>
+            <tr><th><a href="datum/reagent/toxin/xenotoxin.html#proc/damage_burst_normal">damage_burst_normal</a></th><td>base chance of a bad burst, which increases as victim's health decreases
+actual chance, which is clamped to a min/max and increases with the number of previous bursts
+note that health decreasing below a certain point will no longer increase the chance, but further bursts will
+always make bad ones more likely
+Apply a &quot;damage burst&quot;, which deals increasing amounts of toxicity and stamina damage, causes breath loss, and deals a small amount of organ damage</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/num_damage_bursts"><aside class="declaration">var </aside>num_damage_bursts
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L44">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 44"/></a></h3>
+        <p>number of times a damage burst has been triggered
+the more bursts you suffer, the more damage each one does and the higher the chance that you'll get &quot;bad bursts&quot; that deal extra damage</p><h2 id="proc">Proc Details</h2><h3 id="proc/damage_burst_bad"><aside class="declaration">proc </aside>damage_burst_bad<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/victim, damage_mul, delta_time) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L90">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 90"/></a></aside>
+        </h3>
+        <p>Apply a particularly bad damage burst, which does more damage than a normal one, applies jitteryness, and can cause the victim to scream</p><h3 id="proc/damage_burst_normal"><aside class="declaration">proc </aside>damage_burst_normal<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/victim, damage_mul, delta_time) 
+        
+    
+            <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/blob/482fe4e98627dffed03ce7836218fb3fcf55cf08/orbstation/quirks/xcard/xenotoxin.dm#L77">
+        <img src="git.png" width="16" height="16" title="orbstation&#x2F;quirks&#x2F;xcard&#x2F;xenotoxin.dm 77"/></a></aside>
+        </h3>
+        <p>base chance of a bad burst, which increases as victim's health decreases
+actual chance, which is clamped to a min/max and increases with the number of previous bursts
+note that health decreasing below a certain point will no longer increase the chance, but further bursts will
+always make bad ones more likely
+Apply a &quot;damage burst&quot;, which deals increasing amounts of toxicity and stamina damage, causes breath loss, and deals a small amount of organ damage</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/ScoundrelOutpost/ScoundrelOutpost/tree/482fe4e98627dffed03ce7836218fb3fcf55cf08">482fe4e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

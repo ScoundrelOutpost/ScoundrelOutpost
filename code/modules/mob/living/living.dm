@@ -541,7 +541,7 @@
 	return held_item.GetID()
 
 //Returns the bank account of an ID the user may be holding.
-/mob/living/proc/get_bank_account()
+/mob/living/get_bank_account(hand_first)
 	RETURN_TYPE(/datum/bank_account)
 	var/datum/bank_account/account
 	var/obj/item/card/id/I = get_idcard()

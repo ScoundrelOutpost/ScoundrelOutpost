@@ -14,9 +14,15 @@ export const Fabricator = (props, context) => {
   // Reduce the material count array to a map of actually available materials.
   const availableMaterials: MaterialMap = {};
 
+  // maps material names to the prices of each material
+  const materialPrices: MaterialMap = {};
+
+  // if (data.materials) {
   for (const material of data.materials) {
     availableMaterials[material.name] = material.amount;
+    materialPrices[material.name] = material.value;
   }
+  // }
 
   return (
     <Window title={fabName} width={670} height={600}>
@@ -31,7 +37,13 @@ export const Fabricator = (props, context) => {
                 design,
                 availableMaterials,
                 onPrintDesign
-              ) => <Recipe design={design} available={availableMaterials} />}
+              ) => (
+                <Recipe
+                  design={design}
+                  available={availableMaterials}
+                  materialPrices={materialPrices}
+                />
+              )}
             />
           </Stack.Item>
           <Stack.Item>
@@ -59,11 +71,12 @@ type PrintButtonProps = {
   design: Design;
   quantity: number;
   available: MaterialMap;
+  materialPrices: MaterialMap;
 };
 
 const PrintButton = (props: PrintButtonProps, context) => {
   const { act, data } = useBackend<FabricatorData>(context);
-  const { design, quantity, available } = props;
+  const { design, quantity, available, materialPrices } = props;
 
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
@@ -77,6 +90,9 @@ const PrintButton = (props: PrintButtonProps, context) => {
           design={design}
           amount={quantity}
           available={available}
+          hasLinkedAccount={data.hasLinkedAccount}
+          materialPrices={materialPrices}
+          userBalance={data.userBalance}
         />
       }>
       <div
@@ -92,9 +108,16 @@ const PrintButton = (props: PrintButtonProps, context) => {
   );
 };
 
-const Recipe = (props: { design: Design; available: MaterialMap }, context) => {
+const Recipe = (
+  props: {
+    design: Design;
+    available: MaterialMap;
+    materialPrices: MaterialMap;
+  },
+  context
+) => {
   const { act, data } = useBackend<FabricatorData>(context);
-  const { design, available } = props;
+  const { design, available, materialPrices } = props;
 
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
@@ -119,6 +142,9 @@ const Recipe = (props: { design: Design; available: MaterialMap }, context) => {
             design={design}
             amount={1}
             available={available}
+            hasLinkedAccount={data.hasLinkedAccount}
+            materialPrices={materialPrices}
+            userBalance={data.userBalance}
           />
         }>
         <div
@@ -137,8 +163,18 @@ const Recipe = (props: { design: Design; available: MaterialMap }, context) => {
           <div className="FabricatorRecipe__Label">{design.name}</div>
         </div>
       </Tooltip>
-      <PrintButton design={design} quantity={5} available={available} />
-      <PrintButton design={design} quantity={10} available={available} />
+      <PrintButton
+        design={design}
+        quantity={5}
+        available={available}
+        materialPrices={materialPrices}
+      />
+      <PrintButton
+        design={design}
+        quantity={10}
+        available={available}
+        materialPrices={materialPrices}
+      />
     </div>
   );
 };

@@ -1137,6 +1137,9 @@
 	if(client.mouse_override_icon)
 		client.mouse_pointer_icon = client.mouse_override_icon
 
+/mob/proc/get_bank_account(hand_first)
+	return
+
 /**
  * Can this mob see in the dark
  *

@@ -28,8 +28,8 @@
 	/// What color is this machine's stripe? Leave null to not have a stripe.
 	var/stripe_color = null
 
-	/// Does this charge the user's ID on fabrication?
-	var/charges_tax = TRUE
+	///// Does this charge the user's ID on fabrication?
+	//var/charges_tax = TRUE
 
 /obj/machinery/rnd/production/Initialize(mapload)
 	. = ..()
@@ -140,6 +140,7 @@
 			"name" = design.name,
 			"desc" = design.get_description(),
 			"cost" = cost,
+			"crcost" = materials.mat_container.get_material_list_cost(design.materials), // bad implementation, please replace when possible
 			"id" = design.id,
 			"categories" = design.category,
 			"icon" = "[icon_size == size32x32 ? "" : "[icon_size] "][design.id]",
@@ -148,6 +149,7 @@
 
 	data["designs"] = designs
 	data["fabName"] = name
+	data["materials"] = materials.mat_container?.ui_data()
 
 	return data
 
@@ -156,6 +158,11 @@
 
 	data["materials"] = materials.mat_container?.ui_data()
 	data["onHold"] = materials.on_hold()
+	var/datum/bank_account/user_account = user.get_bank_account()
+	data["userBalance"] = user_account.account_balance
+	data["hasLinkedAccount"] = materials.mat_container?.linked_account != null
+	data["linkedBalance"] = materials.mat_container?.linked_account.account_balance
+	//data["linkedCostModifier"] = materials.mat_container?.cost_modifier
 	data["busy"] = busy
 	data["materialMaximum"] = materials.local_size
 	data["queue"] = list()
@@ -289,38 +296,21 @@
 			say("Not enough reagents to complete prototype[print_quantity > 1? "s" : ""].")
 			return FALSE
 
-	// Charge the lathe tax at least once per ten items.
-	var/total_cost = LATHE_TAX * max(round(print_quantity / 10), 1)
-
-	if(!charges_tax)
-		total_cost = 0
-
-	if(isliving(usr))
-		var/mob/living/user = usr
-		var/obj/item/card/id/card = user.get_idcard(TRUE)
-
-		if(!card && istype(user.pulling, /obj/item/card/id))
-			card = user.pulling
-
-		if(card && card.registered_account)
-			var/datum/bank_account/our_acc = card.registered_account
-			if(our_acc.account_job.departments_bitflags & allowed_department_flags)
-				total_cost = 0 // We are not charging crew for printing their own supplies and equipment.
-
-	if(attempt_charge(src, usr, total_cost) & COMPONENT_OBJ_CANCEL_CHARGE)
-		say("Insufficient funds to complete prototype. Please present a holochip or valid ID card.")
-		return FALSE
+	var/datum/bank_account/user_account = usr.get_bank_account()
+	if(materials.mat_container.linked_account && !(obj_flags & EMAGGED))
+		var/cost = materials.mat_container.get_material_list_cost(efficient_mats)
+			//if(attempt_charge(src, usr, cost) & COMPONENT_OBJ_CANCEL_CHARGE) // i think thsi would charge the account early? and the money would just end up in the aether. so
+		if(!user_account.has_money(cost))
+			say("Insufficient funds to complete prototype[print_quantity > 1? "s" : ""].")
+			return FALSE
+	materials.mat_container.use_materials(efficient_mats, print_quantity, user_account)
+	materials.silo_log(src, "built", -print_quantity, "[design.name]", efficient_mats, !(obj_flags & EMAGGED))
 
 	if(iscyborg(usr))
 		var/mob/living/silicon/robot/borg = usr
 
 		if(!borg.cell)
 			return FALSE
-
-		borg.cell.use(SILICON_LATHE_TAX)
-
-	materials.mat_container.use_materials(efficient_mats, print_quantity)
-	materials.silo_log(src, "built", -print_quantity, "[design.name]", efficient_mats)
 
 	for(var/reagent in design.reagents_list)
 		reagents.remove_reagent(reagent, design.reagents_list[reagent] * print_quantity * coefficient)
@@ -347,9 +337,8 @@
 	if(materials.on_hold())
 		say("Mineral access is on hold, please contact the quartermaster.")
 		return 0
-
-	var/count = mat_container.retrieve_sheets(text2num(eject_amt), eject_sheet, drop_location())
-
+	var/datum/bank_account/user_account = usr.get_bank_account(TRUE)
+	var/count = mat_container.retrieve_sheets(text2num(eject_amt), eject_sheet, drop_location(), user_account)
 	var/list/matlist = list()
 	matlist[eject_sheet] = MINERAL_MATERIAL_AMOUNT
 

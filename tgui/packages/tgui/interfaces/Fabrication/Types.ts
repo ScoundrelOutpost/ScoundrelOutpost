@@ -36,6 +36,11 @@ export type Material = {
   removable: BooleanLike;
 
   /**
+   * The credit value of the material.
+   */
+  value: number;
+
+  /**
    * The color of the material.
    */
   color: string;
@@ -60,6 +65,11 @@ export type Design = {
    * fabricator's part efficiency.
    */
   cost: MaterialMap;
+
+  /**
+   * The individual credit cost to print the design. This is a temporary measure, please refactor ASAP.
+   */
+  crcost: number;
 
   /**
    * A reference to the design's design datum.
@@ -104,6 +114,21 @@ export type FabricatorData = {
    * quartermaster).
    */
   onHold: BooleanLike;
+
+  /**
+   * The balance of the user of the fabricator, in credits.
+   */
+  userBalance: number;
+
+  /**
+   * Whether or not the connected material storage has a linked account (and thus charges for usage of materials)
+   */
+  hasLinkedAccount: BooleanLike;
+
+  /**
+   * The balance of the linked account in question.
+   */
+  linkedBalance: number;
 
   /**
    * The set of designs that this fabricator can print, indexed by their ID.

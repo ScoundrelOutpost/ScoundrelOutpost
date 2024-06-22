@@ -103,7 +103,12 @@ const MaterialCounter = (props: MaterialCounterProps, context) => {
             />
           </Flex.Item>
           <Flex.Item>
-            <AnimatedNumber value={material.amount} format={LABEL_FORMAT} />
+            <div>
+              <div>
+                <AnimatedNumber value={material.amount} format={LABEL_FORMAT} />
+              </div>
+              {material.value > 0 ? material.value + ' cr' : null}
+            </div>
           </Flex.Item>
         </Flex>
         {hovering && (

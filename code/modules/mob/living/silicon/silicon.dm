@@ -464,3 +464,6 @@
 		stack_trace("Silicon [src] ( [type] ) was somehow missing their integrated tablet. Please make a bug report.")
 		create_modularInterface()
 	modularInterface.saved_identification = newname
+
+/mob/living/silicon/get_bank_account()
+	return SSeconomy.get_dep_account(ACCOUNT_CIV)

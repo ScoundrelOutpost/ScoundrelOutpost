@@ -5,7 +5,8 @@ import { Window } from '../layouts';
 
 export const OreRedemptionMachine = (props, context) => {
   const { act, data } = useBackend(context);
-  const { unclaimedPoints, materials, alloys, diskDesigns, hasDisk } = data;
+  const { unclaimedPoints, userCash, materials, alloys, diskDesigns, hasDisk } =
+    data;
   return (
     <Window title="Ore Redemption Machine" width={440} height={550}>
       <Window.Content scrollable>
@@ -15,6 +16,12 @@ export const OreRedemptionMachine = (props, context) => {
             <br />
             Gibtonite and Slag are not accepted.
           </BlockQuote>
+          <Box>
+            <Box inline color="label" mr={1}>
+              User Credit Balance:
+            </Box>
+            {userCash}
+          </Box>
           <Box>
             <Box inline color="label" mr={1}>
               Unclaimed points:

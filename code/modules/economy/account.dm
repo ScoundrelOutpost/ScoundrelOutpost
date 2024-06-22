@@ -126,7 +126,7 @@
  * * transfer_reason - override for adjust_money reason. Use if no default reason(Transfer to/from Name Surname).
  */
 /datum/bank_account/proc/transfer_money(datum/bank_account/from, amount, transfer_reason)
-	if(from.has_money(amount))
+	if(from?.has_money(amount))
 		var/reason_to = "Transfer: From [from.account_holder]"
 		var/reason_from = "Transfer: To [account_holder]"
 

@@ -18,7 +18,6 @@
 	var/points = 0
 	var/ore_multiplier = 1
 	var/point_upgrade = 1
-	var/list/ore_values = list(/datum/material/iron = 1, /datum/material/glass = 1,  /datum/material/plasma = 15,  /datum/material/silver = 16, /datum/material/gold = 18, /datum/material/titanium = 30, /datum/material/uranium = 30, /datum/material/diamond = 50, /datum/material/bluespace = 50, /datum/material/bananium = 60)
 	/// Variable that holds a timer which is used for callbacks to `send_console_message()`. Used for preventing multiple calls to this proc while the ORM is eating a stack of ores.
 	var/console_notify_timer
 	var/datum/techweb/stored_research
@@ -207,7 +206,9 @@
 
 /obj/machinery/mineral/ore_redemption/ui_data(mob/user)
 	var/list/data = list()
+	var/datum/bank_account/user_account = user.get_bank_account()
 	data["unclaimedPoints"] = points
+	data["userCash"] = user_account.account_balance
 
 	data["materials"] = list()
 	var/datum/component/material_container/mat_container = materials.mat_container
@@ -217,12 +218,12 @@
 			var/amount = mat_container.materials[M]
 			var/sheet_amount = amount / MINERAL_MATERIAL_AMOUNT
 			var/ref = REF(M)
-			data["materials"] += list(list("name" = M.name, "id" = ref, "amount" = sheet_amount, "value" = ore_values[M.type]))
+			data["materials"] += list(list("name" = M.name, "id" = ref, "amount" = sheet_amount, "value" = mat_container.get_material_cost(M, MINERAL_MATERIAL_AMOUNT)))
 
 		data["alloys"] = list()
 		for(var/v in stored_research.researched_designs)
 			var/datum/design/D = SSresearch.techweb_design_by_id(v)
-			data["alloys"] += list(list("name" = D.name, "id" = D.id, "amount" = can_smelt_alloy(D)))
+			data["alloys"] += list(list("name" = D.name, "id" = D.id, "amount" = can_smelt_alloy(D), "value" = mat_container.get_material_list_cost(D.materials)))
 
 	if (!mat_container)
 		data["disconnected"] = "local mineral storage is unavailable"
@@ -264,6 +265,7 @@
 				to_chat(usr, span_warning("No points to claim."))
 			return TRUE
 		if("Release")
+			var/datum/bank_account/user_account = usr.get_bank_account(TRUE)
 			if(!mat_container)
 				return
 			if(materials.on_hold())
@@ -291,7 +293,7 @@
 						return
 				var/sheets_to_remove = round(min(desired,50,stored_amount))
 
-				var/count = mat_container.retrieve_sheets(sheets_to_remove, mat, get_step(src, output_dir))
+				var/count = mat_container.retrieve_sheets(sheets_to_remove, mat, get_step(src, output_dir), user_account)
 				var/list/mats = list()
 				mats[mat] = MINERAL_MATERIAL_AMOUNT
 				materials.silo_log(src, "released", -count, "sheets", mats)
@@ -325,11 +327,16 @@
 			var/alloy_id = params["id"]
 			var/datum/design/alloy = stored_research.isDesignResearchedID(alloy_id)
 			var/obj/item/card/id/user_id_card
+			var/datum/bank_account/user_account = user_id_card?.registered_account
 			if(isliving(usr))
 				var/mob/living/user = usr
 				user_id_card = user.get_idcard(TRUE)
 			if((check_access(user_id_card) || allowed(usr)) && alloy)
 				var/smelt_amount = can_smelt_alloy(alloy)
+				if(mat_container.linked_account && !(obj_flags & EMAGGED))
+					var/cost = mat_container.get_material_list_cost(alloy.materials)
+					if(cost)
+						smelt_amount = min(smelt_amount, FLOOR(user_account?.account_balance / cost, 1))
 				var/desired = 0
 				if (params["sheets"])
 					desired = text2num(params["sheets"])

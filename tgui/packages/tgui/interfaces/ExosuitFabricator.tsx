@@ -18,8 +18,11 @@ export const ExosuitFabricator = (props, context) => {
 
   const availableMaterials: MaterialMap = {};
 
+  const materialPrices: MaterialMap = {};
+
   for (const material of data.materials) {
     availableMaterials[material.name] = material.amount;
+    materialPrices[material.name] = material.value;
   }
 
   return (
@@ -33,7 +36,11 @@ export const ExosuitFabricator = (props, context) => {
                   designs={Object.values(data.designs)}
                   availableMaterials={availableMaterials}
                   buildRecipeElement={(design, availableMaterials) => (
-                    <Recipe available={availableMaterials} design={design} />
+                    <Recipe
+                      available={availableMaterials}
+                      design={design}
+                      materialPrices={materialPrices}
+                    />
                   )}
                   categoryButtons={(category) => (
                     <Button
@@ -61,7 +68,10 @@ export const ExosuitFabricator = (props, context) => {
             </Stack>
           </Stack.Item>
           <Stack.Item width="420px">
-            <Queue availableMaterials={availableMaterials} />
+            <Queue
+              availableMaterials={availableMaterials}
+              materialPrices={materialPrices}
+            />
           </Stack.Item>
         </Stack>
       </Window.Content>
@@ -69,9 +79,16 @@ export const ExosuitFabricator = (props, context) => {
   );
 };
 
-const Recipe = (props: { design: Design; available: MaterialMap }, context) => {
+const Recipe = (
+  props: {
+    design: Design;
+    available: MaterialMap;
+    materialPrices: MaterialMap;
+  },
+  context
+) => {
   const { act, data } = useBackend<ExosuitFabricatorData>(context);
-  const { design, available } = props;
+  const { design, available, materialPrices } = props;
 
   const canPrint = !Object.entries(design.cost).some(
     ([material, amount]) =>
@@ -97,6 +114,9 @@ const Recipe = (props: { design: Design; available: MaterialMap }, context) => {
             design={design}
             amount={1}
             available={available}
+            hasLinkedAccount={data.hasLinkedAccount}
+            materialPrices={materialPrices}
+            userBalance={data.userBalance}
           />
         }>
         <div
@@ -145,9 +165,12 @@ const Recipe = (props: { design: Design; available: MaterialMap }, context) => {
   );
 };
 
-const Queue = (props: { availableMaterials: MaterialMap }, context) => {
+const Queue = (
+  props: { availableMaterials: MaterialMap; materialPrices: MaterialMap },
+  context
+) => {
   const { act, data } = useBackend<ExosuitFabricatorData>(context);
-  const { availableMaterials } = props;
+  const { availableMaterials, materialPrices } = props;
   const { designs, processing } = data;
 
   const queue = data.queue || [];
@@ -200,15 +223,26 @@ const Queue = (props: { availableMaterials: MaterialMap }, context) => {
                 )}
               </>
             }>
-            <MaterialCostSequence
-              available={availableMaterials}
-              costMap={materialCosts}
-            />
+            <div>
+              <MaterialCostSequence
+                available={availableMaterials}
+                costMap={materialCosts}
+                hasLinkedAccount={data.hasLinkedAccount}
+                materialPrices={materialPrices}
+                userBalance={data.userBalance}
+              />
+              {data.hasLinkedAccount
+                ? 'Final credit cost may vary due to fluctuations in supply.'
+                : null}
+            </div>
           </Section>
         </Stack.Item>
         <Stack.Item grow>
           <Section fill style={{ 'overflow': 'auto' }}>
-            <QueueList availableMaterials={availableMaterials} />
+            <QueueList
+              availableMaterials={availableMaterials}
+              materialPrices={materialPrices}
+            />
           </Section>
         </Stack.Item>
       </Stack>
@@ -216,9 +250,12 @@ const Queue = (props: { availableMaterials: MaterialMap }, context) => {
   );
 };
 
-const QueueList = (props: { availableMaterials: MaterialMap }, context) => {
+const QueueList = (
+  props: { availableMaterials: MaterialMap; materialPrices: MaterialMap },
+  context
+) => {
   const { act, data } = useBackend<ExosuitFabricatorData>(context);
-  const { availableMaterials } = props;
+  const { availableMaterials, materialPrices } = props;
 
   const queue = data.queue || [];
   const designs = data.designs;
@@ -272,6 +309,9 @@ const QueueList = (props: { availableMaterials: MaterialMap }, context) => {
                   design={entry.design}
                   amount={1}
                   available={availableMaterials}
+                  hasLinkedAccount={data.hasLinkedAccount}
+                  materialPrices={materialPrices}
+                  userBalance={data.userBalance}
                 />
               }>
               <div

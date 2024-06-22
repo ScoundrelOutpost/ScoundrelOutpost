@@ -14,7 +14,7 @@
 
 /obj/machinery/rnd/production/protolathe/department/engineering/no_tax
 	circuit = /obj/item/circuitboard/machine/protolathe/department/engineering/no_tax
-	charges_tax = FALSE
+//	charges_tax = FALSE
 
 /obj/machinery/rnd/production/protolathe/department/service
 	name = "department protolathe (Service)"
